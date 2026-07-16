@@ -1,0 +1,194 @@
+[
+ {
+  "id": 14821,
+  "date": "2025-05-27T12:43:35",
+  "date_gmt": "2025-05-27T12:43:35",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=courses&#038;p=14821"
+  },
+  "modified": "2025-05-27T12:43:36",
+  "modified_gmt": "2025-05-27T12:43:36",
+  "slug": "test",
+  "status": "publish",
+  "type": "courses",
+  "link": "https://develop-coaching.com/courses/test/",
+  "title": {
+   "rendered": "test"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "class_list": [
+   "post-14821",
+   "courses",
+   "type-courses",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses/14821",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/courses"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14821"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 5607,
+  "date": "2022-12-23T04:41:02",
+  "date_gmt": "2022-12-23T04:41:02",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/redesign/?post_type=courses&#038;p=5607"
+  },
+  "modified": "2025-10-01T14:10:54",
+  "modified_gmt": "2025-10-01T14:10:54",
+  "slug": "win-big-clients",
+  "status": "publish",
+  "type": "courses",
+  "link": "https://develop-coaching.com/courses/win-big-clients/",
+  "title": {
+   "rendered": "Win Big Clients"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "class_list": [
+   "post-5607",
+   "courses",
+   "type-courses",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses/5607",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/courses"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=5607"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 5480,
+  "date": "2022-12-21T19:04:35",
+  "date_gmt": "2022-12-21T19:04:35",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/redesign/?post_type=courses&#038;p=5480"
+  },
+  "modified": "2026-04-07T12:43:46",
+  "modified_gmt": "2026-04-07T12:43:46",
+  "slug": "mastermind-course",
+  "status": "publish",
+  "type": "courses",
+  "link": "https://develop-coaching.com/courses/mastermind-course/",
+  "title": {
+   "rendered": "Mastermind Course"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "class_list": [
+   "post-5480",
+   "courses",
+   "type-courses",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses/5480",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/courses"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/courses"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=5480"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

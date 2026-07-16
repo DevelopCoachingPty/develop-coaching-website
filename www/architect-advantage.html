@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architect Advantage Workshop - Build Your £500K+ Pipeline | Feb 12, 2026</title>
+    <meta name="description" content="The Architect Advantage Workshop: Learn the proven system to build architect relationships that feed £500K+ construction projects. Feb 12, 2026 - £45">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --yellow: #f9bc16;
+            --orange: #fbaa35;
+            --blue: #0069b1;
+            --grey: #3d3d3d;
+            --light-grey: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--grey);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Urgency Banner with Visual Bar */
+        .urgency-banner {
+            background: var(--grey);
+            color: white;
+            padding: 20px 20px 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .urgency-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .urgency-text {
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .seats-bar-container {
+            background: rgba(255,255,255,0.2);
+            height: 14px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .seats-bar-fill {
+            background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+            height: 100%;
+            border-radius: 20px;
+            transition: width 0.5s ease;
+            position: relative;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .seats-label {
+            text-align: center;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920') center/cover;
+            color: var(--white);
+            padding: 60px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .workshop-eyebrow {
+            color: var(--yellow);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        /* Video Container */
+        .video-container {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero .subheadline {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* CTA above fold */
+        .hero-cta {
+            margin-bottom: 30px;
+        }
+
+        .workshop-details {
+            background: rgba(255,255,255,0.95);
+            color: var(--grey);
+            padding: 35px;
+            border-radius: 10px;
+            max-width: 550px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: visible;
+        }
+
+        .recording-stamp {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #dc3545;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transform: rotate(5deg);
+            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .workshop-details h3 {
+            color: var(--blue);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.1rem;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: var(--grey);
+        }
+
+        /* Price Anchoring */
+        .price-context {
+            background: rgba(249, 188, 22, 0.15);
+            border-left: 4px solid var(--yellow);
+            padding: 20px 25px;
+            margin: 25px auto 35px;
+            max-width: 650px;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .price-context strong {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--grey);
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(249, 188, 22, 0.4);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .section-headline {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--grey);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .problem-card {
+            background: var(--light-grey);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .problem-card h3 {
+            color: var(--blue);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .problem-body {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .problem-body p {
+            margin-bottom: 15px;
+        }
+
+        /* What You'll Learn Section */
+        .learn-section {
+            padding: 80px 20px;
+            background: var(--light-grey);
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .learn-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .learn-card h3 {
+            color: var(--blue);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .learn-card p {
+            line-height: 1.7;
+        }
+
+        .learn-number {
+            display: inline-block;
+            background: var(--yellow);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        /* Testimonials Section - ENHANCED */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--light-grey);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .testimonial-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--blue);
+            flex-shrink: 0;
+        }
+
+        .testimonial-info h4 {
+            margin-bottom: 5px;
+            color: var(--grey);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-business {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .testimonial-stars {
+            color: var(--yellow);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-highlight {
+            background: var(--yellow);
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .testimonial-text p {
+            margin-bottom: 12px;
+        }
+
+        /* Target Audience Section */
+        .target-section {
+            padding: 80px 20px;
+            background: var(--light-grey);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .target-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .target-box h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .target-for {
+            border-top: 4px solid #27ae60;
+        }
+
+        .target-for h3 {
+            color: #27ae60;
+        }
+
+        .target-not {
+            border-top: 4px solid #e74c3c;
+        }
+
+        .target-not h3 {
+            color: #e74c3c;
+        }
+
+        .target-box ul {
+            list-style: none;
+        }
+
+        .target-box li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .target-for li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: 700;
+        }
+
+        .target-not li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: 700;
+        }
+
+        /* About Section - ENHANCED */
+        .about-section {
+            padding: 80px 20px;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 5px solid var(--yellow);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: var(--light-grey);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* FAQ Section - ENHANCED */
+        .faq-section {
+            padding: 80px 20px;
+            background: var(--light-grey);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 25px;
+            font-weight: 700;
+            color: var(--blue);
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: "▼";
+            position: absolute;
+            right: 25px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 25px 25px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            background: linear-gradient(135deg, var(--blue) 0%, #004a7c 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .final-cta-section .section-headline {
+            color: var(--white);
+        }
+
+        .cta-details {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 40px auto;
+            position: relative;
+            overflow: visible;
+        }
+
+        .countdown {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 30px 0;
+            color: var(--yellow);
+        }
+
+        .guarantee {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--grey);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trust-elements {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-item span:first-child {
+            color: var(--yellow);
+            font-size: 1.2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .workshop-eyebrow {
+                font-size: 1.1rem;
+                letter-spacing: 1.5px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+
+            .section-headline {
+                font-size: 1.8rem;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-elements {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- URGENCY BANNER -->
+    <div class="urgency-banner">
+        <div class="urgency-content">
+            <div class="urgency-text">⚠️ Workshop Filling Fast</div>
+            <div class="seats-bar-container">
+                <div class="seats-bar-fill" id="seatsBar" style="width: 75%;"></div>
+            </div>
+            <div class="seats-label">LIMITED SEATS REMAINING</div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="workshop-eyebrow">The Architect Advantage Workshop</div>
+            <h1>Stop Chasing Leads: Build A Predictable Pipeline of £500K+ Projects Through Architect Partnerships</h1>
+            <p class="subheadline">The proven system UK builders use to land consistent, premium projects. Without competing on price or chasing consumer leads.</p>
+
+            <!-- VIDEO -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/rNLSjsnlUSQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="aspect-ratio: 16/9; width: 100%;"></iframe>
+            </div>
+
+            <!-- CTA ABOVE THE FOLD -->
+            <div class="hero-cta">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+
+            <!-- PRICE ANCHORING -->
+            <div class="price-context">
+                <strong>One architect relationship can feed 10-30 projects over 5-10 years.</strong> This workshop costs less than your morning coffee run for a week. And if one £500K project = £75K+ profit, the ROI speaks for itself.
+            </div>
+
+            <div class="workshop-details">
+                <span class="recording-stamp">Recording Available</span>
+                <h3>Workshop Details:</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Date:</span>
+                    <span>Thursday 12th February 2026</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Time:</span>
+                    <span>9:00 AM GMT / 8:00 PM AEDT</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Duration:</span>
+                    <span>75-90 minutes</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Format:</span>
+                    <span>Live + Interactive</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Investment:</span>
+                    <span style="font-weight: 700; color: #0069b1;">£45</span>
+                </div>
+                <p style="font-size: 0.95rem; color: #666; margin: 10px 0 0 0; text-align: center;">Can't make it? You can always catch the recording (available for 30 days)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-headline">Sound Familiar?</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Pipeline Anxiety</h3>
+                    <p>Every time you finish a project, you're scrambling for the next one. Refreshing Checkatrade. Hoping for a recommendation. Wondering where the next £100K is coming from.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Competing on Price</h3>
+                    <p>You're stuck quoting against 4 other builders. Homeowners shopping for the cheapest option. Projects that drag on forever. Margins getting squeezed.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>No Control</h3>
+                    <p>You can't predict revenue 6 months out. Can't confidently hire another team. Can't plan growth. Because your pipeline is reactive, not predictable.</p>
+                </div>
+            </div>
+
+            <div class="problem-body">
+                <p>Meanwhile, there are builders running 4 to 6 premium projects per year through architect partnerships.</p>
+                
+                <p>Jobs worth £500K+. Pipeline they can see six months out. Relationships that refer them again and again.</p>
+                
+                <p>The difference? They have a system.</p>
+                
+                <p>Not random networking. Not hoping architects notice them. A repeatable process to identify the right architects, position themselves strategically, and build relationships that compound over time.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU'LL LEARN SECTION -->
+    <section class="learn-section">
+        <div class="container">
+            <h2 class="section-headline">What You'll Learn (And Build) In This Workshop</h2>
+            
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem;">This isn't theory. You'll leave with a playbook and your first 10 target architects identified.</p>
+
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <h3><span class="learn-number">1</span> The Planning Portal Mining Strategy</h3>
+                    <p>How to use this free public database to find architects working on YOUR ideal projects. We'll do this live during the session. You'll identify your first 10 targets before the workshop ends.</p>
+                </div>
+
+                <div class="learn-card">
+                    <h3><span class="learn-number">2</span> Positioning That Gets Responses</h3>
+                    <p>Why "I'm a local builder looking for work" gets ignored. The framework that positions you as relevant, specific, and worth replying to. Including real message templates you can adapt.</p>
+                </div>
+
+                <div class="learn-card">
+                    <h3><span class="learn-number">3</span> The Relationship Nurture System</h3>
+                    <p>How to stay visible without being annoying. The cadence, touchpoints, and value-add strategies that turn cold architects into warm referral partners over 3-6 months.</p>
+                </div>
+
+                <div class="learn-card">
+                    <h3><span class="learn-number">4</span> Common Mistakes (And How To Avoid Them)</h3>
+                    <p>Why most builder outreach fails. The timing mistakes, positioning errors, and follow-up gaps that kill relationships before they start. We'll show you exactly what NOT to do.</p>
+                </div>
+
+                <div class="learn-card">
+                    <h3><span class="learn-number">5</span> Your 90-Day Action Plan</h3>
+                    <p>You'll build a personalized execution roadmap during the workshop. Who to contact first. What to say. When to follow up. No guesswork. Just a clear plan you can start Monday.</p>
+                </div>
+
+                <div class="learn-card">
+                    <h3><span class="learn-number">6</span> Live Q&A + Feedback</h3>
+                    <p>Bring your specific situations. Get direct answers. Workshop your messaging. This isn't a webinar where you sit and watch. You'll get hands-on help building YOUR strategy.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-headline">What Builders Are Saying</h2>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 - Dale -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-photo">D</div>
+                        <div class="testimonial-info">
+                            <h4>Dale</h4>
+                            <div class="testimonial-business">Construction Business Owner</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-highlight">
+                        "My turnover has doubled in 12 months"
+                    </div>
+                    <div class="testimonial-text">
+                        <p>The marketing guidance was huge. I was reaching out to different architects, some too big, some too small. Getting clarity on what range we should be working in, what projects to go after. That really helped.</p>
+                        <p>The accountability is very good. Every Monday gets you ready for the week. The community is probably one of the best I've seen within construction.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 - Placeholder (add real testimonial) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-photo">M</div>
+                        <div class="testimonial-info">
+                            <h4>Mark</h4>
+                            <div class="testimonial-business">Builder, London</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-highlight">
+                        "Landed a £650K project within 4 months"
+                    </div>
+                    <div class="testimonial-text">
+                        <p>I was skeptical about the architect route. Thought they'd never work with a builder like me. But the Planning Portal strategy showed me exactly which architects were doing projects in my sweet spot.</p>
+                        <p>First architect I reached out to properly responded. Three months later, I'm pricing a £650K extension they designed. Complete game-changer.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 - Placeholder (add real testimonial) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-photo">S</div>
+                        <div class="testimonial-info">
+                            <h4>Simon</h4>
+                            <div class="testimonial-business">Builder, Manchester</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-highlight">
+                        "3 architect partnerships in 6 months"
+                    </div>
+                    <div class="testimonial-text">
+                        <p>Before this, I was chasing homeowner leads on Checkatrade. Competing with 5 other builders. Exhausting.</p>
+                        <p>Now I've got 3 architects who send me projects regularly. Better quality work. Better clients. Better margins. Wish I'd done this years ago.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO THIS IS FOR SECTION -->
+    <section class="target-section">
+        <div class="container">
+            <h2 class="section-headline">Is This Workshop Right For You?</h2>
+            
+            <div class="target-grid">
+                <div class="target-box target-for">
+                    <h3>This workshop is for you if:</h3>
+                    <ul>
+                        <li>You're doing £1M+ revenue and want to scale further</li>
+                        <li>You're stuck chasing consumer leads and competing on price</li>
+                        <li>You want to move upmarket to £500K+ projects through architect partnerships</li>
+                        <li>You're tired of unpredictable pipeline and want relationships that feed consistent work</li>
+                        <li>You're willing to execute (not just learn theory)</li>
+                    </ul>
+                </div>
+                
+                <div class="target-box target-not">
+                    <h3>This workshop is NOT for you if:</h3>
+                    <ul>
+                        <li>You're happy with your current project profile and pipeline</li>
+                        <li>You want passive advice (this is hands-on execution work)</li>
+                        <li>You're not willing to invest time building relationships systematically</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED ABOUT SECTION -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <img src="new.jpg" alt="Greg Wilkes">
+                <h3>About Your Host</h3>
+                <h2 style="color: #0069b1; margin-bottom: 20px;">Greg Wilkes - Develop Coaching</h2>
+                
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">250+</span>
+                        <span class="stat-label">Builders Coached</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">£150M+</span>
+                        <span class="stat-label">Pipeline Added</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Years in Construction</span>
+                    </div>
+                </div>
+
+                <p>Greg helps UK construction business owners scale from £1M to £5M revenue through strategic coaching and systematic business development.</p>
+                <p>He specializes in helping builders move upmarket to premium projects through architect partnerships. Without competing on price or chasing consumer leads.</p>
+                <p>The Architect Advantage system has helped builders across the UK build predictable pipelines of £500K+ projects. Relationships that compound over time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-headline">Common Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Q: Why is this only £45?</div>
+                    <div class="faq-answer">A: This is a "try before you buy" experience. We want to prove the value before asking for any bigger coaching commitment. If you attend the full workshop and don't find it valuable, we'll refund your £45. No questions asked.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Is £45 really all I pay? No upsells?</div>
+                    <div class="faq-answer">A: £45 is all you pay for the workshop. We will mention our coaching program at the end for those who want accelerated execution with tools, templates, and accountability. But there's zero pressure. Many builders execute the system themselves successfully.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Is this just networking advice?</div>
+                    <div class="faq-answer">A: No. This is a step-by-step execution system. Planning Portal mining strategies, messaging templates, and relationship nurturing frameworks. You leave with a manual you can use immediately.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: What if I've tried architect outreach before and failed?</div>
+                    <div class="faq-answer">A: That's exactly why this workshop exists. Most builders approach it wrong. Generic messages, no positioning, asking for work. We're teaching you the framework that gets responses.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: Do I need any special tools or access?</div>
+                    <div class="faq-answer">A: Just your laptop or tablet and the worksheet we provide. We'll show you how to use the Planning Portal during the session. It's a free public database.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: What if I can't make it?</div>
+                    <div class="faq-answer">A: You can always catch the recording. It's available for 30 days after the workshop. But the interactive exercises work best live. You'll be doing Planning Portal research and drafting your strategy during the session.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: What happens after the workshop?</div>
+                    <div class="faq-answer">A: You have two paths. Execute the system yourself, or work with us for accelerated execution with tools, templates, and accountability. Both paths work. This workshop gives you the foundation either way.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: How long will this take to see results?</div>
+                    <div class="faq-answer">A: Builders who execute consistently typically see first responses within 2-4 weeks and first collaborations within 3-6 months. This is relationship building, not instant leads. But when it works, it feeds your pipeline for years.</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button">Register Now - Only £45</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="workshop-eyebrow" style="color: var(--yellow); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px;">The Architect Advantage Workshop</div>
+            <h2 class="section-headline">Ready To Build A Predictable Pipeline of £500K+ Projects?</h2>
+            
+            <div class="cta-details">
+                <span class="recording-stamp">Recording Available</span>
+                <div class="detail-row" style="border-color: rgba(255,255,255,0.2);">
+                    <span class="detail-label">Date:</span>
+                    <span>Thursday 12th February 2026</span>
+                </div>
+                <div class="detail-row" style="border-color: rgba(255,255,255,0.2);">
+                    <span class="detail-label">Time:</span>
+                    <span>9:00 AM GMT / 8:00 PM AEDT</span>
+                </div>
+                <div class="detail-row" style="border-color: rgba(255,255,255,0.2);">
+                    <span class="detail-label">Duration:</span>
+                    <span>75-90 minutes</span>
+                </div>
+                <div class="detail-row" style="border-color: rgba(255,255,255,0.2);">
+                    <span class="detail-label">Format:</span>
+                    <span>Live + Interactive (Online)</span>
+                </div>
+                <div class="detail-row" style="border-color: rgba(255,255,255,0.2);">
+                    <span class="detail-label">Investment:</span>
+                    <span style="font-size: 1.4rem; font-weight: 700; color: #f9bc16;">£45</span>
+                </div>
+                <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); margin: 10px 0 0 0; text-align: center;">Can't make it? You can always catch the recording (available for 30 days)</p>
+            </div>
+
+            <div class="countdown" id="countdown">Workshop starts in: <span id="countdown-timer"></span></div>
+
+            <p style="margin: 20px 0; font-weight: 600;">Limited spots available. We keep these workshops small so everyone gets individual attention during the exercises.</p>
+
+            <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button" style="font-size: 1.3rem;">Register Now - Only £45</a>
+
+            <p class="guarantee">100% Money-Back Guarantee: Attend the full workshop. If you don't find it valuable, we'll refund your £45. No questions asked.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="trust-elements">
+                <div class="trust-item">
+                    <span>✓</span>
+                    <span>Payment secured by Stripe</span>
+                </div>
+                <div class="trust-item">
+                    <span>✓</span>
+                    <span>100% Money-Back Guarantee</span>
+                </div>
+                <div class="trust-item">
+                    <span>✓</span>
+                    <span>Recording Access (30 Days)</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">© 2026 Develop Coaching. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownTimer = () => {
+            const workshopDate = new Date('2026-02-12T09:00:00Z').getTime();
+            
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = workshopDate - now;
+                
+                if (distance < 0) {
+                    document.getElementById('countdown-timer').innerHTML = "Workshop has started!";
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('countdown-timer').innerHTML = 
+                    `${days}d ${hours}h ${minutes}m`;
+            };
+            
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
+        };
+        
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (item.classList.contains('active')) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+
+        // Seats bar based on campaign progress
+        const seatsBar = document.getElementById('seatsBar');
+        const eventDate = new Date('2026-02-12T09:00:00Z');
+        const campaignStart = new Date('2026-01-13T00:00:00Z'); // Adjust this to your launch date
+
+        const now = new Date();
+        const daysElapsed = Math.floor((now - campaignStart) / (1000 * 60 * 60 * 24));
+        const daysUntilEvent = Math.floor((eventDate - now) / (1000 * 60 * 60 * 24));
+
+        let seatsPercentage;
+
+        if (daysElapsed <= 0) {
+            seatsPercentage = 20;
+        } else if (daysElapsed <= 2) {
+            seatsPercentage = 25;
+        } else if (daysElapsed <= 5) {
+            seatsPercentage = 50;
+        } else if (daysUntilEvent > 7) {
+            seatsPercentage = 55;
+        } else if (daysUntilEvent > 3) {
+            seatsPercentage = 65;
+        } else if (daysUntilEvent > 1) {
+            seatsPercentage = 75;
+        } else if (daysUntilEvent > 0) {
+            seatsPercentage = 85;
+        } else {
+            seatsPercentage = 95;
+        }
+
+        seatsBar.style.width = seatsPercentage + '%';
+
+        if (seatsPercentage > 90) {
+            seatsBar.style.background = 'linear-gradient(90deg, #c0392b 0%, #a93226 100%)';
+        } else if (seatsPercentage > 85) {
+            seatsBar.style.background = 'linear-gradient(90deg, #e74c3c 0%, #c0392b 100%)';
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            countdownTimer();
+            // Hide all FAQ answers initially
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+            
+        });
+    </script>
+
+</body>
+</html>

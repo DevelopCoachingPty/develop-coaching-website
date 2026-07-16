@@ -1,0 +1,6391 @@
+[
+ {
+  "id": 17503,
+  "date": "2026-05-22T05:00:00",
+  "date_gmt": "2026-05-22T05:00:00",
+  "guid": {
+   "rendered": "https://develop-coaching.com/?post_type=podcast&#038;p=17503"
+  },
+  "modified": "2026-05-25T03:41:49",
+  "modified_gmt": "2026-05-25T03:41:49",
+  "slug": "what-i-learned-about-profit",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/what-i-learned-about-profit/",
+  "title": {
+   "rendered": "What I learned about Profit working with Big Tech with The Profit Doctor"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-17503",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/17503",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=17503"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=17503"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 17459,
+  "date": "2026-05-06T05:00:00",
+  "date_gmt": "2026-05-06T05:00:00",
+  "guid": {
+   "rendered": "https://develop-coaching.com/?post_type=podcast&#038;p=17459"
+  },
+  "modified": "2026-05-06T06:59:56",
+  "modified_gmt": "2026-05-06T06:59:56",
+  "slug": "how-to-stop-being-the-bottleneck-in-your-own-business-with-kurt-uhlir",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-stop-being-the-bottleneck-in-your-own-business-with-kurt-uhlir/",
+  "title": {
+   "rendered": "How to Stop Being the Bottleneck in Your Own Business with Kurt Uhlir"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-17459",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/17459",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=17459"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=17459"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 17378,
+  "date": "2026-04-22T05:08:33",
+  "date_gmt": "2026-04-22T05:08:33",
+  "guid": {
+   "rendered": "https://develop-coaching.com/?post_type=podcast&#038;p=17378"
+  },
+  "modified": "2026-04-27T05:18:52",
+  "modified_gmt": "2026-04-27T05:18:52",
+  "slug": "stops-client-ghosting-quotes",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/stops-client-ghosting-quotes/",
+  "title": {
+   "rendered": "One Trick That Stops Client Ghosting Quotes with Greg Wilkes"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-17378",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/17378",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=17378"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=17378"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 17191,
+  "date": "2026-01-21T05:00:00",
+  "date_gmt": "2026-01-21T05:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=17191"
+  },
+  "modified": "2026-03-02T06:32:07",
+  "modified_gmt": "2026-03-02T06:32:07",
+  "slug": "from-apprentice-finalist",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/from-apprentice-finalist/",
+  "title": {
+   "rendered": "From Apprentice Finalist to Running a Trades and Marketing Business with Richard Woods"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-17191",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/17191",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=17191"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=17191"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 17172,
+  "date": "2026-01-14T05:00:00",
+  "date_gmt": "2026-01-14T05:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=17172"
+  },
+  "modified": "2026-03-02T06:21:02",
+  "modified_gmt": "2026-03-02T06:21:02",
+  "slug": "the-rise-of-women-in-construction",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-rise-of-women-in-construction/",
+  "title": {
+   "rendered": "The Rise of Women in Construction- with Aileen Andrews and The Builder Chick"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-17172",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/17172",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=17172"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=17172"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15609,
+  "date": "2025-10-01T05:00:00",
+  "date_gmt": "2025-10-01T05:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=15609"
+  },
+  "modified": "2025-10-01T06:10:19",
+  "modified_gmt": "2025-10-01T06:10:19",
+  "slug": "low-testosterone-ruins-business",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/low-testosterone-ruins-business/",
+  "title": {
+   "rendered": "Low Testosterone Ruins Business Performance with Dave Lee"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-15609",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/15609",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=15609"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=15609"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15359,
+  "date": "2025-09-03T08:00:00",
+  "date_gmt": "2025-09-03T08:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=15359"
+  },
+  "modified": "2025-09-29T10:19:08",
+  "modified_gmt": "2025-09-29T10:19:08",
+  "slug": "fire-regs-made-easy",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/fire-regs-made-easy/",
+  "title": {
+   "rendered": "Fire Regs Made Easy with Andrea White"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-15359",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/15359",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=15359"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=15359"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15344,
+  "date": "2025-08-20T08:00:00",
+  "date_gmt": "2025-08-20T08:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=15344"
+  },
+  "modified": "2025-09-30T11:41:01",
+  "modified_gmt": "2025-09-30T11:41:01",
+  "slug": "negotiating-contracts-the-right-way",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/negotiating-contracts-the-right-way/",
+  "title": {
+   "rendered": "Negotiating Contracts The Right Way With Raine Gerber"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133
+  ],
+  "class_list": [
+   "post-15344",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/15344",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=15344"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=15344"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15219,
+  "date": "2025-07-23T08:00:00",
+  "date_gmt": "2025-07-23T08:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=15219"
+  },
+  "modified": "2025-09-30T12:05:53",
+  "modified_gmt": "2025-09-30T12:05:53",
+  "slug": "high-performing-project-managers",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/high-performing-project-managers/",
+  "title": {
+   "rendered": "High Performing Project Managers with Rachael Keeble"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-15219",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/15219",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=15219"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=15219"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 15017,
+  "date": "2025-06-18T23:48:33",
+  "date_gmt": "2025-06-18T23:48:33",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=15017"
+  },
+  "modified": "2025-09-29T10:20:35",
+  "modified_gmt": "2025-09-29T10:20:35",
+  "slug": "how-to-get-more-women-into-construction",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-get-more-women-into-construction/",
+  "title": {
+   "rendered": "How To Get More Women Into Construction with Gretchen Gagel"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-15017",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/15017",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=15017"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=15017"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14862,
+  "date": "2025-06-04T08:30:00",
+  "date_gmt": "2025-06-04T08:30:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=14862"
+  },
+  "modified": "2025-09-29T10:17:19",
+  "modified_gmt": "2025-09-29T10:17:19",
+  "slug": "5-core-systems",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/5-core-systems/",
+  "title": {
+   "rendered": "5 Core Systems with Greg Wilkes"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-14862",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/14862",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14862"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=14862"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14817,
+  "date": "2025-05-21T08:00:00",
+  "date_gmt": "2025-05-21T08:00:00",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=14817"
+  },
+  "modified": "2025-09-29T10:22:04",
+  "modified_gmt": "2025-09-29T10:22:04",
+  "slug": "how-jamie-mills-built-a-multi-million-pound-construction-company",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-jamie-mills-built-a-multi-million-pound-construction-company/",
+  "title": {
+   "rendered": "How Jamie Mills Built a Multi-Million Pound Construction Company"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133,
+   135,
+   132
+  ],
+  "class_list": [
+   "post-14817",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/14817",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14817"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=14817"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14706,
+  "date": "2025-05-07T07:15:23",
+  "date_gmt": "2025-05-07T07:15:23",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=14706"
+  },
+  "modified": "2025-09-29T10:19:50",
+  "modified_gmt": "2025-09-29T10:19:50",
+  "slug": "how-4d-tech-can-improve-your-delivery",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-4d-tech-can-improve-your-delivery/",
+  "title": {
+   "rendered": "How 4D Tech Can Improve Your Delivery With David Hernandez"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-14706",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/14706",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14706"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=14706"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14473,
+  "date": "2025-04-23T07:46:23",
+  "date_gmt": "2025-04-23T07:46:23",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=14473"
+  },
+  "modified": "2025-09-29T10:17:37",
+  "modified_gmt": "2025-09-29T10:17:37",
+  "slug": "hire-a-project-manager",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/hire-a-project-manager/",
+  "title": {
+   "rendered": "5 Signs You Need To Hire A Project Manager"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-14473",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/14473",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14473"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=14473"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 14145,
+  "date": "2025-04-09T02:43:23",
+  "date_gmt": "2025-04-09T02:43:23",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=14145"
+  },
+  "modified": "2025-09-30T11:34:12",
+  "modified_gmt": "2025-09-30T11:34:12",
+  "slug": "how-to-step-off-the-tools",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-step-off-the-tools/",
+  "title": {
+   "rendered": "How to Step Off The Tools"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-14145",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/14145",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=14145"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=14145"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13708,
+  "date": "2025-03-26T00:18:44",
+  "date_gmt": "2025-03-26T00:18:44",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13708"
+  },
+  "modified": "2025-09-29T10:20:21",
+  "modified_gmt": "2025-09-29T10:20:21",
+  "slug": "a-construction-team-that-runs-your-business-without-you",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/a-construction-team-that-runs-your-business-without-you/",
+  "title": {
+   "rendered": "How to Build a Construction Team That Runs Your Business Without You"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134,
+   132
+  ],
+  "class_list": [
+   "post-13708",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13708",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13708"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13708"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13585,
+  "date": "2025-03-12T06:22:19",
+  "date_gmt": "2025-03-12T06:22:19",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13585"
+  },
+  "modified": "2025-09-29T10:19:17",
+  "modified_gmt": "2025-09-29T10:19:17",
+  "slug": "get-citb-funding",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/get-citb-funding/",
+  "title": {
+   "rendered": "Get CITB Funding With Deb Madden &amp; Nathan Wilkins"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133
+  ],
+  "class_list": [
+   "post-13585",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13585",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13585"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13585"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13576,
+  "date": "2025-03-04T21:47:37",
+  "date_gmt": "2025-03-04T21:47:37",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13576"
+  },
+  "modified": "2025-09-30T11:46:56",
+  "modified_gmt": "2025-09-30T11:46:56",
+  "slug": "protect-your-profit-margin-podcast",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/protect-your-profit-margin-podcast/",
+  "title": {
+   "rendered": "Protect Your Profit Margin with Greg Wilkes"
+  },
+  "content": {
+   "rendered": "\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-13576",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13576",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13576"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13576"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13477,
+  "date": "2025-01-24T10:09:08",
+  "date_gmt": "2025-01-24T10:09:08",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13477"
+  },
+  "modified": "2025-09-30T11:37:23",
+  "modified_gmt": "2025-09-30T11:37:23",
+  "slug": "improve-subcontractor-procurement-with-paul-heming",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/improve-subcontractor-procurement-with-paul-heming/",
+  "title": {
+   "rendered": "Improve Subcontractor Procurement with Paul Heming"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134,
+   135
+  ],
+  "class_list": [
+   "post-13477",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13477",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13477"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13477"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13401,
+  "date": "2024-12-13T07:33:50",
+  "date_gmt": "2024-12-13T07:33:50",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13401"
+  },
+  "modified": "2025-09-29T10:17:48",
+  "modified_gmt": "2025-09-29T10:17:48",
+  "slug": "a-safer-workplace-adds-profit-with-gavin-coyle-2",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/a-safer-workplace-adds-profit-with-gavin-coyle-2/",
+  "title": {
+   "rendered": "A Safer Workplace Adds Profit with Gavin Coyle"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-13401",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13401",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13401"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13401"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 13290,
+  "date": "2024-12-06T01:52:20",
+  "date_gmt": "2024-12-06T01:52:20",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=13290"
+  },
+  "modified": "2025-09-30T11:50:15",
+  "modified_gmt": "2025-09-30T11:50:15",
+  "slug": "systemise-your-business-with-james-brown",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/systemise-your-business-with-james-brown/",
+  "title": {
+   "rendered": "Systemise Your Business with James Brown"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-13290",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/13290",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=13290"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=13290"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 12057,
+  "date": "2024-09-17T04:54:33",
+  "date_gmt": "2024-09-17T04:54:33",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=12057"
+  },
+  "modified": "2025-09-30T12:08:49",
+  "modified_gmt": "2025-09-30T12:08:49",
+  "slug": "what-i-learned-from-mo-farah-about-scaling-with-adam-strong",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/what-i-learned-from-mo-farah-about-scaling-with-adam-strong/",
+  "title": {
+   "rendered": "What I Learned From Mo Farah About Scaling &#8211; with Adam Strong"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-12057",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/12057",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=12057"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=12057"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 11800,
+  "date": "2024-09-09T05:11:39",
+  "date_gmt": "2024-09-09T05:11:39",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=11800"
+  },
+  "modified": "2025-09-30T11:48:47",
+  "modified_gmt": "2025-09-30T11:48:47",
+  "slug": "stop-firefighting-with-barbara-nixon",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/stop-firefighting-with-barbara-nixon/",
+  "title": {
+   "rendered": "Stop Firefighting with Barbara Nixon"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-11800",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/11800",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=11800"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=11800"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 10951,
+  "date": "2024-06-25T17:49:15",
+  "date_gmt": "2024-06-25T17:49:15",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=10951"
+  },
+  "modified": "2025-09-30T11:52:58",
+  "modified_gmt": "2025-09-30T11:52:58",
+  "slug": "the-perfect-week-with-emma-mills",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-perfect-week-with-emma-mills/",
+  "title": {
+   "rendered": "The Perfect Week with Emma Mills"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-10951",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/10951",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=10951"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=10951"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 10946,
+  "date": "2024-06-25T15:05:59",
+  "date_gmt": "2024-06-25T15:05:59",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=10946"
+  },
+  "modified": "2025-09-30T12:08:37",
+  "modified_gmt": "2025-09-30T12:08:37",
+  "slug": "websites-the-pop-with-angie-wilkes",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/websites-the-pop-with-angie-wilkes/",
+  "title": {
+   "rendered": "Websites that POP with Angie Wilkes"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-10946",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/10946",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=10946"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=10946"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 10842,
+  "date": "2024-06-04T03:23:01",
+  "date_gmt": "2024-06-04T03:23:01",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=10842"
+  },
+  "modified": "2025-09-30T11:35:38",
+  "modified_gmt": "2025-09-30T11:35:38",
+  "slug": "how-to-succeed-as-a-dadpreneur-with-carl-taylor",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-succeed-as-a-dadpreneur-with-carl-taylor/",
+  "title": {
+   "rendered": "How to Succeed as a Dadpreneur &#8211; With Carl Taylor"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-10842",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/10842",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=10842"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=10842"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 10567,
+  "date": "2024-05-16T00:53:58",
+  "date_gmt": "2024-05-16T00:53:58",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=10567"
+  },
+  "modified": "2025-09-29T10:18:09",
+  "modified_gmt": "2025-09-29T10:18:09",
+  "slug": "are-you-a-terrible-leader-with-sondra-norris",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/are-you-a-terrible-leader-with-sondra-norris/",
+  "title": {
+   "rendered": "Are you a terrible leader &#8211; with Sondra Norris"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-10567",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/10567",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=10567"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=10567"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 9471,
+  "date": "2024-04-15T00:17:09",
+  "date_gmt": "2024-04-15T00:17:09",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=9471"
+  },
+  "modified": "2025-09-29T10:20:46",
+  "modified_gmt": "2025-09-29T10:20:46",
+  "slug": "how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson/",
+  "title": {
+   "rendered": "How to Scale a Team Rapidly in the Philippines &#8211; With Kody Thompson"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-9471",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/9471",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=9471"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=9471"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 9297,
+  "date": "2024-04-02T06:25:48",
+  "date_gmt": "2024-04-02T06:25:48",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=9297"
+  },
+  "modified": "2025-06-04T08:30:08",
+  "modified_gmt": "2025-06-04T08:30:08",
+  "slug": "prepare-to-sell-your-business-with-chris-dufey",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/prepare-to-sell-your-business-with-chris-dufey/",
+  "title": {
+   "rendered": "Prepare to Sell Your Business with Chris Dufey"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-9297",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/9297",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=9297"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=9297"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 9169,
+  "date": "2024-03-25T04:06:56",
+  "date_gmt": "2024-03-25T04:06:56",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=9169"
+  },
+  "modified": "2025-09-29T10:17:31",
+  "modified_gmt": "2025-09-29T10:17:31",
+  "slug": "5-numbers-to-5m-with-gavin-smith-the-profit-analyst",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/5-numbers-to-5m-with-gavin-smith-the-profit-analyst/",
+  "title": {
+   "rendered": "5 Numbers to 5m with Gavin Smith the Profit Analyst"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-9169",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/9169",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=9169"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=9169"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8967,
+  "date": "2024-03-20T00:41:15",
+  "date_gmt": "2024-03-20T00:41:15",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=8967"
+  },
+  "modified": "2025-09-30T11:42:52",
+  "modified_gmt": "2025-09-30T11:42:52",
+  "slug": "overcoming-deep-insecurities-with-jaemin-frazer",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/overcoming-deep-insecurities-with-jaemin-frazer/",
+  "title": {
+   "rendered": "Overcoming Deep Insecurities with Jaemin Frazer"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8967",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8967",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8967"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8967"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8971,
+  "date": "2024-03-11T00:00:33",
+  "date_gmt": "2024-03-11T00:00:33",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=8971"
+  },
+  "modified": "2025-09-30T11:37:54",
+  "modified_gmt": "2025-09-30T11:37:54",
+  "slug": "its-ok-to-quit-and-change-direction-with-rodric-lenheart",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/its-ok-to-quit-and-change-direction-with-rodric-lenheart/",
+  "title": {
+   "rendered": "It&#8217;s OK to quit and change direction &#8211; with Rodric Lenheart"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8971",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8971",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8971"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8971"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8890,
+  "date": "2024-03-04T00:00:42",
+  "date_gmt": "2024-03-04T00:00:42",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=podcast&#038;p=8890"
+  },
+  "modified": "2025-09-30T11:42:32",
+  "modified_gmt": "2025-09-30T11:42:32",
+  "slug": "optimising-peak-performance-with-jairek-robbins",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/optimising-peak-performance-with-jairek-robbins/",
+  "title": {
+   "rendered": "Optimising Peak Performance with Jairek Robbins"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8890",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8890",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8890"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8890"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8592,
+  "date": "2024-01-01T00:00:34",
+  "date_gmt": "2024-01-01T00:00:34",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8592"
+  },
+  "modified": "2025-09-29T10:20:40",
+  "modified_gmt": "2025-09-29T10:20:40",
+  "slug": "how-to-get-on-a-framework-agreement-with-shamayne-harris",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-get-on-a-framework-agreement-with-shamayne-harris/",
+  "title": {
+   "rendered": "How to get on a Framework Agreement- with Shamayne Harris"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-8592",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8592",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8592"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8592"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8467,
+  "date": "2023-12-11T00:00:01",
+  "date_gmt": "2023-12-11T00:00:01",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8467"
+  },
+  "modified": "2025-09-30T12:08:17",
+  "modified_gmt": "2025-09-30T12:08:17",
+  "slug": "brand-competitor-advantage-john-lenker",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/brand-competitor-advantage-john-lenker/",
+  "title": {
+   "rendered": "Using Your Brand to Gain a Competitor Advantage &#8211; with John Lenker"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131,
+   134
+  ],
+  "class_list": [
+   "post-8467",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8467",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8467"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8467"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8430,
+  "date": "2023-12-04T00:00:04",
+  "date_gmt": "2023-12-04T00:00:04",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8430"
+  },
+  "modified": "2025-09-30T11:54:44",
+  "modified_gmt": "2025-09-30T11:54:44",
+  "slug": "lessons-from-an-olympic-gold-medalist-with-grace-prendergast",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/lessons-from-an-olympic-gold-medalist-with-grace-prendergast/",
+  "title": {
+   "rendered": "Lessons From An Olympic Gold Medalist- with Grace Prendergast"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-8430",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8430",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8430"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8430"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8422,
+  "date": "2023-11-27T00:00:45",
+  "date_gmt": "2023-11-27T00:00:45",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8422"
+  },
+  "modified": "2025-09-29T10:17:43",
+  "modified_gmt": "2025-09-29T10:17:43",
+  "slug": "a-journey-from-contractor-to-20m-developer",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/a-journey-from-contractor-to-20m-developer/",
+  "title": {
+   "rendered": "A Journey from Contractor to \u00a320M Developer"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-8422",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8422",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8422"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8422"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8222,
+  "date": "2023-11-21T22:00:22",
+  "date_gmt": "2023-11-21T22:00:22",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8222"
+  },
+  "modified": "2025-09-30T11:48:09",
+  "modified_gmt": "2025-09-30T11:48:09",
+  "slug": "secrets-to-finding-top-tradie-talent",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/secrets-to-finding-top-tradie-talent/",
+  "title": {
+   "rendered": "Secrets To Finding Top Tradie Talent"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8222",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8222",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8222"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8222"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8205,
+  "date": "2023-11-13T05:00:45",
+  "date_gmt": "2023-11-13T05:00:45",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8205"
+  },
+  "modified": "2025-09-29T10:19:26",
+  "modified_gmt": "2025-09-29T10:19:26",
+  "slug": "good-to-great",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/good-to-great/",
+  "title": {
+   "rendered": "Good to Great"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-8205",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8205",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8205"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8205"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8202,
+  "date": "2023-11-06T06:00:56",
+  "date_gmt": "2023-11-06T06:00:56",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8202"
+  },
+  "modified": "2025-09-29T10:20:14",
+  "modified_gmt": "2025-09-29T10:20:14",
+  "slug": "how-remote-assistance-is-changing-construction",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-remote-assistance-is-changing-construction/",
+  "title": {
+   "rendered": "How Remote Assistance is Changing Construction"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-8202",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8202",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8202"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8202"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8097,
+  "date": "2023-10-23T03:00:20",
+  "date_gmt": "2023-10-23T03:00:20",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8097"
+  },
+  "modified": "2025-09-29T10:19:13",
+  "modified_gmt": "2025-09-29T10:19:13",
+  "slug": "from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james/",
+  "title": {
+   "rendered": "From Firefighting to Fueling a \u00a31M Electrical Company &#8211; The Journey of Dan James"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-8097",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8097",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8097"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8097"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8033,
+  "date": "2023-10-02T07:00:11",
+  "date_gmt": "2023-10-02T07:00:11",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8033"
+  },
+  "modified": "2025-09-30T11:51:27",
+  "modified_gmt": "2025-09-30T11:51:27",
+  "slug": "the-essential-linkedin-playbook-with-louise-brogan",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-essential-linkedin-playbook-with-louise-brogan/",
+  "title": {
+   "rendered": "The Essential LinkedIn Playbook with Louise Brogan"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-8033",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8033",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8033"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8033"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7962,
+  "date": "2023-09-06T05:00:49",
+  "date_gmt": "2023-09-06T05:00:49",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7962"
+  },
+  "modified": "2025-09-30T12:10:49",
+  "modified_gmt": "2025-09-30T12:10:49",
+  "slug": "why-you-must-use-video-in-your-marketing",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/why-you-must-use-video-in-your-marketing/",
+  "title": {
+   "rendered": "Why you must use Video in your marketing"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-7962",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7962",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7962"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7962"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7810,
+  "date": "2023-08-22T06:00:54",
+  "date_gmt": "2023-08-22T06:00:54",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7810"
+  },
+  "modified": "2025-09-30T11:48:34",
+  "modified_gmt": "2025-09-30T11:48:34",
+  "slug": "steps-to-overcome-addiction-conrad-tracey",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/steps-to-overcome-addiction-conrad-tracey/",
+  "title": {
+   "rendered": "Steps to Overcome Addiction Conrad Tracey"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-7810",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7810",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7810"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7810"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7957,
+  "date": "2023-08-21T09:00:40",
+  "date_gmt": "2023-08-21T09:00:40",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7957"
+  },
+  "modified": "2025-09-29T10:22:08",
+  "modified_gmt": "2025-09-29T10:22:08",
+  "slug": "how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher/",
+  "title": {
+   "rendered": "How I overcome a \u00a365m property portfolio collapse with Gavin Gallagher"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133,
+   135
+  ],
+  "class_list": [
+   "post-7957",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7957",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7957"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7957"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7871,
+  "date": "2023-08-15T05:00:09",
+  "date_gmt": "2023-08-15T05:00:09",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7871"
+  },
+  "modified": "2025-09-30T12:09:01",
+  "modified_gmt": "2025-09-30T12:09:01",
+  "slug": "why-a-va-is-essential-to-get-you-to-1m",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/why-a-va-is-essential-to-get-you-to-1m/",
+  "title": {
+   "rendered": "Why a VA is essential to get you to 1m+"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-7871",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7871",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7871"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7871"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7599,
+  "date": "2023-08-02T05:16:19",
+  "date_gmt": "2023-08-02T05:16:19",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7599"
+  },
+  "modified": "2025-09-30T11:49:47",
+  "modified_gmt": "2025-09-30T11:49:47",
+  "slug": "stop-losing-clients-after-the-sale",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/stop-losing-clients-after-the-sale/",
+  "title": {
+   "rendered": "Stop Losing Clients After the Sale"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133,
+   135
+  ],
+  "class_list": [
+   "post-7599",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7599",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7599"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7599"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7564,
+  "date": "2023-07-27T03:59:38",
+  "date_gmt": "2023-07-27T03:59:38",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7564"
+  },
+  "modified": "2025-09-29T10:18:04",
+  "modified_gmt": "2025-09-29T10:18:04",
+  "slug": "are-coaches-a-waste-of-time",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/are-coaches-a-waste-of-time/",
+  "title": {
+   "rendered": "Are Coaches a Waste of Time?"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   94
+  ],
+  "class_list": [
+   "post-7564",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-most-popular"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7564",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7564"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7564"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7478,
+  "date": "2023-06-13T01:00:17",
+  "date_gmt": "2023-06-13T01:00:17",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7478"
+  },
+  "modified": "2025-09-29T10:19:55",
+  "modified_gmt": "2025-09-29T10:19:55",
+  "slug": "how-i-generated-43-million-tiktok-views-with-ashley-mackintosh",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-i-generated-43-million-tiktok-views-with-ashley-mackintosh/",
+  "title": {
+   "rendered": "How I Generated 43 Million Tiktok Views with Ashley Mackintosh"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-7478",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7478",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7478"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7478"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7473,
+  "date": "2023-06-06T02:00:18",
+  "date_gmt": "2023-06-06T02:00:18",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7473"
+  },
+  "modified": "2025-09-30T11:48:23",
+  "modified_gmt": "2025-09-30T11:48:23",
+  "slug": "should-i-get-iso-certified-with-andrew-foy",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/should-i-get-iso-certified-with-andrew-foy/",
+  "title": {
+   "rendered": "Should I Get ISO Certified with Andrew Foy"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134,
+   135
+  ],
+  "class_list": [
+   "post-7473",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7473",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7473"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7473"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7363,
+  "date": "2023-05-23T10:28:17",
+  "date_gmt": "2023-05-23T10:28:17",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7363"
+  },
+  "modified": "2025-09-30T12:05:43",
+  "modified_gmt": "2025-09-30T12:05:43",
+  "slug": "harnessing-hidden-talent-the-case-for-internal-hiring",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/harnessing-hidden-talent-the-case-for-internal-hiring/",
+  "title": {
+   "rendered": "Harnessing Hidden Talent: The Case for Internal Hiring"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-7363",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7363",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7363"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7363"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7345,
+  "date": "2023-05-09T10:57:07",
+  "date_gmt": "2023-05-09T10:57:07",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7345"
+  },
+  "modified": "2025-09-29T10:20:58",
+  "modified_gmt": "2025-09-29T10:20:58",
+  "slug": "building-wealth-with-bricks-a-property-portfolio-journey",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/building-wealth-with-bricks-a-property-portfolio-journey/",
+  "title": {
+   "rendered": "Building Wealth With Bricks- A Property Portfolio Journey with Danielle Bell"
+  },
+  "content": {
+   "rendered": "<div  id=\"_ytid_22082\"  width=\"800\" height=\"450\"  data-origwidth=\"800\" data-origheight=\"450\"  data-relstop=\"1\" data-facadesrc=\"https://www.youtube.com/embed/nKQkmbXM4vA?enablejsapi=1&#038;list=PLlQgDgAxhJb-5i2XY8FfDih7Lo8FhjQyp&#038;index=4&#038;autoplay=0&#038;cc_load_policy=0&#038;cc_lang_pref=&#038;iv_load_policy=1&#038;loop=0&#038;rel=0&#038;fs=1&#038;playsinline=0&#038;autohide=2&#038;theme=dark&#038;color=red&#038;controls=1&#038;disablekb=0&#038;\" class=\"__youtube_prefs__ epyt-facade epyt-is-override  no-lazyload\" data-epautoplay=\"1\" ><img decoding=\"async\" data-spai-excluded=\"true\" class=\"epyt-facade-poster skip-lazy\" loading=\"lazy\"  alt=\"YouTube player\"  src=\"https://i.ytimg.com/vi/nKQkmbXM4vA/maxresdefault.jpg\"  /><button class=\"epyt-facade-play\" aria-label=\"Play\"><svg data-no-lazy=\"1\" height=\"100%\" version=\"1.1\" viewBox=\"0 0 68 48\" width=\"100%\"><path class=\"ytp-large-play-button-bg\" d=\"M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z\" fill=\"#f00\"></path><path d=\"M 45,24 27,14 27,34\" fill=\"#fff\"></path></svg></button></div>\n",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-7345",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7345",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7345"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7345"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7318,
+  "date": "2023-04-19T15:21:23",
+  "date_gmt": "2023-04-19T15:21:23",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7318"
+  },
+  "modified": "2025-09-29T10:17:57",
+  "modified_gmt": "2025-09-29T10:17:57",
+  "slug": "ai-unleashed-the-future-of-construction-marketing",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/ai-unleashed-the-future-of-construction-marketing/",
+  "title": {
+   "rendered": "AI Unleashed &#8211; The Future of Construction Marketing"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-7318",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7318",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7318"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7318"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7253,
+  "date": "2023-04-12T11:54:04",
+  "date_gmt": "2023-04-12T11:54:04",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7253"
+  },
+  "modified": "2025-09-30T11:47:53",
+  "modified_gmt": "2025-09-30T11:47:53",
+  "slug": "resilience-unleashed-sebastian-bates-journey-to-a-global-brand",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/resilience-unleashed-sebastian-bates-journey-to-a-global-brand/",
+  "title": {
+   "rendered": "Resilience Unleashed- Sebastian Bates Journey to a Global Brand"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-7253",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7253",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7253"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7253"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7245,
+  "date": "2023-04-05T11:27:06",
+  "date_gmt": "2023-04-05T11:27:06",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7245"
+  },
+  "modified": "2025-09-30T12:07:43",
+  "modified_gmt": "2025-09-30T12:07:43",
+  "slug": "top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone/",
+  "title": {
+   "rendered": "Top Mistakes Construction Business Owners Make and How to Avoid Them with Jason Graystone"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-7245",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7245",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7245"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7245"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7175,
+  "date": "2023-03-29T10:41:29",
+  "date_gmt": "2023-03-29T10:41:29",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7175"
+  },
+  "modified": "2025-09-30T11:41:13",
+  "modified_gmt": "2025-09-30T11:41:13",
+  "slug": "new-rules-of-marketing-with-david-meerman-scott",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/new-rules-of-marketing-with-david-meerman-scott/",
+  "title": {
+   "rendered": "New Rules of Marketing with David Meerman Scott"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-7175",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7175",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7175"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7175"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7262,
+  "date": "2023-03-22T10:23:54",
+  "date_gmt": "2023-03-22T10:23:54",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7262"
+  },
+  "modified": "2025-09-29T10:18:34",
+  "modified_gmt": "2025-09-29T10:18:34",
+  "slug": "building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake/",
+  "title": {
+   "rendered": "Building a Strong Construction Team: Tips for Successful Recruiting with Gaelle Blake"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-7262",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7262",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7262"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7262"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7124,
+  "date": "2023-03-10T12:07:04",
+  "date_gmt": "2023-03-10T12:07:04",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7124"
+  },
+  "modified": "2025-09-29T10:20:26",
+  "modified_gmt": "2025-09-29T10:20:26",
+  "slug": "how-to-come-back-from-failure-2",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-come-back-from-failure-2/",
+  "title": {
+   "rendered": "How To Come Back From Failure"
+  },
+  "content": {
+   "rendered": "<p>I&#8217;ve failed in business. It&#8217;s painful, depressing &amp; demoralising. But some of the best lessons I&#8217;ve ever learned are from my failures. In this episode we discuss the story behind Greg&#8217;s business failure &amp; how that led him to creating multiple 7 figures businesses. If you&#8217;d like to attend the LIVE in person event on 30th June 2023- West London Grab your ticket here- http://www.develop-coaching.com/build-your-future-event/</p>\n",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-7124",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7124",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7124"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7124"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6615,
+  "date": "2023-01-27T16:14:50",
+  "date_gmt": "2023-01-27T16:14:50",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6615"
+  },
+  "modified": "2025-09-30T11:45:56",
+  "modified_gmt": "2025-09-30T11:45:56",
+  "slug": "profit-first-with-specialist-dan-edwards",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/profit-first-with-specialist-dan-edwards/",
+  "title": {
+   "rendered": "Profit First with Specialist Dan Edwards"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-6615",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6615",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6615"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6615"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6608,
+  "date": "2023-01-25T16:06:00",
+  "date_gmt": "2023-01-25T16:06:00",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6608"
+  },
+  "modified": "2025-09-29T10:19:04",
+  "modified_gmt": "2025-09-29T10:19:04",
+  "slug": "earn-additional-revenue-streams-with-uk-fire-door-training",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/earn-additional-revenue-streams-with-uk-fire-door-training/",
+  "title": {
+   "rendered": "Earn Additional Revenue Streams with UK Fire Door Training"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-6608",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6608",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6608"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6608"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6512,
+  "date": "2023-01-19T15:52:45",
+  "date_gmt": "2023-01-19T15:52:45",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6512"
+  },
+  "modified": "2025-09-30T11:53:09",
+  "modified_gmt": "2025-09-30T11:53:09",
+  "slug": "the-wealth-mentor-with-jackson-millan",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-wealth-mentor-with-jackson-millan/",
+  "title": {
+   "rendered": "The Wealth Mentor with Jackson Millan"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-6512",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6512",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6512"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6512"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6509,
+  "date": "2022-12-19T15:23:43",
+  "date_gmt": "2022-12-19T15:23:43",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6509"
+  },
+  "modified": "2025-09-30T12:07:47",
+  "modified_gmt": "2025-09-30T12:07:47",
+  "slug": "uk-tax-changes-for-2023-with-tim-charles",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/uk-tax-changes-for-2023-with-tim-charles/",
+  "title": {
+   "rendered": "UK Tax Changes for 2023 with Tim Charles"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-6509",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6509",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6509"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6509"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6230,
+  "date": "2022-11-17T11:00:47",
+  "date_gmt": "2022-11-17T11:00:47",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/redesign/?post_type=podcast&#038;p=6230"
+  },
+  "modified": "2025-09-30T11:41:48",
+  "modified_gmt": "2025-09-30T11:41:48",
+  "slug": "nurturing-your-leads",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/nurturing-your-leads/",
+  "title": {
+   "rendered": "Nurturing Your Leads"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-6230",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6230",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6230"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6230"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 4890,
+  "date": "2022-10-28T15:04:31",
+  "date_gmt": "2022-10-28T15:04:31",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/redesign/?post_type=podcast&#038;p=4890"
+  },
+  "modified": "2025-09-30T12:05:23",
+  "modified_gmt": "2025-09-30T12:05:23",
+  "slug": "growing-a-140m-plumbing-company-with-charlie-mullins",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/growing-a-140m-plumbing-company-with-charlie-mullins/",
+  "title": {
+   "rendered": "Growing a \u00a3140m plumbing company with Charlie Mullins"
+  },
+  "content": {
+   "rendered": "<p>[wonderplugin_video iframe=&#8221;<iframe title=\"YouTube video player\" src=\"https://www.youtube.com/embed/V48Ab6g7qfg\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe>&#8221; lightbox=0 lightboxsize=1 lightboxwidth=960 lightboxheight=540 autoopen=0 autoopendelay=0 autoclose=0 lightboxtitle=&#8221;&#8221; lightboxgroup=&#8221;&#8221; lightboxshownavigation=0 showimage=&#8221;&#8221; lightboxoptions=&#8221;&#8221; videowidth=600 videoheight=400 keepaspectratio=1 autoplay=0 loop=0 videocss=&#8221;position:relative;display:block;background-color:#000;overflow:hidden;max-width:100%;margin:0 auto;&#8221; playbutton=&#8221;https://www.develop-coaching.com/wp-content/plugins/wonderplugin-video-embed/engine/playvideo-64-64-0.png&#8221;]</p>\n<p><iframe title=\"YouTube video player\" src=\"https://www.youtube.com/embed/V48Ab6g7qfg\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   94,
+   132
+  ],
+  "class_list": [
+   "post-4890",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-most-popular",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/4890",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=4890"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=4890"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6226,
+  "date": "2022-10-19T10:57:41",
+  "date_gmt": "2022-10-19T10:57:41",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/redesign/?post_type=podcast&#038;p=6226"
+  },
+  "modified": "2025-06-09T05:55:26",
+  "modified_gmt": "2025-06-09T05:55:26",
+  "slug": "mental-health-and-construction-sports-with-steven-kerslake",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/mental-health-and-construction-sports-with-steven-kerslake/",
+  "title": {
+   "rendered": "Mental Health and Construction Sports with Steven Kerslake"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [],
+  "class_list": [
+   "post-6226",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6226",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6226"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6226"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6753,
+  "date": "2022-09-27T09:47:22",
+  "date_gmt": "2022-09-27T09:47:22",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6753"
+  },
+  "modified": "2025-09-30T11:36:03",
+  "modified_gmt": "2025-09-30T11:36:03",
+  "slug": "how-to-survive-and-thrive-during-a-recession",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-survive-and-thrive-during-a-recession/",
+  "title": {
+   "rendered": "How to Survive and Thrive during a Recession"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-6753",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6753",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6753"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6753"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6772,
+  "date": "2022-07-28T16:56:12",
+  "date_gmt": "2022-07-28T16:56:12",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6772"
+  },
+  "modified": "2025-09-30T11:51:14",
+  "modified_gmt": "2025-09-30T11:51:14",
+  "slug": "the-5-pillars-to-growth",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-5-pillars-to-growth/",
+  "title": {
+   "rendered": "The 5 Pillars to Growth"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-6772",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6772",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6772"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6772"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6896,
+  "date": "2022-06-28T16:14:06",
+  "date_gmt": "2022-06-28T16:14:06",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6896"
+  },
+  "modified": "2025-09-30T11:52:43",
+  "modified_gmt": "2025-09-30T11:52:43",
+  "slug": "the-perfect-site-setup",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-perfect-site-setup/",
+  "title": {
+   "rendered": "The Perfect Site Setup"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-6896",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6896",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6896"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6896"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 6925,
+  "date": "2022-06-28T11:21:49",
+  "date_gmt": "2022-06-28T11:21:49",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=6925"
+  },
+  "modified": "2025-09-29T10:18:48",
+  "modified_gmt": "2025-09-29T10:18:48",
+  "slug": "can-i-sell-my-construction-business",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/can-i-sell-my-construction-business/",
+  "title": {
+   "rendered": "Can I Sell my Construction Business"
+  },
+  "content": {
+   "rendered": "<p>Can you sell your construction business? Why are you wanting to sell your construction business? There are many reasons, but what needs to be done to sell your business? In this weeks podcast we will go into what exactly is needed.</p>\n",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-6925",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/6925",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=6925"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=6925"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8136,
+  "date": "2022-06-16T13:00:04",
+  "date_gmt": "2022-06-16T13:00:04",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8136"
+  },
+  "modified": "2025-09-29T10:20:30",
+  "modified_gmt": "2025-09-29T10:20:30",
+  "slug": "how-to-free-up-1-day-per-week",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/how-to-free-up-1-day-per-week/",
+  "title": {
+   "rendered": "How to free up 1 day per week"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8136",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8136",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8136"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8136"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8138,
+  "date": "2022-04-07T15:00:32",
+  "date_gmt": "2022-04-07T15:00:32",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8138"
+  },
+  "modified": "2025-09-29T10:21:03",
+  "modified_gmt": "2025-09-29T10:21:03",
+  "slug": "building-a-32m-electric-empire-with-mike-agugliaro",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/building-a-32m-electric-empire-with-mike-agugliaro/",
+  "title": {
+   "rendered": "Building a $32m electric empire with Mike Agugliaro"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-8138",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8138",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8138"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8138"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8130,
+  "date": "2022-03-24T11:00:36",
+  "date_gmt": "2022-03-24T11:00:36",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8130"
+  },
+  "modified": "2025-09-30T11:40:44",
+  "modified_gmt": "2025-09-30T11:40:44",
+  "slug": "mortgages-marketing-with-gary-das",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/mortgages-marketing-with-gary-das/",
+  "title": {
+   "rendered": "Mortgages &#038; Marketing with Gary Das"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8130",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8130",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8130"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8130"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8126,
+  "date": "2022-03-08T14:00:14",
+  "date_gmt": "2022-03-08T14:00:14",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8126"
+  },
+  "modified": "2025-09-30T12:05:59",
+  "modified_gmt": "2025-09-30T12:05:59",
+  "slug": "houzz-pro-with-andrew-small",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/houzz-pro-with-andrew-small/",
+  "title": {
+   "rendered": "Houzz Pro with Andrew Small"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   133
+  ],
+  "class_list": [
+   "post-8126",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-convert"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8126",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8126"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8126"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8102,
+  "date": "2022-01-14T16:00:52",
+  "date_gmt": "2022-01-14T16:00:52",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8102"
+  },
+  "modified": "2025-09-30T11:43:37",
+  "modified_gmt": "2025-09-30T11:43:37",
+  "slug": "part-2-7-tips-to-grow-your-business-with-tim-charles",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/part-2-7-tips-to-grow-your-business-with-tim-charles/",
+  "title": {
+   "rendered": "Part 2 &#8211; 7 tips to grow your business with Tim Charles"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-8102",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8102",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8102"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8102"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8079,
+  "date": "2022-01-07T10:00:29",
+  "date_gmt": "2022-01-07T10:00:29",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8079"
+  },
+  "modified": "2025-09-30T11:44:03",
+  "modified_gmt": "2025-09-30T11:44:03",
+  "slug": "part-1-7-tips-to-grow-your-business-with-tim-charles",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/part-1-7-tips-to-grow-your-business-with-tim-charles/",
+  "title": {
+   "rendered": "Part 1 &#8211; 7 tips to grow your business with Tim Charles"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   132
+  ],
+  "class_list": [
+   "post-8079",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8079",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8079"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8079"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8067,
+  "date": "2021-12-20T18:00:40",
+  "date_gmt": "2021-12-20T18:00:40",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8067"
+  },
+  "modified": "2025-09-30T11:46:09",
+  "modified_gmt": "2025-09-30T11:46:09",
+  "slug": "property-development-with-bryn-little",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/property-development-with-bryn-little/",
+  "title": {
+   "rendered": "Property Development with Bryn Little"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-8067",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8067",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8067"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8067"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8074,
+  "date": "2021-11-17T11:00:07",
+  "date_gmt": "2021-11-17T11:00:07",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8074"
+  },
+  "modified": "2025-09-30T11:55:30",
+  "modified_gmt": "2025-09-30T11:55:30",
+  "slug": "recruitment-techniques-with-stephanie-buck",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/recruitment-techniques-with-stephanie-buck/",
+  "title": {
+   "rendered": "Recruitment Techniques with Stephanie Buck"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-8074",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8074",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8074"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8074"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8062,
+  "date": "2021-11-05T15:00:59",
+  "date_gmt": "2021-11-05T15:00:59",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8062"
+  },
+  "modified": "2025-09-29T10:21:15",
+  "modified_gmt": "2025-09-29T10:21:15",
+  "slug": "active-campaign-with-ernie-santeralli",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/active-campaign-with-ernie-santeralli/",
+  "title": {
+   "rendered": "Active Campaign with Ernie Santeralli"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134,
+   135
+  ],
+  "class_list": [
+   "post-8062",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8062",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8062"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8062"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8059,
+  "date": "2021-07-07T17:00:19",
+  "date_gmt": "2021-07-07T17:00:19",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8059"
+  },
+  "modified": "2025-09-29T10:18:18",
+  "modified_gmt": "2025-09-29T10:18:18",
+  "slug": "benefits-of-federation-master-builders-with-hayley-lorimer",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/benefits-of-federation-master-builders-with-hayley-lorimer/",
+  "title": {
+   "rendered": "Benefits of Federation Master Builders with Hayley Lorimer"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-8059",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8059",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8059"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8059"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8053,
+  "date": "2021-06-22T17:00:54",
+  "date_gmt": "2021-06-22T17:00:54",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8053"
+  },
+  "modified": "2025-09-29T10:18:56",
+  "modified_gmt": "2025-09-29T10:18:56",
+  "slug": "digital-marketing-with-apprentice-finalist-michaela-wain",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/digital-marketing-with-apprentice-finalist-michaela-wain/",
+  "title": {
+   "rendered": "Digital marketing with Apprentice finalist Michaela Wain"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-8053",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8053",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8053"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8053"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8048,
+  "date": "2021-06-09T13:00:11",
+  "date_gmt": "2021-06-09T13:00:11",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8048"
+  },
+  "modified": "2025-09-30T11:50:51",
+  "modified_gmt": "2025-09-30T11:50:51",
+  "slug": "tax-breaks-and-funding-with-william-petko",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/tax-breaks-and-funding-with-william-petko/",
+  "title": {
+   "rendered": "Tax breaks and funding with William &#038; Petko"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   134
+  ],
+  "class_list": [
+   "post-8048",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-deliver"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8048",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8048"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8048"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8041,
+  "date": "2021-06-01T12:00:18",
+  "date_gmt": "2021-06-01T12:00:18",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8041"
+  },
+  "modified": "2025-09-30T11:44:25",
+  "modified_gmt": "2025-09-30T11:44:25",
+  "slug": "peak-performance-with-vinnie-vecchio",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/peak-performance-with-vinnie-vecchio/",
+  "title": {
+   "rendered": "Peak Performance with Vinnie Vecchio"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-8041",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8041",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8041"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8041"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8016,
+  "date": "2021-05-25T10:00:38",
+  "date_gmt": "2021-05-25T10:00:38",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=8016"
+  },
+  "modified": "2025-09-29T10:18:25",
+  "modified_gmt": "2025-09-29T10:18:25",
+  "slug": "branding-with-sapna-pieroux",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/branding-with-sapna-pieroux/",
+  "title": {
+   "rendered": "Branding with Sapna Pieroux"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   131
+  ],
+  "class_list": [
+   "post-8016",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-attract"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/8016",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8016"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=8016"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7988,
+  "date": "2021-04-27T16:00:26",
+  "date_gmt": "2021-04-27T16:00:26",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7988"
+  },
+  "modified": "2025-09-30T12:08:06",
+  "modified_gmt": "2025-09-30T12:08:06",
+  "slug": "understanding-your-numbers",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/understanding-your-numbers/",
+  "title": {
+   "rendered": "Understanding your numbers"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135
+  ],
+  "class_list": [
+   "post-7988",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7988",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7988"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7988"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 7982,
+  "date": "2021-04-15T15:00:44",
+  "date_gmt": "2021-04-15T15:00:44",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=podcast&#038;p=7982"
+  },
+  "modified": "2025-09-30T11:52:19",
+  "modified_gmt": "2025-09-30T11:52:19",
+  "slug": "the-importance-of-goal-setting",
+  "status": "publish",
+  "type": "podcast",
+  "link": "https://develop-coaching.com/podcast/the-importance-of-goal-setting/",
+  "title": {
+   "rendered": "The Importance of Goal Setting"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "podcast-categories": [
+   135,
+   132
+  ],
+  "class_list": [
+   "post-7982",
+   "podcast",
+   "type-podcast",
+   "status-publish",
+   "hentry",
+   "podcast-categories-plan",
+   "podcast-categories-scale"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast/7982",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/podcast"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=7982"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "podcast-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/podcast-categories?post=7982"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

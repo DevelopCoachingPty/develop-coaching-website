@@ -1,0 +1,293 @@
+[
+ {
+  "id": 8617,
+  "date": "2024-02-08T09:36:52",
+  "date_gmt": "2024-02-08T09:36:52",
+  "guid": {
+   "rendered": "https://developcoaching.co.uk/?post_type=webinars&#038;p=8617"
+  },
+  "modified": "2024-02-08T09:44:56",
+  "modified_gmt": "2024-02-08T09:44:56",
+  "slug": "million-dollar-workshop",
+  "status": "publish",
+  "type": "webinars",
+  "link": "https://develop-coaching.com/webinars/million-dollar-workshop/",
+  "title": {
+   "rendered": "Million Dollar Workshop"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "webinar-categories": [],
+  "class_list": [
+   "post-8617",
+   "webinars",
+   "type-webinars",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars/8617",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/webinars"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8617"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "webinar-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinar-categories?post=8617"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8299,
+  "date": "2023-11-28T10:37:01",
+  "date_gmt": "2023-11-28T10:37:01",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=webinars&#038;p=8299"
+  },
+  "modified": "2023-12-13T14:24:50",
+  "modified_gmt": "2023-12-13T14:24:50",
+  "slug": "3x-secrets-to-winning-your-ideal-project-using-ai",
+  "status": "publish",
+  "type": "webinars",
+  "link": "https://develop-coaching.com/webinars/3x-secrets-to-winning-your-ideal-project-using-ai/",
+  "title": {
+   "rendered": "3x secrets to winning your ideal project using AI"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "webinar-categories": [
+   115
+  ],
+  "class_list": [
+   "post-8299",
+   "webinars",
+   "type-webinars",
+   "status-publish",
+   "hentry",
+   "webinar-categories-featured"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars/8299",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/webinars"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8299"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "webinar-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinar-categories?post=8299"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8281,
+  "date": "2023-11-28T10:25:28",
+  "date_gmt": "2023-11-28T10:25:28",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=webinars&#038;p=8281"
+  },
+  "modified": "2023-12-13T14:24:05",
+  "modified_gmt": "2023-12-13T14:24:05",
+  "slug": "land-a-150k-project-in-12-weeks",
+  "status": "publish",
+  "type": "webinars",
+  "link": "https://develop-coaching.com/webinars/land-a-150k-project-in-12-weeks/",
+  "title": {
+   "rendered": "Land a \u00a3150k+ project in 12 weeks"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "webinar-categories": [],
+  "class_list": [
+   "post-8281",
+   "webinars",
+   "type-webinars",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars/8281",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/webinars"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8281"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "webinar-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinar-categories?post=8281"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 8248,
+  "date": "2023-11-28T10:09:48",
+  "date_gmt": "2023-11-28T10:09:48",
+  "guid": {
+   "rendered": "https://www.developcoaching.co.uk/?post_type=webinars&#038;p=8248"
+  },
+  "modified": "2023-12-13T14:23:29",
+  "modified_gmt": "2023-12-13T14:23:29",
+  "slug": "double-your-profits",
+  "status": "publish",
+  "type": "webinars",
+  "link": "https://develop-coaching.com/webinars/double-your-profits/",
+  "title": {
+   "rendered": "Double Your Profits"
+  },
+  "content": {
+   "rendered": "",
+   "protected": false
+  },
+  "parent": 0,
+  "template": "",
+  "webinar-categories": [],
+  "class_list": [
+   "post-8248",
+   "webinars",
+   "type-webinars",
+   "status-publish",
+   "hentry"
+  ],
+  "_links": {
+   "self": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars/8248",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinars"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/types/webinars"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://develop-coaching.com/wp-json/wp/v2/media?parent=8248"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "webinar-categories",
+     "embeddable": true,
+     "href": "https://develop-coaching.com/wp-json/wp/v2/webinar-categories?post=8248"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

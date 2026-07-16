@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env*
+export/reference/
+www/wp-content/uploads/**/*.mp3
+www/wp-content/uploads/**/*.mp4
+export/screenshots/

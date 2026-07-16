@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE Calculator for Builders</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #f5f5f5;
+      color: #414042;
+      line-height: 1.6;
+    }
+
+    #root {
+      min-height: 100vh;
+    }
+
+    .app {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #414042;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .currency-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .currency-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: 2px solid #d2d2d2;
+      background: white;
+      color: #414042;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .currency-btn:hover {
+      border-color: #0069b1;
+    }
+
+    .currency-btn.active {
+      background: #0069b1;
+      color: white;
+      border-color: #0069b1;
+    }
+
+    .input-section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-group {
+      margin-bottom: 25px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #414042;
+      font-size: 0.95rem;
+    }
+
+    .input-group input[type="number"],
+    .input-group input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 2px solid #d2d2d2;
+      border-radius: 5px;
+      color: #414042;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group input[type="number"]:focus,
+    .input-group input[type="text"]:focus {
+      outline: none;
+      border-color: #0069b1;
+    }
+
+    .input-group input[type="number"]::placeholder {
+      color: #999;
+    }
+
+    .slider-group {
+      margin-bottom: 25px;
+    }
+
+    .slider-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #414042;
+      font-size: 0.95rem;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .slider {
+      flex: 1;
+      height: 6px;
+      border-radius: 3px;
+      background: #d2d2d2;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fdce36;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+      background: #fbaa35;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fdce36;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .slider::-moz-range-thumb:hover {
+      background: #fbaa35;
+    }
+
+    .slider-value {
+      min-width: 60px;
+      text-align: right;
+      font-weight: 600;
+      color: #414042;
+    }
+
+    .paths-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .path-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-top: 5px solid;
+    }
+
+    .path-card.exit {
+      border-top-color: #0069b1;
+    }
+
+    .path-card.replace {
+      border-top-color: #fdce36;
+    }
+
+    .path-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #414042;
+    }
+
+    .result-item {
+      margin-bottom: 20px;
+    }
+
+    .result-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .result-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #414042;
+      line-height: 1.2;
+    }
+
+    .result-description {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+
+    .gap-analysis {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .gap-analysis h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #414042;
+    }
+
+    .gap-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 5px;
+      border-left: 4px solid #fbaa35;
+    }
+
+    .gap-item strong {
+      color: #414042;
+    }
+
+    .growth-selector {
+      margin-top: 20px;
+    }
+
+    .growth-selector label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #414042;
+      font-size: 0.95rem;
+    }
+
+    .growth-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .growth-btn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: 2px solid #d2d2d2;
+      background: white;
+      color: #414042;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .growth-btn:hover {
+      border-color: #0069b1;
+    }
+
+    .growth-btn.active {
+      background: #0069b1;
+      color: white;
+      border-color: #0069b1;
+    }
+
+    .years-result {
+      margin-top: 15px;
+      padding: 15px;
+      background: #fdce36;
+      border-radius: 5px;
+      font-weight: 600;
+      color: #414042;
+    }
+
+    @media (max-width: 768px) {
+      .app {
+        padding: 15px;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .paths-container {
+        grid-template-columns: 1fr;
+      }
+
+      .result-value {
+        font-size: 1.5rem;
+      }
+
+      .input-section,
+      .path-card,
+      .gap-analysis {
+        padding: 20px;
+      }
+
+      .slider-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .slider-value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const DEFAULT_VALUES = {
+      GBP: {
+        lifestyle: 80000,
+        replacementSalary: 80000,
+        netProfitMargin: 10,
+        saleMultiple: 4,
+        growthRate: 15,
+      },
+      AUD: {
+        lifestyle: 120000,
+        replacementSalary: 120000,
+        netProfitMargin: 10,
+        saleMultiple: 4,
+        growthRate: 15,
+      },
+    };
+
+    function App() {
+      const [currency, setCurrency] = useState('GBP');
+      const [lifestyle, setLifestyle] = useState(DEFAULT_VALUES.GBP.lifestyle);
+      const [netProfitMargin, setNetProfitMargin] = useState(DEFAULT_VALUES.GBP.netProfitMargin);
+      const [currentTurnover, setCurrentTurnover] = useState('');
+      const [replacementSalary, setReplacementSalary] = useState(DEFAULT_VALUES.GBP.replacementSalary);
+      const [saleMultiple, setSaleMultiple] = useState(DEFAULT_VALUES.GBP.saleMultiple);
+      const [growthRate, setGrowthRate] = useState(DEFAULT_VALUES.GBP.growthRate);
+
+      // Load from localStorage on mount
+      useEffect(() => {
+        const savedCurrency = localStorage.getItem('fire-calc-currency');
+        const savedLifestyle = localStorage.getItem('fire-calc-lifestyle');
+        const savedMargin = localStorage.getItem('fire-calc-margin');
+        const savedTurnover = localStorage.getItem('fire-calc-turnover');
+        const savedReplacement = localStorage.getItem('fire-calc-replacement');
+        const savedMultiple = localStorage.getItem('fire-calc-multiple');
+        const savedGrowth = localStorage.getItem('fire-calc-growth');
+
+        if (savedCurrency) setCurrency(savedCurrency);
+        if (savedLifestyle) setLifestyle(parseFloat(savedLifestyle));
+        if (savedMargin) setNetProfitMargin(parseFloat(savedMargin));
+        if (savedTurnover) setCurrentTurnover(savedTurnover);
+        if (savedReplacement) setReplacementSalary(parseFloat(savedReplacement));
+        if (savedMultiple) setSaleMultiple(parseFloat(savedMultiple));
+        if (savedGrowth) setGrowthRate(parseFloat(savedGrowth));
+      }, []);
+
+      // Update defaults when currency changes
+      useEffect(() => {
+        const defaults = DEFAULT_VALUES[currency];
+        if (!localStorage.getItem('fire-calc-lifestyle')) {
+          setLifestyle(defaults.lifestyle);
+        }
+        if (!localStorage.getItem('fire-calc-replacement')) {
+          setReplacementSalary(defaults.replacementSalary);
+        }
+        if (!localStorage.getItem('fire-calc-margin')) {
+          setNetProfitMargin(defaults.netProfitMargin);
+        }
+        if (!localStorage.getItem('fire-calc-multiple')) {
+          setSaleMultiple(defaults.saleMultiple);
+        }
+        if (!localStorage.getItem('fire-calc-growth')) {
+          setGrowthRate(defaults.growthRate);
+        }
+      }, [currency]);
+
+      // Save to localStorage
+      useEffect(() => {
+        localStorage.setItem('fire-calc-currency', currency);
+        localStorage.setItem('fire-calc-lifestyle', lifestyle.toString());
+        localStorage.setItem('fire-calc-margin', netProfitMargin.toString());
+        localStorage.setItem('fire-calc-turnover', currentTurnover);
+        localStorage.setItem('fire-calc-replacement', replacementSalary.toString());
+        localStorage.setItem('fire-calc-multiple', saleMultiple.toString());
+        localStorage.setItem('fire-calc-growth', growthRate.toString());
+      }, [currency, lifestyle, netProfitMargin, currentTurnover, replacementSalary, saleMultiple, growthRate]);
+
+      const currencySymbol = currency === 'GBP' ? '£' : '$';
+
+      // Format currency
+      const formatCurrency = (value) => {
+        if (isNaN(value) || value === null || value === undefined) return '0';
+        return new Intl.NumberFormat(currency === 'GBP' ? 'en-GB' : 'en-AU', {
+          style: 'currency',
+          currency: currency,
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(value);
+      };
+
+      // Format number with thousand separators
+      const formatNumber = (value) => {
+        if (isNaN(value) || value === null || value === undefined) return '0';
+        return new Intl.NumberFormat(currency === 'GBP' ? 'en-GB' : 'en-AU').format(Math.round(value));
+      };
+
+      // Path 1: Exit calculations
+      const fireNumber = lifestyle / 0.04;
+      const requiredNetProfitExit = fireNumber / saleMultiple;
+      const requiredTurnoverExit = requiredNetProfitExit / (netProfitMargin / 100);
+
+      // Path 2: Replace Yourself calculations
+      const requiredNetProfitKeep = lifestyle + replacementSalary;
+      const requiredTurnoverKeep = requiredNetProfitKeep / (netProfitMargin / 100);
+
+      // Gap analysis
+      const currentTurnoverNum = currentTurnover ? parseFloat(currentTurnover.replace(/[^0-9.]/g, '')) : null;
+      const gapExit = currentTurnoverNum ? requiredTurnoverExit - currentTurnoverNum : null;
+      const gapKeep = currentTurnoverNum ? requiredTurnoverKeep - currentTurnoverNum : null;
+
+      // Years to target (compound growth)
+      const calculateYears = (target, current, rate) => {
+        if (!current || current <= 0 || target <= current) return null;
+        return Math.log(target / current) / Math.log(1 + rate / 100);
+      };
+
+      const yearsToExit = currentTurnoverNum ? calculateYears(requiredTurnoverExit, currentTurnoverNum, growthRate) : null;
+      const yearsToKeep = currentTurnoverNum ? calculateYears(requiredTurnoverKeep, currentTurnoverNum, growthRate) : null;
+
+      const handleCurrencyChange = (newCurrency) => {
+        setCurrency(newCurrency);
+      };
+
+      const handleLifestyleChange = (e) => {
+        const rawValue = e.target.value.replace(/[^0-9.]/g, '');
+        if (rawValue === '' || rawValue === '.') {
+          setLifestyle(0);
+        } else {
+          const numValue = parseFloat(rawValue);
+          if (!isNaN(numValue) && numValue >= 0) {
+            setLifestyle(numValue);
+          }
+        }
+      };
+
+      const handleReplacementSalaryChange = (e) => {
+        const rawValue = e.target.value.replace(/[^0-9.]/g, '');
+        if (rawValue === '' || rawValue === '.') {
+          setReplacementSalary(0);
+        } else {
+          const numValue = parseFloat(rawValue);
+          if (!isNaN(numValue) && numValue >= 0) {
+            setReplacementSalary(numValue);
+          }
+        }
+      };
+
+      const handleCurrentTurnoverChange = (e) => {
+        setCurrentTurnover(e.target.value);
+      };
+
+      const handleMarginChange = (e) => {
+        setNetProfitMargin(parseFloat(e.target.value));
+      };
+
+      const handleMultipleChange = (e) => {
+        setSaleMultiple(parseFloat(e.target.value));
+      };
+
+      const handleGrowthRateChange = (e) => {
+        setGrowthRate(parseFloat(e.target.value));
+      };
+
+      return (
+        <div className="app">
+          <header className="header">
+            <h1>FIRE Calculator for Builders</h1>
+            <p>Understand what your business needs to achieve for financial freedom</p>
+          </header>
+
+          <div className="currency-toggle">
+            <button
+              className={`currency-btn ${currency === 'GBP' ? 'active' : ''}`}
+              onClick={() => handleCurrencyChange('GBP')}
+            >
+              £ GBP
+            </button>
+            <button
+              className={`currency-btn ${currency === 'AUD' ? 'active' : ''}`}
+              onClick={() => handleCurrencyChange('AUD')}
+            >
+              $ AUD
+            </button>
+          </div>
+
+          <div className="input-section">
+            <div className="input-group">
+              <label htmlFor="lifestyle">
+                What do you want to live on each year, after tax?
+              </label>
+              <div style={{ position: 'relative' }}>
+                <span style={{ position: 'absolute', left: '12px', top: '12px', color: '#414042' }}>
+                  {currencySymbol}
+                </span>
+                <input
+                  id="lifestyle"
+                  type="text"
+                  value={lifestyle > 0 ? formatNumber(lifestyle) : ''}
+                  onChange={handleLifestyleChange}
+                  placeholder="80,000"
+                  style={{ paddingLeft: '30px' }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="paths-container">
+            <div className="path-card exit">
+              <h2>Sell the Business</h2>
+              <div className="result-item">
+                <div className="result-label">FIRE Number</div>
+                <div className="result-value">{formatCurrency(fireNumber)}</div>
+              </div>
+              <div className="result-item">
+                <div className="result-label">Required Net Profit</div>
+                <div className="result-value">{formatCurrency(requiredNetProfitExit)}</div>
+              </div>
+              <div className="result-item">
+                <div className="result-label">Required Turnover</div>
+                <div className="result-value">{formatCurrency(requiredTurnoverExit)}</div>
+              </div>
+              <div className="result-description">
+                To fund {formatCurrency(lifestyle)}/year for life, you need a pot of{' '}
+                <strong>{formatCurrency(fireNumber)}</strong>. To sell your business for{' '}
+                {formatCurrency(fireNumber)} at a {saleMultiple}x multiple, you need{' '}
+                <strong>{formatCurrency(requiredNetProfitExit)} net profit</strong>. At{' '}
+                {netProfitMargin}% margin, that means{' '}
+                <strong>{formatCurrency(requiredTurnoverExit)} turnover</strong>.
+              </div>
+            </div>
+
+            <div className="path-card replace">
+              <h2>Keep the Business</h2>
+              <div className="result-item">
+                <div className="result-label">Required Net Profit</div>
+                <div className="result-value">{formatCurrency(requiredNetProfitKeep)}</div>
+              </div>
+              <div className="result-item">
+                <div className="result-label">Required Turnover</div>
+                <div className="result-value">{formatCurrency(requiredTurnoverKeep)}</div>
+              </div>
+              <div className="result-description">
+                To pay yourself {formatCurrency(lifestyle)}/year AND pay{' '}
+                {formatCurrency(replacementSalary)} for someone to run it, you need{' '}
+                <strong>{formatCurrency(requiredNetProfitKeep)} net profit</strong>. At{' '}
+                {netProfitMargin}% margin, that means{' '}
+                <strong>{formatCurrency(requiredTurnoverKeep)} turnover</strong>.
+              </div>
+            </div>
+          </div>
+
+          {currentTurnoverNum && (
+            <div className="gap-analysis">
+              <h2>Gap Analysis</h2>
+              <div className="gap-item">
+                <p>
+                  You're currently at <strong>{formatCurrency(currentTurnoverNum)} turnover</strong>
+                </p>
+              </div>
+              {gapExit > 0 && (
+                <div className="gap-item">
+                  <p>
+                    <strong>Gap to Exit target:</strong> {formatCurrency(gapExit)}
+                  </p>
+                </div>
+              )}
+              {gapKeep > 0 && (
+                <div className="gap-item">
+                  <p>
+                    <strong>Gap to Replace Yourself target:</strong> {formatCurrency(gapKeep)}
+                  </p>
+                </div>
+              )}
+              {(gapExit <= 0 || gapKeep <= 0) && (
+                <div className="gap-item">
+                  <p>
+                    <strong>Congratulations!</strong> You've already reached{' '}
+                    {gapExit <= 0 && gapKeep <= 0
+                      ? 'both targets'
+                      : gapExit <= 0
+                      ? 'your Exit target'
+                      : 'your Replace Yourself target'}
+                    !
+                  </p>
+                </div>
+              )}
+              {(yearsToExit || yearsToKeep) && (
+                <div className="growth-selector">
+                  <div className="slider-group">
+                    <label htmlFor="growth-rate">
+                      Annual Growth Rate: {growthRate}%
+                    </label>
+                    <div className="slider-container">
+                      <input
+                        id="growth-rate"
+                        type="range"
+                        min="1"
+                        max="50"
+                        step="1"
+                        value={growthRate}
+                        onChange={handleGrowthRateChange}
+                        className="slider"
+                      />
+                      <span className="slider-value">{growthRate}%</span>
+                    </div>
+                  </div>
+                  {yearsToKeep && yearsToKeep > 0 && (
+                    <div className="years-result">
+                      At {growthRate}% annual growth, you'd hit your Replace Yourself target in{' '}
+                      <strong>{Math.ceil(yearsToKeep)} years</strong>
+                    </div>
+                  )}
+                  {yearsToExit && yearsToExit > 0 && (
+                    <div className="years-result">
+                      At {growthRate}% annual growth, you'd hit your Exit target in{' '}
+                      <strong>{Math.ceil(yearsToExit)} years</strong>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="input-section">
+            <h2 style={{ marginBottom: '20px', color: '#414042' }}>Settings</h2>
+
+            <div className="slider-group">
+              <label htmlFor="margin">
+                Net Profit Margin: {netProfitMargin}%
+              </label>
+              <div className="slider-container">
+                <input
+                  id="margin"
+                  type="range"
+                  min="5"
+                  max="30"
+                  step="0.5"
+                  value={netProfitMargin}
+                  onChange={handleMarginChange}
+                  className="slider"
+                />
+                <span className="slider-value">{netProfitMargin}%</span>
+              </div>
+            </div>
+
+            <div className="slider-group">
+              <label htmlFor="multiple">
+                Sale Multiple: {saleMultiple}x
+              </label>
+              <div className="slider-container">
+                <input
+                  id="multiple"
+                  type="range"
+                  min="2"
+                  max="8"
+                  step="0.5"
+                  value={saleMultiple}
+                  onChange={handleMultipleChange}
+                  className="slider"
+                />
+                <span className="slider-value">{saleMultiple}x</span>
+              </div>
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="replacement">
+                What would it cost to replace everything you do?
+              </label>
+              <div style={{ position: 'relative' }}>
+                <span style={{ position: 'absolute', left: '12px', top: '12px', color: '#414042' }}>
+                  {currencySymbol}
+                </span>
+                <input
+                  id="replacement"
+                  type="text"
+                  value={replacementSalary > 0 ? formatNumber(replacementSalary) : ''}
+                  onChange={handleReplacementSalaryChange}
+                  placeholder="80,000"
+                  style={{ paddingLeft: '30px' }}
+                />
+              </div>
+            </div>
+
+            <div className="input-group">
+              <label htmlFor="turnover">
+                Current Turnover (optional - for gap analysis)
+              </label>
+              <div style={{ position: 'relative' }}>
+                <span style={{ position: 'absolute', left: '12px', top: '12px', color: '#414042' }}>
+                  {currencySymbol}
+                </span>
+                <input
+                  id="turnover"
+                  type="text"
+                  value={currentTurnover}
+                  onChange={handleCurrentTurnoverChange}
+                  placeholder="1,200,000"
+                  style={{ paddingLeft: '30px' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
+

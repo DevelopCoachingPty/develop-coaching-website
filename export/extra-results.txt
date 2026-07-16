@@ -1,0 +1,73 @@
+FAIL 404 https://develop-coaching.com/7-mistakes-when-scaling-a-construction-business-past-1m/
+FAIL 404 https://develop-coaching.com/blog/how-to-use-social-media-for-your-construction-business-in-2023/
+FAIL 404 https://develop-coaching.com/build-a-self-running-team/
+FAIL 404 https://develop-coaching.com/free-trainings/construction-recruitment-blueprint/
+FAIL 404 https://develop-coaching.com/from-trades-to-transformation-practical-growth-for-sme-construction-firms/
+FAIL 404 https://develop-coaching.com/grow-building-business/
+FAIL 404 https://develop-coaching.com/how-to-implement-effective-construction-business-systems/
+FAIL 404 https://develop-coaching.com/mastermind-course/
+FAIL 404 https://develop-coaching.com/podcast/digital-transformation-construction/
+FAIL 404 https://develop-coaching.com/podcast/systems-implementation-case-study/
+FAIL 404 https://develop-coaching.com/scale/business-transformation/
+FAIL 404 https://develop-coaching.com/scale/financial-growth/
+FAIL 404 https://develop-coaching.com/scale/systems-processes/
+FAIL 404 https://develop-coaching.com/scale/team-development/
+FAIL 404 https://develop-coaching.com/show-up-like-a-boss-in-2024/
+FAIL 404 https://develop-coaching.com/strategic-planning-for-2024/
+OK https://develop-coaching.com/category/attract/
+OK https://develop-coaching.com/category/convert/
+OK https://develop-coaching.com/category/deliver/
+OK https://develop-coaching.com/category/plan/
+OK https://develop-coaching.com/category/scale/
+OK https://develop-coaching.com/category/uncategorized/
+OK https://develop-coaching.com/podcast-transcript/page/2/
+OK https://develop-coaching.com/podcast/page/2/
+OK https://develop-coaching.com/scale/
+REDIRECT https://develop-coaching.com/2019/06/24/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2021/09/16/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/02/06/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/02/13/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/04/02/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/05/03/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/07/05/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/10/10/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2022/11/02/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/02/27/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/03/30/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/04/29/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/05/30/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/06/27/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/10/03/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/10/31/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2023/12/29/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2024/02/07/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2024/04/04/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2024/05/06/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2025/03/11/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2025/07/25/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2026/01/26/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2026/06/03/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2026/06/05/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/2026/06/29/ -> https://develop-coaching.com/
+REDIRECT https://develop-coaching.com/5-pillars-plan/ -> https://develop-coaching.com/5-pillars-free-trainings/plan/
+REDIRECT https://develop-coaching.com/5-steps-to-5-million-edinburgh-registration/ -> https://develop-coaching.com/5-steps-to-5-million-edinburgh-registration-2/
+REDIRECT https://develop-coaching.com/blog/2019/07/31/social-media-construction-industry/ -> https://develop-coaching.com/social-media-construction-industry/
+REDIRECT https://develop-coaching.com/blog/2020/04/02/cut-expenses-for-construction-business/ -> https://develop-coaching.com/cost-cutting-in-construction/
+REDIRECT https://develop-coaching.com/blog/2022/05/04/social-media-for-construction/ -> https://develop-coaching.com/best-social-media-platforms-for-construction-companies/
+REDIRECT https://develop-coaching.com/blog/2022/09/08/usp-for-construction-company/ -> https://develop-coaching.com/usp-for-construction-company/
+REDIRECT https://develop-coaching.com/blog/2022/12/06/business-coaching-for-construction/ -> https://develop-coaching.com/business-coaching-for-construction/
+REDIRECT https://develop-coaching.com/blog/2023/02/27/how-to-optimise-your-sales-funnel-in-your-construction-business/ -> https://develop-coaching.com/construction-sales-funnel/
+REDIRECT https://develop-coaching.com/blog/2023/03/30/maximizing-profits-how-to-save-money-in-your-construction-business/ -> https://develop-coaching.com/construction-business-profits/
+REDIRECT https://develop-coaching.com/blog/2023/04/29/how-to-recruit-for-your-construction-business/ -> https://develop-coaching.com/how-to-recruit-for-your-construction-business/
+REDIRECT https://develop-coaching.com/blog/2023/05/30/construction-business-plan/ -> https://develop-coaching.com/construction-business-plan/
+REDIRECT https://develop-coaching.com/blog/2023/10/03/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/ -> https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/
+REDIRECT https://develop-coaching.com/blog/2023/10/31/construction-marketing/ -> https://develop-coaching.com/construction-marketing/
+REDIRECT https://develop-coaching.com/blog/2023/12/29/accounting-for-construction-companies/ -> https://develop-coaching.com/accounting-for-construction-companies/
+REDIRECT https://develop-coaching.com/blog/2024/03/06/unlocking-growth-through-construction-business-networking/ -> https://develop-coaching.com/construction-networking/
+REDIRECT https://develop-coaching.com/blog/2024/04/04/construction-lead-generation/ -> https://develop-coaching.com/construction-lead-generation/
+REDIRECT https://develop-coaching.com/blog/2024/05/06/construction-project-management/ -> https://develop-coaching.com/construction-project-management/
+REDIRECT https://develop-coaching.com/the-5-pillars-attract/ -> https://develop-coaching.com/5-pillars-free-trainings/attract/
+REDIRECT https://develop-coaching.com/the-5-pillars-convert/ -> https://develop-coaching.com/5-pillars-free-trainings/convert/
+REDIRECT https://develop-coaching.com/the-5-pillars-deliver/ -> https://develop-coaching.com/5-pillars-free-trainings/deliver/
+REDIRECT https://develop-coaching.com/the-5-pillars-scale/ -> https://develop-coaching.com/5-pillars-free-trainings/scale/
+REDIRECT https://develop-coaching.com/the-achitect-attractor/ -> https://develop-coaching.com/the-architect-attractor/

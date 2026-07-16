@@ -1,0 +1,3497 @@
+{
+ "trailingSlash": true,
+ "redirects": [
+  {
+   "source": "/2019/06/24",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2021/09/16",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/02/06",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/02/13",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/04/02",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/05/03",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/07/05",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/10/10",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/11/02",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/02/27",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/03/30",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/04/29",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/05/30",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/06/27",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/10/03",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/10/31",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/12/29",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/02/07",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/04/04",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/05/06",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2025/03/11",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2025/07/25",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/01/26",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/03",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/05",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/29",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/5-pillars-plan",
+   "destination": "/5-pillars-free-trainings/plan/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-edinburgh-registration",
+   "destination": "/5-steps-to-5-million-edinburgh-registration-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction-industry",
+   "destination": "/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2020/04/02/cut-expenses-for-construction-business",
+   "destination": "/cost-cutting-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/04/social-media-for-construction",
+   "destination": "/best-social-media-platforms-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/09/08/usp-for-construction-company",
+   "destination": "/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coaching-for-construction",
+   "destination": "/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/02/27/how-to-optimise-your-sales-funnel-in-your-construction-business",
+   "destination": "/construction-sales-funnel/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/03/30/maximizing-profits-how-to-save-money-in-your-construction-business",
+   "destination": "/construction-business-profits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/04/29/how-to-recruit-for-your-construction-business",
+   "destination": "/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/05/30/construction-business-plan",
+   "destination": "/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/03/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce",
+   "destination": "/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/31/construction-marketing",
+   "destination": "/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/12/29/accounting-for-construction-companies",
+   "destination": "/accounting-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/03/06/unlocking-growth-through-construction-business-networking",
+   "destination": "/construction-networking/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/04/04/construction-lead-generation",
+   "destination": "/construction-lead-generation/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/construction-project-management",
+   "destination": "/construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-attract",
+   "destination": "/5-pillars-free-trainings/attract/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-convert",
+   "destination": "/5-pillars-free-trainings/convert/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-deliver",
+   "destination": "/5-pillars-free-trainings/deliver/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-scale",
+   "destination": "/5-pillars-free-trainings/scale/",
+   "permanent": true
+  },
+  {
+   "source": "/the-achitect-attractor",
+   "destination": "/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/author/:path*",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/page/:n(\\d+)",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/category/:path*",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/:path(.+)/:slug([^/]+)",
+   "destination": "/:slug/",
+   "permanent": true
+  },
+  {
+   "source": "/architect-advantage-thank-you",
+   "destination": "/architect-advantage-thank-you.html",
+   "permanent": true
+  },
+  {
+   "source": "/architect-advantage",
+   "destination": "/architect-advantage.html",
+   "permanent": true
+  },
+  {
+   "source": "/uk-cost-guide-download-2",
+   "destination": "/aus-cost-guide-download/",
+   "permanent": true
+  },
+  {
+   "source": "/thank-you-2",
+   "destination": "/thank-you-5m-builder-gameplan/",
+   "permanent": true
+  },
+  {
+   "source": "/built-to-cash-out",
+   "destination": "/sell-your-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/8467-2",
+   "destination": "/podcast/brand-competitor-advantage-john-lenker/",
+   "permanent": true
+  },
+  {
+   "source": "/book-scales-session",
+   "destination": "/book-scale-session/",
+   "permanent": true
+  },
+  {
+   "source": "/dtc-call-only",
+   "destination": "/book-scales-session/",
+   "permanent": true
+  },
+  {
+   "source": "/feedback-frenzy-how-to-get-more-5-star-reviews-old-3",
+   "destination": "/ultimate-pm-planner/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-podcast-2",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/corporate-structure-notice-april-2025",
+   "destination": "/corporate-structure-notice/",
+   "permanent": true
+  },
+  {
+   "source": "/the-build-and-scale-summit",
+   "destination": "/the-build-scale-summit/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule-a-call-book-2",
+   "destination": "/schedule-a-call-subscribe/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-london-uk-2",
+   "destination": "/the-build-and-scale-summit-2025/",
+   "permanent": true
+  },
+  {
+   "source": "/the-build-scale-summit-2025",
+   "destination": "/the-build-and-scale-summit-2025/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart",
+   "destination": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-3/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-2",
+   "destination": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-3/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/9475-2",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/download-build-your-future",
+   "destination": "/download-book/",
+   "permanent": true
+  },
+  {
+   "source": "/thank-you-subscribe",
+   "destination": "/thank-you-subscribe-2/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-business-profits-2",
+   "destination": "/construction-business-profits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/02/07/how-to-grow-your-construction-profit-margin-uk",
+   "destination": "/blog/2024/02/07/construction-profit-margin-uk/",
+   "permanent": true
+  },
+  {
+   "source": "/new-how-a-va-will-save-you-10-hours-a-week-and-make-you-more-\ud83e\udd11",
+   "destination": "/va/",
+   "permanent": true
+  },
+  {
+   "source": "/new-feedback-frenzy-how-to-get-more-5-reviews",
+   "destination": "/feedback-frenzy-how-to-get-more-5-star-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/new-finish-on-time-every-time",
+   "destination": "/finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/streamlined-procurement-system-2",
+   "destination": "/streamlined-procurement-system/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-optimised-office-team",
+   "destination": "/the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/new-show-up-like-a-boss-in-2024",
+   "destination": "/show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-switch-off",
+   "destination": "/the-switch-off/",
+   "permanent": true
+  },
+  {
+   "source": "/new-strategic-planning-for-2024",
+   "destination": "/strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-big-growth-plan",
+   "destination": "/the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-time-trade",
+   "destination": "/the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/the-hand-off-2",
+   "destination": "/the-hand-off/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-perfect-site-setup",
+   "destination": "/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-architect-attractor",
+   "destination": "/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/the-perfect-presentation-2",
+   "destination": "/the-perfect-presentation/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-client-magnet",
+   "destination": "/the-client-magnet/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-sales-mastery",
+   "destination": "/the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/the-outbound-marketing-machine-2",
+   "destination": "/the-outbound-marketing-machine/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-outbound-marketing-machine",
+   "destination": "/the-outbound-marketing-machine-2/",
+   "permanent": true
+  },
+  {
+   "source": "/new-attract-the-best",
+   "destination": "/attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-system-saver",
+   "destination": "/the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-daily-time-out",
+   "destination": "/the-daily-timeout/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-funnel-optimiser",
+   "destination": "/the-funnel-optimiser/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-lead-analyser",
+   "destination": "/the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-big-5",
+   "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/new-social-supercharge",
+   "destination": "/the-social-supercharge/",
+   "permanent": true
+  },
+  {
+   "source": "/freedom-figure-new",
+   "destination": "/the-freedom-figure/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-2",
+   "destination": "/the-5-pillars/",
+   "permanent": true
+  },
+  {
+   "source": "/new-5-pilllars",
+   "destination": "/the-5-pillars-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13208",
+   "destination": "/new-how-a-va-will-save-you-10-hours-a-week-and-make-you-more-%f0%9f%a4%91/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13203",
+   "destination": "/new-feedback-frenzy-how-to-get-more-5-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13198",
+   "destination": "/new-finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13183",
+   "destination": "/new-the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13178",
+   "destination": "/new-show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13163",
+   "destination": "/new-strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13158",
+   "destination": "/new-the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13153",
+   "destination": "/new-the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13145",
+   "destination": "/the-hand-off-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13140",
+   "destination": "/new-the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13132",
+   "destination": "/new-the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13127",
+   "destination": "/the-perfect-presentation-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13116",
+   "destination": "/new-the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13102",
+   "destination": "/new-attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13094",
+   "destination": "/new-the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13089",
+   "destination": "/new-the-daily-time-out/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13075",
+   "destination": "/new-the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13050",
+   "destination": "/freedom-figure-new/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/24/how-to-grow-your-construction-company",
+   "destination": "/blog/2023/01/24/how-to-grow-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/stephen-and-ashley-testimonial",
+   "destination": "/stephen-and-ashley-testimonial-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/09/11/how-to-find-and-keep-excellent-staff",
+   "destination": "/blog/2019/09/11/finding-skilled-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/07/05/how-to-become-a-trade-mastermind-in-your-construction-business",
+   "destination": "/blog/2022/07/05/trade-mastermind-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/02/06/importance-of-setting-goals",
+   "destination": "/blog/2022/02/06/construction-business-goals/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/09/profit-and-loss-report",
+   "destination": "/blog/2021/09/09/profit-and-loss-statement-for-small-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/06/24/stop-wasting-time-on-quotes",
+   "destination": "/blog/2019/06/24/how-to-stop-wasting-time-on-quotes/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/11/04/finding-your-usp",
+   "destination": "/blog/2021/11/04/usp-for-construction-company-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2020/04/17/how-can-i-make-the-best-use-of-my-time-at-home",
+   "destination": "/blog/2020/04/17/how-to-grow-a-construction-business-2/",
+   "permanent": true
+  },
+  {
+   "source": "/va-checklist",
+   "destination": "/va/",
+   "permanent": true
+  },
+  {
+   "source": "/how-a-virtual-assistant-can-get-your-construction-business-to-1m",
+   "destination": "/va-checklist/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/10/15/get-client-to-leave-a-review",
+   "destination": "/blog/2021/10/15/customer-reviews-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/12/28/time-to-come-off-the-tools",
+   "destination": "/blog/2021/12/28/getting-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/02/how-to-get-construction-clients",
+   "destination": "/blog/2022/04/02/how-to-get-clients-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/09/digital-marketing",
+   "destination": "/blog/2021/09/09/digital-marketing-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/29/image-and-construction-brand",
+   "destination": "/blog/2021/09/29/construction-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/10/10/how-to-measure-business-performance",
+   "destination": "/blog/2022/10/10/construction-business-performance/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/06/27/how-to-use-social-media-for-your-construction-business-in-2023",
+   "destination": "/blog/2023/06/27/how-to-use-social-media-for-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/03/win-back-time-construction-business",
+   "destination": "/blog/2022/05/03/time-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/11/02/your-guide-to-construction-business-systems-processes",
+   "destination": "/blog/2022/11/02/construction-business-systems/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/12/29/navigating-the-numbers-effective-construction-company-accounts",
+   "destination": "/blog/2023/12/29/accounting-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/26/recruit-construction-business",
+   "destination": "/blog/2022/04/26/how-to-recruit-for-your-construction-business-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/04/best-social-media-platforms-for-construction-compani",
+   "destination": "/blog/2022/05/04/best-social-media-platforms-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/09/08/usp-beginners-guide",
+   "destination": "/blog/2022/09/08/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coach-construction",
+   "destination": "/blog/2022/12/06/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coaching-for-construction-strategies-for-success",
+   "destination": "/blog/2022/12/06/business-coach-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/why-need-construction-business-coach",
+   "destination": "/blog/2022/12/06/business-coaching-for-construction-strategies-for-success/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/02/the-8-best-tools-for-marketing-your-construction-business",
+   "destination": "/blog/2023/01/02/construction-business-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/24/the-ultimate-guide-to-growing-your-construction-company",
+   "destination": "/blog/2023/01/24/how-to-grow-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/12/15/find-best-tradespeople",
+   "destination": "/blog/2021/12/15/how-to-find-good-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/02/13/plan-your-site-set-up",
+   "destination": "/blog/2022/02/13/construction-site-set-up-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/the-freedom-figure-2",
+   "destination": "/brad-testimonial/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/08/19/paid-digital-advertising",
+   "destination": "/blog/2019/08/19/digital-marketing-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/26/how-much-money-do-i-need-to-retire",
+   "destination": "/blog/2022/04/26/sell-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction",
+   "destination": "/blog/2019/07/31/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction-company",
+   "destination": "/blog/2019/07/31/social-media-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/05/30/do-you-have-a-12-month-plan-for-your-construction-business",
+   "destination": "/blog/2023/05/30/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/construction-project-management10-tips-for-successful-construction-project-management",
+   "destination": "/blog/2024/05/06/construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/04/04/unlocking-the-secrets-of-effective-construction-lead-generation",
+   "destination": "/blog/2024/04/04/construction-lead-generation/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/23/benefits-of-the-federation-of-master-builders",
+   "destination": "/blog/2021/09/23/federation-of-master-builders/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/23/benefits-of-trade-groups",
+   "destination": "/blog/2021/09/23/benefits-of-the-federation-of-master-builders/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/31/ready-to-transform-your-construction-business-with-marketing",
+   "destination": "/blog/2023/10/31/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/29/image-and-branding",
+   "destination": "/blog/2021/09/29/image-and-construction-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/02/07/how-to-grow-your-construction-company-profit-margin",
+   "destination": "/blog/2024/02/07/how-to-grow-your-construction-profit-margin-uk/",
+   "permanent": true
+  },
+  {
+   "source": "/finish-on-time-every-time-2",
+   "destination": "/win-big-clients/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-tips-for-successful-construction-project-management",
+   "destination": "/blog/2024/05/06/construction-project-management10-tips-for-successful-construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-ways-to-construction-project-management-effectively",
+   "destination": "/blog/2024/05/06/10-tips-for-successful-construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-ways-to-effectively-manage-a-construction-business",
+   "destination": "/blog/2024/05/06/10-ways-to-construction-project-management-effectively/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template",
+   "destination": "/the-social-supercharge/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-5",
+   "destination": "/the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-3",
+   "destination": "/the-5-pillars/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-4",
+   "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-6",
+   "destination": "/the-funnel-optimiser/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-7",
+   "destination": "/the-daily-timeout/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3",
+   "destination": "/the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-2",
+   "destination": "/attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2",
+   "destination": "/the-outbound-marketing-machine/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-3",
+   "destination": "/the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2",
+   "destination": "/the-client-magnet/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2",
+   "destination": "/the-perfect-presentation/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2",
+   "destination": "/the-achitect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2",
+   "destination": "/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2",
+   "destination": "/the-hand-off/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2",
+   "destination": "/the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2",
+   "destination": "/the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2",
+   "destination": "/strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/the-switch-off/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/streamlined-procurement-system/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2",
+   "destination": "/feedback-frenzy-how-to-get-more-5-star-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-2",
+   "destination": "/the-freedom-figure/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/02/10-ways-to-effectively-manage-a-construction-business",
+   "destination": "/blog/2024/05/06/10-ways-to-effectively-manage-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8",
+   "destination": "/landing-pages-template-8-3/",
+   "permanent": true
+  },
+  {
+   "source": "/freedom-figure",
+   "destination": "/landing-pages-template/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-london-vip",
+   "destination": "/upgradelondonvip/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-edinburgh-2",
+   "destination": "/5-steps-to-5-million-edinburgh-registration/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-2024",
+   "destination": "/5-steps-to-5-million/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule",
+   "destination": "/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/download-book-2",
+   "destination": "/download-book-form/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-8835",
+   "destination": "/build-your-future-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-event",
+   "destination": "/build-your-future-event-page/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-event-2",
+   "destination": "/build-your-future/",
+   "permanent": true
+  },
+  {
+   "source": "/event-sample",
+   "destination": "/build-your-future-event-2/",
+   "permanent": true
+  },
+  {
+   "source": "/test-2",
+   "destination": "https://www.develop-coaching.com/",
+   "permanent": true
+  },
+  {
+   "source": "/electrical",
+   "destination": "/electrical-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/the-schedule-page-2",
+   "destination": "/event-booking/",
+   "permanent": true
+  },
+  {
+   "source": "/sample-page",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/maximizing-profits-how-to-save-money-in-your-construction-business-2",
+   "destination": "/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/the-develop-coaching-podcast",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/case-study",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/services/bespoke-training",
+   "destination": "/home",
+   "permanent": true
+  },
+  {
+   "source": "/services/building-your-future",
+   "destination": "/home",
+   "permanent": true
+  },
+  {
+   "source": "/about-me",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/my-story",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/book-download-copy",
+   "destination": "/download-book/",
+   "permanent": true
+  },
+  {
+   "source": "/your-guide-to-construction-business-systems-processes-copy",
+   "destination": "/why-need-construction-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/home-v2",
+   "destination": "/home-2/",
+   "permanent": true
+  },
+  {
+   "source": "/your-step-by-step-guide-to-construction-business-systems-processes",
+   "destination": "/your-guide-to-construction-business-systems-processes/",
+   "permanent": true
+  },
+  {
+   "source": "/usp-beginners-guide-copy",
+   "destination": "/how-to-measure-business-performance/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-use-social-media-for-your-construction-business",
+   "destination": "/social-media-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/3-ways-to-attract-the-right-kind-of-clients",
+   "destination": "/attract-the-right-clients/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-win-back-time-in-your-construction-business",
+   "destination": "/win-back-time-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/coronavirus-pandemic-affect-construction-business",
+   "destination": "/pandemic-affect-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-3066",
+   "destination": "/15-minute-scale-session/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-2795",
+   "destination": "/greg-wilkes-media/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-2778",
+   "destination": "/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/services/win-blig-clients-webinar",
+   "destination": "/services/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/media",
+   "destination": "/how-we-work/",
+   "permanent": true
+  },
+  {
+   "source": "/get-ahead-with-digital-marketing",
+   "destination": "/digital-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/services/strategy-course",
+   "destination": "/services/mastermind-course/",
+   "permanent": true
+  },
+  {
+   "source": "/develop-case-study",
+   "destination": "/about-me/",
+   "permanent": true
+  },
+  {
+   "source": "/services/purchase-book",
+   "destination": "/services/building-your-future/",
+   "permanent": true
+  },
+  {
+   "source": "/design-and-technical-drawings",
+   "destination": "/drawings/",
+   "permanent": true
+  },
+  {
+   "source": "/turn-your-property-into-a-luxurious-home",
+   "destination": "/turn-your-property-into-luxurious-home/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-permission-for-a-loft-conversion",
+   "destination": "/planning-permission-for-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-1",
+   "destination": "/home-extension-guide-experts-required/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-2",
+   "destination": "/home-extension-guide-planningpermission/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-3",
+   "destination": "/home-extension-guide-extension-types/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-a-home-extension-with-the-wow-factor-part-4-roofs",
+   "destination": "/home-extension-guide-roofs/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-the-wow-factor-windows-and-doors",
+   "destination": "/home-extension-guide-windows-doors/",
+   "permanent": true
+  },
+  {
+   "source": "/the-home-extension-process",
+   "destination": "/home-extension-guide-the-process/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-home-extension-wow-factor-heating-electric",
+   "destination": "/home-extension-guide-electrics/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-natural-light",
+   "destination": "/home-extension-guide-natural-light/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-electrical-light",
+   "destination": "/home-extension-guide-electrical-light/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-the-wow-factor-part-10-smart-technology",
+   "destination": "/home-extension-guide-smart-technology/",
+   "permanent": true
+  },
+  {
+   "source": "/services/extensions",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/part-7-8-part-guide-ideal-loft-conversion-inspiring-bathroom-design-ideas",
+   "destination": "/inspiring-bathroom-design-ideas/",
+   "permanent": true
+  },
+  {
+   "source": "/part-6-8-part-guide-ideal-loft-conversion-storage",
+   "destination": "/practical-storage-solutions/",
+   "permanent": true
+  },
+  {
+   "source": "/need-additional-space-house-considered-converting-garage",
+   "destination": "/convert-garage-for-additional-space/",
+   "permanent": true
+  },
+  {
+   "source": "/cant-go-can-go-basement-conversions-create-space",
+   "destination": "/basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/turn-40k-investment-into-260k-roi-within-10-weeks",
+   "destination": "/40k-investment-to-260k-roi-in-10-weeks/",
+   "permanent": true
+  },
+  {
+   "source": "/thinking-getting-new-kitchen-advice-get-started",
+   "destination": "/new-kitchen-advice/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-loft-conversion-things-need-know",
+   "destination": "/planning-loft-conversion-things-to-know/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-house-extension-things-need-know",
+   "destination": "/planning-house-extension-things-to-know/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-space-hide-away-loft-become-retreat",
+   "destination": "/creating-space-loft-can-become-retreat/",
+   "permanent": true
+  },
+  {
+   "source": "/black-friday-sale-starts-now-2-5-discount-off-quote",
+   "destination": "/black-friday-sale-starts-now/",
+   "permanent": true
+  },
+  {
+   "source": "/welcome-jeffery-wilkes-building-contractors-ltd-blog",
+   "destination": "/welcome-to-the-jeffery-and-wilkes-blog/",
+   "permanent": true
+  },
+  {
+   "source": "/transform-home-save-money-stylish-renovation",
+   "destination": "/transform-home-with-stylish-renovation/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-house-extension-loft-conversion-summer-start-process-now",
+   "destination": "/planning-home-extension-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/home-renovations-extensions-disabilities",
+   "destination": "/home-renovation-extension-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extensions-three-great-ideas-for-your-home-extension",
+   "destination": "/3-great-ideas-for-your-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extensions-home-extension-london-earn-fortune-next-year",
+   "destination": "/home-extension-london-earn-a-fortune/",
+   "permanent": true
+  },
+  {
+   "source": "/got-january-blues-weve-got-great-home-improvement-ideas-excite",
+   "destination": "/great-home-improvement-ideas/",
+   "permanent": true
+  },
+  {
+   "source": "/ensure-choosing-right-company-refurbish-home",
+   "destination": "/choosing-right-company-refurbish-home/",
+   "permanent": true
+  },
+  {
+   "source": "/choose-right-refurbishment-service-london",
+   "destination": "/choose-refurbishment-service-london/",
+   "permanent": true
+  },
+  {
+   "source": "/6-compelling-reasons-need-loft-conversion",
+   "destination": "/6-reasons-you-need-a-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/stylish-home-renovation-london-can-make-house-home",
+   "destination": "/stylish-home-renovation-in-london/",
+   "permanent": true
+  },
+  {
+   "source": "/refurbish-property-give-space-live-breathe-grow",
+   "destination": "/space-to-live-breathe-and-grow/",
+   "permanent": true
+  },
+  {
+   "source": "/extension-bungalow-best-decision-can-make",
+   "destination": "/an-extension-to-your-bungalow/",
+   "permanent": true
+  },
+  {
+   "source": "/5-reasons-ealing-one-best-places-live-london",
+   "destination": "/5-reasons-to-live-in-ealing-london/",
+   "permanent": true
+  },
+  {
+   "source": "/how-can-you-add-the-wow-factor-to-your-home",
+   "destination": "/add-the-wow-factor-to-your-home/",
+   "permanent": true
+  },
+  {
+   "source": "/cant-decide-benefit-home-extension-home-refurbishment",
+   "destination": "/home-extension-or-home-refurbishment/",
+   "permanent": true
+  },
+  {
+   "source": "/how-can-i-fund-the-renovation-for-my-dream-home",
+   "destination": "/how-can-i-fund-my-renovation/",
+   "permanent": true
+  },
+  {
+   "source": "/deciding-which-builder-to-choose-for-your-project-can-be-difficult",
+   "destination": "/choosing-a-builder-can-be-difficult/",
+   "permanent": true
+  },
+  {
+   "source": "/permitted-development-neighbourhood-consultation-scheme",
+   "destination": "/the-neighbourhood-consultation-scheme/",
+   "permanent": true
+  },
+  {
+   "source": "/new-19c-double-storey-extension",
+   "destination": "/19c-double-storey-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/part-5-8-part-guide-ideal-loft-conversion-heating-lighting",
+   "destination": "/heating-and-lighting/",
+   "permanent": true
+  },
+  {
+   "source": "/part-4-of-our-8-part-guide-to-your-ideal-loft-conversion-loft-staircases",
+   "destination": "/loft-staircases/",
+   "permanent": true
+  },
+  {
+   "source": "/part-3-8-part-guide-ideal-loft-conversion-use-natural-light-create-amazing-space",
+   "destination": "/how-to-use-natural-light/",
+   "permanent": true
+  },
+  {
+   "source": "/ideal-loft-conversion-part-2-types-of-loft-conversion",
+   "destination": "/types-of-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/your-ideal-loft-conversion-part-1-of-our-8-part-guide",
+   "destination": "/your-ideal-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/part-8-of-our-8-part-guide-to-your-ideal-loft-conversion-latest-technology",
+   "destination": "/using-latest-technology/",
+   "permanent": true
+  },
+  {
+   "source": "/designandbuild/a",
+   "destination": "https://www.jefferyandwilkes.co.uk/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/10-jobs-to-protect-your-home-this-winter.html",
+   "destination": "/10-jobs-protect-home-winter/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/are-you-considering-a-new-or-renovated-bathroom.html",
+   "destination": "/considering-new-renovated-bathroom/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/new-design-service.html",
+   "destination": "/new-design-service/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/new-kitchen-advice.html",
+   "destination": "/thinking-getting-new-kitchen-advice-get-started/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/loft-conversion-need-to-know.html",
+   "destination": "/planning-loft-conversion-things-need-know/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/house-extension-advice.html",
+   "destination": "/planning-house-extension-things-need-know/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/loft-conversion-design-advice.html",
+   "destination": "/ideas-advice-designing-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/if-you-need-additional-space-in-your-house-have-you-considered-converting-your-garage.html",
+   "destination": "/need-additional-space-house-considered-converting-garage/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/house-extension-benefits.html",
+   "destination": "/can-extend-home-benefits-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/home-adaptations-for-those-with-disabilities.html",
+   "destination": "/home-adaptations-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/planning-for-summer.html",
+   "destination": "/planning-house-extension-loft-conversion-summer-start-process-now/",
+   "permanent": true
+  },
+  {
+   "source": "/ideas-outside-home-improvements",
+   "destination": "/blog/home-improvements.html",
+   "permanent": true
+  },
+  {
+   "source": "/blog/help-i-have-no-space-and-cannot-afford-to-move.html",
+   "destination": "/help-no-space-cannot-afford-move/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/top-ten-tips-to-add-value-to-your-home.html",
+   "destination": "/top-ten-tips-add-value-home/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-20-per-cent-to-your-property-price.html",
+   "destination": "/want-add-20-property-price-heres/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/staircases-for-loft-conversions-ideas-to-explore.html",
+   "destination": "/staircases-loft-conversions-ideas-explore/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/turn-your-end-of-year-bonus-into-an-investment.html",
+   "destination": "/turn-end-year-bonus-investment/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/january-blues.html",
+   "destination": "/got-january-blues-weve-got-great-home-improvement-ideas-excite/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/getting-the-builders-in-how-long-is-it-likely-to-take.html",
+   "destination": "/getting-builders-long-likely-take/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-space-to-your-west-london-home.html",
+   "destination": "/cant-go-can-go-basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/basement-conversions-to-create-more-space.html",
+   "destination": "/cant-go-can-go-basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/what-to-do-with-your-teenagers-when-they-have-outgrown-your-house.html",
+   "destination": "/teenagers-theyve-outgrown-house/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/getting-roi-from-your-home-extension.html",
+   "destination": "/getting-roi-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/5-reasons-ealing-is-one-of-the-best-places-to-live-in-london.html",
+   "destination": "/5-reasons-ealing-one-best-places-live-london/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-wow-factor-with-a-home-extension.html",
+   "destination": "/add-wow-factor-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-create-rooms-that-improve-your-wellbeing.html",
+   "destination": "/create-rooms-improve-wellbeing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/can-you-have-it-all-creating-space-and-the-wow-factor.html",
+   "destination": "/can-creating-space-wow-factor/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/5-tips-for-adding-style-to-your-loft-conversion.html",
+   "destination": "/5-tips-adding-style-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/could-your-loft-become-your-retreat.html",
+   "destination": "/creating-space-hide-away-loft-become-retreat/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/cost-of-commuting-vs-extending-your-london-home.html",
+   "destination": "/cost-commuting-vs-extending-london-home/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-can-i-extend-my-home-and-what-are-the-benefits.html",
+   "destination": "/can-extend-home-benefits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/home-renovations-and-extensions-for-those-with-disabilities.html",
+   "destination": "/home-renovations-extensions-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/the-benefits-of-a-loft-conversion.html",
+   "destination": "/benefits-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/we-are-having-a-refurbishment-of-our-own.html",
+   "destination": "/jeffery-wilkes-excited-announce-refurbishment/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/business-for-good-how-we-re-all-making-a-difference.html",
+   "destination": "/business-good-making-difference/",
+   "permanent": true
+  },
+  {
+   "source": "/public-sector.php",
+   "destination": "/services/commercial/",
+   "permanent": true
+  },
+  {
+   "source": "/disabled-adaptations.php",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/about.html",
+   "destination": "/why-jw/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions.php",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/contact-us.html",
+   "destination": "/contact/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/public-sector.html",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/extensions.html",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/roofing-carpentry.html",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/public-sector.html",
+   "destination": "/services/commercial/",
+   "permanent": true
+  },
+  {
+   "source": "/plumber.html",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/luxury-bathrooms.html",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/kitchens.html",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/electrical-services.html",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/eco-lofts.html",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/disabled-adaptations.html",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/extensions/planning-permission-faq-s.html",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/about/references-and-testimonials.html",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/loft-conversions.html",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/blog.html",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/luxury-bathrooms.html",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/extensions.html",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions/loft-conversion-faq-s.html",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions.html",
+   "destination": "/services/loft-conversions",
+   "permanent": true
+  },
+  {
+   "source": "/www.develop-coaching.com/about-me",
+   "destination": "www.develop-coaching.com/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/how-much-money",
+   "destination": "/how-much-money-do-i-need-to-retire/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-understand-a-pl-report",
+   "destination": "/profit-and-loss-report/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-get-a-client-to-leave-a-review",
+   "destination": "/get-client-to-leave-a-review/",
+   "permanent": true
+  },
+  {
+   "source": "/2019/06/24/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2021/09/16/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/02/06/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/02/13/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/04/02/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/05/03/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/07/05/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/10/10/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2022/11/02/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/02/27/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/03/30/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/04/29/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/05/30/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/06/27/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/10/03/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/10/31/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2023/12/29/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/02/07/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/04/04/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2024/05/06/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2025/03/11/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2025/07/25/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/01/26/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/03/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/05/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/2026/06/29/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/5-pillars-plan/",
+   "destination": "/5-pillars-free-trainings/plan/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-edinburgh-registration/",
+   "destination": "/5-steps-to-5-million-edinburgh-registration-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction-industry/",
+   "destination": "/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2020/04/02/cut-expenses-for-construction-business/",
+   "destination": "/cost-cutting-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/04/social-media-for-construction/",
+   "destination": "/best-social-media-platforms-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/09/08/usp-for-construction-company/",
+   "destination": "/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coaching-for-construction/",
+   "destination": "/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/02/27/how-to-optimise-your-sales-funnel-in-your-construction-business/",
+   "destination": "/construction-sales-funnel/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/03/30/maximizing-profits-how-to-save-money-in-your-construction-business/",
+   "destination": "/construction-business-profits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/04/29/how-to-recruit-for-your-construction-business/",
+   "destination": "/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/05/30/construction-business-plan/",
+   "destination": "/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/03/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/",
+   "destination": "/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/31/construction-marketing/",
+   "destination": "/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/12/29/accounting-for-construction-companies/",
+   "destination": "/accounting-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/03/06/unlocking-growth-through-construction-business-networking/",
+   "destination": "/construction-networking/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/04/04/construction-lead-generation/",
+   "destination": "/construction-lead-generation/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/construction-project-management/",
+   "destination": "/construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-attract/",
+   "destination": "/5-pillars-free-trainings/attract/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-convert/",
+   "destination": "/5-pillars-free-trainings/convert/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-deliver/",
+   "destination": "/5-pillars-free-trainings/deliver/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-scale/",
+   "destination": "/5-pillars-free-trainings/scale/",
+   "permanent": true
+  },
+  {
+   "source": "/the-achitect-attractor/",
+   "destination": "/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/author/:path*/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/category/:path*/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/architect-advantage-thank-you/",
+   "destination": "/architect-advantage-thank-you.html",
+   "permanent": true
+  },
+  {
+   "source": "/architect-advantage/",
+   "destination": "/architect-advantage.html",
+   "permanent": true
+  },
+  {
+   "source": "/uk-cost-guide-download-2/",
+   "destination": "/aus-cost-guide-download/",
+   "permanent": true
+  },
+  {
+   "source": "/thank-you-2/",
+   "destination": "/thank-you-5m-builder-gameplan/",
+   "permanent": true
+  },
+  {
+   "source": "/built-to-cash-out/",
+   "destination": "/sell-your-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/8467-2/",
+   "destination": "/podcast/brand-competitor-advantage-john-lenker/",
+   "permanent": true
+  },
+  {
+   "source": "/book-scales-session/",
+   "destination": "/book-scale-session/",
+   "permanent": true
+  },
+  {
+   "source": "/dtc-call-only/",
+   "destination": "/book-scales-session/",
+   "permanent": true
+  },
+  {
+   "source": "/feedback-frenzy-how-to-get-more-5-star-reviews-old-3/",
+   "destination": "/ultimate-pm-planner/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-podcast-2/",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/corporate-structure-notice-april-2025/",
+   "destination": "/corporate-structure-notice/",
+   "permanent": true
+  },
+  {
+   "source": "/the-build-and-scale-summit/",
+   "destination": "/the-build-scale-summit/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule-a-call-book-2/",
+   "destination": "/schedule-a-call-subscribe/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-london-uk-2/",
+   "destination": "/the-build-and-scale-summit-2025/",
+   "permanent": true
+  },
+  {
+   "source": "/the-build-scale-summit-2025/",
+   "destination": "/the-build-and-scale-summit-2025/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart/",
+   "destination": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-3/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-2/",
+   "destination": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-3/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/9475-2/",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/download-build-your-future/",
+   "destination": "/download-book/",
+   "permanent": true
+  },
+  {
+   "source": "/thank-you-subscribe/",
+   "destination": "/thank-you-subscribe-2/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-business-profits-2/",
+   "destination": "/construction-business-profits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/02/07/how-to-grow-your-construction-profit-margin-uk/",
+   "destination": "/blog/2024/02/07/construction-profit-margin-uk/",
+   "permanent": true
+  },
+  {
+   "source": "/new-how-a-va-will-save-you-10-hours-a-week-and-make-you-more-\ud83e\udd11/",
+   "destination": "/va/",
+   "permanent": true
+  },
+  {
+   "source": "/new-feedback-frenzy-how-to-get-more-5-reviews/",
+   "destination": "/feedback-frenzy-how-to-get-more-5-star-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/new-finish-on-time-every-time/",
+   "destination": "/finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/streamlined-procurement-system-2/",
+   "destination": "/streamlined-procurement-system/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-optimised-office-team/",
+   "destination": "/the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/new-show-up-like-a-boss-in-2024/",
+   "destination": "/show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-switch-off/",
+   "destination": "/the-switch-off/",
+   "permanent": true
+  },
+  {
+   "source": "/new-strategic-planning-for-2024/",
+   "destination": "/strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-big-growth-plan/",
+   "destination": "/the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-time-trade/",
+   "destination": "/the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/the-hand-off-2/",
+   "destination": "/the-hand-off/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-perfect-site-setup/",
+   "destination": "/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-architect-attractor/",
+   "destination": "/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/the-perfect-presentation-2/",
+   "destination": "/the-perfect-presentation/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-client-magnet/",
+   "destination": "/the-client-magnet/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-sales-mastery/",
+   "destination": "/the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/the-outbound-marketing-machine-2/",
+   "destination": "/the-outbound-marketing-machine/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-outbound-marketing-machine/",
+   "destination": "/the-outbound-marketing-machine-2/",
+   "permanent": true
+  },
+  {
+   "source": "/new-attract-the-best/",
+   "destination": "/attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-system-saver/",
+   "destination": "/the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-daily-time-out/",
+   "destination": "/the-daily-timeout/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-funnel-optimiser/",
+   "destination": "/the-funnel-optimiser/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-lead-analyser/",
+   "destination": "/the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/new-the-big-5/",
+   "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/new-social-supercharge/",
+   "destination": "/the-social-supercharge/",
+   "permanent": true
+  },
+  {
+   "source": "/freedom-figure-new/",
+   "destination": "/the-freedom-figure/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars-2/",
+   "destination": "/the-5-pillars/",
+   "permanent": true
+  },
+  {
+   "source": "/new-5-pilllars/",
+   "destination": "/the-5-pillars-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13208/",
+   "destination": "/new-how-a-va-will-save-you-10-hours-a-week-and-make-you-more-%f0%9f%a4%91/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13203/",
+   "destination": "/new-feedback-frenzy-how-to-get-more-5-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13198/",
+   "destination": "/new-finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13183/",
+   "destination": "/new-the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13178/",
+   "destination": "/new-show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13163/",
+   "destination": "/new-strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13158/",
+   "destination": "/new-the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13153/",
+   "destination": "/new-the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13145/",
+   "destination": "/the-hand-off-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13140/",
+   "destination": "/new-the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13132/",
+   "destination": "/new-the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13127/",
+   "destination": "/the-perfect-presentation-2/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13116/",
+   "destination": "/new-the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13102/",
+   "destination": "/new-attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13094/",
+   "destination": "/new-the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13089/",
+   "destination": "/new-the-daily-time-out/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13075/",
+   "destination": "/new-the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-13050/",
+   "destination": "/freedom-figure-new/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/24/how-to-grow-your-construction-company/",
+   "destination": "/blog/2023/01/24/how-to-grow-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/stephen-and-ashley-testimonial/",
+   "destination": "/stephen-and-ashley-testimonial-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/09/11/how-to-find-and-keep-excellent-staff/",
+   "destination": "/blog/2019/09/11/finding-skilled-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/07/05/how-to-become-a-trade-mastermind-in-your-construction-business/",
+   "destination": "/blog/2022/07/05/trade-mastermind-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/02/06/importance-of-setting-goals/",
+   "destination": "/blog/2022/02/06/construction-business-goals/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/09/profit-and-loss-report/",
+   "destination": "/blog/2021/09/09/profit-and-loss-statement-for-small-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/06/24/stop-wasting-time-on-quotes/",
+   "destination": "/blog/2019/06/24/how-to-stop-wasting-time-on-quotes/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/11/04/finding-your-usp/",
+   "destination": "/blog/2021/11/04/usp-for-construction-company-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2020/04/17/how-can-i-make-the-best-use-of-my-time-at-home/",
+   "destination": "/blog/2020/04/17/how-to-grow-a-construction-business-2/",
+   "permanent": true
+  },
+  {
+   "source": "/va-checklist/",
+   "destination": "/va/",
+   "permanent": true
+  },
+  {
+   "source": "/how-a-virtual-assistant-can-get-your-construction-business-to-1m/",
+   "destination": "/va-checklist/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/10/15/get-client-to-leave-a-review/",
+   "destination": "/blog/2021/10/15/customer-reviews-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/12/28/time-to-come-off-the-tools/",
+   "destination": "/blog/2021/12/28/getting-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/02/how-to-get-construction-clients/",
+   "destination": "/blog/2022/04/02/how-to-get-clients-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/09/digital-marketing/",
+   "destination": "/blog/2021/09/09/digital-marketing-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/29/image-and-construction-brand/",
+   "destination": "/blog/2021/09/29/construction-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/10/10/how-to-measure-business-performance/",
+   "destination": "/blog/2022/10/10/construction-business-performance/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/06/27/how-to-use-social-media-for-your-construction-business-in-2023/",
+   "destination": "/blog/2023/06/27/how-to-use-social-media-for-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/03/win-back-time-construction-business/",
+   "destination": "/blog/2022/05/03/time-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/11/02/your-guide-to-construction-business-systems-processes/",
+   "destination": "/blog/2022/11/02/construction-business-systems/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/12/29/navigating-the-numbers-effective-construction-company-accounts/",
+   "destination": "/blog/2023/12/29/accounting-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/26/recruit-construction-business/",
+   "destination": "/blog/2022/04/26/how-to-recruit-for-your-construction-business-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/05/04/best-social-media-platforms-for-construction-compani/",
+   "destination": "/blog/2022/05/04/best-social-media-platforms-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/09/08/usp-beginners-guide/",
+   "destination": "/blog/2022/09/08/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coach-construction/",
+   "destination": "/blog/2022/12/06/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/business-coaching-for-construction-strategies-for-success/",
+   "destination": "/blog/2022/12/06/business-coach-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/12/06/why-need-construction-business-coach/",
+   "destination": "/blog/2022/12/06/business-coaching-for-construction-strategies-for-success/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/02/the-8-best-tools-for-marketing-your-construction-business/",
+   "destination": "/blog/2023/01/02/construction-business-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/01/24/the-ultimate-guide-to-growing-your-construction-company/",
+   "destination": "/blog/2023/01/24/how-to-grow-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/12/15/find-best-tradespeople/",
+   "destination": "/blog/2021/12/15/how-to-find-good-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/02/13/plan-your-site-set-up/",
+   "destination": "/blog/2022/02/13/construction-site-set-up-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/the-freedom-figure-2/",
+   "destination": "/brad-testimonial/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/08/19/paid-digital-advertising/",
+   "destination": "/blog/2019/08/19/digital-marketing-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2022/04/26/how-much-money-do-i-need-to-retire/",
+   "destination": "/blog/2022/04/26/sell-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction/",
+   "destination": "/blog/2019/07/31/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2019/07/31/social-media-construction-company/",
+   "destination": "/blog/2019/07/31/social-media-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/05/30/do-you-have-a-12-month-plan-for-your-construction-business/",
+   "destination": "/blog/2023/05/30/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/construction-project-management10-tips-for-successful-construction-project-management/",
+   "destination": "/blog/2024/05/06/construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/04/04/unlocking-the-secrets-of-effective-construction-lead-generation/",
+   "destination": "/blog/2024/04/04/construction-lead-generation/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/23/benefits-of-the-federation-of-master-builders/",
+   "destination": "/blog/2021/09/23/federation-of-master-builders/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/23/benefits-of-trade-groups/",
+   "destination": "/blog/2021/09/23/benefits-of-the-federation-of-master-builders/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2023/10/31/ready-to-transform-your-construction-business-with-marketing/",
+   "destination": "/blog/2023/10/31/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2021/09/29/image-and-branding/",
+   "destination": "/blog/2021/09/29/image-and-construction-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/02/07/how-to-grow-your-construction-company-profit-margin/",
+   "destination": "/blog/2024/02/07/how-to-grow-your-construction-profit-margin-uk/",
+   "permanent": true
+  },
+  {
+   "source": "/finish-on-time-every-time-2/",
+   "destination": "/win-big-clients/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-tips-for-successful-construction-project-management/",
+   "destination": "/blog/2024/05/06/construction-project-management10-tips-for-successful-construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-ways-to-construction-project-management-effectively/",
+   "destination": "/blog/2024/05/06/10-tips-for-successful-construction-project-management/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/06/10-ways-to-effectively-manage-a-construction-business/",
+   "destination": "/blog/2024/05/06/10-ways-to-construction-project-management-effectively/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template/",
+   "destination": "/the-social-supercharge/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-5/",
+   "destination": "/the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-3/",
+   "destination": "/the-5-pillars/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-4/",
+   "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-6/",
+   "destination": "/the-funnel-optimiser/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-7/",
+   "destination": "/the-daily-timeout/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3/",
+   "destination": "/the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-2/",
+   "destination": "/attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2/",
+   "destination": "/the-outbound-marketing-machine/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-3/",
+   "destination": "/the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2/",
+   "destination": "/the-client-magnet/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2/",
+   "destination": "/the-perfect-presentation/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2/",
+   "destination": "/the-achitect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2/",
+   "destination": "/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2/",
+   "destination": "/the-hand-off/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2/",
+   "destination": "/the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2/",
+   "destination": "/the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2/",
+   "destination": "/strategic-planning-for-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/the-switch-off/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/show-up-like-a-boss-in-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/streamlined-procurement-system/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/",
+   "destination": "/feedback-frenzy-how-to-get-more-5-star-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-2/",
+   "destination": "/the-freedom-figure/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/2024/05/02/10-ways-to-effectively-manage-a-construction-business/",
+   "destination": "/blog/2024/05/06/10-ways-to-effectively-manage-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/landing-pages-template-8/",
+   "destination": "/landing-pages-template-8-3/",
+   "permanent": true
+  },
+  {
+   "source": "/freedom-figure/",
+   "destination": "/landing-pages-template/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-london-vip/",
+   "destination": "/upgradelondonvip/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million-edinburgh-2/",
+   "destination": "/5-steps-to-5-million-edinburgh-registration/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-2024/",
+   "destination": "/5-steps-to-5-million/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule/",
+   "destination": "/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/download-book-2/",
+   "destination": "/download-book-form/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-8835/",
+   "destination": "/build-your-future-2024/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-event/",
+   "destination": "/build-your-future-event-page/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-event-2/",
+   "destination": "/build-your-future/",
+   "permanent": true
+  },
+  {
+   "source": "/event-sample/",
+   "destination": "/build-your-future-event-2/",
+   "permanent": true
+  },
+  {
+   "source": "/test-2/",
+   "destination": "https://www.develop-coaching.com/",
+   "permanent": true
+  },
+  {
+   "source": "/electrical/",
+   "destination": "/electrical-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/the-schedule-page-2/",
+   "destination": "/event-booking/",
+   "permanent": true
+  },
+  {
+   "source": "/sample-page/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/maximizing-profits-how-to-save-money-in-your-construction-business-2/",
+   "destination": "/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/the-develop-coaching-podcast/",
+   "destination": "/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/case-study/",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/services/bespoke-training/",
+   "destination": "/home",
+   "permanent": true
+  },
+  {
+   "source": "/services/building-your-future/",
+   "destination": "/home",
+   "permanent": true
+  },
+  {
+   "source": "/about-me/",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/my-story/",
+   "destination": "/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/book-download-copy/",
+   "destination": "/download-book/",
+   "permanent": true
+  },
+  {
+   "source": "/your-guide-to-construction-business-systems-processes-copy/",
+   "destination": "/why-need-construction-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/home-v2/",
+   "destination": "/home-2/",
+   "permanent": true
+  },
+  {
+   "source": "/your-step-by-step-guide-to-construction-business-systems-processes/",
+   "destination": "/your-guide-to-construction-business-systems-processes/",
+   "permanent": true
+  },
+  {
+   "source": "/usp-beginners-guide-copy/",
+   "destination": "/how-to-measure-business-performance/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-use-social-media-for-your-construction-business/",
+   "destination": "/social-media-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/3-ways-to-attract-the-right-kind-of-clients/",
+   "destination": "/attract-the-right-clients/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-win-back-time-in-your-construction-business/",
+   "destination": "/win-back-time-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/coronavirus-pandemic-affect-construction-business/",
+   "destination": "/pandemic-affect-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-3066/",
+   "destination": "/15-minute-scale-session/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-2795/",
+   "destination": "/greg-wilkes-media/",
+   "permanent": true
+  },
+  {
+   "source": "/elementor-2778/",
+   "destination": "/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/services/win-blig-clients-webinar/",
+   "destination": "/services/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/media/",
+   "destination": "/how-we-work/",
+   "permanent": true
+  },
+  {
+   "source": "/get-ahead-with-digital-marketing/",
+   "destination": "/digital-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/services/strategy-course/",
+   "destination": "/services/mastermind-course/",
+   "permanent": true
+  },
+  {
+   "source": "/develop-case-study/",
+   "destination": "/about-me/",
+   "permanent": true
+  },
+  {
+   "source": "/services/purchase-book/",
+   "destination": "/services/building-your-future/",
+   "permanent": true
+  },
+  {
+   "source": "/design-and-technical-drawings/",
+   "destination": "/drawings/",
+   "permanent": true
+  },
+  {
+   "source": "/turn-your-property-into-a-luxurious-home/",
+   "destination": "/turn-your-property-into-luxurious-home/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-permission-for-a-loft-conversion/",
+   "destination": "/planning-permission-for-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-1/",
+   "destination": "/home-extension-guide-experts-required/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-2/",
+   "destination": "/home-extension-guide-planningpermission/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-part-3/",
+   "destination": "/home-extension-guide-extension-types/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-a-home-extension-with-the-wow-factor-part-4-roofs/",
+   "destination": "/home-extension-guide-roofs/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-the-wow-factor-windows-and-doors/",
+   "destination": "/home-extension-guide-windows-doors/",
+   "permanent": true
+  },
+  {
+   "source": "/the-home-extension-process/",
+   "destination": "/home-extension-guide-the-process/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-home-extension-wow-factor-heating-electric/",
+   "destination": "/home-extension-guide-electrics/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-natural-light/",
+   "destination": "/home-extension-guide-natural-light/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-wow-factor-electrical-light/",
+   "destination": "/home-extension-guide-electrical-light/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extension-with-the-wow-factor-part-10-smart-technology/",
+   "destination": "/home-extension-guide-smart-technology/",
+   "permanent": true
+  },
+  {
+   "source": "/services/extensions/",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/part-7-8-part-guide-ideal-loft-conversion-inspiring-bathroom-design-ideas/",
+   "destination": "/inspiring-bathroom-design-ideas/",
+   "permanent": true
+  },
+  {
+   "source": "/part-6-8-part-guide-ideal-loft-conversion-storage/",
+   "destination": "/practical-storage-solutions/",
+   "permanent": true
+  },
+  {
+   "source": "/need-additional-space-house-considered-converting-garage/",
+   "destination": "/convert-garage-for-additional-space/",
+   "permanent": true
+  },
+  {
+   "source": "/cant-go-can-go-basement-conversions-create-space/",
+   "destination": "/basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/turn-40k-investment-into-260k-roi-within-10-weeks/",
+   "destination": "/40k-investment-to-260k-roi-in-10-weeks/",
+   "permanent": true
+  },
+  {
+   "source": "/thinking-getting-new-kitchen-advice-get-started/",
+   "destination": "/new-kitchen-advice/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-loft-conversion-things-need-know/",
+   "destination": "/planning-loft-conversion-things-to-know/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-house-extension-things-need-know/",
+   "destination": "/planning-house-extension-things-to-know/",
+   "permanent": true
+  },
+  {
+   "source": "/creating-space-hide-away-loft-become-retreat/",
+   "destination": "/creating-space-loft-can-become-retreat/",
+   "permanent": true
+  },
+  {
+   "source": "/black-friday-sale-starts-now-2-5-discount-off-quote/",
+   "destination": "/black-friday-sale-starts-now/",
+   "permanent": true
+  },
+  {
+   "source": "/welcome-jeffery-wilkes-building-contractors-ltd-blog/",
+   "destination": "/welcome-to-the-jeffery-and-wilkes-blog/",
+   "permanent": true
+  },
+  {
+   "source": "/transform-home-save-money-stylish-renovation/",
+   "destination": "/transform-home-with-stylish-renovation/",
+   "permanent": true
+  },
+  {
+   "source": "/planning-house-extension-loft-conversion-summer-start-process-now/",
+   "destination": "/planning-home-extension-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/home-renovations-extensions-disabilities/",
+   "destination": "/home-renovation-extension-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extensions-three-great-ideas-for-your-home-extension/",
+   "destination": "/3-great-ideas-for-your-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/home-extensions-home-extension-london-earn-fortune-next-year/",
+   "destination": "/home-extension-london-earn-a-fortune/",
+   "permanent": true
+  },
+  {
+   "source": "/got-january-blues-weve-got-great-home-improvement-ideas-excite/",
+   "destination": "/great-home-improvement-ideas/",
+   "permanent": true
+  },
+  {
+   "source": "/ensure-choosing-right-company-refurbish-home/",
+   "destination": "/choosing-right-company-refurbish-home/",
+   "permanent": true
+  },
+  {
+   "source": "/choose-right-refurbishment-service-london/",
+   "destination": "/choose-refurbishment-service-london/",
+   "permanent": true
+  },
+  {
+   "source": "/6-compelling-reasons-need-loft-conversion/",
+   "destination": "/6-reasons-you-need-a-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/stylish-home-renovation-london-can-make-house-home/",
+   "destination": "/stylish-home-renovation-in-london/",
+   "permanent": true
+  },
+  {
+   "source": "/refurbish-property-give-space-live-breathe-grow/",
+   "destination": "/space-to-live-breathe-and-grow/",
+   "permanent": true
+  },
+  {
+   "source": "/extension-bungalow-best-decision-can-make/",
+   "destination": "/an-extension-to-your-bungalow/",
+   "permanent": true
+  },
+  {
+   "source": "/5-reasons-ealing-one-best-places-live-london/",
+   "destination": "/5-reasons-to-live-in-ealing-london/",
+   "permanent": true
+  },
+  {
+   "source": "/how-can-you-add-the-wow-factor-to-your-home/",
+   "destination": "/add-the-wow-factor-to-your-home/",
+   "permanent": true
+  },
+  {
+   "source": "/cant-decide-benefit-home-extension-home-refurbishment/",
+   "destination": "/home-extension-or-home-refurbishment/",
+   "permanent": true
+  },
+  {
+   "source": "/how-can-i-fund-the-renovation-for-my-dream-home/",
+   "destination": "/how-can-i-fund-my-renovation/",
+   "permanent": true
+  },
+  {
+   "source": "/deciding-which-builder-to-choose-for-your-project-can-be-difficult/",
+   "destination": "/choosing-a-builder-can-be-difficult/",
+   "permanent": true
+  },
+  {
+   "source": "/permitted-development-neighbourhood-consultation-scheme/",
+   "destination": "/the-neighbourhood-consultation-scheme/",
+   "permanent": true
+  },
+  {
+   "source": "/new-19c-double-storey-extension/",
+   "destination": "/19c-double-storey-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/part-5-8-part-guide-ideal-loft-conversion-heating-lighting/",
+   "destination": "/heating-and-lighting/",
+   "permanent": true
+  },
+  {
+   "source": "/part-4-of-our-8-part-guide-to-your-ideal-loft-conversion-loft-staircases/",
+   "destination": "/loft-staircases/",
+   "permanent": true
+  },
+  {
+   "source": "/part-3-8-part-guide-ideal-loft-conversion-use-natural-light-create-amazing-space/",
+   "destination": "/how-to-use-natural-light/",
+   "permanent": true
+  },
+  {
+   "source": "/ideal-loft-conversion-part-2-types-of-loft-conversion/",
+   "destination": "/types-of-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/your-ideal-loft-conversion-part-1-of-our-8-part-guide/",
+   "destination": "/your-ideal-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/part-8-of-our-8-part-guide-to-your-ideal-loft-conversion-latest-technology/",
+   "destination": "/using-latest-technology/",
+   "permanent": true
+  },
+  {
+   "source": "/designandbuild/a/",
+   "destination": "https://www.jefferyandwilkes.co.uk/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/10-jobs-to-protect-your-home-this-winter.html/",
+   "destination": "/10-jobs-protect-home-winter/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/are-you-considering-a-new-or-renovated-bathroom.html/",
+   "destination": "/considering-new-renovated-bathroom/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/new-design-service.html/",
+   "destination": "/new-design-service/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/new-kitchen-advice.html/",
+   "destination": "/thinking-getting-new-kitchen-advice-get-started/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/loft-conversion-need-to-know.html/",
+   "destination": "/planning-loft-conversion-things-need-know/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/house-extension-advice.html/",
+   "destination": "/planning-house-extension-things-need-know/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/loft-conversion-design-advice.html/",
+   "destination": "/ideas-advice-designing-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/if-you-need-additional-space-in-your-house-have-you-considered-converting-your-garage.html/",
+   "destination": "/need-additional-space-house-considered-converting-garage/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/house-extension-benefits.html/",
+   "destination": "/can-extend-home-benefits-2/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/home-adaptations-for-those-with-disabilities.html/",
+   "destination": "/home-adaptations-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/planning-for-summer.html/",
+   "destination": "/planning-house-extension-loft-conversion-summer-start-process-now/",
+   "permanent": true
+  },
+  {
+   "source": "/ideas-outside-home-improvements/",
+   "destination": "/blog/home-improvements.html",
+   "permanent": true
+  },
+  {
+   "source": "/blog/help-i-have-no-space-and-cannot-afford-to-move.html/",
+   "destination": "/help-no-space-cannot-afford-move/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/top-ten-tips-to-add-value-to-your-home.html/",
+   "destination": "/top-ten-tips-add-value-home/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-20-per-cent-to-your-property-price.html/",
+   "destination": "/want-add-20-property-price-heres/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/staircases-for-loft-conversions-ideas-to-explore.html/",
+   "destination": "/staircases-loft-conversions-ideas-explore/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/turn-your-end-of-year-bonus-into-an-investment.html/",
+   "destination": "/turn-end-year-bonus-investment/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/january-blues.html/",
+   "destination": "/got-january-blues-weve-got-great-home-improvement-ideas-excite/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/getting-the-builders-in-how-long-is-it-likely-to-take.html/",
+   "destination": "/getting-builders-long-likely-take/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-space-to-your-west-london-home.html/",
+   "destination": "/cant-go-can-go-basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/basement-conversions-to-create-more-space.html/",
+   "destination": "/cant-go-can-go-basement-conversions-create-space/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/what-to-do-with-your-teenagers-when-they-have-outgrown-your-house.html/",
+   "destination": "/teenagers-theyve-outgrown-house/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/getting-roi-from-your-home-extension.html/",
+   "destination": "/getting-roi-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/5-reasons-ealing-is-one-of-the-best-places-to-live-in-london.html/",
+   "destination": "/5-reasons-ealing-one-best-places-live-london/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-add-wow-factor-with-a-home-extension.html/",
+   "destination": "/add-wow-factor-home-extension/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-to-create-rooms-that-improve-your-wellbeing.html/",
+   "destination": "/create-rooms-improve-wellbeing/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/can-you-have-it-all-creating-space-and-the-wow-factor.html/",
+   "destination": "/can-creating-space-wow-factor/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/5-tips-for-adding-style-to-your-loft-conversion.html/",
+   "destination": "/5-tips-adding-style-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/could-your-loft-become-your-retreat.html/",
+   "destination": "/creating-space-hide-away-loft-become-retreat/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/cost-of-commuting-vs-extending-your-london-home.html/",
+   "destination": "/cost-commuting-vs-extending-london-home/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/how-can-i-extend-my-home-and-what-are-the-benefits.html/",
+   "destination": "/can-extend-home-benefits/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/home-renovations-and-extensions-for-those-with-disabilities.html/",
+   "destination": "/home-renovations-extensions-disabilities/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/the-benefits-of-a-loft-conversion.html/",
+   "destination": "/benefits-loft-conversion/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/we-are-having-a-refurbishment-of-our-own.html/",
+   "destination": "/jeffery-wilkes-excited-announce-refurbishment/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/business-for-good-how-we-re-all-making-a-difference.html/",
+   "destination": "/business-good-making-difference/",
+   "permanent": true
+  },
+  {
+   "source": "/public-sector.php/",
+   "destination": "/services/commercial/",
+   "permanent": true
+  },
+  {
+   "source": "/disabled-adaptations.php/",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/about.html/",
+   "destination": "/why-jw/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions.php/",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/contact-us.html/",
+   "destination": "/contact/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/public-sector.html/",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/extensions.html/",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/roofing-carpentry.html/",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/public-sector.html/",
+   "destination": "/services/commercial/",
+   "permanent": true
+  },
+  {
+   "source": "/plumber.html/",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/luxury-bathrooms.html/",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/kitchens.html/",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/electrical-services.html/",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/eco-lofts.html/",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/installation-services/disabled-adaptations.html/",
+   "destination": "/design-and-build/",
+   "permanent": true
+  },
+  {
+   "source": "/extensions/planning-permission-faq-s.html/",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/about/references-and-testimonials.html/",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/galleries/loft-conversions.html/",
+   "destination": "/portfolio/",
+   "permanent": true
+  },
+  {
+   "source": "/blog.html/",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/luxury-bathrooms.html/",
+   "destination": "/services/refurbishments/",
+   "permanent": true
+  },
+  {
+   "source": "/extensions.html/",
+   "destination": "/services/home-extensions/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions/loft-conversion-faq-s.html/",
+   "destination": "/services/loft-conversions/",
+   "permanent": true
+  },
+  {
+   "source": "/loft-conversions.html/",
+   "destination": "/services/loft-conversions",
+   "permanent": true
+  },
+  {
+   "source": "/www.develop-coaching.com/about-me/",
+   "destination": "www.develop-coaching.com/about-greg-wilkes",
+   "permanent": true
+  },
+  {
+   "source": "/how-much-money/",
+   "destination": "/how-much-money-do-i-need-to-retire/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-understand-a-pl-report/",
+   "destination": "/profit-and-loss-report/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-get-a-client-to-leave-a-review/",
+   "destination": "/get-client-to-leave-a-review/",
+   "permanent": true
+  },
+  {
+   "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",
+   "destination": "https://develop-coaching.com/wp-content/uploads/:path",
+   "permanent": false
+  }
+ ],
+ "rewrites": [
+  {
+   "source": "/feed/podcast",
+   "destination": "/feeds/podcast.xml"
+  },
+  {
+   "source": "/feed/podcast/",
+   "destination": "/feeds/podcast.xml"
+  }
+ ],
+ "headers": [
+  {
+   "source": "/(.*)",
+   "has": [
+    {
+     "type": "host",
+     "value": "(?<sub>.*)\\.vercel\\.app"
+    }
+   ],
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    }
+   ]
+  }
+ ]
+}
