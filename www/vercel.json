@@ -252,6 +252,11 @@
    "permanent": true
   },
   {
+   "source": "/blog/page/:n(\\d+)",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
    "source": "/blog/:path(.+)/:slug([^/]+)",
    "destination": "/:slug/",
    "permanent": true
@@ -1752,11 +1757,6 @@
    "permanent": true
   },
   {
-   "source": "/blog/page/:n(\\d+)",
-   "destination": "/blog/",
-   "permanent": true
-  },
-  {
    "source": "/2019/06/24/",
    "destination": "/",
    "permanent": true
@@ -1994,6 +1994,11 @@
   {
    "source": "/the-achitect-attractor/",
    "destination": "/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/page/:n(\\d+)/",
+   "destination": "/blog/",
    "permanent": true
   },
   {
@@ -3494,11 +3499,6 @@
   {
    "source": "/services/win-big-clients-webinar/",
    "destination": "/win-big-clients-webinar/",
-   "permanent": true
-  },
-  {
-   "source": "/blog/page/:n(\\d+)/",
-   "destination": "/blog/",
    "permanent": true
   },
   {
