@@ -1,0 +1,10 @@
+# Allow access to SearchAtlas Bot
+User-agent: SearchAtlas Bot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+Sitemap: https://develop-coaching.com/sitemap.xml

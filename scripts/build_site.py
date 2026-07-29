@@ -50,8 +50,26 @@ def unblock_scripts(html: str) -> str:
     return html
 
 
+# Injected into every page. On preview hosts (*.vercel.app) it switches off
+# the analytics and pixels so that reviewing the copy does not pollute the
+# real GA4 property, Meta Pixel and Clarity with fake traffic. On the
+# production domain the condition is false and nothing changes.
+PREVIEW_GUARD = """<script data-preview-guard>
+(function(){
+  if (!location.hostname.endsWith('.vercel.app')) return;
+  window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
+  window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
+  window.clarity = window.clarity || function(){};
+  console.info('[preview] analytics disabled on this host');
+})();
+</script>"""
+
+HEAD_RE = re.compile(r"<head[^>]*>", re.I)
+
+
 def rewrite(html: str) -> str:
     html = unblock_scripts(html)
+    html = HEAD_RE.sub(lambda m: m.group(0) + PREVIEW_GUARD, html, count=1)
     preserved = {}
 
     def stash(m):
@@ -144,13 +162,34 @@ def main():
         # must move to real storage and this block must be removed.
         "_preview_av_redirects": True,
     }
-    # noindex any *.vercel.app host so the copy is never indexed; the real
-    # domain does not match this pattern so production SEO is unaffected
-    vercel["headers"] = [{
-        "source": "/(.*)",
-        "has": [{"type": "host", "value": "(?<sub>.*)\\.vercel\\.app"}],
-        "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}],
-    }]
+    vercel["headers"] = [
+        # noindex any *.vercel.app host so the copy is never indexed; the real
+        # domain does not match this pattern so production SEO is unaffected
+        {
+            "source": "/(.*)",
+            "has": [{"type": "host", "value": "(?<sub>.*)\\.vercel\\.app"}],
+            "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow"}],
+        },
+        # Security headers, applied to every response.
+        # Deliberately NOT setting a Content-Security-Policy: the pages load
+        # scripts from GTM, Meta, Clarity, Mouseflow, ActiveCampaign,
+        # GoHighLevel, Trustindex and YouTube, so a CSP would need careful
+        # per-domain work and could silently break tracking or bookings.
+        # HSTS matches what the live site already sends. "preload" is left
+        # off on purpose: submitting to the preload list is very hard to undo.
+        {
+            "source": "/(.*)",
+            "headers": [
+                {"key": "Strict-Transport-Security",
+                 "value": "max-age=31536000; includeSubDomains"},
+                {"key": "X-Content-Type-Options", "value": "nosniff"},
+                {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"},
+                {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
+                {"key": "Permissions-Policy",
+                 "value": "geolocation=(), microphone=(), payment=()"},
+            ],
+        },
+    ]
     if vercel.pop("_preview_av_redirects", False):
         vercel["redirects"].append({
             "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",

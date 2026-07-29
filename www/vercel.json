@@ -247,11 +247,6 @@
    "permanent": true
   },
   {
-   "source": "/blog/page/:n(\\d+)",
-   "destination": "/",
-   "permanent": true
-  },
-  {
    "source": "/blog/category/:path*",
    "destination": "/",
    "permanent": true
@@ -1734,6 +1729,31 @@
   {
    "source": "/how-to-get-a-client-to-leave-a-review",
    "destination": "/get-client-to-leave-a-review/",
+   "permanent": true
+  },
+  {
+   "source": "/5-steps-to-5-million",
+   "destination": "/5-steps-to-5-million-2/",
+   "permanent": true
+  },
+  {
+   "source": "/home",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/services/mastermind-course",
+   "destination": "/courses/mastermind-course/",
+   "permanent": true
+  },
+  {
+   "source": "/services/win-big-clients-webinar",
+   "destination": "/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/page/:n(\\d+)",
+   "destination": "/blog/",
    "permanent": true
   },
   {
@@ -3462,6 +3482,26 @@
    "permanent": true
   },
   {
+   "source": "/5-steps-to-5-million/",
+   "destination": "/5-steps-to-5-million-2/",
+   "permanent": true
+  },
+  {
+   "source": "/home/",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/services/mastermind-course/",
+   "destination": "/courses/mastermind-course/",
+   "permanent": true
+  },
+  {
+   "source": "/services/win-big-clients-webinar/",
+   "destination": "/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
    "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",
    "destination": "https://develop-coaching.com/wp-content/uploads/:path",
    "permanent": false
@@ -3490,6 +3530,31 @@
     {
      "key": "X-Robots-Tag",
      "value": "noindex, nofollow"
+    }
+   ]
+  },
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "Strict-Transport-Security",
+     "value": "max-age=31536000; includeSubDomains"
+    },
+    {
+     "key": "X-Content-Type-Options",
+     "value": "nosniff"
+    },
+    {
+     "key": "Referrer-Policy",
+     "value": "strict-origin-when-cross-origin"
+    },
+    {
+     "key": "X-Frame-Options",
+     "value": "SAMEORIGIN"
+    },
+    {
+     "key": "Permissions-Policy",
+     "value": "geolocation=(), microphone=(), payment=()"
     }
    ]
   }

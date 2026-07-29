@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://develop-coaching.com/page-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://develop-coaching.com/post-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://develop-coaching.com/courses-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://develop-coaching.com/podcast-sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://develop-coaching.com/podcast-transcript-sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>
