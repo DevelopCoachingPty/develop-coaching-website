@@ -1997,13 +1997,8 @@
    "permanent": true
   },
   {
-   "source": "/author/:path*/",
-   "destination": "/",
-   "permanent": true
-  },
-  {
-   "source": "/blog/category/:path*/",
-   "destination": "/",
+   "source": "/blog/:path(.+)/:slug([^/]+)/",
+   "destination": "/:slug/",
    "permanent": true
   },
   {
@@ -3499,6 +3494,11 @@
   {
    "source": "/services/win-big-clients-webinar/",
    "destination": "/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/page/:n(\\d+)/",
+   "destination": "/blog/",
    "permanent": true
   },
   {

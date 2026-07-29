@@ -144,10 +144,14 @@ def main():
         existing = {r["source"] for r in redirects}
         redirects.extend(r for r in manual if r["source"] not in existing)
     # WordPress URLs carry a trailing slash; match both forms of every rule
+    # Patterns ending in a wildcard (:path*) already match with or without a
+    # trailing slash. Everything else, including capture-group patterns like
+    # /blog/page/:n(\d+), needs an explicit slashed twin or it will not fire
+    # on the trailing-slash URLs WordPress has always used.
     slashed = [
         {**r, "source": r["source"] + "/"}
         for r in redirects
-        if not r["source"].endswith("/") and "(" not in r["source"]
+        if not r["source"].endswith("/") and not r["source"].endswith("*")
     ]
     redirects.extend(slashed)
     vercel = {
