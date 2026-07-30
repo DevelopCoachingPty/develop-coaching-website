@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en-GB" id="html" prefix="og: https://ogp.me/ns#">
+	<head>
+<!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ --><script data-wpmeteor-nooptimize="true" data-no-optimize="1" data-no-defer data-phast-no-defer>var _wpmeteor={"gdpr":true,"rdelay":86400000,"preload":true,"preconnect":false,"elementor-animations":true,"elementor-pp":true,"v":"3.4.18","rest_url":"https:\/\/develop-coaching.com\/wp-json\/"};(()=>{try{new MutationObserver(function(){}),new Promise(function(){}),Object.assign({},{}),document.fonts.ready.then(function(){})}catch{s="wpmeteordisable=1",i=document.location.href,i.match(/[?&]wpmeteordisable/)||(o="",i.indexOf("?")==-1?i.indexOf("#")==-1?o=i+"?"+s:o=i.replace("#","?"+s+"#"):i.indexOf("#")==-1?o=i+"&"+s:o=i.replace("#","&"+s+"#"),document.location.href=o)}var s,i,o;})();
+
+</script><script data-wpmeteor-nooptimize="true" data-no-optimize="1" data-no-defer data-phast-no-defer>(()=>{var v="addEventListener",pe="removeEventListener",p="getAttribute",L="setAttribute",fe="removeAttribute",C="hasAttribute",Bt="querySelector",$=Bt+"All",N="appendChild",X="removeChild",Ee="createElement",A="tagName",Se="getOwnPropertyDescriptor",y="prototype",z="__lookupGetter__",me="__lookupSetter__",m="DOMContentLoaded",f="load",U="pageshow",ge="error";var l=window,c=document,Ge=c.documentElement;var M=console.error;var Xe=!0,Z=class{constructor(){this.known=[]}init(){let t,n,s=(r,a)=>{if(Xe&&r&&r.fn&&!r.__wpmeteor){let o=function(i){return i===r?this:(c[v](m,d=>{i.call(c,r,d,"jQueryMock")}),this)};this.known.push([r,r.fn.ready,r.fn.init?.prototype?.ready]),r.fn.ready=o,r.fn.init?.prototype?.ready&&(r.fn.init.prototype.ready=o),r.__wpmeteor=!0}return r};window.jQuery||window.$,Object.defineProperty(window,"jQuery",{get(){return t},set(r){t=s(r,"jQuery")},configurable:!0}),Object.defineProperty(window,"$",{get(){return n},set(r){n=s(r,"$")},configurable:!0})}unmock(){this.known.forEach(([t,n,s])=>{t.fn.ready=n,t.fn.init?.prototype?.ready&&s&&(t.fn.init.prototype.ready=s)}),Xe=!1}};var he="fpo:first-interaction",ve="fpo:replay-captured-events";var Ze="fpo:element-loaded",Ce="fpo:images-loaded",V="fpo:the-end";var j="click",I=window,je=I.addEventListener.bind(I),et=I.removeEventListener.bind(I),Ne="removeAttribute",ye="getAttribute",Ot="setAttribute",Ue=["touchstart","touchmove","touchend","touchcancel","keydown","wheel"],tt=["mouseover","mouseout",j],Rt=["touchstart","touchend","touchcancel","mouseover","mouseout",j],O="data-wpmeteor-";var Be="dispatchEvent",rt=e=>{let t=new MouseEvent(j,{view:e.view,bubbles:!0,cancelable:!0});return Object.defineProperty(t,"target",{writable:!1,value:e.target}),t},Oe=class{static capture(){let t=!1,[,n,s]=`${window.Promise}`.split(/[\s[(){]+/s);if(I["__"+s+n])return;let r=[],a=o=>{if(o.target&&Be in o.target){if(!o.isTrusted)return;if(o.cancelable&&!Ue.includes(o.type))try{o.preventDefault()}catch{}o.stopImmediatePropagation(),o.type===j?r.push(rt(o)):Rt.includes(o.type)&&r.push(o),o.target[Ot](O+o.type,!0),t||(t=!0,I[Be](new CustomEvent(he)))}};I.addEventListener(ve,()=>{tt.forEach(d=>et(d,a,{passive:!1,capture:!0})),Ue.forEach(d=>et(d,a,{passive:!0,capture:!0}));let o;for(;o=r.shift();){var i=o.target;i[ye](O+"touchstart")&&i[ye](O+"touchend")&&!i[ye](O+j)?(i[ye](O+"touchmove")||r.push(rt(o)),i[Ne](O+"touchstart"),i[Ne](O+"touchend")):i[Ne](O+o.type),i[Be](o)}}),tt.forEach(o=>je(o,a,{passive:!1,capture:!0})),Ue.forEach(o=>je(o,a,{passive:!0,capture:!0}))}};var nt=Oe;var ee=class{constructor(){this.l=[]}emit(t,n=null){this.l[t]&&this.l[t].forEach(s=>s(n))}on(t,n){this.l[t]||=[],this.l[t].push(n)}off(t,n){this.l[t]=(this.l[t]||[]).filter(s=>s!==n)}};var w=new ee;var _e=c[Ee]("span");_e[L]("id","elementor-device-mode");_e[L]("class","elementor-screen-only");var Pt=!1,st=()=>(Pt||c.body[N](_e),getComputedStyle(_e,":after").content.replace(/"/g,""));var ot=e=>e[p]("class")||"",it=(e,t)=>e[L]("class",t),ct=()=>{l[v](f,function(){let e=st(),t=Math.max(Ge.clientWidth||0,l.innerWidth||0),n=Math.max(Ge.clientHeight||0,l.innerHeight||0),s=["_animation_"+e,"animation_"+e,"_animation","_animation","animation"];Array.from(c[$](".elementor-invisible")).forEach(r=>{let a=r.getBoundingClientRect();if(a.top+l.scrollY<=n&&a.left+l.scrollX<t)try{let i=JSON.parse(r[p]("data-settings"));if(i.trigger_source)return;let d=i._animation_delay||i.animation_delay||0,u,E;for(var o=0;o<s.length;o++)if(i[s[o]]){E=s[o],u=i[E];break}if(u){let F=ot(r),Q=u==="none"?F:F+" animated "+u,Nt=setTimeout(()=>{it(r,Q.replace(/\belementor-invisible\b/,"")),s.forEach(Ut=>delete i[Ut]),r[L]("data-settings",JSON.stringify(i))},d);w.on("fi",()=>{clearTimeout(Nt),it(r,ot(r).replace(new RegExp("\b"+u+"\b"),""))})}}catch(i){console.error(i)}})})};var at="data-in-mega_smartmenus",lt=()=>{let e=c[Ee]("div");e.innerHTML='<span class="sub-arrow --wp-meteor"><i class="fa" aria-hidden="true"></i></span>';let t=e.firstChild,n=s=>{let r=[];for(;s=s.previousElementSibling;)r.push(s);return r};c[v](m,function(){Array.from(c[$](".pp-advanced-menu ul")).forEach(s=>{if(s[p](at))return;(s[p]("class")||"").match(/\bmega-menu\b/)&&s[$]("ul").forEach(o=>{o[L](at,!0)});let r=n(s),a=r.filter(o=>o).filter(o=>o[A]==="A").pop();if(a||(a=r.map(o=>Array.from(o[$]("a"))).filter(o=>o).flat().pop()),a){let o=t.cloneNode(!0);a[N](o),new MutationObserver(d=>{d.forEach(({addedNodes:u})=>{u.forEach(E=>{if(E.nodeType===1&&E[A]==="SPAN")try{a[X](o)}catch{}})})}).observe(a,{childList:!0})}})})};var D="readystatechange",b="message";var K="SCRIPT",g="data-wpmeteor-",T=Object.defineProperty,qe=Object.defineProperties,P="javascript/blocked",xe=/^\s*(application|text)\/javascript|module\s*$/i,_t="requestAnimationFrame",Lt="requestIdleCallback",J="setTimeout",We="__dynamic",H=l.constructor.name+"::",ae=c.constructor.name+"::",Dt=function(e,t){t=t||l;for(var n=0;n<this.length;n++)e.call(t,this[n],n,this)};"NodeList"in l&&!NodeList[y].forEach&&(NodeList[y].forEach=Dt);"HTMLCollection"in l&&!HTMLCollection[y].forEach&&(HTMLCollection[y].forEach=Dt);_wpmeteor["elementor-animations"]&&ct(),_wpmeteor["elementor-pp"]&&lt();var Le=[],De=[],te=[],ie=!1,x=[],h={},Fe=!1,kt=0,q=c.visibilityState==="visible"?l[_t]:l[J],wt=l[Lt]||q;c[v]("visibilitychange",()=>{q=c.visibilityState==="visible"?l[_t]:l[J],wt=l[Lt]||q});var xt=l[J],R=l.queueMicrotask,be,Y=["src","type"],k=Object,re="definePropert";k[re+"y"]=(e,t,n)=>{if(e===l&&["jQuery","onload"].indexOf(t)>=0||(e===c||e===c.body)&&["readyState","write","writeln","on"+D].indexOf(t)>=0)return["on"+D,"on"+f].indexOf(t)&&n.set&&(h["on"+D]=h["on"+D]||[],h["on"+D].push(n.set)),e;if(e instanceof HTMLScriptElement&&Y.indexOf(t)>=0){if(!e[t+"__def"]){let s=k[Se](e,t);T(e,t,{set(r){return e[t+"__set"]?e[t+"__set"].call(e,r):s.set.call(e,r)},get(){return e[t+"__get"]?e[t+"__get"].call(e):s.get.call(e)}}),e[t+"__def"]=!0}return n.get&&(e[t+"__get"]=n.get),n.set&&(e[t+"__set"]=n.set),e}return T(e,t,n)};k[re+"ies"]=(e,t)=>{for(let n in t)k[re+"y"](e,n,t[n]);for(let n of k.getOwnPropertySymbols(t))k[re+"y"](e,n,t[n]);return e};var $e=EventTarget[y][v],bt=EventTarget[y][pe],le=$e.bind(c),Mt=bt.bind(c),G=$e.bind(l),Tt=bt.bind(l),At=Document[y].createElement,de=At.bind(c),ue=c.__proto__[z]("readyState").bind(c),dt="loading";T(c,"readyState",{get(){return dt},set(e){return dt=e}});var ut=e=>x.filter(([t,,n],s)=>{if(!(e.indexOf(t.type)<0)){n||(n=t.target);try{let r=n.constructor.name+"::"+t.type;for(let a=0;a<h[r].length;a++)if(h[r][a]){let o=r+"::"+s+"::"+a;if(!Me[o])return!0}}catch{}}}).length,ce,Me={},W=e=>{x.forEach(([t,n,s],r)=>{if(!(e.indexOf(t.type)<0)){s||(s=t.target);try{let a=s.constructor.name+"::"+t.type;if((h[a]||[]).length)for(let o=0;o<h[a].length;o++){let i=h[a][o];if(i){let d=a+"::"+r+"::"+o;if(!Me[d]){Me[d]=!0,c.readyState=n,ce=a;try{kt++,!i[y]||i[y].constructor===i?i.bind(s)(t):i(t)}catch(u){M(u,i)}ce=null}}}}catch(a){M(a)}}})};le(m,e=>{x.push([new e.constructor(m,e),ue(),c])});le(D,e=>{x.push([new e.constructor(D,e),ue(),c])});G(m,e=>{x.push([new e.constructor(m,e),ue(),l])});G(f,e=>{Fe=!0,x.push([new e.constructor(f,e),ue(),l]),B||W([m,D,b,f,U])});G(U,e=>{x.push([new e.constructor(U,e),ue(),l]),B||W([m,D,b,f,U])});var St=e=>{x.push([e,c.readyState,l]),W([b])},Vt=l[z]("onmessage"),It=l[me]("onmessage"),Ht=()=>{Tt(b,St),(h[H+"message"]||[]).forEach(e=>{G(b,e)}),T(l,"onmessage",{get:Vt,set:It})};G(b,St);var Gt=new Z;Gt.init();var ze=()=>{!B&&!ie&&(B=!0,c.readyState="loading",q(Ke),q(S)),Fe||G(f,()=>{ze()})};G(he,()=>{ze()});w.on(Ce,()=>{ze()});_wpmeteor.rdelay>=0&&nt.capture();var ne=[-1],Re=e=>{ne=ne.filter(t=>t!==e.target),ne.length||xt(w.emit.bind(w,V))};var B=!1,S=()=>{let e=Le.shift();if(e)e[p](g+"src")?e[C]("async")||e[We]?(e.isConnected&&(ne.push(e),setTimeout(Re,1e3,{target:e})),Pe(e,Re),R(S)):Pe(e,R.bind(null,S)):(e.origtype==P&&Pe(e),R(S));else if(De.length)Le.push(...De),De.length=0,R(S);else if(te.length)Le.push(...te),te.length=0,R(S);else if(ut([m,D,b]))W([m,D,b]),R(S);else if(Fe)if(ne.length>1)wt(S);else if(ut([f,U,b]))W([f,U,b]),R(S);else{if(l.RocketLazyLoadScripts)try{RocketLazyLoadScripts.run()}catch(t){M(t)}c.readyState="complete",Ht(),Gt.unmock(),B=!1,ie=!0,l[J](()=>Re({target:-1}))}else B=!1},qt=e=>{let t=de(K),n=e.attributes;for(var s=n.length-1;s>=0;s--)n[s].name.startsWith(g)||t[L](n[s].name,n[s].value);let r=e[p](g+"type");r?t.type=r:t.type="text/javascript",(e.textContent||"").match(/^\s*class RocketLazyLoadScripts/)?t.textContent=e.textContent.replace(/^\s*class\s*RocketLazyLoadScripts/,"window.RocketLazyLoadScripts=class").replace("RocketLazyLoadScripts.run();",""):t.textContent=e.textContent;for(let a of["onload","onerror","onreadystatechange"])e[a]&&(t[a]=e[a]);return t},Pe=(e,t)=>{let n=e[p](g+"src");if(n){let s=$e.bind(e);e.isConnected&&t&&(s(f,t),s(ge,t)),e.origtype=e[p](g+"type")||"text/javascript",e.origsrc=n,(!e.isConnected||e[C]("nomodule")||e.type&&!xe.test(e.type))&&t&&t(new Event(f,{target:e}))}else e.origtype===P?(e.origtype=e[p](g+"type")||"text/javascript",e[fe]("integrity"),e.textContent=e.textContent+`
+`):t&&t(new Event(f,{target:e}))},Ye=(e,t)=>{let n=(h[e]||[]).indexOf(t);if(n>=0)return h[e][n]=void 0,!0},pt=(e,t,...n)=>{if("HTMLDocument::"+m==ce&&e===m&&!t.toString().match(/jQueryMock/)){w.on(V,c[v].bind(c,e,t,...n));return}if(t&&(e===m||e===D)){let s=ae+e;h[s]=h[s]||[],h[s].push(t),ie&&W([e]);return}return le(e,t,...n)},ft=(e,t,...n)=>{if(e===m){let s=ae+e;Ye(s,t)}return Mt(e,t,...n)};qe(c,{[v]:{get(){return pt},set(){return pt}},[pe]:{get(){return ft},set(){return ft}}});var se=c.createDocumentFragment(),Ke=()=>{se.hasChildNodes()&&(c.head[N](se),se=c.createDocumentFragment())},Et={},we=e=>{if(_wpmeteor.preconnect!==!1&&e)try{let t=new URL(e,c.location.href),n=t.origin;if(n&&!Et[n]&&c.location.host!==t.host){let s=de("link");s.rel="preconnect",s.href=n,se[N](s),Et[n]=!0,B&&q(Ke)}}catch{}},Te={},Wt=(e,t,n,s)=>{let r=de("link");r.rel=t?"modulepre"+f:"pre"+f,r.as="script",n&&r[L]("crossorigin",n),s&&r[L]("integrity",s);try{e=new URL(e,c.location.href).href}catch{}r.href=e,se[N](r),Te[e]=!0,B&&q(Ke)},Ve=function(...e){let t=de(...e);if(!e||e[0].toUpperCase()!==K||!B)return t;let n=t[L].bind(t),s=t[p].bind(t),r=t[fe].bind(t),a=t[C].bind(t),o=t[z]("attributes").bind(t);return Y.forEach(i=>{let d=t[z](i).bind(t),u=t[me](i).bind(t);k[re+"y"](t,i,{set(E){return i==="type"&&E&&!xe.test(E)?n(i,E):((i==="src"&&E||i==="type"&&E&&t.origsrc)&&n("type",P),E?n(g+i,E):r(g+i))},get(){let E=t[p](g+i);if(i==="src")try{return new URL(E,c.location.href).href}catch{}return E}}),T(t,"orig"+i,{set(E){return u(E)},get(){return d()}})}),t[L]=function(i,d){if(Y.includes(i))return i==="type"&&d&&!xe.test(d)?n(i,d):((i==="src"&&d||i==="type"&&d&&t.origsrc)&&n("type",P),d?n(g+i,d):r(g+i));n(i,d)},t[p]=function(i){let d=Y.indexOf(i)>=0?s(g+i):s(i);if(i==="src")try{return new URL(d,c.location.href).href}catch{}return d},t[C]=function(i){return Y.indexOf(i)>=0?a(g+i):a(i)},T(t,"attributes",{get(){return[...o()].filter(d=>d.name!=="type").map(d=>({name:d.name.match(new RegExp(g))?d.name.replace(g,""):d.name,value:d.value}))}}),t[We]=!0,t};Object.defineProperty(Document[y],"createElement",{set(e){e!==Ve&&(be=e)},get(){return be||Ve}});var ke=new Set,Je=new MutationObserver(e=>{e.forEach(({removedNodes:t,addedNodes:n,target:s})=>{t.forEach(r=>{r.nodeType===1&&K===r[A]&&"origtype"in r&&ke.delete(r)}),n.forEach(r=>{if(r.nodeType===1)if(K===r[A]){if("origtype"in r){if(r.origtype!==P)return}else if(r[p]("type")!==P)return;"origtype"in r||Y.forEach(o=>{let i=r[z](o).bind(r),d=r[me](o).bind(r);T(r,"orig"+o,{set(u){return d(u)},get(){return i()}})});let a=r[p](g+"src");if(ke.has(r)&&M("Inserted twice",r),r.parentNode){ke.add(r);let o=r[p](g+"type");(a||"").match(/\/gtm.js\?/)||r[C]("async")||r[We]?(te.push(r),we(a)):r[C]("defer")||o==="module"?(De.push(r),we(a)):(a&&!r[C]("nomodule")&&!Te[a]&&Wt(a,o==="module",r[C]("crossorigin")&&r[p]("crossorigin"),r[p]("integrity")),Le.push(r))}else r[v](f,o=>o.target.parentNode[X](o.target)),r[v](ge,o=>o.target.parentNode[X](o.target)),s[N](r)}else r[A]==="LINK"&&r[p]("as")==="script"&&(Te[r[p]("href")]=!0)})})}),Ct={childList:!0,subtree:!0};Je.observe(c.documentElement,Ct);var Ft=HTMLElement[y].attachShadow;HTMLElement[y].attachShadow=function(e){let t=Ft.call(this,e);return e.mode==="open"&&Je.observe(t,Ct),t};(()=>{let e=k[Se](HTMLIFrameElement[y],"src");T(HTMLIFrameElement[y],"src",{get(){return this.dataset.fpoSrc?this.dataset.fpoSrc:e.get.call(this)},set(t){delete this.dataset.fpoSrc,e.set.call(this,t)}})})();w.on(V,()=>{(!be||be===Ve)&&(Document[y].createElement=At,Je.disconnect()),dispatchEvent(new CustomEvent(ve)),dispatchEvent(new CustomEvent(V))});var oe="",Ae=null,Ie=null,mt=null,gt=()=>{if(oe){try{let e=de("div");e.innerHTML=oe,Array.from(e.childNodes).forEach(t=>{t.nodeName===K?Ie.insertBefore(qt(t),Ae):Ie.insertBefore(t,Ae)})}catch(e){M(e)}oe=""}},He=(...e)=>{let t=e.join(""),n,s;!c.currentScript||!c.currentScript.parentNode?(n=c.body,s=n.lastChild):(s=c.currentScript,n=s.parentNode),s!==Ae?(gt(),oe=t,Ae=s,Ie=n):oe+=t,clearTimeout(mt),mt=l[J](gt,0)},ht=e=>He(e+`
+`);qe(c,{write:{get(){return He},set(e){return He=e}},writeln:{get(){return ht},set(e){return ht=e}}});var vt=(e,t,...n)=>{if(H+m==ce&&e===m&&!t.toString().match(/jQueryMock/)){w.on(V,l[v].bind(l,e,t,...n));return}if(H+f==ce&&e===f){w.on(V,l[v].bind(l,e,t,...n));return}if(t&&(e===f||e===U||e===m||e===b&&!ie)){let s=e===m?ae+e:H+e;h[s]=h[s]||[],h[s].push(t),ie&&W([e]);return}return G(e,t,...n)},yt=(e,t,...n)=>{if(e===f||e===m||e===U){let s=e===m?ae+e:H+e;Ye(s,t)}return Tt(e,t,...n)};qe(l,{[v]:{get(){return vt},set(){return vt}},[pe]:{get(){return yt},set(){return yt}}});var Qe=e=>{let t;return{get(){return t},set(n){return t&&Ye(e,n),h[e]=h[e]||[],h[e].push(n),t=n}}};G(Ze,e=>{let{target:t,event:n}=e.detail,s=t===l?c.body:t,r=s[p](g+"on"+n.type);s[fe](g+"on"+n.type);try{let a=new Function("event",r);t===l?l[v](f,a.bind(t,n)):a.call(t,n)}catch(a){M(a)}});{let e=Qe(H+f);T(l,"onload",e),le(m,()=>{T(c.body,"onload",e)})}T(c,"onreadystatechange",Qe(ae+D));T(l,"onmessage",Qe(H+b));(()=>{let e=l.innerHeight,t=l.innerWidth,n=r=>{let o={"4g":1250,"3g":2500,"2g":2500}[(navigator.connection||{}).effectiveType]||0,i=r.getBoundingClientRect(),d={top:-1*e-o,left:-1*t-o,bottom:e+o,right:t+o};return!(i.left>=d.right||i.right<=d.left||i.top>=d.bottom||i.bottom<=d.top)},s=(r=!0)=>{let a=1,o=-1,i={},d=()=>{o++,--a||l[J](w.emit.bind(w,Ce),_wpmeteor.rdelay)};Array.from(c.getElementsByTagName("*")).forEach(u=>{let E,F,Q;if(u[A]==="IMG"){let _=u.currentSrc||u.src;_&&!i[_]&&!_.match(/^data:/i)&&((u.loading||"").toLowerCase()!=="lazy"||n(u))&&(E=_)}else if(u[A]===K)we(u[p](g+"src"));else if(u[A]==="LINK"&&u[p]("as")==="script"&&["pre"+f,"modulepre"+f].indexOf(u[p]("rel"))>=0)Te[u[p]("href")]=!0;else if((F=l.getComputedStyle(u))&&(Q=(F.backgroundImage||"").match(/^url\s*\((.*?)\)/i))&&(Q||[]).length){let _=Q[0].slice(4,-1).replace(/"/g,"");!i[_]&&!_.match(/^data:/i)&&(E=_)}if(E){i[E]=!0;let _=new Image;r&&(a++,_[v](f,d),_[v](ge,d)),_.src=E}}),c.fonts.ready.then(()=>{d()})};_wpmeteor.rdelay===0?le(m,s):G(f,s)})();})();
+//1.0.42
+
+</script><script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  defer async data-wpmeteor-src="https://cdn.trustindex.io/assets/js/richsnippet.js?c1ac8a214622gd40" data-wpmeteor-nooptimize=”true”></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+
+
+	
+<meta name="google-site-verification" content="F8Ljudf_yL0kYRTuH2piSSHac6tGgHi8Bo2-EJmkvNs" />
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  async data-wpmeteor-src="https://scripts.withcabin.com/hello.js"></script>
+
+
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<title>Get CITB Funding With Deb Madden &amp; Nathan Wilkins Transcript</title>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://develop-coaching.com/podcast-transcript/get-citb-funding/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Get CITB Funding With Deb Madden &amp; Nathan Wilkins Transcript" />
+<meta property="og:url" content="https://develop-coaching.com/podcast-transcript/get-citb-funding/" />
+<meta property="og:site_name" content="Develop Coaching" />
+<meta property="article:publisher" content="https://www.facebook.com/developcoach/" />
+<meta property="og:updated_time" content="2025-03-26T13:31:50+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Get CITB Funding With Deb Madden &amp; Nathan Wilkins Transcript" />
+<meta name="twitter:site" content="@developcoaching" />
+<meta name="twitter:creator" content="@developcoaching" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/podcast-transcript/get-citb-funding/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://develop-coaching.com","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://develop-coaching.com/podcast-transcript/","name":"Podcast Transcript"}},{"@type":"ListItem","position":"3","item":{"@id":"https://develop-coaching.com/podcast-transcript/get-citb-funding/","name":"Get CITB Funding With Deb Madden &amp; Nathan Wilkins"}}]}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel="alternate" type="application/rss+xml" title="Develop Coaching &raquo; Feed" href="https://develop-coaching.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Develop Coaching &raquo; Comments Feed" href="https://develop-coaching.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://develop-coaching.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelop-coaching.com%2Fpodcast-transcript%2Fget-citb-funding%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://develop-coaching.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelop-coaching.com%2Fpodcast-transcript%2Fget-citb-funding%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<link rel='stylesheet' id='ht_ctc_main_css-css' href='https://develop-coaching.com/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/css/main.css?ver=4.40' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='jet-engine-frontend-css' href='https://develop-coaching.com/wp-content/plugins/jet-engine/assets/css/frontend.css?ver=3.8.7' media='all' />
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='hello-elementor-css' href='https://develop-coaching.com/wp-content/themes/hello-elementor/style.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://develop-coaching.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://develop-coaching.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.1.4' media='all' />
+<style id="elementor-frontend-inline-css">
+.e-heading-base a, .e-paragraph-base a { all: unset; cursor: pointer; }form[data-element_type="e-form"].form-state-success [data-element_type="e-form-success-message"],form[data-element_type="e-form"].form-state-error [data-element_type="e-form-error-message"]{ display: block; }
+.e-form-textarea-base:not([data-resizable]) { resize: none; } .e-form-submit-button-base { cursor: pointer; box-sizing: border-box; }
+/*# sourceURL=elementor-frontend-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-post-4211-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-4211.css?ver=1783648255' media='all' />
+<link rel='stylesheet' id='taxopress-frontend-css-css' href='https://develop-coaching.com/wp-content/plugins/simple-tags/assets/frontend/css/frontend.css?ver=3.50.0' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=4.1.2' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInLeft-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInUp-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://develop-coaching.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.1.4' media='all' />
+<link rel='stylesheet' id='e-sticky-css' href='https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=4.1.2' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=4.1.2' media='all' />
+<link rel='stylesheet' id='base-desktop-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/base-desktop.css?ver=6a505000023c0' media='all' />
+<link rel='stylesheet' id='elementor-post-4222-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-4222.css?ver=1783648256' media='all' />
+<link rel='stylesheet' id='elementor-post-9008-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-9008.css?ver=1783648256' media='all' />
+<link rel='stylesheet' id='elementor-post-5461-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-5461.css?ver=1783649760' media='all' />
+<link rel='stylesheet' id='elementor-post-5312-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-5312.css?ver=1783648256' media='all' />
+<link rel='stylesheet' id='elementor-post-4307-css' href='https://develop-coaching.com/wp-content/uploads/elementor/css/post-4307.css?ver=1783648256' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css' href='https://develop-coaching.com/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=14.2.6' media='all' />
+<style id="__EPYT__style-inline-css">
+
+                .epyt-gallery-thumb {
+                        width: 20%;
+                }
+                
+/*# sourceURL=__EPYT__style-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-gf-sourcesanspro-css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jquery-core-js" data-wpmeteor-src="https://develop-coaching.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jquery-migrate-js" data-wpmeteor-src="https://develop-coaching.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="ht_ctc_app_js-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/js/app.js?ver=4.40"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="taxopress-frontend-js-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/simple-tags/assets/frontend/js/frontend.js?ver=3.50.0"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="__ytprefs__-js-extra">
+var _EPYT_ = {"ajaxurl":"https://develop-coaching.com/wp-admin/admin-ajax.php","security":"891104f1e0","gallery_scrolloffset":"20","eppathtoscripts":"https://develop-coaching.com/wp-content/plugins/youtube-embed-plus/scripts/","eppath":"https://develop-coaching.com/wp-content/plugins/youtube-embed-plus/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"14.2.6","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com/embed/\"], iframe[src*=\"youtube-nocookie.com/embed/\"]","ajax_compat":"","maxres_facade":"eager","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","facade_mode":"1","not_live_on_channel":""};
+//# sourceURL=__ytprefs__-js-extra
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="__ytprefs__-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.2.6"></script>
+<link rel="https://api.w.org/" href="https://develop-coaching.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://develop-coaching.com/wp-json/wp/v2/podcast-transcript/13589" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://develop-coaching.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.1" />
+<link rel='shortlink' href='https://develop-coaching.com/?p=13589' />
+<meta name="cdp-version" content="1.5.4" /><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC9kZXZlbG9wLWNvYWNoaW5nLmNvbT90aS1vbmxpbmUtdXNlcnMtZ29vZ2xlPTEmYW1wO3A9JTJGcG9kY2FzdC10cmFuc2NyaXB0JTJGZ2V0LWNpdGItZnVuZGluZyUyRiUzRnBoYXN0JTNELXBoYXN0JTI2YW1wJTNCYW9fbm9wdGltaXplJTNEMSZhbXA7X3dwbm9uY2U9YThhMGQ1NTg1ZiJ9" />		<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript" >
+			(function(c, l, a, r, i, t, y) {
+				c[a] = c[a] || function() {
+					(c[a].q = c[a].q || []).push(arguments)
+				};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = "https://www.clarity.ms/tag/" + i + "?ref=wordpress";
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, "clarity", "script", "9izd804cl6");
+		</script>
+	<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-phast-no-defer="">
+console.log("%cOptimized with %cPhastPress%c %s\nhttps:\/\/wordpress.org\/plugins\/phastpress\/","font-family:helvetica,sans-serif","font-family:helvetica,sans-serif;font-weight:bold","font-family:helvetica,sans-serif","3.10")
+</script>
+<meta name="generator" content="Elementor 4.1.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<!-- Meta Pixel Code -->
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript" >
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '260128381862353');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://develop-coaching.com/wp-content/uploads/2022/11/Mask-group.png" sizes="32x32" />
+<link rel="icon" href="https://develop-coaching.com/wp-content/uploads/2022/11/Mask-group.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://develop-coaching.com/wp-content/uploads/2022/11/Mask-group.png" />
+<meta name="msapplication-TileImage" content="https://develop-coaching.com/wp-content/uploads/2022/11/Mask-group.png" />
+<style id="wp-custom-css">
+.no-decimals input[type="number"] {
+    text-align: right; /* Optional: Align text to the right */
+}
+
+
+.elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date {display:none !important;}
+
+</style>
+</head>
+<body class="wp-singular podcast-transcript-template-default single single-podcast-transcript postid-13589 wp-custom-logo wp-theme-hello-elementor elementor-default elementor-kit-4211 elementor-page-5461">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4HBRD3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header data-elementor-type="header" data-elementor-id="4222" class="elementor elementor-4222 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-bca47e7 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="bca47e7" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-41f4756 e-con-full e-flex e-con e-child" data-id="41f4756" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-f54cf12 elementor-widget elementor-widget-image" data-id="f54cf12" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://develop-coaching.com">
+							<img width="259" height="82" src="https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg" class="attachment-large size-large wp-image-4219" alt="Develop Coaching | Business Coaching" />								</a>
+															</div>
+				</div>
+		<div class="elementor-element elementor-element-d083c1c e-con-full e-flex e-con e-child" data-id="d083c1c" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-dcb2a0c e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="dcb2a0c" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-760db8b elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="760db8b" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://developcoaching.com.au/">
+							<img width="318" height="159" src="https://develop-coaching.com/wp-content/uploads/2022/11/download-2.png" class="attachment-full size-full wp-image-13501" alt="" />								</a>
+															</div>
+				<div class="elementor-element elementor-element-a45c51e elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="a45c51e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://develop-coaching.com/">
+							<img width="290" height="174" src="https://develop-coaching.com/wp-content/uploads/2022/11/download.png" class="attachment-full size-full wp-image-13503" alt="" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-b81d386 elementor-nav-menu__align-center elementor-widget__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="b81d386" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
+				<ul id="menu-1-b81d386" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9180"><a href="https://develop-coaching.com/" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4236"><a href="#" class="elementor-item elementor-item-anchor">How We Help</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5572"><a href="https://develop-coaching.com/courses/mastermind-course/" class="elementor-sub-item">Develop Mastermind</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="https://develop-coaching.com/courses/win-big-clients/" class="elementor-sub-item">Win Big Clients</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor">Trades</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="https://develop-coaching.com/" class="elementor-sub-item">Builders Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="https://develop-coaching.com/carpentry-business-coach/" class="elementor-sub-item">Carpentry Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="https://develop-coaching.com/decorating-business-coach/" class="elementor-sub-item">Decorating Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="https://develop-coaching.com/electrical-business-coach/" class="elementor-sub-item">Electrical Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="https://develop-coaching.com/groundwork-business-coach/" class="elementor-sub-item">Groundwork Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="https://develop-coaching.com/landscaping-business-coach/" class="elementor-sub-item">Landscaping Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="https://develop-coaching.com/plastering-business-coach/" class="elementor-sub-item">Plastering Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="https://develop-coaching.com/plumbing-business-coach/" class="elementor-sub-item">Plumbing Business Coach</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16753"><a href="https://develop-coaching.com/5-pillars-free-trainings/" class="elementor-item">Free Trainings</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="https://develop-coaching.com/client-wins/" class="elementor-item">Client Wins</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="https://develop-coaching.com/about-greg-wilkes/" class="elementor-item">My Story</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="https://develop-coaching.com/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="https://develop-coaching.com/construction-podcast/" class="elementor-item">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="https://develop-coaching.com/contact/" class="elementor-item">Contact</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z"></path></svg><svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-b81d386" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9180"><a href="https://develop-coaching.com/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4236"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">How We Help</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5572"><a href="https://develop-coaching.com/courses/mastermind-course/" class="elementor-sub-item" tabindex="-1">Develop Mastermind</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="https://develop-coaching.com/courses/win-big-clients/" class="elementor-sub-item" tabindex="-1">Win Big Clients</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Trades</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="https://develop-coaching.com/" class="elementor-sub-item" tabindex="-1">Builders Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="https://develop-coaching.com/carpentry-business-coach/" class="elementor-sub-item" tabindex="-1">Carpentry Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="https://develop-coaching.com/decorating-business-coach/" class="elementor-sub-item" tabindex="-1">Decorating Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="https://develop-coaching.com/electrical-business-coach/" class="elementor-sub-item" tabindex="-1">Electrical Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="https://develop-coaching.com/groundwork-business-coach/" class="elementor-sub-item" tabindex="-1">Groundwork Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="https://develop-coaching.com/landscaping-business-coach/" class="elementor-sub-item" tabindex="-1">Landscaping Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="https://develop-coaching.com/plastering-business-coach/" class="elementor-sub-item" tabindex="-1">Plastering Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="https://develop-coaching.com/plumbing-business-coach/" class="elementor-sub-item" tabindex="-1">Plumbing Business Coach</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16753"><a href="https://develop-coaching.com/5-pillars-free-trainings/" class="elementor-item" tabindex="-1">Free Trainings</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="https://develop-coaching.com/client-wins/" class="elementor-item" tabindex="-1">Client Wins</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="https://develop-coaching.com/about-greg-wilkes/" class="elementor-item" tabindex="-1">My Story</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="https://develop-coaching.com/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="https://develop-coaching.com/construction-podcast/" class="elementor-item" tabindex="-1">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="https://develop-coaching.com/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+						</div>
+				<div class="elementor-element elementor-element-7804adf elementor-align-right elementor-widget__width-auto elementor-tablet-align-center elementor-widget-tablet__width-initial elementor-hidden-mobile elementor-hidden-tablet elementor-widget elementor-widget-button" data-id="7804adf" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://www.develop-coaching.com/schedule-a-call/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SCHEDULE A CALL</span>
+					</span>
+					</a>
+								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-12f3659 elementor-hidden-desktop elementor-hidden-tablet e-flex e-con-boxed e-con e-parent" data-id="12f3659" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-79870bb e-con-full e-flex e-con e-child" data-id="79870bb" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-a8693c2 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="a8693c2" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://develop-coaching.com/">
+							<img width="290" height="174" src="https://develop-coaching.com/wp-content/uploads/2022/11/download.png" class="attachment-full size-full wp-image-13503" alt="" />								</a>
+															</div>
+				<div class="elementor-element elementor-element-ed4ad77 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="ed4ad77" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://developcoaching.com.au/">
+							<img width="318" height="159" src="https://develop-coaching.com/wp-content/uploads/2022/11/download-2.png" class="attachment-full size-full wp-image-13501" alt="" />								</a>
+															</div>
+				</div>
+					</div>
+				</div>
+				</header>
+				<div data-elementor-type="single-post" data-elementor-id="5461" class="elementor elementor-5461 elementor-location-single post-13589 podcast-transcript type-podcast-transcript status-publish hentry" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-94af5cd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="94af5cd" data-element_type="section" data-e-type="section" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0ce5f37" data-id="0ce5f37" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-68ccc5e elementor-widget elementor-widget-heading" data-id="68ccc5e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">// PODCAST TRANSCRIPT</h2>				</div>
+				<div class="elementor-element elementor-element-fa42173 elementor-widget elementor-widget-heading" data-id="fa42173" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h1 class="elementor-heading-title elementor-size-default">Get CITB Funding With Deb Madden &amp; Nathan Wilkins</h1>				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-7865395 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="7865395" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-593eef0 e-con-full e-flex e-con e-child" data-id="593eef0" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-7c68544 elementor-widget elementor-widget-text-editor" data-id="7c68544" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p><b>Greg:</b> So in today&#8217;s podcast, we&#8217;re talking to the huge organization, the CITB. Maybe you&#8217;ve heard of them before. Maybe you steered clear of the CITB because you&#8217;ve heard some rumors about them. I hope not. But in today&#8217;s podcast, you&#8217;re really going to get the truth about who the CITB are, what they offer for the construction industry and how it can benefit you.</p>
+<p>Now I use the CITB. Many years back when I had my construction company and they really supported me with bringing on apprentices and they funded. I think I had six apprentices in total and they funded all their training right the way through the years that they were with me. So it&#8217;s great for me to be part of the CITB, but you may be worried about some other things like being taxed or paying a levy and we&#8217;re going to dive into all of that.</p>
+<p>In the podcast and show you how it can really support you, not only with apprentices, but for upskilling your team and even upskilling yourself with leadership and management training. So you&#8217;re gonna find this really interesting. Let&#8217;s dive in.</p>
+<p>So Deb and Nathan, it&#8217;s great to have you on the podcast.</p>
+<p>Welcome.</p>
+<p><b>Deb:</b> Thank you.</p>
+<p><b>Nathan:</b> Thank [00:01:00] you.</p>
+<p><b>Greg:</b> So just as a bit of an introduction can you let us know what the CITB is and and what you guys do at the CITB?</p>
+<p><b>Deb:</b> Yeah, sure. So I&#8217;m Deb Madden. I&#8217;m exec director at the CITB. I look after what we call nations engagement, but it&#8217;s actually all of our customer facing stuff, if you like.</p>
+<p>So CITB is the designated industry training board for the construction sector in England, Scotland and Wales. And what we seek to do is support the construction industry in, in sustaining a workforce that is skilled, competent, inclusive, productive both for now and in the future. In a nutshell, that&#8217;s, that&#8217;s what we do, Greg.</p>
+<p>Nathan?</p>
+<p><b>Nathan:</b> Perfect. Brilliant. Yes. Thanks Deb. I&#8217;m Nathan Wilkins. I actually work within Deb&#8217;s team, so I&#8217;m a customer engagement manager. covering the East Midlands and East of England. So directly working with those employers and key stakeholders that can help us make a better landscape for construction businesses to access the skills that [00:02:00] they need.</p>
+<p><b>Greg:</b> Good stuff. Excellent. So I&#8217;m well aware of the the CITB. I&#8217;ve had a construction industry many years at the construction company many years back, and the CITB were really supportive actually for some of my needs. But many of our listeners won&#8217;t know or some might not know who the CITB are and how they can actually help.</p>
+<p>So Just give us a little bit of an overview of how the CITB supports small construction business owners. What, what, what, where, how are they there to support?</p>
+<p><b>Deb:</b> Sweet! The vast majority of our sector is smaller micro businesses. A very, very small percentage of companies who are registered with us are actually those tier one contractors.</p>
+<p>So those smaller micro businesses may be in the supply chains of the bigger contractors, or they may be engaged in their own activity, repair and maintenance, home building, and a myriad of other things. And CITB take a levy and I&#8217;m going to let Nathan in a second tell you [00:03:00] how that levy works because he&#8217;ll have the detail better than I do.</p>
+<p>But we take a levy from the industry and we, if you like, redistribute that levy in training grants and training support. And we hopefully offer a really simplified solution for small companies to access funding for their training needs. And not just the funding, because it&#8217;s not about cash in and cash out.</p>
+<p>It is about what we can offer those companies in terms of advice, signposting, and how we get them to engage with what CITB&#8217;s offer is. Nathan, do you want to say a little bit about the levy and how that works, particularly for for smaller and micro companies?</p>
+<p><b>Nathan:</b> Yeah, sure. So firstly, I think this is a great opportunity to, to speak directly to some of these small businesses, actually, because this is probably one of our biggest challenges.</p>
+<p>You mentioned earlier, Greg, that part of you&#8217;ve actually worked with CITB in the past and you, you know, you saw benefit from that. Part of our biggest challenge is the fact [00:04:00] that the industry is so defragmented. Heavily dominated by micro and small businesses who don&#8217;t actually know what the support that is available from CITB is and how to access that.</p>
+<p>So, you know, this is a great opportunity to, to get that message out there. As Deb, Deb says you know, our, our, our key focus really is to support those businesses. And the way that we, we do that within CITB is, is we do that through a a series of engagements. So speaking to those businesses and understanding exactly what their training needs are.</p>
+<p>And that&#8217;s quite specific in terms of how that&#8217;s done. So the, the engagement is really about having that holistic conversation to understand what their skills needs are, what the challenges are as a business. what their aspirations are. I mean, you know, it&#8217;s not just about you know I need to get a ticket to be able to do that particular job.</p>
+<p>What are they in business for? What are they trying to achieve as a business? What the risks are to their business, what the opportunities are. So [00:05:00] there&#8217;s plenty of opportunities to diversify into different parts of the market. I&#8217;m sure we&#8217;ll get on to that at some point during the conversation. And then it&#8217;s about how do we connect the dots.</p>
+<p>So how do we identify what this, what the, what the challenge is, what the risk is, what the opportunity is with the development opportunity. And that&#8217;s where CITB really come into their own because we&#8217;re really good at at organizing the, the landscape within, within a region to, to make sure that that training is available to support the specific risk challenger opportunity.</p>
+<p>And we, we, we do that by a number of ways. But one of the ways that the business will probably appreciate the most is through that financial incentive that&#8217;s available.</p>
+<p><b>Greg:</b> Let&#8217;s just ask a few questions about that then. So you&#8217;re helping businesses identify. where their needs are, where their gaps are, so there may be skill shortages or whatever, whatever those particular gaps are of a certain business.</p>
+<p>Is that bespoke? So we&#8217;re talking about small businesses here, people listening to this you know, growing a business, I don&#8217;t know, from 500k to 10 [00:06:00] million, something like that. Are you going to talk to every individual business potentially? Well, if, if someone called you up and says, look, I, you know, I&#8217;m looking to 10X my business in the next five years, I need some help and a bit of a roadmap.</p>
+<p>Would you talk to them individually?</p>
+<p><b>Nathan:</b> Absolutely. We try to say we&#8217;ve, we, we sort of allocate the the allocation of businesses by region. So within my region, we we split the team into geographical locations and each advisor&#8217;s got approximately about a thousand businesses to, to support and those 1, 000 businesses we&#8217;ve worked out that if you divide those 1, 000 businesses by the number of working days in the year then there&#8217;s opportunity actually to speak to every single business.</p>
+<p>So our, our aspiration really is to, to make contacts with each of those businesses and have that detailed training needs analysis conversation with that business. then allocate the best solution to meet that particular challenge, aspiration or risk. And [00:07:00] sometimes we might find that those businesses actually don&#8217;t actually need any support.</p>
+<p>And, you know, I&#8217;ve always said to the team that that&#8217;s, that&#8217;s perfectly fine. If, if you speak to a business and they find that they&#8217;re perfectly happy in terms of you know, their skills skills that they have at the moment and, and so forth, then don&#8217;t try and force any, any kind of products or services on that particular business.</p>
+<p>You know, we, we, we, we look to, to support them in a way that really helps to grow and develop that business.</p>
+<p><b>Greg:</b> Yeah. So speaking to so many businesses, I guess every business is going to be different, but you must start seeing trends of what people are really looking for at the moment. Where, where are the, what are the general things people are coming to you with?</p>
+<p>Or what sort of things are you helping them with particularly?</p>
+<p><b>Nathan:</b> Yeah, so it is quite varied. You know, we are seeing we are seeing that the market is, is, is reacting to some of the bigger opportunities that are coming. So in particular areas like in, in Anglia, for example, we have sizable sea. So they&#8217;re [00:08:00] very much interested in how they can secure some of that work on sizeable sea, for example.</p>
+<p>And You know, a a along the HS two route as well. You see opportunities there for businesses. And we&#8217;ve recently had the the announcement by the government, haven&#8217;t we in terms of the 1.5 million homes that have been committed to. So we started to see conversations come out, come out about that as well.</p>
+<p>For the past two years or so net zero you know, the, the opportunities around decarbonization of the existing housing stuff. Has been a really big a talk point in terms of how they can access some of that, some of that work that&#8217;s coming through and the skill set required for that. But then also we see quite a, quite a lot of conversations that take place around these management.</p>
+<p>So you&#8217;ll, you&#8217;ll know this Greg and, you know, I&#8217;m, I&#8217;m, I&#8217;m talking really to, to the audience, I suppose here, but the majority of businesses, those micro businesses. A lot of them have been reluctant managers to a certain degree. So they&#8217;ve, they&#8217;ve been good at their job. So they&#8217;ve been great bricklayers or roofers or whatever it might be.</p>
+<p>[00:09:00] And then they&#8217;ve just, you know, bit by bit, they&#8217;ve actually become a business. They&#8217;ve been good at their job. And then suddenly someone said, well, can you, can you take on this job? Can you lead this job? And then before they know it, they actually are business owners. But they haven&#8217;t had the formal training to become leaders or managers in that particular field.</p>
+<p>So that is something that CITB have identified, actually, and we&#8217;ve got a number of courses that have been developed that are available and funded by CITB. And they&#8217;re short courses as well. So just, just a bit about those those businesses too. So a lot of those businesses academia hasn&#8217;t really been the place that they&#8217;ve excelled in many instances.</p>
+<p>So the so the, the, the force of actually going back to school or going back to college or university to do a formal long, at least for management course actually, you know, puts them off completely. Courses that we&#8217;ve developed are short courses. So they&#8217;re half a day, a day courses looking at conflict management or you know, how to manage a team [00:10:00] or whatever it might be.</p>
+<p>And those are really popular in terms of you know, helping those business to, to fix a challenge that they&#8217;ve actually identified themselves.</p>
+<p><b>Greg:</b> Yeah, that&#8217;s absolutely crucial, isn&#8217;t it? Because I think so many trades people, they&#8217;ll, they&#8217;ll go to college, they&#8217;ll get their trade, but there is no training at all in a trade college of how to run a business, nothing, you know, that they won&#8217;t even tell you how to look after zero or run your books or anything.</p>
+<p>So it&#8217;s, it&#8217;s crazy, really that so many go into this industry that and end up having to run their own business, but they&#8217;ve got no, background in how to lead people at all. So I think that&#8217;s a fantastic offer that you&#8217;ve got there to just upskill business owners. I think that&#8217;s, that&#8217;s incredible.</p>
+<p>What about the skill shortage? At the moment, are you hearing a lot about there being, you know, a big skill shortage in the UK and apprenticeships, things like that?</p>
+<p><b>Deb:</b> Yeah, we, we, the skills shortage is huge and well documented and it&#8217;s been there for, for many, many years. Greg, as you will know we need an extra 250, 000 people over the next three years [00:11:00] and potentially another 150, 000 on top of that if the plans to build one and a half million homes are fully realized.</p>
+<p>It&#8217;s, it&#8217;s a huge gap. There are skills gaps and skill shortages, as we know. That is our reason for being. at CITB, but it&#8217;s a, it&#8217;s an incredibly tall order. And actually every industry in the UK is struggling for people at the moment. So not only are we battling to get those people into our industry, we are, we are competing with all other industries as well, which is a real, real challenge.</p>
+<p>Our industry has improved, and there&#8217;s still a long way to go in terms of developing the culture in the industry and making sure that that is visible to people who potentially want to come into the industry. But realistically, can we find those people to fill those shortages and gaps? Probably not.</p>
+<p>We need to look at things like improving productivity. And all of the stuff that Nathan has been talking about, you know, we have, we have very young [00:12:00] companies, immature companies, if you like, who are embarking on these leadership and management journeys. But then we have companies who, who my team have worked with, or other agencies have worked with, who, amaze us with the innovation and their plans for growth.</p>
+<p>And there is so much innovation at that part of the industry, at that smaller end of the industry. And we really want to capture that, because that&#8217;s where the productivity gains will be in the longer term. So, in addition to the leadership and management stuff that Nathan&#8217;s articulated to us, we also have the Industry Impact Fund, which, whilst it, On first sight, it appears to be more geared towards tier one contractors.</p>
+<p>Actually, what we&#8217;re seeing is smaller contractors working with local partners to put in bids to that fund with, with really great ideas about how they can improve the productivity. And that&#8217;s where I think we will see the real gains on that skills challenge that we have. It needs [00:13:00] to, it&#8217;s not a singular issue.</p>
+<p>the skills shortage. It&#8217;s just not a singular, singular issue. So we can&#8217;t solve it by just bringing 250, 000 people in. The people aren&#8217;t there. So let&#8217;s look at some of the options that we have to, to alleviate that challenge without 250, 000 people. And the stuff that the ICB is working on is, is to gear these smaller companies up to be able to do that.</p>
+<p><b>Greg:</b> Okay, so interesting that so when we&#8217;re talking about productivity, are we talking about it might be a combination of all of this? Are we are we saying better building methods like modular? Or is it about more technology? Or is it how you&#8217;re running your business? What do you mean by? Upscaling in productivity,</p>
+<p><b>Deb:</b> all of those things.</p>
+<p>And I&#8217;m not the expert on this, and I don&#8217;t believe CITB is the expert on this. I think the industry have the solutions and it&#8217;s about us being able to harness those solutions, look at a bid and say, actually, this sounds really great. How can we enhance it? How can we make it [00:14:00] better? How can we bring more organizations in to support you with it?</p>
+<p>So that, so that funding is not about CITB saying, We think these are the solutions because we don&#8217;t think we have the solutions. We think the industry have them, but it&#8217;s about all of those things. Greg, you&#8217;re absolutely right.</p>
+<p><b>Greg:</b> Okay. Yeah. So on the skill shortage, are you seeing, I mean, you might not have this data.</p>
+<p>So, you know, if you don&#8217;t know the answer, that&#8217;s fine. Are you seeing particular trades that are really suffering around the UK or in particular areas, or is it just across the board? Or are we seeing, you know, certain trades, I don&#8217;t know, like bricklayers or something like that, where people are just not going into that.</p>
+<p>That trade at all? How you, what you sort of see it?</p>
+<p><b>Deb:</b> We do have data. We have the CSN data, which is regularly renewed. There are shortages across England, Scotland and Wales. The biggest shortages across the board are in repair and maintenance, which won&#8217;t surprise you. That&#8217;s the biggest part of our sector, of our industry.</p>
+<p>Housing, clearly, home building, huge [00:15:00] shortages of bricklayers and other trades. That are associated with home building and then of course infrastructure commercial build, fit out. There are shortages just about everywhere. And it&#8217;s across the board in England, Scotland and Wales, which is the regions we cover.</p>
+<p><b>Greg:</b> Yeah, it&#8217;s interesting. It&#8217;s always been a challenge, I guess, because from when I left school, I wasn&#8217;t, you know, hugely academic. So it&#8217;s something that I went into because my dad was a bricklayer. So I got into the industry that way. And wasn&#8217;t maybe something I wanted. And, you know, it wasn&#8217;t something I was dreaming about from when I was at school, you sort of just fall into it sometimes.</p>
+<p>So you do wonder this next generation that&#8217;s coming through. You know, with this skill shortage get worse and worse. But at the same time, now we&#8217;re seeing a I come in and maybe wiping out a lot of jobs. It&#8217;s never going to wipe out the construction industry. Is it with the trays? Not not for a while anyway.</p>
+<p>So you do wonder if you&#8217;re gonna get a bit of a reverse of that now, where [00:16:00] people are actually looking and thinking this could be a pretty safe industry to get in for the next sort of 10, 15 years until, you know, There are</p>
+<p><b>Deb:</b> still lots of young people who want to do something practical which is brilliant and that&#8217;s, that&#8217;s where we need to focus our attention.</p>
+<p>But I think that you&#8217;ve really hit on something there with this generational thing which is, is going to be problematic, not just for the construction industry, but for all of our industries. People, young people now I&#8217;m thinking about Gen Z and Gen Alpha coming behind them. Want something completely different from work.</p>
+<p>They want to work in a completely different cultural environment. And I don&#8217;t think our industry or many others are ready for that yet. So one of the, one of the things that CITB need to, to look at over the next couple of years. Is is how we help the industry to get ready for that how we support them to change their culture And lots of companies are great at this.</p>
+<p>Let&#8217;s not take anything away from them They&#8217;re brilliant at this and they&#8217;re you know They&#8217;ve stolen a march on it and they&#8217;re doing all kinds of stuff that will be really [00:17:00] really helpful in promoting the industry to that that gen z Group, but I think we can probably do more it&#8217;s key if we if we want to compete for the best people and we need to You to keep our industry as great as it has been.</p>
+<p>We need to be, be sure that our culture suits a whole range of, of generational types. I think it&#8217;s more marked now than I can ever remember it being the difference in generations. And we need to be ready for that.</p>
+<p><b>Greg:</b> Yeah, it&#8217;s a really good point. I know when I had a construction business, I think we had about six apprentices that we attracted and kept for quite a while, actually, and I must say that there was some of our most loyal workers, these young apprentices that come on board.</p>
+<p>They were fantastic. And you, the good thing is you get to mold them the way you want them to work and stay with us for a long time. But I think that&#8217;s a really valid point that any you. businesses at the moment that are thinking, I need to attract, you know, the, the, the younger generation generation Zed.</p>
+<p>And, and what did you call the next one? I didn&#8217;t even know the next one is Alpha.</p>
+<p>I never even</p>
+<p>[00:18:00] thought about that one. When does that one start?</p>
+<p><b>Deb:</b> We&#8217;re in gen alpha.</p>
+<p><b>Greg:</b> There you go. Okay.</p>
+<p><b>Deb:</b> Kind of 10 years ago. And Nathan, your kids, probably if you&#8217;ve not heard the words Sigma. Then you might not know any general for people, but you&#8217;ll be hearing this soon.</p>
+<p><b>Greg:</b> Yeah, I&#8217;ve heard a bit of that from my son. So yeah, so that&#8217;s really interesting. Actually, we need to start thinking about how do we approach, you know, how do we attract them to our organisations as we&#8217;re growing the business and what is our, you know, potentially a five year plan to to bring those young ones on.</p>
+<p>So that&#8217;s that&#8217;s a really, really good point.</p>
+<p><b>Nathan:</b> So In terms of the The challenge of attracting people in. We&#8217;ve actually been really good at that, and I think we need to recognize that we have been good at that as well, because over the past 10 years or so, we introduced a, a a careers portal called Goal Construct.</p>
+<p>And it&#8217;s a real, a real intuitive tool, actually. I mean, I actually recently [00:19:00] took part in a project which was a cross sector skills, skills project called the Local Skills Improvement Plans. And we got to see how all the other sectors actually, you know, work with that within that challenge of trying to attract people.</p>
+<p>And the construction is very good at attracting people with the tools that we have because of the CITB investment. So that bulk constructs product that I just mentioned One of the, one of the tools within there is the personality quiz, and what it does is it allows an individual to ask a series of, answer a series of questions.</p>
+<p>At the end of those questions, it gives you a load of careers within the construction sector that match your personality. Brilliant tool. I mean, I wish that was available when I was a kid because, you know, it&#8217;s it allows you to understand, well, okay, great, your dad was a bricklayer, so you became a bricklayer, and that&#8217;s typically what happens.</p>
+<p>I actually wanted to be an electrician because my uncle, you know. I was an electrician and he drove a a Ford Sierra four by four, white with gray alloys on it. And I thought he must&#8217;ve earned a lot of money. So I want to be an electrician, you know, say, but those were the [00:20:00] limits in terms of, you know, what we could see.</p>
+<p>So we, we, we tend to to go for careers that we can, we can see and we can touch and that&#8217;s naturally why, you know, and your story is, is quite typical about your dad was a bricklayer and then you became a bricklayer and it&#8217;s been really good and. One of the things that we&#8217;ve identified locally is that the colleges, the full time provision within FE College for Construction is actually doing really well.</p>
+<p>So those courses are full of young people who have chosen construction possibly because of the, you know, the talk in the press around the careers that are available in the sector and the huge earning potential that&#8217;s available within the sector. We&#8217;ve got a bit of a mixed mismatch here in terms of, you know, those young people within college that are doing those full time, full time courses that will end up with their diploma at the end of their course, and those actually come into the sector.</p>
+<p>So there&#8217;s a, there&#8217;s a, there&#8217;s a bit of a gap there, and we&#8217;re working really hard to try and address that gap. And I want to just you know, play out to your, to [00:21:00] your listeners, actually, that if you are a construction business working across across England, Wales, and Scotland, and and you are interested in recruiting a young a person, an individual into your business, then speak to your local college, speak to your local college and ask them about what talent they have within their, within their college that, you know, that you could potentially you know, take on.</p>
+<p>And CITB can help with that because we in the last 18 months or so, Deb, I&#8217;ll say, we introduced a product called the Into Work Grants. It&#8217;s a brilliant product. I mean, it&#8217;s really a game changer in terms of our team&#8217;s been able to do a good job in terms of how people&#8217;s come to the sector, but we will pay 500 pounds to a business that hosts a work experience slash work trial students in their business.</p>
+<p>And at the end of the end of that one week work experience, you&#8217;ll receive 500 pounds for doing that. And if there&#8217;s a good fit in terms of both sides, so the, you know, the young person enjoys working within your business and, you know, you as a business feel you can employ that person, [00:22:00] we then will pay you an additional 1, 000 as a recruitment grant.</p>
+<p>So that&#8217;s 1, 500 paid into your business. Just to help you recruit people that, you know, we know you need. So, that&#8217;s something that I think that, you know, more businesses need to be aware of. And then the, the next step after that, actually, is, is you could actually take that person on as an apprentice. So the apprenticeship grant that we offer typically pays eight and a half thousand pounds.</p>
+<p>over a two year period. So that&#8217;s 10, 000 if you add on the recruitment grant that I just mentioned there, just to recruit people that we know you need. So these are the kind of messages that I think that more businesses need to be aware of. And if, if anyone needs to speak to someone about how they can understand that, then they can speak to their local CITB advisor and easiest to find that person, jump on our website, www.</p>
+<p>citb. co. uk, Type in CITB local and a list of of advisors will appear there and just pick them off your area and make [00:23:00] contact and Yeah, that&#8217;s huge.</p>
+<p><b>Greg:</b> I think that&#8217;s I mean that I don&#8217;t think that was around when when I had my business but I think that&#8217;s amazing because The thing is, everyone worries when you take someone on, you don&#8217;t know how they&#8217;re going to perform.</p>
+<p>So just to bring someone in for work experience, one is just great to pay back in that way to young people out there. And you&#8217;re getting to test someone out and then you get to take them on and you get paid for taking them on. And then obviously you&#8217;ve got the grant after that for the apprenticeship.</p>
+<p>And just to give Listen, there&#8217;s a bit of perspective. I&#8217;m over in Australia here and I&#8217;ve taken my daughter on actually as an apprentice for for my business, but she&#8217;s doing marketing and things like that. The grants here are nothing like what you just said. You know, they&#8217;re maybe a few thousand dollars.</p>
+<p>You just said eight thousand pounds over two years. That&#8217;s, that&#8217;s a bit, that&#8217;s a big grant. That&#8217;s, that&#8217;s pretty, pretty strong. Yeah, eight and a half.</p>
+<p><b>Nathan:</b> Eight and a half.</p>
+<p><b>Greg:</b> Eight and a half, there you go. Yeah, I don&#8217;t want to, I don&#8217;t want to miss out on the 500. What an addition.</p>
+<p><b>Deb:</b> In addition to that, because it&#8217;s really important that this is not just about here&#8217;s some money, get on with it.</p>
+<p>We know that small [00:24:00] and micro companies really struggle with the paperwork around apprenticeships. They worry about how am I going to nurture this apprentice? How am I going to make sure that they&#8217;re okay? We have a NEST team, a new entrance support team, and that gives wraparound care to that employer and the learner.</p>
+<p>to make sure that they&#8217;re getting what they need. So that kind of fear factor of, I can&#8217;t be bothered with all the paperwork, which I would be exactly the same. It is an onerous job taking an apprentice. The funding is, is, is, it&#8217;s just a minefield. We will do all that for them. So that&#8217;s the added value bit that I was talking about.</p>
+<p>There isn&#8217;t cash, but it&#8217;s, it&#8217;s absolutely a support to any small business. Yeah.</p>
+<p><b>Greg:</b> Yeah, that&#8217;s a big help. Yeah, for sure. So, if a young person&#8217;s listening to this, and they&#8217;re in college, maybe, and they&#8217;re looking for a job, obviously, you said that businesses can go and approach colleges, or they can approach the CITB for some help, but what about the young person that&#8217;s, you know, desperate to find a company?</p>
+<p>Do they get any [00:25:00] support from the CITB?</p>
+<p><b>Nathan:</b> Great question. Great question. And these are the kind of bits of work that we&#8217;re doing locally. Our teams are doing locally. So, So, you know, construction businesses, typically small businesses, you know they&#8217;ve, they&#8217;ve, they&#8217;ve come from a working class background, typically and you know, they, they, they&#8217;re very helpful, very helpful people in general.</p>
+<p>And I always say that the easiest way for a young person to actually get an apprenticeship is not by me or someone in this team or someone from our engagement team or the college asking that employer to recruit someone, it&#8217;s the young person. So if that young person you know, is, is, is keen to work in construction and, and they know a business that is local to them that, you know, they could work with them.</p>
+<p>You know, they can actually contact the business themselves and the information I&#8217;d like them to hold is that, you know, there&#8217;s actually some financial support available for that business to take them on. So it&#8217;s, you [00:26:00] know, if they&#8217;re at college, you know, can I have a work experience with you, please, Mr.</p>
+<p>Business Owner or Mrs. Business Owner. You can get paid 500 pounds from CITB for doing that. You know, that&#8217;s, that&#8217;s one message I want them to get to, to understand. The other message is, is I&#8217;d really like an apprenticeship. And if you take me on, you know, part of my, you know, wage or, or or an incentive that&#8217;s available to you will be for a two year period, eight and a half thousand pounds.</p>
+<p>Towards the cost of recruiting me and I&#8217;m really keen and I&#8217;m really good at good at what I do You know, that is such a powerful message and it comes from that young person. I believe unlocks much more Opportunities than we could ever unlock because you know, yeah businesses in general want to help</p>
+<p><b>Greg:</b> for sure</p>
+<p><b>Deb:</b> in terms of how how people apply to the, to the sector.</p>
+<p>There is a portal called Talent View, which is GB wide that young people can apply to. And of course, there&#8217;s the find an apprenticeship through the Gov website. Coming soon, [00:27:00] however, from CITB, Nathan mentioned Go Construct. We will be developing that platform into a a new entrant portal as well.</p>
+<p>So people will be able to apply direct through GoConstruct and it will offer a matching service, but that&#8217;s coming later in 2025.</p>
+<p><b>Greg:</b> Fantastic. Yeah. So we&#8217;ve covered two ends of the scale here. We&#8217;ve gone from apprentices, but we&#8217;ve also talked about some leadership development of someone who may have all of a sudden found themselves a business owner and not quite knowing what to do there.</p>
+<p>What about in the middle the upskilling of your existing workforce? What sort of support does the CITB provide there?</p>
+<p><b>Nathan:</b> Yeah, sure. So yeah, that&#8217;s, that&#8217;s, that&#8217;s a key area of of, of that training analysis work that we do say we, we have that conversation, understand what their, what their needs are and, and, you know, fortunately enough for, for my team, we&#8217;ve got all the tools that we need to actually support that need.</p>
+<p>So we have a, a, a grant system. So, and there&#8217;s a number of training courses that we&#8217;ve identified as being construction specific or [00:28:00] leadership management specific or, or construction health and safety specific. And they all have a grant available to support that training. So that&#8217;s stage one. So if you&#8217;re a employer that&#8217;s happy to make those grants applications, then that&#8217;s fine.</p>
+<p>The second option is, is those strategic thinkers. Or strategic thinkers that want to plan ahead. And we have what&#8217;s called the Skills and Training Fund. Now typically a business that has less than 50 employees can apply for 5, 000 twice a year to support on training that they&#8217;ve identified that they would like to do for themselves and their, and their employees.</p>
+<p>over the course of a 12 month period. So that&#8217;s 10, 000 available to cover 100 percent the cost of that training. But you&#8217;ve got to be able to plan ahead and our team can support you with doing that. And then a product that&#8217;s been introduced quite recently, which is doing really well, is what&#8217;s called the Employer Network.</p>
+<p>And Employer Networks are about you know, taking all the hassle away from the, from the business in terms [00:29:00] of finding that training. booking that training and actually making a payment towards the cost of that training. So we will pay typically 70 percent of the costs upfront for that training. The employer just needs to turn up and pay the balance of 30%.</p>
+<p>And there&#8217;s actually talk at the moment about, you know, increasing that to 100 percent for a number of different training options. So whatever the style of how that particular business works in terms of Do they want to just book it themselves and claim a grant afterwards and they want to manage that?</p>
+<p>Do they want to plan ahead or do they want us to just take care of all that hassle for them? There&#8217;s a, there&#8217;s a route way for them to actually get that training sorted.</p>
+<p><b>Greg:</b> Yeah, amazing. So I don&#8217;t want to go too much into the weeds of what it covers because I&#8217;m sure there&#8217;s a wide scope. But just to, I think it would just be helpful just to mention some really common trainings that construction businesses I work with generally have to go for.</p>
+<p>And I just want to see if there is any support for this sort of stuff. So [00:30:00] things like, like, let&#8217;s start from real basic stuff like, Maybe asbestos awareness training or scaffold training, things like that. Is things like that covered?</p>
+<p><b>Nathan:</b> Yeah. So, so mandatory health and safety training. So asbestos awareness, working at heights, abrasive wheels, all this, all these common training that, you know, employers need to have.</p>
+<p>That&#8217;s the mandatory stuff that, you know, that they, that they&#8217;ll do anyway, you know, say typically, you know a construction business will be doing this training. The fact they can have a conversation with us and we tell them, Hey, we&#8217;ll pay for it. for you, you know, it&#8217;s a happy day for them. So I always say that you know, I would encourage every single business out there, if you work in construction to actually, you know, proactively have that conversation with CITB.</p>
+<p>So we&#8217;re, we&#8217;re going to get around to you at some point, you know, we&#8217;re going to reach out to you and make contact with you so you can actually have that conversation with us whenever you want. So you can actually contact us. I am yet to, to to find a, a, an example of where we&#8217;ve had a conversation with a business.</p>
+<p>And we haven&#8217;t been able to support them in some [00:31:00] way, you know, or they don&#8217;t need the support, you know, there&#8217;s always something available for them. And sometimes it&#8217;s not even from us, Greg say, we actually work as as partnership managers within our, within our regions as well. So all of those partners that actually are, can impact on supporting these businesses that that, you know, work in areas that we&#8217;re not responsible for.</p>
+<p>You know, so, for example, digital skills and mentioned AI earlier, you know, there&#8217;s partners in all of the regions that are actually working actively to help businesses in general upskill in those areas. And we&#8217;re working with those partners. So when a business talks about, well, I&#8217;d like to understand how I can, you know, be better at at social media marketing.</p>
+<p>Well, we&#8217;ve got contacts within the area that can connect them with those businesses to help them do that. So it&#8217;s not always about from our point of view of. You know we are going to force a, a, a training, you know, you know, a construction related training that you don&#8217;t need. You might need training in a completely different area and we&#8217;ll make [00:32:00] those connections for you as well.</p>
+<p><b>Greg:</b> Fantastic. Yeah. Just staying on this subject a little bit more then. So what about some of the more advanced trainers again that we, my businesses that I coach always need like SMSTS, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, P2P, Things like that the more that those style ones. Do you support with that as well?</p>
+<p><b>Nathan:</b> Yes. Yeah, we do. Yep. So SMS TS triple STS You know all those courses Yeah, 100 percent safe. That&#8217;s it. Don&#8217;t say Generally linked to your CSS cards So, you know, some of the businesses that will be listening to this will be fully aware, you know, of their CSCF. And some of them will have challenges around those areas.</p>
+<p>So, MBQs as well, for example. We will, we can pay for those, for those MBQs, a grant towards them. And in some cases, pay for the entire cost as well. So So the whole, you know, my kind of rule of thumb really in terms of the message to get out to your businesses is do you have a training need? And if you do, it&#8217;s worth having a conversation with us because [00:33:00] typically we&#8217;ll be able to support in some way.</p>
+<p>Sometimes the finance might not be coming from CITB but it&#8217;s still going to be finance that will be available for your business. But if it&#8217;s construction related. In general, you know, there&#8217;s a product available from CITB that we can directly fund that particular training.</p>
+<p><b>Greg:</b> I love that.</p>
+<p><b>Deb:</b> Employer networks they&#8217;re going to be run by employers.</p>
+<p>They&#8217;ll make the decisions about what&#8217;s funded. So some of the more obscure stuff that we&#8217;ve had to say no to in the past may well become more, more, Availability for funding through the employer networks. But that&#8217;ll, that&#8217;s a, it&#8217;s a moving feast at the minute, and we&#8217;re developing employer networks, but it&#8217;s something that, that your listeners should get involved with if they can.</p>
+<p><b>Greg:</b> Fantastic. Yeah. So just moving on to a slightly different subject. So one thing that we always encourage businesses to do is establish some credibility, get themselves into trade federations like the Federation of Master Builders or, you know, ones like that. If someone [00:34:00] has CITB training and they&#8217;re using you regularly and upskilling, can, can they refer to themselves as being supported by the CITB or using your logos or anything like that?</p>
+<p>Just a, just a question. I&#8217;m not sure where that goes.</p>
+<p><b>Deb:</b> It&#8217;s quite a tricky one that and the use of our logo is is, is, is closely guarded. They can absolutely say that they are registered with CITB, which gives them some level of legitimacy, but we&#8217;re not a regulator, Greg. And we wouldn&#8217;t want to, we wouldn&#8217;t want anyone, a member of the public, to think that working with CITB on the side of the van gave any legitimacy in terms of the quality of the work.</p>
+<p>And you&#8217;ve already touched on the fact that actually, being with the trade federation is probably the biggest signifier of that to someone who&#8217;s looking to work with that particular company. We work widely with trade federations, 14 of them we work incredibly closely with because they are prescribed organizations [00:35:00] who have the same consensus.</p>
+<p>But we work with, with all the trade federations and we strongly encourage Every company that we work with to consider becoming a member of one of those federations. Absolutely. So that is your kind of That will be our steer from here But yes, it&#8217;s absolutely fine for them to say i&#8217;m registered with CITB.</p>
+<p>I wouldn&#8217;t I wouldn&#8217;t want to to Ascribe any level of legitimacy around that though</p>
+<p><b>Greg:</b> No, no, that&#8217;s fair enough. Yeah, then understand that with the logo and things, but, but that&#8217;s, that&#8217;s valuable anyway. I think if, if I was a larger, maybe say if I was a tier one contractor and I&#8217;m vetting a smaller company that I may want to come and subcontract for me and I see that they are, registered with the CITB.</p>
+<p>That would tell me straight away that this company is interested in upskilling their workforce. They&#8217;re, you know, looking to support their members. So that, that would establish credibility anyway, I think, which would which would be important. Okay. So let&#8217;s just talk about levies for a second, because we, we briefly touched on that word earlier and someone listening to this [00:36:00] might think, what does that mean?</p>
+<p>Levies so far, it&#8217;s all a handout, but what about giving back? So how does the how do levies work and when do they kick in for companies?</p>
+<p><b>Nathan:</b> Yeah. So, so the, I mean, that, that&#8217;s one of the challenges that, that we have in terms of engagements, actually with, with smaller businesses. There&#8217;s a perception out there that CITB is a tax.</p>
+<p>And if you get involved with CITB, then you&#8217;re just going to be taxed. It&#8217;s going to cost you a lot of money. When actually, actually, you know, the, the opposite is true. So we will you know, you register with CITB and you will have to complete a levy return annually. And that labor would say I was based on your PAYE and also your, your your subcontractor costs.</p>
+<p>So your net CIS costs. And that will, that will, you know, kick out a number in terms of what, what actually that payment is. But there&#8217;s a threshold in terms of, you know, when that, when that payment will start being paid. So you&#8217;re you&#8217;re exempt from any kind of payments for if that number is below 120, 000 per annum.</p>
+<p>Yeah. [00:37:00] Now if you&#8217;re if you&#8217;re, if that number, that combination of PAYE and net CIS is below 400, 000 pounds, then it&#8217;s half of whatever you know, the the levy charge would be. So there&#8217;s, there&#8217;s a sliding scale in terms of what that would possibly be. Oh, I&#8217;ve actually ran the numbers.</p>
+<p>And you know, for smaller businesses who actually are within that threshold of between 120 and 400, 000, which is the vast majority of all businesses that are operating across the construction sector. Their payments would probably be wiped out by just taking on one apprentice. You know, so, you know, there&#8217;s, there&#8217;s, there&#8217;s opportunities there to actually support your businesses financially way more than the cost will be just by engaging with CITB.</p>
+<p>If anyone&#8217;s interested in finding out what their, what their actual levy charge would be, you know, they can actually go onto our website. And on there, there&#8217;s a, there&#8217;s a calculator levy levy calculator. And just type in, you know, the search engine levy calculator. And [00:38:00] that will, that will kick out a a calculator for you to, to, to work with it.</p>
+<p><b>Greg:</b> Yeah, that&#8217;s, that&#8217;s really useful. So I guess. If you&#8217;re listening to this, I mean, no one likes the thought of a levy. So I guess if you&#8217;re listening to this, we&#8217;ve got to have the balance, haven&#8217;t we, of what we, what we&#8217;re able to get from the CITB and then what we have to pay out in return. So if you&#8217;re a growing construction company and you are going to make the use of the CITB, then you may have to pay a levy, but you may end up recouping that and more, potentially a lot more depending on what you&#8217;re actually taking on in grants.</p>
+<p>So, you know, either I suppose everyone wants to be. net positive in this, don&#8217;t they? Maybe there&#8217;s as, as the as the the, the construction company in, in that sense, they want to be net positive. So they&#8217;re not having to, to pay out every year. So really you&#8217;ve got to think about upskilling, using the grants looking at the, the leadership training, all those funding opportunities, then that&#8217;s going to offset whatever But it&#8217;s great that you&#8217;ve got that on the website anyway, so at least people can go in with their eyes open on [00:39:00] what&#8217;s involved there.</p>
+<p>Fantastic. So we&#8217;ve covered, we&#8217;ve covered quite a lot there on, on what the CITB offers. Is there anything that you think we haven&#8217;t touched on yet that&#8217;s quite crucial that anyone needs to know? We&#8217;ve talked about, yeah.</p>
+<p><b>Deb:</b> I guess I would just, for anyone who&#8217;s listening to this, Nathan has already touched on it, but don&#8217;t be concerned or worried about contacting CITB.</p>
+<p>I can practically guarantee that we will be able to dispel all of the myths that you have heard about CITB and we&#8217;ll be able to add some value to your business. Please don&#8217;t be concerned about contacting us. It&#8217;s we&#8217;re We&#8217;re a friendly organization. We&#8217;re here to support the industry and my personal passion is about supporting those micro and small businesses to grow and develop and to do that in a, in a, in a healthy way, which means having a training culture within their business.</p>
+<p>[00:40:00] So, so my team are kind of ingrained with my vision of support these companies to help them to grow and I&#8217;ll be very surprised if, if any of them are doing anything other than that when they&#8217;re dealing with these small businesses. So it&#8217;s a bit of a call to action, really get in touch with us if you haven&#8217;t already come and chat to us about what we can do for you.</p>
+<p><b>Greg:</b> Fantastic. Yeah. Anything to add to that, Nathan, or is that well summed up by Deb? Yeah,</p>
+<p><b>Nathan:</b> I suppose, I mean, Deb&#8217;s articulated it perfectly there, really. The one thing I&#8217;d say is that, I can guarantee you, Greg, that some of your listeners have probably even got apprentices that they&#8217;re not claiming for. You know, so, if you have an apprentice in your business, and you&#8217;re a construction business, please get in contact with your CITB advisor.</p>
+<p>I mean, you could be you know, you could be missing out on eight and a half thousand pounds there. And we can do retrospective claims as well. So you can go back a year. So even if you had an apprentice last year but you haven&#8217;t claimed for you might be feeling like you&#8217;ve missed, missed the boat, but you can still [00:41:00] claim for a percentage of that.</p>
+<p>So please get in contact. And you know, As Deb says you know, you&#8217;ve, you&#8217;ve, you&#8217;ve, you probably are training as a business, you know, you&#8217;ll probably do mandatory training. You know, you&#8217;ve got nothing to lose by having a conversation. Conversation can be as short as 10 minutes, you know, or it could last, you know, if you want to go into detail, it could last an hour.</p>
+<p>And we can even come and see you at your business if you, if you, if you prefer. So we can work, you know, however you feel comfortable to work. But our job is to support you purely that, you know, so when I speak to businesses, I always say to them, think of your local advisor. As almost an extension of your team, you know, so a lot of these businesses don&#8217;t have a have the finance to have a training manager or HR manager, we can fulfill a lot of those roles in terms of the work that we do and we want to do so those advisors are targeted on supporting these businesses.</p>
+<p>So you&#8217;re not actually [00:42:00] being a burden to anybody by making contacts and having that conversation. So we, I&#8217;d really like to encourage businesses to, you know, to jump on the website, you know, go onto that search engine, type in local advisor, pop them an email or pop them a phone call and have that conversation.</p>
+<p>And you know, it&#8217;d be interesting to see in the comments, perhaps, you know any results from, from those conversations that take place as a consequence of watching this video.</p>
+<p><b>Greg:</b> Yeah, fantastic. Well, I just want to thank you both for the time on the call today. It&#8217;s been a really interesting conversation.</p>
+<p>It just, you know, takes me back to the support I got with the CITB and that&#8217;s why I wanted to get you guys on because I think there&#8217;s a lot that people are potentially missing out on and don&#8217;t know what&#8217;s out there and I think you&#8217;ve explained all of that really well today. So thanks again and we look forward to catching up soon.</p>
+<p><b>Deb:</b> Yeah, thanks for having us.</p>
+<p><b>Nathan:</b> Yeah, thanks for having us Greg. Cheers.</p>
+								</div>
+				</div>
+		<div class="elementor-element elementor-element-b18c4cb e-con-full e-flex e-con e-child" data-id="b18c4cb" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-9335223 e-con-full e-flex e-con e-child" data-id="9335223" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[],&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:30,&quot;sticky_effects_offset&quot;:31,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_anchor_link_offset&quot;:0}">
+				<div class="elementor-element elementor-element-fc88372 elementor-widget elementor-widget-heading" data-id="fc88372" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Do you want similar results?</h2>				</div>
+		<div class="elementor-element elementor-element-d84d2cf e-con-full e-flex e-con e-child" data-id="d84d2cf" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-ae9adac e-flex e-con-boxed e-con e-child" data-id="ae9adac" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-52380f9 e-con-full e-flex e-con e-child" data-id="52380f9" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-3d565f6 elementor-view-default elementor-widget elementor-widget-icon" data-id="3d565f6" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-far-calendar-alt" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-3821fe9 e-flex e-con-boxed e-con e-child" data-id="3821fe9" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-3fed5f6 elementor-widget elementor-widget-heading" data-id="3fed5f6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Step 1</h2>				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-d53fa29 elementor-widget elementor-widget-heading" data-id="d53fa29" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Schedule a Call</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-cbab7f3 e-con-full e-flex e-con e-child" data-id="cbab7f3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-552974a e-flex e-con-boxed e-con e-child" data-id="552974a" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-97c3621 e-con-full e-flex e-con e-child" data-id="97c3621" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-79aeaca elementor-widget__width-initial elementor-view-default elementor-widget elementor-widget-icon" data-id="79aeaca" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-hands-helping" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M488 192H336v56c0 39.7-32.3 72-72 72s-72-32.3-72-72V126.4l-64.9 39C107.8 176.9 96 197.8 96 220.2v47.3l-80 46.2C.7 322.5-4.6 342.1 4.3 357.4l80 138.6c8.8 15.3 28.4 20.5 43.7 11.7L231.4 448H368c35.3 0 64-28.7 64-64h16c17.7 0 32-14.3 32-32v-64h8c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24zm147.7-37.4L555.7 16C546.9.7 527.3-4.5 512 4.3L408.6 64H306.4c-12 0-23.7 3.4-33.9 9.7L239 94.6c-9.4 5.8-15 16.1-15 27.1V248c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h184c30.9 0 56 25.1 56 56v28.5l80-46.2c15.3-8.9 20.5-28.4 11.7-43.7z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-d7f2896 e-flex e-con-boxed e-con e-child" data-id="d7f2896" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b4a1b35 elementor-widget elementor-widget-heading" data-id="b4a1b35" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Step 2</h2>				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-ed77df7 elementor-widget elementor-widget-heading" data-id="ed77df7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">We Create a 12-Month Plan</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-585fdd3 e-con-full e-flex e-con e-child" data-id="585fdd3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-1f71d53 e-flex e-con-boxed e-con e-child" data-id="1f71d53" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-7858abf e-con-full e-flex e-con e-child" data-id="7858abf" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-13be101 elementor-view-default elementor-widget elementor-widget-icon" data-id="13be101" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-far-smile" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-99d47ee e-flex e-con-boxed e-con e-child" data-id="99d47ee" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-7dac863 elementor-widget elementor-widget-heading" data-id="7dac863" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Step 3</h2>				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-60bdbc1 elementor-widget elementor-widget-heading" data-id="60bdbc1" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Enjoy The Results</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-1bab404 e-con-full e-flex e-con e-child" data-id="1bab404" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-94115dd elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="94115dd" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://develop-coaching.com/schedule-a-call/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SCHEDULE A CALL</span>
+					</span>
+					</a>
+								</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<footer data-elementor-type="footer" data-elementor-id="9008" class="elementor elementor-9008 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-10543235 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="10543235" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:300,&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-4ad56b35 e-con-full e-flex elementor-invisible e-con e-child" data-id="4ad56b35" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-5b8b08d4 elementor-widget elementor-widget-image" data-id="5b8b08d4" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="508" height="408" src="https://develop-coaching.com/wp-content/uploads/2024/03/Build-Your-Future-Dollar.webp" class="attachment-large size-large wp-image-9006" alt="" />															</div>
+				</div>
+		<div class="elementor-element elementor-element-456ba1f1 e-con-full e-flex e-con e-child" data-id="456ba1f1" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-7775f7d4 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor" data-id="7775f7d4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Download a copy of my #1 Amazon Bestseller!</p><p> </p><p>This Ebook will change everything you ever thought about your Construction Business</p>								</div>
+				<div class="elementor-element elementor-element-d77620a elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="d77620a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://develop-coaching.com/download-book/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Download Now</span>
+					</span>
+					</a>
+								</div>
+				</div>
+		<div class="elementor-element elementor-element-2214bee e-con-full e-flex elementor-invisible e-con e-child" data-id="2214bee" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;jet_parallax_layout_list&quot;:[],&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-26df629 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="26df629" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="57" height="57" src="https://develop-coaching.com/wp-content/uploads/2026/01/Group-1341.svg" class="attachment-full size-full wp-image-17130" alt="" />															</div>
+		<div class="elementor-element elementor-element-497334f e-con-full e-flex e-con e-child" data-id="497334f" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-2ec2660 elementor-widget elementor-widget-text-editor" data-id="2ec2660" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									Check Out Our
+<div class="bigfont">Free Trainings Hub </div>								</div>
+				<div class="elementor-element elementor-element-4aeaf71 elementor-widget elementor-widget-text-editor" data-id="4aeaf71" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Featuring: </p>								</div>
+				<div class="elementor-element elementor-element-5fdb5f6 elementor-widget elementor-widget-text-editor" data-id="5fdb5f6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<ul role="list"><li>Podcast Episodes</li><li>Blogposts</li><li>Youtube Videos</li><li>Online Courses and More</li></ul>								</div>
+				<div class="elementor-element elementor-element-90ed1b1 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-id="90ed1b1" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://develop-coaching.com/5-pillars-free-trainings">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">TO THE HUB</span>
+					</span>
+					</a>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9b85bde elementor-hidden-desktop elementor-hidden-tablet e-flex e-con-boxed e-con e-parent" data-id="9b85bde" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-9642d8c elementor-widget elementor-widget-image" data-id="9642d8c" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://smenews.digital/winners/develop-coaching-2/">
+							<img src="https://develop-coaching.com/wp-content/uploads/elementor/thumbs/Best-Construction-Training-Company-2024-qy1pkf2mucnu88xq2lre7t0sfudsrjfxuq85plyhro.webp" title="Best Construction Training Company 2024" alt="Best Construction Training Company 2024" loading="lazy" />								</a>
+															</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-23962fb1 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="23962fb1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-1a6c4ca3 e-con-full e-flex e-con e-child" data-id="1a6c4ca3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+		<div class="elementor-element elementor-element-21e94dbe e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="21e94dbe" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-30c339a2 elementor-widget elementor-widget-image" data-id="30c339a2" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://smenews.digital/winners/develop-coaching-2/">
+							<img src="https://develop-coaching.com/wp-content/uploads/elementor/thumbs/Best-Construction-Training-Company-2024-qy1pkf2mucnu88xq2lre7t0sfudsrjfxuq85plyhro.webp" title="Best Construction Training Company 2024" alt="Best Construction Training Company 2024" loading="lazy" />								</a>
+															</div>
+				</div>
+		<div class="elementor-element elementor-element-5c2fb1ec e-con-full e-flex e-con e-child" data-id="5c2fb1ec" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-1102fedf elementor-widget elementor-widget-text-editor" data-id="1102fedf" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>								</div>
+				<div class="elementor-element elementor-element-294eb6d9 elementor-shape-square e-grid-align-mobile-center e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="294eb6d9" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-7384bbc" href="https://www.facebook.com/developcoach/" target="_blank">
+						<span class="elementor-screen-only">Facebook-f</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-83cf214" href="https://www.linkedin.com/company/developcoaching/" target="_blank">
+						<span class="elementor-screen-only">Linkedin-in</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin-in" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-4e8c205" href="https://www.instagram.com/greg.wilkes.coach" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-4d17432" href="https://twitter.com/developcoaching" target="_blank">
+						<span class="elementor-screen-only">Twitter</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-f2afbe1" href="https://www.youtube.com/@DevelopCoaching" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<svg aria-hidden="true" class="e-font-icon-svg e-fab-youtube" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-7b2542ae e-con-full e-flex e-con e-child" data-id="7b2542ae" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-5b32071c elementor-widget elementor-widget-text-editor" data-id="5b32071c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Subscribe for updates, offers and amazing free content</p>								</div>
+				<div class="elementor-element elementor-element-4f6f9e2 elementor-align-justify elementor-widget elementor-widget-button" data-id="4f6f9e2" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQzMDciLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SUBSCRIBE</span>
+					</span>
+					</a>
+								</div>
+				</div>
+		<div class="elementor-element elementor-element-6ad48b7c e-con-full e-flex e-con e-child" data-id="6ad48b7c" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+				<div class="elementor-element elementor-element-3c63cc33 elementor-align-start wplist-saas elementor-mobile-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3c63cc33" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="mailto:hello@develop-coaching.com">
+
+												<span class="elementor-icon-list-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>						</span>
+										<span class="elementor-icon-list-text">hello@develop-coaching.com</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-68b12caa elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="68b12caa" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<div class="_form_62"></div><script data-no-optimize="1" data-no-defer data-phast-no-defer data-wpmeteor-src="https://developcoaching.activehosted.com/f/embed.php?id=62" type="javascript/blocked" data-wpmeteor-type="text/javascript"  charset="utf-8"></script>				</div>
+				<div class="elementor-element elementor-element-6f09518a elementor-widget elementor-widget-text-editor" data-id="6f09518a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>© Copyright 2026 by Develop Coaching Ltd. All Rights Reserved. <a href="https://develop-coaching.com/privacy/">Privacy Policy </a> &#8211; <a href="https://develop-coaching.com/corporate-structure-notice/">Corporate Structure Notice</a></p>								</div>
+					</div>
+				</div>
+				</footer>
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v4.40 -->
+			<style id="ht-ctc-entry-animations">.ht_ctc_entry_animation{animation-duration:0.4s;animation-fill-mode:both;animation-delay:0s;animation-iteration-count:1;}			@keyframes ht_ctc_anim_corner {0% {opacity: 0;transform: scale(0);}100% {opacity: 1;transform: scale(1);}}.ht_ctc_an_entry_corner {animation-name: ht_ctc_anim_corner;animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);transform-origin: bottom var(--side, right);}
+			</style>						<div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  ht_ctc_entry_animation ht_ctc_an_entry_corner " id="ht-ctc-chat"  
+				style="display: none;  position: fixed; bottom: 15px; right: 15px;"   >
+								<div class="ht_ctc_style ht_ctc_chat_style">
+				<div  style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics ctc_s_2">
+	<p class="ctc-analytics ctc_cta ctc_cta_stick ht-ctc-cta  ht-ctc-cta-hover " style="padding: 0px 16px; line-height: 1.6; font-size: 15px; background-color: #25D366; color: #ffffff; border-radius:10px; margin:0 10px;  display: none; order: 0; ">WhatsApp us</p>
+	<svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px" viewBox="0 0 1024 1024">
+        <defs>
+        <path id="htwasqicona-chat" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"/>
+        </defs>
+        <linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001" y2="1025.023">
+            <stop offset="0" stop-color="#61fd7d"/>
+            <stop offset="1" stop-color="#2bb826"/>
+        </linearGradient>
+        <use xlink:href="#htwasqicona-chat" overflow="visible" style="fill: url(#htwasqiconb-chat)" fill="url(#htwasqiconb-chat)"/>
+        <g>
+            <path style="fill: #FFFFFF;" fill="#FFF" d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z"/>
+        </g>
+        </svg></div>
+				</div>
+			</div>
+							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;447488883753&quot;,&quot;pre_filled&quot;:&quot;&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:13589,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="c5bfbb4d9d"></span>
+						<div data-elementor-type="popup" data-elementor-id="4307" class="elementor elementor-4307 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;avoid_multiple_popups&quot;:&quot;yes&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-829b616 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="829b616" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b2f0486" data-id="b2f0486" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-25ad8ad elementor-widget__width-auto elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading" data-id="25ad8ad" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Subscribe To Our  Amazing Free Content Now</h2>				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-58196e7 e-flex e-con-boxed e-con e-parent" data-id="58196e7" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-5b97c90 elementor-widget elementor-widget-html" data-id="5b97c90" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<iframe
+  src="https://link.flow-build.com/widget/form/LrwamDnwkXRzgaIuSFn2"
+  style="width:100%;height:100%;border:none;border-radius:3px"
+  id="inline-LrwamDnwkXRzgaIuSFn2"
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Newsletter Subscribe Form - Daniel"
+  data-height="402"
+  data-layout-iframe-id="inline-LrwamDnwkXRzgaIuSFn2"
+  data-form-id="LrwamDnwkXRzgaIuSFn2"
+  title="Newsletter Subscribe Form - Daniel"
+></iframe>
+
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://link.flow-build.com/js/form_embed.js"></script>				</div>
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-dd76099 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="dd76099" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-462b0c2" data-id="462b0c2" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8a6fd8b elementor-widget elementor-widget-shortcode" data-id="8a6fd8b" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+							<div class="elementor-shortcode"><iframe
+  src="https://link.flow-build.com/widget/form/LrwamDnwkXRzgaIuSFn2"
+  style="width:100%;height:100%;border:none;border-radius:3px"
+  id="inline-LrwamDnwkXRzgaIuSFn2"
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Newsletter Subscribe Form - Daniel"
+  data-height="402"
+  data-layout-iframe-id="inline-LrwamDnwkXRzgaIuSFn2"
+  data-form-id="LrwamDnwkXRzgaIuSFn2"
+  title="Newsletter Subscribe Form - Daniel"
+></iframe>
+
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  data-wpmeteor-src="https://link.flow-build.com/js/form_embed.js"></script></div>
+						</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="5312" class="elementor elementor-5312 elementor-location-popup" data-elementor-settings="{&quot;prevent_scroll&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-5a082f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a082f4" data-element_type="section" data-e-type="section" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d677d2b" data-id="d677d2b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cfa4e43 elementor-widget__width-auto elementor-widget-tablet__width-inherit elementor-widget elementor-widget-nav-menu" data-id="cfa4e43" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;dropdown&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+								<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-cfa4e43" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9180"><a href="https://develop-coaching.com/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4236"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">How We Help</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5572"><a href="https://develop-coaching.com/courses/mastermind-course/" class="elementor-sub-item" tabindex="-1">Develop Mastermind</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="https://develop-coaching.com/courses/win-big-clients/" class="elementor-sub-item" tabindex="-1">Win Big Clients</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Trades</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="https://develop-coaching.com/" class="elementor-sub-item" tabindex="-1">Builders Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="https://develop-coaching.com/carpentry-business-coach/" class="elementor-sub-item" tabindex="-1">Carpentry Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="https://develop-coaching.com/decorating-business-coach/" class="elementor-sub-item" tabindex="-1">Decorating Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="https://develop-coaching.com/electrical-business-coach/" class="elementor-sub-item" tabindex="-1">Electrical Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="https://develop-coaching.com/groundwork-business-coach/" class="elementor-sub-item" tabindex="-1">Groundwork Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="https://develop-coaching.com/landscaping-business-coach/" class="elementor-sub-item" tabindex="-1">Landscaping Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="https://develop-coaching.com/plastering-business-coach/" class="elementor-sub-item" tabindex="-1">Plastering Business Coach</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="https://develop-coaching.com/plumbing-business-coach/" class="elementor-sub-item" tabindex="-1">Plumbing Business Coach</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16753"><a href="https://develop-coaching.com/5-pillars-free-trainings/" class="elementor-item" tabindex="-1">Free Trainings</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="https://develop-coaching.com/client-wins/" class="elementor-item" tabindex="-1">Client Wins</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="https://develop-coaching.com/about-greg-wilkes/" class="elementor-item" tabindex="-1">My Story</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="https://develop-coaching.com/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="https://develop-coaching.com/construction-podcast/" class="elementor-item" tabindex="-1">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="https://develop-coaching.com/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+						</div>
+				<div class="elementor-element elementor-element-5b62ffb elementor-align-right elementor-widget__width-auto elementor-tablet-align-left elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button" data-id="5b62ffb" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://www.develop-coaching.com/schedule-a-call/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SCHEDULE A CALL</span>
+					</span>
+					</a>
+								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript" >
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='jet-elements-css' href='https://develop-coaching.com/wp-content/plugins/jet-elements/assets/css/jet-elements.css?ver=2.8.0.2' media='all' />
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="hello-theme-frontend-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.0.1"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-webpack-runtime-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-frontend-modules-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jquery-ui-core-js" data-wpmeteor-src="https://develop-coaching.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.1.4","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"e_panel_promotions":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"landing-pages":true,"nested-elements":true,"e_atomic_elements":true,"atomic_widgets_should_enforce_capabilities":true,"editor_mcp":true,"e_bc_migrations":true,"e_editor_design_system_panel":true,"e_classes":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_variables_manager":true,"e_opt_in_v4_page":true,"e_opt_in_v4":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"e_pro_atomic_form":true,"mega-menu":true,"e_pro_variables":true,"e_pro_interactions":true},"urls":{"assets":"https:\/\/develop-coaching.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/develop-coaching.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/develop-coaching.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"89ba57b4e0","atomicFormsSendForm":"911935d802"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":13589,"title":"Get%20CITB%20Funding%20With%20Deb%20Madden%20%26%20Nathan%20Wilkins%20Transcript","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-frontend-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="smartmenus-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="e-sticky-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=4.1.2"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="__ytprefsfitvids__-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=14.2.6"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jet-tween-js-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/jet-elements/assets/js/lib/tweenjs/tweenjs.min.js?ver=2.0.2"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jet-elements-js-extra">
+var jetElements = {"ajaxUrl":"https://develop-coaching.com/wp-admin/admin-ajax.php","isMobile":"false","templateApiUrl":"https://develop-coaching.com/wp-json/jet-elements-api/v1/elementor-template","devMode":"false","mapboxToken":"","messages":{"invalidMail":"Please specify a valid e-mail"}};
+//# sourceURL=jet-elements-js-extra
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="jet-elements-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/jet-elements/assets/js/jet-elements.min.js?ver=2.8.0.2"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-pro-webpack-runtime-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.1.2"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="wp-hooks-js" data-wpmeteor-src="https://develop-coaching.com/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="wp-i18n-js" data-wpmeteor-src="https://develop-coaching.com/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/develop-coaching.com\/wp-admin\/admin-ajax.php","nonce":"4f5ddd5901","urls":{"assets":"https:\/\/develop-coaching.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/develop-coaching.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_GB","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/develop-coaching.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="elementor-pro-frontend-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.1.2"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  id="pro-elements-handlers-js" data-wpmeteor-src="https://develop-coaching.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.1.2"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://develop-coaching.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.1"}}
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="module" >
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://develop-coaching.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript" >
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '27070320');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+
+
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript"  async data-wpmeteor-src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer type="javascript/blocked" data-wpmeteor-type="text/javascript" >
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PXT2VCVFLW');
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- Page cached by LiteSpeed Cache 7.8.1 on 2026-07-10 04:11:06 -->

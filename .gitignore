@@ -1,7 +1,22 @@
 node_modules/
 .next/
 .env*
-export/reference/
+
+# export/reference/ is deliberately TRACKED, not ignored. It is the only input
+# build_site.py can rebuild www/ from, and it cannot be re-fetched once the live
+# WordPress host goes away at cutover. While it was ignored it lived on exactly
+# one laptop with no backup, and four category page/2 snapshots had already been
+# lost that way: they were captured and listed in export/pagination-urls.txt,
+# then vanished, so those pages 404'd until they were re-captured.
+
+# QA screenshots are regenerable from the built site, so these stay ignored.
+export/screenshots/
+
+# Large A/V stays out of the deploy on purpose: vercel.json redirects it to the
+# live host during the preview phase. NOTE these files are NOT safe anywhere
+# else either. About 2.8GB across 93 files, several over GitHub's 100MB
+# per-file hard limit, so git cannot hold them, and they cannot be re-fetched
+# after cutover. They need real object storage before then, which is the same
+# move vercel.json's own comment already calls for.
 www/wp-content/uploads/**/*.mp3
 www/wp-content/uploads/**/*.mp4
-export/screenshots/
