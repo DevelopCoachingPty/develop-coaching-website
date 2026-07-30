@@ -16,6 +16,15 @@ REF = "export/reference"
 OUT = "www"
 DOMAIN = "https://develop-coaching.com"
 
+# Public base of the dc-website-media Vercel Blob store (team develop-coaching,
+# region lhr1, store_GgdzvmzaZ1n7EO4I). The 93 podcast mp3s and testimonial mp4s
+# live here rather than in the deploy: ~2.4GB, and four of them are over
+# GitHub's 100MB per-file limit. Paths are mirrored 1:1, so
+# /wp-content/uploads/x is served from BLOB_BASE/wp-content/uploads/x and the
+# page markup needs no rewriting. Not a secret: this is a public store, and the
+# host is visible in every page that plays media.
+BLOB_BASE = "https://ggdzvmzaz1n7eo4i.public.blob.vercel-storage.com"
+
 # Regions of the HTML where absolute self-URLs must be preserved
 PRESERVE_PATTERNS = [
     re.compile(r'<link[^>]+rel="canonical"[^>]*>'),
@@ -161,10 +170,10 @@ def main():
             {"source": "/feed/podcast", "destination": "/feeds/podcast.xml"},
             {"source": "/feed/podcast/", "destination": "/feeds/podcast.xml"}
         ],
-        # PREVIEW PHASE ONLY: large A/V is excluded from the deploy and
-        # served from the live WordPress host. Before cutover these files
-        # must move to real storage and this block must be removed.
-        "_preview_av_redirects": True,
+        # Large A/V is excluded from the deploy (see .gitignore) and served
+        # from Vercel Blob instead. This no longer depends on the live
+        # WordPress host, so it survives cutover as-is.
+        "_av_redirects": True,
     }
     vercel["headers"] = [
         # noindex any *.vercel.app host so the copy is never indexed; the real
@@ -194,10 +203,10 @@ def main():
             ],
         },
     ]
-    if vercel.pop("_preview_av_redirects", False):
+    if vercel.pop("_av_redirects", False):
         vercel["redirects"].append({
             "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",
-            "destination": "https://develop-coaching.com/wp-content/uploads/:path",
+            "destination": f"{BLOB_BASE}/wp-content/uploads/:path",
             "permanent": False,
         })
     with open(os.path.join(OUT, "vercel.json"), "w") as f:

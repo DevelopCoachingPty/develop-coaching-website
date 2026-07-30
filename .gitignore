@@ -12,11 +12,14 @@ node_modules/
 # QA screenshots are regenerable from the built site, so these stay ignored.
 export/screenshots/
 
-# Large A/V stays out of the deploy on purpose: vercel.json redirects it to the
-# live host during the preview phase. NOTE these files are NOT safe anywhere
-# else either. About 2.8GB across 93 files, several over GitHub's 100MB
-# per-file hard limit, so git cannot hold them, and they cannot be re-fetched
-# after cutover. They need real object storage before then, which is the same
-# move vercel.json's own comment already calls for.
+# Large A/V stays out of the deploy and out of git: ~2.4GB across 93 files, and
+# four of them are over GitHub's 100MB per-file hard limit. They now live in the
+# dc-website-media Vercel Blob store (team develop-coaching, region lhr1,
+# public), and vercel.json redirects /wp-content/uploads/*.mp3|mp4 there with
+# paths mirrored 1:1. That no longer depends on the live WordPress host, so it
+# survives cutover. Blob is the copy of record for these; the local files under
+# www/ are a working archive, so if you re-encode or add one, upload it to the
+# store too or the site will keep serving the old version.
 www/wp-content/uploads/**/*.mp3
 www/wp-content/uploads/**/*.mp4
+.vercel
