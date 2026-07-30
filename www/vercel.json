@@ -3503,7 +3503,7 @@
   },
   {
    "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",
-   "destination": "https://develop-coaching.com/wp-content/uploads/:path",
+   "destination": "https://ggdzvmzaz1n7eo4i.public.blob.vercel-storage.com/wp-content/uploads/:path",
    "permanent": false
   }
  ],
