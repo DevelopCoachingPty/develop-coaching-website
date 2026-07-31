@@ -971,7 +971,12 @@
  },
  {
   "source": "/get-ahead-with-digital-marketing",
-  "destination": "/digital-marketing/",
+  "destination": "/digital-marketing-construction/",
+  "permanent": true
+ },
+ {
+  "source": "/digital-marketing",
+  "destination": "/digital-marketing-construction/",
   "permanent": true
  },
  {

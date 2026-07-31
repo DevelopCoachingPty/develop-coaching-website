@@ -7,6 +7,16 @@
    "/book-scale-session"
   ],
   [
+   "/new-show-up-like-a-boss-in-2024",
+   "/show-up-like-a-boss-in-2024/",
+   "/the-big-growth-plan"
+  ],
+  [
+   "/new-strategic-planning-for-2024",
+   "/strategic-planning-for-2024/",
+   "/5-pillars-free-trainings/plan"
+  ],
+  [
    "/new-the-outbound-marketing-machine",
    "/the-outbound-marketing-machine-2/",
    "/the-outbound-marketing-machine"
@@ -34,12 +44,12 @@
   [
    "/elementor-13178",
    "/new-show-up-like-a-boss-in-2024/",
-   "/show-up-like-a-boss-in-2024"
+   "/the-big-growth-plan"
   ],
   [
    "/elementor-13163",
    "/new-strategic-planning-for-2024/",
-   "/strategic-planning-for-2024"
+   "/5-pillars-free-trainings/plan"
   ],
   [
    "/elementor-13158",
@@ -197,6 +207,16 @@
    "/the-architect-attractor"
   ],
   [
+   "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2",
+   "/strategic-planning-for-2024/",
+   "/5-pillars-free-trainings/plan"
+  ],
+  [
+   "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2",
+   "/show-up-like-a-boss-in-2024/",
+   "/the-big-growth-plan"
+  ],
+  [
    "/blog/2024/05/02/10-ways-to-effectively-manage-a-construction-business",
    "/blog/2024/05/06/10-ways-to-effectively-manage-a-construction-business/",
    "/construction-project-management"
@@ -217,14 +237,39 @@
    "/5-steps-to-5-million-edinburgh-registration-2"
   ],
   [
+   "/build-your-future-2024",
+   "/5-steps-to-5-million/",
+   "/5-steps-to-5-million-2"
+  ],
+  [
    "/elementor-8835",
    "/build-your-future-2024/",
-   "/5-steps-to-5-million"
+   "/5-steps-to-5-million-2"
   ],
   [
    "/event-sample",
    "/build-your-future-event-2/",
    "/build-your-future"
+  ],
+  [
+   "/services/bespoke-training",
+   "/home",
+   "/"
+  ],
+  [
+   "/services/building-your-future",
+   "/home",
+   "/"
+  ],
+  [
+   "/services/win-blig-clients-webinar",
+   "/services/win-big-clients-webinar/",
+   "/win-big-clients-webinar"
+  ],
+  [
+   "/services/strategy-course",
+   "/services/mastermind-course/",
+   "/courses/mastermind-course"
   ],
   [
    "/develop-case-study",
@@ -234,7 +279,7 @@
   [
    "/services/purchase-book",
    "/services/building-your-future/",
-   "/home"
+   "/"
   ],
   [
    "/blog/new-kitchen-advice.html",
@@ -290,6 +335,11 @@
    "/blog/home-renovations-and-extensions-for-those-with-disabilities.html",
    "/home-renovations-extensions-disabilities/",
    "/home-renovation-extension-disabilities"
+  ],
+  [
+   "/how-to-get-a-client-to-leave-a-review",
+   "/get-client-to-leave-a-review/",
+   "/customer-reviews-for-construction-company"
   ]
  ],
  "dead": [
@@ -310,24 +360,8 @@
    "/blog/2024/02/07/construction-profit-margin-uk/"
   ],
   [
-   "/new-show-up-like-a-boss-in-2024",
-   "/show-up-like-a-boss-in-2024/"
-  ],
-  [
-   "/new-strategic-planning-for-2024",
-   "/strategic-planning-for-2024/"
-  ],
-  [
    "/elementor-13208",
    "/new-how-a-va-will-save-you-10-hours-a-week-and-make-you-more-%f0%9f%a4%91/"
-  ],
-  [
-   "/elementor-13178",
-   "/new-show-up-like-a-boss-in-2024/"
-  ],
-  [
-   "/elementor-13163",
-   "/new-strategic-planning-for-2024/"
   ],
   [
    "/blog/2023/01/24/how-to-grow-your-construction-company",
@@ -446,34 +480,6 @@
    "/blog/2024/02/07/how-to-grow-your-construction-profit-margin-uk/"
   ],
   [
-   "/finish-on-time-every-time-2",
-   "/win-big-clients/"
-  ],
-  [
-   "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2",
-   "/strategic-planning-for-2024/"
-  ],
-  [
-   "/landing-pages-template-8-3-2-2-2-2-2-2-2-2-2-2-2",
-   "/show-up-like-a-boss-in-2024/"
-  ],
-  [
-   "/build-your-future-2024",
-   "/5-steps-to-5-million/"
-  ],
-  [
-   "/elementor-8835",
-   "/build-your-future-2024/"
-  ],
-  [
-   "/services/bespoke-training",
-   "/home"
-  ],
-  [
-   "/services/building-your-future",
-   "/home"
-  ],
-  [
    "/your-guide-to-construction-business-systems-processes-copy",
    "/why-need-construction-business-coach/"
   ],
@@ -500,22 +506,6 @@
   [
    "/elementor-3066",
    "/15-minute-scale-session/"
-  ],
-  [
-   "/services/win-blig-clients-webinar",
-   "/services/win-big-clients-webinar/"
-  ],
-  [
-   "/get-ahead-with-digital-marketing",
-   "/digital-marketing/"
-  ],
-  [
-   "/services/strategy-course",
-   "/services/mastermind-course/"
-  ],
-  [
-   "/services/purchase-book",
-   "/services/building-your-future/"
   ],
   [
    "/design-and-technical-drawings",
@@ -952,10 +942,6 @@
   [
    "/how-to-understand-a-pl-report",
    "/profit-and-loss-report/"
-  ],
-  [
-   "/how-to-get-a-client-to-leave-a-review",
-   "/get-client-to-leave-a-review/"
   ]
  ]
 }
