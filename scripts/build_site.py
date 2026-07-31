@@ -40,6 +40,13 @@ WPMETEOR_BOOTSTRAP_RE = re.compile(
 PHAST_INLINE_RE = re.compile(
     r'<script[^>]*data-phast-params[^>]*>.*?</script>', re.S
 )
+NEWSLETTER_EMBED_RE = re.compile(
+    r'<iframe\b(?=[^>]*\bsrc=["\']https://link\.flow-build\.com/widget/form/'
+    r'LrwamDnwkXRzgaIuSFn2["\'])[^>]*>.*?</iframe>\s*'
+    r'<script\b(?=[^>]*\bsrc=["\']https://link\.flow-build\.com/js/'
+    r'form_embed\.js["\'])[^>]*>.*?</script>',
+    re.S | re.I,
+)
 
 
 def unblock_scripts(html: str) -> str:
@@ -57,6 +64,20 @@ def unblock_scripts(html: str) -> str:
 
     html = re.sub(r"<script[^>]*>", restore, html)
     return html
+
+
+def dedupe_newsletter_embed(html: str) -> str:
+    """Keep one newsletter form in the shared Elementor popup."""
+    seen = False
+
+    def keep_first(match):
+        nonlocal seen
+        if seen:
+            return ""
+        seen = True
+        return match.group(0)
+
+    return NEWSLETTER_EMBED_RE.sub(keep_first, html)
 
 
 # Injected into every page. On preview hosts (*.vercel.app) it switches off
@@ -136,6 +157,7 @@ HEAD_RE = re.compile(r"<head[^>]*>", re.I)
 
 def rewrite(html: str) -> str:
     html = unblock_scripts(html)
+    html = dedupe_newsletter_embed(html)
     html = STANDALONE_GA4_LOADER_RE.sub("", html)
     html = STANDALONE_GA4_CONFIG_RE.sub("", html)
     html = HEAD_RE.sub(
