@@ -3,11 +3,32 @@
 	<head><script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
   console.info('[preview] analytics disabled on this host');
 })();
+</script><script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
@@ -363,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<p><strong>How to Get Good Reviews</strong></p>
 <p>We’ve all been there; you carry out a job for a client, they’re over the moon, they sing your praises, and express how happy they are that they chose you to carry out the work required. You ask them for a review. “Of course,” they reply, “I would love to give you a review.”</p>
 <p>You give them all the details. A week passes&#8230;, no review…, you might even give them a gentle reminder…, still no review.</p>
-<p>There is no doubt about it, reviews are a very important thing to have for your business. In a world that is increasingly online, <a href="/get-client-to-leave-a-review">online reviews are becoming essential for a business</a>. We all rely on reviews to make purchasing decisions. When you’re planning a holiday, do you check TripAdvisor to see what reviews this or that hotel has, first?</p>
+<p>There is no doubt about it, reviews are a very important thing to have for your business. In a world that is increasingly online, <a href="/customer-reviews-for-construction-company/">online reviews are becoming essential for a business</a>. We all rely on reviews to make purchasing decisions. When you’re planning a holiday, do you check TripAdvisor to see what reviews this or that hotel has, first?</p>
 <p>Your clients are no different. With many rogue tradesmen on the loose, and lots of reports of bogus builders, clients are very wary of who they choose to carry out their project.</p>
 <p>One way in which they can verify whether the company they are choosing is trustworthy is by checking the online reviews.</p>
 <p><strong>In this article, I am going to discuss:</strong></p>
@@ -1318,14 +1339,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PXT2VCVFLW');
-</script>
+
 
 
 

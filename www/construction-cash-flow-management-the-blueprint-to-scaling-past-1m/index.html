@@ -3,11 +3,32 @@
 	<head><script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
   console.info('[preview] analytics disabled on this host');
 })();
+</script><script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
@@ -434,7 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Track retention separately. Forecast it as a future inflow at the correct date. Don&#8217;t rely on it for current operations.</p>
 <h3>Scaling Revenue Without Funding the Working Capital</h3>
 <p>Growth consumes cash before it generates it. When you take on a £1.2M project for the first time, you&#8217;re ordering materials and paying subcontractors before you&#8217;ve raised a single invoice. That gap between spending and receiving can run to £80k or £100k on a job of that size.</p>
-<p>If you scale revenue by 40% in a year without ensuring the cash is there to fund the increased working capital, you&#8217;ll break. Not because the work isn&#8217;t there. Because you can&#8217;t finance your own growth. It&#8217;s one of the most common failure points detailed in <a href="/7-mistakes-when-scaling-a-construction-business-past-1m/">7 Mistakes When Scaling a Construction Business Past £1M</a>.</p>
+<p>If you scale revenue by 40% in a year without ensuring the cash is there to fund the increased working capital, you&#8217;ll break. Not because the work isn&#8217;t there. Because you can&#8217;t finance your own growth. It&#8217;s one of the most common failure points detailed in <a href="/mistakes-when-scaling-a-construction-business/">7 Mistakes When Scaling a Construction Business Past £1M</a>.</p>
 <h3>Blurring Personal and Business Money</h3>
 <p>If you&#8217;re drawing from the business account without a clear salary or dividend structure, you don&#8217;t actually know what cash is available for the business. You think you do. But you don&#8217;t.</p>
 <p>Pay yourself a consistent monthly salary and treat it as a fixed cost in the forecast. When you take a dividend, it comes from retained profit, not from the working capital. These are two completely different pots. Mix them and your cash forecast becomes fiction. Decisions made on fictional data will cost you, usually at the worst possible moment.</p>
@@ -1348,14 +1369,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PXT2VCVFLW');
-</script>
+
 
 
 

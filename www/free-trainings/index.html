@@ -3,11 +3,32 @@
 	<head><script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
   console.info('[preview] analytics disabled on this host');
 })();
+</script><script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
@@ -661,7 +682,7 @@ Here's HOW.</a></h6>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-8e5fdac e-con-full e-flex e-con e-child" data-id="8e5fdac" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-		<a class="elementor-element elementor-element-9677bb0 e-con-full e-flex e-con e-child" data-id="9677bb0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}" href="/strategic-planning-for-2024/">
+		<a class="elementor-element elementor-element-9677bb0 e-con-full e-flex e-con e-child" data-id="9677bb0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/plan/">
 				<div class="elementor-element elementor-element-41a845c elementor-view-default elementor-widget elementor-widget-icon" data-id="41a845c" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
 							<div class="elementor-icon-wrapper">
 			<div class="elementor-icon">
@@ -671,9 +692,9 @@ Here's HOW.</a></h6>				</div>
 				</a>
 		<div class="elementor-element elementor-element-d5fabb2 e-con-full e-flex e-con e-child" data-id="d5fabb2" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 				<div class="elementor-element elementor-element-aa533b0 elementor-widget elementor-widget-heading" data-id="aa533b0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h1 class="elementor-heading-title elementor-size-default"><a href="/strategic-planning-for-2024/">Strategic Planning for 2024™</a></h1>				</div>
+					<h1 class="elementor-heading-title elementor-size-default"><a href="/5-pillars-free-trainings/plan/">Strategic Planning for 2024™</a></h1>				</div>
 				<div class="elementor-element elementor-element-5043645 elementor-widget elementor-widget-heading" data-id="5043645" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h6 class="elementor-heading-title elementor-size-default"><a href="/strategic-planning-for-2024/">Failing to plan is planning to fail. Let's get you super clear &amp; focused.</a></h6>				</div>
+					<h6 class="elementor-heading-title elementor-size-default"><a href="/5-pillars-free-trainings/plan/">Failing to plan is planning to fail. Let's get you super clear &amp; focused.</a></h6>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-24d8fe4 e-con-full e-flex e-con e-child" data-id="24d8fe4" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
@@ -693,7 +714,7 @@ Here's HOW.</a></h6>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-277dfa3 e-con-full e-flex e-con e-child" data-id="277dfa3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-		<a class="elementor-element elementor-element-f7d739a e-con-full e-flex e-con e-child" data-id="f7d739a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}" href="/show-up-like-a-boss-in-2024/">
+		<a class="elementor-element elementor-element-f7d739a e-con-full e-flex e-con e-child" data-id="f7d739a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}" href="/the-big-growth-plan/">
 				<div class="elementor-element elementor-element-10ce8d6 elementor-view-default elementor-widget elementor-widget-icon" data-id="10ce8d6" data-element_type="widget" data-e-type="widget" data-widget_type="icon.default">
 							<div class="elementor-icon-wrapper">
 			<div class="elementor-icon">
@@ -703,9 +724,9 @@ Here's HOW.</a></h6>				</div>
 				</a>
 		<div class="elementor-element elementor-element-d6e9d44 e-con-full e-flex e-con e-child" data-id="d6e9d44" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 				<div class="elementor-element elementor-element-78eaac2 elementor-widget elementor-widget-heading" data-id="78eaac2" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h1 class="elementor-heading-title elementor-size-default"><a href="/show-up-like-a-boss-in-2024/">Show Up Like A Boss in 2024™</a></h1>				</div>
+					<h1 class="elementor-heading-title elementor-size-default"><a href="/the-big-growth-plan/">Show Up Like A Boss in 2024™</a></h1>				</div>
 				<div class="elementor-element elementor-element-c93fdcc elementor-widget elementor-widget-heading" data-id="c93fdcc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h6 class="elementor-heading-title elementor-size-default"><a href="/show-up-like-a-boss-in-2024/">Failing to plan is planning to fail. Let's get you super clear &amp; focused this year</a></h6>				</div>
+					<h6 class="elementor-heading-title elementor-size-default"><a href="/the-big-growth-plan/">Failing to plan is planning to fail. Let's get you super clear &amp; focused this year</a></h6>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-7d80065 e-con-full e-flex e-con e-child" data-id="7d80065" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
@@ -1281,14 +1302,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PXT2VCVFLW');
-</script>
+
 
 
 

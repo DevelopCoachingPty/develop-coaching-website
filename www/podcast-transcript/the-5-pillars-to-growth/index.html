@@ -3,11 +3,32 @@
 	<head><script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
   console.info('[preview] analytics disabled on this host');
 })();
+</script><script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
@@ -831,14 +852,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PXT2VCVFLW');
-</script>
+
 
 
 

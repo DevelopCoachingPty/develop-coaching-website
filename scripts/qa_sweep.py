@@ -60,6 +60,10 @@ internal_404 = {}     # path -> [pages]
 
 def exists_local(path):
     p = urllib.parse.unquote(path.split("?")[0])
+    # Audio and video are intentionally excluded from Git and served by the
+    # Vercel Blob redirect emitted by build_site.py.
+    if p.startswith("/wp-content/uploads/") and p.lower().endswith((".mp3", ".mp4")):
+        return True
     return os.path.exists(os.path.join(OUT, p.lstrip("/")))
 
 for page in pages:

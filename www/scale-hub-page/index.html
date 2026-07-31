@@ -3,11 +3,32 @@
 	<head><script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
   console.info('[preview] analytics disabled on this host');
 })();
+</script><script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
@@ -980,7 +1001,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>Quality control frameworks</li>
                         <li>Digital tools implementation</li>
                     </ul>
-                    <a href="/scale/systems-processes/">Learn More →</a>
+                    <a href="/systems-and-processes-subcategory-page/">Learn More →</a>
                 </div>
                 
                 <div class="framework-item">
@@ -991,7 +1012,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>Delegation frameworks</li>
                         <li>Leadership development</li>
                     </ul>
-                    <a href="/scale/team-development/">Learn More →</a>
+                    <a href="/delegation-in-construction/">Learn More →</a>
                 </div>
                 
                 <div class="framework-item">
@@ -1002,7 +1023,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>Cash flow management</li>
                         <li>Financial reporting systems</li>
                     </ul>
-                    <a href="/scale/financial-growth/">Learn More →</a>
+                    <a href="/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/">Learn More →</a>
                 </div>
                 
                 <div class="framework-item">
@@ -1013,7 +1034,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>Business vision development</li>
                         <li>CEO mindset cultivation</li>
                     </ul>
-                    <a href="/scale/business-transformation/">Learn More →</a>
+                    <a href="/5-pillars-free-trainings/scale/">Learn More →</a>
                 </div>
             </div>
             
@@ -1048,7 +1069,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li>Implementation strategies that ensure team buy-in</li>
                             <li>Common systems implementation mistakes to avoid</li>
                         </ul>
-                        <a href="/how-to-implement-effective-construction-business-systems/" class="btn">Read the Full Article</a>
+                        <a href="/construction-business-systems/" class="btn">Read the Full Article</a>
                     </div>
                 </div>
             </div>
@@ -1095,7 +1116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <div class="view-all">
-                <a href="/scale/systems-processes/" class="btn">View All Systems &#038; Processes Resources</a>
+                <a href="/systems-and-processes-subcategory-page/" class="btn">View All Systems &#038; Processes Resources</a>
             </div>
         </div>
     </section>
@@ -1125,7 +1146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li>Creating accountability systems that actually work</li>
                             <li>Identifying which tasks to delegate first for maximum impact</li>
                         </ul>
-                        <a href="/build-a-self-running-team/" class="btn">Read the Full Article</a>
+                        <a href="/delegation-in-construction/" class="btn">Read the Full Article</a>
                     </div>
                 </div>
             </div>
@@ -1166,13 +1187,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <h3>Construction Recruitment Blueprint</h3>
                         <p>Download our step-by-step guide for finding and hiring the right people for your construction business.</p>
-                        <a href="/free-trainings/construction-recruitment-blueprint/" class="btn btn-secondary btn-small">Access Training</a>
+                        <a href="/how-to-recruit-for-your-construction-business-2/" class="btn btn-secondary btn-small">Access Training</a>
                     </div>
                 </div>
             </div>
             
             <div class="view-all">
-                <a href="/scale/team-development/" class="btn">View All Team Development Resources</a>
+                <a href="/delegation-in-construction/" class="btn">View All Team Development Resources</a>
             </div>
         </div>
     </section>
@@ -1568,14 +1589,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 
 
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
-<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PXT2VCVFLW');
-</script>
+
 
 
 

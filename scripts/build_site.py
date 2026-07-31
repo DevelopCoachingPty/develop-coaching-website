@@ -66,6 +66,11 @@ def unblock_scripts(html: str) -> str:
 PREVIEW_GUARD = """<script data-preview-guard>
 (function(){
   if (!location.hostname.endsWith('.vercel.app')) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')) {
+    console.info('[preview] analytics enabled for Tag Assistant');
+    return;
+  }
   window['ga-disable-G-PXT2VCVFLW'] = true;      // official GA4 opt-out flag
   window.fbq = window.fbq || function(){};        // swallow Meta Pixel calls
   window.clarity = window.clarity || function(){};
@@ -73,12 +78,71 @@ PREVIEW_GUARD = """<script data-preview-guard>
 })();
 </script>"""
 
+# The WordPress snapshot has the GTM noscript fallback but no GTM loader. It
+# also loads GA4 directly, which means the container's click/conversion tags
+# never run. Replace the standalone GA4 bootstrap with the real GTM container.
+# On Vercel preview hosts GTM only loads when Tag Assistant supplies its normal
+# preview parameters, so ordinary QA traffic still cannot pollute analytics.
+GTM_LOADER = """<script data-gtm-loader>
+(function(w,d,s,l,i){
+  var previewHost = location.hostname.endsWith('.vercel.app');
+  var params = new URLSearchParams(location.search);
+  var tagAssistant = params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth');
+  if (previewHost && !tagAssistant) {
+    console.info('[preview] GTM disabled unless Tag Assistant is connected');
+    return;
+  }
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4HBRD3');
+</script>"""
+
+STANDALONE_GA4_LOADER_RE = re.compile(
+    r'<script[^>]*src="https://www\.googletagmanager\.com/gtag/js\?id=G-PXT2VCVFLW"[^>]*></script>',
+    re.I,
+)
+STANDALONE_GA4_CONFIG_RE = re.compile(
+    r"<script[^>]*>\s*window\.dataLayer\s*=\s*window\.dataLayer\s*\|\|\s*\[\];"
+    r"\s*function gtag\(\)\{dataLayer\.push\(arguments\);\}"
+    r"\s*gtag\('js',\s*new Date\(\)\);"
+    r"\s*gtag\('config',\s*'G-PXT2VCVFLW'\);\s*</script>",
+    re.S | re.I,
+)
+
+INTERNAL_LINK_FIXES = {
+    "/7-mistakes-when-scaling-a-construction-business-past-1m": "/mistakes-when-scaling-a-construction-business/",
+    "/build-a-self-running-team": "/delegation-in-construction/",
+    "/free-trainings/construction-recruitment-blueprint": "/how-to-recruit-for-your-construction-business-2/",
+    "/from-trades-to-transformation-practical-growth-for-sme-construction-firms": "/construction-business-systems/",
+    "/get-client-to-leave-a-review": "/customer-reviews-for-construction-company/",
+    "/how-to-implement-effective-construction-business-systems": "/construction-business-systems/",
+    "/mastermind-course": "/courses/mastermind-course/",
+    "/podcast/digital-transformation-construction": "/podcast/systemise-your-business-with-james-brown/",
+    "/podcast/systems-implementation-case-study": "/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james/",
+    "/scale/business-transformation": "/5-pillars-free-trainings/scale/",
+    "/scale/financial-growth": "/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/",
+    "/scale/systems-processes": "/systems-and-processes-subcategory-page/",
+    "/scale/team-development": "/delegation-in-construction/",
+    "/show-up-like-a-boss-in-2024": "/the-big-growth-plan/",
+    "/strategic-planning-for-2024": "/5-pillars-free-trainings/plan/",
+}
+
 HEAD_RE = re.compile(r"<head[^>]*>", re.I)
 
 
 def rewrite(html: str) -> str:
     html = unblock_scripts(html)
-    html = HEAD_RE.sub(lambda m: m.group(0) + PREVIEW_GUARD, html, count=1)
+    html = STANDALONE_GA4_LOADER_RE.sub("", html)
+    html = STANDALONE_GA4_CONFIG_RE.sub("", html)
+    html = HEAD_RE.sub(
+        lambda m: m.group(0) + PREVIEW_GUARD + GTM_LOADER,
+        html,
+        count=1,
+    )
     preserved = {}
 
     def stash(m):
@@ -97,6 +161,10 @@ def rewrite(html: str) -> str:
     html = html.replace("https:\\/\\/develop-coaching.com\\/", "\\/")
     # URL-encoded form (share links, oembed params)
     html = html.replace("https%3A%2F%2Fdevelop-coaching.com%2F", "%2F")
+
+    for old_path, new_path in INTERNAL_LINK_FIXES.items():
+        html = html.replace(f'href="{old_path}"', f'href="{new_path}"')
+        html = html.replace(f'href="{old_path}/"', f'href="{new_path}"')
 
     for key, val in preserved.items():
         html = html.replace(key, val)
@@ -120,6 +188,11 @@ def main():
                 dirs[:] = []
                 continue
             for f in files:
+                rel_file = os.path.relpath(os.path.join(root, f), OUT)
+                # /search/ is a hand-built static tool, not a WordPress export.
+                # Preserve it when regenerating the snapshot-owned pages.
+                if rel_file == os.path.join("search", "index.html"):
+                    continue
                 if f == "index.html" or f == "vercel.json":
                     os.remove(os.path.join(root, f))
     os.makedirs(OUT, exist_ok=True)
