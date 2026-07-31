@@ -1573,5 +1573,80 @@
   "source": "/services/win-big-clients-webinar",
   "destination": "/win-big-clients-webinar/",
   "permanent": true
+ },
+ {
+  "source": "/7-mistakes-when-scaling-a-construction-business-past-1m",
+  "destination": "/mistakes-when-scaling-a-construction-business/",
+  "permanent": true
+ },
+ {
+  "source": "/build-a-self-running-team",
+  "destination": "/delegation-in-construction/",
+  "permanent": true
+ },
+ {
+  "source": "/free-trainings/construction-recruitment-blueprint",
+  "destination": "/how-to-recruit-for-your-construction-business-2/",
+  "permanent": true
+ },
+ {
+  "source": "/from-trades-to-transformation-practical-growth-for-sme-construction-firms",
+  "destination": "/construction-business-systems/",
+  "permanent": true
+ },
+ {
+  "source": "/get-client-to-leave-a-review",
+  "destination": "/customer-reviews-for-construction-company/",
+  "permanent": true
+ },
+ {
+  "source": "/how-to-implement-effective-construction-business-systems",
+  "destination": "/construction-business-systems/",
+  "permanent": true
+ },
+ {
+  "source": "/mastermind-course",
+  "destination": "/courses/mastermind-course/",
+  "permanent": true
+ },
+ {
+  "source": "/podcast/digital-transformation-construction",
+  "destination": "/podcast/systemise-your-business-with-james-brown/",
+  "permanent": true
+ },
+ {
+  "source": "/podcast/systems-implementation-case-study",
+  "destination": "/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james/",
+  "permanent": true
+ },
+ {
+  "source": "/scale/business-transformation",
+  "destination": "/5-pillars-free-trainings/scale/",
+  "permanent": true
+ },
+ {
+  "source": "/scale/financial-growth",
+  "destination": "/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/",
+  "permanent": true
+ },
+ {
+  "source": "/scale/systems-processes",
+  "destination": "/systems-and-processes-subcategory-page/",
+  "permanent": true
+ },
+ {
+  "source": "/scale/team-development",
+  "destination": "/delegation-in-construction/",
+  "permanent": true
+ },
+ {
+  "source": "/show-up-like-a-boss-in-2024",
+  "destination": "/the-big-growth-plan/",
+  "permanent": true
+ },
+ {
+  "source": "/strategic-planning-for-2024",
+  "destination": "/5-pillars-free-trainings/plan/",
+  "permanent": true
  }
 ]
