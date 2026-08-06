@@ -153,11 +153,75 @@ INTERNAL_LINK_FIXES = {
 }
 
 HEAD_RE = re.compile(r"<head[^>]*>", re.I)
+HEAD_CLOSE_RE = re.compile(r"</head>", re.I)
+
+# Injected last in <head> so it wins the cascade over Elementor's stylesheets.
+# Kept deliberately small: this is a targeted fix, not a place to accumulate
+# style overrides. Anything larger belongs in a proper stylesheet.
+CUSTOM_CSS = """<style data-dc-custom>
+/* Desktop header nav wrapped "Contact" onto a second line: the menu row needs
+   993px inside a 991px container, so it broke by 2px. Trimming the horizontal
+   padding recovers roughly 70px and keeps all nine items on one line without
+   touching font size, colours or spacing anywhere else. Scoped to >=1025px so
+   the mobile burger menu is completely unaffected. The live WordPress site has
+   the same wrap, so this is a fix rather than a migration regression.
+
+   Elementor sets this padding from a widget-scoped rule
+   (.elementor-4222 .elementor-element-b81d386 ... .elementor-item) whose
+   specificity beats any sane selector here, so !important is used rather than
+   duplicating those generated ids, which change whenever the header template
+   is re-saved. */
+@media (min-width: 1025px) {
+  .elementor-nav-menu--main .elementor-nav-menu {
+    flex-wrap: nowrap;
+  }
+  .elementor-nav-menu--main .elementor-nav-menu > li > a.elementor-item {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+  }
+}
+</style>"""
+
+# WordPress emits discovery <link> tags pointing at endpoints that do not exist
+# on a static build. Crawlers and embed tools follow them and collect 404s.
+# Removed deliberately narrowly: each pattern is pinned to the WordPress-only
+# rel/type, so canonical, hreflang, favicons, Open Graph, Twitter cards and
+# JSON-LD are untouched. The podcast feed is NOT affected: it is served from
+# /feed/podcast via a rewrite and has no discovery <link> tag here.
+#
+# All four already point at dead or irrelevant endpoints on the live site:
+#   /feed/ 410, /comments/feed/ 410, /xmlrpc.php 405, /wp-json/ not migrated.
+LEGACY_DISCOVERY_PATTERNS = [
+    ("RSS and comments feed links",
+     re.compile(r'\s*<link[^>]+type="application/rss\+xml"[^>]*/?>', re.I)),
+    ("WordPress REST API discovery",
+     re.compile(r'\s*<link[^>]+rel="https://api\.w\.org/"[^>]*/?>', re.I)),
+    # Per-post REST link: <link rel="alternate" type="application/json"
+    # href=".../wp-json/wp/v2/pages/4808" />. Pinned to a wp-json href so no
+    # other rel="alternate" link (hreflang, RSS handled above) can match.
+    ("WordPress REST per-page link",
+     re.compile(r'\s*<link[^>]+rel="alternate"[^>]*href="[^"]*/wp-json/wp/v2/[^"]*"[^>]*/?>', re.I)),
+    ("oEmbed discovery links",
+     re.compile(r'\s*<link[^>]+type="(?:application/json|text/xml)\+oembed"[^>]*/?>', re.I)),
+    ("EditURI / RSD (XML-RPC)",
+     re.compile(r'\s*<link[^>]+rel="EditURI"[^>]*/?>', re.I)),
+]
+
+discovery_removed = {}
+
+
+def strip_legacy_discovery(html: str) -> str:
+    for label, pat in LEGACY_DISCOVERY_PATTERNS:
+        html, n = pat.subn("", html)
+        if n:
+            discovery_removed[label] = discovery_removed.get(label, 0) + n
+    return html
 
 
 def rewrite(html: str) -> str:
     html = unblock_scripts(html)
     html = dedupe_newsletter_embed(html)
+    html = strip_legacy_discovery(html)
     html = STANDALONE_GA4_LOADER_RE.sub("", html)
     html = STANDALONE_GA4_CONFIG_RE.sub("", html)
     html = HEAD_RE.sub(
@@ -165,6 +229,7 @@ def rewrite(html: str) -> str:
         html,
         count=1,
     )
+    html = HEAD_CLOSE_RE.sub(lambda m: CUSTOM_CSS + m.group(0), html, count=1)
     preserved = {}
 
     def stash(m):
@@ -174,6 +239,19 @@ def rewrite(html: str) -> str:
 
     for pat in PRESERVE_PATTERNS:
         html = pat.sub(stash, html)
+
+    # The www. form has to be handled explicitly: a large number of internal
+    # links (including the "Schedule a Call" CTA on nearly every page) were
+    # authored as https://www.develop-coaching.com/... These would still
+    # resolve after cutover, but only via an extra www-to-apex redirect hop on
+    # the primary conversion path, and on the preview they send visitors to
+    # the live WordPress site instead of the copy being reviewed.
+    html = html.replace("https://www.develop-coaching.com/", "/")
+    html = html.replace("https://www.develop-coaching.com", "/")
+    html = html.replace("http://www.develop-coaching.com/", "/")
+    html = html.replace("//www.develop-coaching.com/", "/")
+    html = html.replace("https:\\/\\/www.develop-coaching.com\\/", "\\/")
+    html = html.replace("https%3A%2F%2Fwww.develop-coaching.com%2F", "%2F")
 
     html = html.replace(DOMAIN + "/", "/").replace(DOMAIN, "/")
     html = html.replace("http://develop-coaching.com/", "/")
@@ -308,6 +386,10 @@ def main():
         json.dump(vercel, f, indent=1)
 
     print(f"{count} pages written to {OUT}/, {len(redirects)} redirects in vercel.json")
+    if discovery_removed:
+        print("\nlegacy WordPress discovery tags removed:")
+        for label, n in sorted(discovery_removed.items()):
+            print(f"   {label:34} {n}")
 
 
 if __name__ == "__main__":

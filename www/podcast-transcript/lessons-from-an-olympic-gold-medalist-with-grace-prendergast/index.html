@@ -61,11 +61,6 @@
 <meta name="twitter:creator" content="@developcoaching" />
 <script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/podcast-transcript/lessons-from-an-olympic-gold-medalist-with-grace-prendergast/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://develop-coaching.com","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://develop-coaching.com/podcast-transcript/","name":"Podcast Transcript"}},{"@type":"ListItem","position":"3","item":{"@id":"https://develop-coaching.com/podcast-transcript/lessons-from-an-olympic-gold-medalist-with-grace-prendergast/","name":"Lessons From An Olympic Gold Medalist- with Grace Prendergast"}}]}]}</script>
 <!-- /Rank Math WordPress SEO plugin -->
-
-<link rel="alternate" type="application/rss+xml" title="Develop Coaching &raquo; Feed" href="https://develop-coaching.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Develop Coaching &raquo; Comments Feed" href="https://develop-coaching.com/comments/feed/" />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://develop-coaching.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelop-coaching.com%2Fpodcast-transcript%2Flessons-from-an-olympic-gold-medalist-with-grace-prendergast%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://develop-coaching.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevelop-coaching.com%2Fpodcast-transcript%2Flessons-from-an-olympic-gold-medalist-with-grace-prendergast%2F&#038;format=xml" />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -153,7 +148,6 @@ var _EPYT_ = {"ajaxurl":"/wp-admin/admin-ajax.php","security":"891104f1e0","gall
 //# sourceURL=__ytprefs__-js-extra
 </script>
 <script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript"  id="__ytprefs__-js" src="/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.2.6"></script>
-<link rel="https://api.w.org/" href="/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://develop-coaching.com/wp-json/wp/v2/podcast-transcript/8429" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 7.0.1" />
 <link rel='shortlink' href='/?p=8429' />
 <meta name="cdp-version" content="1.5.4" /><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC9kZXZlbG9wLWNvYWNoaW5nLmNvbT90aS1vbmxpbmUtdXNlcnMtZ29vZ2xlPTEmYW1wO3A9JTJGcG9kY2FzdC10cmFuc2NyaXB0JTJGbGVzc29ucy1mcm9tLWFuLW9seW1waWMtZ29sZC1tZWRhbGlzdC13aXRoLWdyYWNlLXByZW5kZXJnYXN0JTJGJTNGcGhhc3QlM0QtcGhhc3QlMjZhbXAlM0Jhb19ub3B0aW1pemUlM0QxJmFtcDtfd3Bub25jZT1hOGEwZDU1ODVmIn0=" />		<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
@@ -220,7 +214,29 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 .elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date {display:none !important;}
 
 </style>
-</head>
+<style data-dc-custom>
+/* Desktop header nav wrapped "Contact" onto a second line: the menu row needs
+   993px inside a 991px container, so it broke by 2px. Trimming the horizontal
+   padding recovers roughly 70px and keeps all nine items on one line without
+   touching font size, colours or spacing anywhere else. Scoped to >=1025px so
+   the mobile burger menu is completely unaffected. The live WordPress site has
+   the same wrap, so this is a fix rather than a migration regression.
+
+   Elementor sets this padding from a widget-scoped rule
+   (.elementor-4222 .elementor-element-b81d386 ... .elementor-item) whose
+   specificity beats any sane selector here, so !important is used rather than
+   duplicating those generated ids, which change whenever the header template
+   is re-saved. */
+@media (min-width: 1025px) {
+  .elementor-nav-menu--main .elementor-nav-menu {
+    flex-wrap: nowrap;
+  }
+  .elementor-nav-menu--main .elementor-nav-menu > li > a.elementor-item {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+  }
+}
+</style></head>
 <body class="wp-singular podcast-transcript-template-default single single-podcast-transcript postid-8429 wp-custom-logo wp-theme-hello-elementor elementor-default elementor-kit-4211 elementor-page-5461">
 
 <!-- Google Tag Manager (noscript) -->
@@ -311,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>			</nav>
 						</div>
 				<div class="elementor-element elementor-element-7804adf elementor-align-right elementor-widget__width-auto elementor-tablet-align-center elementor-widget-tablet__width-initial elementor-hidden-mobile elementor-hidden-tablet elementor-widget elementor-widget-button" data-id="7804adf" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://www.develop-coaching.com/schedule-a-call/">
+										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/schedule-a-call/">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">SCHEDULE A CALL</span>
 					</span>
@@ -807,7 +823,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>			</nav>
 						</div>
 				<div class="elementor-element elementor-element-5b62ffb elementor-align-right elementor-widget__width-auto elementor-tablet-align-left elementor-widget-tablet__width-inherit elementor-widget elementor-widget-button" data-id="5b62ffb" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://www.develop-coaching.com/schedule-a-call/">
+										<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="/schedule-a-call/">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">SCHEDULE A CALL</span>
 					</span>

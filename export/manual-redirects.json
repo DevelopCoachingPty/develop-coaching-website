@@ -1653,5 +1653,10 @@
   "source": "/strategic-planning-for-2024",
   "destination": "/5-pillars-free-trainings/plan/",
   "permanent": true
+ },
+ {
+  "source": "/services/win-big-clients",
+  "destination": "/courses/win-big-clients/",
+  "permanent": true
  }
 ]
