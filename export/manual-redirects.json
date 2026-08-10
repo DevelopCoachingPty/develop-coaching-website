@@ -1658,5 +1658,10 @@
   "source": "/services/win-big-clients",
   "destination": "/courses/win-big-clients/",
   "permanent": true
+ },
+ {
+  "source": "/trades",
+  "destination": "/trades-pipeline-diagnostic/",
+  "permanent": true
  }
 ]
