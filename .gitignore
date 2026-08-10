@@ -23,3 +23,6 @@ export/screenshots/
 www/wp-content/uploads/**/*.mp3
 www/wp-content/uploads/**/*.mp4
 .vercel
+
+# Large video also lives in Blob, not Git (GitHub rejects >100MB)
+www/wp-content/uploads/**/*.mov

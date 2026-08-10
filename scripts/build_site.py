@@ -378,7 +378,7 @@ def main():
     ]
     if vercel.pop("_av_redirects", False):
         vercel["redirects"].append({
-            "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4))",
+            "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4|mov))",
             "destination": f"{BLOB_BASE}/wp-content/uploads/:path",
             "permanent": False,
         })
