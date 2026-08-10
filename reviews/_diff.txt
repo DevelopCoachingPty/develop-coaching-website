@@ -1,0 +1,169 @@
+# Review scope: develop-coaching.com WordPress-to-Vercel site, session of 2026-08-10
+# The site went live on Vercel today. These are the hand-written code changes.
+# Excluded from this diff (bulk, mechanical, verified separately):
+#  - 366 HTML pages: removal of a dead ActiveCampaign <script> + empty <div>
+#  - 14 HTML pages: relative -> absolute URL inside data-elementor-lightbox
+#  - www/5-profit-leaks-workshop/index.html: replaced with the current page from WordPress
+#  - vendored Elementor JS/webpack chunks resynced from WordPress
+
+===== scripts/build_site.py =====
+diff --git a/scripts/build_site.py b/scripts/build_site.py
+index 17c5522..e837e7c 100644
+--- a/scripts/build_site.py
++++ b/scripts/build_site.py
+@@ -66,6 +66,25 @@ def unblock_scripts(html: str) -> str:
+     return html
+ 
+ 
++# The ActiveCampaign account has been closed for years: every
++# developcoaching.activehosted.com/f/embed.php request answers 402 and the
++# account URL redirects to ActiveCampaign's win-back page. So none of these
++# embeds have rendered anything in a long time, and 361 of the 366 sit inside
++# widgets hidden at every breakpoint anyway. Each one still costs a blocking
++# request to a dead third-party host on page load, so drop the script and the
++# container it would have populated.
++DEAD_AC_EMBED_RE = re.compile(
++    r'(?:<div class="_form_\d+"\s*></div>\s*)?'
++    r'<script\b[^>]*\bsrc=["\']https://developcoaching\.activehosted\.com/'
++    r'f/embed\.php\?id=\d+["\'][^>]*>\s*</script>',
++    re.S | re.I,
++)
++
++
++def strip_dead_activecampaign(html: str) -> str:
++    return DEAD_AC_EMBED_RE.sub("", html)
++
++
+ def dedupe_newsletter_embed(html: str) -> str:
+     """Keep one newsletter form in the shared Elementor popup."""
+     seen = False
+@@ -220,6 +239,7 @@ def strip_legacy_discovery(html: str) -> str:
+ 
+ def rewrite(html: str) -> str:
+     html = unblock_scripts(html)
++    html = strip_dead_activecampaign(html)
+     html = dedupe_newsletter_embed(html)
+     html = strip_legacy_discovery(html)
+     html = STANDALONE_GA4_LOADER_RE.sub("", html)
+@@ -268,9 +288,31 @@ def rewrite(html: str) -> str:
+ 
+     for key, val in preserved.items():
+         html = html.replace(key, val)
++
++    html = absolutise_lightbox_urls(html)
+     return html
+ 
+ 
++# Elementor 4.2.0 added a guard to Lightbox.showModal:
++#
++#     showModal(e){ if (e.url && !e.url.startsWith("http")) return; ... }
++#
++# so a lightbox whose url is site-relative now silently does nothing when
++# clicked. The URL rewriting above makes every internal URL relative, which
++# is right everywhere else but breaks every click-to-play video. Put the
++# absolute form back inside data-elementor-lightbox attributes only.
++LIGHTBOX_URL_RE = re.compile(
++    r'(data-elementor-lightbox="[^"]*?&quot;url&quot;:&quot;)(\\/[^&]*?)(&quot;)'
++)
++
++
++def absolutise_lightbox_urls(html: str) -> str:
++    def fix(m):
++        return m.group(1) + "https:\\/\\/develop-coaching.com" + m.group(2) + m.group(3)
++
++    return LIGHTBOX_URL_RE.sub(fix, html)
++
++
+ def out_path(fname: str) -> str:
+     stem = fname[:-5]  # drop .html
+     if stem == "__home":
+
+===== www/vercel.json (redirect rules) =====
+diff --git a/www/vercel.json b/www/vercel.json
+index 29bbcc4..19359a3 100644
+--- a/www/vercel.json
++++ b/www/vercel.json
+@@ -1,6 +1,11 @@
+ {
+  "trailingSlash": true,
+  "redirects": [
++  {
++   "source": "/5-profit-leaks-workshop.html",
++   "destination": "/5-profit-leaks-workshop/",
++   "permanent": true
++  },
+   {
+    "source": "/2019/06/24",
+    "destination": "/",
+@@ -3685,6 +3690,36 @@
+    "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4|mov))",
+    "destination": "https://ggdzvmzaz1n7eo4i.public.blob.vercel-storage.com/wp-content/uploads/:path",
+    "permanent": false
++  },
++  {
++   "source": "/10795",
++   "destination": "/10795-2/",
++   "permanent": true
++  },
++  {
++   "source": "/10795/",
++   "destination": "/10795-2/",
++   "permanent": true
++  },
++  {
++   "source": "/before-your-scale-session",
++   "destination": "/before-your-scale-session-2/",
++   "permanent": true
++  },
++  {
++   "source": "/before-your-scale-session/",
++   "destination": "/before-your-scale-session-2/",
++   "permanent": true
++  },
++  {
++   "source": "/the-big",
++   "destination": "/the-big-5/",
++   "permanent": true
++  },
++  {
++   "source": "/the-big/",
++   "destination": "/the-big-5/",
++   "permanent": true
+   }
+  ],
+  "rewrites": [
+@@ -3739,4 +3774,4 @@
+    ]
+   }
+  ]
+-}
+\ No newline at end of file
++}
+
+===== export/manual-redirects.json =====
+diff --git a/export/manual-redirects.json b/export/manual-redirects.json
+index 88d4d07..2b9867b 100644
+--- a/export/manual-redirects.json
++++ b/export/manual-redirects.json
+@@ -1663,5 +1663,20 @@
+   "source": "/trades",
+   "destination": "/trades-pipeline-diagnostic/",
+   "permanent": true
++ },
++ {
++  "source": "/10795",
++  "destination": "/10795-2/",
++  "permanent": true
++ },
++ {
++  "source": "/before-your-scale-session",
++  "destination": "/before-your-scale-session-2/",
++  "permanent": true
++ },
++ {
++  "source": "/the-big",
++  "destination": "/the-big-5/",
++  "permanent": true
+  }
+ ]
+\ No newline at end of file

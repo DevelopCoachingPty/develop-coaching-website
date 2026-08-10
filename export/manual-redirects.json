@@ -1678,5 +1678,10 @@
   "source": "/the-big",
   "destination": "/the-big-5/",
   "permanent": true
+ },
+ {
+  "source": "/5-profit-leaks-workshop.html",
+  "destination": "/5-profit-leaks-workshop/",
+  "permanent": true
  }
 ]

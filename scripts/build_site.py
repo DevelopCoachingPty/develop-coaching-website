@@ -73,9 +73,12 @@ def unblock_scripts(html: str) -> str:
 # widgets hidden at every breakpoint anyway. Each one still costs a blocking
 # request to a dead third-party host on page load, so drop the script and the
 # container it would have populated.
+# \bsrc would also match data-src, so a lazily-loaded script that merely
+# mentions the URL could be deleted wholesale. Require real whitespace before
+# the attribute so only a genuine src= matches.
 DEAD_AC_EMBED_RE = re.compile(
     r'(?:<div class="_form_\d+"\s*></div>\s*)?'
-    r'<script\b[^>]*\bsrc=["\']https://developcoaching\.activehosted\.com/'
+    r'<script\b[^>]*\ssrc=["\']https://developcoaching\.activehosted\.com/'
     r'f/embed\.php\?id=\d+["\'][^>]*>\s*</script>',
     re.S | re.I,
 )
@@ -301,8 +304,14 @@ def rewrite(html: str) -> str:
 # clicked. The URL rewriting above makes every internal URL relative, which
 # is right everywhere else but breaks every click-to-play video. Put the
 # absolute form back inside data-elementor-lightbox attributes only.
+# Only a genuine site-relative URL should be absolutised: (?!\\/) skips the
+# protocol-relative \/\/host\/path form, which is already absolute and would be
+# corrupted by prefixing the domain. Matching up to &quot; rather than
+# excluding every & lets URLs carrying &amp; query separators through too.
 LIGHTBOX_URL_RE = re.compile(
-    r'(data-elementor-lightbox="[^"]*?&quot;url&quot;:&quot;)(\\/[^&]*?)(&quot;)'
+    r'(data-elementor-lightbox="[^"]*?&quot;url&quot;:&quot;)'
+    r'(\\/(?!\\/)(?:(?!&quot;).)*?)'
+    r'(&quot;)'
 )
 
 
