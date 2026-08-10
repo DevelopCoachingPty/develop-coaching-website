@@ -268,7 +268,29 @@ def rewrite(html: str) -> str:
 
     for key, val in preserved.items():
         html = html.replace(key, val)
+
+    html = absolutise_lightbox_urls(html)
     return html
+
+
+# Elementor 4.2.0 added a guard to Lightbox.showModal:
+#
+#     showModal(e){ if (e.url && !e.url.startsWith("http")) return; ... }
+#
+# so a lightbox whose url is site-relative now silently does nothing when
+# clicked. The URL rewriting above makes every internal URL relative, which
+# is right everywhere else but breaks every click-to-play video. Put the
+# absolute form back inside data-elementor-lightbox attributes only.
+LIGHTBOX_URL_RE = re.compile(
+    r'(data-elementor-lightbox="[^"]*?&quot;url&quot;:&quot;)(\\/[^&]*?)(&quot;)'
+)
+
+
+def absolutise_lightbox_urls(html: str) -> str:
+    def fix(m):
+        return m.group(1) + "https:\\/\\/develop-coaching.com" + m.group(2) + m.group(3)
+
+    return LIGHTBOX_URL_RE.sub(fix, html)
 
 
 def out_path(fname: str) -> str:
