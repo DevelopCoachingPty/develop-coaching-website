@@ -3685,6 +3685,36 @@
    "source": "/wp-content/uploads/:path(.*\\.(?:mp3|mp4|mov))",
    "destination": "https://ggdzvmzaz1n7eo4i.public.blob.vercel-storage.com/wp-content/uploads/:path",
    "permanent": false
+  },
+  {
+   "source": "/10795",
+   "destination": "/10795-2/",
+   "permanent": true
+  },
+  {
+   "source": "/10795/",
+   "destination": "/10795-2/",
+   "permanent": true
+  },
+  {
+   "source": "/before-your-scale-session",
+   "destination": "/before-your-scale-session-2/",
+   "permanent": true
+  },
+  {
+   "source": "/before-your-scale-session/",
+   "destination": "/before-your-scale-session-2/",
+   "permanent": true
+  },
+  {
+   "source": "/the-big",
+   "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/the-big/",
+   "destination": "/the-big-5/",
+   "permanent": true
   }
  ],
  "rewrites": [
