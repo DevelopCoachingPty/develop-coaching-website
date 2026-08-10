@@ -66,6 +66,25 @@ def unblock_scripts(html: str) -> str:
     return html
 
 
+# The ActiveCampaign account has been closed for years: every
+# developcoaching.activehosted.com/f/embed.php request answers 402 and the
+# account URL redirects to ActiveCampaign's win-back page. So none of these
+# embeds have rendered anything in a long time, and 361 of the 366 sit inside
+# widgets hidden at every breakpoint anyway. Each one still costs a blocking
+# request to a dead third-party host on page load, so drop the script and the
+# container it would have populated.
+DEAD_AC_EMBED_RE = re.compile(
+    r'(?:<div class="_form_\d+"\s*></div>\s*)?'
+    r'<script\b[^>]*\bsrc=["\']https://developcoaching\.activehosted\.com/'
+    r'f/embed\.php\?id=\d+["\'][^>]*>\s*</script>',
+    re.S | re.I,
+)
+
+
+def strip_dead_activecampaign(html: str) -> str:
+    return DEAD_AC_EMBED_RE.sub("", html)
+
+
 def dedupe_newsletter_embed(html: str) -> str:
     """Keep one newsletter form in the shared Elementor popup."""
     seen = False
@@ -220,6 +239,7 @@ def strip_legacy_discovery(html: str) -> str:
 
 def rewrite(html: str) -> str:
     html = unblock_scripts(html)
+    html = strip_dead_activecampaign(html)
     html = dedupe_newsletter_embed(html)
     html = strip_legacy_discovery(html)
     html = STANDALONE_GA4_LOADER_RE.sub("", html)
