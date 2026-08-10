@@ -2,6 +2,11 @@
  "trailingSlash": true,
  "redirects": [
   {
+   "source": "/5-profit-leaks-workshop.html",
+   "destination": "/5-profit-leaks-workshop/",
+   "permanent": true
+  },
+  {
    "source": "/2019/06/24",
    "destination": "/",
    "permanent": true
