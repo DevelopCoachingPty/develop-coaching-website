@@ -1683,5 +1683,10 @@
   "source": "/5-profit-leaks-workshop.html",
   "destination": "/5-profit-leaks-workshop/",
   "permanent": true
+ },
+ {
+  "source": "/5-profit-leaks-workshop-thank-you.html",
+  "destination": "/5-profit-leaks-workshop-thank-you/",
+  "permanent": true
  }
 ]
