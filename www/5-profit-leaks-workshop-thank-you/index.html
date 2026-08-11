@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In | The 5 Profit Leaks | Develop Coaching</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- LIVE at develop-coaching.com/ai-tools-workshop-thank-you.html. Fires Meta Purchase (£45). Stripe link redirect must point here. -->
+    <!-- ZOOM_LINK_DELIVERY_TBD: confirm whether joining details come from GHL or Stripe receipt email before launch. -->
+    <!-- CREDIT_FULFILMENT_MECHANIC_TBD: confirm how the £45 live-attendance credit is fulfilled (Stripe refund after attendance vs voucher) before Email 1 goes out. -->
+
+    <style>
+        :root {
+            --yellow: #fdce36;
+            --orange: #fbaa35;
+            --blue: #0069b1;
+            --grey: #414042;
+            --dark-grey: #2a2a2a;
+            --light-grey: #f5f5f5;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: var(--grey);
+            color: var(--white);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-grey) 0%, var(--grey) 100%);
+            padding: 60px 20px 90px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(253,206,54,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(253,206,54,0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        .hero-content { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+        .checkmark-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: var(--yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out;
+        }
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .checkmark {
+            width: 50px;
+            height: 50px;
+            stroke: var(--grey);
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawCheck 0.6s ease-out 0.3s forwards;
+        }
+        @keyframes drawCheck { to { stroke-dashoffset: 0; } }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+        .hero h1 span { color: var(--yellow); }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.88);
+        }
+
+        /* Details card */
+        .details-section {
+            padding: 0 20px 20px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+        .details-card {
+            max-width: 620px;
+            margin: 0 auto;
+            background: var(--white);
+            color: var(--grey);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .details-card h2 {
+            color: var(--grey);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .detail-item {
+            background: var(--light-grey);
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+        .detail-item h4 {
+            color: var(--blue);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .detail-item p { font-weight: 600; }
+        .credit-banner {
+            margin-top: 25px;
+            background: var(--yellow);
+            color: var(--grey);
+            border-radius: 10px;
+            padding: 18px 22px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Next steps */
+        .steps-section { padding: 60px 20px; }
+        .steps-content { max-width: 620px; margin: 0 auto; }
+        .steps-content h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .steps-content h2 span { color: var(--yellow); }
+        .step {
+            display: flex;
+            gap: 20px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 18px;
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            background: var(--yellow);
+            color: var(--grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        .step h3 { font-size: 1.15rem; margin-bottom: 6px; color: var(--yellow); }
+        .step p { color: rgba(255,255,255,0.88); line-height: 1.6; }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+        footer a { color: var(--yellow); text-decoration: none; }
+        footer p { margin-bottom: 8px; }
+
+        @media (max-width: 500px) {
+            .details-grid { grid-template-columns: 1fr; }
+            .details-card { padding: 30px 24px; }
+        }
+    </style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EX5H3P27NP');
+  // GA4 purchase, gated on the Stripe session_id exactly like the Meta Purchase event.
+  // Without the gate, any direct hit or bookmark would log a fake sale in GA4 too.
+  (function () {
+    var sid = new URLSearchParams(window.location.search).get('session_id');
+    if (sid) {
+      gtag('event', 'purchase', {
+        transaction_id: sid,
+        value: 45.00,
+        currency: 'GBP',
+        items: [{item_id: 'profit-leaks-aug-2026', item_name: '5 Profit Leaks Workshop Ticket', price: 45.00, quantity: 1}]
+      });
+    }
+  })();
+</script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '260128381862353');
+fbq('track', 'PageView');
+// Only fire Purchase for genuine buyers redirected from Stripe (Stripe appends ?session_id=cs_... on the redirect).
+// Prevents phantom conversions from direct hits, bookmarks, back-button, previews and bots.
+if (new URLSearchParams(window.location.search).get('session_id')) {
+  fbq('track', 'Purchase', {value: 45.00, currency: 'GBP', content_name: '5 Profit Leaks Workshop Ticket'});
+}
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="checkmark-container">
+            <svg class="checkmark" viewBox="0 0 52 52"><path d="M14 27 L 22 35 L 38 17"/></svg>
+        </div>
+        <h1>You're In. <span>See You on the 13th.</span></h1>
+        <p class="hero-subtitle">Your spot at The 5 Profit Leaks workshop is confirmed.</p>
+    </div>
+</section>
+
+<!-- Details card -->
+<section class="details-section">
+    <div class="details-card">
+        <h2>Workshop Details</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <h4>Date</h4>
+                <p>Thursday 13 August 2026</p>
+            </div>
+            <div class="detail-item">
+                <h4>Time</h4>
+                <p>9.30am UK time</p>
+            </div>
+            <div class="detail-item">
+                <h4>Format</h4>
+                <p>Live online</p>
+            </div>
+            <div class="detail-item">
+                <h4>Duration</h4>
+                <p>Roughly one hour</p>
+            </div>
+        </div>
+        <div class="credit-banner">
+            Your ticket includes the live session, the replay, and a bonus Scale Session call. The replay lands in your inbox after the workshop, so if a job overruns on the day you have not lost anything.
+        </div>
+    </div>
+</section>
+
+<!-- What happens next -->
+<section class="steps-section">
+    <div class="steps-content">
+        <h2>What Happens <span>Next</span></h2>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div>
+                <h3>Check your inbox</h3>
+                <p>Your receipt and joining details are on their way to the email address you registered with. If nothing lands within 15 minutes, check spam, then email <a href="mailto:hello@develop-coaching.com" style="color: var(--yellow);">hello@develop-coaching.com</a> and we'll sort it.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div>
+                <h3>Block out the morning</h3>
+                <p>Thursday 13 August, 9.30am UK time, roughly one hour. Put it in the diary now. Live is where you can ask about your own numbers, but the replay is yours either way.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div>
+                <h3>Bring your last three jobs</h3>
+                <p>We go through all five leaks with real numbers. Have your last three finished jobs to hand, even rough figures, and you will be able to check each leak against your own work as we go.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Questions before the day? Email <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a></p>
+    <p>© 2026 Develop Coaching. All rights reserved. | <a href="https://develop-coaching.com">develop-coaching.com</a></p>
+</footer>
+
+</body>
+</html>
