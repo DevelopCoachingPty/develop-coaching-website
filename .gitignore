@@ -26,3 +26,6 @@ www/wp-content/uploads/**/*.mp4
 
 # Large video also lives in Blob, not Git (GitHub rejects >100MB)
 www/wp-content/uploads/**/*.mov
+
+# Python bytecode from scripts/
+__pycache__/
