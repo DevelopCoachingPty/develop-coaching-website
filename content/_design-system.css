@@ -1,0 +1,624 @@
+/* Develop Coaching page design system.
+ *
+ * The site is an Elementor export, so everything here is scoped under
+ * .dc-page and resets aggressively: the theme's global CSS is still loaded for
+ * the header and footer and will otherwise bleed into these sections.
+ *
+ * The look is borrowed from the documents builders already read all day:
+ * drawings, spec sheets and site notices. Mono labels act as drawing
+ * references, rules behave like dimension lines, and the yellow is used the
+ * way hi-vis is used on site, sparingly and only where attention must go.
+ */
+
+.dc-page {
+  --ink: #16181a;
+  --ink-soft: #23262a;
+  --charcoal: #414042;
+  --paper: #f6f4f0;
+  --paper-warm: #efebe4;
+  --blue: #0069b1;
+  --blue-deep: #004f86;
+  --orange: #fbaa35;
+  --yellow: #fdce36;
+  --line: #d8d4cc;
+  --line-dark: rgba(255, 255, 255, 0.14);
+
+  --display: "Archivo", "Helvetica Neue", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --body: "Source Sans 3", "Source Sans Pro", sans-serif;
+
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --measure: 68ch;
+
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.2rem);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+.dc-page *,
+.dc-page *::before,
+.dc-page *::after {
+  box-sizing: border-box;
+}
+
+.dc-page p,
+.dc-page ul,
+.dc-page ol,
+.dc-page h1,
+.dc-page h2,
+.dc-page h3,
+.dc-page h4,
+.dc-page figure {
+  margin: 0;
+}
+
+.dc-page ul,
+.dc-page ol {
+  padding: 0;
+  list-style: none;
+}
+
+.dc-page a {
+  color: inherit;
+}
+
+.dc-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- structure ---------- */
+
+.dc-section {
+  padding: clamp(3.5rem, 9vw, 7.5rem) var(--gutter);
+  position: relative;
+}
+
+.dc-wrap {
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.dc-narrow {
+  max-width: 780px;
+}
+
+.dc-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Faint setting-out grid, the way a drawing sheet is gridded. */
+.dc-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+}
+
+.dc-dark > * {
+  position: relative;
+}
+
+.dc-tint {
+  background: var(--paper-warm);
+}
+
+/* ---------- type ---------- */
+
+.dc-page h1,
+.dc-page h2,
+.dc-page h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.dc-h1 {
+  font-size: clamp(2.6rem, 1.5rem + 5.4vw, 5.6rem);
+  text-transform: uppercase;
+}
+
+.dc-h2 {
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.4rem);
+  text-transform: uppercase;
+}
+
+.dc-h3 {
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.dc-lead {
+  font-size: clamp(1.15rem, 1.02rem + 0.6vw, 1.45rem);
+  line-height: 1.5;
+  max-width: var(--measure);
+}
+
+.dc-page strong {
+  font-weight: 700;
+}
+
+/* Drawing-reference label: every section is numbered like a sheet. */
+.dc-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.4rem;
+  color: var(--blue);
+}
+
+.dc-dark .dc-label {
+  color: var(--yellow);
+}
+
+.dc-label::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.dc-mark {
+  background-image: linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 94%, transparent 94%);
+}
+
+.dc-section-head {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.dc-section-head .dc-lead {
+  margin-top: 1.1rem;
+}
+
+/* ---------- buttons ---------- */
+
+.dc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.25rem;
+}
+
+.dc-btn {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.05rem 1.9rem;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.dc-btn:hover,
+.dc-btn:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--ink);
+  color: var(--ink);
+}
+
+.dc-btn--ghost {
+  background: transparent;
+  box-shadow: none;
+  border-color: currentColor;
+}
+
+.dc-btn--ghost:hover,
+.dc-btn--ghost:focus-visible {
+  box-shadow: none;
+  transform: translateX(3px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.dc-dark .dc-btn--ghost {
+  color: var(--paper);
+}
+
+.dc-dark .dc-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dc-btn__arrow {
+  transition: transform 0.16s ease;
+}
+
+.dc-btn:hover .dc-btn__arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- lists ---------- */
+
+.dc-ticks {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.dc-ticks li {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  line-height: 1.5;
+}
+
+.dc-ticks li::before {
+  content: "";
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.35rem;
+  background: var(--yellow);
+  clip-path: polygon(14% 46%, 0 60%, 40% 100%, 100% 22%, 86% 8%, 38% 70%);
+}
+
+.dc-crosses li::before {
+  background: var(--line);
+  clip-path: polygon(20% 0, 50% 32%, 80% 0, 100% 20%, 68% 50%, 100% 80%, 80% 100%, 50% 68%, 20% 100%, 0 80%, 32% 50%, 0 20%);
+}
+
+/* ---------- cards ---------- */
+
+.dc-grid {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.6rem);
+}
+
+.dc-grid--2 { grid-template-columns: 1fr; }
+.dc-grid--3 { grid-template-columns: 1fr; }
+
+@media (min-width: 720px) {
+  .dc-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .dc-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .dc-grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.dc-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: clamp(1.5rem, 3vw, 2.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.dc-dark .dc-card {
+  background: var(--ink-soft);
+  border-color: var(--line-dark);
+}
+
+.dc-card__kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.dc-dark .dc-card__kicker {
+  color: var(--orange);
+}
+
+/* Phase cards carry an oversized drawing numeral. */
+.dc-phase {
+  position: relative;
+  overflow: hidden;
+}
+
+.dc-phase__num {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 5.5rem;
+  line-height: 0.8;
+  color: var(--yellow);
+  opacity: 0.9;
+}
+
+.dc-dark .dc-phase__num {
+  color: rgba(253, 206, 54, 0.85);
+}
+
+/* Result cards: the before and after of a real business. */
+.dc-result {
+  border-top: 3px solid var(--yellow);
+  background: var(--ink-soft);
+  padding: clamp(1.4rem, 2.6vw, 1.9rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.dc-result__name {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.dc-result__jump {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.dc-result__from {
+  color: rgba(246, 244, 240, 0.5);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.dc-result__to {
+  color: var(--yellow);
+}
+
+.dc-result p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: rgba(246, 244, 240, 0.78);
+}
+
+/* ---------- pillars ---------- */
+
+.dc-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 2rem;
+}
+
+.dc-dark .dc-pillars {
+  background: var(--line-dark);
+  border-color: var(--line-dark);
+}
+
+.dc-pillar {
+  background: var(--paper);
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dc-dark .dc-pillar {
+  background: var(--ink);
+}
+
+.dc-pillar__idx {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--blue);
+}
+
+.dc-dark .dc-pillar__idx {
+  color: var(--orange);
+}
+
+.dc-pillar__name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.dc-pillar__note {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+
+/* ---------- credentials strip ---------- */
+
+.dc-creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin-top: 2.5rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line-dark);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dc-creds span {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.dc-creds span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+}
+
+/* ---------- two-column contrast ---------- */
+
+.dc-split {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+@media (min-width: 860px) {
+  .dc-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dc-panel {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.dc-panel--muted {
+  background: transparent;
+  border-style: dashed;
+}
+
+.dc-panel h3 {
+  margin-bottom: 1.1rem;
+}
+
+/* ---------- Q&A ---------- */
+
+.dc-qa {
+  border-top: 1px solid var(--line);
+}
+
+.dc-dark .dc-qa {
+  border-color: var(--line-dark);
+}
+
+.dc-qa__item {
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.2rem, 2.4vw, 1.7rem) 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.dc-dark .dc-qa__item {
+  border-color: var(--line-dark);
+}
+
+.dc-qa__q {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.08rem, 1rem + 0.4vw, 1.3rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.dc-qa__a {
+  max-width: var(--measure);
+  opacity: 0.88;
+}
+
+/* ---------- closing CTA ---------- */
+
+.dc-cta {
+  background: var(--blue);
+  color: #fff;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+  text-align: center;
+}
+
+.dc-cta .dc-actions {
+  justify-content: center;
+}
+
+.dc-cta .dc-lead {
+  margin-inline: auto;
+}
+
+/* ---------- entrance ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .dc-rise {
+    animation: dc-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) backwards;
+  }
+
+  .dc-rise:nth-child(2) { animation-delay: 0.07s; }
+  .dc-rise:nth-child(3) { animation-delay: 0.14s; }
+  .dc-rise:nth-child(4) { animation-delay: 0.21s; }
+  .dc-rise:nth-child(5) { animation-delay: 0.28s; }
+
+  @keyframes dc-rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* ---------- sticky mobile CTA ---------- */
+
+.dc-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  background: var(--ink);
+  color: var(--paper);
+  /* The theme floats a WhatsApp bubble bottom-right on every page, so the bar
+     keeps its right end clear rather than hiding its own button behind it. */
+  padding: 0.7rem 5.25rem 0.7rem 1rem;
+  padding-bottom: max(0.7rem, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 3px solid var(--yellow);
+}
+
+/* Stop the fixed bar sitting on top of the last section's content. */
+@media (max-width: 859px) {
+  .dc-page {
+    padding-bottom: 5.5rem;
+  }
+}
+
+.dc-sticky__text {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.dc-sticky .dc-btn {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.82rem;
+  box-shadow: none;
+  border-width: 2px;
+  white-space: nowrap;
+}
+
+.dc-sticky .dc-btn:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (min-width: 860px) {
+  .dc-sticky {
+    display: none;
+  }
+}
