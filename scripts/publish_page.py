@@ -18,8 +18,12 @@ post-sitemap.xml plus search-index.json. Prints a JSON result on stdout.
       "category": "Convert",              # optional, must be an existing term
       "date": "2026-08-11",               # optional, defaults to today
       "template": "construction-sales-funnel",  # optional
-      "image_url": "/wp-content/..."      # optional social/schema image
+      "image_url": "/wp-content/...",     # optional social/schema image
+      "overwrite": true                   # optional, needed to replace a page
     }
+
+The slug and the template stay inside www/: a path that escapes it is refused,
+and an existing page is only replaced with --overwrite (or "overwrite": true).
 """
 import argparse
 import datetime
@@ -47,6 +51,31 @@ STALE_TAGS = [
     re.compile(r'<link rel="alternate" type="application/json\+oembed"[^>]*/>\s*'),
     re.compile(r'<link rel="alternate" type="text/xml\+oembed"[^>]*/>\s*'),
 ]
+
+
+def safe_site_path(value: str, label: str) -> str:
+    """Return a payload-supplied site path, failing if it escapes www/.
+
+    The slug and the template name come straight from the payload, so a value
+    like "../../tmp/x" or "/etc/passwd" would otherwise steer a read or a write
+    outside the site. Containment is checked on the resolved path, not on the
+    raw string, so a symlink inside www/ cannot smuggle the target out either.
+    """
+    raw = (value or "").strip()
+    if os.path.isabs(raw):
+        raise SystemExit(f"publish_page: {label} must be site relative, not absolute: {value!r}")
+    clean = raw.strip("/")
+    if not clean or clean in (os.curdir, os.pardir):
+        raise SystemExit(f"publish_page: {label} is empty once normalised: {value!r}")
+    root = os.path.realpath(WWW)
+    target = os.path.realpath(os.path.join(WWW, clean))
+    try:
+        contained = target != root and os.path.commonpath([root, target]) == root
+    except ValueError:
+        contained = False
+    if not contained:
+        raise SystemExit(f"publish_page: {label} escapes the site directory: {value!r}")
+    return clean
 
 
 def slot(html: str, pattern: str, replacement: str, label: str, count: int = 0) -> str:
@@ -158,14 +187,14 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
 
 
 def build_page(payload: dict) -> str:
-    template = payload.get("template") or DEFAULT_TEMPLATE
+    template = safe_site_path(payload.get("template") or DEFAULT_TEMPLATE, "template")
     template_path = os.path.join(WWW, template, "index.html")
     if not os.path.exists(template_path):
         raise SystemExit(f"publish_page: template page not found: {template_path}")
     html = open(template_path, encoding="utf-8").read()
 
     title = payload["title"].strip()
-    slug = payload["slug"].strip().strip("/")
+    slug = safe_site_path(payload["slug"], "slug")
     description = (payload.get("meta_description") or "").strip()
     date = payload.get("date") or datetime.date.today().isoformat()
     image = payload.get("image_url") or ""
@@ -337,6 +366,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", help="payload file (default: stdin)")
     ap.add_argument("--dry-run", action="store_true", help="build but do not write")
+    ap.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="replace an existing page (refused by default)",
+    )
     args = ap.parse_args()
 
     raw = open(args.json, encoding="utf-8").read() if args.json else sys.stdin.read()
@@ -345,13 +379,28 @@ def main() -> None:
         if not payload.get(field):
             raise SystemExit(f"publish_page: missing required field: {field}")
 
-    slug = payload["slug"].strip().strip("/")
+    slug = safe_site_path(payload["slug"], "slug")
     date = payload.get("date") or datetime.date.today().isoformat()
     html = build_page(payload)
 
     out_dir = os.path.join(WWW, slug)
     out_file = os.path.join(out_dir, "index.html")
     existed = os.path.exists(out_file)
+    overwrite = bool(args.overwrite or payload.get("overwrite"))
+
+    # Replacing a live page is destructive and irreversible here, so it needs
+    # saying out loud rather than happening as a side effect of a reused slug.
+    if existed and not overwrite:
+        if args.dry_run:
+            print(
+                f"publish_page: warning, page already exists: {out_file}",
+                file=sys.stderr,
+            )
+        else:
+            raise SystemExit(
+                f"publish_page: page already exists: {out_file}. "
+                'Pass --overwrite (or "overwrite": true in the payload) to replace it.'
+            )
 
     if not args.dry_run:
         os.makedirs(out_dir, exist_ok=True)
