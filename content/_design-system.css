@@ -11,17 +11,20 @@
  */
 
 .dc-page {
-  --ink: #16181a;
-  --ink-soft: #23262a;
-  --charcoal: #414042;
-  --paper: #f6f4f0;
-  --paper-warm: #efebe4;
-  --blue: #0069b1;
-  --blue-deep: #004f86;
-  --orange: #fbaa35;
+  /* Taken from the site's own Elementor global kit so the page reads as part
+     of the same website: white is the primary, #2C67AC the secondary blue,
+     #EEAC4E the accent, #FDCE36 the highlight and #424142 the text colour. */
+  --ink: #424142;
+  --ink-soft: #33608f;
+  --charcoal: #424142;
+  --paper: #ffffff;
+  --paper-warm: #f4f2ee;
+  --blue: #2c67ac;
+  --blue-deep: #1f4c81;
+  --orange: #eeac4e;
   --yellow: #fdce36;
-  --line: #d8d4cc;
-  --line-dark: rgba(255, 255, 255, 0.14);
+  --line: #dcd9d3;
+  --line-dark: rgba(255, 255, 255, 0.22);
 
   --display: "Archivo", "Helvetica Neue", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -89,8 +92,8 @@
 }
 
 .dc-dark {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--blue);
+  color: #fff;
 }
 
 /* Faint setting-out grid, the way a drawing sheet is gridded. */
@@ -101,6 +104,7 @@
   background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 72px 72px;
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -236,7 +240,7 @@
 }
 
 .dc-dark .dc-btn--ghost {
-  color: var(--paper);
+  color: #fff;
 }
 
 .dc-dark .dc-btn--ghost:hover {
@@ -309,7 +313,7 @@
 }
 
 .dc-dark .dc-card {
-  background: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.09);
   border-color: var(--line-dark);
 }
 
@@ -347,7 +351,7 @@
 /* Result cards: the before and after of a real business. */
 .dc-result {
   border-top: 3px solid var(--yellow);
-  background: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.09);
   padding: clamp(1.4rem, 2.6vw, 1.9rem);
   display: flex;
   flex-direction: column;
@@ -375,7 +379,7 @@
 }
 
 .dc-result__from {
-  color: rgba(246, 244, 240, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
@@ -387,7 +391,7 @@
 .dc-result p {
   font-size: 0.98rem;
   line-height: 1.5;
-  color: rgba(246, 244, 240, 0.78);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- pillars ---------- */
@@ -415,7 +419,7 @@
 }
 
 .dc-dark .dc-pillar {
-  background: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .dc-pillar__idx {
@@ -576,8 +580,8 @@
   right: 0;
   bottom: 0;
   z-index: 90;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--charcoal);
+  color: #fff;
   /* The theme floats a WhatsApp bubble bottom-right on every page, so the bar
      keeps its right end clear rather than hiding its own button behind it. */
   padding: 0.7rem 5.25rem 0.7rem 1rem;
@@ -621,4 +625,170 @@
   .dc-sticky {
     display: none;
   }
+}
+
+/* ---------- video ---------- */
+
+/* Self-hosted MP4s with a poster frame, matching how the rest of the site
+   presents video. preload="metadata" keeps the page light on a site
+   connection; the poster is what people actually see. */
+.dc-video {
+  position: relative;
+  border: 1px solid var(--line);
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.dc-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dc-video--framed {
+  box-shadow: 12px 12px 0 var(--yellow);
+}
+
+@media (max-width: 720px) {
+  .dc-video--framed {
+    box-shadow: 6px 6px 0 var(--yellow);
+  }
+}
+
+/* ---------- testimonials ---------- */
+
+.dc-testimonial {
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.dc-dark .dc-testimonial {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--line-dark);
+}
+
+.dc-testimonial .dc-video {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dc-testimonial__body {
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.dc-testimonial__quote {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.dc-testimonial__name {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.dc-dark .dc-testimonial__name {
+  color: var(--yellow);
+}
+
+.dc-testimonial__jump {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.dc-testimonial__jump .from {
+  opacity: 0.55;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  font-size: 0.95rem;
+}
+
+.dc-testimonial__jump .to {
+  color: var(--blue);
+}
+
+.dc-dark .dc-testimonial__jump .to {
+  color: var(--yellow);
+}
+
+.dc-stars {
+  display: flex;
+  gap: 0.18rem;
+  color: var(--orange);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+/* A compact strip for the wins that do not have a video. */
+.dc-wins {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.dc-dark .dc-wins {
+  background: var(--line-dark);
+  border-color: var(--line-dark);
+}
+
+.dc-win {
+  background: #fff;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dc-dark .dc-win {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dc-win__name {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.dc-win__jump {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.dc-win__jump .to {
+  color: var(--blue);
+}
+
+.dc-dark .dc-win__jump .to {
+  color: var(--yellow);
+}
+
+.dc-win p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0.85;
 }

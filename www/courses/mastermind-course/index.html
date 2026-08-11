@@ -59,7 +59,7 @@
 <meta name="twitter:description" content="A minimum 12-month coaching programme for UK construction business owners turning over £750k to £5m. The DEVELOP method, an AI toolkit built for builders, and a private community." />
 <meta name="twitter:site" content="@developcoaching" />
 <meta name="twitter:creator" content="@developcoaching" />
-<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/courses/mastermind-course/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://develop-coaching.com"},{"@type":"ListItem","position":2,"name":"The Develop Mastermind: Coaching for Builders Doing \u00a3750k to \u00a35m"}]},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}}]}</script>
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/courses/mastermind-course/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://develop-coaching.com"},{"@type":"ListItem","position":2,"name":"The Develop Mastermind: Coaching for Builders Doing \u00a3750k to \u00a35m"}]},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}}]}</script>
 <!-- /Rank Math WordPress SEO plugin -->
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -371,17 +371,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  */
 
 .dc-page {
-  --ink: #16181a;
-  --ink-soft: #23262a;
-  --charcoal: #414042;
-  --paper: #f6f4f0;
-  --paper-warm: #efebe4;
-  --blue: #0069b1;
-  --blue-deep: #004f86;
-  --orange: #fbaa35;
+  /* Taken from the site's own Elementor global kit so the page reads as part
+     of the same website: white is the primary, #2C67AC the secondary blue,
+     #EEAC4E the accent, #FDCE36 the highlight and #424142 the text colour. */
+  --ink: #424142;
+  --ink-soft: #33608f;
+  --charcoal: #424142;
+  --paper: #ffffff;
+  --paper-warm: #f4f2ee;
+  --blue: #2c67ac;
+  --blue-deep: #1f4c81;
+  --orange: #eeac4e;
   --yellow: #fdce36;
-  --line: #d8d4cc;
-  --line-dark: rgba(255, 255, 255, 0.14);
+  --line: #dcd9d3;
+  --line-dark: rgba(255, 255, 255, 0.22);
 
   --display: "Archivo", "Helvetica Neue", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -449,8 +452,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 .dc-dark {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--blue);
+  color: #fff;
 }
 
 /* Faint setting-out grid, the way a drawing sheet is gridded. */
@@ -461,6 +464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 72px 72px;
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -596,7 +600,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 .dc-dark .dc-btn--ghost {
-  color: var(--paper);
+  color: #fff;
 }
 
 .dc-dark .dc-btn--ghost:hover {
@@ -669,7 +673,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 .dc-dark .dc-card {
-  background: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.09);
   border-color: var(--line-dark);
 }
 
@@ -707,7 +711,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 /* Result cards: the before and after of a real business. */
 .dc-result {
   border-top: 3px solid var(--yellow);
-  background: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.09);
   padding: clamp(1.4rem, 2.6vw, 1.9rem);
   display: flex;
   flex-direction: column;
@@ -735,7 +739,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 .dc-result__from {
-  color: rgba(246, 244, 240, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
@@ -747,7 +751,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .dc-result p {
   font-size: 0.98rem;
   line-height: 1.5;
-  color: rgba(246, 244, 240, 0.78);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- pillars ---------- */
@@ -775,7 +779,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 
 .dc-dark .dc-pillar {
-  background: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .dc-pillar__idx {
@@ -936,8 +940,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   right: 0;
   bottom: 0;
   z-index: 90;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--charcoal);
+  color: #fff;
   /* The theme floats a WhatsApp bubble bottom-right on every page, so the bar
      keeps its right end clear rather than hiding its own button behind it. */
   padding: 0.7rem 5.25rem 0.7rem 1rem;
@@ -983,6 +987,172 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 }
 
+/* ---------- video ---------- */
+
+/* Self-hosted MP4s with a poster frame, matching how the rest of the site
+   presents video. preload="metadata" keeps the page light on a site
+   connection; the poster is what people actually see. */
+.dc-video {
+  position: relative;
+  border: 1px solid var(--line);
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.dc-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dc-video--framed {
+  box-shadow: 12px 12px 0 var(--yellow);
+}
+
+@media (max-width: 720px) {
+  .dc-video--framed {
+    box-shadow: 6px 6px 0 var(--yellow);
+  }
+}
+
+/* ---------- testimonials ---------- */
+
+.dc-testimonial {
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.dc-dark .dc-testimonial {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--line-dark);
+}
+
+.dc-testimonial .dc-video {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dc-testimonial__body {
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.dc-testimonial__quote {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.dc-testimonial__name {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.dc-dark .dc-testimonial__name {
+  color: var(--yellow);
+}
+
+.dc-testimonial__jump {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.dc-testimonial__jump .from {
+  opacity: 0.55;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  font-size: 0.95rem;
+}
+
+.dc-testimonial__jump .to {
+  color: var(--blue);
+}
+
+.dc-dark .dc-testimonial__jump .to {
+  color: var(--yellow);
+}
+
+.dc-stars {
+  display: flex;
+  gap: 0.18rem;
+  color: var(--orange);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+/* A compact strip for the wins that do not have a video. */
+.dc-wins {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.dc-dark .dc-wins {
+  background: var(--line-dark);
+  border-color: var(--line-dark);
+}
+
+.dc-win {
+  background: #fff;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dc-dark .dc-win {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dc-win__name {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.dc-win__jump {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+
+.dc-win__jump .to {
+  color: var(--blue);
+}
+
+.dc-dark .dc-win__jump .to {
+  color: var(--yellow);
+}
+
+.dc-win p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
 </style>
 <main class="dc-page">
 <section class="dc-section dc-dark" id="hero">
@@ -1003,6 +1173,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span>No. 1 Amazon bestselling author</span>
       <span>Best Construction Training Company 2024</span>
       <span>300+ builders helped</span>
+    </div>
+  </div>
+</section>
+
+<section class="dc-section dc-tint" id="video">
+  <div class="dc-wrap">
+    <div class="dc-section-head">
+      <p class="dc-label">Watch first</p>
+      <h2 class="dc-h2">See what the<br>Mastermind is</h2>
+      <p class="dc-lead">Two minutes on how the programme works and who it's built for.</p>
+    </div>
+    <div class="dc-video dc-video--framed">
+      <video
+        src="/wp-content/uploads/2023/01/Mastermind-720p.mp4"
+        poster="/wp-content/uploads/2026/08/mastermind-poster.jpg"
+        controls
+        preload="metadata"
+        controlsList="nodownload"
+        playsinline></video>
     </div>
   </div>
 </section>
@@ -1236,43 +1425,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="dc-wrap">
     <div class="dc-section-head">
       <p class="dc-label">06 / Proof</p>
-      <h2 class="dc-h2">Results from members</h2>
+      <h2 class="dc-h2">Hear it from members</h2>
+      <p class="dc-lead">Real builders, in their own words, with the numbers underneath.</p>
     </div>
+
     <div class="dc-grid dc-grid--3">
-      <article class="dc-result dc-rise">
-        <p class="dc-result__name">Owain</p>
-        <p class="dc-result__jump"><span class="dc-result__from">£550k</span> <span class="dc-result__to">£2m</span></p>
-        <p>Forecasting £2 million minimum in 18 months, with a team of 25 and 30% margins on commercial work.</p>
+      <article class="dc-testimonial dc-rise">
+        <div class="dc-video">
+          <video src="/wp-content/uploads/2022/12/MIKE-NICK-TESTIMONIAL.mp4"
+                 poster="/wp-content/uploads/2026/08/mike-nick-poster.jpg"
+                 controls preload="metadata" controlsList="nodownload" playsinline></video>
+        </div>
+        <div class="dc-testimonial__body">
+          <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="dc-testimonial__quote">&ldquo;You will earn more, retain more and have less stress&rdquo;</p>
+          <p class="dc-testimonial__jump"><span class="from">&pound;35k</span> <span class="to">&pound;80k a month</span></p>
+          <p class="dc-testimonial__name">Mike &amp; Nick</p>
+        </div>
       </article>
-      <article class="dc-result dc-rise">
-        <p class="dc-result__name">James &amp; Kate</p>
-        <p class="dc-result__jump"><span class="dc-result__from">£1.9m</span> <span class="dc-result__to">£4m</span></p>
-        <p>Took a loss-making £1.9 million business to £4 million, profitable for the first time in years.</p>
+
+      <article class="dc-testimonial dc-rise">
+        <div class="dc-video">
+          <video src="/wp-content/uploads/2022/12/STEPHEN-SALINA-TESTIMONIAL.mp4"
+                 poster="/wp-content/uploads/2022/12/Stephen-salina.jpg"
+                 controls preload="metadata" controlsList="nodownload" playsinline></video>
+        </div>
+        <div class="dc-testimonial__body">
+          <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="dc-testimonial__quote">&ldquo;Over &pound;900k delivered in a single December&rdquo;</p>
+          <p class="dc-testimonial__jump"><span class="from">&pound;870k</span> <span class="to">&pound;1.4m</span></p>
+          <p class="dc-testimonial__name">Stephen &amp; Salina</p>
+        </div>
       </article>
-      <article class="dc-result dc-rise">
-        <p class="dc-result__name">Mike &amp; Nick</p>
-        <p class="dc-result__jump"><span class="dc-result__from">£35k</span> <span class="dc-result__to">£80k</span></p>
-        <p>Kitchen installation company, monthly turnover more than doubled, team grown from 3 to 8 plus subcontractors.</p>
+
+      <article class="dc-testimonial dc-rise">
+        <div class="dc-video">
+          <video src="/wp-content/uploads/2022/12/VALY-TESTIMONIAL.mp4"
+                 poster="/wp-content/uploads/2026/08/valy-poster.jpg"
+                 controls preload="metadata" controlsList="nodownload" playsinline></video>
+        </div>
+        <div class="dc-testimonial__body">
+          <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p class="dc-testimonial__quote">&ldquo;You will free up your time, earn more and have less stress&rdquo;</p>
+          <p class="dc-testimonial__name">Valy</p>
+        </div>
       </article>
-      <article class="dc-result dc-rise">
-        <p class="dc-result__name">Richard</p>
-        <p class="dc-result__jump"><span class="dc-result__from">£750k</span> <span class="dc-result__to">£1.1m</span></p>
-        <p>Grew from £750,000 to £1.1 million.</p>
-      </article>
-      <article class="dc-result dc-rise">
-        <p class="dc-result__name">Stephen &amp; Salina</p>
-        <p class="dc-result__jump"><span class="dc-result__from">£870k</span> <span class="dc-result__to">£1.4m</span></p>
-        <p>Projected £1.4 million, with over £900k delivered in a single December.</p>
-      </article>
-      <article class="dc-result dc-rise" style="border-top-color:var(--blue);display:flex;justify-content:center">
-        <p class="dc-result__name">More</p>
-        <h3 class="dc-h3" style="color:var(--paper)">There are plenty more where those came from.</h3>
-        <p style="margin-top:0.5rem">
-          <a class="dc-btn dc-btn--ghost" href="https://develop-coaching.com/client-wins/" style="padding:0.75rem 1.2rem;font-size:0.85rem">
-            See the client wins <span class="dc-btn__arrow" aria-hidden="true">&rarr;</span>
-          </a>
-        </p>
-      </article>
+    </div>
+
+    <div class="dc-wins">
+      <div class="dc-win">
+        <span class="dc-win__name">Owain</span>
+        <span class="dc-win__jump">&pound;550k <span class="to">&rarr; &pound;2m</span></span>
+        <p>In 18 months, with a team of 25 and 30% margins on commercial work.</p>
+      </div>
+      <div class="dc-win">
+        <span class="dc-win__name">James &amp; Kate</span>
+        <span class="dc-win__jump">&pound;1.9m <span class="to">&rarr; &pound;4m</span></span>
+        <p>A loss-making business, profitable for the first time in years.</p>
+      </div>
+      <div class="dc-win">
+        <span class="dc-win__name">Richard</span>
+        <span class="dc-win__jump">&pound;750k <span class="to">&rarr; &pound;1.1m</span></span>
+        <p>Grew from &pound;750,000 to &pound;1.1 million.</p>
+      </div>
+      <div class="dc-win">
+        <span class="dc-win__name">More</span>
+        <span class="dc-win__jump"><span class="to">Client wins</span></span>
+        <p><a href="https://develop-coaching.com/client-wins/">See the full list of member results &rarr;</a></p>
+      </div>
     </div>
   </div>
 </section>
