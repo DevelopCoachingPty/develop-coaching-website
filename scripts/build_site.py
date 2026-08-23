@@ -166,6 +166,7 @@ INTERNAL_LINK_FIXES = {
     "/mastermind-course": "/courses/mastermind-course/",
     "/podcast/digital-transformation-construction": "/podcast/systemise-your-business-with-james-brown/",
     "/podcast/systems-implementation-case-study": "/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james/",
+    "/scale": "/5-pillars-free-trainings/scale/",
     "/scale/business-transformation": "/5-pillars-free-trainings/scale/",
     "/scale/financial-growth": "/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/",
     "/scale/systems-processes": "/systems-and-processes-subcategory-page/",

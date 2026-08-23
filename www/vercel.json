@@ -2,6 +2,36 @@
  "trailingSlash": true,
  "redirects": [
   {
+   "source": "/scale",
+   "destination": "/5-pillars-free-trainings/scale/",
+   "permanent": true
+  },
+  {
+   "source": "/scale/",
+   "destination": "/5-pillars-free-trainings/scale/",
+   "permanent": true
+  },
+  {
+   "source": "/testimonial",
+   "destination": "/client-wins/",
+   "permanent": true
+  },
+  {
+   "source": "/testimonial/",
+   "destination": "/client-wins/",
+   "permanent": true
+  },
+  {
+   "source": "/stephen-and-salina-testimonial-2",
+   "destination": "/stephen-and-salina-testimonial/",
+   "permanent": true
+  },
+  {
+   "source": "/stephen-and-salina-testimonial-2/",
+   "destination": "/stephen-and-salina-testimonial/",
+   "permanent": true
+  },
+  {
    "source": "/recruit-construction-business/",
    "destination": "/blog/2022/04/26/how-to-recruit-for-your-construction-business-2/",
    "permanent": true
