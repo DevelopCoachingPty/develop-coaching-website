@@ -12,7 +12,7 @@ SCRIPT_RE = re.compile(
     r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
     re.IGNORECASE | re.DOTALL,
 )
-REQUIRED_FIELDS = ("name", "uploadDate", "description")
+REQUIRED_FIELDS = ("name", "uploadDate", "description", "thumbnailUrl")
 
 
 def walk_json(value):
@@ -46,7 +46,6 @@ class VideoSchemaTest(unittest.TestCase):
                         )
 
         self.assertEqual([], failures, "\n" + "\n".join(failures))
-
 
 if __name__ == "__main__":
     unittest.main()
