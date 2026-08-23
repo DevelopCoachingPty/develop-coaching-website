@@ -1,5 +1,20 @@
 [
  {
+  "source": "/scale",
+  "destination": "/5-pillars-free-trainings/scale/",
+  "permanent": true
+ },
+ {
+  "source": "/testimonial",
+  "destination": "/client-wins/",
+  "permanent": true
+ },
+ {
+  "source": "/stephen-and-salina-testimonial-2",
+  "destination": "/stephen-and-salina-testimonial/",
+  "permanent": true
+ },
+ {
   "source": "/author/:path*",
   "destination": "/",
   "permanent": true

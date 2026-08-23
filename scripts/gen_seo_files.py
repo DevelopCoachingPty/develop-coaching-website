@@ -37,8 +37,21 @@ for root, dirs, files in os.walk(OUT):
         p = "/" + os.path.relpath(root, OUT).replace(os.sep, "/")
         built.add("/" if p == "/." else p.rstrip("/") + "/")
 
-# pages that are deliberately kept out of search
-NOINDEX_HINTS = ("/test", "-test/", "/sample-page/")
+# Pages that are deliberately kept out of search or served only as redirects.
+# Match full paths so a valid page such as /testimonial/ is never mistaken for
+# a test page by a broad prefix check.
+EXCLUDED_PATHS = {
+    "/courses/test/",
+    "/podcast-transcript/test-podcast-v1-transcript/",
+    "/scale/",
+    "/sample-page/",
+    "/stephen-and-salina-testimonial-2/",
+    "/test-page/",
+    "/test-landing-page/",
+    "/test/",
+    "/testimonial/",
+    "/testing-sop/",
+}
 
 
 def entries_for(post_type):
@@ -59,7 +72,7 @@ def entries_for(post_type):
             rel += "/"
         if rel not in built:
             continue
-        if any(h in rel for h in NOINDEX_HINTS):
+        if rel in EXCLUDED_PATHS:
             continue
         lastmod = (item.get("modified_gmt") or item.get("modified") or "")[:10]
         out.append((DOMAIN + rel, lastmod))

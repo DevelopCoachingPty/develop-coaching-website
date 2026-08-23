@@ -24,6 +24,20 @@ DOMAIN = "https://develop-coaching.com"
 # Content types worth searching. Media and drafts are excluded.
 TYPES = ["posts", "pages", "podcast", "podcast-transcript", "courses", "webinars"]
 
+# Test pages and redirect-only aliases should not appear as search results.
+EXCLUDED_PATHS = {
+    "/courses/test/",
+    "/podcast-transcript/test-podcast-v1-transcript/",
+    "/scale/",
+    "/sample-page/",
+    "/stephen-and-salina-testimonial-2/",
+    "/test-page/",
+    "/test-landing-page/",
+    "/test/",
+    "/testimonial/",
+    "/testing-sop/",
+}
+
 built = set()
 for root, dirs, files in os.walk(OUT):
     rel = os.path.relpath(root, OUT)
@@ -59,7 +73,7 @@ for t in TYPES:
         rel = link[len(DOMAIN):] or "/"
         if not rel.endswith("/"):
             rel += "/"
-        if rel not in built or rel in seen:
+        if rel not in built or rel in seen or rel in EXCLUDED_PATHS:
             continue
         seen.add(rel)
         title = clean(item.get("title", {}).get("rendered", ""), 160)
