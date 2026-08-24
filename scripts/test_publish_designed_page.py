@@ -118,7 +118,7 @@ def main() -> None:
     check(
         "nine visible transcript summaries present",
         html.count('class="dc2-transcript-summary"') == 9
-        and html.count("Transcript summary") == 9,
+        and html.count("<h4>Transcript summary</h4>") == 9,
     )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
@@ -212,6 +212,8 @@ def main() -> None:
         "JSON-LD has nine complete testimonial videos",
         len(videos) == 9
         and len({node.get("@id") for node in videos}) == 9
+        and len({node.get("name") for node in videos}) == 9
+        and len({node.get("description") for node in videos}) == 9
         and all(
             node.get("name")
             and node.get("description")
@@ -263,6 +265,37 @@ def main() -> None:
         refused(
             lambda: designed.build_page(
                 {**PAYLOAD, "videos": [{"id": "missing-fields"}]}
+            )
+        ),
+    )
+    check(
+        "duplicate testimonial name refused",
+        refused(
+            lambda: designed.build_page(
+                {
+                    **PAYLOAD,
+                    "videos": [
+                        VERIFIED_VIDEOS[0],
+                        {**VERIFIED_VIDEOS[1], "name": VERIFIED_VIDEOS[0]["name"]},
+                    ],
+                }
+            )
+        ),
+    )
+    check(
+        "duplicate testimonial description refused",
+        refused(
+            lambda: designed.build_page(
+                {
+                    **PAYLOAD,
+                    "videos": [
+                        VERIFIED_VIDEOS[0],
+                        {
+                            **VERIFIED_VIDEOS[1],
+                            "description": VERIFIED_VIDEOS[0]["description"],
+                        },
+                    ],
+                }
             )
         ),
     )

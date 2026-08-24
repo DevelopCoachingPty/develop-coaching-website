@@ -142,6 +142,8 @@ def rewrite_service_jsonld(
         "embed_url",
     }
     seen_video_ids = set()
+    seen_video_names = set()
+    seen_video_descriptions = set()
     for video in videos:
         missing = sorted(required_video_fields - video.keys())
         if missing:
@@ -154,13 +156,27 @@ def rewrite_service_jsonld(
             raise SystemExit(
                 f"publish_designed_page: testimonial video id is empty or repeated: {video_id!r}"
             )
+        video_name = str(video["name"]).strip()
+        if not video_name or video_name in seen_video_names:
+            raise SystemExit(
+                "publish_designed_page: testimonial video name is empty or repeated: "
+                f"{video_name!r}"
+            )
+        video_description = str(video["description"]).strip()
+        if not video_description or video_description in seen_video_descriptions:
+            raise SystemExit(
+                "publish_designed_page: testimonial video description is empty or repeated: "
+                f"{video_description!r}"
+            )
         seen_video_ids.add(video_id)
+        seen_video_names.add(video_name)
+        seen_video_descriptions.add(video_description)
         cleaned.append(
             {
                 "@type": "VideoObject",
                 "@id": f"{url}#video-{video_id}",
-                "name": str(video["name"]).strip(),
-                "description": str(video["description"]).strip(),
+                "name": video_name,
+                "description": video_description,
                 "thumbnailUrl": str(video["thumbnail_url"]).strip(),
                 "uploadDate": str(video["upload_date"]).strip(),
                 "duration": str(video["duration"]).strip(),
