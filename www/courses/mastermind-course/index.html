@@ -402,6 +402,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   overflow-x: clip;
 }
 
+/* The inherited desktop navigation is wider than the header at small laptop
+   widths. Tighten only this breakpoint so Contact stays inside the viewport. */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .elementor-nav-menu--main .elementor-nav-menu > li > a.elementor-item {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+}
+
 .dc-page *,
 .dc-page *::before,
 .dc-page *::after {
@@ -644,6 +653,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   clip-path: polygon(20% 0, 50% 32%, 80% 0, 100% 20%, 68% 50%, 100% 80%, 80% 100%, 50% 68%, 20% 100%, 0 80%, 32% 50%, 0 20%);
 }
 
+.dc-fit-list {
+  gap: 1rem;
+}
+
+.dc-fit-list li {
+  grid-template-columns: 1.8rem 1fr;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.dc-fit-list li::before {
+  content: "✓";
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-top: 0;
+  border-radius: 50%;
+  clip-path: none;
+  display: grid;
+  place-items: center;
+  background: #1f8a5b;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dc-fit-list--negative li::before {
+  content: "×";
+  background: #c73737;
+  font-size: 1.15rem;
+}
+
+.dc-clean-list li::before {
+  background: #1f8a5b;
+}
+
 /* ---------- cards ---------- */
 
 .dc-grid {
@@ -859,8 +904,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   border-style: dashed;
 }
 
+.dc-panel--positive {
+  border-top: 4px solid #1f8a5b;
+}
+
+.dc-panel--negative {
+  border-top: 4px solid #c73737;
+}
+
 .dc-panel h3 {
   margin-bottom: 1.1rem;
+}
+
+/* ---------- clean inclusions and tools ---------- */
+
+.dc-list-panel {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  background: #fff;
+  color: var(--ink);
+  border-top: 5px solid var(--yellow);
+}
+
+.dc-list-panel .dc-label {
+  color: var(--blue);
+}
+
+.dc-list-panel .dc-h3 {
+  margin: 0.35rem 0 1.5rem;
+}
+
+.dc-list-panel__columns {
+  gap: 1rem clamp(2rem, 5vw, 4rem);
+}
+
+.dc-tool-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--line);
+  background: var(--line);
+  gap: 1px;
+}
+
+@media (min-width: 760px) {
+  .dc-tool-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dc-tool-list__item {
+  background: #fff;
+  padding: clamp(1.35rem, 2.5vw, 1.9rem);
+}
+
+.dc-tool-list__item .dc-h3 {
+  margin-bottom: 0.45rem;
+}
+
+.dc-tool-list__item p {
+  color: var(--ink);
+  opacity: 0.78;
+  line-height: 1.5;
+}
+
+.dc-jarvis {
+  margin-top: clamp(1rem, 2.2vw, 1.6rem);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  background: var(--blue);
+  color: #fff;
+  border-left: 5px solid var(--yellow);
+}
+
+.dc-jarvis .dc-card__kicker {
+  color: var(--yellow);
+}
+
+.dc-jarvis .dc-h3 {
+  margin: 0.35rem 0 0.65rem;
+}
+
+.dc-jarvis p:last-child {
+  max-width: 80ch;
+  line-height: 1.6;
 }
 
 /* ---------- Q&A ---------- */
@@ -1227,26 +1352,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="dc-h2">Is this you?</h2>
     </div>
     <div class="dc-split">
-      <div class="dc-panel">
+      <div class="dc-panel dc-panel--positive">
         <h3 class="dc-h3">Who it's for</h3>
-        <p>
-          You run a building or trade company turning over roughly £750k to £5 million. You have an
-          office team, maybe 2 to 10 people, with some trade support. The work is coming in, but the
-          margins don't reflect the effort, the systems live in your head, and the business still
-          needs you on every decision.
-        </p>
-        <p style="margin-top:1rem">
-          You want to get off the tools and out of the day-to-day firefighting, and you're prepared
-          to put in <strong>1 to 1.5 hours a week</strong> on the business rather than in it.
-        </p>
+        <ul class="dc-ticks dc-fit-list dc-fit-list--positive">
+          <li>A building or trade company turning over roughly £750k to £5 million</li>
+          <li>An office team of 2 to 10 people, plus trade support</li>
+          <li>Work coming in, but the margins don't match the effort</li>
+          <li>Critical systems and decisions still depending on you</li>
+          <li>Ready to replace daily firefighting with structured growth</li>
+          <li>Prepared to spend 1 to 1.5 hours a week working on the business</li>
+        </ul>
       </div>
-      <div class="dc-panel dc-panel--muted">
+      <div class="dc-panel dc-panel--negative">
         <h3 class="dc-h3">Who it's not for</h3>
-        <ul class="dc-ticks dc-crosses">
-          <li>Sole traders and one-man bands. The programme is built around structuring a team, so there needs to be a team to structure.</li>
-          <li>Start-ups with no trading history. The Mastermind scales what already works.</li>
-          <li>Anyone looking for a silver bullet. Members do the work; the programme provides the plan, the systems and the accountability.</li>
-          <li>Companies selling TO builders (marketing agencies, software, recruiters). This is for people who build.</li>
+        <ul class="dc-ticks dc-crosses dc-fit-list dc-fit-list--negative">
+          <li>Sole traders and one-man bands without a team to structure</li>
+          <li>Start-ups with no trading history</li>
+          <li>Anyone looking for a silver bullet instead of doing the work</li>
+          <li>Agencies, software companies or recruiters selling to builders</li>
         </ul>
       </div>
     </div>
@@ -1292,25 +1415,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </li>
     </ol>
 
-    <div style="margin-top:clamp(2.5rem,5vw,4rem)">
-      <h3 class="dc-h3" style="margin-bottom:1.5rem">What's included</h3>
-      <div class="dc-grid dc-grid--2">
-        <ul class="dc-ticks">
-          <li>A bespoke 12-month business plan, built with your coach in a dedicated planning session at the start</li>
-          <li>Weekly group calls to set the week's priorities</li>
-          <li>Weekly live Q&amp;A and accountability sessions</li>
-          <li>Coaching check-ins on your specific numbers and blockers, with 1:1 game-plan sessions and KPIs</li>
-          <li>Monthly specialist training sessions, plus the full back-catalogue training portal</li>
-          <li>Specialist coaches on demand, plus a quantity surveyor for contracts and accountants for financial structure</li>
-          <li>Unlimited support messaging between sessions</li>
+    <div class="dc-list-panel">
+      <p class="dc-label">What you'll get</p>
+      <h3 class="dc-h3">The coaching, structure and support</h3>
+      <div class="dc-grid dc-grid--2 dc-list-panel__columns">
+        <ul class="dc-ticks dc-clean-list">
+          <li>A bespoke 12-month business plan and dedicated planning session</li>
+          <li>Weekly priority calls, live Q&amp;A and accountability sessions</li>
+          <li>1:1 game-plan sessions, KPIs and emergency support when needed</li>
+          <li>Monthly specialist training and the full back-catalogue portal</li>
         </ul>
-        <ul class="dc-ticks">
-          <li>Emergency 1:1s if your business is in the red</li>
-          <li>A private community of builders at your level and above, so pricing questions get answered by people who priced the same job last month</li>
-          <li>Quarterly financial reviews</li>
-          <li>Templates and documents: SOPs, HR documents, quality control forms, quoting and pricing structures</li>
-          <li>In-person member events through the year</li>
-          <li>The full AI software suite, included in the programme</li>
+        <ul class="dc-ticks dc-clean-list">
+          <li>Specialist coaches, quantity surveying and financial expertise</li>
+          <li>A private builder community and unlimited support messaging</li>
+          <li>Quarterly financial reviews and in-person member events</li>
+          <li>Templates for SOPs, HR, quality, quoting and pricing</li>
         </ul>
       </div>
     </div>
@@ -1321,72 +1440,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="dc-wrap">
     <div class="dc-section-head">
       <p class="dc-label">04 / The AI toolkit</p>
-      <h2 class="dc-h2">Here's where<br>we're different</h2>
+      <h2 class="dc-h2">Tools included</h2>
       <p class="dc-lead">
-        Most coaching programmes hand you a pile of frameworks and wish you luck with the admin.
-        Develop Coaching builds its own software, and members get all of it as part of the
-        programme, with training and support included. This is the stuff that gives you your
-        evenings back and lets you run a bigger business without hiring for every job that lands on
-        your desk.
+        Practical software built around the DEVELOP method, with training and support included.
       </p>
     </div>
 
-    <div class="dc-grid dc-grid--2">
-      <article class="dc-card">
-        <p class="dc-card__kicker">Lead flow</p>
+    <div class="dc-tool-list">
+      <div class="dc-tool-list__item">
         <h3 class="dc-h3">Architect Attractor&trade;</h3>
-        <p>
-          Finds live, planning-approved projects in your area and turns them into a warm outreach
-          list, so your lead flow stops depending on one architect's goodwill.
-        </p>
-      </article>
-      <article class="dc-card">
-        <p class="dc-card__kicker">CRM &amp; follow-up</p>
+        <p>Find planning-approved projects and turn them into a targeted outreach list.</p>
+      </div>
+      <div class="dc-tool-list__item">
         <h3 class="dc-h3">FlowBuild&trade;</h3>
-        <p>
-          Every lead, enquiry and follow-up in one place. It runs your automated outreach, email
-          sequences and reminders so quotes don't go cold. The chasing that normally never gets done
-          because everyone's flat out on site, FlowBuild does in the background.
-        </p>
-      </article>
-      <article class="dc-card">
-        <p class="dc-card__kicker">Margin</p>
+        <p>Keep every lead, follow-up, email sequence and reminder in one place.</p>
+      </div>
+      <div class="dc-tool-list__item">
         <h3 class="dc-h3">CostTracker Pro&trade;</h3>
-        <p>
-          Tracks every job's costs against budget as they happen: margin per project, quotes,
-          purchase orders, invoices and Xero in one place, so you know which jobs are making money
-          while there's still time to fix the ones that aren't.
-        </p>
-      </article>
-      <article class="dc-card">
-        <p class="dc-card__kicker">The member platform</p>
+        <p>Track job costs, budget, margin, quotes, orders, invoices and Xero.</p>
+      </div>
+      <div class="dc-tool-list__item">
         <h3 class="dc-h3">Momentum Builder&trade;</h3>
-        <p>
-          The platform the whole programme runs on: your business heatmap across the five pillars,
-          quarterly goals, task boards, weekly reviews and direct messaging with your coach.
-        </p>
-      </article>
+        <p>Run your heatmap, quarterly goals, tasks, reviews and coach messaging.</p>
+      </div>
     </div>
 
-    <article class="dc-card dc-rise" style="margin-top:clamp(1rem,2.2vw,1.6rem);border-left:4px solid var(--yellow)">
+    <article class="dc-jarvis dc-rise">
       <p class="dc-card__kicker">The one members can't believe they worked without</p>
       <h3 class="dc-h3">Jarvis&trade;</h3>
       <p>
-        Your AI assistant, trained on the Develop method, and it goes way beyond writing the odd
-        email. Jarvis handles quotes, client letters, job ads and the everyday office grind that
-        normally eats your nights and weekends.
-      </p>
-      <p>
-        But the real change is this: Jarvis lets you build your own AI agents, each trained on a
-        specific part of your business. An agent that handles your enquiry responses, one that
-        drafts your quotes, one that manages your onboarding paperwork. In plain terms, that's
-        <strong>whole roles handled without another salary, another desk or another person to
-        manage</strong>. The builders I work with use it to do the work of a part-time admin, an
-        estimator's assistant and a marketing helper, all running quietly in the background.
-      </p>
-      <p>
-        If you've been telling yourself you need to hire before you can grow, this is the tool that
-        changes the maths.
+        Your AI assistant, trained on the DEVELOP method. It handles enquiry responses, quotes,
+        client letters, job ads and onboarding paperwork, and lets you build specialist agents for
+        the recurring office work that normally consumes your evenings.
       </p>
     </article>
   </div>

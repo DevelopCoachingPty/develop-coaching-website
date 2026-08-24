@@ -42,6 +42,15 @@
   overflow-x: clip;
 }
 
+/* The inherited desktop navigation is wider than the header at small laptop
+   widths. Tighten only this breakpoint so Contact stays inside the viewport. */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .elementor-nav-menu--main .elementor-nav-menu > li > a.elementor-item {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+}
+
 .dc-page *,
 .dc-page *::before,
 .dc-page *::after {
@@ -284,6 +293,42 @@
   clip-path: polygon(20% 0, 50% 32%, 80% 0, 100% 20%, 68% 50%, 100% 80%, 80% 100%, 50% 68%, 20% 100%, 0 80%, 32% 50%, 0 20%);
 }
 
+.dc-fit-list {
+  gap: 1rem;
+}
+
+.dc-fit-list li {
+  grid-template-columns: 1.8rem 1fr;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.dc-fit-list li::before {
+  content: "✓";
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-top: 0;
+  border-radius: 50%;
+  clip-path: none;
+  display: grid;
+  place-items: center;
+  background: #1f8a5b;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dc-fit-list--negative li::before {
+  content: "×";
+  background: #c73737;
+  font-size: 1.15rem;
+}
+
+.dc-clean-list li::before {
+  background: #1f8a5b;
+}
+
 /* ---------- cards ---------- */
 
 .dc-grid {
@@ -499,8 +544,88 @@
   border-style: dashed;
 }
 
+.dc-panel--positive {
+  border-top: 4px solid #1f8a5b;
+}
+
+.dc-panel--negative {
+  border-top: 4px solid #c73737;
+}
+
 .dc-panel h3 {
   margin-bottom: 1.1rem;
+}
+
+/* ---------- clean inclusions and tools ---------- */
+
+.dc-list-panel {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  background: #fff;
+  color: var(--ink);
+  border-top: 5px solid var(--yellow);
+}
+
+.dc-list-panel .dc-label {
+  color: var(--blue);
+}
+
+.dc-list-panel .dc-h3 {
+  margin: 0.35rem 0 1.5rem;
+}
+
+.dc-list-panel__columns {
+  gap: 1rem clamp(2rem, 5vw, 4rem);
+}
+
+.dc-tool-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--line);
+  background: var(--line);
+  gap: 1px;
+}
+
+@media (min-width: 760px) {
+  .dc-tool-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dc-tool-list__item {
+  background: #fff;
+  padding: clamp(1.35rem, 2.5vw, 1.9rem);
+}
+
+.dc-tool-list__item .dc-h3 {
+  margin-bottom: 0.45rem;
+}
+
+.dc-tool-list__item p {
+  color: var(--ink);
+  opacity: 0.78;
+  line-height: 1.5;
+}
+
+.dc-jarvis {
+  margin-top: clamp(1rem, 2.2vw, 1.6rem);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  background: var(--blue);
+  color: #fff;
+  border-left: 5px solid var(--yellow);
+}
+
+.dc-jarvis .dc-card__kicker {
+  color: var(--yellow);
+}
+
+.dc-jarvis .dc-h3 {
+  margin: 0.35rem 0 0.65rem;
+}
+
+.dc-jarvis p:last-child {
+  max-width: 80ch;
+  line-height: 1.6;
 }
 
 /* ---------- Q&A ---------- */
