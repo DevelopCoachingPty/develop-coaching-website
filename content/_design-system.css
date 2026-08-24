@@ -40,7 +40,7 @@ body {
   width: 100%;
   max-width: none;
   margin-left: 0;
-  overflow: hidden;
+  overflow: visible;
   color: var(--dc2-ink);
   background: var(--dc2-paper);
   font-family: var(--dc2-body);
