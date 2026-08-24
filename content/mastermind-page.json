@@ -3,7 +3,7 @@
   "slug": "courses/mastermind-course",
   "meta_description": "A minimum 12-month coaching programme for UK construction business owners turning over £750k to £5m. The DEVELOP method, an AI toolkit built for builders, and a private community.",
   "content_file": "content/mastermind.html",
-  "shell": "courses/mastermind-course",
+  "shell": "about-greg-wilkes",
   "date": "2026-08-11",
   "image_url": "/wp-content/uploads/2026/08/mastermind-poster.jpg",
   "overwrite": true,

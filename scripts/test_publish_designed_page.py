@@ -18,7 +18,7 @@ PAYLOAD = {
     "slug": "courses/mastermind-course",
     "meta_description": "A coaching programme for established construction business owners.",
     "content_file": "content/mastermind.html",
-    "shell": "courses/mastermind-course",
+    "shell": "about-greg-wilkes",
 }
 
 failures = []
@@ -55,7 +55,10 @@ def run_main(payload: dict, *flags: str) -> None:
 
 def main() -> None:
     html = designed.build_page(PAYLOAD)
-    check("designed body present", 'class="dc-page"' in html and "Built on five pillars" in html)
+    check(
+        "designed body present",
+        'class="dc2-page"' in html and "Five pillars. One plan." in html,
+    )
     check("site chrome present", "<header" in html and "<footer" in html)
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
     schema_match = re.search(
