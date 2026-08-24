@@ -55,6 +55,8 @@ def run_main(payload: dict, *flags: str) -> None:
 
 def main() -> None:
     html = designed.build_page(PAYLOAD)
+    with open("content/_design-system.css", encoding="utf-8") as handle:
+        css = handle.read()
     check(
         "designed body present",
         'class="dc2-page"' in html and "Five pillars. One plan." in html,
@@ -78,6 +80,19 @@ def main() -> None:
     check(
         "official Develop Coaching palette present",
         all(colour in html.lower() for colour in ("#fdce36", "#fbaa35", "#0069b1", "#414042", "#d2d2d2")),
+    )
+    approved_hex = {
+        "#ffffff", "#fdce36", "#fbaa35", "#0069b1", "#414042", "#d2d2d2",
+        "#3e745b", "#a64c3d",
+    }
+    found_hex = {value.lower() for value in re.findall(r"#[0-9a-fA-F]{6}", css)}
+    rgba_bases = {
+        tuple(map(int, match))
+        for match in re.findall(r"rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)", css)
+    }
+    check(
+        "custom CSS rejects off-brand colour literals",
+        found_hex <= approved_hex and rgba_bases <= {(65, 64, 66), (255, 255, 255)},
     )
     check(
         "Source Sans Pro is the only custom page font",
