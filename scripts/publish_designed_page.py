@@ -43,6 +43,23 @@ CURRENT_MENU_CLASSES = {
     "elementor-item-active",
 }
 
+GA4_EVENT_TRANSPORT = """<script data-ga4-event-transport>
+(function(w,d){
+  var previewHost=location.hostname.endsWith('.vercel.app');
+  var params=new URLSearchParams(location.search);
+  var tagAssistant=params.has('gtm_debug')||params.has('gtm_preview')||params.has('gtm_auth');
+  if(previewHost&&!tagAssistant) return;
+  w.ga4EventLayer=w.ga4EventLayer||[];
+  w.ga4Event=w.ga4Event||function(){w.ga4EventLayer.push(arguments);};
+  var script=d.createElement('script');
+  script.async=true;
+  script.src='https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&l=ga4EventLayer';
+  d.head.appendChild(script);
+  w.ga4Event('js',new Date());
+  w.ga4Event('config','G-PXT2VCVFLW',{send_page_view:false});
+})(window,document);
+</script>"""
+
 
 def replace_meta(head: str, attribute: str, key: str, value: str) -> str:
     """Replace one existing social meta tag without creating duplicates."""
@@ -380,6 +397,8 @@ def build_page(payload: dict) -> str:
         image_height=int(payload.get("image_height", 630)),
         videos=payload.get("videos", []),
     )
+    if payload.get("ga4_event_transport"):
+        head = head.replace("</head>", GA4_EVENT_TRANSPORT + "\n</head>", 1)
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)
     footer = re.sub(r"\s*<!-- Page cached by LiteSpeed Cache[^>]*-->\s*$", "\n", footer)

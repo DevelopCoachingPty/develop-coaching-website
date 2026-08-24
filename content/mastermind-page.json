@@ -10,6 +10,7 @@
   "image_width": 1280,
   "image_height": 720,
   "image_alt": "The Develop Mastermind coaching programme for UK construction business owners",
+  "ga4_event_transport": true,
   "videos": [
     {
       "id": "james-overton",

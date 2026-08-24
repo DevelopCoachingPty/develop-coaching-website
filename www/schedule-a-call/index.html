@@ -29,6 +29,38 @@
   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T4HBRD3');
+</script><script data-ga4-event-transport>
+(function(w,d){
+  var previewHost=location.hostname.endsWith('.vercel.app');
+  var params=new URLSearchParams(location.search);
+  var tagAssistant=params.has('gtm_debug')||params.has('gtm_preview')||params.has('gtm_auth');
+  if(previewHost&&!tagAssistant) return;
+  w.ga4EventLayer=w.ga4EventLayer||[];
+  w.ga4Event=w.ga4Event||function(){w.ga4EventLayer.push(arguments);};
+  var script=d.createElement('script');
+  script.async=true;
+  script.src='https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&l=ga4EventLayer';
+  d.head.appendChild(script);
+  w.ga4Event('js',new Date());
+  w.ga4Event('config','G-PXT2VCVFLW',{send_page_view:false});
+})(window,document);
+</script><script data-conversion-events>
+(function(w,d){
+  var schedulerStarted=false;
+  w.addEventListener('blur',function(){
+    w.setTimeout(function(){
+      var active=d.activeElement;
+      if(schedulerStarted||!active||active.tagName!=='IFRAME') return;
+      var src=active.getAttribute('src')||'';
+      if(src.indexOf('https://link.flow-build.com/widget/booking/')!==0) return;
+      if(typeof w.ga4Event!=='function') return;
+      schedulerStarted=true;
+      w.ga4Event('event','scale_session_scheduler_start',{
+        scheduler_provider:'FlowBuild'
+      });
+    },0);
+  });
+})(window,document);
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">

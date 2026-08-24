@@ -31,6 +31,7 @@ PAYLOAD = {
     "image_width": 1280,
     "image_height": 720,
     "image_alt": "The Develop Mastermind coaching programme for UK construction business owners",
+    "ga4_event_transport": True,
     "videos": VERIFIED_VIDEOS,
 }
 
@@ -115,6 +116,52 @@ def main() -> None:
     check("testimonial player receives keyboard focus", "iframe.tabIndex = 0" in html and "iframe.focus()" in html)
     check("nine high-resolution testimonial images present", html.count("maxresdefault.jpg") >= 9)
     check("testimonial videos load on click", "link.replaceWith(iframe)" in html and "?autoplay=1" in html)
+    check(
+        "five Mastermind CTA positions are labelled for analytics",
+        html.count("data-analytics-location=") == 5
+        and all(
+            f'data-analytics-location="{location}"' in html
+            for location in ("hero", "programme", "investment", "final", "sticky")
+        ),
+    )
+    check(
+        "Mastermind CTA and testimonial start events are present",
+        "mastermind_cta_click" in html
+        and "mastermind_testimonial_video_start" in html
+        and 'window.ga4Event("event", name, parameters)' in html
+        and "const fallback = window.setTimeout(navigate, 900)" in html
+        and "window.clearTimeout(fallback)" in html
+        and "if (regularNavigation && !sent) navigate()" in html
+        and "parameters.event_timeout = 800" in html
+        and "cta_location" in html
+        and "testimonial_name" in html,
+    )
+    check(
+        "page-specific GA4 event transport suppresses duplicate page views",
+        html.count("data-ga4-event-transport") == 1
+        and "G-PXT2VCVFLW" in html
+        and "ga4EventLayer" in html
+        and "send_page_view:false" in html
+        and "if(previewHost&&!tagAssistant) return" in html,
+    )
+    schedule_path = os.path.join(designed.pp.WWW, "schedule-a-call", "index.html")
+    with open(schedule_path, encoding="utf-8") as handle:
+        schedule_html = handle.read()
+    check(
+        "FlowBuild scheduler start uses iframe focus evidence",
+        "scale_session_scheduler_start" in schedule_html
+        and "d.activeElement" in schedule_html
+        and "w.ga4Event('event','scale_session_scheduler_start'" in schedule_html
+        and "if(typeof w.ga4Event!=='function') return" in schedule_html
+        and "https://link.flow-build.com/widget/booking/" in schedule_html,
+    )
+    check(
+        "schedule page GA4 event transport suppresses duplicate page views",
+        schedule_html.count("data-ga4-event-transport") == 1
+        and "ga4EventLayer" in schedule_html
+        and "send_page_view:false" in schedule_html
+        and "if(previewHost&&!tagAssistant) return" in schedule_html,
+    )
     check(
         "nine visible transcript summaries present",
         html.count('class="dc2-transcript-summary"') == 9

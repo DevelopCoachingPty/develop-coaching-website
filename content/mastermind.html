@@ -10,7 +10,7 @@
             but need the structure, margins and team to scale it properly.
           </p>
           <div class="dc2-actions">
-            <a class="dc2-btn" href="https://develop-coaching.com/schedule-a-call/">Book a free Scale Session</a>
+            <a class="dc2-btn" href="https://develop-coaching.com/schedule-a-call/" data-analytics-location="hero">Book a free Scale Session</a>
             <a class="dc2-text-link" href="#results">See member results <span aria-hidden="true">↓</span></a>
           </div>
           <ul class="dc2-trust" aria-label="Develop Coaching credentials">
@@ -133,7 +133,7 @@
 
         <div class="dc2-inline-cta">
           <div><strong>Not sure which pillar is holding you back?</strong><span>We will map it on your Scale Session.</span></div>
-          <a class="dc2-btn dc2-btn--dark" href="https://develop-coaching.com/schedule-a-call/">Book a free session</a>
+          <a class="dc2-btn dc2-btn--dark" href="https://develop-coaching.com/schedule-a-call/" data-analytics-location="programme">Book a free session</a>
         </div>
       </div>
     </section>
@@ -242,7 +242,7 @@
             <span>For context</span>
             <strong>A 3-point margin improvement on £1m turnover covers the year's fee.</strong>
           </div>
-          <a class="dc2-btn dc2-btn--dark" href="https://develop-coaching.com/schedule-a-call/">Talk through the numbers</a>
+          <a class="dc2-btn dc2-btn--dark" href="https://develop-coaching.com/schedule-a-call/" data-analytics-location="investment">Talk through the numbers</a>
         </div>
 
         <div class="dc2-faq">
@@ -277,7 +277,7 @@
             Book a free 15-minute Scale Session. If the Mastermind is not the right fit, you will
             still leave knowing what to fix first.
           </p>
-          <a class="dc2-btn" href="https://develop-coaching.com/schedule-a-call/">Book your free Scale Session</a>
+          <a class="dc2-btn" href="https://develop-coaching.com/schedule-a-call/" data-analytics-location="final">Book your free Scale Session</a>
         </div>
       </div>
     </section>
@@ -296,14 +296,53 @@
 
   <div class="dc2-sticky">
     <span>Ready to build the plan?</span>
-    <a href="https://develop-coaching.com/schedule-a-call/">Book a Scale Session</a>
+    <a href="https://develop-coaching.com/schedule-a-call/" data-analytics-location="sticky">Book a Scale Session</a>
   </div>
 
   <script>
     (() => {
+      const pushEvent = (name, parameters) => {
+        if (typeof window.ga4Event !== "function") return false;
+        window.ga4Event("event", name, parameters);
+        return true;
+      };
+
+      document.querySelectorAll('.dc2-page a[data-analytics-location][href*="/schedule-a-call/"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const parameters = {
+            cta_location: link.dataset.analyticsLocation,
+            cta_text: link.textContent.trim(),
+          };
+          const regularNavigation = event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+          if (regularNavigation) {
+            event.preventDefault();
+            let navigated = false;
+            const navigate = () => {
+              if (navigated) return;
+              navigated = true;
+              window.location.href = link.href;
+            };
+            const fallback = window.setTimeout(navigate, 900);
+            parameters.event_callback = () => {
+              window.clearTimeout(fallback);
+              navigate();
+            };
+            parameters.event_timeout = 800;
+          }
+          const sent = pushEvent("mastermind_cta_click", parameters);
+          if (regularNavigation && !sent) navigate();
+        });
+      });
+
       document.querySelectorAll(".dc2-youtube__poster").forEach((link) => {
         link.addEventListener("click", (event) => {
           event.preventDefault();
+          const card = link.closest("article");
+          const name = card ? card.querySelector("div:nth-of-type(2) > p") : null;
+          pushEvent("mastermind_testimonial_video_start", {
+            video_id: link.dataset.videoId,
+            testimonial_name: name ? name.textContent.trim() : "",
+          });
           const iframe = document.createElement("iframe");
           iframe.src = `https://www.youtube-nocookie.com/embed/${link.dataset.videoId}?autoplay=1`;
           iframe.title = link.getAttribute("aria-label");
