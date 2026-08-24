@@ -59,6 +59,14 @@ def main() -> None:
         "designed body present",
         'class="dc2-page"' in html and "Five pillars. One plan." in html,
     )
+    check("landing nav present", html.count('class="dc2-nav__links"') == 1)
+    check("five pillar icons present", html.count('class="dc2-pillar-icon"') == 5)
+    check("four software cards present", html.count("<article><span>0") == 4)
+    check("nine testimonial videos present", html.count('class="dc2-youtube"') == 9)
+    check(
+        "testimonial qualifiers removed",
+        "projected" not in html.lower() and "forecast" not in html.lower(),
+    )
     check("site chrome present", "<header" in html and "<footer" in html)
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
     schema_match = re.search(
