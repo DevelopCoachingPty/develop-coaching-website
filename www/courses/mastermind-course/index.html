@@ -1671,8 +1671,10 @@ body {
     top: calc(100% + 0.75rem);
     right: 0;
     width: 220px;
+    max-height: min(72vh, 620px);
     padding: 0.65rem;
     display: grid;
+    overflow-y: auto;
     border: 1px solid var(--dc2-line);
     background: var(--dc2-white);
     box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
@@ -1683,6 +1685,18 @@ body {
     color: #353b41;
     font-size: 0.78rem;
     font-weight: 700;
+  }
+
+  .dc2-nav__mobile span {
+    margin: 0.45rem 0.65rem 0.2rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--dc2-line);
+    color: var(--dc2-blue);
+    font-family: var(--dc2-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .dc2-hero__grid,
@@ -2005,7 +2019,18 @@ body {
       <summary>Menu</summary>
       <div>
         <a href="https://develop-coaching.com/">Home</a>
-        <a href="https://develop-coaching.com/courses/mastermind-course/">How We Help</a>
+        <span>How We Help</span>
+        <a href="https://develop-coaching.com/courses/mastermind-course/">Develop Mastermind</a>
+        <a href="https://develop-coaching.com/courses/win-big-clients/">Win Big Clients</a>
+        <span>Trades</span>
+        <a href="https://develop-coaching.com/">Builders</a>
+        <a href="https://develop-coaching.com/carpentry-business-coach/">Carpentry</a>
+        <a href="https://develop-coaching.com/decorating-business-coach/">Decorating</a>
+        <a href="https://develop-coaching.com/electrical-business-coach/">Electrical</a>
+        <a href="https://develop-coaching.com/groundwork-business-coach/">Groundwork</a>
+        <a href="https://develop-coaching.com/landscaping-business-coach/">Landscaping</a>
+        <a href="https://develop-coaching.com/plastering-business-coach/">Plastering</a>
+        <a href="https://develop-coaching.com/plumbing-business-coach/">Plumbing</a>
         <a href="https://develop-coaching.com/5-pillars-free-trainings/">Free Trainings</a>
         <a href="https://develop-coaching.com/client-wins/">Client Wins</a>
         <a href="https://develop-coaching.com/about-greg-wilkes/">My Story</a>
@@ -2072,7 +2097,7 @@ body {
         </article>
         <article class="dc2-result-strip__item">
           <img src="https://i.ytimg.com/vi/D-M9a1i4PQU/hqdefault.jpg" alt="James Overton, Develop Coaching member">
-          <div><p>James Overton</p><strong>£1.5m <span>to £4m</span></strong><small>Structure for a design, build and development group</small></div>
+          <div><p>James Overton</p><strong>£1.5m <span>towards £4m</span></strong><small>Structure for a design, build and development group</small></div>
         </article>
         <article class="dc2-result-strip__item">
           <img src="https://i.ytimg.com/vi/H1eWYQjMaFA/hqdefault.jpg" alt="Stephen and Salina, Develop Coaching members">
@@ -2233,7 +2258,7 @@ body {
         </div>
 
         <div class="dc2-video-grid">
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/D-M9a1i4PQU" title="James Overton testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>James Overton</p><strong>£1.5m to £4m</strong><blockquote>“The main thing we've taken from Develop is structure, operationally, non-operationally, across the company on every level.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/D-M9a1i4PQU" title="James Overton testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>James Overton</p><strong>Scaling from £1.5m towards £4m</strong><blockquote>“The main thing we've taken from Develop is structure, operationally, non-operationally, across the company on every level.”</blockquote></div></article>
           <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/snrx2DrLISg" title="Mike and Nick testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Mike &amp; Nick</p><strong>£35k to £80k a month</strong><blockquote>“Greg has been that critical and pivotal point.”</blockquote></div></article>
           <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/H1eWYQjMaFA" title="Stephen and Salina testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Stephen &amp; Salina</p><strong>£900k sales in one month</strong><blockquote>“Our sales just for December were just over £900,000.”</blockquote></div></article>
           <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/oktEjmz9B6s" title="Dominic Marchant testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Dominic Marchant</p><strong>Labourer developed into site manager</strong><blockquote>“You'd be surprised by the feeling of suddenly having money in your bank because you're working.”</blockquote></div></article>

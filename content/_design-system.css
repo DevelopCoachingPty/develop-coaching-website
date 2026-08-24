@@ -1298,8 +1298,10 @@ body {
     top: calc(100% + 0.75rem);
     right: 0;
     width: 220px;
+    max-height: min(72vh, 620px);
     padding: 0.65rem;
     display: grid;
+    overflow-y: auto;
     border: 1px solid var(--dc2-line);
     background: var(--dc2-white);
     box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
@@ -1310,6 +1312,18 @@ body {
     color: #353b41;
     font-size: 0.78rem;
     font-weight: 700;
+  }
+
+  .dc2-nav__mobile span {
+    margin: 0.45rem 0.65rem 0.2rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--dc2-line);
+    color: var(--dc2-blue);
+    font-family: var(--dc2-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .dc2-hero__grid,
