@@ -5,16 +5,18 @@ https://develop-coaching.com/courses/mastermind-course/
 
 ## Current baseline
 
-- Production source supplied for this work: commit `700d428`.
-- The live page returns HTTP 200, declares itself canonical and allows indexing.
-- The page is present in `courses-sitemap.xml` with `lastmod` 2026-08-24.
-- The live page currently contains nine testimonial players and no `VideoObject` nodes.
-- GTM container `GTM-T4HBRD3` fires a live page view to GA4 measurement ID `G-PXT2VCVFLW`.
-- Exact Google indexing status is pending authorised Search Console URL Inspection access.
-- Search Console clicks, impressions, CTR and position are pending authorised access.
-- GA4 users, sessions, engagement and conversions are pending authorised Analytics Data API access.
+- Production commit `a5923bf` is deployed. The live page returns HTTP 200, declares itself canonical and contains nine visible testimonial summaries plus nine `VideoObject` nodes.
+- Search Console URL Inspection reports `PASS`, `Submitted and indexed`, mobile crawl, successful fetch and matching Google and user canonicals. The last recorded crawl was 4 August 2026, before the video schema deployment, so video rich results are not yet detected.
+- The submitted sitemap index has zero warnings and zero errors. Search Console also reports the page through `sitemap.xml`, `sitemap_index.xml` and the course sitemap.
+- Search Console 28-day baseline, 26 July to 22 August: 3 clicks, 374 impressions, 0.80% CTR and average position 24.1.
+- Search Console 90-day baseline, 25 May to 22 August: 6 clicks, 1,144 impressions, 0.52% CTR and average position 19.7.
+- Highest-impression 90-day non-brand queries include `construction business coach` at 77 impressions and position 10.4, `mastermind course` at 64 and position 13.7, `construction business coaching` at 46 and position 10.6, and `business coaching for construction` at 46 and position 9.3. Query rows do not expose the terms behind the six aggregate clicks because Search Console withholds some query data.
+- GA4 measurement ID `G-PXT2VCVFLW` maps to property `391358782`. The 28-day baseline, 27 July to 23 August, is 62 views, 40 users, 55 sessions, 37 engaged sessions and 67.3% engagement.
+- The GA4 90-day baseline, 26 May to 23 August, is 159 views, 91 users, 137 sessions, 106 engaged sessions and 77.4% engagement.
+- Over 90 days, the largest session sources were direct with 58 sessions, Google organic with 56, FlowBuild referral with 6, Bing organic with 4 and ChatGPT with 2.
+- GA4 records only automatic page, engagement, session, scroll and first-visit events for this page. No CTA, scheduler, booking or video-start event is present, and no key events are recorded. This is a tracking gap, not proof that no conversions occurred.
 
-After deployment, capture Search Console URL Inspection, sitemap discovery and video indexing for the landing page. Record page and query performance over 28 and 90 days. In GA4, record landing-page users, sessions, source and medium, engagement, Scale Session clicks, scheduler starts and confirmed bookings. Record video starts only if that event is implemented and verified.
+Reinspect after Google recrawls the 24 August deployment and record whether video rich results appear. Keep future comparisons on the same canonical URL, property and date-window definitions.
 
 ## Pillar 1: Plan
 
