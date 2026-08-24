@@ -129,17 +129,20 @@ def main() -> None:
         "mastermind_cta_click" in html
         and "mastermind_testimonial_video_start" in html
         and 'window.ga4Event("event", name, parameters)' in html
-        and "parameters.event_callback = navigate" in html
+        and "const fallback = window.setTimeout(navigate, 900)" in html
+        and "window.clearTimeout(fallback)" in html
+        and "if (regularNavigation && !sent) navigate()" in html
         and "parameters.event_timeout = 800" in html
         and "cta_location" in html
         and "testimonial_name" in html,
     )
     check(
         "page-specific GA4 event transport suppresses duplicate page views",
-        html.count("data-ga4-event-transport") == 2
+        html.count("data-ga4-event-transport") == 1
         and "G-PXT2VCVFLW" in html
         and "ga4EventLayer" in html
-        and "send_page_view: false" in html,
+        and "send_page_view:false" in html
+        and "if(previewHost&&!tagAssistant) return" in html,
     )
     schedule_path = os.path.join(designed.pp.WWW, "schedule-a-call", "index.html")
     with open(schedule_path, encoding="utf-8") as handle:
@@ -149,13 +152,15 @@ def main() -> None:
         "scale_session_scheduler_start" in schedule_html
         and "d.activeElement" in schedule_html
         and "w.ga4Event('event','scale_session_scheduler_start'" in schedule_html
+        and "if(typeof w.ga4Event!=='function') return" in schedule_html
         and "https://link.flow-build.com/widget/booking/" in schedule_html,
     )
     check(
         "schedule page GA4 event transport suppresses duplicate page views",
-        schedule_html.count("data-ga4-event-transport") == 2
+        schedule_html.count("data-ga4-event-transport") == 1
         and "ga4EventLayer" in schedule_html
-        and "send_page_view: false" in schedule_html,
+        and "send_page_view:false" in schedule_html
+        and "if(previewHost&&!tagAssistant) return" in schedule_html,
     )
     check(
         "nine visible transcript summaries present",

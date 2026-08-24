@@ -302,7 +302,9 @@
   <script>
     (() => {
       const pushEvent = (name, parameters) => {
+        if (typeof window.ga4Event !== "function") return false;
         window.ga4Event("event", name, parameters);
+        return true;
       };
 
       document.querySelectorAll('.dc2-page a[data-analytics-location][href*="/schedule-a-call/"]').forEach((link) => {
@@ -320,10 +322,15 @@
               navigated = true;
               window.location.href = link.href;
             };
-            parameters.event_callback = navigate;
+            const fallback = window.setTimeout(navigate, 900);
+            parameters.event_callback = () => {
+              window.clearTimeout(fallback);
+              navigate();
+            };
             parameters.event_timeout = 800;
           }
-          pushEvent("mastermind_cta_click", parameters);
+          const sent = pushEvent("mastermind_cta_click", parameters);
+          if (regularNavigation && !sent) navigate();
         });
       });
 

@@ -43,12 +43,21 @@ CURRENT_MENU_CLASSES = {
     "elementor-item-active",
 }
 
-GA4_EVENT_TRANSPORT = """<script async data-ga4-event-transport src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&amp;l=ga4EventLayer"></script>
-<script data-ga4-event-transport>
-window.ga4EventLayer = window.ga4EventLayer || [];
-window.ga4Event = window.ga4Event || function(){ window.ga4EventLayer.push(arguments); };
-window.ga4Event('js', new Date());
-window.ga4Event('config', 'G-PXT2VCVFLW', {send_page_view: false});
+GA4_EVENT_TRANSPORT = """<script data-ga4-event-transport>
+(function(w,d){
+  var previewHost=location.hostname.endsWith('.vercel.app');
+  var params=new URLSearchParams(location.search);
+  var tagAssistant=params.has('gtm_debug')||params.has('gtm_preview')||params.has('gtm_auth');
+  if(previewHost&&!tagAssistant) return;
+  w.ga4EventLayer=w.ga4EventLayer||[];
+  w.ga4Event=w.ga4Event||function(){w.ga4EventLayer.push(arguments);};
+  var script=d.createElement('script');
+  script.async=true;
+  script.src='https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&l=ga4EventLayer';
+  d.head.appendChild(script);
+  w.ga4Event('js',new Date());
+  w.ga4Event('config','G-PXT2VCVFLW',{send_page_view:false});
+})(window,document);
 </script>"""
 
 

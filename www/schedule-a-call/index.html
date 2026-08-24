@@ -29,12 +29,21 @@
   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T4HBRD3');
-</script><script async data-ga4-event-transport src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&amp;l=ga4EventLayer"></script>
-<script data-ga4-event-transport>
-window.ga4EventLayer = window.ga4EventLayer || [];
-window.ga4Event = window.ga4Event || function(){ window.ga4EventLayer.push(arguments); };
-window.ga4Event('js', new Date());
-window.ga4Event('config', 'G-PXT2VCVFLW', {send_page_view: false});
+</script><script data-ga4-event-transport>
+(function(w,d){
+  var previewHost=location.hostname.endsWith('.vercel.app');
+  var params=new URLSearchParams(location.search);
+  var tagAssistant=params.has('gtm_debug')||params.has('gtm_preview')||params.has('gtm_auth');
+  if(previewHost&&!tagAssistant) return;
+  w.ga4EventLayer=w.ga4EventLayer||[];
+  w.ga4Event=w.ga4Event||function(){w.ga4EventLayer.push(arguments);};
+  var script=d.createElement('script');
+  script.async=true;
+  script.src='https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&l=ga4EventLayer';
+  d.head.appendChild(script);
+  w.ga4Event('js',new Date());
+  w.ga4Event('config','G-PXT2VCVFLW',{send_page_view:false});
+})(window,document);
 </script><script data-conversion-events>
 (function(w,d){
   var schedulerStarted=false;
@@ -44,6 +53,7 @@ window.ga4Event('config', 'G-PXT2VCVFLW', {send_page_view: false});
       if(schedulerStarted||!active||active.tagName!=='IFRAME') return;
       var src=active.getAttribute('src')||'';
       if(src.indexOf('https://link.flow-build.com/widget/booking/')!==0) return;
+      if(typeof w.ga4Event!=='function') return;
       schedulerStarted=true;
       w.ga4Event('event','scale_session_scheduler_start',{
         scheduler_provider:'FlowBuild'
