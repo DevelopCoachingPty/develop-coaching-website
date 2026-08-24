@@ -116,6 +116,32 @@ def main() -> None:
     check("nine high-resolution testimonial images present", html.count("maxresdefault.jpg") >= 9)
     check("testimonial videos load on click", "link.replaceWith(iframe)" in html and "?autoplay=1" in html)
     check(
+        "five Mastermind CTA positions are labelled for analytics",
+        html.count("data-analytics-location=") == 5
+        and all(
+            f'data-analytics-location="{location}"' in html
+            for location in ("hero", "programme", "investment", "final", "sticky")
+        ),
+    )
+    check(
+        "Mastermind CTA and testimonial start events are present",
+        "mastermind_cta_click" in html
+        and "mastermind_testimonial_video_start" in html
+        and 'window.gtag("event", name, parameters)' in html
+        and "cta_location" in html
+        and "testimonial_name" in html,
+    )
+    schedule_path = os.path.join(designed.pp.WWW, "schedule-a-call", "index.html")
+    with open(schedule_path, encoding="utf-8") as handle:
+        schedule_html = handle.read()
+    check(
+        "FlowBuild scheduler start uses iframe focus evidence",
+        "scale_session_scheduler_start" in schedule_html
+        and "d.activeElement" in schedule_html
+        and "w.gtag('event','scale_session_scheduler_start'" in schedule_html
+        and "https://link.flow-build.com/widget/booking/" in schedule_html,
+    )
+    check(
         "nine visible transcript summaries present",
         html.count('class="dc2-transcript-summary"') == 9
         and html.count("<h4>Transcript summary</h4>") == 9,

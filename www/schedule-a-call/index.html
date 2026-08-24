@@ -29,6 +29,24 @@
   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T4HBRD3');
+</script><script data-conversion-events>
+(function(w,d){
+  w.dataLayer=w.dataLayer||[];
+  w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};
+  var schedulerStarted=false;
+  w.addEventListener('blur',function(){
+    w.setTimeout(function(){
+      var active=d.activeElement;
+      if(schedulerStarted||!active||active.tagName!=='IFRAME') return;
+      var src=active.getAttribute('src')||'';
+      if(src.indexOf('https://link.flow-build.com/widget/booking/')!==0) return;
+      schedulerStarted=true;
+      w.gtag('event','scale_session_scheduler_start',{
+        scheduler_provider:'FlowBuild'
+      });
+    },0);
+  });
+})(window,document);
 </script>
 <!-- Optimized with WP Meteor v3.4.18 - https://wordpress.org/plugins/wp-meteor/ -->
 	<meta charset="UTF-8">
