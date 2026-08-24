@@ -269,6 +269,27 @@ def main() -> None:
         ),
     )
     check(
+        "non-object testimonial metadata refused",
+        refused(lambda: designed.build_page({**PAYLOAD, "videos": ["invalid"]})),
+    )
+    for field, invalid_value in (
+        ("thumbnail_url", "not-a-url"),
+        ("upload_date", "2026-02-30"),
+        ("duration", "PT2M5"),
+        ("embed_url", "not-a-url"),
+    ):
+        check(
+            f"invalid testimonial {field} refused",
+            refused(
+                lambda field=field, invalid_value=invalid_value: designed.build_page(
+                    {
+                        **PAYLOAD,
+                        "videos": [{**VERIFIED_VIDEOS[0], field: invalid_value}],
+                    }
+                )
+            ),
+        )
+    check(
         "duplicate testimonial name refused",
         refused(
             lambda: designed.build_page(

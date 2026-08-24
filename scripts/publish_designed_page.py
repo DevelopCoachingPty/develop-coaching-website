@@ -145,6 +145,10 @@ def rewrite_service_jsonld(
     seen_video_names = set()
     seen_video_descriptions = set()
     for video in videos:
+        if not isinstance(video, dict):
+            raise SystemExit(
+                "publish_designed_page: testimonial video must be an object"
+            )
         missing = sorted(required_video_fields - video.keys())
         if missing:
             raise SystemExit(
@@ -168,6 +172,28 @@ def rewrite_service_jsonld(
                 "publish_designed_page: testimonial video description is empty or repeated: "
                 f"{video_description!r}"
             )
+        thumbnail_url = str(video["thumbnail_url"]).strip()
+        upload_date = str(video["upload_date"]).strip()
+        duration = str(video["duration"]).strip()
+        embed_url = str(video["embed_url"]).strip()
+        if not thumbnail_url.startswith("https://") or re.search(r"\s", thumbnail_url):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial thumbnail URL: {thumbnail_url!r}"
+            )
+        try:
+            datetime.date.fromisoformat(upload_date)
+        except ValueError:
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial upload date: {upload_date!r}"
+            ) from None
+        if not re.fullmatch(r"PT\d+M\d+S", duration):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial duration: {duration!r}"
+            )
+        if not embed_url.startswith("https://") or re.search(r"\s", embed_url):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial embed URL: {embed_url!r}"
+            )
         seen_video_ids.add(video_id)
         seen_video_names.add(video_name)
         seen_video_descriptions.add(video_description)
@@ -177,10 +203,10 @@ def rewrite_service_jsonld(
                 "@id": f"{url}#video-{video_id}",
                 "name": video_name,
                 "description": video_description,
-                "thumbnailUrl": str(video["thumbnail_url"]).strip(),
-                "uploadDate": str(video["upload_date"]).strip(),
-                "duration": str(video["duration"]).strip(),
-                "embedUrl": str(video["embed_url"]).strip(),
+                "thumbnailUrl": thumbnail_url,
+                "uploadDate": upload_date,
+                "duration": duration,
+                "embedUrl": embed_url,
                 "publisher": {"@id": org_id},
                 "isPartOf": {"@id": webpage_id},
                 "inLanguage": "en-GB",
