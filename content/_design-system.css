@@ -794,6 +794,75 @@
 
 /* ---------- testimonials ---------- */
 
+/* A compact site-board of outcomes near the top of the page. It gives the
+   programme claim immediate support without repeating the full stories. */
+.dc-proof-ribbon {
+  margin-top: clamp(2rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(150px, 0.6fr);
+  background: var(--blue);
+  color: #fff;
+  border-top: 5px solid var(--yellow);
+}
+
+.dc-proof-ribbon__item,
+.dc-proof-ribbon__link {
+  padding: clamp(1.15rem, 2.4vw, 1.7rem);
+}
+
+.dc-proof-ribbon__item {
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.dc-proof-ribbon__name,
+.dc-proof-card__type {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.3;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dc-proof-ribbon__name {
+  color: var(--yellow);
+  margin-bottom: 0.55rem;
+}
+
+.dc-proof-ribbon strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.18rem, 1rem + 0.65vw, 1.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.dc-proof-ribbon__item p {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dc-proof-ribbon__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+.dc-proof-ribbon__link:hover {
+  color: var(--ink);
+  background: #fff;
+}
+
 .dc-testimonial {
   background: #fff;
   border: 1px solid var(--line);
@@ -871,6 +940,122 @@
   color: var(--orange);
   font-size: 0.95rem;
   letter-spacing: 0.08em;
+}
+
+/* The main proof wall borrows from a contractor's project ledger: outcome
+   first, member voice second, with two larger entries breaking the grid. */
+.dc-proof-wall {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--line-dark);
+  border: 1px solid var(--line-dark);
+}
+
+.dc-proof-card {
+  min-height: 255px;
+  padding: clamp(1.3rem, 2.5vw, 1.9rem);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.dc-proof-card--feature {
+  grid-column: span 2;
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.dc-proof-card__type {
+  color: var(--yellow);
+  margin-bottom: 0.8rem;
+}
+
+.dc-proof-card--feature .dc-proof-card__type,
+.dc-proof-card--feature .dc-testimonial__name {
+  color: var(--blue);
+}
+
+.dc-proof-card__result {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.55rem, 1.15rem + 1.25vw, 2.45rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.dc-proof-card__result span {
+  display: block;
+  color: var(--yellow);
+}
+
+.dc-proof-card--feature .dc-proof-card__result span {
+  color: var(--blue);
+}
+
+.dc-proof-card blockquote {
+  margin: auto 0 1rem;
+  padding-top: 1.3rem;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.dc-proof-card--feature blockquote {
+  color: rgba(18, 24, 30, 0.82);
+}
+
+.dc-proof-more {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.dc-proof-more a {
+  color: var(--yellow);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .dc-proof-ribbon {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dc-proof-ribbon__link {
+    grid-column: 1 / -1;
+  }
+
+  .dc-proof-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .dc-proof-ribbon,
+  .dc-proof-wall {
+    grid-template-columns: 1fr;
+  }
+
+  .dc-proof-ribbon__item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .dc-proof-card,
+  .dc-proof-card--feature {
+    grid-column: auto;
+    min-height: 230px;
+  }
+
+  .dc-proof-more {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 /* A compact strip for the wins that do not have a video. */

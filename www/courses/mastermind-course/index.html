@@ -1154,6 +1154,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 /* ---------- testimonials ---------- */
 
+/* A compact site-board of outcomes near the top of the page. It gives the
+   programme claim immediate support without repeating the full stories. */
+.dc-proof-ribbon {
+  margin-top: clamp(2rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(150px, 0.6fr);
+  background: var(--blue);
+  color: #fff;
+  border-top: 5px solid var(--yellow);
+}
+
+.dc-proof-ribbon__item,
+.dc-proof-ribbon__link {
+  padding: clamp(1.15rem, 2.4vw, 1.7rem);
+}
+
+.dc-proof-ribbon__item {
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.dc-proof-ribbon__name,
+.dc-proof-card__type {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.3;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dc-proof-ribbon__name {
+  color: var(--yellow);
+  margin-bottom: 0.55rem;
+}
+
+.dc-proof-ribbon strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.18rem, 1rem + 0.65vw, 1.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.dc-proof-ribbon__item p {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dc-proof-ribbon__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+.dc-proof-ribbon__link:hover {
+  color: var(--ink);
+  background: #fff;
+}
+
 .dc-testimonial {
   background: #fff;
   border: 1px solid var(--line);
@@ -1231,6 +1300,122 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   color: var(--orange);
   font-size: 0.95rem;
   letter-spacing: 0.08em;
+}
+
+/* The main proof wall borrows from a contractor's project ledger: outcome
+   first, member voice second, with two larger entries breaking the grid. */
+.dc-proof-wall {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--line-dark);
+  border: 1px solid var(--line-dark);
+}
+
+.dc-proof-card {
+  min-height: 255px;
+  padding: clamp(1.3rem, 2.5vw, 1.9rem);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.dc-proof-card--feature {
+  grid-column: span 2;
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.dc-proof-card__type {
+  color: var(--yellow);
+  margin-bottom: 0.8rem;
+}
+
+.dc-proof-card--feature .dc-proof-card__type,
+.dc-proof-card--feature .dc-testimonial__name {
+  color: var(--blue);
+}
+
+.dc-proof-card__result {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.55rem, 1.15rem + 1.25vw, 2.45rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.dc-proof-card__result span {
+  display: block;
+  color: var(--yellow);
+}
+
+.dc-proof-card--feature .dc-proof-card__result span {
+  color: var(--blue);
+}
+
+.dc-proof-card blockquote {
+  margin: auto 0 1rem;
+  padding-top: 1.3rem;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.dc-proof-card--feature blockquote {
+  color: rgba(18, 24, 30, 0.82);
+}
+
+.dc-proof-more {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.dc-proof-more a {
+  color: var(--yellow);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .dc-proof-ribbon {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dc-proof-ribbon__link {
+    grid-column: 1 / -1;
+  }
+
+  .dc-proof-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .dc-proof-ribbon,
+  .dc-proof-wall {
+    grid-template-columns: 1fr;
+  }
+
+  .dc-proof-ribbon__item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .dc-proof-card,
+  .dc-proof-card--feature {
+    grid-column: auto;
+    min-height: 230px;
+  }
+
+  .dc-proof-more {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 /* A compact strip for the wins that do not have a video. */
@@ -1333,15 +1518,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section class="dc-section" id="programme">
-  <div class="dc-wrap dc-narrow">
-    <p class="dc-label">01 / The programme</p>
-    <p class="dc-lead">
-      The Develop Mastermind is run by Develop Coaching, founded by Greg Wilkes, author of the
-      number 1 Amazon bestseller
-      <a href="https://develop-coaching.com/download-book/"><strong>Building Your Future</strong></a>,
-      and named Best Construction Training Company 2024. We've helped
-      <span class="dc-mark">300+ builders scale towards 5 million</span>. Some have gone way past that.
-    </p>
+  <div class="dc-wrap">
+    <div class="dc-narrow">
+      <p class="dc-label">01 / The programme</p>
+      <p class="dc-lead">
+        The Develop Mastermind is run by Develop Coaching, founded by Greg Wilkes, author of the
+        number 1 Amazon bestseller
+        <a href="https://develop-coaching.com/download-book/"><strong>Building Your Future</strong></a>,
+        and named Best Construction Training Company 2024. We've helped
+        <span class="dc-mark">300+ builders scale towards 5 million</span>. Some have gone way past that.
+      </p>
+    </div>
+
+    <div class="dc-proof-ribbon" aria-label="Selected member results">
+      <div class="dc-proof-ribbon__item">
+        <span class="dc-proof-ribbon__name">Dan</span>
+        <strong>&pound;470k <span aria-hidden="true">&rarr;</span> &pound;700k&ndash;&pound;800k</strong>
+        <p>Projected turnover after six months of coaching.</p>
+      </div>
+      <div class="dc-proof-ribbon__item">
+        <span class="dc-proof-ribbon__name">James O</span>
+        <strong>&pound;2m <span aria-hidden="true">&rarr;</span> &pound;4m&ndash;&pound;4.5m</strong>
+        <p>Forecast annual revenue after reaching &pound;2 million by Q2.</p>
+      </div>
+      <div class="dc-proof-ribbon__item">
+        <span class="dc-proof-ribbon__name">Richard</span>
+        <strong>&pound;750k <span aria-hidden="true">&rarr;</span> &pound;1.1m</strong>
+        <p>Turnover growth alongside better delegation.</p>
+      </div>
+      <a class="dc-proof-ribbon__link" href="#results">8 member stories below <span aria-hidden="true">&darr;</span></a>
+    </div>
   </div>
 </section>
 
@@ -1521,8 +1727,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="dc-wrap">
     <div class="dc-section-head">
       <p class="dc-label">06 / Proof</p>
-      <h2 class="dc-h2">Hear it from members</h2>
-      <p class="dc-lead">Real builders, in their own words, with the numbers underneath.</p>
+      <h2 class="dc-h2">8 builders.<br>One pattern.</h2>
+      <p class="dc-lead">Real members, real construction businesses and results taken directly from their stories.</p>
     </div>
 
     <div class="dc-grid dc-grid--3">
@@ -1534,7 +1740,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="dc-testimonial__body">
           <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p class="dc-testimonial__quote">&ldquo;You will earn more, retain more and have less stress&rdquo;</p>
+          <p class="dc-testimonial__quote">&ldquo;Everyone needs a coach in life. Greg has been that critical and pivotal point.&rdquo;</p>
           <p class="dc-testimonial__jump"><span class="from">&pound;35k</span> <span class="to">&pound;80k a month</span></p>
           <p class="dc-testimonial__name">Mike &amp; Nick</p>
         </div>
@@ -1548,8 +1754,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="dc-testimonial__body">
           <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p class="dc-testimonial__quote">&ldquo;Over &pound;900k delivered in a single December&rdquo;</p>
-          <p class="dc-testimonial__jump"><span class="from">&pound;870k</span> <span class="to">&pound;1.4m</span></p>
+          <p class="dc-testimonial__quote">&ldquo;Our sales just for December were just over &pound;900,000, just for the one month.&rdquo;</p>
+          <p class="dc-testimonial__jump"><span class="from">&pound;870k</span> <span class="to">&pound;1.4m projected</span></p>
           <p class="dc-testimonial__name">Stephen &amp; Salina</p>
         </div>
       </article>
@@ -1562,34 +1768,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="dc-testimonial__body">
           <p class="dc-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-          <p class="dc-testimonial__quote">&ldquo;You will free up your time, earn more and have less stress&rdquo;</p>
+          <p class="dc-testimonial__quote">&ldquo;It's freed up most of my time.&rdquo;</p>
           <p class="dc-testimonial__name">Valy</p>
         </div>
       </article>
     </div>
 
-    <div class="dc-wins">
-      <div class="dc-win">
-        <span class="dc-win__name">Owain</span>
-        <span class="dc-win__jump">&pound;550k <span class="to">&rarr; &pound;2m</span></span>
-        <p>In 18 months, with a team of 25 and 30% margins on commercial work.</p>
-      </div>
-      <div class="dc-win">
-        <span class="dc-win__name">James &amp; Kate</span>
-        <span class="dc-win__jump">&pound;1.9m <span class="to">&rarr; &pound;4m</span></span>
-        <p>A loss-making business, profitable for the first time in years.</p>
-      </div>
-      <div class="dc-win">
-        <span class="dc-win__name">Richard</span>
-        <span class="dc-win__jump">&pound;750k <span class="to">&rarr; &pound;1.1m</span></span>
-        <p>Grew from &pound;750,000 to &pound;1.1 million.</p>
-      </div>
-      <div class="dc-win">
-        <span class="dc-win__name">More</span>
-        <span class="dc-win__jump"><span class="to">Client wins</span></span>
-        <p><a href="https://develop-coaching.com/client-wins/">See the full list of member results &rarr;</a></p>
-      </div>
+    <div class="dc-proof-wall" aria-label="More Mastermind member results">
+      <article class="dc-proof-card dc-proof-card--feature dc-rise">
+        <p class="dc-proof-card__type">Annual revenue</p>
+        <p class="dc-proof-card__result">&pound;2m <span>&rarr; &pound;4m&ndash;&pound;4.5m forecast</span></p>
+        <blockquote>&ldquo;The main thing we've taken from Develop is structure - operationally, non-operationally, across the company on every level.&rdquo;</blockquote>
+        <p class="dc-testimonial__name">James O / Design &amp; build</p>
+      </article>
+      <article class="dc-proof-card dc-rise">
+        <p class="dc-proof-card__type">Projected turnover</p>
+        <p class="dc-proof-card__result">&pound;470k <span>&rarr; &pound;700k&ndash;&pound;800k</span></p>
+        <blockquote>&ldquo;There's always somebody there whose got an answer to help you.&rdquo;</blockquote>
+        <p class="dc-testimonial__name">Dan / Construction</p>
+      </article>
+      <article class="dc-proof-card dc-rise">
+        <p class="dc-proof-card__type">Team development</p>
+        <p class="dc-proof-card__result">Labourer <span>&rarr; site manager</span></p>
+        <blockquote>&ldquo;You've got to have a target, and I think that's the difference, isn't it?&rdquo;</blockquote>
+        <p class="dc-testimonial__name">Dominic / Construction</p>
+      </article>
+      <article class="dc-proof-card dc-rise">
+        <p class="dc-proof-card__type">Turnover</p>
+        <p class="dc-proof-card__result">&pound;750k <span>&rarr; &pound;1.1m</span></p>
+        <blockquote>&ldquo;Everything within the system has become more efficient, everything's been more streamlined.&rdquo;</blockquote>
+        <p class="dc-testimonial__name">Richard / Construction</p>
+      </article>
+      <article class="dc-proof-card dc-rise">
+        <p class="dc-proof-card__type">Confidence and direction</p>
+        <p class="dc-proof-card__result">Trade owner <span>&rarr; business leader</span></p>
+        <blockquote>&ldquo;Most of us are from a trade background and we're not businessmen.&rdquo;</blockquote>
+        <p class="dc-testimonial__name">Tim / Construction</p>
+      </article>
     </div>
+
+    <p class="dc-proof-more">
+      These are selected stories from more than 300 builders helped.
+      <a href="https://develop-coaching.com/client-wins/">See more client wins <span aria-hidden="true">&rarr;</span></a>
+    </p>
   </div>
 </section>
 
