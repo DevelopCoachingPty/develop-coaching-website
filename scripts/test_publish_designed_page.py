@@ -69,11 +69,17 @@ def main() -> None:
     )
     check(
         "main site navigation present",
-        html.count('class="dc2-nav__links"') == 1
+        'class="elementor elementor-4222 elementor-location-header"' in html
+        and 'class="dc2-nav__links"' not in html
         and "Free Trainings" in html
         and "Client Wins" in html
         and "My Story" in html
         and "Podcast" in html,
+    )
+    check(
+        "main site header is visible and only the shell footer is hidden",
+        ".elementor-location-header,\n.elementor-location-footer" not in html
+        and ".elementor-location-footer {\n  display: none !important;" in html,
     )
     check("five pillar icons present", html.count('class="dc2-pillar-icon"') == 5)
     check("four software cards present", html.count("<article><span>0") == 4)
