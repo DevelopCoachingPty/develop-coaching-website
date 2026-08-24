@@ -70,6 +70,13 @@ def main() -> None:
         if node.get("@id") == designed.pp.AUTHOR_ID
     ]
     check("JSON-LD has one canonical author", len(authors) == 1)
+    schema_text = json.dumps(schema, separators=(",", ":"))
+    check(
+        "JSON-LD drops shell page identity",
+        "/about-greg-wilkes/#webpage" not in schema_text
+        and '"@type":"AboutPage"' not in schema_text
+        and '"@type":"VideoObject"' not in schema_text,
+    )
     check(
         "traversal slug refused",
         refused(lambda: designed.build_page({**PAYLOAD, "slug": "../../tmp/escape"})),

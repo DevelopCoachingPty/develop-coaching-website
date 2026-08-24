@@ -158,7 +158,7 @@ def build_page(payload: dict) -> str:
 
     return (
         f"{head}\n{fonts}\n{style}\n"
-        f'<main class="dc-page">\n{content.strip()}\n</main>\n{footer}'
+        f'<div class="dc-page">\n{content.strip()}\n</div>\n{footer}'
     )
 
 

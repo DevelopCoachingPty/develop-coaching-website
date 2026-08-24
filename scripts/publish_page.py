@@ -139,12 +139,14 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             node["datePublished"] = date
             node["dateModified"] = date
             node["url"] = url
+            node["isPartOf"] = {"@id": url}
             node["mainEntityOfPage"] = {"@id": url}
             if image:
                 node["image"] = {"@type": "ImageObject", "url": image}
             else:
                 node.pop("image", None)
-        elif "WebPage" in types:
+        elif any(isinstance(node_type, str) and node_type.endswith("Page") for node_type in types):
+            node["@type"] = "WebPage"
             node["@id"] = url
             node["url"] = url
             node["name"] = title
@@ -170,6 +172,13 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
         if node.get("@type") == "ImageObject" and "gravatar.com" in node_id:
             return True
         if node.get("@type") == "Person" and "/author/" in node_id:
+            return True
+        # Video schema belongs to the shell page's own body. Designed pages
+        # replace that body completely, so retaining these nodes would describe
+        # videos that are no longer present and preserve the shell page URL.
+        node_types = node.get("@type")
+        node_types = node_types if isinstance(node_types, list) else [node_types]
+        if "VideoObject" in node_types:
             return True
         return False
 
