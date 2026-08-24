@@ -12,6 +12,12 @@ import tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import publish_designed_page as designed  # noqa: E402
 
+with open(
+    os.path.join(designed.pp.ROOT, "content", "mastermind-page.json"),
+    encoding="utf-8",
+) as handle:
+    VERIFIED_VIDEOS = json.load(handle)["videos"]
+
 
 PAYLOAD = {
     "title": "The Develop Mastermind: Coaching for Builders Doing £750k to £5m",
@@ -25,6 +31,7 @@ PAYLOAD = {
     "image_width": 1280,
     "image_height": 720,
     "image_alt": "The Develop Mastermind coaching programme for UK construction business owners",
+    "videos": VERIFIED_VIDEOS,
 }
 
 failures = []
@@ -106,8 +113,13 @@ def main() -> None:
     check("nine testimonial videos present", html.count('class="dc2-youtube"') == 9)
     check("nine poster-first testimonials present", html.count('class="dc2-youtube__poster"') == 9)
     check("testimonial player receives keyboard focus", "iframe.tabIndex = 0" in html and "iframe.focus()" in html)
-    check("nine high-resolution testimonial images present", html.count("maxresdefault.jpg") == 9)
+    check("nine high-resolution testimonial images present", html.count("maxresdefault.jpg") >= 9)
     check("testimonial videos load on click", "link.replaceWith(iframe)" in html and "?autoplay=1" in html)
+    check(
+        "nine visible transcript summaries present",
+        html.count('class="dc2-transcript-summary"') == 9
+        and html.count("<h4>Transcript summary</h4>") == 9,
+    )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
         "official Develop Coaching palette present",
@@ -166,10 +178,10 @@ def main() -> None:
         "JSON-LD drops shell page identity",
         "/about-greg-wilkes/#webpage" not in schema_text
         and '"@type":"AboutPage"' not in schema_text
-        and '"@type":"VideoObject"' not in schema_text,
     )
     graph = schema.get("@graph", [])
     services = [node for node in graph if node.get("@type") == "Service"]
+    videos = [node for node in graph if node.get("@type") == "VideoObject"]
     organizations = [
         node for node in graph if node.get("@id") == f"{designed.pp.DOMAIN}/#organization"
     ]
@@ -196,6 +208,29 @@ def main() -> None:
         and webpages[0].get("mainEntity", {}).get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/#service",
     )
     check("JSON-LD has no Article node", not any(node.get("@type") == "Article" for node in graph))
+    check(
+        "JSON-LD has nine complete testimonial videos",
+        len(videos) == 9
+        and len({node.get("@id") for node in videos}) == 9
+        and len({node.get("name") for node in videos}) == 9
+        and len({node.get("description") for node in videos}) == 9
+        and all(
+            node.get("name")
+            and node.get("description")
+            and node.get("thumbnailUrl", "").startswith("https://i.ytimg.com/vi/")
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", node.get("uploadDate", ""))
+            and re.fullmatch(r"PT\d+M\d+S", node.get("duration", ""))
+            and node.get("embedUrl", "").startswith("https://www.youtube.com/embed/")
+            and node.get("publisher", {}).get("@id") == f"{designed.pp.DOMAIN}/#organization"
+            and node.get("isPartOf", {}).get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/"
+            and "contentUrl" not in node
+            for node in videos
+        ),
+    )
+    check(
+        "schema descriptions match visible summaries",
+        all(node["description"] in html for node in videos),
+    )
     check(
         "social image metadata is consistent",
         html.count('content="https://develop-coaching.com/wp-content/uploads/2026/08/mastermind-poster.jpg"') >= 3
@@ -224,6 +259,66 @@ def main() -> None:
     check(
         "content escape refused",
         refused(lambda: designed.build_page({**PAYLOAD, "content_file": "/etc/passwd"})),
+    )
+    check(
+        "incomplete testimonial metadata refused",
+        refused(
+            lambda: designed.build_page(
+                {**PAYLOAD, "videos": [{"id": "missing-fields"}]}
+            )
+        ),
+    )
+    check(
+        "non-object testimonial metadata refused",
+        refused(lambda: designed.build_page({**PAYLOAD, "videos": ["invalid"]})),
+    )
+    for field, invalid_value in (
+        ("thumbnail_url", "not-a-url"),
+        ("upload_date", "2026-02-30"),
+        ("duration", "PT2M5"),
+        ("embed_url", "not-a-url"),
+    ):
+        check(
+            f"invalid testimonial {field} refused",
+            refused(
+                lambda field=field, invalid_value=invalid_value: designed.build_page(
+                    {
+                        **PAYLOAD,
+                        "videos": [{**VERIFIED_VIDEOS[0], field: invalid_value}],
+                    }
+                )
+            ),
+        )
+    check(
+        "duplicate testimonial name refused",
+        refused(
+            lambda: designed.build_page(
+                {
+                    **PAYLOAD,
+                    "videos": [
+                        VERIFIED_VIDEOS[0],
+                        {**VERIFIED_VIDEOS[1], "name": VERIFIED_VIDEOS[0]["name"]},
+                    ],
+                }
+            )
+        ),
+    )
+    check(
+        "duplicate testimonial description refused",
+        refused(
+            lambda: designed.build_page(
+                {
+                    **PAYLOAD,
+                    "videos": [
+                        VERIFIED_VIDEOS[0],
+                        {
+                            **VERIFIED_VIDEOS[1],
+                            "description": VERIFIED_VIDEOS[0]["description"],
+                        },
+                    ],
+                }
+            )
+        ),
     )
     check(
         "CSS escape refused",

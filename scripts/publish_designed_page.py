@@ -72,8 +72,9 @@ def rewrite_service_jsonld(
     image: str,
     image_width: int,
     image_height: int,
+    videos: list[dict],
 ) -> str:
-    """Describe a commercial coaching page as a Service, not an Article."""
+    """Describe the coaching page and its verified testimonial videos."""
     pattern = re.compile(
         r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S
     )
@@ -130,6 +131,87 @@ def rewrite_service_jsonld(
             "mainEntityOfPage": {"@id": webpage_id},
         }
     )
+
+    required_video_fields = {
+        "id",
+        "name",
+        "description",
+        "thumbnail_url",
+        "upload_date",
+        "duration",
+        "embed_url",
+    }
+    seen_video_ids = set()
+    seen_video_names = set()
+    seen_video_descriptions = set()
+    for video in videos:
+        if not isinstance(video, dict):
+            raise SystemExit(
+                "publish_designed_page: testimonial video must be an object"
+            )
+        missing = sorted(required_video_fields - video.keys())
+        if missing:
+            raise SystemExit(
+                "publish_designed_page: testimonial video is missing fields: "
+                + ", ".join(missing)
+            )
+        video_id = str(video["id"]).strip()
+        if not video_id or video_id in seen_video_ids:
+            raise SystemExit(
+                f"publish_designed_page: testimonial video id is empty or repeated: {video_id!r}"
+            )
+        video_name = str(video["name"]).strip()
+        if not video_name or video_name in seen_video_names:
+            raise SystemExit(
+                "publish_designed_page: testimonial video name is empty or repeated: "
+                f"{video_name!r}"
+            )
+        video_description = str(video["description"]).strip()
+        if not video_description or video_description in seen_video_descriptions:
+            raise SystemExit(
+                "publish_designed_page: testimonial video description is empty or repeated: "
+                f"{video_description!r}"
+            )
+        thumbnail_url = str(video["thumbnail_url"]).strip()
+        upload_date = str(video["upload_date"]).strip()
+        duration = str(video["duration"]).strip()
+        embed_url = str(video["embed_url"]).strip()
+        if not thumbnail_url.startswith("https://") or re.search(r"\s", thumbnail_url):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial thumbnail URL: {thumbnail_url!r}"
+            )
+        try:
+            datetime.date.fromisoformat(upload_date)
+        except ValueError:
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial upload date: {upload_date!r}"
+            ) from None
+        if not re.fullmatch(r"PT\d+M\d+S", duration):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial duration: {duration!r}"
+            )
+        if not embed_url.startswith("https://") or re.search(r"\s", embed_url):
+            raise SystemExit(
+                f"publish_designed_page: invalid testimonial embed URL: {embed_url!r}"
+            )
+        seen_video_ids.add(video_id)
+        seen_video_names.add(video_name)
+        seen_video_descriptions.add(video_description)
+        cleaned.append(
+            {
+                "@type": "VideoObject",
+                "@id": f"{url}#video-{video_id}",
+                "name": video_name,
+                "description": video_description,
+                "thumbnailUrl": thumbnail_url,
+                "uploadDate": upload_date,
+                "duration": duration,
+                "embedUrl": embed_url,
+                "publisher": {"@id": org_id},
+                "isPartOf": {"@id": webpage_id},
+                "inLanguage": "en-GB",
+            }
+        )
     data["@graph"] = cleaned
     replacement = match.group(1) + json.dumps(data, separators=(",", ":")) + match.group(3)
     return head[: match.start()] + replacement + head[match.end() :]
@@ -296,6 +378,7 @@ def build_page(payload: dict) -> str:
         image=image or pp.LOGO,
         image_width=int(payload.get("image_width", 1200)),
         image_height=int(payload.get("image_height", 630)),
+        videos=payload.get("videos", []),
     )
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)
