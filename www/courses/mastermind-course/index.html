@@ -2412,7 +2412,10 @@ body {
           iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
           iframe.referrerPolicy = "strict-origin-when-cross-origin";
           iframe.allowFullscreen = true;
+          iframe.tabIndex = 0;
+          iframe.addEventListener("load", () => iframe.focus(), { once: true });
           link.replaceWith(iframe);
+          iframe.focus();
         });
       });
     })();

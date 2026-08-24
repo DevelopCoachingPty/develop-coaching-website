@@ -71,6 +71,7 @@ def main() -> None:
     check("four software cards present", html.count("<article><span>0") == 4)
     check("nine testimonial videos present", html.count('class="dc2-youtube"') == 9)
     check("nine poster-first testimonials present", html.count('class="dc2-youtube__poster"') == 9)
+    check("testimonial player receives keyboard focus", "iframe.tabIndex = 0" in html and "iframe.focus()" in html)
     check("nine high-resolution testimonial images present", html.count("maxresdefault.jpg") == 9)
     check("testimonial videos load on click", "link.replaceWith(iframe)" in html and "?autoplay=1" in html)
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
