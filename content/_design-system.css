@@ -185,16 +185,16 @@ body {
   min-height: 82px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 125px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: rgba(247, 246, 242, 0.96);
   border-bottom: 1px solid var(--dc2-line);
   backdrop-filter: blur(12px);
 }
 
 .dc2-nav__brand img {
-  width: 145px;
+  width: 125px;
   max-height: 44px;
   object-fit: contain;
 }
@@ -203,17 +203,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 2.4vw, 2.4rem);
+  gap: clamp(0.55rem, 1vw, 0.9rem);
 }
 
-.dc2-nav__links a {
+.dc2-nav__links > a,
+.dc2-nav__links summary {
   position: relative;
   color: #353b41;
-  font-size: 0.78rem;
+  font-size: clamp(0.62rem, 0.72vw, 0.72rem);
   font-weight: 700;
+  white-space: nowrap;
 }
 
-.dc2-nav__links a::after {
+.dc2-nav__links > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -227,6 +229,67 @@ body {
 .dc2-nav__links a:hover::after,
 .dc2-nav__links a:focus-visible::after {
   right: 0;
+}
+
+.dc2-nav__links details {
+  position: relative;
+}
+
+.dc2-nav__links summary,
+.dc2-nav__mobile summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.dc2-nav__links summary::-webkit-details-marker,
+.dc2-nav__mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.dc2-nav__links summary::after {
+  content: "+";
+  margin-left: 0.25rem;
+  color: var(--dc2-blue);
+}
+
+.dc2-nav__links details[open] summary::after {
+  content: "−";
+}
+
+.dc2-nav__dropdown {
+  position: absolute;
+  z-index: 80;
+  top: calc(100% + 1rem);
+  left: -1rem;
+  width: 220px;
+  padding: 0.65rem;
+  display: grid;
+  gap: 0.15rem;
+  border: 1px solid var(--dc2-line);
+  background: var(--dc2-white);
+  box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
+}
+
+.dc2-nav__dropdown--wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 300px;
+}
+
+.dc2-nav__dropdown a {
+  padding: 0.55rem 0.65rem;
+  color: #353b41;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.dc2-nav__dropdown a:hover,
+.dc2-nav__dropdown a:focus-visible {
+  background: var(--dc2-paper);
+  color: var(--dc2-blue);
+}
+
+.dc2-nav__mobile {
+  display: none;
 }
 
 .dc2-hero {
@@ -424,15 +487,15 @@ body {
 
 .dc2-result-strip__item img {
   width: 100%;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 16 / 9;
   display: block;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center;
   filter: saturate(0.82) contrast(1.04);
 }
 
 .dc2-result-strip__item > div {
-  min-height: 180px;
+  min-height: 195px;
   padding: 1.35rem 1.4rem 1.5rem;
 }
 
@@ -446,6 +509,7 @@ body {
 }
 
 .dc2-result-strip__item strong {
+  display: block;
   margin-top: 0.7rem;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
   line-height: 1.05;
@@ -457,6 +521,7 @@ body {
 }
 
 .dc2-result-strip__item small {
+  display: block;
   margin-top: 0.55rem;
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.7rem;
@@ -1205,6 +1270,48 @@ body {
     font-size: clamp(3.3rem, 8.2vw, 5.3rem);
   }
 
+  .dc2-nav {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .dc2-nav__links {
+    display: none;
+  }
+
+  .dc2-nav__mobile {
+    position: relative;
+    display: block;
+    justify-self: end;
+  }
+
+  .dc2-nav__mobile summary {
+    padding: 0.45rem 0.65rem;
+    color: #353b41;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .dc2-nav__mobile > div {
+    position: absolute;
+    z-index: 80;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    width: 220px;
+    padding: 0.65rem;
+    display: grid;
+    border: 1px solid var(--dc2-line);
+    background: var(--dc2-white);
+    box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
+  }
+
+  .dc2-nav__mobile a {
+    padding: 0.55rem 0.65rem;
+    color: #353b41;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
   .dc2-hero__grid,
   .dc2-fit__grid,
   .dc2-offer__grid,
@@ -1290,11 +1397,7 @@ body {
   .dc2-nav {
     width: calc(100% - 32px);
     min-height: 70px;
-    grid-template-columns: 1fr auto;
-  }
-
-  .dc2-nav__links {
-    display: none;
+    grid-template-columns: auto 1fr auto;
   }
 
   .dc2-nav__brand img {

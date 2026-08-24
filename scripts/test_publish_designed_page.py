@@ -59,10 +59,21 @@ def main() -> None:
         "designed body present",
         'class="dc2-page"' in html and "Five pillars. One plan." in html,
     )
-    check("landing nav present", html.count('class="dc2-nav__links"') == 1)
+    check(
+        "main site navigation present",
+        html.count('class="dc2-nav__links"') == 1
+        and "Free Trainings" in html
+        and "Client Wins" in html
+        and "My Story" in html
+        and "Podcast" in html,
+    )
     check("five pillar icons present", html.count('class="dc2-pillar-icon"') == 5)
     check("four software cards present", html.count("<article><span>0") == 4)
     check("nine testimonial videos present", html.count('class="dc2-youtube"') == 9)
+    check("James result updated", html.count("£1.5m to £4m") == 1 and "to £4m</span>" in html)
+    check("Bradley result verified", "From £5k jobs to a £730k project" in html)
+    check("Dale result qualified", "Turnover roughly doubled" in html)
+    check("testimonial footer removed", 'class="dc2-proof__cta"' not in html)
     check(
         "testimonial qualifiers removed",
         "projected" not in html.lower() and "forecast" not in html.lower(),
