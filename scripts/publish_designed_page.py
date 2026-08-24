@@ -35,6 +35,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import publish_page as pp  # noqa: E402
 
 DEFAULT_SHELL = "courses/mastermind-course"
+CURRENT_MENU_CLASSES = {
+    "current-menu-item",
+    "current_page_item",
+    "current-menu-ancestor",
+    "current-menu-parent",
+    "elementor-item-active",
+}
 
 
 def replace_meta(head: str, attribute: str, key: str, value: str) -> str:
@@ -128,6 +135,54 @@ def rewrite_service_jsonld(
     return head[: match.start()] + replacement + head[match.end() :]
 
 
+def rewrite_header_current_page(head: str, slug: str) -> str:
+    """Move the shell header's current-page state to the generated page."""
+    header_start = head.find("<header")
+    header_end = head.find("</header>")
+    if header_start == -1 or header_end == -1:
+        return head
+    header_end += len("</header>")
+    header = head[header_start:header_end]
+
+    def clean_classes(match: re.Match) -> str:
+        classes = [
+            value
+            for value in match.group(1).split()
+            if value not in CURRENT_MENU_CLASSES
+        ]
+        return f'class="{" ".join(classes)}"'
+
+    header = re.sub(r'class="([^"]*)"', clean_classes, header)
+    header = re.sub(r'\s+aria-current="page"', "", header)
+
+    target_href = f'/{slug.strip("/")}/'
+    target_pattern = re.compile(
+        rf'(<li class=")([^"]*)(">\s*<a\s+)([^>]*\bhref="{re.escape(target_href)}"[^>]*)>'
+    )
+
+    def mark_current(match: re.Match) -> str:
+        li_classes = match.group(2).split() + ["current-menu-item", "current_page_item"]
+        attrs = match.group(4)
+        class_match = re.search(r'class="([^"]*)"', attrs)
+        if class_match:
+            anchor_classes = class_match.group(1).split()
+            if "elementor-item-active" not in anchor_classes:
+                anchor_classes.append("elementor-item-active")
+            attrs = (
+                attrs[: class_match.start()]
+                + f'class="{" ".join(anchor_classes)}"'
+                + attrs[class_match.end() :]
+            )
+        else:
+            attrs += ' class="elementor-item-active"'
+        if 'aria-current="page"' not in attrs:
+            attrs += ' aria-current="page"'
+        return match.group(1) + " ".join(li_classes) + match.group(3) + attrs + ">"
+
+    header = target_pattern.sub(mark_current, header)
+    return head[:header_start] + header + head[header_end:]
+
+
 def safe_repo_file(value: str, label: str) -> str:
     """Resolve a payload file inside the repository and refuse escapes."""
     raw = (value or "").strip()
@@ -178,6 +233,7 @@ def build_page(payload: dict) -> str:
     esc = lambda s: htmllib.escape(s, quote=True)
 
     head, footer = split_chrome(html)
+    head = rewrite_header_current_page(head, slug)
 
     # Same SEO slots as the blog publisher, applied to the chrome's <head>.
     head = pp.slot(head, r"<title>.*?</title>", f"<title>{esc(title)}</title>", "<title>", 1)
