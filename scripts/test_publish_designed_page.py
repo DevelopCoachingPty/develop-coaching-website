@@ -81,6 +81,26 @@ def main() -> None:
         ".elementor-location-header,\n.elementor-location-footer" not in html
         and ".elementor-location-footer {\n  display: none !important;" in html,
     )
+    header_html = html[html.find("<header") : html.find("</header>") + len("</header>")]
+    mastermind_anchors = re.findall(
+        r'<a\b[^>]*href="/courses/mastermind-course/"[^>]*>', header_html
+    )
+    my_story_anchors = re.findall(
+        r'<a\b[^>]*href="/about-greg-wilkes/"[^>]*>', header_html
+    )
+    check(
+        "Mastermind is the current shared navigation item",
+        len(mastermind_anchors) == 2
+        and all('aria-current="page"' in anchor for anchor in mastermind_anchors)
+        and all("elementor-item-active" in anchor for anchor in mastermind_anchors)
+        and header_html.count("current-menu-item current_page_item") == 2,
+    )
+    check(
+        "shell page is not marked current in shared navigation",
+        len(my_story_anchors) == 2
+        and all('aria-current="page"' not in anchor for anchor in my_story_anchors)
+        and all("elementor-item-active" not in anchor for anchor in my_story_anchors),
+    )
     check("five pillar icons present", html.count('class="dc2-pillar-icon"') == 5)
     check("four software cards present", html.count("<article><span>0") == 4)
     check("nine testimonial videos present", html.count('class="dc2-youtube"') == 9)
