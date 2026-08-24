@@ -301,30 +301,40 @@
 
   <script>
     (() => {
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function () {
-        window.dataLayer.push(arguments);
-      };
       const pushEvent = (name, parameters) => {
-        window.gtag("event", name, parameters);
+        window.ga4Event("event", name, parameters);
       };
 
       document.querySelectorAll('.dc2-page a[data-analytics-location][href*="/schedule-a-call/"]').forEach((link) => {
-        link.addEventListener("click", () => {
-          pushEvent("mastermind_cta_click", {
+        link.addEventListener("click", (event) => {
+          const parameters = {
             cta_location: link.dataset.analyticsLocation,
             cta_text: link.textContent.trim(),
-          });
+          };
+          const regularNavigation = event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+          if (regularNavigation) {
+            event.preventDefault();
+            let navigated = false;
+            const navigate = () => {
+              if (navigated) return;
+              navigated = true;
+              window.location.href = link.href;
+            };
+            parameters.event_callback = navigate;
+            parameters.event_timeout = 800;
+          }
+          pushEvent("mastermind_cta_click", parameters);
         });
       });
 
       document.querySelectorAll(".dc2-youtube__poster").forEach((link) => {
         link.addEventListener("click", (event) => {
           event.preventDefault();
-          const name = link.closest("article")?.querySelector("div:nth-of-type(2) > p");
+          const card = link.closest("article");
+          const name = card ? card.querySelector("div:nth-of-type(2) > p") : null;
           pushEvent("mastermind_testimonial_video_start", {
             video_id: link.dataset.videoId,
-            testimonial_name: name?.textContent.trim() || "",
+            testimonial_name: name ? name.textContent.trim() : "",
           });
           const iframe = document.createElement("iframe");
           iframe.src = `https://www.youtube-nocookie.com/embed/${link.dataset.videoId}?autoplay=1`;

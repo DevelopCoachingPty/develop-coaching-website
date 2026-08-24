@@ -29,10 +29,14 @@
   j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T4HBRD3');
+</script><script async data-ga4-event-transport src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&amp;l=ga4EventLayer"></script>
+<script data-ga4-event-transport>
+window.ga4EventLayer = window.ga4EventLayer || [];
+window.ga4Event = window.ga4Event || function(){ window.ga4EventLayer.push(arguments); };
+window.ga4Event('js', new Date());
+window.ga4Event('config', 'G-PXT2VCVFLW', {send_page_view: false});
 </script><script data-conversion-events>
 (function(w,d){
-  w.dataLayer=w.dataLayer||[];
-  w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};
   var schedulerStarted=false;
   w.addEventListener('blur',function(){
     w.setTimeout(function(){
@@ -41,7 +45,7 @@
       var src=active.getAttribute('src')||'';
       if(src.indexOf('https://link.flow-build.com/widget/booking/')!==0) return;
       schedulerStarted=true;
-      w.gtag('event','scale_session_scheduler_start',{
+      w.ga4Event('event','scale_session_scheduler_start',{
         scheduler_provider:'FlowBuild'
       });
     },0);

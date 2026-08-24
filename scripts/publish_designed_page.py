@@ -43,6 +43,14 @@ CURRENT_MENU_CLASSES = {
     "elementor-item-active",
 }
 
+GA4_EVENT_TRANSPORT = """<script async data-ga4-event-transport src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW&amp;l=ga4EventLayer"></script>
+<script data-ga4-event-transport>
+window.ga4EventLayer = window.ga4EventLayer || [];
+window.ga4Event = window.ga4Event || function(){ window.ga4EventLayer.push(arguments); };
+window.ga4Event('js', new Date());
+window.ga4Event('config', 'G-PXT2VCVFLW', {send_page_view: false});
+</script>"""
+
 
 def replace_meta(head: str, attribute: str, key: str, value: str) -> str:
     """Replace one existing social meta tag without creating duplicates."""
@@ -380,6 +388,8 @@ def build_page(payload: dict) -> str:
         image_height=int(payload.get("image_height", 630)),
         videos=payload.get("videos", []),
     )
+    if payload.get("ga4_event_transport"):
+        head = head.replace("</head>", GA4_EVENT_TRANSPORT + "\n</head>", 1)
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)
     footer = re.sub(r"\s*<!-- Page cached by LiteSpeed Cache[^>]*-->\s*$", "\n", footer)
