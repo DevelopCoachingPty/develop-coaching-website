@@ -10,6 +10,89 @@
   "image_width": 1280,
   "image_height": 720,
   "image_alt": "The Develop Mastermind coaching programme for UK construction business owners",
+  "videos": [
+    {
+      "id": "james-overton",
+      "name": "James Overton on structuring a growing construction group",
+      "description": "James describes moving from successful builder to business owner by putting clearer structures and procedures across a design, build and development group, alongside plans to grow towards £4 million.",
+      "thumbnail_url": "https://i.ytimg.com/vi/D-M9a1i4PQU/maxresdefault.jpg",
+      "upload_date": "2024-08-07",
+      "duration": "PT3M40S",
+      "embed_url": "https://www.youtube.com/embed/D-M9a1i4PQU"
+    },
+    {
+      "id": "mike-and-nick",
+      "name": "Mike and Nick on systems supporting business growth",
+      "description": "Mike and Nick explain how systems and back-office support helped them move from roughly £35,000 to about £80,000 a month and expand from two tradesmen and a labourer to a team of eight.",
+      "thumbnail_url": "https://i.ytimg.com/vi/snrx2DrLISg/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M39S",
+      "embed_url": "https://www.youtube.com/embed/snrx2DrLISg"
+    },
+    {
+      "id": "stephen-and-salina",
+      "name": "Stephen and Salina on operating systems and sales growth",
+      "description": "Stephen and Salina describe how operating systems improved visibility as the business moved from about £800,000 annual turnover to just over £900,000 in sales in one December.",
+      "thumbnail_url": "https://i.ytimg.com/vi/H1eWYQjMaFA/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M19S",
+      "embed_url": "https://www.youtube.com/embed/H1eWYQjMaFA"
+    },
+    {
+      "id": "dominic-marchant",
+      "name": "Dominic Marchant on targets and developing a site manager",
+      "description": "Dominic explains how targets and accountability improved financial visibility and helped an existing labourer develop into a site manager.",
+      "thumbnail_url": "https://i.ytimg.com/vi/oktEjmz9B6s/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M5S",
+      "embed_url": "https://www.youtube.com/embed/oktEjmz9B6s"
+    },
+    {
+      "id": "valy-stan",
+      "name": "Valy Stan on delegation and freeing owner time",
+      "description": "Valy describes how putting processes in place and delegating more work freed most of his time, reduced operational involvement and supported better profit retention.",
+      "thumbnail_url": "https://i.ytimg.com/vi/4w0XjmkgUx0/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M14S",
+      "embed_url": "https://www.youtube.com/embed/4w0XjmkgUx0"
+    },
+    {
+      "id": "lukas",
+      "name": "Lukas on larger projects and life balance",
+      "description": "Lukas explains how a clearer lead and conversion process helped him move from £50,000 to £100,000 jobs towards a £250,000 minimum project target, while improving his work-life balance.",
+      "thumbnail_url": "https://i.ytimg.com/vi/r572G_WcimQ/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M31S",
+      "embed_url": "https://www.youtube.com/embed/r572G_WcimQ"
+    },
+    {
+      "id": "bradley-wheaton",
+      "name": "Bradley Wheaton on architect relationships and growth",
+      "description": "Bradley explains how direct relationships with architects reduced reliance on paid lead sites as the business moved from £440,000 turnover towards an £800,000 target.",
+      "thumbnail_url": "https://i.ytimg.com/vi/7iLnXeuYoMg/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M12S",
+      "embed_url": "https://www.youtube.com/embed/7iLnXeuYoMg"
+    },
+    {
+      "id": "dale-marshall",
+      "name": "Dale Marshall on accountability and turnover growth",
+      "description": "Dale describes how clearer target projects, weekly accountability and community support accompanied turnover roughly doubling in about a year.",
+      "thumbnail_url": "https://i.ytimg.com/vi/GSEM3O9HYvg/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT2M5S",
+      "embed_url": "https://www.youtube.com/embed/GSEM3O9HYvg"
+    },
+    {
+      "id": "richard-abrahams",
+      "name": "Richard Abrahams on systems and accountable growth",
+      "description": "Richard explains how brand guidelines, planning, contracts, HR, safety and marketing systems supported a pipeline of 62 customers waiting for work at the time of recording.",
+      "thumbnail_url": "https://i.ytimg.com/vi/tZxceh60Zc8/maxresdefault.jpg",
+      "upload_date": "2024-04-30",
+      "duration": "PT3M11S",
+      "embed_url": "https://www.youtube.com/embed/tZxceh60Zc8"
+    }
+  ],
   "overwrite": true,
   "search_kind": "courses"
 }

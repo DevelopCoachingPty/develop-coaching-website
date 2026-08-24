@@ -72,8 +72,9 @@ def rewrite_service_jsonld(
     image: str,
     image_width: int,
     image_height: int,
+    videos: list[dict],
 ) -> str:
-    """Describe a commercial coaching page as a Service, not an Article."""
+    """Describe the coaching page and its verified testimonial videos."""
     pattern = re.compile(
         r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S
     )
@@ -130,6 +131,45 @@ def rewrite_service_jsonld(
             "mainEntityOfPage": {"@id": webpage_id},
         }
     )
+
+    required_video_fields = {
+        "id",
+        "name",
+        "description",
+        "thumbnail_url",
+        "upload_date",
+        "duration",
+        "embed_url",
+    }
+    seen_video_ids = set()
+    for video in videos:
+        missing = sorted(required_video_fields - video.keys())
+        if missing:
+            raise SystemExit(
+                "publish_designed_page: testimonial video is missing fields: "
+                + ", ".join(missing)
+            )
+        video_id = str(video["id"]).strip()
+        if not video_id or video_id in seen_video_ids:
+            raise SystemExit(
+                f"publish_designed_page: testimonial video id is empty or repeated: {video_id!r}"
+            )
+        seen_video_ids.add(video_id)
+        cleaned.append(
+            {
+                "@type": "VideoObject",
+                "@id": f"{url}#video-{video_id}",
+                "name": str(video["name"]).strip(),
+                "description": str(video["description"]).strip(),
+                "thumbnailUrl": str(video["thumbnail_url"]).strip(),
+                "uploadDate": str(video["upload_date"]).strip(),
+                "duration": str(video["duration"]).strip(),
+                "embedUrl": str(video["embed_url"]).strip(),
+                "publisher": {"@id": org_id},
+                "isPartOf": {"@id": webpage_id},
+                "inLanguage": "en-GB",
+            }
+        )
     data["@graph"] = cleaned
     replacement = match.group(1) + json.dumps(data, separators=(",", ":")) + match.group(3)
     return head[: match.start()] + replacement + head[match.end() :]
@@ -296,6 +336,7 @@ def build_page(payload: dict) -> str:
         image=image or pp.LOGO,
         image_width=int(payload.get("image_width", 1200)),
         image_height=int(payload.get("image_height", 630)),
+        videos=payload.get("videos", []),
     )
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)

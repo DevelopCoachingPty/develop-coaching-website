@@ -1057,12 +1057,38 @@ body {
 }
 
 .dc2-video-grid blockquote {
-  margin-top: auto;
+  margin-top: 1.4rem;
   padding-top: 1.4rem;
   color: var(--dc2-muted);
   font-family: var(--dc2-quote);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.dc2-transcript-summary {
+  margin-top: auto;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--dc2-line);
+}
+
+.dc2-transcript-summary span {
+  color: var(--dc2-blue);
+  font-family: var(--dc2-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dc2-video-grid article .dc2-transcript-summary p {
+  margin-top: 0.55rem;
+  color: var(--dc2-muted);
+  font-family: var(--dc2-body);
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 .dc2-video-stories {
