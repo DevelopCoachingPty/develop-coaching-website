@@ -219,6 +219,7 @@ def build_page(payload: dict) -> str:
         "article:publisher",
         "article:published_time",
         "article:modified_time",
+        "og:updated_time",
         "og:video",
         r'ya:ovs:[^\"]+',
     ):

@@ -182,6 +182,7 @@ def main() -> None:
         "article:published_time" not in html
         and "article:modified_time" not in html
         and "article:publisher" not in html
+        and "og:updated_time" not in html
         and "og:video" not in html
         and "ya:ovs:" not in html
         and "Time to read" not in html,
