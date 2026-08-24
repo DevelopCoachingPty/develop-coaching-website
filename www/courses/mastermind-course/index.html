@@ -1063,8 +1063,8 @@ body {
   min-height: 255px;
   padding: 1.35rem 1.2rem 1.5rem;
   border-right: 1px solid var(--dc2-line);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 64px 1fr;
   align-content: start;
   gap: 1.15rem;
 }
@@ -1091,7 +1091,7 @@ body {
 }
 
 .dc2-pillars li > div {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .dc2-pillars h3 {
@@ -1344,6 +1344,65 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.dc2-youtube__poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  background: #090a0c;
+}
+
+.dc2-youtube__poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(9, 10, 12, 0.7));
+}
+
+.dc2-youtube__poster img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.dc2-youtube__play {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--dc2-yellow);
+  color: var(--dc2-ink);
+  font-size: 1.45rem;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.dc2-youtube__label {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 0.8rem;
+  left: 1rem;
+  color: var(--dc2-white);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dc2-youtube__poster:hover img,
+.dc2-youtube__poster:focus-visible img {
+  filter: brightness(0.88);
+  transform: scale(1.025);
 }
 
 .dc2-video-grid article > div:last-child {
@@ -2258,15 +2317,15 @@ body {
         </div>
 
         <div class="dc2-video-grid">
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/D-M9a1i4PQU" title="James Overton testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>James Overton</p><strong>Scaling from £1.5m towards £4m</strong><blockquote>“The main thing we've taken from Develop is structure, operationally, non-operationally, across the company on every level.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/snrx2DrLISg" title="Mike and Nick testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Mike &amp; Nick</p><strong>£35k to £80k a month</strong><blockquote>“Greg has been that critical and pivotal point.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/H1eWYQjMaFA" title="Stephen and Salina testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Stephen &amp; Salina</p><strong>£900k sales in one month</strong><blockquote>“Our sales just for December were just over £900,000.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/oktEjmz9B6s" title="Dominic Marchant testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Dominic Marchant</p><strong>Labourer developed into site manager</strong><blockquote>“You'd be surprised by the feeling of suddenly having money in your bank because you're working.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/4w0XjmkgUx0" title="Valy Stan testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Valy Stan</p><strong>Most of his time freed up</strong><blockquote>“You will earn more, retain more and have less stress.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/r572G_WcimQ" title="Lukas testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Lukas</p><strong>£100k jobs to a £250k+ minimum</strong><blockquote>“You've helped me not just to improve my business, but in a way improve my life and that life balance.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/7iLnXeuYoMg" title="Bradley Wheaton testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Bradley Wheaton</p><strong>From £5k jobs to a £730k project</strong><blockquote>“I wouldn't be where I am with this business now if you wasn't coaching me along the way.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/GSEM3O9HYvg" title="Dale Marshall testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Dale Marshall</p><strong>Turnover roughly doubled</strong><blockquote>“The value of the coaching way outweighs the amount you need to pay for it.”</blockquote></div></article>
-          <article><div class="dc2-youtube"><iframe src="https://www.youtube-nocookie.com/embed/tZxceh60Zc8" title="Richard Abrahams testimonial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div><p>Richard Abrahams</p><strong>62 customers waiting for work</strong><blockquote>“I knew I'd let myself down and I wanted someone to hold me accountable.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=D-M9a1i4PQU" data-video-id="D-M9a1i4PQU" aria-label="Play James Overton testimonial"><img src="https://i.ytimg.com/vi/D-M9a1i4PQU/maxresdefault.jpg" alt="James Overton testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch James's story</span></a></div><div><p>James Overton</p><strong>Scaling from £1.5m towards £4m</strong><blockquote>“The main thing we've taken from Develop is structure, operationally, non-operationally, across the company on every level.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=snrx2DrLISg" data-video-id="snrx2DrLISg" aria-label="Play Mike and Nick testimonial"><img src="https://i.ytimg.com/vi/snrx2DrLISg/maxresdefault.jpg" alt="Mike and Nick testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Mike and Nick's story</span></a></div><div><p>Mike &amp; Nick</p><strong>£35k to £80k a month</strong><blockquote>“Greg has been that critical and pivotal point.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=H1eWYQjMaFA" data-video-id="H1eWYQjMaFA" aria-label="Play Stephen and Salina testimonial"><img src="https://i.ytimg.com/vi/H1eWYQjMaFA/maxresdefault.jpg" alt="Stephen and Salina testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Stephen and Salina's story</span></a></div><div><p>Stephen &amp; Salina</p><strong>£900k sales in one month</strong><blockquote>“Our sales just for December were just over £900,000.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=oktEjmz9B6s" data-video-id="oktEjmz9B6s" aria-label="Play Dominic Marchant testimonial"><img src="https://i.ytimg.com/vi/oktEjmz9B6s/maxresdefault.jpg" alt="Dominic Marchant testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Dominic's story</span></a></div><div><p>Dominic Marchant</p><strong>Labourer developed into site manager</strong><blockquote>“You'd be surprised by the feeling of suddenly having money in your bank because you're working.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=4w0XjmkgUx0" data-video-id="4w0XjmkgUx0" aria-label="Play Valy Stan testimonial"><img src="https://i.ytimg.com/vi/4w0XjmkgUx0/maxresdefault.jpg" alt="Valy Stan testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Valy's story</span></a></div><div><p>Valy Stan</p><strong>Most of his time freed up</strong><blockquote>“You will earn more, retain more and have less stress.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=r572G_WcimQ" data-video-id="r572G_WcimQ" aria-label="Play Lukas testimonial"><img src="https://i.ytimg.com/vi/r572G_WcimQ/maxresdefault.jpg" alt="Lukas testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Lukas's story</span></a></div><div><p>Lukas</p><strong>£100k jobs to a £250k+ minimum</strong><blockquote>“You've helped me not just to improve my business, but in a way improve my life and that life balance.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=7iLnXeuYoMg" data-video-id="7iLnXeuYoMg" aria-label="Play Bradley Wheaton testimonial"><img src="https://i.ytimg.com/vi/7iLnXeuYoMg/maxresdefault.jpg" alt="Bradley Wheaton testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Bradley's story</span></a></div><div><p>Bradley Wheaton</p><strong>From £5k jobs to a £730k project</strong><blockquote>“I wouldn't be where I am with this business now if you wasn't coaching me along the way.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=GSEM3O9HYvg" data-video-id="GSEM3O9HYvg" aria-label="Play Dale Marshall testimonial"><img src="https://i.ytimg.com/vi/GSEM3O9HYvg/maxresdefault.jpg" alt="Dale Marshall testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Dale's story</span></a></div><div><p>Dale Marshall</p><strong>Turnover roughly doubled</strong><blockquote>“The value of the coaching way outweighs the amount you need to pay for it.”</blockquote></div></article>
+          <article><div class="dc2-youtube"><a class="dc2-youtube__poster" href="https://www.youtube.com/watch?v=tZxceh60Zc8" data-video-id="tZxceh60Zc8" aria-label="Play Richard Abrahams testimonial"><img src="https://i.ytimg.com/vi/tZxceh60Zc8/maxresdefault.jpg" alt="Richard Abrahams testimonial video"><span class="dc2-youtube__play" aria-hidden="true">▶</span><span class="dc2-youtube__label">Watch Richard's story</span></a></div><div><p>Richard Abrahams</p><strong>62 customers waiting for work</strong><blockquote>“I knew I'd let myself down and I wanted someone to hold me accountable.”</blockquote></div></article>
         </div>
 
       </div>
@@ -2341,6 +2400,23 @@ body {
     <span>Ready to build the plan?</span>
     <a href="https://develop-coaching.com/schedule-a-call/">Book a Scale Session</a>
   </div>
+
+  <script>
+    (() => {
+      document.querySelectorAll(".dc2-youtube__poster").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube-nocookie.com/embed/${link.dataset.videoId}?autoplay=1`;
+          iframe.title = link.getAttribute("aria-label");
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
+          iframe.allowFullscreen = true;
+          link.replaceWith(iframe);
+        });
+      });
+    })();
+  </script>
 </div>
 </div>
 <footer data-elementor-type="footer" data-elementor-id="9008" class="elementor elementor-9008 elementor-location-footer" data-elementor-post-type="elementor_library">

@@ -690,8 +690,8 @@ body {
   min-height: 255px;
   padding: 1.35rem 1.2rem 1.5rem;
   border-right: 1px solid var(--dc2-line);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 64px 1fr;
   align-content: start;
   gap: 1.15rem;
 }
@@ -718,7 +718,7 @@ body {
 }
 
 .dc2-pillars li > div {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .dc2-pillars h3 {
@@ -971,6 +971,65 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.dc2-youtube__poster {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  background: #090a0c;
+}
+
+.dc2-youtube__poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(9, 10, 12, 0.7));
+}
+
+.dc2-youtube__poster img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.dc2-youtube__play {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--dc2-yellow);
+  color: var(--dc2-ink);
+  font-size: 1.45rem;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.dc2-youtube__label {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 0.8rem;
+  left: 1rem;
+  color: var(--dc2-white);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dc2-youtube__poster:hover img,
+.dc2-youtube__poster:focus-visible img {
+  filter: brightness(0.88);
+  transform: scale(1.025);
 }
 
 .dc2-video-grid article > div:last-child {
