@@ -29,3 +29,7 @@ www/wp-content/uploads/**/*.mov
 
 # Python bytecode from scripts/
 __pycache__/
+
+# local investigation output, not for a public repo
+dns/
+reviews/_diff.txt

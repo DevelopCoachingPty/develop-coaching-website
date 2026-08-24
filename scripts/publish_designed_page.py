@@ -37,6 +37,24 @@ import publish_page as pp  # noqa: E402
 DEFAULT_SHELL = "courses/mastermind-course"
 
 
+def safe_repo_file(value: str, label: str) -> str:
+    """Resolve a payload file inside the repository and refuse escapes."""
+    raw = (value or "").strip()
+    if not raw:
+        raise SystemExit(f"publish_designed_page: missing {label}")
+    root = os.path.realpath(pp.ROOT)
+    target = os.path.realpath(raw if os.path.isabs(raw) else os.path.join(root, raw))
+    try:
+        contained = target != root and os.path.commonpath([root, target]) == root
+    except ValueError:
+        contained = False
+    if not contained:
+        raise SystemExit(f"publish_designed_page: {label} escapes the repository: {value!r}")
+    if not os.path.isfile(target):
+        raise SystemExit(f"publish_designed_page: {label} not found: {value!r}")
+    return target
+
+
 def split_chrome(html: str) -> tuple[str, str]:
     """Return (everything up to and including </header>, everything from <footer>)."""
     marker = html.find("</header>")
@@ -47,22 +65,18 @@ def split_chrome(html: str) -> tuple[str, str]:
 
 
 def build_page(payload: dict) -> str:
-    shell_slug = payload.get("shell") or DEFAULT_SHELL
+    shell_slug = pp.safe_site_path(payload.get("shell") or DEFAULT_SHELL, "shell")
     shell_path = os.path.join(pp.WWW, shell_slug, "index.html")
     if not os.path.exists(shell_path):
         raise SystemExit(f"publish_designed_page: shell page not found: {shell_path}")
 
-    content_path = payload["content_file"]
-    if not os.path.isabs(content_path):
-        content_path = os.path.join(pp.ROOT, content_path)
-    if not os.path.exists(content_path):
-        raise SystemExit(f"publish_designed_page: content file not found: {content_path}")
+    content_path = safe_repo_file(payload["content_file"], "content file")
 
     html = open(shell_path, encoding="utf-8").read()
     content = open(content_path, encoding="utf-8").read()
 
     title = payload["title"].strip()
-    slug = payload["slug"].strip().strip("/")
+    slug = pp.safe_site_path(payload["slug"], "slug")
     description = (payload.get("meta_description") or "").strip()
     date = payload.get("date") or datetime.date.today().isoformat()
     image = payload.get("image_url") or ""
@@ -130,9 +144,7 @@ def build_page(payload: dict) -> str:
     # file, matching how the rest of the export works.
     css_parts = []
     for css_file in payload.get("css_files", ["content/_design-system.css"]):
-        css_path = css_file if os.path.isabs(css_file) else os.path.join(pp.ROOT, css_file)
-        if not os.path.exists(css_path):
-            raise SystemExit(f"publish_designed_page: css file not found: {css_path}")
+        css_path = safe_repo_file(css_file, "CSS file")
         css_parts.append(open(css_path, encoding="utf-8").read())
 
     fonts = (
@@ -154,6 +166,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", required=True)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="replace an existing page (refused by default)",
+    )
     args = ap.parse_args()
 
     payload = json.load(open(args.json, encoding="utf-8"))
@@ -161,17 +178,31 @@ def main() -> None:
         if not payload.get(field):
             raise SystemExit(f"publish_designed_page: missing required field: {field}")
 
-    slug = payload["slug"].strip().strip("/")
+    slug = pp.safe_site_path(payload["slug"], "slug")
     date = payload.get("date") or datetime.date.today().isoformat()
     html = build_page(payload)
 
     out_file = os.path.join(pp.WWW, slug, "index.html")
     existed = os.path.exists(out_file)
+    overwrite = bool(args.overwrite or payload.get("overwrite"))
+    if existed and not overwrite and not args.dry_run:
+        raise SystemExit(
+            f"publish_designed_page: page already exists: {out_file}. "
+            'Pass --overwrite (or "overwrite": true in the payload) to replace it.'
+        )
     if not args.dry_run:
         os.makedirs(os.path.dirname(out_file), exist_ok=True)
         open(out_file, "w", encoding="utf-8").write(html)
         pp.update_sitemap(slug, date)
-        pp.update_search_index(payload["title"], slug, html)
+        search_kind = payload.get("search_kind") or (
+            "courses" if slug.startswith("courses/") else "pages"
+        )
+        pp.update_search_index(
+            payload["title"],
+            slug,
+            payload.get("meta_description") or "",
+            kind=search_kind,
+        )
 
     print(
         json.dumps(
