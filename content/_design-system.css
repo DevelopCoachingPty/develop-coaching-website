@@ -1,19 +1,22 @@
 :root {
-  --dc2-paper: #f2f0eb;
+  --dc2-paper: #ffffff;
   --dc2-white: #ffffff;
-  --dc2-ink: #171b20;
-  --dc2-muted: #5f656b;
-  --dc2-blue: #285a89;
-  --dc2-blue-dark: #183b5b;
-  --dc2-yellow: #f2c94c;
+  --dc2-ink: #414042;
+  --dc2-muted: rgba(65, 64, 66, 0.72);
+  --dc2-blue: #0069b1;
+  --dc2-blue-dark: #0069b1;
+  --dc2-yellow: #fdce36;
+  --dc2-orange: #fbaa35;
+  --dc2-cool-grey: #d2d2d2;
+  /* Functional exceptions requested for eligibility ticks and crosses. */
   --dc2-green: #3e745b;
   --dc2-red: #a64c3d;
-  --dc2-line: rgba(23, 27, 32, 0.14);
+  --dc2-line: #d2d2d2;
   --dc2-wrap: 1180px;
   --dc2-display: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   --dc2-body: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  --dc2-quote: Georgia, "Times New Roman", serif;
-  --dc2-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --dc2-quote: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  --dc2-mono: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 .elementor-location-header,
@@ -74,21 +77,21 @@ body {
 .dc2-page h1 {
   max-width: 780px;
   font-size: clamp(3.4rem, 5.6vw, 6.4rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 0.94;
   letter-spacing: -0.065em;
 }
 
 .dc2-page h2 {
   font-size: clamp(2.4rem, 4.1vw, 4.7rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.052em;
 }
 
 .dc2-page h3 {
   font-size: clamp(1.2rem, 1.2vw + 0.9rem, 1.85rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }
@@ -143,7 +146,7 @@ body {
 
 .dc2-btn:hover {
   color: var(--dc2-ink);
-  background: #ffd966;
+  background: var(--dc2-orange);
   transform: translate(2px, 2px);
   box-shadow: 3px 3px 0 var(--dc2-ink);
 }
@@ -159,7 +162,7 @@ body {
   border-color: var(--dc2-ink);
   background: var(--dc2-ink);
   color: var(--dc2-white);
-  box-shadow: 5px 5px 0 rgba(23, 27, 32, 0.25);
+  box-shadow: 5px 5px 0 rgba(65, 64, 66, 0.25);
 }
 
 .dc2-page .dc2-btn--dark:hover {
@@ -209,7 +212,7 @@ body {
 .dc2-nav__links > a,
 .dc2-nav__links summary {
   position: relative;
-  color: #353b41;
+  color: var(--dc2-ink);
   font-size: clamp(0.62rem, 0.72vw, 0.72rem);
   font-weight: 700;
   white-space: nowrap;
@@ -267,7 +270,7 @@ body {
   gap: 0.15rem;
   border: 1px solid var(--dc2-line);
   background: var(--dc2-white);
-  box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
+  box-shadow: 0 16px 38px rgba(65, 64, 66, 0.16);
 }
 
 .dc2-nav__dropdown--wide {
@@ -277,7 +280,7 @@ body {
 
 .dc2-nav__dropdown a {
   padding: 0.55rem 0.65rem;
-  color: #353b41;
+  color: var(--dc2-ink);
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -323,7 +326,7 @@ body {
 .dc2-hero__lead {
   max-width: 660px;
   margin-top: 1.6rem !important;
-  color: #353b41;
+  color: var(--dc2-ink);
   font-size: clamp(1.08rem, 1.4vw, 1.32rem);
   line-height: 1.55;
 }
@@ -482,7 +485,7 @@ body {
 
 .dc2-result-strip__item {
   min-width: 0;
-  background: #1d2228;
+  background: var(--dc2-ink);
 }
 
 .dc2-result-strip__item img {
@@ -580,8 +583,8 @@ body {
 .dc2-pain-list li {
   position: relative;
   padding-left: 1.25rem;
-  color: #31373d;
-  font-weight: 600;
+  color: var(--dc2-ink);
+  font-weight: 700;
   line-height: 1.45;
 }
 
@@ -610,7 +613,7 @@ body {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   border-left-color: var(--dc2-red);
-  background: #f7f2f0;
+  background: var(--dc2-cool-grey);
 }
 
 .dc2-check-list ul,
@@ -625,7 +628,7 @@ body {
 .dc2-not-for li {
   position: relative;
   padding-left: 2rem;
-  color: #30353a;
+  color: var(--dc2-ink);
 }
 
 .dc2-check-list li::before,
@@ -640,7 +643,7 @@ body {
   place-items: center;
   color: var(--dc2-white);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .dc2-check-list li::before {
@@ -832,7 +835,7 @@ body {
 .dc2-tool-grid article {
   min-height: 230px;
   padding: clamp(1.4rem, 2.5vw, 2rem);
-  background: #1d2228;
+  background: var(--dc2-ink);
 }
 
 .dc2-tool-grid span {
@@ -1130,7 +1133,7 @@ body {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  background: #244c70;
+  background: var(--dc2-blue);
 }
 
 .dc2-quote-stories article:nth-child(1) {
@@ -1345,7 +1348,7 @@ body {
 
   .dc2-nav__mobile summary {
     padding: 0.45rem 0.65rem;
-    color: #353b41;
+    color: var(--dc2-ink);
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1363,12 +1366,12 @@ body {
     overflow-y: auto;
     border: 1px solid var(--dc2-line);
     background: var(--dc2-white);
-    box-shadow: 0 16px 38px rgba(23, 27, 32, 0.16);
+    box-shadow: 0 16px 38px rgba(65, 64, 66, 0.16);
   }
 
   .dc2-nav__mobile a {
     padding: 0.55rem 0.65rem;
-    color: #353b41;
+    color: var(--dc2-ink);
     font-size: 0.78rem;
     font-weight: 700;
   }
@@ -1644,7 +1647,7 @@ body {
     background: var(--dc2-yellow);
     color: var(--dc2-ink);
     font-size: 0.72rem;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .joinchat {

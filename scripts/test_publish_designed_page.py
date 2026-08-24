@@ -76,6 +76,17 @@ def main() -> None:
     check("testimonial videos load on click", "link.replaceWith(iframe)" in html and "?autoplay=1" in html)
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
+        "official Develop Coaching palette present",
+        all(colour in html.lower() for colour in ("#fdce36", "#fbaa35", "#0069b1", "#414042", "#d2d2d2")),
+    )
+    check(
+        "Source Sans Pro is the only custom page font",
+        "family=Source+Sans+Pro" in html
+        and "family=Archivo" not in html
+        and "IBM+Plex+Mono" not in html
+        and "Georgia" not in html,
+    )
+    check(
         "James result accurately qualified",
         "£1.5m <span>towards £4m</span>" in html
         and "Scaling from £1.5m towards £4m" in html,
