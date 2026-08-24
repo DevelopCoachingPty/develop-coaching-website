@@ -19,6 +19,12 @@ PAYLOAD = {
     "meta_description": "A coaching programme for established construction business owners.",
     "content_file": "content/mastermind.html",
     "shell": "about-greg-wilkes",
+    "date": "2026-08-24",
+    "date_published": "2026-08-11",
+    "image_url": "/wp-content/uploads/2026/08/mastermind-poster.jpg",
+    "image_width": 1280,
+    "image_height": 720,
+    "image_alt": "The Develop Mastermind coaching programme for UK construction business owners",
 }
 
 failures = []
@@ -114,6 +120,11 @@ def main() -> None:
         "projected" not in html.lower() and "forecast" not in html.lower(),
     )
     check("site chrome present", "<header" in html and "<footer" in html)
+    check(
+        "custom footer uses the live privacy route",
+        'href="https://develop-coaching.com/privacy/"' in html
+        and 'href="https://develop-coaching.com/privacy-policy/"' not in html,
+    )
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
     schema_match = re.search(
         r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
@@ -130,6 +141,50 @@ def main() -> None:
         "/about-greg-wilkes/#webpage" not in schema_text
         and '"@type":"AboutPage"' not in schema_text
         and '"@type":"VideoObject"' not in schema_text,
+    )
+    graph = schema.get("@graph", [])
+    services = [node for node in graph if node.get("@type") == "Service"]
+    organizations = [
+        node for node in graph if node.get("@id") == f"{designed.pp.DOMAIN}/#organization"
+    ]
+    webpages = [node for node in graph if node.get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/"]
+    check(
+        "JSON-LD describes the coaching offer as a Service",
+        len(services) == 1
+        and services[0].get("serviceType") == "Construction business coaching programme"
+        and services[0].get("provider", {}).get("@id") == f"{designed.pp.DOMAIN}/#organization"
+        and services[0].get("areaServed", {}).get("name") == "United Kingdom",
+    )
+    check(
+        "JSON-LD removes inaccurate local business details",
+        len(organizations) == 1
+        and organizations[0].get("@type") == "Organization"
+        and not any(node.get("@type") == "Place" for node in graph)
+        and all(key not in organizations[0] for key in ("address", "openingHours", "location")),
+    )
+    check(
+        "WebPage dates and main entity are current",
+        len(webpages) == 1
+        and webpages[0].get("datePublished") == "2026-08-11"
+        and webpages[0].get("dateModified") == "2026-08-24"
+        and webpages[0].get("mainEntity", {}).get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/#service",
+    )
+    check("JSON-LD has no Article node", not any(node.get("@type") == "Article" for node in graph))
+    check(
+        "social image metadata is consistent",
+        html.count('content="https://develop-coaching.com/wp-content/uploads/2026/08/mastermind-poster.jpg"') >= 3
+        and '<meta property="og:image:width" content="1280" />' in html
+        and '<meta property="og:image:height" content="720" />' in html
+        and '<meta property="og:type" content="website" />' in html,
+    )
+    check(
+        "stale article and video social tags removed",
+        "article:published_time" not in html
+        and "article:modified_time" not in html
+        and "article:publisher" not in html
+        and "og:video" not in html
+        and "ya:ovs:" not in html
+        and "Time to read" not in html,
     )
     check(
         "traversal slug refused",

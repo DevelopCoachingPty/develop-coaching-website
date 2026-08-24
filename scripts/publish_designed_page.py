@@ -37,6 +37,97 @@ import publish_page as pp  # noqa: E402
 DEFAULT_SHELL = "courses/mastermind-course"
 
 
+def replace_meta(head: str, attribute: str, key: str, value: str) -> str:
+    """Replace one existing social meta tag without creating duplicates."""
+    pattern = rf'<meta {attribute}="{re.escape(key)}" content=".*?" />'
+    replacement = f'<meta {attribute}="{key}" content="{htmllib.escape(str(value), quote=True)}" />'
+    return re.sub(pattern, replacement, head, count=1, flags=re.S)
+
+
+def remove_meta(head: str, attribute: str, key_pattern: str) -> str:
+    """Remove stale social tags copied from the shell page."""
+    return re.sub(
+        rf'\s*<meta {attribute}="{key_pattern}" content=".*?" />',
+        "",
+        head,
+        flags=re.S,
+    )
+
+
+def rewrite_service_jsonld(
+    head: str,
+    *,
+    title: str,
+    description: str,
+    url: str,
+    date_published: str,
+    date_modified: str,
+    image: str,
+    image_width: int,
+    image_height: int,
+) -> str:
+    """Describe a commercial coaching page as a Service, not an Article."""
+    pattern = re.compile(
+        r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', re.S
+    )
+    match = pattern.search(head)
+    if not match:
+        return head
+
+    data = json.loads(match.group(2))
+    graph = data.get("@graph", [])
+    org_id = f"{pp.DOMAIN}/#organization"
+    webpage_id = url
+    service_id = f"{url}#service"
+    cleaned = []
+
+    for node in graph:
+        node_type = node.get("@type")
+        if node_type == "Place":
+            continue
+        if node.get("@id") == org_id:
+            node["@type"] = "Organization"
+            for key in ("address", "openingHours", "location"):
+                node.pop(key, None)
+        if node.get("@id") == webpage_id:
+            node["datePublished"] = date_published
+            node["dateModified"] = date_modified
+            node["mainEntity"] = {"@id": service_id}
+        if node_type == "Article":
+            continue
+        cleaned.append(node)
+
+    cleaned.append(
+        {
+            "@type": "Service",
+            "@id": service_id,
+            "name": title,
+            "description": description,
+            "url": url,
+            "serviceType": "Construction business coaching programme",
+            "provider": {"@id": org_id},
+            "areaServed": {"@type": "Country", "name": "United Kingdom"},
+            "audience": {
+                "@type": "Audience",
+                "audienceType": (
+                    "Established UK construction business owners turning over "
+                    "£750k to £5m"
+                ),
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": image,
+                "width": image_width,
+                "height": image_height,
+            },
+            "mainEntityOfPage": {"@id": webpage_id},
+        }
+    )
+    data["@graph"] = cleaned
+    replacement = match.group(1) + json.dumps(data, separators=(",", ":")) + match.group(3)
+    return head[: match.start()] + replacement + head[match.end() :]
+
+
 def safe_repo_file(value: str, label: str) -> str:
     """Resolve a payload file inside the repository and refuse escapes."""
     raw = (value or "").strip()
@@ -79,6 +170,7 @@ def build_page(payload: dict) -> str:
     slug = pp.safe_site_path(payload["slug"], "slug")
     description = (payload.get("meta_description") or "").strip()
     date = payload.get("date") or datetime.date.today().isoformat()
+    date_published = payload.get("date_published") or date
     image = payload.get("image_url") or ""
     if image.startswith("/"):
         image = pp.DOMAIN + image
@@ -104,40 +196,52 @@ def build_page(payload: dict) -> str:
         flags=re.S,
     )
     for prop, value in [
+        ("og:type", "website"),
         ("og:title", title),
         ("og:description", description),
         ("og:url", url),
         ("og:image", image or pp.LOGO),
+        ("og:image:secure_url", image or pp.LOGO),
+        ("og:image:width", payload.get("image_width", 1200)),
+        ("og:image:height", payload.get("image_height", 630)),
+        ("og:image:alt", payload.get("image_alt") or title),
+        ("og:image:type", "image/jpeg"),
     ]:
-        head = re.sub(
-            rf'<meta property="{prop}" content=".*?" />',
-            lambda _: f'<meta property="{prop}" content="{esc(value)}" />',
-            head,
-            count=1,
-            flags=re.S,
-        )
-    for name, value in [("twitter:title", title), ("twitter:description", description)]:
-        head = re.sub(
-            rf'<meta name="{name}" content=".*?" />',
-            lambda _: f'<meta name="{name}" content="{esc(value)}" />',
-            head,
-            count=1,
-            flags=re.S,
-        )
+        head = replace_meta(head, "property", prop, value)
+    for name, value in [
+        ("twitter:title", title),
+        ("twitter:description", description),
+        ("twitter:image", image or pp.LOGO),
+    ]:
+        head = replace_meta(head, "name", name, value)
+
+    for prop in (
+        "article:publisher",
+        "article:published_time",
+        "article:modified_time",
+        "og:video",
+        r'ya:ovs:[^\"]+',
+    ):
+        head = remove_meta(head, "property", prop)
+    for name in ("twitter:label1", "twitter:data1"):
+        head = remove_meta(head, "name", name)
 
     head = pp.rewrite_jsonld(
         head, title=title, description=description, url=url, date=date, image=image
     )
+    head = rewrite_service_jsonld(
+        head,
+        title=title,
+        description=description,
+        url=url,
+        date_published=date_published,
+        date_modified=date,
+        image=image or pp.LOGO,
+        image_width=int(payload.get("image_width", 1200)),
+        image_height=int(payload.get("image_height", 630)),
+    )
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)
-    head = re.sub(
-        r'(<meta name="twitter:label1" content="Written by" />\s*<meta name="twitter:data1" content=")[^"]*(")',
-        lambda m: m.group(1) + "Greg Wilkes" + m.group(2),
-        head,
-        count=1,
-        flags=re.S,
-    )
-
     footer = re.sub(r"\s*<!-- Page cached by LiteSpeed Cache[^>]*-->\s*$", "\n", footer)
 
     # Shared CSS is inlined rather than linked so a page is one self-contained
