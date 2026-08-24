@@ -59,7 +59,7 @@
 <meta name="twitter:description" content="A minimum 12-month coaching programme for UK construction business owners turning over £750k to £5m. The DEVELOP method, an AI toolkit built for builders, and a private community." />
 <meta name="twitter:site" content="@developcoaching" />
 <meta name="twitter:creator" content="@developcoaching" />
-<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/courses/mastermind-course/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://develop-coaching.com"},{"@type":"ListItem","position":2,"name":"The Develop Mastermind: Coaching for Builders Doing \u00a3750k to \u00a35m"}]},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}}]}</script>
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://develop-coaching.com/courses/mastermind-course/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://develop-coaching.com"},{"@type":"ListItem","position":2,"name":"The Develop Mastermind: Coaching for Builders Doing \u00a3750k to \u00a35m"}]},{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/","worksFor":{"@id":"https://develop-coaching.com/#organization"}}]}</script>
 <!-- /Rank Math WordPress SEO plugin -->
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -957,6 +957,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 @media (max-width: 859px) {
   .dc-page {
     padding-bottom: 5.5rem;
+  }
+
+  /* Keep the inherited footer readable above the fixed conversion bar. */
+  footer {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* The inherited WhatsApp control normally sits at bottom-right. Move it
+     above this page's conversion bar so both actions remain usable. */
+  #ht-ctc-chat {
+    bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important;
   }
 }
 

@@ -173,7 +173,12 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             return True
         return False
 
-    nodes = [n for n in nodes if not is_template_leftover(n)]
+    # Rebuilding an already-generated page must not append another copy of the
+    # canonical author node each time.
+    nodes = [
+        n for n in nodes
+        if not is_template_leftover(n) and n.get("@id") != AUTHOR_ID
+    ]
     nodes.append(
         {
             "@type": "Person",

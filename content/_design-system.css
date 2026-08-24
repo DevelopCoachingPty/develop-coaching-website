@@ -598,6 +598,17 @@
   .dc-page {
     padding-bottom: 5.5rem;
   }
+
+  /* Keep the inherited footer readable above the fixed conversion bar. */
+  footer {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* The inherited WhatsApp control normally sits at bottom-right. Move it
+     above this page's conversion bar so both actions remain usable. */
+  #ht-ctc-chat {
+    bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important;
+  }
 }
 
 .dc-sticky__text {

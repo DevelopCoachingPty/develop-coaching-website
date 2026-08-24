@@ -5,6 +5,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import sys
 import tempfile
 
@@ -57,6 +58,15 @@ def main() -> None:
     check("designed body present", 'class="dc-page"' in html and "Built on five pillars" in html)
     check("site chrome present", "<header" in html and "<footer" in html)
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
+    schema_match = re.search(
+        r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
+    )
+    schema = json.loads(schema_match.group(1)) if schema_match else {}
+    authors = [
+        node for node in schema.get("@graph", [])
+        if node.get("@id") == designed.pp.AUTHOR_ID
+    ]
+    check("JSON-LD has one canonical author", len(authors) == 1)
     check(
         "traversal slug refused",
         refused(lambda: designed.build_page({**PAYLOAD, "slug": "../../tmp/escape"})),
