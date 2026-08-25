@@ -4,6 +4,11 @@ from scripts.simplify_navigation import simplify_main_navigation
 
 
 class SimplifyNavigationTests(unittest.TestCase):
+    def test_uppercase_head_close_receives_navigation_styles(self):
+        html = "<html><head></HEAD><body></body></html>"
+        result = simplify_main_navigation(html)
+        self.assertIn('id="dc-simplified-navigation"', result)
+
     def test_simplifies_desktop_and_mobile_menus_without_moving_cta(self):
         menu = """
         <ul>

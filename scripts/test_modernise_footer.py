@@ -37,6 +37,16 @@ class ModerniseFooterTests(unittest.TestCase):
         result = modernise_footer(html, "5-pillars-free-trainings/plan/index.html")
         self.assertIn('class="dc-book-award"', result)
 
+    def test_podcast_index_gets_book_award(self):
+        html = LEGACY.replace("BODY_CLASSES", "archive")
+        result = modernise_footer(html, "podcast/index.html")
+        self.assertIn('class="dc-book-award"', result)
+
+    def test_uppercase_head_close_receives_styles(self):
+        html = LEGACY.replace("BODY_CLASSES", "page").replace("</head>", "</HEAD>")
+        result = modernise_footer(html, "contact/index.html")
+        self.assertIn('id="dc-modern-footer"', result)
+
     def test_custom_page_without_legacy_footer_is_untouched(self):
         html = "<html><head></head><body><main>Custom</main></body></html>"
         self.assertEqual(modernise_footer(html, "campaign/index.html"), html)

@@ -78,7 +78,9 @@ def should_include_book_award(relative_path: str, html: str) -> bool:
         or route == "/about-greg-wilkes/"
         or route.startswith("/blog")
         or route.startswith("/category/")
+        or route.startswith("/podcast/")
         or route.startswith("/podcast-transcript/")
+        or route.startswith("/construction-podcast/")
         or route.startswith("/5-pillars-free-trainings/")
     )
 
@@ -114,7 +116,7 @@ def modernise_footer(html: str, relative_path: str) -> str:
     html = LEGACY_FOOTER_RE.sub(replacement, html, count=1)
     if STYLE_RE.search(html):
         return STYLE_RE.sub(STYLE, html, count=1)
-    return html.replace("</head>", f"{STYLE}\n</head>", 1)
+    return re.sub(r"</head>", f"{STYLE}\n</head>", html, count=1, flags=re.I)
 
 
 def main() -> None:

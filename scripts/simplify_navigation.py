@@ -136,8 +136,10 @@ def simplify_main_navigation(html: str) -> str:
     )
     if style_pattern.search(html):
         html = style_pattern.sub(NAVIGATION_STYLE, html, count=1)
-    elif "</head>" in html:
-        html = html.replace("</head>", f"{NAVIGATION_STYLE}\n</head>", 1)
+    elif re.search(r"</head>", html, re.I):
+        html = re.sub(
+            r"</head>", f"{NAVIGATION_STYLE}\n</head>", html, count=1, flags=re.I
+        )
     return html
 
 

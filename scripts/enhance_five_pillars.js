@@ -137,7 +137,7 @@ function normalizeSchema(html, canonical, title, description, image, faqs, hubVi
   const graph = current['@graph'] || [];
   const breadcrumb = graph.find((node) => node['@type'] === 'BreadcrumbList');
   const existingPage = graph.find((node) => node['@type'] === 'WebPage');
-  const existingVideos = graph.filter((node) => node['@type'] === 'VideoObject').map((video) => ({
+  const existingVideos = graph.filter((node) => node['@type'] === 'VideoObject' && node['@id'] !== hubVideo?.['@id']).map((video) => ({
     ...video,
     description: `A video resource included in the ${title} training collection for construction business owners.`,
     thumbnailUrl: video.thumbnailUrl || `https://i.ytimg.com/vi/${String(video.embedUrl || '').split('/').pop()}/hqdefault.jpg`,
@@ -207,6 +207,7 @@ function trackingScript(sourcePage) {
 }
 
 function annotatePrimaryResources(html, currentPillar) {
+  html = html.replace(/\sdata-primary-pillar="[^"]*"/g, '').replace(/<span class="five-pillars-primary">[\s\S]*?<\/span>/g, '');
   for (const [href, primary] of primaryResources) {
     const escaped = href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const anchor = new RegExp(`<a([^>]*href=["']${escaped}["'][^>]*)>`, 'g');
@@ -227,7 +228,10 @@ function enhancePillar(slug, data) {
   const canonical = `https://develop-coaching.com/5-pillars-free-trainings/${slug}/`;
   const description = `${data.intro} Pillar ${data.number} of the free Five Pillars training hub.`;
   html = html.replaceAll('/5-pillars-plan/', routes[0]).replaceAll('/the-5-pillars-attract/', routes[1]).replaceAll('/the-5-pillars-convert/', routes[2]).replaceAll('/the-5-pillars-deliver/', routes[3]).replaceAll('/the-5-pillars-scale/', routes[4]);
-  html = assertReplace(html, new RegExp(`<h2 class="elementor-heading-title elementor-size-default">${data.title.toUpperCase()}<\\/h2>`), `<h1 class="elementor-heading-title elementor-size-default">${data.h1}</h1>`, `${slug} H1`);
+  const legacyHeading = `<h2 class="elementor-heading-title elementor-size-default">${data.title.toUpperCase()}</h2>`;
+  const desiredHeading = `<h1 class="elementor-heading-title elementor-size-default">${data.h1}</h1>`;
+  if (html.includes(legacyHeading)) html = html.replace(legacyHeading, desiredHeading);
+  else if (!html.includes(desiredHeading)) throw new Error(`Could not replace ${slug} H1`);
   html = html.replace(/<h1 class="elementor-heading-title elementor-size-default">(<a[\s\S]*?<\/a>)<\/h1>/g, '<h3 class="elementor-heading-title elementor-size-default">$1</h3>');
   html = addSocialImage(html, data.image, data.h1);
   html = normalizeSchema(html, canonical, data.h1, description, data.image, data.faqs);
@@ -244,8 +248,13 @@ function enhancePillar(slug, data) {
     <div class="five-pillars-guide__cta"><p><strong>Want help applying the Five Pillars to your business?</strong><br>See how the Develop Mastermind combines planning, coaching and accountability.</p><a href="/courses/mastermind-course/">Explore the Develop Mastermind</a></div>
   </div>
 </section>`;
-  html = assertReplace(html, '</main>', `${guide}\n</main>`, `${slug} guide`);
-  html = assertReplace(html, '</body>', `${trackingScript(slug)}\n</body>`, `${slug} analytics`);
+  html = html.replace(/<style id="five-pillars-seo-geo">[\s\S]*?<\/style>\s*/g, '');
+  if (html.includes('class="five-pillars-guide"')) html = html.replace(/<section class="five-pillars-guide"[\s\S]*?<\/section>/, guide);
+  else html = assertReplace(html, '</main>', `${guide}\n</main>`, `${slug} guide`);
+  html = html.replace(/\n{3,}(?=<style id="five-pillars-seo-geo">)/g, '\n\n');
+  const analytics = trackingScript(slug);
+  if (html.includes('id="five-pillars-analytics"')) html = html.replace(/<script id="five-pillars-analytics">[\s\S]*?<\/script>/, analytics);
+  else html = assertReplace(html, '</body>', `${analytics}\n</body>`, `${slug} analytics`);
   write(file, html);
 }
 
@@ -262,7 +271,12 @@ function enhanceHub() {
     ['Does the training need to be completed in order?', 'No. Start with the pillar that best matches the current constraint, then use the other pillars to understand the connected parts of the business.']
   ];
   html = html.replaceAll('/5-pillars-plan/', routes[0]).replaceAll('/the-5-pillars-attract/', routes[1]).replaceAll('/the-5-pillars-convert/', routes[2]).replaceAll('/the-5-pillars-deliver/', routes[3]).replaceAll('/the-5-pillars-scale/', routes[4]);
-  html = assertReplace(html, '<h2 class="elementor-heading-title elementor-size-default">Free Trainings - The 5 Pillars</h2>', `<h1 class="elementor-heading-title elementor-size-default">${title}</h1>`, 'hub H1');
+  const legacyHeading = '<h2 class="elementor-heading-title elementor-size-default">Free Trainings - The 5 Pillars</h2>';
+  if (html.includes(legacyHeading)) {
+    html = html.replace(legacyHeading, `<h1 class="elementor-heading-title elementor-size-default">${title}</h1>`);
+  } else if (!html.includes('class="fp-hub"')) {
+    throw new Error('Could not replace hub H1');
+  }
   html = addSocialImage(html, image, title);
   const video = {
     '@type':'VideoObject','@id':`${canonical}#welcome-video`,name:'Welcome To The 5 Pillars Hub',
@@ -271,26 +285,18 @@ function enhanceHub() {
     publisher:{'@id':'https://develop-coaching.com/#organization'},isPartOf:{'@id':`${canonical}#webpage`},inLanguage:'en-GB'
   };
   html = normalizeSchema(html, canonical, title, description, image, faqs, video);
-  const cards = Object.entries(pillars).map(([slug,p]) => `<article class="five-pillars-guide__card"><h3>${p.number}. ${p.title}</h3><p>${p.intro}</p><a href="/5-pillars-free-trainings/${slug}/">Explore ${p.title}</a></article>`).join('\n');
-  const guide = `${sharedStyle}
-<section class="five-pillars-guide" aria-labelledby="hub-guide-title">
-  <div class="five-pillars-guide__inner">
-    <h2 id="hub-guide-title">Choose the constraint that needs attention now</h2>
-    <p class="five-pillars-guide__lead">The Five Pillars connect business direction, demand, sales, project delivery and team capacity. Use the summaries below to choose a starting point, then move between pillars as the business changes.</p>
-    <div class="five-pillars-guide__grid">${cards}</div>
-    <div class="five-pillars-guide__transcript"><h3>Welcome video summary</h3><p>Greg explains that he created the knowledge hub to make practical construction business education available more widely. He introduces the five sections, Plan, Attract, Convert, Deliver and Scale, and encourages owners to use the resources that match their current business challenge.</p><p><a href="https://www.youtube.com/watch?v=B3EHS8OHdhM">Watch “Welcome To The 5 Pillars Hub” on YouTube</a>.</p></div>
-    <h2>Frequently asked questions</h2>${faqMarkup(faqs)}
-    <div class="five-pillars-guide__cta"><p><strong>Ready to apply the Five Pillars with support?</strong><br>Explore the coaching, tools and accountability inside the Develop Mastermind.</p><a href="/courses/mastermind-course/">Explore the Develop Mastermind</a></div>
-  </div>
-</section>`;
-  html = assertReplace(html, '</main>', `${guide}\n</main>`, 'hub guide');
-  html = assertReplace(html, '</body>', `${trackingScript('hub')}\n</body>`, 'hub analytics');
+  // Visible hub content comes from content/five-pillars-hub.html via renderHub().
+  // Keep this step focused on metadata, schema and analytics outside <main>.
+  const analytics = trackingScript('hub');
+  if (html.includes('id="five-pillars-analytics"')) html = html.replace(/<script id="five-pillars-analytics">[\s\S]*?<\/script>/, analytics);
+  else html = assertReplace(html, '</body>', `${analytics}\n</body>`, 'hub analytics');
   write(file, html);
 }
 
 function enhanceMastermind() {
   let html = read(mastermindPath);
   Object.entries(pillars).forEach(([slug, data]) => {
+    if (html.includes(`data-pillar-name="${slug}"`)) return;
     const pattern = new RegExp(`<li><span>0${data.number}<\\/span>([\\s\\S]*?)<div><h3>${data.title}<\\/h3>([\\s\\S]*?)<\\/div><\\/li>`);
     html = assertReplace(html, pattern, `<li><a class="dc2-pillar-link" href="/5-pillars-free-trainings/${slug}/" data-pillar-name="${slug}"><span>0${data.number}</span>$1<div><h3>${data.title}</h3>$2</div></a></li>`, `Mastermind ${slug} link`);
   });
@@ -301,8 +307,11 @@ function enhanceMastermind() {
 .dc2-pillars .dc2-pillar-link>span{color:var(--dc2-blue);font-family:var(--dc2-mono);font-size:.68rem;font-weight:700}
 @media(max-width:1024px){.dc2-pillar-link{min-height:180px}}
 </style>`;
-  html = assertReplace(html, '</head>', `${linkStyle}\n</head>`, 'Mastermind pillar link style');
-  html = assertReplace(html, '</body>', `<script id="mastermind-pillar-analytics">document.addEventListener('click',function(e){var a=e.target.closest('.dc2-pillar-link');if(!a||typeof window.ga4Event!=='function')return;window.ga4Event('event','five_pillars_pillar_select',{source_page:'mastermind',pillar_name:a.dataset.pillarName,link_text:(a.textContent||'').trim().replace(/\\s+/g,' ').slice(0,120)});});</script>\n</body>`, 'Mastermind pillar analytics');
+  if (html.includes('id="mastermind-pillar-links"')) html = html.replace(/<style id="mastermind-pillar-links">[\s\S]*?<\/style>/, linkStyle);
+  else html = assertReplace(html, '</head>', `${linkStyle}\n</head>`, 'Mastermind pillar link style');
+  const analytics = `<script id="mastermind-pillar-analytics">document.addEventListener('click',function(e){var a=e.target.closest('.dc2-pillar-link');if(!a||typeof window.ga4Event!=='function')return;window.ga4Event('event','five_pillars_pillar_select',{source_page:'mastermind',pillar_name:a.dataset.pillarName,link_text:(a.textContent||'').trim().replace(/\\s+/g,' ').slice(0,120)});});</script>`;
+  if (html.includes('id="mastermind-pillar-analytics"')) html = html.replace(/<script id="mastermind-pillar-analytics">[\s\S]*?<\/script>/, analytics);
+  else html = assertReplace(html, '</body>', `${analytics}\n</body>`, 'Mastermind pillar analytics');
   write(mastermindPath, html);
 }
 
