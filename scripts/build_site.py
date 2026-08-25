@@ -12,6 +12,9 @@ import os
 import re
 import shutil
 
+from simplify_navigation import simplify_main_navigation
+from modernise_footer import modernise_footer
+
 REF = "export/reference"
 OUT = "www"
 DOMAIN = "https://develop-coaching.com"
@@ -241,8 +244,10 @@ def strip_legacy_discovery(html: str) -> str:
     return html
 
 
-def rewrite(html: str) -> str:
+def rewrite(html: str, relative_path: str = "") -> str:
     html = unblock_scripts(html)
+    html = simplify_main_navigation(html)
+    html = modernise_footer(html, relative_path)
     html = strip_dead_activecampaign(html)
     html = dedupe_newsletter_embed(html)
     html = strip_legacy_discovery(html)
@@ -355,9 +360,10 @@ def main():
             continue
         html = open(os.path.join(REF, fname), encoding="utf-8", errors="ignore").read()
         dest = out_path(fname)
+        relative_path = os.path.relpath(dest, OUT).replace(os.sep, "/")
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as f:
-            f.write(rewrite(html))
+            f.write(rewrite(html, relative_path))
         count += 1
 
     # vercel.json: trailing slashes like WordPress, plus legacy redirects
