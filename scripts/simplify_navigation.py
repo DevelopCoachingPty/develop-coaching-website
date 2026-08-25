@@ -135,10 +135,14 @@ def simplify_main_navigation(html: str) -> str:
         r'<style id="dc-simplified-navigation">.*?</style>', re.S | re.I
     )
     if style_pattern.search(html):
-        html = style_pattern.sub(NAVIGATION_STYLE, html, count=1)
+        html = style_pattern.sub(lambda _match: NAVIGATION_STYLE, html, count=1)
     elif re.search(r"</head>", html, re.I):
         html = re.sub(
-            r"</head>", f"{NAVIGATION_STYLE}\n</head>", html, count=1, flags=re.I
+            r"</head>",
+            lambda match: f"{NAVIGATION_STYLE}\n{match.group(0)}",
+            html,
+            count=1,
+            flags=re.I,
         )
     return html
 

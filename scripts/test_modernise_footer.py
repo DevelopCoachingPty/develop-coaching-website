@@ -1,5 +1,7 @@
 import unittest
+from unittest.mock import patch
 
+import scripts.modernise_footer as footer_module
 from scripts.modernise_footer import modernise_footer
 
 
@@ -46,6 +48,15 @@ class ModerniseFooterTests(unittest.TestCase):
         html = LEGACY.replace("BODY_CLASSES", "page").replace("</head>", "</HEAD>")
         result = modernise_footer(html, "contact/index.html")
         self.assertIn('id="dc-modern-footer"', result)
+        self.assertIn("</HEAD>", result)
+
+    def test_css_backslash_escapes_are_preserved_exactly(self):
+        html = LEGACY.replace("BODY_CLASSES", "page")
+        escaped_style = '<style id="dc-modern-footer">.icon:before{content:"\\f004"}</style>'
+        with patch.object(footer_module, "STYLE", escaped_style):
+            result = modernise_footer(html, "contact/index.html")
+        self.assertIn(r'content:"\f004"', result)
+        self.assertNotIn("\f", result)
 
     def test_custom_page_without_legacy_footer_is_untouched(self):
         html = "<html><head></head><body><main>Custom</main></body></html>"

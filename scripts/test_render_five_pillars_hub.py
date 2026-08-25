@@ -27,11 +27,11 @@ class RenderFivePillarsHubTests(unittest.TestCase):
             css = temp / "hub.css"
             hub.write_text(modernised, encoding="utf-8")
             markup.write_text(
-                '<main class="fp-hub"><section class="fp-book"></section>'
+                '<main class="fp-hub"><section class="fp-book">Price $& $1</section>'
                 '<footer class="fp-footer"></footer></main>',
                 encoding="utf-8",
             )
-            css.write_text(".fp-hub{display:block}", encoding="utf-8")
+            css.write_text('.fp-hub{display:block}.price:after{content:"$& $1"}', encoding="utf-8")
             script = (
                 "const {renderHub}=require("
                 + repr(str(ROOT / "scripts/render_five_pillars_hub.js"))
@@ -47,6 +47,8 @@ class RenderFivePillarsHubTests(unittest.TestCase):
             result = hub.read_text(encoding="utf-8")
 
         self.assertIn('class="fp-footer"', result)
+        self.assertIn("Price $& $1", result)
+        self.assertIn('content:"$& $1"', result)
         self.assertNotIn("data-dc-modern-footer", result)
         self.assertNotIn('class="dc-book-award"', result)
         self.assertNotIn('id="dc-modern-footer"', result)

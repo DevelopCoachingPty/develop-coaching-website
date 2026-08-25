@@ -99,24 +99,30 @@ def modernise_footer(html: str, relative_path: str) -> str:
         html = STYLE_RE.sub("", html)
         return re.sub(r'\n(?:[ \t]*\n){2,}(?=[ \t]*<script)', "\n\n", html)
     if 'data-dc-modern-footer' in html:
-        html = MODERN_FOOTER_RE.sub(FOOTER, html, count=1)
+        html = MODERN_FOOTER_RE.sub(lambda _match: FOOTER, html, count=1)
         include_book = should_include_book_award(relative_path, html)
         if include_book and MODERN_BOOK_RE.search(html):
-            html = MODERN_BOOK_RE.sub(BOOK_AWARD, html, count=1)
+            html = MODERN_BOOK_RE.sub(lambda _match: BOOK_AWARD, html, count=1)
         elif include_book:
             html = html.replace(FOOTER, BOOK_AWARD + "\n" + FOOTER, 1)
         else:
             html = MODERN_BOOK_RE.sub("", html)
-        return STYLE_RE.sub(STYLE, html, count=1)
+        return STYLE_RE.sub(lambda _match: STYLE, html, count=1)
     if not LEGACY_FOOTER_RE.search(html):
         return html
     replacement = FOOTER
     if should_include_book_award(relative_path, html):
         replacement = BOOK_AWARD + "\n" + replacement
-    html = LEGACY_FOOTER_RE.sub(replacement, html, count=1)
+    html = LEGACY_FOOTER_RE.sub(lambda _match: replacement, html, count=1)
     if STYLE_RE.search(html):
-        return STYLE_RE.sub(STYLE, html, count=1)
-    return re.sub(r"</head>", f"{STYLE}\n</head>", html, count=1, flags=re.I)
+        return STYLE_RE.sub(lambda _match: STYLE, html, count=1)
+    return re.sub(
+        r"</head>",
+        lambda match: f"{STYLE}\n{match.group(0)}",
+        html,
+        count=1,
+        flags=re.I,
+    )
 
 
 def main() -> None:

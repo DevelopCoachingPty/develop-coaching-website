@@ -20,7 +20,7 @@ function renderHub(options = {}) {
 
   const mainPattern = /<main\b[\s\S]*?<\/main>/i;
   if (!mainPattern.test(html)) throw new Error('Five Pillars hub main element not found');
-  html = html.replace(mainPattern, markup);
+  html = html.replace(mainPattern, () => markup);
 
   // build_site.py modernises the legacy footer before this renderer runs.
   // The hub template already contains its own book, award and footer, so remove
@@ -31,8 +31,8 @@ function renderHub(options = {}) {
     .replace(/<style id="dc-modern-footer">[\s\S]*?<\/style>\s*/i, '');
 
   const stylePattern = new RegExp(`<style id="${styleId}">[\\s\\S]*?<\\/style>`, 'i');
-  if (stylePattern.test(html)) html = html.replace(stylePattern, style);
-  else html = html.replace(/<\/head>/i, `${style}\n</head>`);
+  if (stylePattern.test(html)) html = html.replace(stylePattern, () => style);
+  else html = html.replace(/<\/head>/i, (match) => `${style}\n${match}`);
 
   fs.writeFileSync(targetHubPath, html);
   return html;

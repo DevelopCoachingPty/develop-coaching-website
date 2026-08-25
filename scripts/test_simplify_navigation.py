@@ -8,6 +8,7 @@ class SimplifyNavigationTests(unittest.TestCase):
         html = "<html><head></HEAD><body></body></html>"
         result = simplify_main_navigation(html)
         self.assertIn('id="dc-simplified-navigation"', result)
+        self.assertIn("</HEAD>", result)
 
     def test_simplifies_desktop_and_mobile_menus_without_moving_cta(self):
         menu = """

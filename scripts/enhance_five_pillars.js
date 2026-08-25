@@ -168,7 +168,7 @@ function normalizeSchema(html, canonical, title, description, image, faqs, hubVi
     ...(breadcrumb ? [breadcrumb] : []), page, faq, ...(hubVideo ? [hubVideo] : []), ...existingVideos
   ];
   const schema = `<script type="application/ld+json" class="rank-math-schema-pro">${JSON.stringify({'@context':'https://schema.org','@graph':nextGraph})}</script>`;
-  return html.replace(match[0], schema);
+  return html.replace(match[0], () => schema);
 }
 
 function addSocialImage(html, image, title) {
