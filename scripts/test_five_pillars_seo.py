@@ -119,6 +119,26 @@ class FivePillarsSeoTests(unittest.TestCase):
         for path in FILES[1:]:
             self.assertIn('href="/courses/mastermind-course/"', load(path))
 
+    def test_redesigned_hub_uses_five_icon_led_pillar_cards(self):
+        document = load(FILES[0])
+        main = document[document.index('<main id="content"') : document.index("</main>")]
+        self.assertIn('class="fp-hub"', main)
+        self.assertEqual(main.count('class="fp-pillar fp-pillar--'), 5)
+        self.assertEqual(main.count('class="fp-icon"'), 5)
+        pillar_grid = main[main.index('class="fp-pillar-grid"') : main.index('</div>\n    </div>\n  </section>', main.index('class="fp-pillar-grid"'))]
+        self.assertNotIn("<img", pillar_grid)
+        self.assertIn('title="Welcome To The 5 Pillars Hub"', main)
+        self.assertEqual(document.count('id="five-pillars-hub-redesign"'), 1)
+
+    def test_redesigned_hub_replaces_the_legacy_footer(self):
+        document = load(FILES[0])
+        main = document[document.index('<main id="content"') : document.index("</main>")]
+        self.assertIn('class="fp-book"', main)
+        self.assertIn("Build-Your-Future-Dollar.webp", main)
+        self.assertIn("Best Construction Training Company 2024", main)
+        self.assertIn('class="fp-footer"', main)
+        self.assertIn(".fp-hub + .elementor-location-footer", document)
+
     def test_analytics_events_and_dimensions_are_instrumented(self):
         expected = (
             "five_pillars_pillar_select",

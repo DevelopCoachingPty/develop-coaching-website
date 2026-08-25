@@ -239,7 +239,222 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
     padding-right: 13px !important;
   }
 }
-</style></head>
+</style><style id="five-pillars-hub-redesign">
+:root {
+  --fp-blue: #0069b1;
+  --fp-yellow: #fdce36;
+  --fp-orange: #fbaa35;
+  --fp-ink: #414042;
+  --fp-grey: #d2d2d2;
+  --fp-white: #ffffff;
+}
+
+.fp-hub,
+.fp-hub * { box-sizing: border-box; }
+.fp-hub { overflow: hidden; color: var(--fp-ink); background: var(--fp-white); font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; }
+.fp-hub + .elementor-location-footer { display: none !important; }
+.fp-hub h1,.fp-hub h2,.fp-hub h3,.fp-hub p { margin: 0; }
+.fp-hub a { color: inherit; text-decoration: none; }
+.fp-hub a:focus-visible,.fp-hub summary:focus-visible { outline: 3px solid var(--fp-yellow); outline-offset: 4px; }
+.fp-wrap { width: min(calc(100% - 48px), 1180px); margin-inline: auto; }
+.fp-kicker { display: flex; align-items: center; gap: 10px; color: var(--fp-blue); font-size: .78rem; font-weight: 800; letter-spacing: .1em; line-height: 1.3; text-transform: uppercase; }
+.fp-kicker span { display: inline-flex; padding: 7px 10px; background: var(--fp-yellow); color: var(--fp-ink); letter-spacing: .06em; }
+
+.fp-hero { position: relative; padding: 82px 0 76px; color: var(--fp-white); background-color: var(--fp-ink); background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px); background-size: 34px 34px; }
+.fp-hero::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 8px; background: var(--fp-yellow); }
+.fp-hero__grid { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(420px,.95fr); gap: clamp(44px,6vw,86px); align-items: center; }
+.fp-hero .fp-kicker { color: var(--fp-white); }
+.fp-hero h1 { max-width: 700px; margin-top: 26px; font-size: clamp(3.25rem,5.7vw,6rem); font-weight: 800; letter-spacing: -.06em; line-height: .94; text-wrap: balance; }
+.fp-hero__lead { max-width: 660px; margin-top: 28px !important; color: rgba(255,255,255,.82); font-size: clamp(1.15rem,1.5vw,1.35rem); line-height: 1.55; }
+.fp-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 34px; }
+.fp-btn { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 21px; border: 1px solid var(--fp-ink); background: var(--fp-yellow); color: var(--fp-ink) !important; font-size: .96rem; font-weight: 800; line-height: 1.2; box-shadow: 5px 5px 0 var(--fp-blue); transition: transform 160ms ease,box-shadow 160ms ease,background 160ms ease; }
+.fp-btn:hover { background: var(--fp-orange); transform: translate(2px,2px); box-shadow: 3px 3px 0 var(--fp-blue); }
+.fp-text-link { color: var(--fp-white) !important; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.55); }
+.fp-text-link span { margin-left: 5px; color: var(--fp-yellow); }
+.fp-video-card { position: relative; padding: 14px; border: 1px solid rgba(255,255,255,.24); background: var(--fp-white); color: var(--fp-ink); box-shadow: 12px 12px 0 var(--fp-blue); }
+.fp-video-card::after { content: "05"; position: absolute; right: -24px; bottom: -42px; z-index: -1; color: rgba(255,255,255,.07); font-size: 10rem; font-weight: 900; line-height: 1; }
+.fp-video-card__topline { display: flex; justify-content: space-between; padding: 2px 2px 12px; color: var(--fp-blue); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.fp-video { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--fp-ink); }
+.fp-video iframe { width: 100%; height: 100%; border: 0; }
+.fp-video-card p { padding: 15px 4px 3px; font-size: .98rem; line-height: 1.5; }
+
+.fp-pillars { padding: 94px 0 104px; }
+.fp-section-heading { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(280px,.65fr); gap: clamp(40px,7vw,96px); align-items: end; }
+.fp-section-heading h2,.fp-route h2,.fp-faq h2,.fp-mastermind h2 { margin-top: 12px; font-size: clamp(2.4rem,4.4vw,4.7rem); font-weight: 800; letter-spacing: -.055em; line-height: .98; text-wrap: balance; }
+.fp-section-heading>p { max-width: 500px; font-size: 1.08rem; line-height: 1.65; }
+.fp-pillar-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); margin-top: 52px; border: 1px solid var(--fp-grey); }
+.fp-pillar { position: relative; min-height: 410px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 24px; padding: 24px 21px 23px; border-right: 1px solid var(--fp-grey); background: var(--fp-white); transition: color 180ms ease,background 180ms ease,transform 180ms ease; }
+.fp-pillar:last-child { border-right: 0; }
+.fp-pillar::before { content: ""; position: absolute; inset: 0 0 auto; height: 7px; background: var(--fp-yellow); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
+.fp-pillar:hover { z-index: 1; background: var(--fp-ink); color: var(--fp-white); transform: translateY(-8px); }
+.fp-pillar:hover::before { transform: scaleX(1); }
+.fp-pillar__number { color: var(--fp-blue); font-size: .76rem; font-weight: 800; letter-spacing: .12em; }
+.fp-icon { width: 66px; height: 66px; display: grid; place-items: center; border: 1px solid var(--fp-grey); background: var(--fp-yellow); }
+.fp-icon svg { width: 46px; height: 46px; fill: none; stroke: var(--fp-ink); stroke-width: 2.2; stroke-linecap: square; stroke-linejoin: miter; }
+.fp-pillar__content { display: block; }
+.fp-pillar__content strong { display: block; margin-bottom: 12px; font-size: 1.65rem; line-height: 1; }
+.fp-pillar__content>span { display: block; color: rgba(65,64,66,.76); font-size: .97rem; line-height: 1.55; }
+.fp-pillar:hover .fp-pillar__content>span { color: rgba(255,255,255,.75); }
+.fp-pillar__action { align-self: end; color: var(--fp-blue); font-size: .9rem; font-weight: 800; }
+.fp-pillar:hover .fp-pillar__number,.fp-pillar:hover .fp-pillar__action { color: var(--fp-yellow); }
+.fp-pillar__action span { margin-left: 4px; }
+
+.fp-route { padding: 88px 0; background: var(--fp-blue); color: var(--fp-white); }
+.fp-route .fp-kicker { color: var(--fp-yellow); }
+.fp-route__grid { display: grid; grid-template-columns: minmax(0,.8fr) minmax(420px,1fr); gap: clamp(50px,9vw,126px); align-items: start; }
+.fp-steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.35); }
+.fp-steps li { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.35); }
+.fp-steps li>span { width: 34px; height: 34px; display: grid; place-items: center; background: var(--fp-yellow); color: var(--fp-ink); font-size: .82rem; font-weight: 900; }
+.fp-steps strong { display: block; margin-bottom: 3px; font-size: 1.18rem; }
+.fp-steps p { color: rgba(255,255,255,.78); line-height: 1.55; }
+
+.fp-faq { padding: 96px 0; }
+.fp-faq__grid { display: grid; grid-template-columns: minmax(260px,.62fr) minmax(0,1fr); gap: clamp(54px,9vw,130px); }
+.fp-faq__intro>p:last-child { max-width: 440px; margin-top: 24px; font-size: 1.05rem; line-height: 1.65; }
+.fp-faq__items { border-top: 2px solid var(--fp-ink); }
+.fp-faq details { border-bottom: 1px solid var(--fp-grey); }
+.fp-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; cursor: pointer; font-size: 1.15rem; font-weight: 800; list-style: none; }
+.fp-faq summary::-webkit-details-marker { display: none; }
+.fp-faq summary span { color: var(--fp-blue); font-size: 1.5rem; }
+.fp-faq details[open] summary span { transform: rotate(45deg); }
+.fp-faq details p { max-width: 710px; padding: 0 42px 24px 0; color: rgba(65,64,66,.78); line-height: 1.65; }
+
+.fp-mastermind { padding: 82px 0; background: var(--fp-yellow); }
+.fp-mastermind__inner { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 52px; align-items: center; }
+.fp-mastermind .fp-kicker { color: var(--fp-ink); }
+.fp-mastermind h2 { max-width: 790px; }
+.fp-mastermind p:last-child { margin-top: 18px; font-size: 1.08rem; }
+.fp-btn--dark { background: var(--fp-ink); color: var(--fp-white) !important; box-shadow: 5px 5px 0 var(--fp-blue); white-space: nowrap; }
+.fp-btn--dark:hover { background: var(--fp-blue); color: var(--fp-white) !important; }
+
+.fp-book { padding: 92px 0; background: var(--fp-white); }
+.fp-book__inner { display: grid; grid-template-columns: minmax(270px,.85fr) minmax(340px,1fr) minmax(240px,.7fr); gap: clamp(34px,5vw,72px); align-items: center; }
+.fp-book__visual { display: grid; place-items: center; min-height: 360px; padding: 24px; background: var(--fp-yellow); }
+.fp-book__visual img { display: block; width: min(100%,440px); height: auto; }
+.fp-book__copy h2 { margin-top: 12px; font-size: clamp(2.35rem,3.8vw,4rem); font-weight: 800; letter-spacing: -.055em; line-height: .98; text-wrap: balance; }
+.fp-book__copy>p:not(.fp-kicker) { max-width: 520px; margin-top: 22px; font-size: 1.08rem; line-height: 1.65; }
+.fp-book__copy .fp-btn { margin-top: 28px; }
+.fp-award { min-height: 360px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 34px; background: var(--fp-blue); color: var(--fp-white) !important; box-shadow: 9px 9px 0 var(--fp-yellow); }
+.fp-award svg { width: 68px; height: 68px; margin-bottom: 28px; fill: var(--fp-yellow); stroke: var(--fp-ink); stroke-width: 2.4; stroke-linecap: square; stroke-linejoin: miter; }
+.fp-award>span { color: rgba(255,255,255,.78); font-size: .78rem; font-weight: 800; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
+.fp-award strong { display: block; margin-top: 14px; font-size: 1.55rem; line-height: 1.08; }
+.fp-award small { margin-top: 30px; color: var(--fp-yellow); font-size: .85rem; font-weight: 800; }
+
+.fp-footer { padding: 48px 0 28px; background: var(--fp-blue); color: var(--fp-white); }
+.fp-footer__top { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; padding-bottom: 34px; border-bottom: 1px solid rgba(255,255,255,.35); }
+.fp-footer__brand { display: block; padding: 12px 16px; background: var(--fp-white); }
+.fp-footer__brand img { display: block; width: 190px; height: auto; }
+.fp-footer__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 14px 28px; font-size: .92rem; font-weight: 700; }
+.fp-footer__links a,.fp-footer__bottom a { color: var(--fp-white); }
+.fp-footer__links a:hover,.fp-footer__bottom a:hover { color: var(--fp-yellow); }
+.fp-footer__bottom { display: grid; grid-template-columns: auto auto; gap: 12px 30px; padding-top: 24px; font-size: .78rem; line-height: 1.55; }
+.fp-footer__bottom>p:nth-child(2) { text-align: right; }
+.fp-footer__disclaimer { grid-column: 1/-1; max-width: 720px; color: rgba(255,255,255,.68); }
+
+@media (max-width: 1024px) {
+  .fp-hero__grid { grid-template-columns: 1fr; }
+  .fp-video-card { width: min(100%,720px); }
+  .fp-pillar-grid { grid-template-columns: repeat(2,minmax(0,1fr)); border-bottom: 0; }
+  .fp-pillar { min-height: 330px; border-bottom: 1px solid var(--fp-grey); }
+  .fp-pillar:nth-child(2n) { border-right: 0; }
+  .fp-pillar:last-child { grid-column: 1/-1; min-height: 280px; border-right: 0; }
+  .fp-route__grid { grid-template-columns: 1fr; }
+  .fp-book__inner { grid-template-columns: minmax(280px,.8fr) 1fr; }
+  .fp-award { grid-column: 1/-1; min-height: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 26px; }
+  .fp-award svg { grid-row: 1/5; margin: 0; }
+  .fp-award strong,.fp-award small { margin-top: 4px; }
+}
+
+@media (max-width: 767px) {
+  .fp-wrap { width: min(calc(100% - 32px),1180px); }
+  .fp-hero { padding: 58px 0 54px; }
+  .fp-hero h1 { font-size: clamp(2.75rem,14vw,4.2rem); }
+  .fp-hero__actions { align-items: stretch; flex-direction: column; }
+  .fp-btn { width: 100%; text-align: center; }
+  .fp-text-link { align-self: flex-start; }
+  .fp-video-card { padding: 10px; box-shadow: 7px 7px 0 var(--fp-blue); }
+  .fp-video-card__topline { font-size: .63rem; }
+  .fp-pillars,.fp-faq { padding: 68px 0; }
+  .fp-section-heading,.fp-faq__grid,.fp-mastermind__inner { grid-template-columns: 1fr; gap: 34px; }
+  .fp-pillar-grid { grid-template-columns: 1fr; }
+  .fp-pillar,.fp-pillar:last-child { min-height: 0; grid-column: auto; border-right: 0; }
+  .fp-pillar:hover { transform: none; }
+  .fp-route { padding: 68px 0; }
+  .fp-mastermind { padding: 64px 0; }
+  .fp-book { padding: 68px 0; }
+  .fp-book__inner { grid-template-columns: 1fr; }
+  .fp-book__visual { min-height: 0; }
+  .fp-award { grid-column: auto; display: flex; min-height: 0; }
+  .fp-award svg { margin-bottom: 22px; }
+  .fp-footer__top,.fp-footer__bottom { grid-template-columns: 1fr; }
+  .fp-footer__links { justify-content: flex-start; }
+  .fp-footer__bottom>p:nth-child(2) { text-align: left; }
+  .fp-footer__disclaimer { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp-hub * { scroll-behavior: auto !important; transition: none !important; }
+}
+</style>
+<style id="dc-simplified-navigation">
+@media (min-width: 1025px) {
+  .elementor-element-d083c1c {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+  .elementor-element-dcb2a0c {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: end;
+    width: auto !important;
+  }
+  .elementor-element-b81d386 {
+    grid-column: 1;
+    grid-row: 2;
+    width: auto !important;
+    max-width: none !important;
+  }
+  .elementor-element-7804adf {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    width: auto !important;
+    margin-left: 18px !important;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-element-bca47e7 > .e-con-inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px 8px !important;
+  }
+  .elementor-element-41f4756,
+  .elementor-element-d083c1c,
+  .elementor-element-b81d386 {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+  .elementor-element-f54cf12 {
+    width: 190px !important;
+  }
+  .elementor-element-f54cf12 img {
+    width: 190px !important;
+    height: auto !important;
+  }
+  .elementor-element-12f3659 > .e-con-inner {
+    padding: 0 16px 8px !important;
+  }
+  .elementor-element-79870bb {
+    justify-content: flex-end !important;
+  }
+}
+</style>
+
+</head>
 <body class="wp-singular page-template-default page page-id-16468 page-parent wp-custom-logo wp-theme-hello-elementor elementor-default elementor-kit-4211 elementor-page elementor-page-16468">
 
 <!-- Google Tag Manager (noscript) -->
@@ -280,23 +495,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="/courses/win-big-clients/" class="elementor-sub-item">Win Big Clients</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor">Trades</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="/" class="elementor-sub-item">Builders Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="/carpentry-business-coach/" class="elementor-sub-item">Carpentry Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="/decorating-business-coach/" class="elementor-sub-item">Decorating Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="/electrical-business-coach/" class="elementor-sub-item">Electrical Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="/groundwork-business-coach/" class="elementor-sub-item">Groundwork Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="/landscaping-business-coach/" class="elementor-sub-item">Landscaping Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="/plastering-business-coach/" class="elementor-sub-item">Plastering Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="/plumbing-business-coach/" class="elementor-sub-item">Plumbing Business Coach</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active">Free Trainings</a></li>
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active">Free Resources</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="/client-wins/" class="elementor-item">Client Wins</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item">My Story</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="/blog/" class="elementor-item">Blog</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="/construction-podcast/" class="elementor-item">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item">About Greg</a></li>
+
+
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="/contact/" class="elementor-item">Contact</a></li>
 </ul>			</nav>
 					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
@@ -309,23 +513,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="/courses/win-big-clients/" class="elementor-sub-item" tabindex="-1">Win Big Clients</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Trades</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="/" class="elementor-sub-item" tabindex="-1">Builders Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="/carpentry-business-coach/" class="elementor-sub-item" tabindex="-1">Carpentry Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="/decorating-business-coach/" class="elementor-sub-item" tabindex="-1">Decorating Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="/electrical-business-coach/" class="elementor-sub-item" tabindex="-1">Electrical Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="/groundwork-business-coach/" class="elementor-sub-item" tabindex="-1">Groundwork Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="/landscaping-business-coach/" class="elementor-sub-item" tabindex="-1">Landscaping Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="/plastering-business-coach/" class="elementor-sub-item" tabindex="-1">Plastering Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="/plumbing-business-coach/" class="elementor-sub-item" tabindex="-1">Plumbing Business Coach</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Free Trainings</a></li>
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Free Resources</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="/client-wins/" class="elementor-item" tabindex="-1">Client Wins</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item" tabindex="-1">My Story</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="/construction-podcast/" class="elementor-item" tabindex="-1">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item" tabindex="-1">About Greg</a></li>
+
+
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
 </ul>			</nav>
 						</div>
@@ -355,260 +548,171 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				</header>
 		
-<main id="content" class="site-main post-16468 page type-page status-publish hentry">
+<main id="content" class="fp-hub">
+  <section class="fp-hero" aria-labelledby="fp-title">
+    <div class="fp-wrap fp-hero__grid">
+      <div class="fp-hero__copy">
+        <p class="fp-kicker"><span>Free resource hub</span> Built for construction business owners</p>
+        <h1 id="fp-title">Build a stronger business across five connected pillars.</h1>
+        <p class="fp-hero__lead">Plan the direction. Attract better-fit clients. Convert the right work. Deliver it with control. Scale beyond the owner.</p>
+        <div class="fp-hero__actions">
+          <a class="fp-btn" href="#choose-a-pillar">Choose your starting pillar</a>
+          <a class="fp-text-link" href="/courses/mastermind-course/">Explore the Develop Mastermind <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="fp-video-card">
+        <div class="fp-video-card__topline">
+          <span>Start here</span>
+          <span>Welcome to the hub</span>
+        </div>
+        <div class="fp-video">
+          <iframe src="https://www.youtube.com/embed/B3EHS8OHdhM" title="Welcome To The 5 Pillars Hub" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p>Greg introduces Plan, Attract, Convert, Deliver and Scale, and explains how to start with the constraint that matters most now.</p>
+      </div>
+    </div>
+  </section>
 
-	
-	<div class="page-content">
-				<div data-elementor-type="wp-page" data-elementor-id="16468" class="elementor elementor-16468" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-2a84939 e-flex e-con-boxed e-con e-parent" data-id="2a84939" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-b82b898 elementor-widget elementor-widget-heading" data-id="b82b898" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">5</h2>				</div>
-				<div class="elementor-element elementor-element-ba7fa98 elementor-widget elementor-widget-heading" data-id="ba7fa98" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h1 class="elementor-heading-title elementor-size-default">Free Construction Business Training: The Five Pillars</h1>				</div>
-				<div class="elementor-element elementor-element-0cbe0a6 elementor-widget elementor-widget-text-editor" data-id="0cbe0a6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									“Learn The 5 Steps Of How To Create A £1m-£5m Company”								</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-23db402 e-flex e-con-boxed e-con e-parent" data-id="23db402" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-55f117c elementor-widget elementor-widget-video" data-id="55f117c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/B3EHS8OHdhM&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
-							<div class="elementor-wrapper elementor-open-inline">
-			<div class="elementor-video"></div>		</div>
-						</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-f338e1b e-flex e-con-boxed e-con e-parent" data-id="f338e1b" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-		<a class="elementor-element elementor-element-28365cf e-con-full e-flex e-con e-child" data-id="28365cf" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/plan/">
-		<div class="elementor-element elementor-element-aec048b e-con-full e-flex e-con e-child" data-id="aec048b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				</div>
-		<div class="elementor-element elementor-element-de39b4b e-con-full e-flex e-con e-child" data-id="de39b4b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-7898c21 elementor-widget elementor-widget-heading" data-id="7898c21" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">PLAN</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-3172104 elementor-widget elementor-widget-text-editor" data-id="3172104" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									Strategic roadmaps and actionable targets								</div>
-				</a>
-		<a class="elementor-element elementor-element-730cea8 e-con-full e-flex e-con e-child" data-id="730cea8" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/attract/">
-		<div class="elementor-element elementor-element-9bdc279 e-con-full e-flex e-con e-child" data-id="9bdc279" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				</div>
-		<div class="elementor-element elementor-element-e21d591 e-con-full e-flex e-con e-child" data-id="e21d591" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-3f18033 elementor-widget elementor-widget-heading" data-id="3f18033" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">ATTRACT</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-e7ed96c elementor-widget elementor-widget-text-editor" data-id="e7ed96c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p data-pm-slice="1 1 []">Position your company to draw ideal clients</p>								</div>
-				</a>
-		<a class="elementor-element elementor-element-e7c8835 e-con-full e-flex e-con e-child" data-id="e7c8835" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/convert/">
-		<div class="elementor-element elementor-element-520cf60 e-con-full e-flex e-con e-child" data-id="520cf60" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				</div>
-		<div class="elementor-element elementor-element-8ad3e27 e-con-full e-flex e-con e-child" data-id="8ad3e27" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-3a30c9c elementor-widget elementor-widget-heading" data-id="3a30c9c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">CONVERT</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-184191f elementor-widget elementor-widget-text-editor" data-id="184191f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p data-pm-slice="1 1 []">Transform prospects into profitable projects</p>								</div>
-				</a>
-		<a class="elementor-element elementor-element-fb52a4a e-con-full e-flex e-con e-child" data-id="fb52a4a" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/deliver/">
-		<div class="elementor-element elementor-element-f1030f5 e-con-full e-flex e-con e-child" data-id="f1030f5" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				</div>
-		<div class="elementor-element elementor-element-286aa64 e-con-full e-flex e-con e-child" data-id="286aa64" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-fe46c24 elementor-widget elementor-widget-heading" data-id="fe46c24" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">DELIVER</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-2522b63 elementor-widget elementor-widget-text-editor" data-id="2522b63" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p data-pm-slice="1 1 []">Execute with excellence, ensuring profitability</p>								</div>
-				</a>
-		<a class="elementor-element elementor-element-db8aeae e-con-full e-flex e-con e-child" data-id="db8aeae" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}" href="/5-pillars-free-trainings/scale/">
-		<div class="elementor-element elementor-element-975222f e-con-full e-flex e-con e-child" data-id="975222f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				</div>
-		<div class="elementor-element elementor-element-99a325a e-con-full e-flex e-con e-child" data-id="99a325a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-0bc9a60 elementor-widget elementor-widget-heading" data-id="0bc9a60" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">SCALE</h2>				</div>
-				</div>
-				<div class="elementor-element elementor-element-a001fbf elementor-widget elementor-widget-text-editor" data-id="a001fbf" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p data-pm-slice="1 1 []">Build capacity for sustainable growth</p>								</div>
-				</a>
-					</div>
-				</div>
-				</div>
-				<div class="post-tags">
-					</div>
-			</div>
+  <section class="fp-pillars five-pillars-guide" id="choose-a-pillar" aria-labelledby="fp-pillars-title">
+    <div class="fp-wrap">
+      <div class="fp-section-heading">
+        <div>
+          <p class="fp-kicker">The Five Pillars</p>
+          <h2 id="fp-pillars-title">Choose the constraint that needs attention now.</h2>
+        </div>
+        <p>The pillars work together, but you do not need to complete them in order. Start with the clearest current gap and move between them as the business changes.</p>
+      </div>
 
-	
+      <div class="fp-pillar-grid">
+        <a class="fp-pillar fp-pillar--plan" href="/5-pillars-free-trainings/plan/">
+          <span class="fp-pillar__number">01</span>
+          <span class="fp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M13 51V16h30v35M21 16V9h30v42M8 51h48M20 27h15M20 35h15M20 43h10"/></svg>
+          </span>
+          <span class="fp-pillar__content"><strong>Plan</strong><span>Set the direction, numbers and priorities that guide the business.</span></span>
+          <span class="fp-pillar__action">Explore Plan <span aria-hidden="true">→</span></span>
+        </a>
 
-<style id="five-pillars-seo-geo">
-  .five-pillars-guide{background:#f4f7f8;color:#17232b;padding:64px 24px;font-family:"Source Sans Pro",Arial,sans-serif}
-  .five-pillars-guide__inner{max-width:1120px;margin:0 auto}
-  .five-pillars-guide h2{font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 0 18px;color:#17232b}
-  .five-pillars-guide h3{font-size:23px;line-height:1.25;margin:0 0 8px;color:#17232b}
-  .five-pillars-guide p,.five-pillars-guide summary,.five-pillars-guide dd{font-size:18px;line-height:1.6}
-  .five-pillars-guide__lead{max-width:780px;margin:0 0 34px}
-  .five-pillars-guide__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0}
-  .five-pillars-guide__card,.five-pillars-guide details{background:#fff;border:1px solid #d9e2e5;border-radius:12px;padding:22px}
-  .five-pillars-guide__card a{color:#087f86;font-weight:700;text-decoration:underline;text-underline-offset:3px}
-  .five-pillars-guide__cta{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:34px;padding:26px;background:#17232b;color:#fff;border-radius:12px}
-  .five-pillars-guide__cta p{margin:0}
-  .five-pillars-guide__cta a{display:inline-block;background:#f2b94b;color:#17232b;font-weight:800;padding:13px 20px;border-radius:6px;text-decoration:none;white-space:nowrap}
-  .five-pillars-guide details{margin:12px 0}
-  .five-pillars-guide summary{font-weight:700;cursor:pointer}
-  .five-pillars-guide dd{margin:12px 0 0}
-  .five-pillars-guide__transcript{border-left:4px solid #087f86;padding-left:18px;max-width:850px}
-  .five-pillars-primary{display:block;margin-top:6px;font-size:13px;font-weight:700;color:#50636e}
-  @media(max-width:767px){
-    .five-pillars-guide{padding:44px 18px}
-    .five-pillars-guide__grid{grid-template-columns:1fr}
-    .five-pillars-guide__cta{align-items:flex-start;flex-direction:column}
-    .five-pillars-guide__cta a{white-space:normal;text-align:center;width:100%}
-    .e-loop-item .e-con-inner,.e-loop-item .e-con{min-width:0}
-    .jet-listing-grid__items.grid-col-mobile-2>.jet-listing-grid__item{width:100%;max-width:100%;flex:0 0 100%}
-    .elementor-loop-container.elementor-grid{grid-template-columns:1fr!important}
-  }
-</style>
-<section class="five-pillars-guide" aria-labelledby="hub-guide-title">
-  <div class="five-pillars-guide__inner">
-    <h2 id="hub-guide-title">Choose the constraint that needs attention now</h2>
-    <p class="five-pillars-guide__lead">The Five Pillars connect business direction, demand, sales, project delivery and team capacity. Use the summaries below to choose a starting point, then move between pillars as the business changes.</p>
-    <div class="five-pillars-guide__grid"><article class="five-pillars-guide__card"><h3>1. Plan</h3><p>Turn ambition into a practical direction for the business. These free resources cover targets, financial visibility, priorities and the routines that keep a construction company moving towards its goals.</p><a href="/5-pillars-free-trainings/plan/">Explore Plan</a></article>
-<article class="five-pillars-guide__card"><h3>2. Attract</h3><p>Build a clearer market position and a more dependable flow of suitable enquiries. These free resources cover brand, reviews, referrals, digital marketing and relationship-led lead generation.</p><a href="/5-pillars-free-trainings/attract/">Explore Attract</a></article>
-<article class="five-pillars-guide__card"><h3>3. Convert</h3><p>Create a consistent route from first enquiry to a well-qualified, properly priced project. These free resources cover qualification, sales conversations, estimating, proposals and follow-up.</p><a href="/5-pillars-free-trainings/convert/">Explore Convert</a></article>
-<article class="five-pillars-guide__card"><h3>4. Deliver</h3><p>Protect the promise made during the sale by improving how work is handed over, planned, procured, managed and reviewed. These free resources focus on project control and consistent delivery.</p><a href="/5-pillars-free-trainings/deliver/">Explore Deliver</a></article>
-<article class="five-pillars-guide__card"><h3>5. Scale</h3><p>Build the people, responsibilities and operating systems needed for growth that does not rely on the owner making every decision. These free resources cover delegation, leadership, team structure and management rhythm.</p><a href="/5-pillars-free-trainings/scale/">Explore Scale</a></article></div>
-    <div class="five-pillars-guide__transcript"><h3>Welcome video summary</h3><p>Greg explains that he created the knowledge hub to make practical construction business education available more widely. He introduces the five sections, Plan, Attract, Convert, Deliver and Scale, and encourages owners to use the resources that match their current business challenge.</p><p><a href="https://www.youtube.com/watch?v=B3EHS8OHdhM">Watch “Welcome To The 5 Pillars Hub” on YouTube</a>.</p></div>
-    <h2>Frequently asked questions</h2><details><summary>What are the Five Pillars?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>Plan, Attract, Convert, Deliver and Scale are five connected areas used to organise the free construction business resources in this hub.</dd></dl></details>
-<details><summary>Who is this training hub for?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>It is for builders and construction business owners looking for practical resources on running and growing their companies.</dd></dl></details>
-<details><summary>Does the training need to be completed in order?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>No. Start with the pillar that best matches the current constraint, then use the other pillars to understand the connected parts of the business.</dd></dl></details>
-    <div class="five-pillars-guide__cta"><p><strong>Ready to apply the Five Pillars with support?</strong><br>Explore the coaching, tools and accountability inside the Develop Mastermind.</p><a href="/courses/mastermind-course/">Explore the Develop Mastermind</a></div>
-  </div>
-</section>
+        <a class="fp-pillar fp-pillar--attract" href="/5-pillars-free-trainings/attract/">
+          <span class="fp-pillar__number">02</span>
+          <span class="fp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M15 11v19c0 10 7 19 17 19s17-9 17-19V11M15 11h12v16H15M37 11h12v16H37M11 55h42M32 49v6"/><path d="M25 35c2 3 4 4 7 4s5-1 7-4"/></svg>
+          </span>
+          <span class="fp-pillar__content"><strong>Attract</strong><span>Build a clearer position and a steadier flow of suitable enquiries.</span></span>
+          <span class="fp-pillar__action">Explore Attract <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="fp-pillar fp-pillar--convert" href="/5-pillars-free-trainings/convert/">
+          <span class="fp-pillar__number">03</span>
+          <span class="fp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M8 20h14l8 8-9 9-13-7V20ZM56 20H42l-8 8 9 9 13-7V20Z"/><path d="m24 39 6 6c2 2 5 2 7 0l5-5M27 25l5-5 5 5M32 20v-9M24 14l8-3 8 3"/></svg>
+          </span>
+          <span class="fp-pillar__content"><strong>Convert</strong><span>Turn suitable enquiries into properly priced, profitable projects.</span></span>
+          <span class="fp-pillar__action">Explore Convert <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="fp-pillar fp-pillar--deliver" href="/5-pillars-free-trainings/deliver/">
+          <span class="fp-pillar__number">04</span>
+          <span class="fp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M12 49h40M17 49V31c0-10 7-18 15-18s15 8 15 18v18M10 31h44M27 13V8h10v5"/><path d="m24 40 6 6 11-12"/></svg>
+          </span>
+          <span class="fp-pillar__content"><strong>Deliver</strong><span>Control handover, planning, procurement and project performance.</span></span>
+          <span class="fp-pillar__action">Explore Deliver <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="fp-pillar fp-pillar--scale" href="/5-pillars-free-trainings/scale/">
+          <span class="fp-pillar__number">05</span>
+          <span class="fp-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M12 54h40M20 54V17h8v37M28 21h24M39 21v33M47 21v8l-5 5M16 17h16M24 9v8"/><path d="M32 32h15M32 43h9"/></svg>
+          </span>
+          <span class="fp-pillar__content"><strong>Scale</strong><span>Build the team, systems and leadership rhythm needed beyond the owner.</span></span>
+          <span class="fp-pillar__action">Explore Scale <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fp-route" aria-labelledby="fp-route-title">
+    <div class="fp-wrap fp-route__grid">
+      <div>
+        <p class="fp-kicker">A practical starting point</p>
+        <h2 id="fp-route-title">Find the pressure point, then take one useful action.</h2>
+      </div>
+      <ol class="fp-steps">
+        <li><span>1</span><div><strong>Choose</strong><p>Select the pillar that best matches the current constraint.</p></div></li>
+        <li><span>2</span><div><strong>Learn</strong><p>Use the resource that answers the most immediate question.</p></div></li>
+        <li><span>3</span><div><strong>Apply</strong><p>Record one action before moving to another topic.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="fp-faq" aria-labelledby="fp-faq-title">
+    <div class="fp-wrap fp-faq__grid">
+      <div class="fp-faq__intro">
+        <p class="fp-kicker">Questions</p>
+        <h2 id="fp-faq-title">How to use the hub.</h2>
+        <p>The resources are organised around the operating areas that construction business owners repeatedly need to strengthen.</p>
+      </div>
+      <div class="fp-faq__items">
+        <details><summary>What are the Five Pillars?<span aria-hidden="true">+</span></summary><p>Plan, Attract, Convert, Deliver and Scale are five connected areas used to organise the free construction business resources in this hub.</p></details>
+        <details><summary>Who is this training hub for?<span aria-hidden="true">+</span></summary><p>It is for builders and construction business owners looking for practical resources on running and growing their companies.</p></details>
+        <details><summary>Does the training need to be completed in order?<span aria-hidden="true">+</span></summary><p>No. Start with the pillar that best matches the current constraint, then use the other pillars to understand the connected parts of the business.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="fp-mastermind" aria-labelledby="fp-mastermind-title">
+    <div class="fp-wrap fp-mastermind__inner">
+      <div>
+        <p class="fp-kicker">Ready to apply it?</p>
+        <h2 id="fp-mastermind-title">Turn the Five Pillars into a working plan for your business.</h2>
+        <p>Explore the coaching, tools and accountability inside the Develop Mastermind.</p>
+      </div>
+      <a class="fp-btn fp-btn--dark" href="/courses/mastermind-course/">Explore the Develop Mastermind</a>
+    </div>
+  </section>
+
+  <section class="fp-book" aria-labelledby="fp-book-title">
+    <div class="fp-wrap fp-book__inner">
+      <div class="fp-book__visual">
+        <img src="/wp-content/uploads/2024/03/Build-Your-Future-Dollar.webp" alt="Building Your Future by Greg Wilkes" loading="lazy">
+      </div>
+      <div class="fp-book__copy">
+        <p class="fp-kicker">Free ebook</p>
+        <h2 id="fp-book-title">Download a copy of Greg’s #1 Amazon Bestseller.</h2>
+        <p><em>Building Your Future</em> will change everything you ever thought about your construction business.</p>
+        <a class="fp-btn" href="/download-book/">Download the book</a>
+      </div>
+      <a class="fp-award" href="https://smenews.digital/winners/develop-coaching-2/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 40 10 49 9 53 17 61 22 59 31 62 40 54 46 51 55 41 55 32 61 23 55 13 55 10 46 2 40 5 31 3 22 11 17 15 9 24 10Z"/><path d="m21 32 7 7 15-16"/></svg>
+        <span>SME News<br>UK Enterprise Awards</span>
+        <strong>Best Construction Training Company 2024</strong>
+        <small>View the award <span aria-hidden="true">↗</span></small>
+      </a>
+    </div>
+  </section>
+
+  <footer class="fp-footer">
+    <div class="fp-wrap fp-footer__top">
+      <a class="fp-footer__brand" href="/" aria-label="Develop Coaching home">
+        <img src="/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg" alt="Develop Coaching" loading="lazy">
+      </a>
+      <div class="fp-footer__links">
+        <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a>
+        <a href="https://www.facebook.com/developcoach/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/developcoaching/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/greg.wilkes.coach" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@DevelopCoaching" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="fp-wrap fp-footer__bottom">
+      <p>© Copyright 2026 by Develop Coaching Pty Ltd. All Rights Reserved.</p>
+      <p><a href="/privacy/">Privacy Policy</a> · <a href="/corporate-structure-notice/">Corporate Structure Notice</a></p>
+      <p class="fp-footer__disclaimer">This site is not part of or endorsed by Facebook Inc. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+    </div>
+  </footer>
 </main>
 
-			<footer data-elementor-type="footer" data-elementor-id="9008" class="elementor elementor-9008 elementor-location-footer" data-elementor-post-type="elementor_library">
-			<div class="elementor-element elementor-element-10543235 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="10543235" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:300,&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-4ad56b35 e-con-full e-flex elementor-invisible e-con e-child" data-id="4ad56b35" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-5b8b08d4 elementor-widget elementor-widget-image" data-id="5b8b08d4" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="508" height="408" src="/wp-content/uploads/2024/03/Build-Your-Future-Dollar.webp" class="attachment-large size-large wp-image-9006" alt="" />															</div>
-				</div>
-		<div class="elementor-element elementor-element-456ba1f1 e-con-full e-flex e-con e-child" data-id="456ba1f1" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-7775f7d4 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor" data-id="7775f7d4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Download a copy of my #1 Amazon Bestseller!</p><p> </p><p>This Ebook will change everything you ever thought about your Construction Business</p>								</div>
-				<div class="elementor-element elementor-element-d77620a elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="d77620a" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="/download-book/">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Download Now</span>
-					</span>
-					</a>
-								</div>
-				</div>
-		<div class="elementor-element elementor-element-2214bee e-con-full e-flex elementor-invisible e-con e-child" data-id="2214bee" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;jet_parallax_layout_list&quot;:[],&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-26df629 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="26df629" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="57" height="57" src="/wp-content/uploads/2026/01/Group-1341.svg" class="attachment-full size-full wp-image-17130" alt="" />															</div>
-		<div class="elementor-element elementor-element-497334f e-con-full e-flex e-con e-child" data-id="497334f" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-2ec2660 elementor-widget elementor-widget-text-editor" data-id="2ec2660" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									Check Out Our
-<div class="bigfont">Free Trainings Hub </div>								</div>
-				<div class="elementor-element elementor-element-4aeaf71 elementor-widget elementor-widget-text-editor" data-id="4aeaf71" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Featuring: </p>								</div>
-				<div class="elementor-element elementor-element-5fdb5f6 elementor-widget elementor-widget-text-editor" data-id="5fdb5f6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<ul role="list"><li>Podcast Episodes</li><li>Blogposts</li><li>Youtube Videos</li><li>Online Courses and More</li></ul>								</div>
-				<div class="elementor-element elementor-element-90ed1b1 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-id="90ed1b1" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="/5-pillars-free-trainings">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">TO THE HUB</span>
-					</span>
-					</a>
-								</div>
-				</div>
-				</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-9b85bde elementor-hidden-desktop elementor-hidden-tablet e-flex e-con-boxed e-con e-parent" data-id="9b85bde" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9642d8c elementor-widget elementor-widget-image" data-id="9642d8c" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-																<a href="https://smenews.digital/winners/develop-coaching-2/">
-							<img src="/wp-content/uploads/elementor/thumbs/Best-Construction-Training-Company-2024-qy1pkf2mucnu88xq2lre7t0sfudsrjfxuq85plyhro.webp" title="Best Construction Training Company 2024" alt="Best Construction Training Company 2024" loading="lazy" />								</a>
-															</div>
-					</div>
-				</div>
-		<div class="elementor-element elementor-element-23962fb1 e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="23962fb1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-1a6c4ca3 e-con-full e-flex e-con e-child" data-id="1a6c4ca3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-		<div class="elementor-element elementor-element-21e94dbe e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="21e94dbe" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-30c339a2 elementor-widget elementor-widget-image" data-id="30c339a2" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-																<a href="https://smenews.digital/winners/develop-coaching-2/">
-							<img src="/wp-content/uploads/elementor/thumbs/Best-Construction-Training-Company-2024-qy1pkf2mucnu88xq2lre7t0sfudsrjfxuq85plyhro.webp" title="Best Construction Training Company 2024" alt="Best Construction Training Company 2024" loading="lazy" />								</a>
-															</div>
-				</div>
-		<div class="elementor-element elementor-element-5c2fb1ec e-con-full e-flex e-con e-child" data-id="5c2fb1ec" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-1102fedf elementor-widget elementor-widget-text-editor" data-id="1102fedf" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>								</div>
-				<div class="elementor-element elementor-element-294eb6d9 elementor-shape-square e-grid-align-mobile-center e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="294eb6d9" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
-							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-7384bbc" href="https://www.facebook.com/developcoach/" target="_blank">
-						<span class="elementor-screen-only">Facebook-f</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>					</a>
-				</span>
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-83cf214" href="https://www.linkedin.com/company/developcoaching/" target="_blank">
-						<span class="elementor-screen-only">Linkedin-in</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin-in" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>					</a>
-				</span>
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-4e8c205" href="https://www.instagram.com/greg.wilkes.coach" target="_blank">
-						<span class="elementor-screen-only">Instagram</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
-				</span>
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-4d17432" href="https://twitter.com/developcoaching" target="_blank">
-						<span class="elementor-screen-only">Twitter</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>					</a>
-				</span>
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-f2afbe1" href="https://www.youtube.com/@DevelopCoaching" target="_blank">
-						<span class="elementor-screen-only">Youtube</span>
-						<svg aria-hidden="true" class="e-font-icon-svg e-fab-youtube" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>					</a>
-				</span>
-					</div>
-						</div>
-				</div>
-		<div class="elementor-element elementor-element-7b2542ae e-con-full e-flex e-con e-child" data-id="7b2542ae" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-5b32071c elementor-widget elementor-widget-text-editor" data-id="5b32071c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Subscribe for updates, offers and amazing free content</p>								</div>
-				<div class="elementor-element elementor-element-4f6f9e2 elementor-align-justify elementor-widget elementor-widget-button" data-id="4f6f9e2" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
-										<a class="elementor-button elementor-button-link elementor-size-sm" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjQzMDciLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">SUBSCRIBE</span>
-					</span>
-					</a>
-								</div>
-				</div>
-		<div class="elementor-element elementor-element-6ad48b7c e-con-full e-flex e-con e-child" data-id="6ad48b7c" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-3c63cc33 elementor-align-start wplist-saas elementor-mobile-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3c63cc33" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
-							<ul class="elementor-icon-list-items">
-							<li class="elementor-icon-list-item">
-											<a href="mailto:hello@develop-coaching.com">
-
-												<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">hello@develop-coaching.com</span>
-											</a>
-									</li>
-						</ul>
-						</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-68b12caa elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-html" data-id="68b12caa" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-									</div>
-				<div class="elementor-element elementor-element-6f09518a elementor-widget elementor-widget-text-editor" data-id="6f09518a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>© Copyright 2026 by Develop Coaching Pty Ltd. All Rights Reserved. <a href="/privacy/">Privacy Policy </a> &#8211; <a href="/corporate-structure-notice/">Corporate Structure Notice</a></p>								</div>
-					</div>
-				</div>
-				</footer>
-		
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
@@ -696,23 +800,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<li class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-5612"><a href="/courses/win-big-clients/" class="elementor-sub-item" tabindex="-1">Win Big Clients</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7952"><a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Trades</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8893"><a href="/" class="elementor-sub-item" tabindex="-1">Builders Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7947"><a href="/carpentry-business-coach/" class="elementor-sub-item" tabindex="-1">Carpentry Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7948"><a href="/decorating-business-coach/" class="elementor-sub-item" tabindex="-1">Decorating Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7979"><a href="/electrical-business-coach/" class="elementor-sub-item" tabindex="-1">Electrical Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7950"><a href="/groundwork-business-coach/" class="elementor-sub-item" tabindex="-1">Groundwork Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7949"><a href="/landscaping-business-coach/" class="elementor-sub-item" tabindex="-1">Landscaping Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7946"><a href="/plastering-business-coach/" class="elementor-sub-item" tabindex="-1">Plastering Business Coach</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a href="/plumbing-business-coach/" class="elementor-sub-item" tabindex="-1">Plumbing Business Coach</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Free Trainings</a></li>
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16468 current_page_item menu-item-16753"><a href="/5-pillars-free-trainings/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Free Resources</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16007"><a href="/client-wins/" class="elementor-item" tabindex="-1">Client Wins</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item" tabindex="-1">My Story</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9177"><a href="/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14446"><a href="/construction-podcast/" class="elementor-item" tabindex="-1">Podcast</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9176"><a href="/about-greg-wilkes/" class="elementor-item" tabindex="-1">About Greg</a></li>
+
+
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9179"><a href="/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
 </ul>			</nav>
 						</div>
@@ -804,15 +897,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
     vgo('process');
 </script>
-
-
-
-
-
-
-
-
-
 
 <script id="five-pillars-analytics">
 (function(w,d){

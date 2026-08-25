@@ -6,6 +6,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const hubRoot = path.join(root, 'www/5-pillars-free-trainings');
 const mastermindPath = path.join(root, 'www/courses/mastermind-course/index.html');
+const {renderHub} = require('./render_five_pillars_hub');
 
 const pillars = {
   plan: {
@@ -306,6 +307,7 @@ function enhanceMastermind() {
 }
 
 enhanceHub();
+renderHub();
 Object.entries(pillars).forEach(([slug, data]) => enhancePillar(slug, data));
 enhanceMastermind();
 console.log('Enhanced Five Pillars hub, pillar pages and Mastermind links.');
