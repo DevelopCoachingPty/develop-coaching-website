@@ -213,6 +213,8 @@ function annotatePrimaryResources(html, currentPillar) {
     if (currentPillar !== primary) {
       const heading = new RegExp(`(<h3[^>]*>\\s*<a[^>]*href=["']${escaped}["'][^>]*>[\\s\\S]*?<\\/a>\\s*<\\/h3>)`, 'g');
       html = html.replace(heading, `$1<span class="five-pillars-primary">Primary pillar: ${pillars[primary].title}</span>`);
+      const podcastCard = new RegExp(`(<div class="jet-engine-listing-overlay-wrap" data-url=["']${escaped}["'][\\s\\S]*?<h2 class="elementor-heading-title elementor-size-default">[\\s\\S]*?<\\/h2>)`, 'g');
+      html = html.replace(podcastCard, `$1<span class="five-pillars-primary">Primary pillar: ${pillars[primary].title}</span>`);
     }
   }
   return html;
@@ -258,6 +260,7 @@ function enhanceHub() {
     ['Who is this training hub for?', 'It is for builders and construction business owners looking for practical resources on running and growing their companies.'],
     ['Does the training need to be completed in order?', 'No. Start with the pillar that best matches the current constraint, then use the other pillars to understand the connected parts of the business.']
   ];
+  html = html.replaceAll('/5-pillars-plan/', routes[0]).replaceAll('/the-5-pillars-attract/', routes[1]).replaceAll('/the-5-pillars-convert/', routes[2]).replaceAll('/the-5-pillars-deliver/', routes[3]).replaceAll('/the-5-pillars-scale/', routes[4]);
   html = assertReplace(html, '<h2 class="elementor-heading-title elementor-size-default">Free Trainings - The 5 Pillars</h2>', `<h1 class="elementor-heading-title elementor-size-default">${title}</h1>`, 'hub H1');
   html = addSocialImage(html, image, title);
   const video = {

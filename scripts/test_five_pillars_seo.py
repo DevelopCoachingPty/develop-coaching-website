@@ -103,7 +103,7 @@ class FivePillarsSeoTests(unittest.TestCase):
             "/the-5-pillars-deliver/",
             "/the-5-pillars-scale/",
         )
-        for path in FILES[1:]:
+        for path in FILES:
             document = load(path)
             with self.subTest(path=path):
                 for route in legacy:
@@ -139,6 +139,26 @@ class FivePillarsSeoTests(unittest.TestCase):
         combined = "\n".join(load(path) for path in FILES[1:])
         for primary in ("plan", "attract", "convert", "deliver", "scale"):
             self.assertIn(f'data-primary-pillar="{primary}"', combined)
+
+    def test_secondary_podcast_resources_show_primary_pillar(self):
+        expected = {
+            "plan": ("How Jamie Mills Built a Multi-Million Pound Construction Company", "Primary pillar: Scale"),
+            "convert": ("How Jamie Mills Built a Multi-Million Pound Construction Company", "Primary pillar: Scale"),
+            "deliver": ("How to Build a Construction Team That Runs Your Business Without You", "Primary pillar: Scale"),
+            "scale": ("Protect Your Profit Margin with Greg Wilkes", "Primary pillar: Plan"),
+        }
+        for pillar, values in expected.items():
+            document = load(HUB / pillar / "index.html")
+            title, label = values
+            with self.subTest(pillar=pillar):
+                pattern = rf"{re.escape(title)}</h2><span class=\"five-pillars-primary\">{re.escape(label)}</span>"
+                self.assertRegex(document, pattern)
+
+    def test_mastermind_defines_ga4_event_before_pillar_listener(self):
+        document = load(MASTERMIND)
+        bootstrap = document.index("w.ga4Event=w.ga4Event||function")
+        listener = document.index('id="mastermind-pillar-analytics"')
+        self.assertLess(bootstrap, listener)
 
 
 if __name__ == "__main__":
