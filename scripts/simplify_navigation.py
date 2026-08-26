@@ -23,6 +23,14 @@ NAVIGATION_STYLE = """<style id="dc-simplified-navigation">
     justify-self: end;
     width: auto !important;
   }
+  .elementor-element-dcb2a0c > .elementor-element-760db8b,
+  .elementor-element-dcb2a0c > .elementor-element-a45c51e {
+    flex: 0 0 60px !important;
+    width: 60px !important;
+    max-width: 60px !important;
+    --container-widget-width: 60px;
+    --container-widget-flex-grow: 0;
+  }
   .elementor-element-b81d386 {
     grid-column: 1;
     grid-row: 2;

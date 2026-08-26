@@ -1214,6 +1214,68 @@ body {
   gap: 1.5rem;
 }
 
+.dc2-answers {
+  background: var(--dc2-white);
+}
+
+.dc2-answers__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.dc2-answers__head > p {
+  max-width: 520px;
+  color: var(--dc2-muted);
+  line-height: 1.6;
+}
+
+.dc2-answer-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--dc2-line);
+  background: var(--dc2-line);
+}
+
+.dc2-answer-card {
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2.35rem);
+  background: var(--dc2-white);
+}
+
+.dc2-answer-card h3 {
+  position: relative;
+  padding-top: 1.2rem;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.15;
+}
+
+.dc2-answer-card h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 4px;
+  background: var(--dc2-yellow);
+}
+
+.dc2-answer-card p {
+  margin-top: 1rem;
+  color: var(--dc2-muted);
+  line-height: 1.65;
+}
+
+.dc2-answer-card a {
+  color: var(--dc2-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .dc2-investment {
   background: var(--dc2-paper);
 }
@@ -1321,33 +1383,6 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.dc2-footer {
-  padding: 2.4rem 0 6.5rem;
-  background: var(--dc2-white);
-}
-
-.dc2-footer .dc2-wrap {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 2rem;
-}
-
-.dc2-footer img {
-  width: 130px;
-}
-
-.dc2-footer p {
-  color: var(--dc2-muted);
-  font-size: 0.78rem;
-}
-
-.dc2-footer div div {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.78rem;
-}
-
 .dc2-sticky {
   display: none;
 }
@@ -1425,6 +1460,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .dc2-answer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .dc2-hero__grid {
     gap: 4rem;
   }
@@ -1444,7 +1483,8 @@ body {
   }
 
   .dc2-method__head,
-  .dc2-proof__head {
+  .dc2-proof__head,
+  .dc2-answers__head {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -1603,7 +1643,8 @@ body {
   }
 
   .dc2-tool-grid,
-  .dc2-video-grid {
+  .dc2-video-grid,
+  .dc2-answer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1644,10 +1685,6 @@ body {
   .dc2-final__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .dc2-footer .dc2-wrap {
-    grid-template-columns: 1fr;
   }
 
   .dc2-sticky {

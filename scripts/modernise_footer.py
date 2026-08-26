@@ -87,11 +87,6 @@ def should_include_book_award(relative_path: str, html: str) -> bool:
 
 def modernise_footer(html: str, relative_path: str) -> str:
     """Replace footer template 9008, preserving custom pages without it."""
-    if relative_path == "courses/mastermind-course/index.html":
-        html = MODERN_BOOK_RE.sub("", html)
-        html = MODERN_FOOTER_RE.sub("", html)
-        html = LEGACY_FOOTER_RE.sub("", html)
-        return STYLE_RE.sub("", html)
     if 'class="fp-hub"' in html:
         html = MODERN_BOOK_RE.sub("", html)
         html = MODERN_FOOTER_RE.sub("", html)

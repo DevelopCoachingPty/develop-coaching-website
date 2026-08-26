@@ -42,6 +42,20 @@ class SimplifyNavigationTests(unittest.TestCase):
         html = '<main><a href="/blog/">Blog</a><a href="/construction-podcast/">Podcast</a></main>'
         self.assertEqual(simplify_main_navigation(html), html)
 
+    def test_desktop_flag_widgets_keep_their_intended_width(self):
+        html = "<html><head></head><body></body></html>"
+        result = simplify_main_navigation(html)
+        desktop_style = result.split("@media (max-width: 767px)", 1)[0]
+        mobile_style = result.split("@media (max-width: 767px)", 1)[1]
+
+        self.assertIn(".elementor-element-760db8b", desktop_style)
+        self.assertIn(".elementor-element-a45c51e", desktop_style)
+        self.assertIn("flex: 0 0 60px !important", desktop_style)
+        self.assertIn("width: 60px !important", desktop_style)
+        self.assertIn("max-width: 60px !important", desktop_style)
+        self.assertNotIn(".elementor-element-760db8b", mobile_style)
+        self.assertNotIn(".elementor-element-a45c51e", mobile_style)
+
 
 if __name__ == "__main__":
     unittest.main()

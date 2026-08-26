@@ -25,7 +25,7 @@ PAYLOAD = {
     "meta_description": "A coaching programme for established construction business owners.",
     "content_file": "content/mastermind.html",
     "shell": "about-greg-wilkes",
-    "date": "2026-08-24",
+    "date": "2026-08-26",
     "date_published": "2026-08-11",
     "image_url": "/wp-content/uploads/2026/08/mastermind-poster.jpg",
     "image_width": 1280,
@@ -79,10 +79,9 @@ def main() -> None:
         "main site navigation present",
         'class="elementor elementor-4222 elementor-location-header"' in html
         and 'class="dc2-nav__links"' not in html
-        and "Free Trainings" in html
+        and "Free Resources" in html
         and "Client Wins" in html
-        and "My Story" in html
-        and "Podcast" in html,
+        and "About Greg" in html,
     )
     check(
         "main site header is visible and only the shell footer is hidden",
@@ -167,6 +166,26 @@ def main() -> None:
         html.count('class="dc2-transcript-summary"') == 9
         and html.count("<h4>Transcript summary</h4>") == 9,
     )
+    answer_questions = (
+        "What is the Develop Mastermind?",
+        "Who is the Develop Mastermind for?",
+        "What is included in the Develop Mastermind?",
+        "How does the Develop Mastermind work?",
+        "How much does the Develop Mastermind cost?",
+        "What results have Develop Mastermind members reported?",
+    )
+    check(
+        "six visible GEO answer blocks present",
+        html.count('class="dc2-answer-grid"') == 1
+        and html.count('class="dc2-answer-card"') == 6
+        and all(f"<h3>{question}</h3>" in html for question in answer_questions),
+    )
+    check(
+        "GEO answers preserve verified cost and results qualifications",
+        "paid monthly or annually with a 12-month minimum commitment" in html
+        and "the exact figure openly on the Scale Session" in html
+        and "Individual results vary." in html,
+    )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
         "official Develop Coaching palette present",
@@ -204,12 +223,12 @@ def main() -> None:
         "testimonial qualifiers removed",
         "projected" not in html.lower() and "forecast" not in html.lower(),
     )
-    check("site chrome present", "<header" in html and "<footer" in html)
+    check("no custom dc2-footer in generated page", 'dc2-footer' not in html)
     check(
-        "custom footer uses the live privacy route",
-        'href="https://develop-coaching.com/privacy/"' in html
-        and 'href="https://develop-coaching.com/privacy-policy/"' not in html,
+        "exactly one shared dc-site-footer",
+        html.count('class="dc-site-footer"') == 1,
     )
+    check("site chrome present", "<header" in html and "<footer" in html)
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
     schema_match = re.search(
         r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
@@ -251,7 +270,7 @@ def main() -> None:
         "WebPage dates and main entity are current",
         len(webpages) == 1
         and webpages[0].get("datePublished") == "2026-08-11"
-        and webpages[0].get("dateModified") == "2026-08-24"
+        and webpages[0].get("dateModified") == "2026-08-26"
         and webpages[0].get("mainEntity", {}).get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/#service",
     )
     check("JSON-LD has no Article node", not any(node.get("@type") == "Article" for node in graph))
@@ -370,6 +389,32 @@ def main() -> None:
     check(
         "CSS escape refused",
         refused(lambda: designed.build_page({**PAYLOAD, "css_files": ["/etc/passwd"]})),
+    )
+
+    # --- GEO answer block checks ---
+    check(
+        "GEO answers section exists",
+        'id="answers"' in html,
+    )
+    check(
+        "GEO answers section is before investment section",
+        html.find('id="answers"') < html.find('id="investment"')
+        and html.find('id="answers"') != -1,
+    )
+    check(
+        "GEO answers use internal anchors to existing sections",
+        all(anchor in html for anchor in (
+            'href="#fit"',
+            'href="#programme"',
+            'href="#how-it-works"',
+            'href="#ninety-days"',
+            'href="#investment"',
+            'href="#results"',
+        )),
+    )
+    check(
+        "no new analytics CTA locations added",
+        html.count("data-analytics-location=") == 5,
     )
 
     out_file = os.path.join(designed.pp.WWW, PAYLOAD["slug"], "index.html")

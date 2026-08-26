@@ -33,6 +33,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import publish_page as pp  # noqa: E402
+from modernise_footer import modernise_footer  # noqa: E402
+from simplify_navigation import simplify_main_navigation  # noqa: E402
 
 DEFAULT_SHELL = "courses/mastermind-course"
 CURRENT_MENU_CLASSES = {
@@ -418,10 +420,12 @@ def build_page(payload: dict) -> str:
     )
     style = "<style>\n" + "\n".join(css_parts) + "\n</style>"
 
-    return (
+    rendered = (
         f"{head}\n{fonts}\n{style}\n"
         f'<div class="dc-page">\n{content.strip()}\n</div>\n{footer}'
     )
+    rendered = simplify_main_navigation(rendered)
+    return modernise_footer(rendered, f"{slug}/index.html")
 
 
 def main() -> None:

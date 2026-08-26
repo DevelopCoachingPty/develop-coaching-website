@@ -36,9 +36,21 @@ Do not publish duplicates for topics already covered. Strengthen the following e
 - Deliver already has `/construction-project-management/`, `/software/costtracker-pro/`, `/streamlined-procurement-system/` and `/the-hand-off/`. Create one combined live-job-costing and cost-to-complete guide, and add a visible site-to-office checklist to `/the-hand-off/`.
 - Scale already has `/delegation-in-construction/`, `/construction-business-systems/`, `/podcast/hire-a-project-manager/` and `/podcast/the-perfect-week-with-emma-mills/`. Add a weekly leadership-rhythm guide, or expand `/construction-business-systems/` if the answer can stay focused.
 
+## GEO visibility evidence and priorities
+
+The latest complete GEO Engine run was 10 August 2026. ChatGPT mentioned Develop Coaching in 11 of 59 queries (19%, down 12 percentage points from the prior complete run), while Gemini mentioned it in 29 of 59 (49%). Perplexity and Google AI Overviews were skipped because their API keys were unavailable. No complete weekly run was recorded on 17 or 24 August because the GEO schedule was absent from the Mac Mini crontab. The Monday 06:00 entry is now installed and its two-query dry-run completed with four results and no failures on 26 August. Confirm the next complete scheduled run before treating later movement as a trend.
+
+- The Mastermind was already present at position 1 for `construction mastermind UK`. Preserve that URL and strengthen it rather than creating a replacement page.
+- ChatGPT did not mention Develop Coaching for `mastermind group for builders`, `Develop Coaching mastermind what's included`, `Develop Coaching client results`, `Develop Coaching case studies`, `Develop Coaching pricing`, coaching ROI, review and comparison queries, or the main `construction business coach UK` and `business coach for builders UK` queries.
+- Prioritise concise, factual answer blocks on the existing Mastermind, client-wins and relevant pillar pages for programme contents, suitability, process, evidence and comparisons. Pricing or outcome statements must remain approval-gated and use verified wording only.
+- The pillar plan also aligns with absent how-to queries covering construction leads, quote follow-up, job costing, systems, profit margins and stepping off the tools. Improve the mapped existing pages before commissioning new articles.
+- Competitors and third-party authorities were repeatedly cited when Develop Coaching was absent. Pair the on-site work with verified third-party mentions and relevant digital PR, without inventing rankings or claims.
+
+The Slack digest measures mentions, cited URLs, competitor appearances and won or lost queries. It does not establish a causal reason for an engine's choice, so treat the priorities above as evidence-based gaps rather than proven ranking-factor diagnoses.
+
 ## Internal-link priority
 
-The 18 audited supporting pages are live, but none links contextually to its exact child pillar. Add one natural backlink from each support page to its primary pillar. Add missing outward links from the child pages: Plan to the P&L and profit-margin articles; Attract to Attract The Right Clients and construction lead generation; Convert to construction job pricing; Deliver to project management, CostTracker Pro and streamlined procurement; Scale to construction business systems and The Perfect Week.
+The 18 audited supporting pages now link contextually to their exact child pillars. Keep those links in place. Add missing outward links from the child pages: Plan to the P&L and profit-margin articles; Attract to Attract The Right Clients and construction lead generation; Convert to construction job pricing; Deliver to project management, CostTracker Pro and streamlined procurement; Scale to construction business systems and The Perfect Week.
 
 Where a resource supports more than one pillar, keep one primary home and label secondary appearances. Keep Jamie Mills and the owner-independent team podcast under Scale; Protect Your Profit Margin under Plan; procurement under Deliver; Architect Attractor and construction lead generation under Attract; Sales Mastery under Convert; and Attract The Best under Scale.
 
