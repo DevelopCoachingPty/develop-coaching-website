@@ -20,11 +20,17 @@ class ModerniseFooterTests(unittest.TestCase):
         self.assertIn("Best Construction Training Company 2024", result)
         self.assertNotIn("Old footer", result)
 
-    def test_mastermind_page_keeps_its_purpose_built_footer_only(self):
+    def test_mastermind_page_gets_current_shared_footer_without_book_award(self):
         html = LEGACY.replace("BODY_CLASSES", "page-template-default page")
         result = modernise_footer(html, "courses/mastermind-course/index.html")
         self.assertNotIn('class="dc-book-award"', result)
-        self.assertNotIn('data-dc-modern-footer', result)
+        self.assertEqual(result.count('data-dc-modern-footer'), 1)
+        self.assertEqual(result.count('id="dc-modern-footer"'), 1)
+        self.assertIn('.dc-site-footer__brand { display: block; }', result)
+        self.assertNotIn(
+            '.dc-site-footer__brand { display: block; padding:',
+            result,
+        )
         self.assertNotIn("Old footer", result)
 
     def test_general_sales_page_gets_compact_footer_only(self):
@@ -81,6 +87,20 @@ class ModerniseFooterTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(second.count('id="dc-modern-footer"'), 1)
         self.assertEqual(second.count('data-dc-modern-footer'), 1)
+
+    def test_shared_footer_brand_has_no_white_background_or_padding(self):
+        import re
+        from pathlib import Path
+        css_path = Path(__file__).resolve().parents[1] / 'content' / '_shared-footer.css'
+        css = css_path.read_text(encoding='utf-8')
+        brand_rule = re.search(r'\.dc-site-footer__brand\s*{([^}]+)}', css)
+        self.assertIsNotNone(brand_rule, 'dc-site-footer__brand rule not found in _shared-footer.css')
+        brand_props = brand_rule.group(1)
+        self.assertNotIn('background', brand_props, 'dc-site-footer__brand should not have a background property')
+        self.assertNotIn('padding', brand_props, 'dc-site-footer__brand should not have padding')
+        self.assertIn('dc-site-footer__brand', footer_module.FOOTER)
+        self.assertIn('aria-label="Develop Coaching home"', footer_module.FOOTER)
+        self.assertIn('/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg', footer_module.FOOTER)
 
 
 if __name__ == "__main__":

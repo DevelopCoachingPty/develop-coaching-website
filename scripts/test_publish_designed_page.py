@@ -223,12 +223,12 @@ def main() -> None:
         "testimonial qualifiers removed",
         "projected" not in html.lower() and "forecast" not in html.lower(),
     )
-    check("site chrome present", "<header" in html and "<footer" in html)
+    check("no custom dc2-footer in generated page", 'dc2-footer' not in html)
     check(
-        "custom footer uses the live privacy route",
-        'href="https://develop-coaching.com/privacy/"' in html
-        and 'href="https://develop-coaching.com/privacy-policy/"' not in html,
+        "exactly one shared dc-site-footer",
+        html.count('class="dc-site-footer"') == 1,
     )
+    check("site chrome present", "<header" in html and "<footer" in html)
     check("title replaced", f"<title>{PAYLOAD['title']}</title>" in html)
     schema_match = re.search(
         r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
