@@ -125,6 +125,30 @@ class ClientWinsRebuildTests(unittest.TestCase):
         for text in mismatched:
             self.assertNotIn(text, self.html)
 
+    def test_numerical_outcomes_are_attributed_to_each_client(self):
+        numerical_ids = {
+            "7iLnXeuYoMg",
+            "GSEM3O9HYvg",
+            "zhoS5F5oYy4",
+            "1C2yT_tP-Aw",
+            "yXqEwu6FEog",
+            "D-M9a1i4PQU",
+            "r572G_WcimQ",
+            "snrx2DrLISg",
+            "9i31Jk89THQ",
+            "H1eWYQjMaFA",
+            "Kfx-SeLmNig",
+        }
+        attribution_terms = ("report", "says", "recounts", "shares", "credits")
+        for item in self.data:
+            if item["id"] in numerical_ids:
+                summary = item["summary"].lower()
+                self.assertTrue(
+                    any(term in summary for term in attribution_terms),
+                    f"{item['name']} numerical outcome lacks direct attribution",
+                )
+        self.assertIn("James reports annual revenue grew", self.html)
+
     def test_public_names_and_results_note_are_visible(self):
         for item in self.data:
             self.assertIn(f"<h3>{item['name']}</h3>", self.html)

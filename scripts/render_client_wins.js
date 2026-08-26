@@ -92,7 +92,7 @@ function pageMarkup(items) {
         </button>
         <div class="cw-featured__copy">
           <p class="cw-kicker">Featured story</p>
-          <h2 id="featured-story-title">James grew annual revenue from £1.5m to £2m, then forecast £4m.</h2>
+          <h2 id="featured-story-title">James reports annual revenue grew from £1.5m to £2m, with a £4m forecast.</h2>
           <p>His story focuses on stronger structure and adding property development to the group.</p>
         </div>
       </aside>
