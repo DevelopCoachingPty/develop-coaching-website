@@ -175,7 +175,7 @@ function videoSchema(item) {
   return {
     '@type': 'VideoObject',
     '@id': `https://develop-coaching.com/client-wins/#video-${item.id}`,
-    name: `${item.name}: ${item.focus}`,
+    name: item.title,
     description: item.summary,
     uploadDate: item.uploadDate,
     duration: item.duration,
@@ -217,7 +217,8 @@ function replaceSchema(html, items) {
     }
   }
   schema['@graph'] = graph.concat(items.map(videoSchema));
-  const replacement = `<script type="application/ld+json" class="rank-math-schema-pro">${JSON.stringify(schema)}</script>`;
+  const safeSchema = JSON.stringify(schema).replace(/</g, '\\u003c');
+  const replacement = `<script type="application/ld+json" class="rank-math-schema-pro">${safeSchema}</script>`;
   return html.replace(pattern, replacement);
 }
 

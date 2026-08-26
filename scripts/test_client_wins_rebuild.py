@@ -3,6 +3,8 @@
 
 import json
 import re
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -64,6 +66,7 @@ class ClientWinsRebuildTests(unittest.TestCase):
         self.assertEqual(20, len(self.videos))
         names = [item.get("name") for item in self.videos]
         self.assertEqual(20, len(set(names)))
+        self.assertEqual({item["title"] for item in self.data}, set(names))
         required = (
             "name",
             "description",
@@ -77,6 +80,34 @@ class ClientWinsRebuildTests(unittest.TestCase):
             for field in required:
                 self.assertTrue(item.get(field), f"{item.get('@id')} missing {field}")
             self.assertNotIn("Enjoy the videos and music", item["description"])
+
+    def test_schema_strings_cannot_close_the_json_ld_script(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            page = temp / "index.html"
+            data = temp / "client-wins.json"
+            css = temp / "client-wins.css"
+            hostile = [dict(item) for item in self.data]
+            hostile[0]["summary"] = "</script><script>alert('unsafe')</script>"
+            page.write_text(self.html, encoding="utf-8")
+            data.write_text(json.dumps(hostile), encoding="utf-8")
+            css.write_text(".dc-client-wins {}", encoding="utf-8")
+            subprocess.run(
+                [
+                    "node",
+                    "-e",
+                    "const {renderClientWins}=require('./scripts/render_client_wins.js');"
+                    "renderClientWins({pagePath:process.argv[1],dataPath:process.argv[2],cssPath:process.argv[3]});",
+                    str(page),
+                    str(data),
+                    str(css),
+                ],
+                cwd=ROOT,
+                check=True,
+            )
+            rendered = page.read_text(encoding="utf-8")
+            self.assertNotIn("</script><script>alert('unsafe')</script>", rendered)
+            self.assertIn(r"\u003c/script>\u003cscript>alert('unsafe')\u003c/script>", rendered)
 
     def test_no_unsupported_review_schema_or_rating_markup(self):
         types = [schema_type for item in self.graph for schema_type in schema_types(item)]
