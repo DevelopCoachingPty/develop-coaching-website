@@ -59,17 +59,11 @@ class ConstructionLeadGenerationTests(unittest.TestCase):
             self.assertIn(phrase, document)
         self.assertIn('href="/5-pillars-free-trainings/attract/"', document)
 
-    def test_faq_schema_matches_the_visible_subjects(self):
+    def test_page_does_not_add_misleading_faq_schema(self):
         document = load()
-        faq = next(
-            node
-            for node in schema_graph(document)
-            if node.get("@id", "").endswith("#lead-quality-faq")
+        self.assertFalse(
+            any(node.get("@type") == "FAQPage" for node in schema_graph(document))
         )
-        self.assertEqual(len(faq["mainEntity"]), 2)
-        for entity in faq["mainEntity"]:
-            self.assertIn(entity["name"], document)
-            self.assertTrue(entity["acceptedAnswer"]["text"])
 
     def test_existing_page_signals_are_preserved(self):
         document = load()

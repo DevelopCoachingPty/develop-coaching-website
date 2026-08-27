@@ -31,7 +31,8 @@ STYLES = """<style id="dc-lead-quality-briefing-styles">
 .dc-lead-brief__review{margin:24px 0 0;padding:20px 24px;background:var(--signal);border-left:8px solid var(--ink)}
 .dc-lead-brief__review strong{display:block;margin-bottom:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .dc-lead-brief__link{display:inline-block;margin-top:22px;padding:13px 17px;background:var(--ink);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:4px 4px 0 var(--blue)}
-.dc-lead-brief__link:hover,.dc-lead-brief__link:focus-visible{background:var(--blue);outline:3px solid var(--signal);outline-offset:3px}
+.dc-lead-brief__link:hover,.dc-lead-brief__link:focus-visible{background:var(--blue)}
+.dc-lead-brief__link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 @media(max-width:767px){.dc-lead-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-lead-brief__header{grid-template-columns:1fr;padding:24px}.dc-lead-brief__stamp{justify-self:start;min-width:0}.dc-lead-brief__body{padding:20px}.dc-lead-brief__grid{grid-template-columns:1fr}.dc-lead-brief__panel{padding:20px}}
 </style>"""
 
@@ -62,22 +63,10 @@ SECTION = """<section class="dc-lead-brief" id="dc-lead-quality-briefing" aria-l
         </ol>
       </article>
     </div>
-    <p class="dc-lead-brief__review"><strong>Review weekly</strong>Compare enquiries, qualified opportunities, response time, proposals, wins and lost reasons by source. Lead volume alone does not show which marketing produces suitable work.</p>
+    <p class="dc-lead-brief__review"><strong>Review weekly</strong> Compare enquiries, qualified opportunities, response time, proposals, wins and lost reasons by source. Lead volume alone does not show which marketing produces suitable work.</p>
     <a class="dc-lead-brief__link" href="/5-pillars-free-trainings/attract/">Explore the Attract pillar resources</a>
   </div>
 </section>"""
-
-FAQS = (
-    (
-        "How can a construction company reduce reliance on referrals?",
-        "Review where enquiries came from, then build one additional channel that reaches your ideal client. Give it a clear owner, consistent activity and a follow-up process, while continuing to nurture referrals.",
-    ),
-    (
-        "What should a construction company track from an enquiry?",
-        "Track the source, date received, first response, contact outcome, qualification decision and reason, consultation or site visit, proposal, and whether the opportunity was won or lost.",
-    ),
-)
-
 
 def update_schema(document: str) -> str:
     pattern = re.compile(
@@ -89,25 +78,12 @@ def update_schema(document: str) -> str:
         raise ValueError("Rank Math schema not found")
     schema = json.loads(match.group(1))
     graph = schema.get("@graph", [])
-    faq_id = "https://develop-coaching.com/construction-lead-generation/#lead-quality-faq"
-    graph = [node for node in graph if node.get("@id") != faq_id]
-    graph.append(
-        {
-            "@type": "FAQPage",
-            "@id": faq_id,
-            "isPartOf": {
-                "@id": "https://develop-coaching.com/construction-lead-generation/#webpage"
-            },
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": question,
-                    "acceptedAnswer": {"@type": "Answer", "text": answer},
-                }
-                for question, answer in FAQS
-            ],
-        }
-    )
+    graph = [
+        node
+        for node in graph
+        if node.get("@id")
+        != "https://develop-coaching.com/construction-lead-generation/#lead-quality-faq"
+    ]
     for node in graph:
         if node.get("@type") == "WebPage" or node.get("@type") == "BlogPosting":
             node["dateModified"] = "2026-08-27T00:00:00+10:00"
@@ -121,12 +97,22 @@ def update_schema(document: str) -> str:
 
 
 def transform(document: str) -> str:
-    if f'id="{MARKER}"' not in document:
+    section_pattern = re.compile(
+        rf'<section class="dc-lead-brief" id="{MARKER}"[\s\S]*?</section>'
+    )
+    if section_pattern.search(document):
+        document = section_pattern.sub(SECTION, document, count=1)
+    else:
         conclusion = "<h2>Conclusion</h2>"
         if conclusion not in document:
             raise ValueError("Conclusion insertion point not found")
         document = document.replace(conclusion, SECTION + "\n" + conclusion, 1)
-    if 'id="dc-lead-quality-briefing-styles"' not in document:
+    style_pattern = re.compile(
+        r'<style id="dc-lead-quality-briefing-styles">[\s\S]*?</style>'
+    )
+    if style_pattern.search(document):
+        document = style_pattern.sub(STYLES, document, count=1)
+    else:
         if "</head>" not in document:
             raise ValueError("Head insertion point not found")
         document = document.replace("</head>", STYLES + "\n</head>", 1)
