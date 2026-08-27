@@ -15,6 +15,10 @@ const pillars = {
     h1: 'Plan Your Construction Business Growth',
     intro: 'Turn ambition into a practical direction for the business. These free resources cover targets, financial visibility, priorities and the routines that keep a construction company moving towards its goals.',
     use: 'Start here if the team is busy but priorities, numbers or the next stage of growth are unclear.',
+    supporting: [
+      ['/profit-and-loss-statement-for-small-construction-company/', 'Use a profit and loss statement', 'Understand what the numbers show about income, costs and business performance.'],
+      ['/construction-profit-margin-uk/', 'Understand construction profit margins', 'Review the difference between turnover, gross profit and net profit in a UK construction business.']
+    ],
     image: 'https://i.ytimg.com/vi/Gygj47Sk_ck/maxresdefault.jpg',
     faqs: [
       ['What does the Plan pillar cover?', 'It brings together resources on business goals, financial visibility, strategic priorities and turning a longer-term direction into practical action.'],
@@ -28,6 +32,10 @@ const pillars = {
     h1: 'Attract Better-Fit Construction Clients',
     intro: 'Build a clearer market position and a more dependable flow of suitable enquiries. These free resources cover brand, reviews, referrals, digital marketing and relationship-led lead generation.',
     use: 'Start here if lead flow is inconsistent or too dependent on a single channel or relationship.',
+    supporting: [
+      ['/attract-the-right-clients/', 'Attract the right construction clients', 'Focus marketing on suitable projects and clients rather than enquiry volume alone.'],
+      ['/construction-lead-generation/', 'Improve construction lead generation', 'Build a more dependable route from marketing activity to suitable enquiries.']
+    ],
     image: 'https://i.ytimg.com/vi/Paw7cjpopHY/maxresdefault.jpg',
     faqs: [
       ['What does the Attract pillar cover?', 'It covers positioning, brand, reviews, content, referrals and marketing channels that help suitable prospects find and trust a construction business.'],
@@ -41,6 +49,9 @@ const pillars = {
     h1: 'Convert Enquiries Into Profitable Construction Projects',
     intro: 'Create a consistent route from first enquiry to a well-qualified, properly priced project. These free resources cover qualification, sales conversations, estimating, proposals and follow-up.',
     use: 'Start here if good enquiries stall, quotes consume too much time or the work being won does not protect the intended margin.',
+    supporting: [
+      ['/construction-job-pricing/', 'Price construction jobs properly', 'Connect estimating, costs and intended margin before committing to a project.']
+    ],
     image: 'https://i.ytimg.com/vi/RKMnmz9JW2M/hqdefault.jpg',
     faqs: [
       ['What does the Convert pillar cover?', 'It covers qualification, sales process, estimating, proposals, follow-up and the decisions that connect an enquiry to a suitable project.'],
@@ -54,6 +65,11 @@ const pillars = {
     h1: 'Deliver Construction Projects With Control',
     intro: 'Protect the promise made during the sale by improving how work is handed over, planned, procured, managed and reviewed. These free resources focus on project control and consistent delivery.',
     use: 'Start here if projects drift after handover, site information is inconsistent or the margin achieved differs from the margin quoted.',
+    supporting: [
+      ['/construction-project-management/', 'Strengthen construction project management', 'Improve the planning and control used from handover through delivery.'],
+      ['/software/costtracker-pro/', 'Track live project costs', 'See how CostTracker Pro supports purchase, cost and project financial visibility.'],
+      ['/streamlined-procurement-system/', 'Streamline construction procurement', 'Create a more consistent process for buying and managing project materials.']
+    ],
     image: 'https://i.ytimg.com/vi/9bvw3Ki8jl4/hqdefault.jpg',
     faqs: [
       ['What does the Deliver pillar cover?', 'It covers handover, project planning, procurement, site management, communication and the controls used while work is in progress.'],
@@ -67,6 +83,10 @@ const pillars = {
     h1: 'Scale a Construction Business Beyond the Owner',
     intro: 'Build the people, responsibilities and operating systems needed for growth that does not rely on the owner making every decision. These free resources cover delegation, leadership, team structure and management rhythm.',
     use: 'Start here if growth creates more firefighting or important work still waits for the owner.',
+    supporting: [
+      ['/construction-business-systems/', 'Build construction business systems', 'Document repeatable ways of working so the business depends less on the owner.'],
+      ['/podcast/the-perfect-week-with-emma-mills/', 'Create a practical weekly rhythm', 'Use a structured week to protect priorities, leadership time and follow-through.']
+    ],
     image: 'https://i.ytimg.com/vi/pkIndbf_w4E/hqdefault.jpg',
     faqs: [
       ['What does the Scale pillar cover?', 'It covers roles, delegation, leadership, team structure, systems and the management routines that reduce dependence on the owner.'],
@@ -100,6 +120,11 @@ const sharedStyle = `
   .five-pillars-guide__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0}
   .five-pillars-guide__card,.five-pillars-guide details{background:#fff;border:1px solid #d9e2e5;border-radius:12px;padding:22px}
   .five-pillars-guide__card a{color:#087f86;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .five-pillars-guide__resources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0 34px}
+  .five-pillars-guide__resource{display:block;background:#fff;border:1px solid #d9e2e5;border-radius:12px;padding:22px;color:#17232b;text-decoration:none}
+  .five-pillars-guide__resource strong{display:block;margin-bottom:8px;color:#087f86;font-size:20px;line-height:1.25;text-decoration:underline;text-underline-offset:3px}
+  .five-pillars-guide__resource span{display:block;font-size:17px;line-height:1.5}
+  .five-pillars-guide__resource:hover,.five-pillars-guide__resource:focus-visible{border-color:#087f86;box-shadow:0 0 0 3px rgba(8,127,134,.14)}
   .five-pillars-guide__cta{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:34px;padding:26px;background:#17232b;color:#fff;border-radius:12px}
   .five-pillars-guide__cta p{margin:0}
   .five-pillars-guide__cta a{display:inline-block;background:#f2b94b;color:#17232b;font-weight:800;padding:13px 20px;border-radius:6px;text-decoration:none;white-space:nowrap}
@@ -111,6 +136,7 @@ const sharedStyle = `
   @media(max-width:767px){
     .five-pillars-guide{padding:44px 18px}
     .five-pillars-guide__grid{grid-template-columns:1fr}
+    .five-pillars-guide__resources{grid-template-columns:1fr}
     .five-pillars-guide__cta{align-items:flex-start;flex-direction:column}
     .five-pillars-guide__cta a{white-space:normal;text-align:center;width:100%}
     .e-loop-item .e-con-inner,.e-loop-item .e-con{min-width:0}
@@ -185,6 +211,10 @@ function faqMarkup(faqs) {
   return faqs.map(([q,a]) => `<details><summary>${htmlEscape(q)}</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>${htmlEscape(a)}</dd></dl></details>`).join('\n');
 }
 
+function supportingResourcesMarkup(slug, resources) {
+  return resources.map(([href, title, description]) => `<a class="five-pillars-guide__resource" href="${href}" data-primary-pillar="${slug}"><strong>${htmlEscape(title)}</strong><span>${htmlEscape(description)}</span></a>`).join('\n');
+}
+
 function trackingScript(sourcePage) {
   return `<script id="five-pillars-analytics">
 (function(w,d){
@@ -243,14 +273,18 @@ function enhancePillar(slug, data) {
     <h2 id="${slug}-guide-title">How to use the ${data.title} resources</h2>
     <p class="five-pillars-guide__lead">${data.intro}</p>
     <div class="five-pillars-guide__card"><h3>A practical starting point</h3><p>${data.use}</p></div>
+    <h2>Recommended ${data.title} guides</h2>
+    <nav class="five-pillars-guide__resources" aria-label="Recommended ${data.title} guides">
+      ${supportingResourcesMarkup(slug, data.supporting)}
+    </nav>
     <h2>Frequently asked questions</h2>
     ${faqMarkup(data.faqs)}
     <div class="five-pillars-guide__cta"><p><strong>Want help applying the Five Pillars to your business?</strong><br>See how the Develop Mastermind combines planning, coaching and accountability.</p><a href="/courses/mastermind-course/">Explore the Develop Mastermind</a></div>
   </div>
 </section>`;
   html = html.replace(/<style id="five-pillars-seo-geo">[\s\S]*?<\/style>\s*/g, '');
-  if (html.includes('class="five-pillars-guide"')) html = html.replace(/<section class="five-pillars-guide"[\s\S]*?<\/section>/, guide);
-  else html = assertReplace(html, '</main>', `${guide}\n</main>`, `${slug} guide`);
+  html = html.replace(/<section class="five-pillars-guide"[\s\S]*?<\/section>\s*/g, '');
+  html = assertReplace(html, '</main>', `${guide}\n</main>`, `${slug} guide`);
   html = html.replace(/\n{3,}(?=<style id="five-pillars-seo-geo">)/g, '\n\n');
   const analytics = trackingScript(slug);
   if (html.includes('id="five-pillars-analytics"')) html = html.replace(/<script id="five-pillars-analytics">[\s\S]*?<\/script>/, analytics);
