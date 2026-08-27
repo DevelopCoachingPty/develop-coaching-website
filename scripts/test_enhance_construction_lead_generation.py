@@ -38,12 +38,12 @@ def schema_graph(document):
 
 
 class ConstructionLeadGenerationTests(unittest.TestCase):
-    def test_briefing_is_present_once_before_the_conclusion(self):
+    def test_briefing_is_present_once_before_the_first_guide_section(self):
         document = load()
         self.assertEqual(document.count('id="dc-lead-quality-briefing"'), 1)
         self.assertLess(
             document.index('id="dc-lead-quality-briefing"'),
-            document.index("<h2>Conclusion</h2>"),
+            document.index("Identify and Target Your Ideal Client"),
         )
         self.assertIn("Reduce Reliance on Referrals and Track Better Leads", document)
         self.assertIn("Track the route from enquiry to qualified opportunity", document)
@@ -64,6 +64,31 @@ class ConstructionLeadGenerationTests(unittest.TestCase):
         self.assertFalse(
             any(node.get("@type") == "FAQPage" for node in schema_graph(document))
         )
+
+    def test_title_and_intro_match_the_reader_outcome(self):
+        document = load()
+        title = "Construction Lead Generation: Attract Better Enquiries"
+        self.assertIn(f"<title>{title}</title>", document)
+        self.assertIn(f">{title}</h1>", document)
+        self.assertIn('id="dc-lead-hero-subtitle"', document)
+        self.assertIn('id="dc-lead-guide-intro"', document)
+        self.assertIn("repeatable sales pipeline", document)
+        self.assertNotIn("12 Secrets for Effective Construction Lead Generation", document)
+        self.assertNotIn("seven essential tips", document)
+
+    def test_attract_is_the_visible_and_structured_category(self):
+        document = load()
+        self.assertIn(
+            '<a href="/category/attract/" class="elementor-post-info__terms-list-item">Attract</a>',
+            document,
+        )
+        graph = schema_graph(document)
+        breadcrumb = next(node for node in graph if node.get("@type") == "BreadcrumbList")
+        self.assertEqual(breadcrumb["itemListElement"][1]["item"]["name"], "Attract")
+        article = next(node for node in graph if node.get("@type") == "BlogPosting")
+        self.assertEqual(article["articleSection"], "Attract")
+        self.assertIn("Attract Better Enquiries", article["headline"])
+        self.assertIn('<meta property="article:section" content="Attract"', document)
 
     def test_existing_page_signals_are_preserved(self):
         document = load()

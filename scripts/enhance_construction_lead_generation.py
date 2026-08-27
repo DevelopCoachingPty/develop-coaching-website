@@ -9,8 +9,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "www" / "construction-lead-generation" / "index.html"
 MARKER = "dc-lead-quality-briefing"
+TITLE = "Construction Lead Generation: Attract Better Enquiries"
+DESCRIPTION = (
+    "Learn how construction companies can attract better-fit enquiries, reduce "
+    "reliance on referrals and track leads through to qualified opportunities."
+)
+
+HERO_SUBTITLE = """<p class="dc-lead-hero-subtitle" id="dc-lead-hero-subtitle">A practical guide to building a steadier pipeline of suitable construction enquiries.</p>"""
+
+ARTICLE_INTRO = """<div class="dc-lead-guide-intro" id="dc-lead-guide-intro">
+  <p>Construction lead generation is not just about creating more enquiries. The useful measure is whether the right prospects enter a repeatable sales pipeline.</p>
+  <img fetchpriority="high" decoding="async" src="/wp-content/uploads/2024/04/construction-lead-generation.webp" alt="Construction lead generation" width="940" height="788" />
+  <p>This guide explains how to define your ideal client, use practical marketing systems, respond consistently, reduce reliance on referrals and track each enquiry through to a qualified opportunity.</p>
+</div>"""
 
 STYLES = """<style id="dc-lead-quality-briefing-styles">
+.dc-lead-hero-subtitle{max-width:680px;margin:16px 0 0!important;color:#fff;font-size:clamp(17px,2vw,22px)!important;font-weight:600;line-height:1.45;text-shadow:0 2px 4px rgba(0,0,0,.35)}
+.dc-lead-guide-intro{margin:0 0 38px}
+.dc-lead-guide-intro p:first-child{margin:0 0 24px;padding:18px 22px;border-left:6px solid #f6c944;background:#f5f3ec;color:#25262a;font-size:20px;font-weight:700;line-height:1.5}
+.dc-lead-guide-intro img{display:block;width:100%;height:auto;margin:0 0 24px}
+.dc-lead-guide-intro p:last-child{margin:0;font-size:18px;line-height:1.65}
 .dc-lead-brief{--ink:#25262a;--paper:#f5f3ec;--signal:#f6c944;--blue:#087f86;margin:56px 0;padding:0;background:var(--paper);border:1px solid #d9d5c9;box-shadow:8px 8px 0 var(--ink);color:var(--ink);overflow:hidden}
 .dc-lead-brief *{box-sizing:border-box}
 .dc-lead-brief__header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;padding:32px;background:var(--ink);color:#fff;border-bottom:8px solid var(--signal)}
@@ -33,7 +51,7 @@ STYLES = """<style id="dc-lead-quality-briefing-styles">
 .dc-lead-brief__link{display:inline-block;margin-top:22px;padding:13px 17px;background:var(--ink);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:4px 4px 0 var(--blue)}
 .dc-lead-brief__link:hover,.dc-lead-brief__link:focus-visible{background:var(--blue)}
 .dc-lead-brief__link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-@media(max-width:767px){.dc-lead-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-lead-brief__header{grid-template-columns:1fr;padding:24px}.dc-lead-brief__stamp{justify-self:start;min-width:0}.dc-lead-brief__body{padding:20px}.dc-lead-brief__grid{grid-template-columns:1fr}.dc-lead-brief__panel{padding:20px}}
+@media(max-width:767px){.dc-lead-hero-subtitle{font-size:16px!important}.dc-lead-guide-intro p:first-child{padding:16px 18px;font-size:18px}.dc-lead-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-lead-brief__header{grid-template-columns:1fr;padding:24px}.dc-lead-brief__stamp{justify-self:start;min-width:0}.dc-lead-brief__body{padding:20px}.dc-lead-brief__grid{grid-template-columns:1fr}.dc-lead-brief__panel{padding:20px}}
 </style>"""
 
 SECTION = """<section class="dc-lead-brief" id="dc-lead-quality-briefing" aria-labelledby="dc-lead-quality-title">
@@ -85,8 +103,25 @@ def update_schema(document: str) -> str:
         != "https://develop-coaching.com/construction-lead-generation/#lead-quality-faq"
     ]
     for node in graph:
-        if node.get("@type") == "WebPage" or node.get("@type") == "BlogPosting":
-            node["dateModified"] = "2026-08-27T00:00:00+10:00"
+        node_type = node.get("@type")
+        if node_type == "BreadcrumbList":
+            items = node.get("itemListElement", [])
+            if len(items) >= 3:
+                items[1]["item"] = {
+                    "@id": "https://develop-coaching.com/category/attract/",
+                    "name": "Attract",
+                }
+                items[2]["item"]["name"] = TITLE
+        if node_type == "WebPage":
+            node["name"] = TITLE
+            node["description"] = DESCRIPTION
+            node["dateModified"] = "2026-08-28T00:00:00+10:00"
+        if node_type == "BlogPosting":
+            node["headline"] = TITLE
+            node["name"] = TITLE
+            node["description"] = DESCRIPTION
+            node["articleSection"] = "Attract"
+            node["dateModified"] = "2026-08-28T00:00:00+10:00"
     schema["@graph"] = graph
     replacement = (
         '<script type="application/ld+json" class="rank-math-schema-pro">'
@@ -96,17 +131,119 @@ def update_schema(document: str) -> str:
     return document[: match.start()] + replacement + document[match.end() :]
 
 
-def transform(document: str) -> str:
-    section_pattern = re.compile(
-        rf'<section class="dc-lead-brief" id="{MARKER}"[\s\S]*?</section>'
+def update_page_signals(document: str) -> str:
+    replacements = (
+        (r"<title>.*?</title>", f"<title>{TITLE}</title>"),
+        (
+            r'(<meta name="description" content=")[^"]*("\s*/>)',
+            rf"\g<1>{DESCRIPTION}\g<2>",
+        ),
+        (
+            r'(<meta property="og:title" content=")[^"]*("\s*/>)',
+            rf"\g<1>{TITLE}\g<2>",
+        ),
+        (
+            r'(<meta property="og:description" content=")[^"]*("\s*/>)',
+            rf"\g<1>{DESCRIPTION}\g<2>",
+        ),
+        (
+            r'(<meta name="twitter:title" content=")[^"]*("\s*/>)',
+            rf"\g<1>{TITLE}\g<2>",
+        ),
+        (
+            r'(<meta name="twitter:description" content=")[^"]*("\s*/>)',
+            rf"\g<1>{DESCRIPTION}\g<2>",
+        ),
+        (
+            r'(<meta property="article:section" content=")[^"]*("\s*/>)',
+            r"\g<1>Attract\g<2>",
+        ),
+        (
+            r'(<meta property="og:updated_time" content=")[^"]*("\s*/>)',
+            r"\g<1>2026-08-28T00:00:00+10:00\g<2>",
+        ),
+        (
+            r'(<meta property="article:modified_time" content=")[^"]*("\s*/>)',
+            r"\g<1>2026-08-28T00:00:00+10:00\g<2>",
+        ),
+        (
+            r'<h1 class="elementor-heading-title elementor-size-default">.*?</h1>',
+            f'<h1 class="elementor-heading-title elementor-size-default">{TITLE}</h1>',
+        ),
     )
-    if section_pattern.search(document):
-        document = section_pattern.sub(SECTION, document, count=1)
-    else:
-        conclusion = "<h2>Conclusion</h2>"
-        if conclusion not in document:
-            raise ValueError("Conclusion insertion point not found")
-        document = document.replace(conclusion, SECTION + "\n" + conclusion, 1)
+    for pattern, replacement in replacements:
+        document, count = re.subn(pattern, replacement, document, count=1)
+        if count != 1:
+            raise ValueError(f"Page signal not found: {pattern}")
+
+    category_pattern = re.compile(
+        r'<span class="elementor-post-info__terms-list">[\s\S]*?</span>'
+    )
+    document, count = category_pattern.subn(
+        '<span class="elementor-post-info__terms-list">\n'
+        '<a href="/category/attract/" class="elementor-post-info__terms-list-item">Attract</a>'
+        "\t\t\t\t</span>",
+        document,
+        count=1,
+    )
+    if count != 1:
+        raise ValueError("Visible category list not found")
+    document = document.replace(
+        "category-convert category-scale tag-most-read",
+        "category-attract tag-most-read",
+        1,
+    )
+    document = document.replace(
+        "12%20Secrets%20for%20Effective%20Construction%20Lead%20Generation",
+        "Construction%20Lead%20Generation%3A%20Attract%20Better%20Enquiries",
+    )
+    return document
+
+
+def update_hero(document: str) -> str:
+    subtitle_pattern = re.compile(
+        r'<p class="dc-lead-hero-subtitle" id="dc-lead-hero-subtitle">[\s\S]*?</p>'
+    )
+    if subtitle_pattern.search(document):
+        return subtitle_pattern.sub(HERO_SUBTITLE, document, count=1)
+    h1 = f'<h1 class="elementor-heading-title elementor-size-default">{TITLE}</h1>'
+    if h1 not in document:
+        raise ValueError("Hero title not found")
+    return document.replace(h1, h1 + "\n" + HERO_SUBTITLE, 1)
+
+
+def update_intro(document: str) -> str:
+    owned_pattern = re.compile(
+        r'<div class="dc-lead-guide-intro" id="dc-lead-guide-intro">[\s\S]*?</div>'
+    )
+    if owned_pattern.search(document):
+        return owned_pattern.sub(ARTICLE_INTRO, document, count=1)
+    legacy_pattern = re.compile(
+        r"<p>Are you looking to supercharge your construction business\?[\s\S]*?</p>"
+    )
+    document, count = legacy_pattern.subn(ARTICLE_INTRO, document, count=1)
+    if count != 1:
+        raise ValueError("Legacy article introduction not found")
+    return document
+
+
+def transform(document: str) -> str:
+    document = update_page_signals(document)
+    document = update_hero(document)
+    document = update_intro(document)
+    section_pattern = re.compile(
+        rf'<section class="dc-lead-brief" id="{MARKER}"[\s\S]*?</section>(?:\r?\n)*'
+    )
+    document = section_pattern.sub("", document, count=1)
+    first_guide_heading = '<h2 dir="ltr">Identify and Target Your Ideal Client</h2>'
+    if first_guide_heading not in document:
+        raise ValueError("First guide heading not found")
+    document = re.sub(
+        r"\s*" + re.escape(first_guide_heading),
+        "\n" + SECTION + "\n" + first_guide_heading,
+        document,
+        count=1,
+    )
     style_pattern = re.compile(
         r'<style id="dc-lead-quality-briefing-styles">[\s\S]*?</style>'
     )
