@@ -10,6 +10,26 @@ HUB = ROOT / "www" / "5-pillars-free-trainings"
 PILLARS = ("plan", "attract", "convert", "deliver", "scale")
 FILES = [HUB / "index.html", *(HUB / pillar / "index.html" for pillar in PILLARS)]
 MASTERMIND = ROOT / "www" / "courses" / "mastermind-course" / "index.html"
+SUPPORTING_GUIDES = {
+    "plan": (
+        "/profit-and-loss-statement-for-small-construction-company/",
+        "/construction-profit-margin-uk/",
+    ),
+    "attract": (
+        "/attract-the-right-clients/",
+        "/construction-lead-generation/",
+    ),
+    "convert": ("/construction-job-pricing/",),
+    "deliver": (
+        "/construction-project-management/",
+        "/software/costtracker-pro/",
+        "/streamlined-procurement-system/",
+    ),
+    "scale": (
+        "/construction-business-systems/",
+        "/podcast/the-perfect-week-with-emma-mills/",
+    ),
+}
 
 
 class DocumentParser(HTMLParser):
@@ -159,6 +179,41 @@ class FivePillarsSeoTests(unittest.TestCase):
         combined = "\n".join(load(path) for path in FILES[1:])
         for primary in ("plan", "attract", "convert", "deliver", "scale"):
             self.assertIn(f'data-primary-pillar="{primary}"', combined)
+
+    def test_child_guides_link_to_their_exact_supporting_resources(self):
+        for pillar, routes in SUPPORTING_GUIDES.items():
+            document = load(HUB / pillar / "index.html")
+            guide_match = re.search(
+                r'<section class="five-pillars-guide"[\s\S]*?</section>',
+                document,
+            )
+            self.assertIsNotNone(guide_match, pillar)
+            self.assertEqual(document.count('<section class="five-pillars-guide"'), 1)
+            guide = guide_match.group(0)
+            self.assertIn(f'data-pillar="{pillar}"', guide)
+            self.assertIn('class="five-pillars-guide__stamp"', guide)
+            self.assertIn("Your site briefing", guide)
+            self.assertEqual(guide.count('class="five-pillars-guide__faq"'), 1)
+            self.assertIn(
+                f'<nav class="five-pillars-guide__resources" '
+                f'aria-label="Recommended {pillar.title()} guides">',
+                guide,
+            )
+            for route in routes:
+                with self.subTest(pillar=pillar, route=route):
+                    anchor = (
+                        f'href="{route}" data-primary-pillar="{pillar}"'
+                    )
+                    self.assertIn(anchor, guide)
+                    self.assertEqual(document.count(f'href="{route}"'), 1)
+            self.assertEqual(
+                guide.count('class="five-pillars-guide__resource"'),
+                len(routes),
+            )
+            self.assertEqual(
+                guide.count('class="five-pillars-guide__resource-number"'),
+                len(routes),
+            )
 
     def test_secondary_podcast_resources_show_primary_pillar(self):
         expected = {
