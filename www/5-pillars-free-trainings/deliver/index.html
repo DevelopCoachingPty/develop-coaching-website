@@ -1333,55 +1333,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 
 <style id="five-pillars-seo-geo">
-  .five-pillars-guide{background:#f4f7f8;color:#17232b;padding:64px 24px;font-family:"Source Sans Pro",Arial,sans-serif}
+  .five-pillars-guide{--ink:#17232b;--blue:#087f86;--signal:#f2b94b;--paper:#f4f7f8;--line:#d9e2e5;background-color:var(--paper);background-image:linear-gradient(rgba(23,35,43,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(23,35,43,.035) 1px,transparent 1px);background-size:48px 48px;color:var(--ink);padding:76px 24px;font-family:"Source Sans Pro",Arial,sans-serif}
   .five-pillars-guide__inner{max-width:1120px;margin:0 auto}
-  .five-pillars-guide h2{font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 0 18px;color:#17232b}
-  .five-pillars-guide h3{font-size:23px;line-height:1.25;margin:0 0 8px;color:#17232b}
-  .five-pillars-guide p,.five-pillars-guide summary,.five-pillars-guide dd{font-size:18px;line-height:1.6}
-  .five-pillars-guide__lead{max-width:780px;margin:0 0 34px}
-  .five-pillars-guide__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0}
-  .five-pillars-guide__card,.five-pillars-guide details{background:#fff;border:1px solid #d9e2e5;border-radius:12px;padding:22px}
-  .five-pillars-guide__card a{color:#087f86;font-weight:700;text-decoration:underline;text-underline-offset:3px}
-  .five-pillars-guide__resources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0 34px}
-  .five-pillars-guide__resource{display:block;background:#fff;border:1px solid #d9e2e5;border-radius:12px;padding:22px;color:#17232b;text-decoration:none}
-  .five-pillars-guide__resource strong{display:block;margin-bottom:8px;color:#087f86;font-size:20px;line-height:1.25;text-decoration:underline;text-underline-offset:3px}
-  .five-pillars-guide__resource span{display:block;font-size:17px;line-height:1.5}
-  .five-pillars-guide__resource:hover,.five-pillars-guide__resource:focus-visible{border-color:#087f86;box-shadow:0 0 0 3px rgba(8,127,134,.14)}
-  .five-pillars-guide__cta{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:34px;padding:26px;background:#17232b;color:#fff;border-radius:12px}
-  .five-pillars-guide__cta p{margin:0}
-  .five-pillars-guide__cta a{display:inline-block;background:#f2b94b;color:#17232b;font-weight:800;padding:13px 20px;border-radius:6px;text-decoration:none;white-space:nowrap}
-  .five-pillars-guide details{margin:12px 0}
-  .five-pillars-guide summary{font-weight:700;cursor:pointer}
-  .five-pillars-guide dd{margin:12px 0 0}
-  .five-pillars-guide__transcript{border-left:4px solid #087f86;padding-left:18px;max-width:850px}
+  .five-pillars-guide h2{font-size:clamp(30px,4vw,48px);line-height:1.02;letter-spacing:-.025em;margin:0;color:var(--ink)}
+  .five-pillars-guide h3{font-size:22px;line-height:1.2;margin:0;color:var(--ink)}
+  .five-pillars-guide p,.five-pillars-guide summary,.five-pillars-guide dd{font-size:18px;line-height:1.55}
+  .five-pillars-guide__eyebrow{margin:0 0 10px!important;color:var(--blue);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px!important;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+  .five-pillars-guide__header{display:grid;grid-template-columns:150px minmax(0,1fr);gap:38px;align-items:stretch;margin-bottom:28px}
+  .five-pillars-guide__stamp{position:relative;display:flex;min-height:168px;flex-direction:column;justify-content:space-between;overflow:hidden;background:var(--ink);color:#fff;padding:22px}
+  .five-pillars-guide__stamp:after{content:"";position:absolute;right:-32px;bottom:-36px;width:110px;height:110px;border:16px solid var(--signal);transform:rotate(45deg);opacity:.95}
+  .five-pillars-guide__stamp-number{font-size:64px;font-weight:900;letter-spacing:-.08em;line-height:.8}
+  .five-pillars-guide__stamp-name{position:relative;z-index:1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+  .five-pillars-guide__heading{display:flex;flex-direction:column;justify-content:center;border-top:6px solid var(--signal);border-bottom:1px solid var(--line);padding:20px 0}
+  .five-pillars-guide__lead{max-width:790px;margin:18px 0 0!important;color:#42545e;font-size:20px!important}
+  .five-pillars-guide__start{display:grid;grid-template-columns:150px minmax(0,1fr);gap:38px;align-items:center;background:var(--blue);color:#fff;margin-bottom:58px;padding:24px 28px}
+  .five-pillars-guide__start-label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+  .five-pillars-guide__start h3{color:#fff;margin-bottom:5px}
+  .five-pillars-guide__start p{margin:0;color:#fff}
+  .five-pillars-guide__routes-head{display:flex;justify-content:space-between;gap:36px;align-items:end;margin-bottom:22px}
+  .five-pillars-guide__routes-note{max-width:390px;margin:0;color:#50636e;font-size:16px!important}
+  .five-pillars-guide__resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px;margin:0 0 64px}
+  .five-pillars-guide__resource{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:start;min-height:180px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--ink);padding:22px;color:var(--ink);text-decoration:none;box-shadow:0 8px 0 rgba(23,35,43,.06);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+  .five-pillars-guide__resource:only-child{max-width:560px}
+  .five-pillars-guide__resource-number{color:var(--blue);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;font-weight:800}
+  .five-pillars-guide__resource-copy strong{display:block;margin-bottom:8px;color:var(--ink);font-size:21px;line-height:1.2;text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:3px;text-underline-offset:5px}
+  .five-pillars-guide__resource-copy span{display:block;color:#50636e;font-size:16px;line-height:1.5}
+  .five-pillars-guide__resource-arrow{color:var(--blue);font-size:24px;font-weight:800;line-height:1}
+  .five-pillars-guide__resource:hover,.five-pillars-guide__resource:focus-visible{border-color:var(--blue);box-shadow:0 8px 0 rgba(8,127,134,.16);transform:translateY(-3px)}
+  .five-pillars-guide__faq{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:46px;align-items:start;border-top:1px solid var(--line);padding-top:48px}
+  .five-pillars-guide__questions details{background:#fff;border:1px solid var(--line);margin:0 0 10px;padding:0 22px}
+  .five-pillars-guide__questions summary{cursor:pointer;font-weight:800;padding:18px 34px 18px 0}
+  .five-pillars-guide__questions dd{margin:0;padding:0 0 20px;color:#50636e}
+  .five-pillars-guide__cta{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:46px;padding:30px;background:var(--ink);border-left:8px solid var(--signal);color:#fff}
+  .five-pillars-guide__cta p{margin:0;color:#fff}
+  .five-pillars-guide__cta a{display:inline-flex;align-items:center;justify-content:center;background:var(--signal);color:var(--ink);font-weight:900;padding:14px 22px;text-decoration:none;white-space:nowrap;box-shadow:5px 5px 0 var(--blue)}
+  .five-pillars-guide__transcript{border-left:4px solid var(--blue);padding-left:18px;max-width:850px}
   .five-pillars-primary{display:block;margin-top:6px;font-size:13px;font-weight:700;color:#50636e}
+  @media(prefers-reduced-motion:reduce){.five-pillars-guide__resource{transition:none}}
   @media(max-width:767px){
-    .five-pillars-guide{padding:44px 18px}
-    .five-pillars-guide__grid{grid-template-columns:1fr}
+    .five-pillars-guide{padding:52px 18px;background-size:32px 32px}
+    .five-pillars-guide__header{grid-template-columns:84px minmax(0,1fr);gap:18px}
+    .five-pillars-guide__stamp{min-height:150px;padding:16px 12px}
+    .five-pillars-guide__stamp-number{font-size:46px}
+    .five-pillars-guide__stamp-name{font-size:10px;writing-mode:vertical-rl;transform:rotate(180deg)}
+    .five-pillars-guide__heading{padding:15px 0}
+    .five-pillars-guide__lead{font-size:17px!important}
+    .five-pillars-guide__start{grid-template-columns:1fr;gap:8px;margin-bottom:44px;padding:22px}
+    .five-pillars-guide__routes-head{display:block}
+    .five-pillars-guide__routes-note{margin-top:12px}
     .five-pillars-guide__resources{grid-template-columns:1fr}
-    .five-pillars-guide__cta{align-items:flex-start;flex-direction:column}
+    .five-pillars-guide__resource{min-height:0}
+    .five-pillars-guide__resource:only-child{max-width:none}
+    .five-pillars-guide__faq{grid-template-columns:1fr;gap:22px;padding-top:38px}
+    .five-pillars-guide__cta{align-items:flex-start;flex-direction:column;padding:24px}
     .five-pillars-guide__cta a{white-space:normal;text-align:center;width:100%}
     .e-loop-item .e-con-inner,.e-loop-item .e-con{min-width:0}
     .jet-listing-grid__items.grid-col-mobile-2>.jet-listing-grid__item{width:100%;max-width:100%;flex:0 0 100%}
     .elementor-loop-container.elementor-grid{grid-template-columns:1fr!important}
   }
 </style>
-<section class="five-pillars-guide" aria-labelledby="deliver-guide-title">
+<section class="five-pillars-guide" data-pillar="deliver" aria-labelledby="deliver-guide-title">
   <div class="five-pillars-guide__inner">
-    <p><strong>Pillar 4 of 5</strong></p>
-    <h2 id="deliver-guide-title">How to use the Deliver resources</h2>
-    <p class="five-pillars-guide__lead">Protect the promise made during the sale by improving how work is handed over, planned, procured, managed and reviewed. These free resources focus on project control and consistent delivery.</p>
-    <div class="five-pillars-guide__card"><h3>A practical starting point</h3><p>Start here if projects drift after handover, site information is inconsistent or the margin achieved differs from the margin quoted.</p></div>
-    <h2>Recommended Deliver guides</h2>
+    <header class="five-pillars-guide__header">
+      <div class="five-pillars-guide__stamp" aria-hidden="true"><span class="five-pillars-guide__stamp-number">04</span><span class="five-pillars-guide__stamp-name">Deliver</span></div>
+      <div class="five-pillars-guide__heading">
+        <p class="five-pillars-guide__eyebrow">Your site briefing</p>
+        <h2 id="deliver-guide-title">Use Deliver to move the business forward</h2>
+        <p class="five-pillars-guide__lead">Protect the promise made during the sale by improving how work is handed over, planned, procured, managed and reviewed. These free resources focus on project control and consistent delivery.</p>
+      </div>
+    </header>
+    <div class="five-pillars-guide__start"><span class="five-pillars-guide__start-label">Start here</span><div><h3>Your first move</h3><p>Start here if projects drift after handover, site information is inconsistent or the margin achieved differs from the margin quoted.</p></div></div>
+    <div class="five-pillars-guide__routes-head"><div><p class="five-pillars-guide__eyebrow">Recommended next reads</p><h2>Go deeper on Deliver</h2></div><p class="five-pillars-guide__routes-note">Choose the guide closest to the constraint you are dealing with now. One useful change is better than ten saved tabs.</p></div>
     <nav class="five-pillars-guide__resources" aria-label="Recommended Deliver guides">
-      <a class="five-pillars-guide__resource" href="/construction-project-management/" data-primary-pillar="deliver"><strong>Strengthen construction project management</strong><span>Improve the planning and control used from handover through delivery.</span></a>
-<a class="five-pillars-guide__resource" href="/software/costtracker-pro/" data-primary-pillar="deliver"><strong>Track live project costs</strong><span>See how CostTracker Pro supports purchase, cost and project financial visibility.</span></a>
-<a class="five-pillars-guide__resource" href="/streamlined-procurement-system/" data-primary-pillar="deliver"><strong>Streamline construction procurement</strong><span>Create a more consistent process for buying and managing project materials.</span></a>
+      <a class="five-pillars-guide__resource" href="/construction-project-management/" data-primary-pillar="deliver"><span class="five-pillars-guide__resource-number">01</span><span class="five-pillars-guide__resource-copy"><strong>Strengthen construction project management</strong><span>Improve the planning and control used from handover through delivery.</span></span><span class="five-pillars-guide__resource-arrow" aria-hidden="true">→</span></a>
+<a class="five-pillars-guide__resource" href="/software/costtracker-pro/" data-primary-pillar="deliver"><span class="five-pillars-guide__resource-number">02</span><span class="five-pillars-guide__resource-copy"><strong>Track live project costs</strong><span>See how CostTracker Pro supports purchase, cost and project financial visibility.</span></span><span class="five-pillars-guide__resource-arrow" aria-hidden="true">→</span></a>
+<a class="five-pillars-guide__resource" href="/streamlined-procurement-system/" data-primary-pillar="deliver"><span class="five-pillars-guide__resource-number">03</span><span class="five-pillars-guide__resource-copy"><strong>Streamline construction procurement</strong><span>Create a more consistent process for buying and managing project materials.</span></span><span class="five-pillars-guide__resource-arrow" aria-hidden="true">→</span></a>
     </nav>
-    <h2>Frequently asked questions</h2>
-    <details><summary>What does the Deliver pillar cover?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>It covers handover, project planning, procurement, site management, communication and the controls used while work is in progress.</dd></dl></details>
+    <div class="five-pillars-guide__faq"><div><p class="five-pillars-guide__eyebrow">Quick answers</p><h2>Before you start</h2></div><div class="five-pillars-guide__questions"><details><summary>What does the Deliver pillar cover?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>It covers handover, project planning, procurement, site management, communication and the controls used while work is in progress.</dd></dl></details>
 <details><summary>Why connect delivery to profitability?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>The commercial result depends on how the agreed scope, programme, buying and changes are controlled throughout the project.</dd></dl></details>
-<details><summary>Where should I start?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>Choose the repeated delivery problem that creates the most rework, delay or uncertainty, then document the expected process and owner.</dd></dl></details>
+<details><summary>Where should I start?</summary><dl><dt class="elementor-screen-only">Answer</dt><dd>Choose the repeated delivery problem that creates the most rework, delay or uncertainty, then document the expected process and owner.</dd></dl></details></div></div>
     <div class="five-pillars-guide__cta"><p><strong>Want help applying the Five Pillars to your business?</strong><br>See how the Develop Mastermind combines planning, coaching and accountability.</p><a href="/courses/mastermind-course/">Explore the Develop Mastermind</a></div>
   </div>
 </section>

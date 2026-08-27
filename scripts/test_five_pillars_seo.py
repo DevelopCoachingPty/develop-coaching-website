@@ -190,6 +190,10 @@ class FivePillarsSeoTests(unittest.TestCase):
             self.assertIsNotNone(guide_match, pillar)
             self.assertEqual(document.count('<section class="five-pillars-guide"'), 1)
             guide = guide_match.group(0)
+            self.assertIn(f'data-pillar="{pillar}"', guide)
+            self.assertIn('class="five-pillars-guide__stamp"', guide)
+            self.assertIn("Your site briefing", guide)
+            self.assertEqual(guide.count('class="five-pillars-guide__faq"'), 1)
             self.assertIn(
                 f'<nav class="five-pillars-guide__resources" '
                 f'aria-label="Recommended {pillar.title()} guides">',
@@ -204,6 +208,10 @@ class FivePillarsSeoTests(unittest.TestCase):
                     self.assertEqual(document.count(f'href="{route}"'), 1)
             self.assertEqual(
                 guide.count('class="five-pillars-guide__resource"'),
+                len(routes),
+            )
+            self.assertEqual(
+                guide.count('class="five-pillars-guide__resource-number"'),
                 len(routes),
             )
 
