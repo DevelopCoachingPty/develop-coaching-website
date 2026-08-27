@@ -13,6 +13,11 @@ const pageDescription = 'Watch builders and construction business owners share h
 const featuredClientId = 'D-M9a1i4PQU';
 const clientWinOrder = [
   'D-M9a1i4PQU',
+  'ecKFCE1r-18',
+  'B5ZTJu97_Gs',
+  'in8bRqFRC0I',
+  'i0p_SEU2xpg',
+  '9J1c94plNRE',
   'Kfx-SeLmNig',
   '9i31Jk89THQ',
   'H1eWYQjMaFA',
@@ -92,7 +97,7 @@ function pageMarkup(items) {
         </button>
         <div class="cw-featured__copy">
           <p class="cw-kicker">Featured story</p>
-          <h2 id="featured-story-title">James reports annual revenue grew from £1.5m to £2m, with a £4m forecast.</h2>
+          <h2 id="featured-story-title">James reports annual revenue grew from £1.5m, with a £4m forecast.</h2>
           <p>His story focuses on stronger structure and adding property development to the group.</p>
         </div>
       </aside>
@@ -230,7 +235,7 @@ function renderClientWins(options = {}) {
   const css = fs.readFileSync(cssPath, 'utf8').trim();
   let html = fs.readFileSync(pagePath, 'utf8');
 
-  if (sourceItems.length !== 20) throw new Error(`Expected 20 client stories, found ${sourceItems.length}`);
+  if (sourceItems.length !== 25) throw new Error(`Expected 25 client stories, found ${sourceItems.length}`);
   const uniqueIds = new Set(sourceItems.map((item) => item.id));
   if (uniqueIds.size !== sourceItems.length) throw new Error('Client story video IDs must be unique');
   if (clientWinOrder.length !== sourceItems.length || clientWinOrder.some((id) => !uniqueIds.has(id))) {

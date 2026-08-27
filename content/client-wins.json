@@ -219,5 +219,60 @@
     "uploadDate": "2024-12-16",
     "duration": "PT8M8S",
     "durationLabel": "8:08"
+  },
+  {
+    "id": "ecKFCE1r-18",
+    "name": "Marek",
+    "title": "Develop Coaching Client Testimonial - Marek",
+    "context": "Construction business owner",
+    "summary": "Marek reports turnover of just over £1 million before joining, then doubling within a year, alongside improvements to operations, marketing and the use of AI.",
+    "focus": "Turnover and operations",
+    "uploadDate": "2026-08-03",
+    "duration": "PT2M28S",
+    "durationLabel": "2:28"
+  },
+  {
+    "id": "B5ZTJu97_Gs",
+    "name": "Robert McGill",
+    "title": "Develop Coaching Client Testimonial - Robert",
+    "context": "Construction business owner",
+    "summary": "Robert says clearer strategies reduced the overwhelm of long hours, while tighter commercial systems improved project profitability and the business's financial performance.",
+    "focus": "Profit and control",
+    "uploadDate": "2026-08-03",
+    "duration": "PT2M37S",
+    "durationLabel": "2:37"
+  },
+  {
+    "id": "in8bRqFRC0I",
+    "name": "Rachel Moors",
+    "title": "Develop Coaching Client Testimonial - Rachel",
+    "context": "Construction business owner",
+    "summary": "Rachel describes moving from a chaotic business with few systems towards greater consistency, time and cost savings, better profit and stronger turnover.",
+    "focus": "Systems and consistency",
+    "uploadDate": "2026-08-03",
+    "duration": "PT1M50S",
+    "durationLabel": "1:50"
+  },
+  {
+    "id": "i0p_SEU2xpg",
+    "name": "Jordan Stubley",
+    "title": "Develop Coaching Client Testimonial - Jordan",
+    "context": "JTS, construction business",
+    "summary": "Jordan says better systems, CRM processes and lead handling improved day-to-day organisation and saved the team hours of work.",
+    "focus": "Systems and time",
+    "uploadDate": "2026-08-03",
+    "duration": "PT1M18S",
+    "durationLabel": "1:18"
+  },
+  {
+    "id": "9J1c94plNRE",
+    "name": "Paul Murphy",
+    "title": "Develop Coaching Testimonial - Paul Murphy",
+    "context": "MPD, family-run construction business",
+    "summary": "Paul says stronger structure and organisation helped the family-run business present itself more professionally, while the member community made business problems easier to solve.",
+    "focus": "Structure and community",
+    "uploadDate": "2026-08-03",
+    "duration": "PT1M26S",
+    "durationLabel": "1:26"
   }
 ]

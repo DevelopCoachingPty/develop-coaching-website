@@ -40,15 +40,20 @@ class ClientWinsRebuildTests(unittest.TestCase):
         self.assertEqual(1, len(re.findall(r"<h1\b", self.html, re.IGNORECASE)))
         self.assertIn("Construction Business Coaching Results | Develop Coaching", self.html)
         self.assertIn("builders and construction business owners share", self.html)
+        self.assertIn(
+            "James reports annual revenue grew from £1.5m, with a £4m forecast.",
+            self.html,
+        )
+        self.assertNotIn("£1.5m to £2m", self.html)
 
-    def test_exactly_twenty_visible_source_linked_cards(self):
+    def test_exactly_twenty_five_visible_source_linked_cards(self):
         self.assertEqual(
-            20,
+            25,
             len(re.findall(r"<article\b[^>]*\bdata-client-win(?:\s|>)", self.html)),
         )
-        self.assertEqual(20, self.html.count('class="cw-docket__source"'))
-        self.assertEqual(21, self.html.count("data-video-play="))
-        self.assertEqual(21, self.html.count("client story\">"))
+        self.assertEqual(25, self.html.count('class="cw-docket__source"'))
+        self.assertEqual(26, self.html.count("data-video-play="))
+        self.assertEqual(26, self.html.count("client story\">"))
 
     def test_visible_and_schema_video_ids_match_approved_data(self):
         approved = {item["id"] for item in self.data}
@@ -57,15 +62,15 @@ class ClientWinsRebuildTests(unittest.TestCase):
             re.search(r"(?:embed/|v=)([A-Za-z0-9_-]+)", item["embedUrl"]).group(1)
             for item in self.videos
         }
-        self.assertEqual(20, len(approved))
+        self.assertEqual(25, len(approved))
         self.assertEqual(approved, visible)
         self.assertEqual(approved, schema_ids)
         self.assertNotIn("XHOmBV4js_E", self.html)
 
     def test_video_schema_is_complete_unique_and_source_safe(self):
-        self.assertEqual(20, len(self.videos))
+        self.assertEqual(25, len(self.videos))
         names = [item.get("name") for item in self.videos]
-        self.assertEqual(20, len(set(names)))
+        self.assertEqual(25, len(set(names)))
         self.assertEqual({item["title"] for item in self.data}, set(names))
         required = (
             "name",
@@ -138,8 +143,17 @@ class ClientWinsRebuildTests(unittest.TestCase):
             "9i31Jk89THQ",
             "H1eWYQjMaFA",
             "Kfx-SeLmNig",
+            "ecKFCE1r-18",
+            "in8bRqFRC0I",
         }
-        attribution_terms = ("report", "says", "recounts", "shares", "credits")
+        attribution_terms = (
+            "report",
+            "says",
+            "recounts",
+            "shares",
+            "credits",
+            "describes",
+        )
         for item in self.data:
             if item["id"] in numerical_ids:
                 summary = item["summary"].lower()
@@ -159,12 +173,13 @@ class ClientWinsRebuildTests(unittest.TestCase):
         self.assertEqual(
             [
                 "D-M9a1i4PQU",
-                "Kfx-SeLmNig",
-                "9i31Jk89THQ",
-                "H1eWYQjMaFA",
-                "1C2yT_tP-Aw",
+                "ecKFCE1r-18",
+                "B5ZTJu97_Gs",
+                "in8bRqFRC0I",
+                "i0p_SEU2xpg",
+                "9J1c94plNRE",
             ],
-            visible_order[:5],
+            visible_order[:6],
         )
         featured = re.search(
             r'class="cw-featured__video"[^>]*data-video-play="([A-Za-z0-9_-]+)"',
@@ -201,8 +216,8 @@ class ClientWinsRebuildTests(unittest.TestCase):
             "/schedule-a-call/",
         ):
             self.assertIn(f'href="{href}"', self.html)
-        self.assertEqual(21, len(re.findall(r'aria-label="Play [^"]+ client story"', self.html)))
-        self.assertEqual(20, len(re.findall(r'alt="[^"]+ sharing their construction business experience"', self.html)))
+        self.assertEqual(26, len(re.findall(r'aria-label="Play [^"]+ client story"', self.html)))
+        self.assertEqual(25, len(re.findall(r'alt="[^"]+ sharing their construction business experience"', self.html)))
         self.assertIn("youtube-nocookie.com/embed/", self.html)
         self.assertIn("@media (prefers-reduced-motion: reduce)", self.html)
 
