@@ -40,6 +40,11 @@ class ClientWinsRebuildTests(unittest.TestCase):
         self.assertEqual(1, len(re.findall(r"<h1\b", self.html, re.IGNORECASE)))
         self.assertIn("Construction Business Coaching Results | Develop Coaching", self.html)
         self.assertIn("builders and construction business owners share", self.html)
+        self.assertIn(
+            "James reports annual revenue grew from £1.5m, with a £4m forecast.",
+            self.html,
+        )
+        self.assertNotIn("£1.5m to £2m", self.html)
 
     def test_exactly_twenty_five_visible_source_linked_cards(self):
         self.assertEqual(
