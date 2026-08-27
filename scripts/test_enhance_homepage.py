@@ -119,7 +119,7 @@ class HomepageEnhancerTests(unittest.TestCase):
         self.assertIn(":focus-visible", document)
         self.assertIn("prefers-reduced-motion:reduce", document)
         self.assertIn("@media(max-width:600px)", document)
-        self.assertIn("overflow:hidden", document)
+        self.assertIn("overflow:clip", document)
         self.assertIn('aria-label="Explore the Five Pillars"', document)
         self.assertIn('alt="Greg Wilkes discussing a construction business plan', document)
 

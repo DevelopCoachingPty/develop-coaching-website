@@ -43,7 +43,7 @@ FAQS = [
 ]
 
 STYLES = r'''<style id="dc-homepage-control-board-styles">
-.dc-home{--dc-ink:#25262a;--dc-yellow:#f6c944;--dc-blue:#0069b1;--dc-paper:#f5f3ec;--dc-white:#fff;--dc-orange:#f5a623;overflow:hidden;background:var(--dc-white);color:var(--dc-ink);font-family:"Source Sans Pro","Helvetica Neue",Arial,sans-serif}
+.dc-home{--dc-ink:#25262a;--dc-yellow:#f6c944;--dc-blue:#0069b1;--dc-paper:#f5f3ec;--dc-white:#fff;--dc-orange:#f5a623;overflow:clip;background:var(--dc-white);color:var(--dc-ink);font-family:"Source Sans Pro","Helvetica Neue",Arial,sans-serif}
 .dc-home,.dc-home *{box-sizing:border-box}
 .dc-home a:focus-visible,.dc-home summary:focus-visible{outline:4px solid var(--dc-yellow);outline-offset:4px}
 .dc-home__wrap{width:min(calc(100% - 48px),1180px);margin-inline:auto}
