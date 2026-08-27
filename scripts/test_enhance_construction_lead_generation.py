@@ -107,6 +107,19 @@ class ConstructionLeadGenerationTests(unittest.TestCase):
         twice = lead_enhancer.transform(once)
         self.assertEqual(once, twice)
 
+    def test_transform_collapses_legacy_and_new_briefing_copies(self):
+        duplicated = load().replace(
+            "<h2>Conclusion</h2>",
+            lead_enhancer.SECTION + "\n<h2>Conclusion</h2>",
+            1,
+        )
+        transformed = lead_enhancer.transform(duplicated)
+        self.assertEqual(transformed.count('id="dc-lead-quality-briefing"'), 1)
+        self.assertLess(
+            transformed.index('id="dc-lead-quality-briefing"'),
+            transformed.index("Identify and Target Your Ideal Client"),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

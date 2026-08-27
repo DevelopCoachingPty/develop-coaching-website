@@ -234,7 +234,7 @@ def transform(document: str) -> str:
     section_pattern = re.compile(
         rf'<section class="dc-lead-brief" id="{MARKER}"[\s\S]*?</section>(?:\r?\n)*'
     )
-    document = section_pattern.sub("", document, count=1)
+    document = section_pattern.sub("", document)
     first_guide_heading = '<h2 dir="ltr">Identify and Target Your Ideal Client</h2>'
     if first_guide_heading not in document:
         raise ValueError("First guide heading not found")
