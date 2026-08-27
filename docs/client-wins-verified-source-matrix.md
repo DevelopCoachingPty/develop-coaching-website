@@ -11,7 +11,7 @@ Purpose: source-safe rebuild of `/client-wins/`. A statement marked verified mea
 - Do not present edited summaries inside quotation marks.
 - Do not publish surnames, company names, dates or figures unless the source below confirms them.
 
-## Twenty-video matrix
+## Twenty-five-video matrix
 
 | # | Video source | Verified identity and context | Current card status | Safe content decision |
 |---|---|---|---|---|
@@ -35,12 +35,17 @@ Purpose: source-safe rebuild of `/client-wins/`. A statement marked verified mea
 | 18 | [Stephen and Salina - Case Study](https://youtu.be/H1eWYQjMaFA), 2024-04-30, 2:19 | Stephen and Salina. Construction business owners. | Correct video and exact closing statement. | Use first names only. If figures are used, attribute their reported starting turnover and £1.4 million trajectory to them. |
 | 19 | [Valy Stan - Case Study](https://youtu.be/4w0XjmkgUx0), 2024-04-30, 2:14 | Valy Stan. Construction business owner. | Correct video. Current copy closely follows the transcript. | Use his public name. His time, delegation, earnings and stress statements remain personal reported outcomes, not guarantees. |
 | 20 | [Will Testimonial](https://youtu.be/Kfx-SeLmNig), 2024-12-16, 8:08 | Will. Bricklaying contractor with a team he describes as about 50 people. Surname and company are not confirmed. | Correct video, but the displayed statement is synthesized and should not appear as a direct quote. | Use a clearly attributed summary: Will describes £1.5 million turnover with roughly 2% profitability, effectively break-even, before adding office support, systems and project-level tracking. |
+| 21 | [Develop Coaching Client Testimonial - Marek](https://youtu.be/ecKFCE1r-18), 2026-08-03, 2:28 | Marek. Construction business owner. Final edited file supplied by Chloe with question cards, cleaned audio and burned captions. | New Summit testimonial. | Attribute the reported turnover of just over £1 million and subsequent doubling within a year directly to Marek. Summarise the operations, marketing and AI improvements as his experience. |
+| 22 | [Develop Coaching Client Testimonial - Robert](https://youtu.be/B5ZTJu97_Gs), 2026-08-03, 2:37 | Robert McGill. Construction business owner. Final edited file supplied by Chloe with question cards, cleaned audio and burned captions. | New Summit testimonial. | Summarise reduced overwhelm, clearer strategies, tighter commercial systems and improved project profitability as Robert's reported experience. |
+| 23 | [Develop Coaching Client Testimonial - Rachel](https://youtu.be/in8bRqFRC0I), 2026-08-03, 1:50 | Rachel Moors. Construction business owner. Final edited file supplied by Chloe with question cards, cleaned audio and burned captions. | New Summit testimonial. | Summarise the move from chaos and few systems towards consistency, time and cost savings, better profit and stronger turnover as Rachel's reported experience. |
+| 24 | [Develop Coaching Client Testimonial - Jordan](https://youtu.be/i0p_SEU2xpg), 2026-08-03, 1:18 | Jordan Stubley, JTS. Final edited file supplied by Chloe with question cards, cleaned audio and burned captions. | New Summit testimonial. | Summarise the CRM, lead handling and organisation changes, including Jordan's statement that the team saved hours of work. Do not expand JTS without a confirmed source. |
+| 25 | [Develop Coaching Testimonial - Paul Murphy](https://youtu.be/9J1c94plNRE), 2026-08-03, 1:26 | Paul Murphy, MPD. Family-run construction business. Final edited file supplied by Chloe with question cards, cleaned audio and burned captions. | New Summit testimonial. Chloe's Slack message records that Greg had already approved Paul. | Summarise stronger structure, organisation, professional presentation and the value of the member community. Do not expand MPD without a confirmed source. |
 
 ## Confirmed corrections before page or schema work
 
 1. Replace the mismatched card copy on Dominic, James Overton, and Mike and Nick.
 2. Convert paraphrased card copy to visible attributed summaries, reserving quotation marks for transcript-exact wording.
-3. Build 20 matching `VideoObject` entries using the verified YouTube title, upload date, duration, thumbnail and embed URL. Remove stale video `XHOmBV4js_E`.
+3. Build 25 matching `VideoObject` entries using the verified YouTube title, upload date, duration, thumbnail and embed URL. Remove stale video `XHOmBV4js_E`.
 4. Add visible identity, business context, source link and a client-reported qualifier beside every numerical outcome.
 5. Keep Brad, George, Richard, Lukas, Sophie and Neil, Stephen and Ashley, and Stephen and Salina to the publicly confirmed names shown above until stronger source evidence exists.
 
