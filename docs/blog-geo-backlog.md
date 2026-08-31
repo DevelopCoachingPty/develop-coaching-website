@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 49 &nbsp;&nbsp; **Score recoverable:** 442 points
+**Articles affected:** 46 &nbsp;&nbsp; **Score recoverable:** 424 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 49 &nbsp;&nbsp; **Score recoverable:** 425 points
+**Articles affected:** 48 &nbsp;&nbsp; **Score recoverable:** 415 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -92,7 +92,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 9. Remove em dashes from article body copy
 
-**Articles affected:** 20 &nbsp;&nbsp; **Score recoverable:** 80 points
+**Articles affected:** 18 &nbsp;&nbsp; **Score recoverable:** 72 points
 
 22 articles carry em dashes, 121 in total, against the house style rule. Low search impact, but it is a visible inconsistency on pages being reviewed for exactly that.
 
@@ -100,7 +100,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 10. Add a lead image with real alt text where one is missing
 
-**Articles affected:** 20 &nbsp;&nbsp; **Score recoverable:** 60 points
+**Articles affected:** 18 &nbsp;&nbsp; **Score recoverable:** 54 points
 
 21 articles have no image in the body at all. Others carry alt text that repeats the file name. The design puts a full width image directly under the answer, so an article without one cannot meet the standard.
 

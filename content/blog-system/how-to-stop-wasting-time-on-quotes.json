@@ -1,0 +1,64 @@
+{
+  "slug": "how-to-stop-wasting-time-on-quotes",
+  "pillar": "Convert",
+  "title": "How to Stop Wasting Time on Quotes",
+  "meta_description": "How to stop wasting time on quotes: standardise the request, use the right tools, set response standards, and evaluate every quote the same way.",
+  "h1": "How to Stop Wasting Time on Quotes",
+  "hero_subtitle": "A practical guide to getting your estimating hours back without losing work.",
+  "intro": {
+    "answer": "Construction professionals spend around 15 hours a week preparing quotes. That is almost two full working days, and most of it is spent on requests that were never going to convert.",
+    "image": {
+      "src": "/wp-content/uploads/2019/06/Wasting-time-on-quotes.webp",
+      "alt": "A builder buried in paperwork preparing construction quotes",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers four changes: streamlining how quote requests arrive, using technology to manage them, setting communication standards so the back and forth stops, and evaluating quotes with a method rather than a feeling."
+  },
+  "briefing": {
+    "eyebrow": "Estimating site briefing",
+    "title": "Fix the Request, Not the Estimate",
+    "intro": "Most quoting time is lost before any estimating begins. The details arrive incomplete, the client changes their mind, and the same information gets chased three times over email. Standardise what comes in and the work downstream shrinks on its own.",
+    "panels": [
+      {
+        "heading": "Why does quoting take so long?",
+        "paragraphs": [
+          "Because every request is different. Endless back and forth emails, project details that go missing, and customers who keep changing their minds all add hours that never appear on a job sheet.",
+          "That time could win new projects or manage current ones. Instead it disappears into paperwork, and none of it is billable."
+        ]
+      },
+      {
+        "heading": "Four changes that give the hours back",
+        "paragraphs": [
+          "Start with the first one. It removes most of the cause rather than managing the symptom."
+        ],
+        "steps": [
+          "Standardise the quote request form, so the same information arrives every time.",
+          "Set realistic deadlines, and clear requirements up front.",
+          "Use quote management software and templates rather than starting from a blank page.",
+          "Set response time standards so following up is a routine, not a chase."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth measuring",
+      "text": "Track hours spent quoting against work won. If a category of enquiry consistently costs more estimating time than it returns, that is a qualification decision waiting to be made."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "heading_rewrites": {
+    "Streamline Your Quote Request Process": "How do you streamline the quote request process?"
+  },
+  "brief_before_heading": "How do you streamline the quote request process?",
+  "intro_replaces_paragraphs": 4,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "src=\"/wp-content/uploads/2024/08/Rectangle-175.webp\" alt=\"\"",
+      "replace": "src=\"/wp-content/uploads/2024/08/Rectangle-175.webp\" alt=\"A construction quote being prepared on screen\""
+    }
+  ]
+}

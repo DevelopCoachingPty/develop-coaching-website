@@ -56,5 +56,11 @@
   "intro_replaces_paragraphs": 3,
   "date_modified": "2026-08-31T00:00:00+10:00",
   "fix_canonical": true,
-  "canonical_was": "https://develop-coaching.com/blog/how-to-use-social-media-for-your-construction-business-in-2023/ (returns 404)"
+  "canonical_was": "https://develop-coaching.com/blog/how-to-use-social-media-for-your-construction-business-in-2023/ (returns 404)",
+  "text_replacements": [
+    {
+      "find": "src=\"/wp-content/uploads/2022/05/DP-Social-media-scaled-1-1024x684.jpg\" alt=\"\"",
+      "replace": "src=\"/wp-content/uploads/2022/05/DP-Social-media-scaled-1-1024x684.jpg\" alt=\"Social media platforms used by a construction business\""
+    }
+  ]
 }

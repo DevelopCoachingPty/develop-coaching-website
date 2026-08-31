@@ -53,7 +53,7 @@
 | [social-media-construction-industry](https://develop-coaching.com/social-media-construction-industry/) | 63 | 1392 | 6 | Rewrite first | Audit | no-intro-paragraph, em-dashes-7 | schema-headline-drift, no-pillar-link |
 | [how-to-get-good-reviews](https://develop-coaching.com/how-to-get-good-reviews/) | 64 | 1886 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [digital-marketing-construction](https://develop-coaching.com/digital-marketing-construction/) | 69 | 1223 | 5 | Design only | Audit | meta-88ch | schema-headline-drift, no-pillar-link |
-| [how-to-use-social-media-for-construction-business](https://develop-coaching.com/how-to-use-social-media-for-construction-business/) | 86 | 1052 | 6 | Design only | Audit | alt-missing-1 | none |
+| [how-to-use-social-media-for-construction-business](https://develop-coaching.com/how-to-use-social-media-for-construction-business/) | 89 | 1052 | 6 | Design only | Audit | none | none |
 | [construction-brand](https://develop-coaching.com/construction-brand/) | 92 | 1918 | 5 | Design only | Audit | none | none |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 93 | 1165 | 4 | Design only | Audit | none | none |
 | [construction-marketing-ideas-to-scale-your-1m-business-to-5m](https://develop-coaching.com/construction-marketing-ideas-to-scale-your-1m-business-to-5m/) | 95 | 2233 | 6 | Design only | Audit | none | none |
@@ -69,9 +69,9 @@
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [how-to-stop-wasting-time-on-quotes](https://develop-coaching.com/how-to-stop-wasting-time-on-quotes/) | 74 | 1306 | 5 | Design only | Audit | alt-missing-1 | schema-headline-drift, no-pillar-link |
-| [construction-contracts](https://develop-coaching.com/construction-contracts/) | 79 | 1422 | 7 | Design only | Audit | em-dashes-12 | schema-headline-drift, no-pillar-link |
-| [construction-tendering](https://develop-coaching.com/construction-tendering/) | 79 | 1502 | 7 | Design only | Audit | meta-55ch, em-dashes-10 | schema-headline-drift, no-pillar-link |
+| [construction-contracts](https://develop-coaching.com/construction-contracts/) | 96 | 1638 | 8 | Design only | Audit | none | none |
+| [construction-tendering](https://develop-coaching.com/construction-tendering/) | 96 | 1708 | 8 | Design only | Audit | none | none |
+| [how-to-stop-wasting-time-on-quotes](https://develop-coaching.com/how-to-stop-wasting-time-on-quotes/) | 96 | 1439 | 6 | Design only | Audit | none | none |
 | [construction-job-pricing](https://develop-coaching.com/construction-job-pricing/) **[batch 1]** | 100 | 1688 | 7 | Design only | Audit | none | none |
 | [construction-sales-funnel](https://develop-coaching.com/construction-sales-funnel/) **[batch 1]** | 100 | 2368 | 10 | Design only | Audit | none | none |
 
