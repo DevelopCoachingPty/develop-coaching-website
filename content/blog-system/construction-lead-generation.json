@@ -1,0 +1,55 @@
+{
+  "slug": "construction-lead-generation",
+  "pillar": "Attract",
+  "title": "Construction Lead Generation: Attract Better Enquiries",
+  "meta_description": "Learn how construction companies can attract better-fit enquiries, reduce reliance on referrals and track leads through to qualified opportunities.",
+  "h1": "Construction Lead Generation: Attract Better Enquiries",
+  "hero_subtitle": "A practical guide to building a steadier pipeline of suitable construction enquiries.",
+  "intro": {
+    "answer": "Construction lead generation is not just about creating more enquiries. The useful measure is whether the right prospects enter a repeatable sales pipeline.",
+    "image": {
+      "src": "/wp-content/uploads/2024/04/construction-lead-generation.webp",
+      "alt": "A construction business owner reviewing where its enquiries are coming from",
+      "width": 940,
+      "height": 788
+    },
+    "roadmap": "This guide explains how to define your ideal client, use practical marketing systems, respond consistently, reduce reliance on referrals and track each enquiry through to a qualified opportunity."
+  },
+  "briefing": {
+    "eyebrow": "Lead pipeline site briefing",
+    "title": "Reduce Reliance on Referrals and Track Better Leads",
+    "intro": "Referrals are valuable, but they are difficult to predict. If most new work depends on one relationship or word of mouth alone, your pipeline can slow without warning. The aim is not to stop referrals. It is to support them with a repeatable mix of lead sources that you can control and measure.",
+    "panels": [
+      {
+        "heading": "How can a construction company reduce reliance on referrals?",
+        "paragraphs": [
+          "Review where your enquiries came from over the last six to twelve months. Group them by source, such as past clients, professional partners, organic search, paid campaigns, social media and direct outreach.",
+          "If one source supplies most of the pipeline, build one additional channel that reaches your ideal client. Give it a clear owner, a consistent activity and a follow-up process before adding more channels."
+        ]
+      },
+      {
+        "heading": "Track the route from enquiry to qualified opportunity",
+        "paragraphs": [
+          "A lead becomes a qualified opportunity when the project fits your services, location, likely budget and timing, and you can reach the person involved in the decision."
+        ],
+        "steps": [
+          "Record the lead source and date received.",
+          "Log the first response and whether contact was made.",
+          "Mark the enquiry as qualified or not qualified, with a reason.",
+          "Track the consultation or site visit, proposal, and final result."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review weekly",
+      "text": "Compare enquiries, qualified opportunities, response time, proposals, wins and lost reasons by source. Lead volume alone does not show which marketing produces suitable work."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "brief_before_heading": "Identify and Target Your Ideal Client",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

@@ -390,34 +390,99 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 
 </style>
 <style id="dc-article-system-styles">
-.dc-article-hero-subtitle{max-width:680px;margin:16px 0 0!important;color:#fff;font-size:clamp(17px,2vw,22px)!important;font-weight:600;line-height:1.45;text-shadow:0 2px 4px rgba(0,0,0,.35)}
-.dc-article-intro{margin:0 0 38px}
-.dc-article-intro__answer{margin:0 0 24px!important;padding:18px 22px;border-left:6px solid #f6c944;background:#f5f3ec;color:#25262a;font-size:20px;font-weight:700;line-height:1.5}
-.dc-article-intro img{display:block;width:100%;height:auto;margin:0 0 24px}
-.dc-article-intro__roadmap{margin:0!important;font-size:18px;line-height:1.65}
-.dc-article-brief{--ink:#25262a;--paper:#f5f3ec;--signal:#f6c944;--blue:#087f86;margin:56px 0;padding:0;background:var(--paper);border:1px solid #d9d5c9;box-shadow:8px 8px 0 var(--ink);color:var(--ink);overflow:hidden}
+/* Develop Coaching article system.
+   Set in Source Sans Pro, the face the site already loads. The weight comes
+   from scale, spacing and restraint rather than from ornament. */
+.dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/* Article prose.
+   The column runs 796px wide and the theme sets 20px text on a 1.4 line, which
+   is about 80 characters a line and too tight to read comfortably at length.
+   Headings came in at weight 500 with 8px of space above them, so sections did
+   not separate, and h3 was smaller than the body text it sat above. This fixes
+   the measure, the rhythm and the hierarchy. Images and the design blocks keep
+   the full column width. */
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol,.dc-prose > h2,.dc-prose > h3,.dc-prose > h4,.dc-prose > blockquote{max-width:66ch}
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol{margin-bottom:20px!important;color:#424142;font-size:19px!important;line-height:1.66!important;text-wrap:pretty}
+.dc-prose > h2{margin:52px 0 16px!important;color:#25262a!important;font-size:clamp(26px,2.6vw,33px)!important;font-weight:700!important;line-height:1.16!important;letter-spacing:-.022em;text-wrap:balance}
+.dc-prose > h3{margin:34px 0 10px!important;color:#25262a!important;font-size:22px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.015em;text-wrap:balance}
+.dc-prose > h4{margin:26px 0 8px!important;color:#25262a!important;font-size:19px!important;font-weight:700!important}
+.dc-prose > ul,.dc-prose > ol{padding-left:24px!important}
+.dc-prose > ul > li,.dc-prose > ol > li{margin:0 0 10px!important;padding-left:4px;line-height:1.66}
+.dc-prose > ul > li::marker{color:#2C67AC}
+.dc-prose > ol > li::marker{color:#2C67AC;font-weight:700}
+.dc-prose > figure{margin:30px 0}
+.dc-prose > figure img,.dc-prose > p > img{display:block;width:100%;height:auto}
+.dc-prose > h2 + p,.dc-prose > h3 + p{margin-top:0!important}
+@media(max-width:600px){
+  .dc-prose > p,.dc-prose > ul,.dc-prose > ol{font-size:17.5px!important;line-height:1.62!important}
+  .dc-prose > h2{margin:38px 0 12px!important}
+  .dc-prose > h3{margin:26px 0 8px!important}
+}
+
+/* In-article links. The Hello theme default is a magenta that appears nowhere
+   in the brand, so links inside article prose take the kit's secondary blue. */
+.elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.elementor-widget-theme-post-content p a:not([class]):hover,.elementor-widget-theme-post-content li a:not([class]):hover{color:#25262a}
+.elementor-widget-theme-post-content p a:not([class]):focus-visible,.elementor-widget-theme-post-content li a:not([class]):focus-visible{outline:3px solid #2C67AC;outline-offset:2px}
+
+/* Opening. A standfirst, not a warning callout. */
+.dc-article-intro{--ink:#25262a;--quiet:#424142;--signal:#FDCE36;margin:0 0 44px}
+.dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
+.dc-article-intro__answer:before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--signal)}
+.dc-article-intro img{display:block;width:100%;height:auto;margin:0 0 26px}
+.dc-article-intro__roadmap{margin:0!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important;max-width:64ch}
+
+/* Briefing. A site notice: dark head, quiet body, hairline divisions. */
+.dc-article-brief{--ink:#25262a;--paper:#F6F5F2;--edge:#E4E2DC;--rule:#D6D3CB;--quiet:#424142;--signal:#FDCE36;--blue:#2C67AC;
+  margin:52px 0;background:var(--paper);border:1px solid var(--edge);color:var(--ink);overflow:hidden}
 .dc-article-brief *{box-sizing:border-box}
-.dc-article-brief__header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;padding:32px;background:var(--ink);color:#fff;border-bottom:8px solid var(--signal)}
-.dc-article-brief__eyebrow{margin:0 0 10px!important;color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px!important;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(30px,4vw,48px)!important;line-height:1.02!important;letter-spacing:-.03em}
-.dc-article-brief__stamp{min-width:140px;padding:12px 16px;border:2px solid var(--signal);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.1em;text-align:center;text-transform:uppercase;transform:rotate(2deg)}
-.dc-article-brief__body{padding:32px}
-.dc-article-brief__intro{max-width:760px;margin:0 0 30px!important;font-size:18px;line-height:1.65}
-.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
-.dc-article-brief__panel{padding:24px;background:#fff;border-top:5px solid var(--blue)}
-.dc-article-brief__panel h3{margin:0 0 12px!important;color:var(--ink)!important;font-size:24px!important;line-height:1.15!important}
-.dc-article-brief__panel p{margin:0 0 16px!important}
+.dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
+.dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
+.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(253,206,54,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__body{padding:30px}
+.dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
+
+/* Panels divided by a hairline, not boxed as cards. */
+.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.dc-article-brief__panel{padding:0 30px 0 0;background:none;border:0}
+.dc-article-brief__panel + .dc-article-brief__panel{padding:0 0 0 30px;border-left:1px solid var(--rule)}
+.dc-article-brief__panel h3{position:relative;margin:0 0 14px!important;padding-top:16px;color:var(--ink)!important;font-size:19px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.012em}
+.dc-article-brief__panel h3:before{content:"";position:absolute;top:0;left:0;width:26px;height:3px;background:var(--blue)}
+.dc-article-brief__panel p{margin:0 0 14px!important;color:var(--quiet)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
 .dc-article-brief__panel p:last-child{margin-bottom:0!important}
-.dc-article-brief__steps{margin:18px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
-.dc-article-brief__steps li{position:relative;margin:0!important;padding:0 0 18px 42px;counter-increment:dc-step}
-.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-2px;width:28px;height:28px;display:grid;place-items:center;background:var(--signal);border:2px solid var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:900}
-.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:13px;top:28px;bottom:0;border-left:2px dashed var(--blue)}
-.dc-article-brief__review{margin:24px 0 0;padding:20px 24px;background:var(--signal);border-left:8px solid var(--ink)}
-.dc-article-brief__review strong{display:block;margin-bottom:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.dc-article-brief__link{display:inline-block;margin-top:22px;padding:13px 17px;background:var(--ink);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:4px 4px 0 var(--blue)}
-.dc-article-brief__link:hover,.dc-article-brief__link:focus-visible{background:var(--blue)}
-.dc-article-brief__link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-@media(max-width:767px){.dc-article-hero-subtitle{font-size:16px!important}.dc-article-intro__answer{padding:16px 18px;font-size:18px}.dc-article-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-article-brief__header{grid-template-columns:1fr;padding:24px}.dc-article-brief__stamp{justify-self:start;min-width:0}.dc-article-brief__body{padding:20px}.dc-article-brief__grid{grid-template-columns:1fr}.dc-article-brief__panel{padding:20px}}
+
+/* Steps. Quiet numerals on a fine spine. */
+.dc-article-brief__steps{margin:20px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
+.dc-article-brief__steps li{position:relative;margin:0!important;padding:1px 0 20px 40px;color:var(--quiet);font-size:15.5px;line-height:1.62;counter-increment:dc-step}
+.dc-article-brief__steps li:last-child{padding-bottom:0}
+.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-1px;width:25px;height:25px;display:grid;place-items:center;border:1.5px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700}
+.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:12px;top:29px;bottom:6px;border-left:1px solid var(--rule)}
+
+/* Closing note and action. */
+.dc-article-brief__review{margin:30px 0 0!important;padding:20px 24px!important;background:#EDEBE4;border-left:3px solid var(--signal);color:var(--ink)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
+.dc-article-brief__review strong{display:block;margin-bottom:6px;color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.dc-article-brief__link{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:14px 22px;background:var(--ink);border:0;color:#fff!important;font-size:15px;font-weight:700;letter-spacing:.005em;text-decoration:none!important;transition:background .18s ease,gap .18s ease}
+.dc-article-brief__link:after{content:"→";font-size:17px;line-height:1}
+.dc-article-brief__link:hover{background:var(--blue);gap:14px}
+.dc-article-brief__link:focus-visible{background:var(--blue);outline:3px solid var(--ink);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.dc-article-brief__link{transition:none}}
+
+@media(max-width:1100px){
+  .dc-article-brief__grid{grid-template-columns:1fr}
+  .dc-article-brief__panel{padding:0 0 26px!important}
+  .dc-article-brief__panel + .dc-article-brief__panel{padding:26px 0 0!important;border-left:0;border-top:1px solid var(--rule)}
+}
+@media(max-width:600px){
+  .dc-article-hero-subtitle{font-size:16px!important}
+  .dc-article-intro{margin-bottom:34px}
+  .dc-article-intro__answer{padding-top:22px!important}
+  .dc-article-brief{margin:38px 0}
+  .dc-article-brief__header{padding:22px 20px 20px}
+  .dc-article-brief__body{padding:22px 20px}
+  .dc-article-brief__review{padding:18px 20px!important}
+}
 </style>
 </head>
 <body class="wp-singular post-template-default single single-post postid-3142 single-format-standard wp-custom-logo wp-theme-hello-elementor elementor-default elementor-kit-4211 elementor-page elementor-page-3142 elementor-page-4666 category-plan">
@@ -542,7 +607,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="elementor-element elementor-element-63e5fdb e-flex e-con-boxed e-con e-parent" data-id="63e5fdb" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-bf2a0f3 e-con-full e-flex e-con e-child" data-id="bf2a0f3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-7f727a1 elementor-widget elementor-widget-theme-post-content" data-id="7f727a1" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+				<div class="dc-prose elementor-element elementor-element-7f727a1 elementor-widget elementor-widget-theme-post-content" data-id="7f727a1" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
 							<div data-elementor-type="wp-post" data-elementor-id="3142" class="elementor elementor-3142" data-elementor-post-type="post">
 				<div class="elementor-element elementor-element-7fb8e8b9 e-flex e-con-boxed e-con e-parent" data-id="7fb8e8b9" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 					<div class="e-con-inner">
@@ -558,11 +623,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <section class="dc-article-brief" id="dc-article-brief" aria-labelledby="dc-article-brief-title">
   <header class="dc-article-brief__header">
-    <div>
-      <p class="dc-article-brief__eyebrow">Positioning site briefing</p>
-      <h2 id="dc-article-brief-title">Find the Answer to Why Choose Us</h2>
-    </div>
-    <div class="dc-article-brief__stamp">Plan pillar</div>
+    <p class="dc-article-brief__eyebrow">Positioning site briefing</p>
+    <h2 id="dc-article-brief-title">Find the Answer to Why Choose Us</h2>
+    <p class="dc-article-brief__stamp">Plan pillar</p>
   </header>
   <div class="dc-article-brief__body">
     <p class="dc-article-brief__intro">Most construction businesses answer why choose us with things every competitor also claims: quality, reliability, experience. A USP only works when a competitor could not honestly say the same sentence. That is the test, and the way to find it is structured rather than creative.</p>
