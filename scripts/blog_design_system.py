@@ -704,6 +704,23 @@ def drop_dead_images(document: str) -> str:
     return document[:start] + body + document[end:]
 
 
+# One article had its markup double escaped somewhere in a WordPress migration,
+# so tags arrive as the literal text u003cstrongu003e rather than <strong>.
+# Readers see the gibberish on the page, and so does a search engine.
+ESCAPED_MARKUP = (("u003c", "<"), ("u003e", ">"), ("u0022", '"'))
+
+
+def repair_escaped_markup(document: str) -> str:
+    """Turn literally escaped tags back into markup, inside the article body."""
+    start, end = body_span(document)
+    body = document[start:end]
+    if "u003c" not in body:
+        return document
+    for broken, fixed in ESCAPED_MARKUP:
+        body = body.replace(broken, fixed)
+    return document[:start] + body + document[end:]
+
+
 def insert_headings(document: str, spec: dict) -> str:
     """Introduce H2 sections into articles that were published as flowing prose.
 
@@ -795,6 +812,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
     document = drop_dead_images(document)
+    document = repair_escaped_markup(document)
     document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)
