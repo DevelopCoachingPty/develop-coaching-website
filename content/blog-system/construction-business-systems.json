@@ -1,0 +1,56 @@
+{
+  "slug": "construction-business-systems",
+  "pillar": "Scale",
+  "title": "Construction Business Systems That Run Without You",
+  "meta_description": "How to build construction business systems that hold: set the vision, fix the communication rhythm, standardise operations, and use technology that earns its place.",
+  "h1": "Construction Business Systems That Run Without You",
+  "hero_subtitle": "A practical guide to the systems that let the work happen without you in the middle of it.",
+  "intro": {
+    "answer": "A system is not software. It is a decision made once, written down, and followed by everyone, so the business does not depend on you remembering how a thing is done.",
+    "image": {
+      "src": "/wp-content/uploads/2025/01/Business-Management.jpg",
+      "alt": "A construction business owner working through the systems that run the company",
+      "width": 1200,
+      "height": 627
+    },
+    "roadmap": "This guide covers the foundations that everything else sits on, how to streamline the operations you already run, and where technology such as project management software and a CRM genuinely helps rather than adding another thing to maintain."
+  },
+  "briefing": {
+    "eyebrow": "Systems site briefing",
+    "title": "Start With the Meeting Rhythm",
+    "intro": "Owners usually reach for software first, because it feels like progress. It rarely is. A tool laid over an unclear process just makes the confusion faster. The foundation is a written vision, plans that follow from it, and a communication rhythm the team can rely on.",
+    "panels": [
+      {
+        "heading": "What makes a construction business system actually stick?",
+        "paragraphs": [
+          "Start by defining the company's vision and mission clearly. Everything downstream, the actionable plans and the metrics you measure progress against, comes from that. Without it you are standardising activity rather than direction.",
+          "Then accept that this is not a leadership exercise. Systems only hold when the team at every level is working to them, which is a question of communication rather than documentation."
+        ]
+      },
+      {
+        "heading": "Build the rhythm in this order",
+        "paragraphs": [
+          "Regular meetings are the mechanism. Each one exists to catch something before it becomes expensive."
+        ],
+        "steps": [
+          "Write the vision and mission down, then the plans and metrics that follow from them.",
+          "Set a pre-construction meeting, so the job starts with everyone holding the same picture.",
+          "Set a project handoff meeting, so nothing depends on one person's memory.",
+          "Set a post-completion review, so the same mistake does not get made twice.",
+          "Only then choose the software, and only where it removes a step rather than adding one."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "If a process only works when you are in the room, it is not a system yet. It is a habit, and it will not survive the business getting busier."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "brief_before_heading": "Foundations of Effective Business Systems",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

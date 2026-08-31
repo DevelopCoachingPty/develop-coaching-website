@@ -1,0 +1,55 @@
+{
+  "slug": "construction-business-profits",
+  "pillar": "Plan",
+  "title": "Construction Business Profits: Find the Margin",
+  "meta_description": "How to improve construction business profits: raise productivity on site, control overheads, manage cash flow, and turn good work into repeat business.",
+  "h1": "Construction Business Profits: Find the Margin",
+  "hero_subtitle": "A practical guide to finding the margin already sitting inside the business.",
+  "intro": {
+    "answer": "Most construction businesses do not need more work to make more money. The margin is usually already there, lost across scheduling, overheads, invoicing and rework.",
+    "image": {
+      "src": "/wp-content/uploads/2023/03/shutterstock_2184658747-scaled.jpg",
+      "alt": "A construction team reviewing job costs and productivity on site",
+      "width": 1800,
+      "height": 1200
+    },
+    "roadmap": "This guide covers four places the margin goes: productivity on site, overheads that never get analysed, cash flow that is slower than it needs to be, and quality that decides whether a client ever comes back."
+  },
+  "briefing": {
+    "eyebrow": "Profitability site briefing",
+    "title": "Know What Each Job Actually Costs",
+    "intro": "You cannot improve a margin you have never measured. Most owners can name their turnover to the pound and could not tell you which contracts made money. That is the gap this briefing closes, and it comes before any of the four sections below.",
+    "panels": [
+      {
+        "heading": "How do you work out if a contract is actually profitable?",
+        "paragraphs": [
+          "Analyse job costs in full, not just labour and materials. Cover equipment rentals, permits, fuel and the administrative overhead that gets treated as a fixed cost and quietly absorbed into every job.",
+          "Do it per contract rather than per year. An annual figure tells you the business made money. A per-contract figure tells you which kind of work made it, which is the only version you can act on."
+        ]
+      },
+      {
+        "heading": "Then work on the four that move it",
+        "paragraphs": [
+          "In this order, because each one funds the next."
+        ],
+        "steps": [
+          "Productivity on site: a work breakdown structure, a critical path, and resources allocated against it.",
+          "Overheads: understand them, reduce waste, and negotiate longer term supplier agreements for better pricing.",
+          "Cash flow: invoice promptly at milestones, electronically, with incentives for early payment.",
+          "Quality: clear communication and honest estimates, because repeat business costs nothing to win."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review monthly",
+      "text": "Margin by contract type, not just overall. If one kind of work is consistently the weakest, that is a pricing decision or a walk-away decision, and both are better made early."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "Maximise Productivity on Job Sites",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

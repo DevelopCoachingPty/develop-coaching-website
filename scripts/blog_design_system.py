@@ -242,51 +242,30 @@ def update_head(document: str, spec: dict) -> str:
             f"canonical mismatch: page says {found.group(1)}, expected {canonical}"
         )
 
-    pairs = (
-        (r"<title>.*?</title>", f"<title>{esc(title)}</title>", "title tag"),
-        (
-            r'(<meta name="description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "meta description",
-        ),
-        (
-            r'(<meta property="og:title" content=")[^"]*(")',
-            rf"\g<1>{esc(title)}\g<2>",
-            "og:title",
-        ),
-        (
-            r'(<meta property="og:description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "og:description",
-        ),
-        (
-            r'(<meta name="twitter:title" content=")[^"]*(")',
-            rf"\g<1>{esc(title)}\g<2>",
-            "twitter:title",
-        ),
-        (
-            r'(<meta name="twitter:description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "twitter:description",
-        ),
-        (
-            r'(<meta property="article:section" content=")[^"]*(")',
-            rf"\g<1>{spec['pillar']}\g<2>",
-            "article:section",
-        ),
-        (
-            r'(<meta property="og:updated_time" content=")[^"]*(")',
-            rf"\g<1>{modified}\g<2>",
-            "og:updated_time",
-        ),
-        (
-            r'(<meta property="article:modified_time" content=")[^"]*(")',
-            rf"\g<1>{modified}\g<2>",
-            "article:modified_time",
-        ),
+    document = replace_once(
+        document, r"<title>.*?</title>", f"<title>{esc(title)}</title>", "title tag"
     )
-    for pattern, replacement, what in pairs:
-        document = replace_once(document, pattern, replacement, what)
+
+    # Meta tags vary across the library: some articles were published without
+    # og:updated_time or article:modified_time at all. Set the tag where it
+    # exists, add it where it does not, rather than failing on a page whose
+    # only fault is a missing tag.
+    meta_tags = (
+        ("name", "description", esc(description)),
+        ("property", "og:title", esc(title)),
+        ("property", "og:description", esc(description)),
+        ("name", "twitter:title", esc(title)),
+        ("name", "twitter:description", esc(description)),
+        ("property", "article:section", spec["pillar"]),
+        ("property", "og:updated_time", modified),
+        ("property", "article:modified_time", modified),
+    )
+    for attribute, name, value in meta_tags:
+        pattern = rf'(<meta {attribute}="{re.escape(name)}" content=")[^"]*(")'
+        document, count = re.subn(pattern, lambda m: m.group(1) + value + m.group(2), document, count=1)
+        if count == 0:
+            tag = f'<meta {attribute}="{name}" content="{value}" />'
+            document = document.replace("</head>", tag + "\n</head>", 1)
 
     # The reference page shipped with a one-off stylesheet before this system
     # existed. Retire it so a page never carries two article stylesheets.
@@ -697,6 +676,42 @@ def promote_headings(document: str, spec: dict) -> str:
     return document[:start] + body + document[end:]
 
 
+def insert_headings(document: str, spec: dict) -> str:
+    """Introduce H2 sections into articles that were published as flowing prose.
+
+    Twelve articles carry no headings at all, which leaves a reader with an
+    unbroken wall of text and gives an answer engine no passage to lift. Each
+    heading is declared as {"before": "<opening words of the paragraph>",
+    "text": "<the heading>"} so the placement is reviewable as copy rather than
+    guessed by a script. Tolerant on re-run: a heading already present is left
+    alone.
+    """
+    headings = spec.get("insert_headings") or []
+    if not headings:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for item in headings:
+        anchor, text = item["before"].strip(), item["text"].strip()
+        if any(
+            text_of(m.group(0)).casefold() == text.casefold()
+            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+        ):
+            continue
+        target = None
+        for span_start, span_end in prose_paragraphs(body):
+            if text_of(body[span_start:span_end]).startswith(anchor):
+                target = span_start
+                break
+        if target is None:
+            raise ValueError(
+                f"insert_headings: no paragraph starts with {anchor!r}"
+            )
+        body = body[:target] + f"<h2>{esc(text)}</h2>\n" + body[target:]
+    return document[:start] + body + document[end:]
+
+
 def apply_heading_rewrites(document: str, spec: dict) -> str:
     """Rename body headings, declared as exact old text to new text.
 
@@ -757,6 +772,7 @@ def transform(document: str, spec: dict) -> str:
     document = update_visible_category(document, spec)
     document = update_h1_and_hero(document, spec)
     document = demote_body_h1s(document, spec)
+    document = insert_headings(document, spec)
     document = apply_heading_rewrites(document, spec)
     document = promote_headings(document, spec)
     document = apply_text_replacements(document, spec)

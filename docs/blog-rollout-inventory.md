@@ -22,23 +22,21 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 22 |
+| Design only | 25 |
 | Recategorise | 6 |
-| Rewrite first | 41 |
+| Rewrite first | 38 |
 
-## Plan (15)
+## Plan (13)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
 | [become-financially-free](https://develop-coaching.com/become-financially-free/) | 42 | 478 | 0 | Rewrite first | Audit | h1-count-4, fluffy-intro, thin-478w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 46 | 731 | 4 | Rewrite first | Audit | fluffy-intro | no-pillar-link |
-| [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 48 | 992 | 6 | Rewrite first | Audit | fluffy-intro, listicle-headline | schema-headline-drift, no-pillar-link |
 | [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | 0 | Rewrite first | Audit | h1-count-4, thin-669w, h2-count-0 | schema-headline-drift, no-pillar-link |
 | [pandemic-affect-construction](https://develop-coaching.com/pandemic-affect-construction/) | 60 | 1248 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [2021-builders-trades](https://develop-coaching.com/2021-builders-trades/) | 61 | 1153 | 0 | Rewrite first | Audit | h2-count-0, listicle-headline | schema-headline-drift, no-pillar-link |
 | [how-to-grow-a-construction-business-2](https://develop-coaching.com/how-to-grow-a-construction-business-2/) | 64 | 1490 | 5 | Rewrite first | Audit | fluffy-intro, listicle-headline, em-dashes-1 | no-pillar-link |
 | [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 64 | 858 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
-| [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 65 | 903 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
+| [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 84 | 1191 | 7 | Design only | Audit | none | none |
 | [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 87 | 1287 | 6 | Design only | Audit | em-dashes-2 | none |
 | [construction-business-plan](https://develop-coaching.com/construction-business-plan/) | 96 | 2390 | 6 | Design only | Audit | none | none |
 | [construction-business-performance](https://develop-coaching.com/construction-business-performance/) | 100 | 1713 | 7 | Design only | Audit | none | none |
@@ -46,7 +44,7 @@
 | [getting-off-the-tools](https://develop-coaching.com/getting-off-the-tools/) | 100 | 1481 | 6 | Design only | Audit | none | none |
 | [sell-construction-company](https://develop-coaching.com/sell-construction-company/) | 100 | 1583 | 6 | Design only | Audit | none | none |
 
-## Attract (15)
+## Attract (16)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -63,6 +61,7 @@
 | [digital-marketing-construction](https://develop-coaching.com/digital-marketing-construction/) | 69 | 1223 | 5 | Design only | Audit | meta-88ch | schema-headline-drift, no-pillar-link |
 | [customer-reviews-for-construction-company](https://develop-coaching.com/customer-reviews-for-construction-company/) | 77 | 1692 | 5 | Rewrite first | Audit | listicle-headline | schema-headline-drift, no-pillar-link |
 | [how-to-find-good-tradesmen](https://develop-coaching.com/how-to-find-good-tradesmen/) | 80 | 1485 | 6 | Rewrite first | Audit | listicle-headline | no-pillar-link |
+| [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 93 | 1165 | 4 | Design only | Audit | none | none |
 | [construction-lead-generation](https://develop-coaching.com/construction-lead-generation/) | 96 | 1962 | 7 | Reference | Audit | none | none |
 | [attract-the-right-clients](https://develop-coaching.com/attract-the-right-clients/) **[batch 1]** | 100 | 1966 | 7 | Design only | Audit | none | none |
 
@@ -89,7 +88,7 @@
 | [construction-business-goals](https://develop-coaching.com/construction-business-goals/) | 74 | 982 | 6 | Design only | Audit | none | schema-headline-drift, no-pillar-link |
 | [construction-site-set-up-plan](https://develop-coaching.com/construction-site-set-up-plan/) | 89 | 2202 | 9 | Design only | Audit | none | no-pillar-link |
 
-## Scale (11)
+## Scale (12)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -104,6 +103,7 @@
 | [cost-cutting-in-construction](https://develop-coaching.com/cost-cutting-in-construction/) | 74 | 1474 | 5 | Rewrite first | Audit | h1-count-2 | no-pillar-link |
 | [mistakes-when-scaling-a-construction-business](https://develop-coaching.com/mistakes-when-scaling-a-construction-business/) | 75 | 1113 | 8 | Design only | Audit | em-dashes-7 | schema-headline-drift, no-pillar-link |
 | [federation-of-master-builders](https://develop-coaching.com/federation-of-master-builders/) | 81 | 1357 | 5 | Rewrite first | Audit | h1-count-2 | schema-headline-drift, no-pillar-link |
+| [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 84 | 915 | 5 | Design only | Audit | none | none |
 
 ## Attract/Convert (1)
 
