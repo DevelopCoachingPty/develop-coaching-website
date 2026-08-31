@@ -1,0 +1,92 @@
+{
+  "slug": "construction-tendering",
+  "pillar": "Convert",
+  "title": "Construction Tendering: Why You Keep Losing Bids",
+  "meta_description": "Why construction tendering fails: seven root causes that lose bids before the price is even checked, and the fixes that lift your strike rate.",
+  "h1": "Construction Tendering: Why You Keep Losing Bids",
+  "hero_subtitle": "A practical guide to finding where your bids leak value before a contract is signed.",
+  "intro": {
+    "answer": "If your team works flat out and still wins fewer than half its tenders, the problem is not price. Entire bids fail on small technical errors before anyone checks the number.",
+    "image": {
+      "src": "/wp-content/uploads/2025/07/construction-tendering-1.jpg",
+      "alt": "A construction tender being prepared against a deadline",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers the hidden cost of poor tendering, a symptom checker for whether you are bleeding bids, the seven root causes that derail the process, and the fixes that lift a strike rate without joining a race to the bottom."
+  },
+  "briefing": {
+    "eyebrow": "Bid process site briefing",
+    "title": "Run Tendering as a Task, Not a Scramble",
+    "intro": "Most builders land only 40 to 50% of the bids they enter. The best organised reach 65% or more, and they are not winning because they are cheaper. They are winning because the process is deliberate rather than a last-minute rush of paperwork.",
+    "panels": [
+      {
+        "heading": "Why do tenders fail even with a keen price?",
+        "paragraphs": [
+          "Because most failures happen before the price is read. A vague scope, assumptions nobody wrote down, an incomplete PQQ, or an estimate that was rushed and out of date will end a bid on its own.",
+          "Then there is what gets ignored: social value and ESG are scored, and leaving them thin costs marks that price cannot buy back."
+        ]
+      },
+      {
+        "heading": "The seven root causes to check",
+        "paragraphs": [
+          "Work down this list against your last five bids and the pattern usually shows itself quickly."
+        ],
+        "steps": [
+          "Vague scope and unrecorded assumptions.",
+          "A price-only mindset.",
+          "Incomplete PQQ and compliance documents.",
+          "Rushed or out of date estimates.",
+          "Ignoring social value and ESG.",
+          "Manual, siloed bid management.",
+          "No post-bid debrief loop, so nothing is learned."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The measure",
+      "text": "Track your strike rate honestly, bid by bid, with the reason for each loss. Without that number you are guessing at whether anything you change is working."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "brief_before_heading": "Tendering Scoreboard 2025 (UK)",
+  "intro_replaces_paragraphs": 1,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "heading_rewrites": {
+    "Symptom Checker — Are You Bleeding Bids?": "Symptom Checker: Are You Bleeding Bids?",
+    "Lowest price vs best value—what really wins?": "Lowest price vs best value: what really wins?"
+  },
+  "text_replacements": [
+    {
+      "find": "whole-life savings—faster handover",
+      "replace": "whole-life savings: faster handover"
+    },
+    {
+      "find": "rich with lessons—if you capture",
+      "replace": "rich with lessons, if you capture"
+    },
+    {
+      "find": "pays for itself quickly—three or four",
+      "replace": "pays for itself quickly. Three or four"
+    },
+    {
+      "find": "live cloud folder—renewal alerts on",
+      "replace": "live cloud folder, with renewal alerts on"
+    },
+    {
+      "find": "week of award—win or lose—to refine",
+      "replace": "week of award, win or lose, to refine"
+    },
+    {
+      "find": "social-value evidence—issues that",
+      "replace": "social-value evidence, issues that"
+    },
+    {
+      "find": "value you bring—safer sites",
+      "replace": "value you bring: safer sites"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "slug": "delegation-in-construction",
+  "pillar": "Scale",
+  "title": "Delegation in Construction: Build a Self-Running Team",
+  "meta_description": "How delegation in construction works: hire leaders rather than workers, write the SOPs down, hold people accountable, and step out of daily operations.",
+  "h1": "Delegation in Construction: Build a Self-Running Team",
+  "hero_subtitle": "A practical guide to getting the business to run when you are not in it.",
+  "intro": {
+    "answer": "The problem is not that you are not working hard enough. It is that the business lacks the people and the systems to run smoothly without you, which is why most construction companies stall around £1 million.",
+    "image": {
+      "src": "/wp-content/uploads/2025/05/delegation-in-construction.jpg",
+      "alt": "A construction team running a project without the owner on site",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers why construction businesses struggle to run independently, then six steps: hiring leaders, documenting the work, building accountability, delegating without micromanaging, removing yourself gradually, and investing in improvement."
+  },
+  "briefing": {
+    "eyebrow": "Delegation site briefing",
+    "title": "Worker Dependent to System Dependent",
+    "intro": "Owners trapped in the day to day rarely got there by choice. It happens because every decision routes through the one person who knows how everything is done, and nothing has ever been written down.",
+    "panels": [
+      {
+        "heading": "Why do construction businesses stall at £1 million?",
+        "paragraphs": [
+          "Because the owner is still doing everything personally. At that size the volume of decisions outgrows one person, and the business hits a ceiling set by their availability rather than by demand.",
+          "Breaking through means shifting from worker dependent to system dependent. That is a different business, not a busier one."
+        ]
+      },
+      {
+        "heading": "The six steps",
+        "paragraphs": [
+          "Each one removes a reason the business currently needs you in the room."
+        ],
+        "steps": [
+          "Hire leaders, not just workers.",
+          "Document everything, so the standard exists outside your head.",
+          "Implement leadership accountability, so decisions have owners.",
+          "Delegate properly, which means stopping the micromanaging.",
+          "Remove yourself from daily operations gradually rather than overnight.",
+          "Invest in continuous improvement so it keeps getting better without you."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "Take a week off and see what breaks. Whatever needed you is the next thing to document, and the list is usually shorter than it feels."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Why Construction Businesses Struggle to Run Independently": "Why do construction businesses struggle to run without the owner?",
+    "Step 2: Document Everything—Create Clear SOPs": "Step 2: Document Everything and Create Clear SOPs",
+    "Step 4: Delegate Effectively—Stop Micromanaging": "Step 4: Delegate Effectively and Stop Micromanaging"
+  },
+  "brief_before_heading": "Why do construction businesses struggle to run without the owner?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "responsible for—and they handle it",
+      "replace": "responsible for, and they handle it"
+    },
+    {
+      "find": "save you minutes today—but delegating effectively",
+      "replace": "save you minutes today, but delegating effectively"
+    },
+    {
+      "find": "gradual, strategic approach—this is where",
+      "replace": "gradual, strategic approach. This is where"
+    },
+    {
+      "find": "Run a test period—take a day or two off",
+      "replace": "Run a test period. Take a day or two off"
+    },
+    {
+      "find": "chained to your business—finally free to focus",
+      "replace": "chained to your business, finally free to focus"
+    },
+    {
+      "find": "well within reach—powered by smart delegation",
+      "replace": "well within reach, powered by smart delegation"
+    }
+  ]
+}

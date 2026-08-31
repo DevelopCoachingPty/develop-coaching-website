@@ -1,0 +1,103 @@
+{
+  "slug": "construction-contracts",
+  "pillar": "Convert",
+  "title": "How to Win Construction Contracts Without Cutting Price",
+  "meta_description": "How to win UK construction contracts without under-pricing: six proven tactics that compete on value, plus the common pitfalls that lose bids before price.",
+  "h1": "How to Win Construction Contracts Without Cutting Price",
+  "hero_subtitle": "A practical guide to winning tenders on value instead of racing to the bottom.",
+  "intro": {
+    "answer": "Clients are increasingly buying best value rather than the lowest number. Show the benefits you deliver, prove you are reliable, explain the extra value you add, and you can win work without cutting your margin.",
+    "image": {
+      "src": "/wp-content/uploads/2025/07/contract.jpg",
+      "alt": "A construction contract being reviewed before a tender submission",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers why price-only bids fail, six proven ways to win on value, a worked example of a £2.4 million refurbishment win, and a checklist of the pitfalls that lose bids before anyone looks at the price."
+  },
+  "briefing": {
+    "eyebrow": "Tendering site briefing",
+    "title": "Lowest Price Is Not the Same as Best Value",
+    "intro": "Tender lists are crowded and margins are thin, so it is easy to assume the cheapest bid always wins. It often does not, and records show that slashing prices frequently ends in losses and sleepless nights for the firm that won.",
+    "panels": [
+      {
+        "heading": "Why do price-only bids fail?",
+        "paragraphs": [
+          "Because the client is buying certainty as much as cost. A bid that only says cheapest gives an evaluator nothing to defend if the job goes wrong, which makes it a risk rather than a bargain.",
+          "The work is out there. Securing it means proving clear value, not flashing the lowest number and hoping the margin survives contact with the site."
+        ]
+      },
+      {
+        "heading": "Six ways to win without slashing rates",
+        "paragraphs": [
+          "Most of these are done once and reused on every bid afterwards, which is what makes them worth the effort."
+        ],
+        "steps": [
+          "Nail your PQQ and compliance early, so bids do not fail on paperwork.",
+          "Clarify and prove your unique value rather than asserting it.",
+          "Build a reusable bid library so each tender is not written from scratch.",
+          "Showcase track record and KPIs through frameworks.",
+          "Quantify social value and ESG, because it is scored.",
+          "Use digital bid portals, and always take the post-bid debrief."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth doing",
+      "text": "Take the post-bid debrief every time, on wins and losses. It is the only place you find out what the evaluator actually thought, and it is free."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "heading_rewrites": {
+    "Why Price-Only Bids Fail": "Why do price-only bids fail?",
+    "Six Proven Ways to Win Construction Contracts — Without Slashing Your Rates": "Six Proven Ways to Win Without Slashing Your Rates"
+  },
+  "brief_before_heading": "The 2025 Tender Landscape in the UK",
+  "intro_replaces_paragraphs": 1,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "clear value—not just",
+      "replace": "clear value, not just"
+    },
+    {
+      "find": "chasing paperwork—and it keeps",
+      "replace": "chasing paperwork, and it keeps"
+    },
+    {
+      "find": "materials indices—this keeps",
+      "replace": "materials indices. This keeps"
+    },
+    {
+      "find": "</a>—think SCAPE or Pagabo—screen suppliers",
+      "replace": "</a>, such as SCAPE or Pagabo, screen suppliers"
+    },
+    {
+      "find": "keyword alerts—“construction contracts”",
+      "replace": "keyword alerts: “construction contracts”"
+    },
+    {
+      "find": "“MEAT award”—so new jobs",
+      "replace": "“MEAT award”, so new jobs"
+    },
+    {
+      "find": "deadline alerts—late submissions",
+      "replace": "deadline alerts. Late submissions"
+    },
+    {
+      "find": "they pursue—selective bidding",
+      "replace": "they pursue. Selective bidding"
+    },
+    {
+      "find": "lowest number—it’s about",
+      "replace": "lowest number. It’s about"
+    },
+    {
+      "find": "stand out—no hard sell",
+      "replace": "stand out, no hard sell"
+    }
+  ]
+}

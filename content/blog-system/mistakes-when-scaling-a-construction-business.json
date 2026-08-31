@@ -1,0 +1,88 @@
+{
+  "slug": "mistakes-when-scaling-a-construction-business",
+  "pillar": "Scale",
+  "title": "Seven Mistakes When Scaling Past £1M",
+  "meta_description": "The seven mistakes that stop construction businesses scaling past £1M: cash flow, underpricing, missing systems, thin leads and reactive hiring.",
+  "h1": "Seven Mistakes When Scaling Past £1M",
+  "hero_subtitle": "A practical guide to the things that stall a construction business at £1M.",
+  "intro": {
+    "answer": "Most owners assume growing past £1M means working longer hours and taking on bigger projects. It rarely does. Scaling is a cash flow, pricing and systems problem long before it is a workload problem.",
+    "image": {
+      "src": "/wp-content/uploads/2025/04/image.jpg",
+      "alt": "A construction business owner reviewing what is stalling growth past £1M",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers seven mistakes that stop construction businesses scaling, each with the fix: cash flow management, underpricing, missing systems and SOPs, inconsistent lead generation, reactive hiring, weak leadership and communication, and not investing in growth."
+  },
+  "briefing": {
+    "eyebrow": "Scaling site briefing",
+    "title": "Revenue Is Not the Same as Stability",
+    "intro": "Plenty of busy construction businesses are one late payment away from trouble. A steady stream of work feels like security, which is exactly why the underlying problem goes unnoticed until it is urgent.",
+    "panels": [
+      {
+        "heading": "Why does a busy business still run out of money?",
+        "paragraphs": [
+          "Because revenue alone does not guarantee anything. Many owners believe a full order book means the company is financially stable, and the two are not related as closely as they feel.",
+          "In construction you fund materials and labour long before the client pays. Growth makes that gap bigger, not smaller, which is why scaling without fixing cash flow accelerates the problem."
+        ]
+      },
+      {
+        "heading": "The seven that stall a business",
+        "paragraphs": [
+          "The first three cause the most damage, and they compound each other."
+        ],
+        "steps": [
+          "Poor cash flow management.",
+          "Underpricing jobs and ignoring profit margins.",
+          "No systems or standard operating procedures.",
+          "Failing to generate consistent leads.",
+          "Hiring reactively instead of proactively.",
+          "Poor leadership and communication.",
+          "Not investing in growth and innovation."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Where to start",
+      "text": "Scaling is not just increasing revenue. It needs better cash flow management, strategic pricing and streamlined operations underneath it, and those have to come first or the growth makes everything worse."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "1. Poor Cash Flow Management": "1. Why does poor cash flow stall growth?"
+  },
+  "brief_before_heading": "1. Why does poor cash flow stall growth?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true,
+  "text_replacements": [
+    {
+      "find": "doesn’t guarantee success—<strong>",
+      "replace": "doesn’t guarantee success. <strong>"
+    },
+    {
+      "find": "<strong>Invest in digital marketing</strong>—<a",
+      "replace": "<strong>Invest in digital marketing.</strong> <a"
+    },
+    {
+      "find": "<strong>Follow up with potential clients quickly</strong>—businesses",
+      "replace": "<strong>Follow up with potential clients quickly.</strong> Businesses"
+    },
+    {
+      "find": "<strong>Always be recruiting</strong>—keep job ads live",
+      "replace": "<strong>Always be recruiting.</strong> Keep job ads live"
+    },
+    {
+      "find": "<strong>Provide ongoing feedback</strong>—recognise good work",
+      "replace": "<strong>Provide ongoing feedback.</strong> Recognise good work"
+    },
+    {
+      "find": "<strong>Use the right technology</strong>—construction management software",
+      "replace": "<strong>Use the right technology.</strong> Construction management software"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "grow-building-company",
+  "pillar": "Scale",
+  "title": "How to Grow a Building Company Without Burning Out",
+  "meta_description": "How to grow a building company without burning out: the systems, marketing, specialisation and leadership shift that take a builder past a stuck turnover.",
+  "h1": "How to Grow a Building Company Without Burning Out",
+  "hero_subtitle": "A practical guide for builders whose diary is full and whose profits are not.",
+  "intro": {
+    "answer": "Staying small feels safe, but it is a trap. Growth is not about working harder, it is about the systems, marketing and team that stop you quoting at night and firefighting all day.",
+    "image": {
+      "src": "/wp-content/uploads/2025/09/grow-building-company.png",
+      "alt": "A general contractor running a growing building company",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers four shifts: building systems that hold multiple projects, marketing that wins developer work rather than bathrooms, specialising instead of taking everything, and the leadership change from tradesman to business owner."
+  },
+  "briefing": {
+    "eyebrow": "Building company site briefing",
+    "title": "Busy Is Not the Same as Growing",
+    "intro": "One builder was stuck at £750k for years. Exhausted, constantly firefighting, no way forward. Structured project management, a portfolio that showed the best work, and positioning for developer contracts took him past £2m in 18 months. He did not find more hours. He found better ways to run the company.",
+    "panels": [
+      {
+        "heading": "Why does a full diary not turn into profit?",
+        "paragraphs": [
+          "Because the business is running you rather than the other way round. Quoting at night, managing projects in the day, putting out fires in between, with no capacity left to change any of it.",
+          "That is the difference between running a busy building business and running a profitable one. The work is the same. The structure underneath it is not."
+        ]
+      },
+      {
+        "heading": "The four shifts that change it",
+        "paragraphs": [
+          "None of these require you to take on more work. Most of them let you take on less of the wrong sort."
+        ],
+        "steps": [
+          "Build systems that let multiple projects run without chaos.",
+          "Market properly, so you win developer work instead of small extensions.",
+          "Specialise, and be the expert rather than the generalist.",
+          "Shift from tradesman to business owner, with a management team around you."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The measure",
+      "text": "Watch profit rather than turnover. Turnover tells you how busy you were. Only one of those two pays for the freedom you started the business for."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "deduplicate_sections": [
+    "Improve Marketing to Grow Building Company"
+  ],
+  "heading_rewrites": {
+    "Build Strong Systems to Grow Building Company": "How do you build systems that hold?"
+  },
+  "brief_before_heading": "How do you build systems that hold?",
+  "intro_replaces_paragraphs": 2,
+  "fix_canonical": true,
+  "canonical_was": "https://develop-coaching.com/grow-building-business/ (returns 404)",
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "one job on the go—but try running",
+      "replace": "one job on the go, but try running"
+    },
+    {
+      "find": "It’s not optional—it’s the engine",
+      "replace": "It’s not optional. It’s the engine"
+    },
+    {
+      "find": "doubled turnover and tripled net profit—because clients",
+      "replace": "doubled turnover and tripled net profit, because clients"
+    },
+    {
+      "find": "to lay bricks anymore—it’s to build a business",
+      "replace": "to lay bricks anymore. It’s to build a business"
+    },
+    {
+      "find": "your reputation, and your lifestyle—not just chasing",
+      "replace": "your reputation and your lifestyle, not just chasing"
+    },
+    {
+      "find": "grow through five pillars—Plan, Attract",
+      "replace": "grow through five pillars: Plan, Attract"
+    }
+  ]
+}

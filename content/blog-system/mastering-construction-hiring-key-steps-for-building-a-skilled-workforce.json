@@ -1,0 +1,79 @@
+{
+  "slug": "mastering-construction-hiring-key-steps-for-building-a-skilled-workforce",
+  "pillar": "Scale",
+  "title": "Construction Hiring: Build a Skilled Workforce",
+  "meta_description": "Construction hiring step by step: define what you need, write a job description that attracts, interview with structure, and onboard so people stay.",
+  "h1": "Construction Hiring: Build a Skilled Workforce",
+  "hero_subtitle": "A practical guide to hiring people who are still there in two years.",
+  "intro": {
+    "answer": "Scaling a construction business means hiring, and hiring badly is expensive twice: once when you pay for the mistake, and again when you replace them. It starts with being crystal clear about what you actually need.",
+    "image": {
+      "src": "/wp-content/uploads/2023/10/Job-interview-.png",
+      "alt": "A construction business owner interviewing a candidate",
+      "width": 940,
+      "height": 788
+    },
+    "roadmap": "This guide works through the whole process: defining your needs, writing a job description that attracts the right people, finding candidates in more than one place, interviewing with structure, and onboarding properly so they stay."
+  },
+  "briefing": {
+    "eyebrow": "Hiring site briefing",
+    "title": "Structure the Interview, Not Just the Advert",
+    "intro": "Most construction hiring goes wrong at interview rather than at advert. Without structure you compare candidates on how well they interviewed rather than on how well they would do the job, and those are different skills.",
+    "panels": [
+      {
+        "heading": "What does a structured hiring process look like?",
+        "paragraphs": [
+          "Start with a phone screening to check the basics before anyone travels. Then structured interviews using the same questions for every candidate, so you are comparing like with like.",
+          "Add a skills assessment appropriate to the role, whether that is a practical test or a portfolio review, and behavioural questions about how they handled real situations rather than hypothetical ones."
+        ]
+      },
+      {
+        "heading": "Then finish the job properly",
+        "paragraphs": [
+          "The steps most often skipped are the ones that decide whether a good hire stays."
+        ],
+        "steps": [
+          "Check references, and actually speak to previous employers.",
+          "Run background checks to confirm qualifications and certifications.",
+          "Keep candidates informed, because the experience is part of your reputation.",
+          "Make the offer clearly, and be prepared to discuss compensation.",
+          "Onboard with a welcome, the paperwork ready, safety training first, then structured job training."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Do not rush it",
+      "text": "The goal is the right fit for the team, not the fastest fill. A vacancy costs less than the wrong person in it, even when it does not feel that way in a busy month."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "insert_headings": [
+    {
+      "before": "The first step in construction hiring is to get crystal clear",
+      "text": "Step 1: Define What You Actually Need"
+    },
+    {
+      "before": "Alright, you’ve laid the foundation by defining your needs",
+      "text": "Step 2: Write a Job Description That Attracts"
+    },
+    {
+      "before": "To find the best talent out there, you need to cast a wide net",
+      "text": "Step 3: Where Should You Look for Candidates?"
+    },
+    {
+      "before": "When it comes to construction hiring, the interview is where the magic happens",
+      "text": "Step 4: How Should You Run the Interview?"
+    },
+    {
+      "before": "Your recruitment efforts have paid off, and you’ve found the ideal candidate",
+      "text": "Step 5: Onboard So They Stay"
+    }
+  ],
+  "brief_before_heading": "Step 1: Define What You Actually Need",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}

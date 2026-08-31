@@ -1,0 +1,59 @@
+{
+  "slug": "cost-cutting-in-construction",
+  "pillar": "Scale",
+  "title": "Cost Cutting in Construction Without Cutting Quality",
+  "meta_description": "Smart cost cutting in construction: accurate estimating and value engineering, better scheduling, sustainable choices, and cutting rework rather than corners.",
+  "h1": "Cost Cutting in Construction Without Cutting Quality",
+  "hero_subtitle": "A practical guide to taking cost out of a job without the client noticing anything but the finish.",
+  "intro": {
+    "answer": "Most cost cutting in construction fails because it cuts the wrong things. The savings that hold come from estimating accurately, scheduling properly and eliminating rework, not from buying cheaper materials.",
+    "image": {
+      "src": "/wp-content/uploads/2020/04/cut-expenses-scaled-1.jpg",
+      "alt": "A construction business owner reviewing where costs can be reduced",
+      "width": 2560,
+      "height": 1707
+    },
+    "roadmap": "This guide covers four areas: accurate cost estimation and value engineering, optimising scheduling and resources, sustainable choices that pay back over time, and site monitoring that catches problems before they become rework."
+  },
+  "briefing": {
+    "eyebrow": "Cost control site briefing",
+    "title": "Rework Is the Cost Nobody Budgets For",
+    "intro": "Every construction business tracks materials and labour. Very few track what it costs to do something twice, which is why rework quietly eats margins that looked healthy at tender stage.",
+    "panels": [
+      {
+        "heading": "Where does the money actually go?",
+        "paragraphs": [
+          "Into inaccurate estimates, into waiting time when scheduling and resources are not aligned, and into fixing work that was not right the first time.",
+          "Detailed forecasting is the backbone of controlling any of it. It is more than crunching numbers: it is knowing what the job should cost before you are committed to it."
+        ]
+      },
+      {
+        "heading": "Four areas worth working on",
+        "paragraphs": [
+          "Each one reduces cost without the client experiencing anything worse."
+        ],
+        "steps": [
+          "Estimate accurately, and use value engineering to find cheaper ways to the same outcome.",
+          "Optimise scheduling so labour and equipment are not waiting on each other.",
+          "Choose sustainable and energy efficient options where they pay back.",
+          "Monitor the site and review performance, so issues are caught before they become rework."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The rule",
+      "text": "If a saving makes the finish worse, it is not a saving. It is a deferred cost that returns as a snag, a delay, or a client who does not call you again."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Accurate Cost Estimation and Value Engineering": "How do you cut cost without cutting quality?"
+  },
+  "brief_before_heading": "How do you cut cost without cutting quality?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}

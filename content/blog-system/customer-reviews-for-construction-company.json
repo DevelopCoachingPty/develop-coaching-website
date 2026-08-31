@@ -1,0 +1,60 @@
+{
+  "slug": "customer-reviews-for-construction-company",
+  "pillar": "Attract",
+  "title": "How to Get Customer Reviews for a Construction Company",
+  "meta_description": "How to get customer reviews for a construction company: when to ask, how to get useful ones, where to show them, and what to do about a bad one.",
+  "h1": "How to Get Customer Reviews for a Construction Company",
+  "hero_subtitle": "A practical guide to collecting proof that wins you the next job.",
+  "intro": {
+    "answer": "In construction your reputation is your currency. When a client is choosing between you and a competitor, reviews are often the thing that decides it, because they are the only part of your pitch you did not write.",
+    "image": {
+      "src": "/wp-content/uploads/2025/04/Client-feedback.jpg",
+      "alt": "A construction client giving feedback at the end of a project",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers why reviews carry so much weight in construction, how to collect them without it feeling awkward, where to put them so they do some work, and how to handle a negative one."
+  },
+  "briefing": {
+    "eyebrow": "Social proof site briefing",
+    "title": "Ask, and Ask at the Right Moment",
+    "intro": "Most construction businesses have done work worth reviewing and simply never asked. The clients who would have written something glowing have moved on, and the moment has gone. Asking is the whole thing, and when you ask matters more than how.",
+    "panels": [
+      {
+        "heading": "How do you actually get customer reviews?",
+        "paragraphs": [
+          "You ask. Directly, and without apologising for it. A client who is pleased with the work is rarely unwilling, they simply have not thought of it and will not do it unprompted.",
+          "Then go for quality over quantity. Ten reviews that describe the specific job, the problem you solved and how you handled it are worth far more to the next prospect than fifty that say great service."
+        ]
+      },
+      {
+        "heading": "Make each one work harder",
+        "paragraphs": [
+          "A review sitting on one platform is doing a fraction of the job it could."
+        ],
+        "steps": [
+          "Ask while the work is fresh, not months later.",
+          "Prompt for detail: what the project was, and what you got right.",
+          "Show them across multiple channels, not just the one platform they landed on.",
+          "Turn the happiest clients into advocates who will refer you, not just review you.",
+          "Answer any negative one promptly and professionally, in public."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth remembering",
+      "text": "A negative review answered well is more persuasive than no negative reviews at all. Prospects trust a page of perfect scores less than they trust a company that handled a problem properly."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "heading_rewrites": {
+    "The Power of Customer Reviews for Construction Company": "Why do reviews matter so much in construction?",
+    "Handling Negative Customer Reviews for Construction Company": "What should you do about a bad review?"
+  },
+  "brief_before_heading": "Why do reviews matter so much in construction?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

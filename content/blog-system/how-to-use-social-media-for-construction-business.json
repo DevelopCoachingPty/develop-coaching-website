@@ -1,0 +1,66 @@
+{
+  "slug": "how-to-use-social-media-for-construction-business",
+  "pillar": "Attract",
+  "title": "Social Media for a Construction Business That Works",
+  "meta_description": "How to use social media for a construction business: pick the platform your clients are on, post work worth seeing, and measure whether it brings enquiries.",
+  "h1": "Social Media for a Construction Business That Works",
+  "hero_subtitle": "A practical guide to posting in the places your next client is actually looking.",
+  "intro": {
+    "answer": "Construction is one of the easiest industries to post about, because the work photographs itself. The mistake is spreading across every platform instead of doing one properly.",
+    "image": {
+      "src": "/wp-content/uploads/2019/07/Social-media-image.jpg",
+      "alt": "A construction business owner planning social media posts about a project",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers choosing the right platforms for the clients you want, creating content that earns attention rather than scrolling past, posting consistently enough to matter, and measuring whether any of it produces enquiries."
+  },
+  "briefing": {
+    "eyebrow": "Social media site briefing",
+    "title": "Pick the Platform, Then Commit",
+    "intro": "Over three quarters of UK businesses use social media in their marketing. Most construction businesses that get nothing from it are not posting badly, they are posting thinly across four platforms instead of properly on one.",
+    "panels": [
+      {
+        "heading": "Which platform should a construction business use?",
+        "paragraphs": [
+          "Instagram if the work is visual and the client is a homeowner or developer choosing on look. Facebook if you are local and want to be recognised in the area you build in. LinkedIn if you are selling to main contractors, architects, developers or commercial clients.",
+          "Pick the one where the clients you actually want already are, and give it everything for six months before you add a second."
+        ]
+      },
+      {
+        "heading": "Then make it a routine, not a mood",
+        "paragraphs": [
+          "Consistency beats brilliance here. A steady stream of ordinary posts outperforms occasional excellent ones."
+        ],
+        "steps": [
+          "Choose one platform based on who your buyer is, not what you enjoy using.",
+          "Photograph the work as you go. The material is already on site.",
+          "Set a posting rhythm you can actually keep when you are busy.",
+          "Measure enquiries, not likes. Reach that never turns into a conversation is a vanity number."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "Ask every enquiry how they found you. If social media never comes up after six months of consistent posting, either the platform is wrong or the content is not showing the work clearly enough."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "heading_rewrites": {
+    "Choosing the Right Social Media Platforms": "Which social media platform should you choose?"
+  },
+  "brief_before_heading": "Which social media platform should you choose?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "fix_canonical": true,
+  "canonical_was": "https://develop-coaching.com/blog/how-to-use-social-media-for-your-construction-business-in-2023/ (returns 404)",
+  "text_replacements": [
+    {
+      "find": "src=\"/wp-content/uploads/2022/05/DP-Social-media-scaled-1-1024x684.jpg\" alt=\"\"",
+      "replace": "src=\"/wp-content/uploads/2022/05/DP-Social-media-scaled-1-1024x684.jpg\" alt=\"Social media platforms used by a construction business\""
+    }
+  ]
+}

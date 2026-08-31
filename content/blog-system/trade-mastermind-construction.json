@@ -1,0 +1,59 @@
+{
+  "slug": "trade-mastermind-construction",
+  "pillar": "Scale",
+  "title": "Trade Mastermind: The Five Areas That Drive Growth",
+  "meta_description": "The five areas a construction business has to get right to scale: plan, attract, convert, deliver and scale, and how to work out which one to fix first.",
+  "h1": "Trade Mastermind: The Five Areas That Drive Growth",
+  "hero_subtitle": "A practical guide to working out which part of the business to fix first.",
+  "intro": {
+    "answer": "Owners who stall usually fall into one of two camps: a plan to scale but too many things being worked on at once, or no idea where to start. Both are solved the same way, by getting laser focused on one area at a time.",
+    "image": {
+      "src": "/wp-content/uploads/2022/07/shutterstock_526839118-scaled-1.jpg",
+      "alt": "A construction business owner working out which part of the business to focus on",
+      "width": 1385,
+      "height": 924
+    },
+    "roadmap": "This guide walks the five areas every construction business runs on: Plan, Attract, Convert, Deliver and Scale. Each one covers what good looks like, so you can find the weakest and start there."
+  },
+  "briefing": {
+    "eyebrow": "Five Pillars site briefing",
+    "title": "Fix One Thing, Not Five",
+    "intro": "Trying to improve everything at once is why most growth plans stall. The businesses that move fastest pick the area that is genuinely holding them back and give it their attention until it is no longer the constraint.",
+    "panels": [
+      {
+        "heading": "How do you know which area to work on?",
+        "paragraphs": [
+          "Look for where the work stops flowing. If enquiries are thin, it is Attract. If enquiries arrive but do not convert, it is Convert. If you win work and lose money on it, it is Plan or Deliver. If everything runs but only when you are there, it is Scale.",
+          "The area you enjoy least is usually the one that needs the work, which is exactly why it has been left."
+        ]
+      },
+      {
+        "heading": "The five areas",
+        "paragraphs": [
+          "Each one assumes the one before it works. That is why fixing them out of order rarely holds."
+        ],
+        "steps": [
+          "Plan: decide who you serve and what you are offering them.",
+          "Attract: get in front of the right clients through the right channels.",
+          "Convert: turn interest into signed contracts at a margin worth having.",
+          "Deliver: do the work well, build trust, and collect the proof.",
+          "Scale: use satisfied clients to generate referrals and repeat work."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The discipline",
+      "text": "Pick one. Work it until it is no longer the thing holding you back, then pick the next. Spreading effort across all five feels productive and moves nothing."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Plan": "Plan: who are you actually for?"
+  },
+  "brief_before_heading": "Plan: who are you actually for?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

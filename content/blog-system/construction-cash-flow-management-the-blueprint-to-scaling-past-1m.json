@@ -1,0 +1,59 @@
+{
+  "slug": "construction-cash-flow-management-the-blueprint-to-scaling-past-1m",
+  "pillar": "Scale",
+  "title": "Construction Cash Flow Management Past £1M",
+  "meta_description": "Construction cash flow management for builders past £1M: a 90-day forecast, milestone payments, weekly reviews, and the traps that catch growing firms.",
+  "h1": "Construction Cash Flow Management Past £1M",
+  "hero_subtitle": "A practical guide to the 90 day forecast that keeps a growing business solvent.",
+  "intro": {
+    "answer": "Past £1M your biggest threat is not a lack of work. More revenue does not mean more cash: a £500k contract means nothing if payment is delayed by 60 days and the material bills land in week three.",
+    "image": {
+      "src": "/wp-content/uploads/2026/06/construction-cash-flow-management-scaling.jpg",
+      "alt": "A construction business owner working through a cash flow forecast",
+      "width": 1376,
+      "height": 768
+    },
+    "roadmap": "This guide covers why cash flow is the oxygen of the business, how to build a 90 day forecast in five steps, the finance system that supports it, the traps that catch £1M businesses, and a seven day action plan."
+  },
+  "briefing": {
+    "eyebrow": "Cash flow site briefing",
+    "title": "Build the 90 Day Forecast First",
+    "intro": "Revenue is vanity, profit is sanity, but cash is king. Most owners nod along to that and then run the business as though it does not apply to them. It applies most sharply once you are past £1M, because that is when the gap between paying out and being paid gets big enough to hurt.",
+    "panels": [
+      {
+        "heading": "How do you build a 90 day cash flow forecast?",
+        "paragraphs": [
+          "Start with your actual cash balance today, not a projection. Then map every inflow for the next 90 days, and every outflow, on the dates they genuinely land rather than the dates you hope for.",
+          "A simple spreadsheet is enough. The purpose is not precision, it is finding the weeks where the balance goes negative while you still have time to do something about it."
+        ]
+      },
+      {
+        "heading": "The system that keeps it healthy",
+        "paragraphs": [
+          "The forecast tells you where the gaps are. These five stop them appearing in the first place."
+        ],
+        "steps": [
+          "Invoice clearly, with payment terms defined up front.",
+          "Use milestone-based progress payments rather than waiting for completion.",
+          "Hold a weekly cash review, without exception.",
+          "Stop accepting 60 day terms as though they are standard.",
+          "Price so the margin funds the working capital the growth needs."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The traps",
+      "text": "Three catch £1M businesses repeatedly: leaving retention out of the forecast, scaling revenue without funding the working capital underneath it, and blurring personal and business money."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Why Cash Flow is the Oxygen of Your Business": "Why does cash flow matter more than profit?"
+  },
+  "brief_before_heading": "Why does cash flow matter more than profit?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

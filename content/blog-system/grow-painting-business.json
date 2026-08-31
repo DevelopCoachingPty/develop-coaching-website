@@ -1,0 +1,69 @@
+{
+  "slug": "grow-painting-business",
+  "pillar": "Scale",
+  "title": "How to Grow a Painting and Decorating Business",
+  "meta_description": "How to grow a painting business: pick a niche and own it, build a portfolio that sells, use social proof, and keep clients so repeat work does the growing.",
+  "h1": "How to Grow a Painting and Decorating Business",
+  "hero_subtitle": "A practical guide for decorators working every hour with a bank balance that will not move.",
+  "intro": {
+    "answer": "A full diary with thin margins is not growth, it is burnout on a ladder. The decorators who scale past £300k and £500k share one habit: they treat the business like a business rather than a day-rate hustle.",
+    "image": {
+      "src": "/wp-content/uploads/2026/01/Grow-painting-business.png",
+      "alt": "A painting and decorating job finished to a high standard",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers five moves: picking a niche and owning it, building a visual portfolio that sells, using social proof, investing in efficiency rather than more hours, and keeping clients so repeat work does the growing for you."
+  },
+  "briefing": {
+    "eyebrow": "Decorating growth site briefing",
+    "title": "You Do Not Need to Say Yes to Everything",
+    "intro": "The instinct when growth stalls is to take on more work. In decorating that usually makes it worse, because the jobs you are saying yes to are the ones holding the average price down.",
+    "panels": [
+      {
+        "heading": "Why does a full diary not mean growth?",
+        "paragraphs": [
+          "Because turnover made of low-value jobs still costs you every hour of the week. Working every hour and quoting at night, while the bank balance stays where it was, is the clearest sign the mix is wrong rather than the volume.",
+          "Tightening the focus, sharpening the brand and smoothing the systems changes what you are able to charge, without adding a single hour."
+        ]
+      },
+      {
+        "heading": "The five moves",
+        "paragraphs": [
+          "This trade sells on the photograph and on the recommendation, so two of these are about proof."
+        ],
+        "steps": [
+          "Pick your patch and own it rather than covering everywhere.",
+          "Build a visual portfolio that does the selling before you arrive.",
+          "Use social proof, because decorating is bought on trust.",
+          "Invest in efficiency and better tools, not just more elbows.",
+          "Keep clients for life, and track your repeat work as a number."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The hidden engine",
+      "text": "Repeat work is the cheapest growth available to a decorator. Deliver more than paint, make the handover count, follow up before they forget you, and turn the best clients into ambassadors."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "You can’t grow painting business if you’re forever chasing quotes and juggling jobs. Growth comes from systems, not chaos.": "Growth Comes From Systems, Not Chaos"
+  },
+  "brief_before_heading": "Growth Comes From Systems, Not Chaos",
+  "intro_replaces_paragraphs": 4,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "five pillars — Plan, Attract, Convert, Deliver, and Scale — this fits under",
+      "replace": "five pillars: Plan, Attract, Convert, Deliver and Scale. This fits under"
+    },
+    {
+      "find": "#EcoPaint — tag your area",
+      "replace": "#EcoPaint. Tag your area"
+    }
+  ]
+}

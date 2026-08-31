@@ -1,0 +1,65 @@
+{
+  "slug": "construction-brand",
+  "pillar": "Attract",
+  "title": "Construction Brand: Build One That Wins Work",
+  "meta_description": "How to build a construction brand that wins work: why reputation decides who gets called, what strong brands do differently, and where to start if you are small.",
+  "h1": "Construction Brand: Build One That Wins Work",
+  "hero_subtitle": "A practical guide to being the company clients already trust before you quote.",
+  "intro": {
+    "answer": "A construction brand is not a logo. It is what a client believes about you before you have spoken, and in an industry where the investment and the risk are both large, that belief decides who gets the call.",
+    "image": {
+      "src": "/wp-content/uploads/2021/09/construction-brand.webp",
+      "alt": "A construction company's branding on site and on its vehicles",
+      "width": 1280,
+      "height": 771
+    },
+    "roadmap": "This guide covers why brand reputation carries so much weight in construction, what the companies who do it well have in common, the challenges a construction brand runs into, and where to start if you are still building yours."
+  },
+  "briefing": {
+    "eyebrow": "Brand site briefing",
+    "title": "Trust Is the Whole Product",
+    "intro": "Clients are not choosing a builder the way they choose a restaurant. The sums are large, the disruption is real, and getting it wrong is expensive and slow to undo. That is why trust does more work in this industry than in almost any other, and why it is worth building deliberately.",
+    "panels": [
+      {
+        "heading": "Why does brand reputation matter so much in construction?",
+        "paragraphs": [
+          "Because of what is at stake. With significant investment and risk involved, clients need assurance that they are partnering with a reliable and capable company, and they look for that assurance long before they ask for a price.",
+          "Reputation feeds directly into three things: whether a client trusts you, whether you get invited to quote at all, and whether the business is still winning work in five years."
+        ]
+      },
+      {
+        "heading": "Where to start if the brand is thin",
+        "paragraphs": [
+          "You do not need a rebrand. You need the things a cautious client looks for to be easy to find."
+        ],
+        "steps": [
+          "Make the proof visible: completed projects, named clients where you have permission, real photographs.",
+          "Be consistent across every place a client checks, from the van to the website to the review sites.",
+          "Say what you specialise in rather than what you are willing to do.",
+          "Give the team something to be proud of. A brand that inspires the people building it holds up on site."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "If a prospect googled you tonight, would what they find match what you told them on the phone? Where those two disagree, the internet wins."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "promote_headings": [
+    "Why does brand reputation matter in construction?",
+    "Case Studies of Successful Brands",
+    "Challenges Faced by Construction Brands",
+    "Strategies for Emerging Brands"
+  ],
+  "heading_rewrites": {
+    "Importance of Brand Reputation in Construction": "Why does brand reputation matter in construction?",
+    "1. What steps should you take to develop a robust brand identity?": "1. How do you develop a robust brand identity?"
+  },
+  "brief_before_heading": "Why does brand reputation matter in construction?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

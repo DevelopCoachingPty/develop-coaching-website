@@ -1,0 +1,69 @@
+{
+  "slug": "usp-for-construction-company",
+  "pillar": "Plan",
+  "title": "USP for a Construction Company: How to Stand Out",
+  "meta_description": "How to find the USP for your construction company: run a SWOT analysis, work out what you are genuinely better at, and say it in a way clients recognise.",
+  "h1": "USP for a Construction Company: How to Stand Out",
+  "hero_subtitle": "A practical guide to working out what you are actually better at, and saying it plainly.",
+  "intro": {
+    "answer": "A unique selling proposition is your answer to the only question a client is really asking: why choose us? It has to be something you can deliver every time, not a line for the website.",
+    "image": {
+      "src": "/wp-content/uploads/2019/10/USP-blog-develop-coaching.jpg",
+      "alt": "One red chess piece standing apart from the rest, illustrating a construction company's unique selling proposition",
+      "width": 617,
+      "height": 407
+    },
+    "roadmap": "This guide covers what a USP is in a construction context, how to find yours through market research and a SWOT analysis, how to phrase it so a client recognises it, and how to carry it consistently across your marketing."
+  },
+  "briefing": {
+    "eyebrow": "Positioning site briefing",
+    "title": "Find the Answer to Why Choose Us",
+    "intro": "Most construction businesses answer why choose us with things every competitor also claims: quality, reliability, experience. A USP only works when a competitor could not honestly say the same sentence. That is the test, and the way to find it is structured rather than creative.",
+    "panels": [
+      {
+        "heading": "How do you find your construction company's USP?",
+        "paragraphs": [
+          "Start with market research and a SWOT analysis: strengths, weaknesses, opportunities, threats. Define the objective first, then gather information about your own company, your competitors and the market before you write anything down.",
+          "Then look for the overlap between what you are genuinely good at and what your target client actually values. A highly skilled workforce, specialist technique, strong supplier relationships or a sustainability commitment only counts if the client cares about it."
+        ]
+      },
+      {
+        "heading": "Build it in this order",
+        "paragraphs": [
+          "The phrasing comes last. Work out what is true before you work out how to say it."
+        ],
+        "steps": [
+          "Research the market and your competitors so you know what is already claimed.",
+          "Build a SWOT matrix and be honest about the weaknesses, not just the strengths.",
+          "Pick the strength your target client values most, and check a competitor could not claim it too.",
+          "Write it clearly and concisely, then carry the same wording across every marketing channel."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "Your USP is a promise you have to deliver on consistently. If the business cannot keep it on a bad week, it is marketing rather than positioning, and clients notice the difference."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "Understanding USP for Construction Company",
+  "intro_replaces_paragraphs": 3,
+  "text_replacements": [
+    {
+      "find": "start by conducting a thorough SWOT analysis",
+      "replace": "start with thorough market research, then conduct a SWOT analysis"
+    },
+    {
+      "find": "just a marketing tool—it",
+      "replace": "just a marketing tool. It"
+    },
+    {
+      "find": "just about listing services—it",
+      "replace": "just about listing services. It"
+    }
+  ],
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

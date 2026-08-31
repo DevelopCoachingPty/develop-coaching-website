@@ -1,0 +1,57 @@
+{
+  "slug": "grow-landscaping-business",
+  "pillar": "Attract",
+  "title": "Grow a Landscaping Business: From Gardener to Builder",
+  "meta_description": "How to grow a landscaping business past £500k: sell design and build projects rather than day labour, kill the winter dip, and upsell maintenance on every job.",
+  "h1": "Grow a Landscaping Business: From Gardener to Builder",
+  "hero_subtitle": "A practical guide to moving from patios and maintenance to full garden builds.",
+  "intro": {
+    "answer": "You can mow lawns all year and still be skint. The businesses that break past £500k stop thinking like a gardener and start operating like a construction business.",
+    "image": {
+      "src": "/wp-content/uploads/2026/02/Landscape.png",
+      "alt": "A completed landscaping project built as a full outdoor construction job",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers the shift from jobs to projects: selling design and build rather than labour, building revenue that survives January, using visual marketing properly, upselling maintenance on every project, and systemising the whole thing like a contractor would."
+  },
+  "briefing": {
+    "eyebrow": "Landscaping growth site briefing",
+    "title": "The Problem Is Positioning, Not Pricing",
+    "intro": "A landscaper turning over just under £500k, great reputation, brilliant workmanship, pricing £8k to £15k patios all day and competing on price. Diary full, bank account not. Nothing about the work needed fixing. What needed fixing was what clients thought he was.",
+    "panels": [
+      {
+        "heading": "Why does a busy landscaping business stay skint?",
+        "paragraphs": [
+          "Because it is selling jobs rather than projects. A patio is a job: priced against the bloke down the road, won on price, finished in a fortnight. A garden transformation is a project, priced on the outcome and judged on the design.",
+          "He saw himself as a landscaper. His clients saw him as a bloke who does patios. Once he was reframed as an outdoor construction specialist offering full garden transformations, the conversation changed and so did the numbers."
+        ]
+      },
+      {
+        "heading": "The five moves that make the shift",
+        "paragraphs": [
+          "Each one lifts the average project value or takes the seasonality out of the year."
+        ],
+        "steps": [
+          "Sell design and build packages, not just labour.",
+          "Build year round revenue so January is not a panic.",
+          "Use visual marketing properly, because this trade sells on the photograph.",
+          "Upsell a maintenance contract on every project you finish.",
+          "Systemise it like a construction company rather than a gardening round."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The real upgrade",
+      "text": "None of this is about working harder or charging more for the same thing. It is about being bought as a different kind of business, which changes who calls you and what they expect to pay."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "brief_before_heading": "The Shift: From Jobs to Projects",
+  "intro_replaces_paragraphs": 2,
+  "demote_body_h1": true,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

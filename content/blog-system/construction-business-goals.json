@@ -1,0 +1,59 @@
+{
+  "slug": "construction-business-goals",
+  "pillar": "Plan",
+  "title": "Setting Clear Construction Business Goals",
+  "meta_description": "How to set construction business goals that hold: start with a vision the team understands, make them SMART, and choose growth the business can sustain.",
+  "h1": "Setting Clear Construction Business Goals",
+  "hero_subtitle": "A practical guide to goals your team can actually act on.",
+  "intro": {
+    "answer": "A goal nobody can measure is a wish. Setting clear construction business goals is not only about profit, it is about giving everyone in the company the same idea of what a good year looks like.",
+    "image": {
+      "src": "/wp-content/uploads/2022/02/Construction-business-goals.jpg",
+      "alt": "A construction business owner setting goals for the year ahead",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers starting from a vision and a mission statement, turning that into SMART goals, choosing growth the business can sustain, and the areas worth aiming at: client satisfaction, your team, and digital capability."
+  },
+  "briefing": {
+    "eyebrow": "Goal setting site briefing",
+    "title": "Start With the Vision, Not the Number",
+    "intro": "Most goal setting starts with a turnover figure and works backwards, which is why so much of it is abandoned by March. The businesses that hold their goals start somewhere less obvious: what the company is actually for, written plainly enough that the team can repeat it.",
+    "panels": [
+      {
+        "heading": "How do you set construction business goals that stick?",
+        "paragraphs": [
+          "Start by defining the company's vision, and write a mission statement that captures it. Keep it concise, easy to understand and memorable, because its job is to guide decisions when you are not in the room.",
+          "Then make each goal SMART: specific, measurable, achievable, realistic and timely. A goal that fails any one of those five will quietly stop being mentioned."
+        ]
+      },
+      {
+        "heading": "Then choose growth you can sustain",
+        "paragraphs": [
+          "Growth that outruns the team or the cash is not growth, it is exposure. These are the directions worth considering."
+        ],
+        "steps": [
+          "Expand into new markets, where you already have a right to win.",
+          "Offer new services that your existing clients are already buying elsewhere.",
+          "Invest in your team, because capacity is usually the real ceiling.",
+          "Focus on client satisfaction, which is the cheapest source of the next job.",
+          "Build digital capability rather than adding tools."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "Ask three people in the business what this year's goals are. If you get three different answers, the goals exist on paper but not in the company."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "heading_rewrites": {
+    "Define Your Construction Business Goals: Start with a Vision": "Where do construction business goals start?"
+  },
+  "brief_before_heading": "Where do construction business goals start?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

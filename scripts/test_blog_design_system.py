@@ -22,7 +22,7 @@ SPEC = {
     "hero_subtitle": "A practical guide to the thing this article is about.",
     "intro": {
         "answer": "The direct answer to the question the reader searched for.",
-        "image": {"src": "/wp-content/uploads/example.webp", "alt": "Example", "width": 940, "height": 788},
+        "image": {"src": "/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg", "alt": "Example", "width": 1200, "height": 1200},
         "roadmap": "This guide covers the ground in the order it matters.",
     },
     "briefing": {
@@ -61,14 +61,14 @@ SCHEMA = {
 
 def page(body_paragraphs: str = "", broken_anchor: bool = False) -> str:
     anchor = (
-        '<div>\n  <a href="https://youtube.com/watch?v=x" rel="noopener noreferrer"></p>\n<p>  </a>\n</div>\n'
+        '<div>\n  <a href="https://www.youtube.com/watch?v=lWNMGSHK-_0" rel="noopener noreferrer"></p>\n<p>  </a>\n</div>\n'
         if broken_anchor
         else ""
     )
     body = body_paragraphs or (
         "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
         "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
-        '<p><img src="/wp-content/uploads/example.webp" alt="Example" width="940" height="788"></p>\n'
+        '<p><img src="/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg" alt="Example" width="940" height="788"></p>\n'
         "<h2>First Heading</h2>\n<p>Body copy under the first heading.</p>\n"
         "<h2>Second Heading</h2>\n<p>Body copy under the second heading.</p>\n"
     )
@@ -126,7 +126,7 @@ class TransformTests(unittest.TestCase):
     def test_duplicate_lead_image_removed(self):
         out = self.transform()
         start, end = bds.body_span(out)
-        self.assertEqual(out[start:end].count("/wp-content/uploads/example.webp"), 1)
+        self.assertEqual(out[start:end].count("/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg"), 1)
 
     def test_video_embed_and_its_script_survive(self):
         """An unclosed <p> around an embed must not let the intro swallow it."""
@@ -147,10 +147,42 @@ class TransformTests(unittest.TestCase):
         self.assertIn('id="dc-article-intro"', body)
         self.assertNotIn("The first opening paragraph", body)
 
-    def test_broken_anchor_is_closed(self):
+    def test_dead_external_image_is_removed(self):
+        dead = (
+            '<p><img src="https://wsstgprdphotosonic01.blob.core.windows.net/photosonic/x.png?se=2024-09-01" alt="x"></p>\n'
+            "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
+            "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
+            "<h2>First Heading</h2>\n<p>Body.</p>\n<h2>Second Heading</h2>\n<p>Body.</p>\n"
+        )
+        out = self.transform(page(body_paragraphs=dead))
+        self.assertNotIn("wsstgprdphotosonic01", out)
+        self.assertIn('id="dc-article-brief"', out)
+
+    def test_bare_video_link_becomes_a_real_player(self):
         out = self.transform(page(broken_anchor=True))
         self.assertNotIn('rel="noopener noreferrer"></p>', out)
-        self.assertIn('rel="noopener noreferrer"></a>', out)
+        self.assertIn('class="lite-youtube"', out)
+        self.assertIn('data-videoid="lWNMGSHK-_0"', out)
+        self.assertIn("i.ytimg.com/vi/lWNMGSHK-_0/hqdefault.jpg", out)
+        self.assertIn('document.querySelectorAll(".lite-youtube")', out)
+
+    def test_video_player_is_not_duplicated_on_rerun(self):
+        once = self.transform(page(broken_anchor=True))
+        twice = bds.transform(once, SPEC)
+        self.assertEqual(once, twice)
+        self.assertEqual(twice.count('class="lite-youtube"'), 1)
+        self.assertEqual(twice.count('document.querySelectorAll(".lite-youtube")'), 1)
+
+    def test_existing_player_is_left_alone(self):
+        embed = (
+            '<div class="lite-youtube" data-videoid="keepme"></div>\n'
+            "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
+            "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
+            "<h2>First Heading</h2>\n<p>Body.</p>\n<h2>Second Heading</h2>\n<p>Body.</p>\n"
+        )
+        out = self.transform(page(body_paragraphs=embed))
+        self.assertIn('data-videoid="keepme"', out)
+        self.assertEqual(out.count('class="lite-youtube"'), 1)
 
     def test_head_and_schema_carry_the_same_title(self):
         out = self.transform()
@@ -210,6 +242,14 @@ class ValidationTests(unittest.TestCase):
 
     def test_valid_spec_passes(self):
         self.check()
+
+    def test_missing_intro_image_rejected(self):
+        """A guessed image path is the exact fault this rollout removes."""
+        with self.assertRaises(ValueError) as caught:
+            self.check(intro={**SPEC["intro"], "image": {
+                "src": "/wp-content/uploads/2020/02/does-not-exist.jpg",
+                "alt": "x", "width": 10, "height": 10}})
+        self.assertIn("intro image not found", str(caught.exception))
 
     def test_long_title_rejected(self):
         with self.assertRaises(ValueError):

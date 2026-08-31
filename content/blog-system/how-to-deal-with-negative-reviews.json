@@ -1,0 +1,64 @@
+{
+  "slug": "how-to-deal-with-negative-reviews",
+  "pillar": "Attract",
+  "title": "How to Deal With Negative Reviews Without Losing Work",
+  "meta_description": "How to handle a bad review: why they start appearing as you grow, how to reply without making it worse, and how to use them to find what actually slipped.",
+  "h1": "How to Deal With Negative Reviews Without Losing Work",
+  "hero_subtitle": "A practical guide to answering a bad review and finding what caused it.",
+  "intro": {
+    "answer": "You will never please every client, so the occasional bad review is not the problem. Bad reviews arriving regularly is the problem, and it usually starts the moment a growing business stops feeling personal.",
+    "image": {
+      "src": "/wp-content/uploads/2019/09/coaching-greg-wilkes-develop-bad-review-blog.jpg",
+      "alt": "A construction business owner reading a negative review online",
+      "width": 617,
+      "height": 407
+    },
+    "roadmap": "This guide covers how to view a bad review, how to avoid them as the business grows and you stop being the face of it, how to respond without making it worse, and how to learn something from each one."
+  },
+  "briefing": {
+    "eyebrow": "Reputation site briefing",
+    "title": "Do Not Reply While You Are Angry",
+    "intro": "The reply is the part everyone gets wrong, and it is the part the next prospect actually reads. They are not really judging the complaint. They are judging how the company handled it.",
+    "panels": [
+      {
+        "heading": "How should you respond to a bad review?",
+        "paragraphs": [
+          "Not immediately, and not in anger. The instinct is to defend yourself or have a go back, and it is the wrong one. Whatever you write is permanent and public, and it will be read by people who have no idea who was right.",
+          "Apologise, acknowledge how the client felt, and tell them you are looking into how to improve that area of the business. Use their first name. Then take the detail out of public view and deal with it properly."
+        ]
+      },
+      {
+        "heading": "Then find out what actually happened",
+        "paragraphs": [
+          "Do not wallow in it, but do not wave it away either. Every negative review is telling you something about the service at that moment."
+        ],
+        "steps": [
+          "Run a short investigation into each negative review, not just the ones that sting.",
+          "Look for the pattern. One is an off day, a run of them is a process problem.",
+          "Check what changed as you grew. Service tends to slip where the personal contact used to be.",
+          "Fix the thing, then tell the client what you fixed."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "Clients forgive an individual far more readily than they forgive a faceless company. As you scale, the goodwill you used to get for free has to be rebuilt deliberately."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "insert_headings": [
+    {"before": "The danger arises if you start noticing poor reviews", "text": "How Do You Avoid Bad Reviews as You Grow?"},
+    {"before": "The other thing to bear in mind is your reaction", "text": "How Should You Respond to a Bad Review?"},
+    {"before": "Whilst you don’t want to ponder and wallow", "text": "How Do You Learn From a Bad Review?"}
+  ],
+  "brief_before_heading": "How Do You Avoid Bad Reviews as You Grow?",
+  "intro_replaces_paragraphs": 2,
+  "text_replacements": [
+    {"find": "although you may have plenty of good ones",
+     "replace": "although you may have plenty of <a href=\"/customer-reviews-for-construction-company/\">good ones</a>"}
+  ],
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

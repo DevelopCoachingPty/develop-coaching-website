@@ -1,0 +1,61 @@
+{
+  "slug": "grow-carpentry-business",
+  "pillar": "Scale",
+  "title": "Grow a Carpentry Business: Six Steps for UK Joiners",
+  "meta_description": "How to grow a carpentry business: stronger pricing, a production system that runs without you, a brand that attracts better clients, and the right partners.",
+  "h1": "Grow a Carpentry Business: Six Steps for UK Joiners",
+  "hero_subtitle": "A practical guide for joinery firms stuck between £300k and £500k.",
+  "intro": {
+    "answer": "Most carpentry firms sit at £300k to £500k for years, and it is almost never the craftsmanship. The finishes are spot on. What stalls the business is everything around the craft: pricing, branding, scheduling, workflow and hiring.",
+    "image": {
+      "src": "/wp-content/uploads/2025/12/Joinery-1.png",
+      "alt": "A carpentry and joinery workshop producing finished work",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers six moves: pricing like a professional company, building a production system that runs without you, building a brand that attracts high-value clients, partnering with builders and architects, systemising operations, and building a team that multiplies your output."
+  },
+  "briefing": {
+    "eyebrow": "Joinery growth site briefing",
+    "title": "Price First, Because Everything Else Follows",
+    "intro": "Most carpentry firms price too low. They estimate in their head, guess the labour hours, and forget the things that are not obvious until the invoice lands. Fixing that funds every other change on this list.",
+    "panels": [
+      {
+        "heading": "Why do skilled carpentry firms stall?",
+        "paragraphs": [
+          "Because outstanding skill and a tight business are different things. Clients rave about the work while the margin quietly disappears into unpriced hours and jobs that overran.",
+          "Growing without burning out needs a simple framework you can repeat, one that reduces chaos and increases margin rather than just adding more work to the same system."
+        ]
+      },
+      {
+        "heading": "The six moves",
+        "paragraphs": [
+          "In order. Each one makes the next one possible."
+        ],
+        "steps": [
+          "Price like a professional company, not from memory.",
+          "Build a production system that runs without you in it.",
+          "Build a brand that attracts high-value clients.",
+          "Partner with builders, designers and architects.",
+          "Systemise operations so work flows smoothly.",
+          "Build a team that multiplies your output rather than replacing your hours."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Where it sits",
+      "text": "Growing a joinery firm sits mostly across Attract, Convert and Deliver. Those three drive almost every gain a carpentry company needs."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "1. Price like a professional carpentry company": "1. How should a carpentry company price?"
+  },
+  "brief_before_heading": "1. How should a carpentry company price?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}

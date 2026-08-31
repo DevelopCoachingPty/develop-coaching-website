@@ -20,6 +20,7 @@ import argparse
 import html
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -41,34 +42,99 @@ BRIEF_ID = "dc-article-brief"
 # --------------------------------------------------------------------------
 
 STYLES = """<style id="%s">
-.dc-article-hero-subtitle{max-width:680px;margin:16px 0 0!important;color:#fff;font-size:clamp(17px,2vw,22px)!important;font-weight:600;line-height:1.45;text-shadow:0 2px 4px rgba(0,0,0,.35)}
-.dc-article-intro{margin:0 0 38px}
-.dc-article-intro__answer{margin:0 0 24px!important;padding:18px 22px;border-left:6px solid #f6c944;background:#f5f3ec;color:#25262a;font-size:20px;font-weight:700;line-height:1.5}
-.dc-article-intro img{display:block;width:100%%;height:auto;margin:0 0 24px}
-.dc-article-intro__roadmap{margin:0!important;font-size:18px;line-height:1.65}
-.dc-article-brief{--ink:#25262a;--paper:#f5f3ec;--signal:#f6c944;--blue:#087f86;margin:56px 0;padding:0;background:var(--paper);border:1px solid #d9d5c9;box-shadow:8px 8px 0 var(--ink);color:var(--ink);overflow:hidden}
+/* Develop Coaching article system.
+   Set in Source Sans Pro, the face the site already loads. The weight comes
+   from scale, spacing and restraint rather than from ornament. */
+.dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/* Article prose.
+   The column runs 796px wide and the theme sets 20px text on a 1.4 line, which
+   is about 80 characters a line and too tight to read comfortably at length.
+   Headings came in at weight 500 with 8px of space above them, so sections did
+   not separate, and h3 was smaller than the body text it sat above. This fixes
+   the measure, the rhythm and the hierarchy. Images and the design blocks keep
+   the full column width. */
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol,.dc-prose > h2,.dc-prose > h3,.dc-prose > h4,.dc-prose > blockquote{max-width:66ch}
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol{margin-bottom:20px!important;color:#424142;font-size:19px!important;line-height:1.66!important;text-wrap:pretty}
+.dc-prose > h2{margin:52px 0 16px!important;color:#25262a!important;font-size:clamp(26px,2.6vw,33px)!important;font-weight:700!important;line-height:1.16!important;letter-spacing:-.022em;text-wrap:balance}
+.dc-prose > h3{margin:34px 0 10px!important;color:#25262a!important;font-size:22px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.015em;text-wrap:balance}
+.dc-prose > h4{margin:26px 0 8px!important;color:#25262a!important;font-size:19px!important;font-weight:700!important}
+.dc-prose > ul,.dc-prose > ol{padding-left:24px!important}
+.dc-prose > ul > li,.dc-prose > ol > li{margin:0 0 10px!important;padding-left:4px;line-height:1.66}
+.dc-prose > ul > li::marker{color:#2C67AC}
+.dc-prose > ol > li::marker{color:#2C67AC;font-weight:700}
+.dc-prose > figure{margin:30px 0}
+.dc-prose > figure img,.dc-prose > p > img{display:block;width:100%%;height:auto}
+.dc-prose > h2 + p,.dc-prose > h3 + p{margin-top:0!important}
+@media(max-width:600px){
+  .dc-prose > p,.dc-prose > ul,.dc-prose > ol{font-size:17.5px!important;line-height:1.62!important}
+  .dc-prose > h2{margin:38px 0 12px!important}
+  .dc-prose > h3{margin:26px 0 8px!important}
+}
+
+/* In-article links. The Hello theme default is a magenta that appears nowhere
+   in the brand, so links inside article prose take the kit's secondary blue. */
+.elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.elementor-widget-theme-post-content p a:not([class]):hover,.elementor-widget-theme-post-content li a:not([class]):hover{color:#25262a}
+.elementor-widget-theme-post-content p a:not([class]):focus-visible,.elementor-widget-theme-post-content li a:not([class]):focus-visible{outline:3px solid #2C67AC;outline-offset:2px}
+
+/* Opening. A standfirst, not a warning callout. */
+.dc-article-intro{--ink:#25262a;--quiet:#424142;--signal:#FDCE36;margin:0 0 44px}
+.dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
+.dc-article-intro__answer:before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--signal)}
+.dc-article-intro img{display:block;width:100%%;height:auto;margin:0 0 26px}
+.dc-article-intro__roadmap{margin:0!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important;max-width:64ch}
+
+/* Briefing. A site notice: dark head, quiet body, hairline divisions. */
+.dc-article-brief{--ink:#25262a;--paper:#F6F5F2;--edge:#E4E2DC;--rule:#D6D3CB;--quiet:#424142;--signal:#FDCE36;--blue:#2C67AC;
+  margin:52px 0;background:var(--paper);border:1px solid var(--edge);color:var(--ink);overflow:hidden}
 .dc-article-brief *{box-sizing:border-box}
-.dc-article-brief__header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;padding:32px;background:var(--ink);color:#fff;border-bottom:8px solid var(--signal)}
-.dc-article-brief__eyebrow{margin:0 0 10px!important;color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px!important;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(30px,4vw,48px)!important;line-height:1.02!important;letter-spacing:-.03em}
-.dc-article-brief__stamp{min-width:140px;padding:12px 16px;border:2px solid var(--signal);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.1em;text-align:center;text-transform:uppercase;transform:rotate(2deg)}
-.dc-article-brief__body{padding:32px}
-.dc-article-brief__intro{max-width:760px;margin:0 0 30px!important;font-size:18px;line-height:1.65}
-.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
-.dc-article-brief__panel{padding:24px;background:#fff;border-top:5px solid var(--blue)}
-.dc-article-brief__panel h3{margin:0 0 12px!important;color:var(--ink)!important;font-size:24px!important;line-height:1.15!important}
-.dc-article-brief__panel p{margin:0 0 16px!important}
+.dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
+.dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
+.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(253,206,54,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__body{padding:30px}
+.dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
+
+/* Panels divided by a hairline, not boxed as cards. */
+.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.dc-article-brief__panel{padding:0 30px 0 0;background:none;border:0}
+.dc-article-brief__panel + .dc-article-brief__panel{padding:0 0 0 30px;border-left:1px solid var(--rule)}
+.dc-article-brief__panel h3{position:relative;margin:0 0 14px!important;padding-top:16px;color:var(--ink)!important;font-size:19px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.012em}
+.dc-article-brief__panel h3:before{content:"";position:absolute;top:0;left:0;width:26px;height:3px;background:var(--blue)}
+.dc-article-brief__panel p{margin:0 0 14px!important;color:var(--quiet)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
 .dc-article-brief__panel p:last-child{margin-bottom:0!important}
-.dc-article-brief__steps{margin:18px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
-.dc-article-brief__steps li{position:relative;margin:0!important;padding:0 0 18px 42px;counter-increment:dc-step}
-.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-2px;width:28px;height:28px;display:grid;place-items:center;background:var(--signal);border:2px solid var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:900}
-.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:13px;top:28px;bottom:0;border-left:2px dashed var(--blue)}
-.dc-article-brief__review{margin:24px 0 0;padding:20px 24px;background:var(--signal);border-left:8px solid var(--ink)}
-.dc-article-brief__review strong{display:block;margin-bottom:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.dc-article-brief__link{display:inline-block;margin-top:22px;padding:13px 17px;background:var(--ink);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:4px 4px 0 var(--blue)}
-.dc-article-brief__link:hover,.dc-article-brief__link:focus-visible{background:var(--blue)}
-.dc-article-brief__link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-@media(max-width:767px){.dc-article-hero-subtitle{font-size:16px!important}.dc-article-intro__answer{padding:16px 18px;font-size:18px}.dc-article-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-article-brief__header{grid-template-columns:1fr;padding:24px}.dc-article-brief__stamp{justify-self:start;min-width:0}.dc-article-brief__body{padding:20px}.dc-article-brief__grid{grid-template-columns:1fr}.dc-article-brief__panel{padding:20px}}
+
+/* Steps. Quiet numerals on a fine spine. */
+.dc-article-brief__steps{margin:20px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
+.dc-article-brief__steps li{position:relative;margin:0!important;padding:1px 0 20px 40px;color:var(--quiet);font-size:15.5px;line-height:1.62;counter-increment:dc-step}
+.dc-article-brief__steps li:last-child{padding-bottom:0}
+.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-1px;width:25px;height:25px;display:grid;place-items:center;border:1.5px solid var(--ink);border-radius:50%%;background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700}
+.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:12px;top:29px;bottom:6px;border-left:1px solid var(--rule)}
+
+/* Closing note and action. */
+.dc-article-brief__review{margin:30px 0 0!important;padding:20px 24px!important;background:#EDEBE4;border-left:3px solid var(--signal);color:var(--ink)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
+.dc-article-brief__review strong{display:block;margin-bottom:6px;color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.dc-article-brief__link{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:14px 22px;background:var(--ink);border:0;color:#fff!important;font-size:15px;font-weight:700;letter-spacing:.005em;text-decoration:none!important;transition:background .18s ease,gap .18s ease}
+.dc-article-brief__link:after{content:"→";font-size:17px;line-height:1}
+.dc-article-brief__link:hover{background:var(--blue);gap:14px}
+.dc-article-brief__link:focus-visible{background:var(--blue);outline:3px solid var(--ink);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.dc-article-brief__link{transition:none}}
+
+@media(max-width:1100px){
+  .dc-article-brief__grid{grid-template-columns:1fr}
+  .dc-article-brief__panel{padding:0 0 26px!important}
+  .dc-article-brief__panel + .dc-article-brief__panel{padding:26px 0 0!important;border-left:0;border-top:1px solid var(--rule)}
+}
+@media(max-width:600px){
+  .dc-article-hero-subtitle{font-size:16px!important}
+  .dc-article-intro{margin-bottom:34px}
+  .dc-article-intro__answer{padding-top:22px!important}
+  .dc-article-brief{margin:38px 0}
+  .dc-article-brief__header{padding:22px 20px 20px}
+  .dc-article-brief__body{padding:22px 20px}
+  .dc-article-brief__review{padding:18px 20px!important}
+}
 </style>""" % STYLE_ID
 
 
@@ -133,11 +199,9 @@ def build_brief(spec: dict) -> str:
         [
             f'<section class="dc-article-brief" id="{BRIEF_ID}" aria-labelledby="{title_id}">',
             '  <header class="dc-article-brief__header">',
-            "    <div>",
-            f'      <p class="dc-article-brief__eyebrow">{esc(brief["eyebrow"])}</p>',
-            f'      <h2 id="{title_id}">{esc(brief["title"])}</h2>',
-            "    </div>",
-            f'    <div class="dc-article-brief__stamp">{esc(spec["pillar"])} pillar</div>',
+            f'    <p class="dc-article-brief__eyebrow">{esc(brief["eyebrow"])}</p>',
+            f'    <h2 id="{title_id}">{esc(brief["title"])}</h2>',
+            f'    <p class="dc-article-brief__stamp">{esc(spec["pillar"])} pillar</p>',
             "  </header>",
             '  <div class="dc-article-brief__body">',
             f'    <p class="dc-article-brief__intro">{esc(brief["intro"])}</p>',
@@ -175,59 +239,58 @@ def update_head(document: str, spec: dict) -> str:
     if not found:
         raise ValueError("canonical link missing")
     if found.group(1).rstrip("/") != canonical.rstrip("/"):
-        raise ValueError(
-            f"canonical mismatch: page says {found.group(1)}, expected {canonical}"
+        # A canonical pointing somewhere else is sometimes deliberate, so this
+        # stops by default. Two articles point at URLs that return 404, which
+        # tells a search engine the real version of the page does not exist.
+        # Correcting one is opted into per article, and the old target is
+        # recorded in the content file so the change stays reviewable.
+        if not spec.get("fix_canonical"):
+            raise ValueError(
+                f"canonical mismatch: page says {found.group(1)}, expected {canonical}. "
+                "Set fix_canonical in the content file if the current target is wrong."
+            )
+        document = (
+            document[: found.start(1)] + canonical + document[found.end(1) :]
         )
 
-    pairs = (
-        (r"<title>.*?</title>", f"<title>{esc(title)}</title>", "title tag"),
-        (
-            r'(<meta name="description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "meta description",
-        ),
-        (
-            r'(<meta property="og:title" content=")[^"]*(")',
-            rf"\g<1>{esc(title)}\g<2>",
-            "og:title",
-        ),
-        (
-            r'(<meta property="og:description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "og:description",
-        ),
-        (
-            r'(<meta name="twitter:title" content=")[^"]*(")',
-            rf"\g<1>{esc(title)}\g<2>",
-            "twitter:title",
-        ),
-        (
-            r'(<meta name="twitter:description" content=")[^"]*(")',
-            rf"\g<1>{esc(description)}\g<2>",
-            "twitter:description",
-        ),
-        (
-            r'(<meta property="article:section" content=")[^"]*(")',
-            rf"\g<1>{spec['pillar']}\g<2>",
-            "article:section",
-        ),
-        (
-            r'(<meta property="og:updated_time" content=")[^"]*(")',
-            rf"\g<1>{modified}\g<2>",
-            "og:updated_time",
-        ),
-        (
-            r'(<meta property="article:modified_time" content=")[^"]*(")',
-            rf"\g<1>{modified}\g<2>",
-            "article:modified_time",
-        ),
+    document = replace_once(
+        document, r"<title>.*?</title>", f"<title>{esc(title)}</title>", "title tag"
     )
-    for pattern, replacement, what in pairs:
-        document = replace_once(document, pattern, replacement, what)
 
-    style_pattern = rf'<style id="{STYLE_ID}">.*?</style>'
-    if re.search(style_pattern, document, re.DOTALL):
-        document = replace_once(document, style_pattern, STYLES, "shared stylesheet")
+    # Meta tags vary across the library: some articles were published without
+    # og:updated_time or article:modified_time at all. Set the tag where it
+    # exists, add it where it does not, rather than failing on a page whose
+    # only fault is a missing tag.
+    meta_tags = (
+        ("name", "description", esc(description)),
+        ("property", "og:title", esc(title)),
+        ("property", "og:description", esc(description)),
+        ("name", "twitter:title", esc(title)),
+        ("name", "twitter:description", esc(description)),
+        ("property", "article:section", spec["pillar"]),
+        ("property", "og:updated_time", modified),
+        ("property", "article:modified_time", modified),
+    )
+    for attribute, name, value in meta_tags:
+        pattern = rf'(<meta {attribute}="{re.escape(name)}" content=")[^"]*(")'
+        document, count = re.subn(pattern, lambda m: m.group(1) + value + m.group(2), document, count=1)
+        if count == 0:
+            tag = f'<meta {attribute}="{name}" content="{value}" />'
+            document = document.replace("</head>", tag + "\n</head>", 1)
+
+    # The reference page shipped with a one-off stylesheet before this system
+    # existed. Retire it so a page never carries two article stylesheets.
+    document = re.sub(
+        r'<style id="dc-lead-quality-briefing-styles">.*?</style>\s*',
+        "",
+        document,
+        flags=re.DOTALL,
+    )
+    existing = re.search(rf'<style id="{STYLE_ID}">.*?</style>', document, re.DOTALL)
+    if existing:
+        # Spliced by index, not re.sub: the stylesheet contains backslashes and
+        # a replacement string would read them as group references.
+        document = document[: existing.start()] + STYLES + document[existing.end() :]
     else:
         if "</head>" not in document:
             raise ValueError("no </head> to insert the stylesheet into")
@@ -320,8 +383,11 @@ def update_h1_and_hero(document: str, spec: dict) -> str:
     document = replace_once(
         document, h1_pattern, rf"\g<1>{esc(spec['h1'])}\g<2>", "post title h1"
     )
-    hero_pattern = rf'\s*<p class="dc-article-hero-subtitle" id="{HERO_ID}">.*?</p>'
-    document = re.sub(hero_pattern, "", document, flags=re.DOTALL)
+    for pattern in (
+        rf'\s*<p class="dc-article-hero-subtitle" id="{HERO_ID}">.*?</p>',
+        r'\s*<p class="dc-lead-hero-subtitle" id="dc-lead-hero-subtitle">.*?</p>',
+    ):
+        document = re.sub(pattern, "", document, flags=re.DOTALL)
     h1 = re.search(h1_pattern, document, re.DOTALL)
     insert_at = h1.end()
     return document[:insert_at] + "\n" + build_hero(spec) + document[insert_at:]
@@ -333,17 +399,110 @@ WIDGET_RE = re.compile(r'data-widget_type="theme-post-content\.default"[^>]*>')
 TAG_RE = re.compile(r"<[^>]+>")
 
 
-BROKEN_ANCHOR = re.compile(r"(<a\b[^>]*>)</p>\s*<p>\s*</a>")
+BARE_VIDEO_LINK = re.compile(
+    r'<a\b[^>]*href="https://www\.youtube\.com/watch\?v=(?P<id>[\w-]{6,})"[^>]*>'
+    r'(?:</p>\s*<p>\s*)?\s*</a>'
+)
+
+VIDEO_SCRIPT_MARKER = 'document.querySelectorAll(".lite-youtube")'
+
+VIDEO_SCRIPT = """
+<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".lite-youtube").forEach(function (el) {
+      const videoId = el.getAttribute("data-videoid");
+      el.addEventListener("click", function () {
+        const iframe = document.createElement("iframe");
+        iframe.style.position = "absolute";
+        iframe.style.top      = 0;
+        iframe.style.left     = 0;
+        iframe.style.width    = "100%";
+        iframe.style.height   = "100%";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        el.innerHTML = "";
+        el.appendChild(iframe);
+      });
+    });
+  });
+</script>"""
 
 
-def repair_broken_anchors(document: str) -> str:
-    """Close anchors that WordPress left open with a stray </p>.
+def video_player(video_id: str, title: str) -> str:
+    """The click-to-load player the rest of the articles already use."""
+    thumb = f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+    return (
+        f'<div class="lite-youtube" style="position:relative;width:100%;padding-bottom:56.25%;'
+        f'background:#000;margin-bottom:1rem;" data-videoid="{video_id}">\n'
+        f'  <a href="https://www.youtube.com/watch?v={video_id}" target="_blank" rel="noopener" '
+        f'aria-label="Play the video: {esc(title)}" '
+        f'style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;'
+        f"background-size:cover;background-position:center;background-image:url(&#039;{thumb}&#039;);\">\n"
+        '    <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true" focusable="false" '
+        'style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">\n'
+        '      <path d="M66.52 7.02a8.27 8.27 0 00-5.83-5.83C56.18 0 34 0 34 0S11.82 0 7.3 1.19a8.27 '
+        '8.27 0 00-5.83 5.83C0 11.54 0 24 0 24s0 12.46 1.47 16.98a8.27 8.27 0 005.83 5.83C11.82 48 34 '
+        '48 34 48s22.18 0 26.7-1.19a8.27 8.27 0 005.83-5.83C68 36.46 68 24 68 24s0-12.46-1.48-16.98z" '
+        'fill="#f00"></path>\n'
+        '      <path d="M45 24L27 14v20l18-10z" fill="#fff"></path>\n'
+        "    </svg>\n  </a>\n</div>"
+    )
 
-    An anchor closed by </p> is never closed at all: the parser adopts the rest
-    of the article into the link, so the whole body renders in link colour and
-    every paragraph becomes a tab stop. Two live articles carry this.
+
+def repair_video_embeds(document: str, spec: dict) -> str:
+    """Build a real player where WordPress left a bare YouTube link.
+
+    Two articles carry an anchor closed by a stray </p>, which means it is never
+    closed at all: the parser adopts the rest of the article into the link, the
+    whole body renders in link colour and every paragraph becomes a tab stop.
+    The anchor is also empty, so the video these pages are meant to open with
+    simply does not exist. Every other article has a click-to-load player. This
+    builds the same player from the link that is already there.
     """
-    return BROKEN_ANCHOR.sub(r"\1</a>", document)
+    if "lite-youtube" in document:
+        return document
+
+    match = BARE_VIDEO_LINK.search(document)
+    if not match:
+        return document
+
+    document = (
+        document[: match.start()]
+        + video_player(match.group("id"), spec.get("h1", "Develop Coaching"))
+        + document[match.end() :]
+    )
+    if VIDEO_SCRIPT_MARKER not in document:
+        start, end = body_span(document)
+        # Insert before the widget's trailing indentation, so the script does
+        # not leave a whitespace-only line behind it.
+        insert_at = len(document[:end].rstrip())
+        document = document[:insert_at] + VIDEO_SCRIPT + document[insert_at:]
+    return document
+
+
+def mark_prose_container(document: str) -> str:
+    """Add the dc-prose class to the post content widget.
+
+    The prose rules are scoped to direct children of this container, so they
+    style the article's own copy without reaching into the design blocks, the
+    sidebar or any other widget on the page.
+    """
+    match = WIDGET_RE.search(document)
+    if not match:
+        raise ValueError("post content widget not found")
+    opening_start = document.rfind("<div", 0, match.start())
+    opening = document[opening_start : match.end()]
+    if "dc-prose" in opening:
+        return document
+    if re.search(r'\bclass="', opening):
+        updated = re.sub(r'(\bclass=")', r"\1dc-prose ", opening, count=1)
+    else:
+        updated = re.sub(r"^<div\b", '<div class="dc-prose"', opening, count=1)
+    if updated == opening:
+        raise ValueError("could not tag the post content widget")
+    return document[:opening_start] + updated + document[match.end() :]
 
 
 def body_span(document: str) -> tuple:
@@ -405,7 +564,11 @@ def update_intro(document: str, spec: dict) -> str:
     body = document[start:end]
     block = build_intro(spec)
 
-    owned = re.compile(rf'<div class="dc-article-intro" id="{INTRO_ID}">.*?</div>', re.DOTALL)
+    owned = re.compile(
+        rf'<div class="dc-article-intro" id="{INTRO_ID}">.*?</div>'
+        r'|<div class="dc-lead-guide-intro" id="dc-lead-guide-intro">.*?</div>',
+        re.DOTALL,
+    )
     if owned.search(body):
         body = owned.sub(block, body, count=1)
         body = drop_duplicate_lead_image(body, spec)
@@ -443,7 +606,11 @@ def update_brief(document: str, spec: dict) -> str:
     start, end = body_span(document)
     body = document[start:end]
 
-    owned = re.compile(rf'<section class="dc-article-brief" id="{BRIEF_ID}".*?</section>\s*', re.DOTALL)
+    owned = re.compile(
+        rf'<section class="dc-article-brief" id="{BRIEF_ID}".*?</section>\s*'
+        r'|<section class="dc-lead-brief" id="dc-lead-quality-briefing".*?</section>\s*',
+        re.DOTALL,
+    )
     body = owned.sub("", body)
 
     anchor = spec["brief_before_heading"].strip()
@@ -520,6 +687,121 @@ def promote_headings(document: str, spec: dict) -> str:
     return document[:start] + body + document[end:]
 
 
+# Three articles embed an image from a generator's temporary storage, signed
+# with an access token that expired in September 2024. Every one returns 403,
+# so the live pages have rendered a broken image icon for close to two years.
+DEAD_IMAGE_HOSTS = ("wsstgprdphotosonic01.blob.core.windows.net",)
+
+
+def drop_dead_images(document: str) -> str:
+    """Remove images whose host is known to no longer serve them.
+
+    A broken image is worse than no image: it renders as a placeholder icon and
+    tells a reader the page is neglected. These are removed rather than
+    replaced, because inventing a substitute picture is not this script's job.
+    """
+    start, end = body_span(document)
+    body = document[start:end]
+    for host in DEAD_IMAGE_HOSTS:
+        wrapped = re.compile(
+            rf'\s*<(figure|p)\b[^>]*>\s*<img\b[^>]*src="[^"]*{re.escape(host)}[^"]*"[^>]*>\s*</\1>',
+            re.IGNORECASE,
+        )
+        body = wrapped.sub("", body)
+        bare = re.compile(
+            rf'\s*<img\b[^>]*src="[^"]*{re.escape(host)}[^"]*"[^>]*>', re.IGNORECASE
+        )
+        body = bare.sub("", body)
+    return document[:start] + body + document[end:]
+
+
+# One article had its markup double escaped somewhere in a WordPress migration,
+# so tags arrive as the literal text u003cstrongu003e rather than <strong>.
+# Readers see the gibberish on the page, and so does a search engine.
+ESCAPED_MARKUP = (("u003c", "<"), ("u003e", ">"), ("u0022", '"'))
+
+
+def repair_escaped_markup(document: str) -> str:
+    """Turn literally escaped tags back into markup, inside the article body."""
+    start, end = body_span(document)
+    body = document[start:end]
+    if "u003c" not in body:
+        return document
+    for broken, fixed in ESCAPED_MARKUP:
+        body = body.replace(broken, fixed)
+    return document[:start] + body + document[end:]
+
+
+def deduplicate_sections(document: str, spec: dict) -> str:
+    """Remove an earlier copy of a section that appears twice.
+
+    One article carries a whole 325 word block twice, three headings and all,
+    because an edited version was pasted in without the original being taken
+    out. The reader sees the same three sections run past twice. Naming the
+    heading here keeps the removal explicit rather than letting a script guess
+    which copy to keep. The last copy is kept, since that is the edited one.
+    """
+    headings = spec.get("deduplicate_sections") or []
+    if not headings:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for wanted in headings:
+        while True:
+            found = [
+                match
+                for match in re.finditer(r"<h([23])\b[^>]*>.*?</h\1>", body, re.DOTALL)
+                if text_of(match.group(0)).casefold() == wanted.strip().casefold()
+            ]
+            if len(found) < 2:
+                break
+            first = found[0]
+            level = first.group(1)
+            # The block runs to the next heading at the same level or higher.
+            following = re.compile(rf"<h[1-{level}]\b[^>]*>", re.IGNORECASE)
+            nxt = following.search(body, first.end())
+            stop = nxt.start() if nxt else len(body)
+            body = body[: first.start()] + body[stop:]
+    return document[:start] + body + document[end:]
+
+
+def insert_headings(document: str, spec: dict) -> str:
+    """Introduce H2 sections into articles that were published as flowing prose.
+
+    Twelve articles carry no headings at all, which leaves a reader with an
+    unbroken wall of text and gives an answer engine no passage to lift. Each
+    heading is declared as {"before": "<opening words of the paragraph>",
+    "text": "<the heading>"} so the placement is reviewable as copy rather than
+    guessed by a script. Tolerant on re-run: a heading already present is left
+    alone.
+    """
+    headings = spec.get("insert_headings") or []
+    if not headings:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for item in headings:
+        anchor, text = item["before"].strip(), item["text"].strip()
+        if any(
+            text_of(m.group(0)).casefold() == text.casefold()
+            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+        ):
+            continue
+        target = None
+        for span_start, span_end in prose_paragraphs(body):
+            if text_of(body[span_start:span_end]).startswith(anchor):
+                target = span_start
+                break
+        if target is None:
+            raise ValueError(
+                f"insert_headings: no paragraph starts with {anchor!r}"
+            )
+        body = body[:target] + f"<h2>{esc(text)}</h2>\n" + body[target:]
+    return document[:start] + body + document[end:]
+
+
 def apply_heading_rewrites(document: str, spec: dict) -> str:
     """Rename body headings, declared as exact old text to new text.
 
@@ -573,12 +855,17 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 
 def transform(document: str, spec: dict) -> str:
-    document = repair_broken_anchors(document)
+    document = mark_prose_container(document)
+    document = drop_dead_images(document)
+    document = repair_escaped_markup(document)
+    document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)
     document = update_visible_category(document, spec)
     document = update_h1_and_hero(document, spec)
     document = demote_body_h1s(document, spec)
+    document = deduplicate_sections(document, spec)
+    document = insert_headings(document, spec)
     document = apply_heading_rewrites(document, spec)
     document = promote_headings(document, spec)
     document = apply_text_replacements(document, spec)
@@ -595,6 +882,26 @@ REQUIRED = ("slug", "pillar", "title", "meta_description", "h1", "hero_subtitle"
             "intro", "briefing", "brief_before_heading", "date_modified")
 
 
+def image_size(source: Path) -> tuple:
+    """Real pixel dimensions of an image, or None if they cannot be read."""
+    result = subprocess.run(
+        ["sips", "-g", "pixelWidth", "-g", "pixelHeight", str(source)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return None
+    values = {}
+    for line in result.stdout.splitlines():
+        if ":" in line:
+            key, _, value = line.strip().partition(":")
+            if key.strip() in ("pixelWidth", "pixelHeight"):
+                values[key.strip()] = int(value.strip())
+    if len(values) != 2:
+        return None
+    return values["pixelWidth"], values["pixelHeight"]
+
+
 def validate(spec: dict, path: Path) -> None:
     missing = [key for key in REQUIRED if key not in spec]
     if missing:
@@ -608,6 +915,22 @@ def validate(spec: dict, path: Path) -> None:
             f"{path.name}: meta description is {len(spec['meta_description'])} chars, "
             "keep it between 110 and 165"
         )
+    image = spec["intro"].get("image")
+    if image:
+        # A guessed image path produces exactly the broken image this rollout
+        # exists to remove, so the file has to be on disk and its dimensions
+        # have to match the file rather than the guess.
+        source = WWW / image["src"].lstrip("/")
+        if not source.exists():
+            raise ValueError(f"{path.name}: intro image not found at {image['src']}")
+        actual = image_size(source)
+        if actual and actual != (int(image["width"]), int(image["height"])):
+            raise ValueError(
+                f"{path.name}: intro image is {actual[0]}x{actual[1]} on disk, "
+                f"the content file says {image['width']}x{image['height']}. "
+                "Wrong dimensions make the page jump as the image loads."
+            )
+
     cta = spec["briefing"]["cta"]["href"]
     if not cta.startswith("/5-pillars-free-trainings/"):
         raise ValueError(f"{path.name}: briefing CTA must link to a Five Pillars page")

@@ -1,0 +1,64 @@
+{
+  "slug": "business-coaching-for-construction",
+  "pillar": "Plan",
+  "title": "Business Coaching for Construction: What It Changes",
+  "meta_description": "What business coaching for construction actually does: an honest look at your numbers, a growth strategy built on them, and delivery that stops leaking margin.",
+  "h1": "Business Coaching for Construction: What It Changes",
+  "hero_subtitle": "A practical look at what a coach does, and what has to change before one helps.",
+  "intro": {
+    "answer": "Coaching does not add hours to your week. What it does is force an honest look at where the business actually stands, then build the growth strategy on that rather than on optimism.",
+    "image": {
+      "src": "/wp-content/uploads/2024/09/Rectangle-173.webp",
+      "alt": "A construction business owner working with a business coach",
+      "width": 1440,
+      "height": 565
+    },
+    "roadmap": "This guide covers assessing where the business really is, developing a growth strategy from that assessment, optimising project management and delivery, and what working with a coach changes about the bottom line."
+  },
+  "briefing": {
+    "eyebrow": "Coaching site briefing",
+    "title": "Start With a Financial Health Check",
+    "intro": "Every useful coaching conversation starts in the same place, and it is not the ambition. It is the numbers, because they are the only part of the business that will not flatter you.",
+    "panels": [
+      {
+        "heading": "What should you assess before anything changes?",
+        "paragraphs": [
+          "Cash flow first, because it is the constraint that decides how fast anything else can move. Then your budget and debt levels, so you know what is genuinely available rather than what is theoretically affordable.",
+          "Then profitability, honestly and by type of work. A regular financial health check spots the issues while they are still small enough to be a decision rather than an emergency."
+        ]
+      },
+      {
+        "heading": "Then build from what you found",
+        "paragraphs": [
+          "The strategy comes after the assessment. Doing it the other way round is how businesses end up growing in the direction that hurts most."
+        ],
+        "steps": [
+          "Analyse cash flow, budget, debt and profitability.",
+          "Develop a growth strategy that the numbers can actually support.",
+          "Optimise project management and delivery, because that is where margin leaks.",
+          "Review regularly, so the plan responds to the business rather than the calendar."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "A coach cannot want it more than you do. The businesses that get the most from coaching are the ones already prepared to change how they operate, not just how hard they work."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "heading_rewrites": {
+    "Assessing Your Construction Business": "Where does your construction business actually stand?"
+  },
+  "brief_before_heading": "Where does your construction business actually stand?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "is no small feat—you",
+      "replace": "is no small feat. You"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "grow-plastering-business",
+  "pillar": "Scale",
+  "title": "How to Grow a Plastering Business Beyond Yourself",
+  "meta_description": "How to grow a plastering business: systemise the quality, control the scheduling, train for independence, and price for profit rather than out of panic.",
+  "h1": "How to Grow a Plastering Business Beyond Yourself",
+  "hero_subtitle": "A practical guide for plasterers going from one pair of hands to a trusted team.",
+  "intro": {
+    "answer": "Most plasterers do not fail because of bad workmanship. They fail because they cannot scale it. When it is just you, every wall is finished to your standard. Add more hands without documenting that standard and the quality slips fast.",
+    "image": {
+      "src": "/wp-content/uploads/2026/01/Plastering-1.png",
+      "alt": "A plastered wall finished to a high standard",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers six steps: systemising your quality, controlling scheduling, training the team for independence, expanding the service range, building a reputation pipeline, and pricing for profit rather than out of panic."
+  },
+  "briefing": {
+    "eyebrow": "Plastering growth site briefing",
+    "title": "Document the Standard Before You Hire",
+    "intro": "Fully booked, trowel in hand, still quoting at night. You can only spread yourself so thin before something gives, and it is usually the finish quality, the reputation, or your sanity, in that order.",
+    "panels": [
+      {
+        "heading": "Why do plastering businesses hit a ceiling?",
+        "paragraphs": [
+          "Because the quality lives in your hands and nowhere else. That is fine while you are doing every job. It becomes the whole problem the moment someone else is on the wall.",
+          "Scaling a trade where the finish is the product means writing down what good looks like, then training to it. Without that, every hire dilutes the thing clients came to you for."
+        ]
+      },
+      {
+        "heading": "The six steps",
+        "paragraphs": [
+          "The first three are about protecting quality while you grow. The last three are about making the growth worth having."
+        ],
+        "steps": [
+          "Systemise the quality, so the standard exists outside your head.",
+          "Control the scheduling rather than reacting to whoever shouts loudest.",
+          "Train the team for independence, not supervision.",
+          "Expand the service range where it fits what you already do well.",
+          "Build a reputation pipeline so work arrives without chasing.",
+          "Price for profit, not out of panic when the diary looks thin."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The test",
+      "text": "Send someone else to finish a wall and inspect it against your standard. Whatever they got wrong is the part of the standard you have not written down yet."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Why plastering businesses hit a ceiling": "Why do plastering businesses hit a ceiling?",
+    "Step 1 – Systemise your quality to grow plastering business": "Step 1: Systemise your quality",
+    "Step 2 – Control your scheduling to grow plastering business": "Step 2: Control your scheduling",
+    "Step 3 – Train for independence to grow plastering business": "Step 3: Train for independence",
+    "Step 4 – Expand your service range to grow plastering business": "Step 4: Expand your service range",
+    "Step 5 – Build your reputation pipeline to grow plastering business": "Step 5: Build your reputation pipeline",
+    "Step 6 – Price for profit, not panic to grow plastering business": "Step 6: Price for profit, not panic"
+  },
+  "brief_before_heading": "Why do plastering businesses hit a ceiling?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "promote_headings": [
+    "Why do plastering businesses hit a ceiling?"
+  ],
+  "text_replacements": [
+    {
+      "find": "juggles too many sites — one drying job here",
+      "replace": "juggles too many sites: one drying job here"
+    },
+    {
+      "find": "define “ready to paint” — no holidays",
+      "replace": "define “ready to paint”: no holidays"
+    },
+    {
+      "find": "It’s quicker if I do it myself.” It’s not — it’s what keeps you stuck",
+      "replace": "It’s quicker if I do it myself.” It’s not. It’s what keeps you stuck"
+    },
+    {
+      "find": "need a training department — just discipline",
+      "replace": "need a training department, just discipline"
+    },
+    {
+      "find": "what fits your current workflow — internal plastering",
+      "replace": "what fits your current workflow. Internal plastering"
+    },
+    {
+      "find": "Every wall you skim is an advert — good or bad",
+      "replace": "Every wall you skim is an advert, good or bad"
+    },
+    {
+      "find": "software, advertising — it all counts",
+      "replace": "software and advertising, it all counts"
+    }
+  ]
+}

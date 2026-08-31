@@ -1,0 +1,77 @@
+{
+  "slug": "grow-groundworks-business",
+  "pillar": "Scale",
+  "title": "How to Grow a Groundworks Business to £5M",
+  "meta_description": "Practical steps to grow a groundworks business: boost profit, control cashflow and plant, win repeat civils work, and scale with confidence rather than luck.",
+  "h1": "How to Grow a Groundworks Business to £5M",
+  "hero_subtitle": "A practical guide for civils firms who are brilliant on site and invisible off it.",
+  "intro": {
+    "answer": "If you want to grow a groundworks business, stop chasing price and start selling certainty. You do not need another digger. You need better systems, sharper pricing, and a reputation that earns repeat work from main contractors.",
+    "image": {
+      "src": "/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png",
+      "alt": "A groundworks and civil engineering site in progress",
+      "width": 2560,
+      "height": 1396
+    },
+    "roadmap": "This guide covers five moves: building reliability into how you work, pricing with clarity rather than hope, controlling plant and cash, using compliance as a selling tool, and diversifying without losing focus."
+  },
+  "briefing": {
+    "eyebrow": "Groundworks site briefing",
+    "title": "Sell Certainty, Not the Lowest Number",
+    "intro": "Most groundworks firms are brilliant on site and invisible off it. You move muck, pour slabs and keep everybody else on programme, and none of that is visible to the person choosing who to appoint next time.",
+    "panels": [
+      {
+        "heading": "Why does reliability win tenders?",
+        "paragraphs": [
+          "Because a main contractor is not really buying groundworks, they are buying the certainty that the programme holds. Everything they build sits on top of your work, so being late is expensive for them in a way price cannot offset.",
+          "That means the firm that is predictably on time is worth paying more for, and being predictable is something you can build deliberately rather than hope for."
+        ]
+      },
+      {
+        "heading": "The five moves",
+        "paragraphs": [
+          "Reliability is the product. These are the things that make it repeatable."
+        ],
+        "steps": [
+          "Build reliability into how the company works, not just how it performs on a good week.",
+          "Price with clarity rather than hope.",
+          "Control your plant and your cash, because both tie up money quietly.",
+          "Show compliance as a selling tool rather than a box to tick.",
+          "Diversify carefully, without losing the thing you are known for."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "Hitting a ceiling around £650k while grafting hard, juggling site work, paperwork and firefighting, is the normal experience rather than a personal failing. It is what happens when the systems have not grown with the turnover."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Reliability wins every tender.": "Why reliability wins every tender"
+  },
+  "brief_before_heading": "Why reliability wins every tender",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "scale through five pillars—Plan, Attract, Convert, Deliver, and Scale—this falls under",
+      "replace": "scale through five pillars: Plan, Attract, Convert, Deliver and Scale. This falls under"
+    },
+    {
+      "find": "every delivery charge—it all matters",
+      "replace": "every delivery charge, it all matters"
+    },
+    {
+      "find": "Compliance isn’t cost—it’s credibility",
+      "replace": "Compliance isn’t cost. It’s credibility"
+    },
+    {
+      "find": "Review your top three clients—who gives repeat work",
+      "replace": "Review your top three clients: who gives repeat work"
+    }
+  ]
+}

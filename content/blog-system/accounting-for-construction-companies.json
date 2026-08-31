@@ -1,0 +1,79 @@
+{
+  "slug": "accounting-for-construction-companies",
+  "pillar": "Deliver",
+  "title": "Accounting for Construction Companies: The Basics",
+  "meta_description": "Accounting for construction companies without the jargon: profit, budgeting, cash flow, the software worth using, and how to approach tax strategically.",
+  "h1": "Accounting for Construction Companies: The Basics",
+  "hero_subtitle": "A practical guide to the numbers, for owners who would rather be building.",
+  "intro": {
+    "answer": "You do not need to enjoy accounting to run a profitable construction business, but you do need to understand four things: profit, budgeting, cash flow and tax. Everything else is detail.",
+    "image": {
+      "src": "/wp-content/uploads/2023/12/Construction-company-accounts-.png",
+      "alt": "Construction company accounts being reviewed",
+      "width": 940,
+      "height": 788
+    },
+    "roadmap": "This guide breaks down each part of your construction company accounts: what profit actually is and why margin matters, how to build a budget that flexes, how to manage cash flow, which software is worth using, and how to approach tax without dreading it."
+  },
+  "briefing": {
+    "eyebrow": "Construction finance site briefing",
+    "title": "Cash Flow Is the One That Kills You",
+    "intro": "Plenty of profitable construction businesses have gone under. Profit is a measure of whether the work was worth doing. Cash flow is whether you can pay people on Friday, and only one of those two closes a company.",
+    "panels": [
+      {
+        "heading": "What is the difference between profit and cash flow?",
+        "paragraphs": [
+          "Profit is what is left after direct and indirect costs come out of revenue. It tells you whether the jobs are worth taking and whether your pricing works.",
+          "Cash flow is the movement of money in and out, and the timing of it. Your inflows have to align with your outflows, which in construction they frequently do not, because you pay for materials and labour long before the client pays you."
+        ]
+      },
+      {
+        "heading": "What to put in place",
+        "paragraphs": [
+          "None of this needs an accountancy qualification. It needs the basics done consistently."
+        ],
+        "steps": [
+          "Know your margin, and track it per job rather than per year.",
+          "Break the budget into clear categories: materials, labour, overheads.",
+          "Treat the budget as a living document that changes with the business.",
+          "Use software such as QuickBooks or Xero so the admin stops being manual.",
+          "Get professional advice on deductibles, allowances and incentives rather than guessing."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "A budget that never changes is not discipline, it is a document nobody is using. Revisit it as the workload and the costs move."
+    },
+    "cta": {
+      "text": "Explore the Deliver pillar resources",
+      "href": "/5-pillars-free-trainings/deliver/"
+    }
+  },
+  "insert_headings": [
+    {
+      "before": "In the construction world, profit isn’t a dirty word",
+      "text": "What Is Profit, and Why Does Margin Matter?"
+    },
+    {
+      "before": "You’ve probably been on a diet or a spending plan before",
+      "text": "How Do You Build a Budget That Works?"
+    },
+    {
+      "before": "Cash flow is the heartbeat of your business",
+      "text": "How Do You Manage Cash Flow?"
+    },
+    {
+      "before": "In the digital age, technology can become your trusted ally",
+      "text": "Which Accounting Software Should You Use?"
+    },
+    {
+      "before": "Let’s talk about the unavoidable topic in the financial realm",
+      "text": "How Should You Approach Tax?"
+    }
+  ],
+  "brief_before_heading": "What Is Profit, and Why Does Margin Matter?",
+  "intro_replaces_paragraphs": 4,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}

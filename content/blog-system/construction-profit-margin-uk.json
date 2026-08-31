@@ -1,0 +1,65 @@
+{
+  "slug": "construction-profit-margin-uk",
+  "pillar": "Scale",
+  "title": "Construction Profit Margin UK: What Good Looks Like",
+  "meta_description": "What a good construction profit margin looks like in the UK, how gross, operating and net margins differ, and eight practical ways to improve yours.",
+  "h1": "Construction Profit Margin UK: What Good Looks Like",
+  "hero_subtitle": "A practical guide to knowing whether your margin is healthy or just survivable.",
+  "intro": {
+    "answer": "Margins in UK construction have been steadily decreasing over recent years, which makes knowing your own numbers more important, not less. The three that matter are gross, operating and net, and they tell you different things.",
+    "image": {
+      "src": "/wp-content/uploads/2024/06/construction-profit-margin-uk.webp",
+      "alt": "A construction business owner reviewing profit margins",
+      "width": 1200,
+      "height": 900
+    },
+    "roadmap": "This guide covers what a good construction profit margin looks like in the UK, how much profit a construction company should make by sector, the difference between gross, operating and net margin, and eight ways to improve the number."
+  },
+  "briefing": {
+    "eyebrow": "Margin site briefing",
+    "title": "Three Margins, Three Different Answers",
+    "intro": "Owners often quote one margin figure and assume it describes the business. It does not. Each of the three answers a different question, and knowing which one you are looking at is the difference between a real diagnosis and a comfortable one.",
+    "panels": [
+      {
+        "heading": "What is the difference between the three margins?",
+        "paragraphs": [
+          "Gross profit margin tells you whether the work itself is priced correctly, once direct costs are out. Operating margin tells you whether the business around that work is efficient. Net margin tells you what is actually left.",
+          "A healthy gross margin with a poor net margin is an overhead problem, not a pricing problem. Treating it as a pricing problem is how businesses price themselves out of work they could have won."
+        ]
+      },
+      {
+        "heading": "Eight ways to improve the number",
+        "paragraphs": [
+          "Benchmarking against your sector matters here, because a good margin for specialised services is not a good margin for residential."
+        ],
+        "steps": [
+          "Estimate projects precisely rather than optimistically.",
+          "Manage projects efficiently, because time lost is margin lost.",
+          "Integrate technology where it removes manual work.",
+          "Negotiate supplier contracts rather than accepting list terms.",
+          "Upskill the workforce so quality costs less to achieve.",
+          "Review the finances regularly, not annually.",
+          "Adopt lean construction practices.",
+          "Market strategically, so you are bidding for better projects."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Benchmark properly",
+      "text": "Compare yourself against your own sector, whether that is residential, commercial or specialised services. A number that looks weak in one is perfectly healthy in another."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "brief_before_heading": "What is a Good Construction Profit Margin UK?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "core of your business—the actual construction work—is financially sound",
+      "replace": "core of your business, the actual construction work, is financially sound"
+    }
+  ]
+}

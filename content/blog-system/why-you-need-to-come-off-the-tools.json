@@ -1,0 +1,73 @@
+{
+  "slug": "why-you-need-to-come-off-the-tools",
+  "pillar": "Scale",
+  "title": "Why You Need to Come Off the Tools",
+  "meta_description": "Three reasons to come off the tools in a construction business: your health, your earning ceiling, and what you actually want to be doing in ten years.",
+  "h1": "Why You Need to Come Off the Tools",
+  "hero_subtitle": "A practical look at the three reasons worth taking seriously.",
+  "intro": {
+    "answer": "Coming off the tools divides opinion, and that is fair. But whichever camp you sit in, there are three reasons it benefits both the business and the life around it, and only one of them is about money.",
+    "image": {
+      "src": "/wp-content/uploads/2019/05/coming-off-the-tools.jpg",
+      "alt": "A tradesperson deciding whether to come off the tools",
+      "width": 617,
+      "height": 407
+    },
+    "roadmap": "This guide covers the three reasons: your health, your wealth and the ceiling on trading time for money, and yourself. It then covers how to actually step away without the business stalling."
+  },
+  "briefing": {
+    "eyebrow": "Coming off the tools briefing",
+    "title": "You Can Only Sell So Many Hours",
+    "intro": "Some love the work, the hands-on part and the people on site. Others cannot stand coming home filthy and tired every night. Which camp you are in changes how the decision feels, but it does not change the arithmetic underneath it.",
+    "panels": [
+      {
+        "heading": "Why does staying on the tools cap the business?",
+        "paragraphs": [
+          "Because working on the tools means trading time for money. You can only ever earn a certain hourly or daily rate, and there are only so many hours, so the ceiling is fixed no matter how good you are.",
+          "There is a health argument too. Anyone who has been in the trade a while has either had an accident or knows someone who has, and another ten years on the tools makes that a question of when rather than if."
+        ]
+      },
+      {
+        "heading": "How do you actually step away?",
+        "paragraphs": [
+          "There is a three step plan that gets most owners there, and it works best gradually."
+        ],
+        "steps": [
+          "Get honest about which parts of the job genuinely need you.",
+          "Build the people and the systems to cover the rest.",
+          "Step back in stages, checking what breaks and fixing that before going further."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth asking",
+      "text": "When you left school a trade may have seemed like the only option. That is rarely still true twenty years later, and it is worth deciding what you want the next twenty to look like."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "insert_headings": [
+    {
+      "before": "1) Health If you’ve been in the trade for a while",
+      "text": "1. Your Health"
+    },
+    {
+      "before": "2) Wealth Working on the tools means you are trading time for money",
+      "text": "2. Your Wealth"
+    },
+    {
+      "before": "3) Yourself When you first left school",
+      "text": "3. Yourself"
+    },
+    {
+      "before": "But how is this possible? How can you manage to step away",
+      "text": "How Do You Step Away From the Tools?"
+    }
+  ],
+  "brief_before_heading": "1. Your Health",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}
