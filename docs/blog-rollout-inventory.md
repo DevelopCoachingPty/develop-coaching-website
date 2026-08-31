@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 29 |
+| Design only | 31 |
 | Recategorise | 6 |
-| Rewrite first | 34 |
+| Rewrite first | 32 |
 
 ## Plan (13)
 
@@ -48,17 +48,17 @@
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [construction-marketing-ideas-to-scale-your-1m-business-to-5m](https://develop-coaching.com/construction-marketing-ideas-to-scale-your-1m-business-to-5m/) | 52 | 2086 | 5 | Rewrite first | Audit | title-82ch, fluffy-intro | schema-headline-drift, no-pillar-link |
 | [good-reviews](https://develop-coaching.com/good-reviews/) | 56 | 737 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [construction-marketing](https://develop-coaching.com/construction-marketing/) | 57 | 2428 | 13 | Rewrite first | Audit | h1-count-2, fluffy-intro, em-dashes-4 | schema-headline-drift, no-pillar-link |
-| [how-to-use-social-media-for-construction-business](https://develop-coaching.com/how-to-use-social-media-for-construction-business/) | 59 | 939 | 5 | Rewrite first | Audit | listicle-headline, alt-missing-1 | canonical-mismatch, schema-headline-drift, no-pillar-link |
 | [social-media-construction-industry](https://develop-coaching.com/social-media-construction-industry/) | 63 | 1392 | 6 | Rewrite first | Audit | no-intro-paragraph, em-dashes-7 | schema-headline-drift, no-pillar-link |
 | [how-to-get-good-reviews](https://develop-coaching.com/how-to-get-good-reviews/) | 64 | 1886 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [marketing-for-construction-companies-the-blueprint-to-scale](https://develop-coaching.com/marketing-for-construction-companies-the-blueprint-to-scale/) | 64 | 1706 | 6 | Design only | Audit | title-88ch | schema-headline-drift, no-pillar-link |
 | [the-construction-company-marketing-strategy-to-scale-past-1m](https://develop-coaching.com/the-construction-company-marketing-strategy-to-scale-past-1m/) | 64 | 2077 | 7 | Design only | Audit | title-80ch | schema-headline-drift, no-pillar-link |
 | [digital-marketing-construction](https://develop-coaching.com/digital-marketing-construction/) | 69 | 1223 | 5 | Design only | Audit | meta-88ch | schema-headline-drift, no-pillar-link |
+| [how-to-use-social-media-for-construction-business](https://develop-coaching.com/how-to-use-social-media-for-construction-business/) | 86 | 1052 | 6 | Design only | Audit | alt-missing-1 | none |
 | [construction-brand](https://develop-coaching.com/construction-brand/) | 92 | 1918 | 5 | Design only | Audit | none | none |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 93 | 1165 | 4 | Design only | Audit | none | none |
+| [construction-marketing-ideas-to-scale-your-1m-business-to-5m](https://develop-coaching.com/construction-marketing-ideas-to-scale-your-1m-business-to-5m/) | 95 | 2233 | 6 | Design only | Audit | none | none |
 | [grow-landscaping-business](https://develop-coaching.com/grow-landscaping-business/) | 95 | 1435 | 10 | Design only | Audit | none | none |
 | [construction-lead-generation](https://develop-coaching.com/construction-lead-generation/) | 96 | 1962 | 7 | Reference | Audit | none | none |
 | [customer-reviews-for-construction-company](https://develop-coaching.com/customer-reviews-for-construction-company/) | 96 | 1905 | 6 | Design only | Audit | none | none |

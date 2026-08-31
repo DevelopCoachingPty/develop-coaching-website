@@ -238,8 +238,18 @@ def update_head(document: str, spec: dict) -> str:
     if not found:
         raise ValueError("canonical link missing")
     if found.group(1).rstrip("/") != canonical.rstrip("/"):
-        raise ValueError(
-            f"canonical mismatch: page says {found.group(1)}, expected {canonical}"
+        # A canonical pointing somewhere else is sometimes deliberate, so this
+        # stops by default. Two articles point at URLs that return 404, which
+        # tells a search engine the real version of the page does not exist.
+        # Correcting one is opted into per article, and the old target is
+        # recorded in the content file so the change stays reviewable.
+        if not spec.get("fix_canonical"):
+            raise ValueError(
+                f"canonical mismatch: page says {found.group(1)}, expected {canonical}. "
+                "Set fix_canonical in the content file if the current target is wrong."
+            )
+        document = (
+            document[: found.start(1)] + canonical + document[found.end(1) :]
         )
 
     document = replace_once(
