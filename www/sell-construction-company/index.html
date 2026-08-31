@@ -386,6 +386,12 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
    from scale, spacing and restraint rather than from ornament. */
 .dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
 
+/* In-article links. The Hello theme default is a magenta that appears nowhere
+   in the brand, so links inside article prose take the kit's secondary blue. */
+.elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.elementor-widget-theme-post-content p a:not([class]):hover,.elementor-widget-theme-post-content li a:not([class]):hover{color:#25262a}
+.elementor-widget-theme-post-content p a:not([class]):focus-visible,.elementor-widget-theme-post-content li a:not([class]):focus-visible{outline:3px solid #2C67AC;outline-offset:2px}
+
 /* Opening. A standfirst, not a warning callout. */
 .dc-article-intro{--ink:#25262a;--quiet:#424142;--signal:#FDCE36;margin:0 0 44px}
 .dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
@@ -400,7 +406,7 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 .dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
 .dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
 .dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
-.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(246,201,68,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(253,206,54,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
 .dc-article-brief__body{padding:30px}
 .dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
 

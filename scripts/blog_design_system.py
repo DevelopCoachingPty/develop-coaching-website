@@ -46,6 +46,12 @@ STYLES = """<style id="%s">
    from scale, spacing and restraint rather than from ornament. */
 .dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
 
+/* In-article links. The Hello theme default is a magenta that appears nowhere
+   in the brand, so links inside article prose take the kit's secondary blue. */
+.elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.elementor-widget-theme-post-content p a:not([class]):hover,.elementor-widget-theme-post-content li a:not([class]):hover{color:#25262a}
+.elementor-widget-theme-post-content p a:not([class]):focus-visible,.elementor-widget-theme-post-content li a:not([class]):focus-visible{outline:3px solid #2C67AC;outline-offset:2px}
+
 /* Opening. A standfirst, not a warning callout. */
 .dc-article-intro{--ink:#25262a;--quiet:#424142;--signal:#FDCE36;margin:0 0 44px}
 .dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
@@ -60,7 +66,7 @@ STYLES = """<style id="%s">
 .dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
 .dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
 .dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
-.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(246,201,68,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(253,206,54,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
 .dc-article-brief__body{padding:30px}
 .dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
 
@@ -257,6 +263,14 @@ def update_head(document: str, spec: dict) -> str:
     for pattern, replacement, what in pairs:
         document = replace_once(document, pattern, replacement, what)
 
+    # The reference page shipped with a one-off stylesheet before this system
+    # existed. Retire it so a page never carries two article stylesheets.
+    document = re.sub(
+        r'<style id="dc-lead-quality-briefing-styles">.*?</style>\s*',
+        "",
+        document,
+        flags=re.DOTALL,
+    )
     existing = re.search(rf'<style id="{STYLE_ID}">.*?</style>', document, re.DOTALL)
     if existing:
         # Spliced by index, not re.sub: the stylesheet contains backslashes and
@@ -354,8 +368,11 @@ def update_h1_and_hero(document: str, spec: dict) -> str:
     document = replace_once(
         document, h1_pattern, rf"\g<1>{esc(spec['h1'])}\g<2>", "post title h1"
     )
-    hero_pattern = rf'\s*<p class="dc-article-hero-subtitle" id="{HERO_ID}">.*?</p>'
-    document = re.sub(hero_pattern, "", document, flags=re.DOTALL)
+    for pattern in (
+        rf'\s*<p class="dc-article-hero-subtitle" id="{HERO_ID}">.*?</p>',
+        r'\s*<p class="dc-lead-hero-subtitle" id="dc-lead-hero-subtitle">.*?</p>',
+    ):
+        document = re.sub(pattern, "", document, flags=re.DOTALL)
     h1 = re.search(h1_pattern, document, re.DOTALL)
     insert_at = h1.end()
     return document[:insert_at] + "\n" + build_hero(spec) + document[insert_at:]
@@ -367,17 +384,87 @@ WIDGET_RE = re.compile(r'data-widget_type="theme-post-content\.default"[^>]*>')
 TAG_RE = re.compile(r"<[^>]+>")
 
 
-BROKEN_ANCHOR = re.compile(r"(<a\b[^>]*>)</p>\s*<p>\s*</a>")
+BARE_VIDEO_LINK = re.compile(
+    r'<a\b[^>]*href="https://www\.youtube\.com/watch\?v=(?P<id>[\w-]{6,})"[^>]*>'
+    r'(?:</p>\s*<p>\s*)?\s*</a>'
+)
+
+VIDEO_SCRIPT_MARKER = 'document.querySelectorAll(".lite-youtube")'
+
+VIDEO_SCRIPT = """
+<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".lite-youtube").forEach(function (el) {
+      const videoId = el.getAttribute("data-videoid");
+      el.addEventListener("click", function () {
+        const iframe = document.createElement("iframe");
+        iframe.style.position = "absolute";
+        iframe.style.top      = 0;
+        iframe.style.left     = 0;
+        iframe.style.width    = "100%";
+        iframe.style.height   = "100%";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        el.innerHTML = "";
+        el.appendChild(iframe);
+      });
+    });
+  });
+</script>"""
 
 
-def repair_broken_anchors(document: str) -> str:
-    """Close anchors that WordPress left open with a stray </p>.
+def video_player(video_id: str, title: str) -> str:
+    """The click-to-load player the rest of the articles already use."""
+    thumb = f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+    return (
+        f'<div class="lite-youtube" style="position:relative;width:100%;padding-bottom:56.25%;'
+        f'background:#000;margin-bottom:1rem;" data-videoid="{video_id}">\n'
+        f'  <a href="https://www.youtube.com/watch?v={video_id}" target="_blank" rel="noopener" '
+        f'aria-label="Play the video: {esc(title)}" '
+        f'style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;'
+        f"background-size:cover;background-position:center;background-image:url(&#039;{thumb}&#039;);\">\n"
+        '    <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true" focusable="false" '
+        'style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">\n'
+        '      <path d="M66.52 7.02a8.27 8.27 0 00-5.83-5.83C56.18 0 34 0 34 0S11.82 0 7.3 1.19a8.27 '
+        '8.27 0 00-5.83 5.83C0 11.54 0 24 0 24s0 12.46 1.47 16.98a8.27 8.27 0 005.83 5.83C11.82 48 34 '
+        '48 34 48s22.18 0 26.7-1.19a8.27 8.27 0 005.83-5.83C68 36.46 68 24 68 24s0-12.46-1.48-16.98z" '
+        'fill="#f00"></path>\n'
+        '      <path d="M45 24L27 14v20l18-10z" fill="#fff"></path>\n'
+        "    </svg>\n  </a>\n</div>"
+    )
 
-    An anchor closed by </p> is never closed at all: the parser adopts the rest
-    of the article into the link, so the whole body renders in link colour and
-    every paragraph becomes a tab stop. Two live articles carry this.
+
+def repair_video_embeds(document: str, spec: dict) -> str:
+    """Build a real player where WordPress left a bare YouTube link.
+
+    Two articles carry an anchor closed by a stray </p>, which means it is never
+    closed at all: the parser adopts the rest of the article into the link, the
+    whole body renders in link colour and every paragraph becomes a tab stop.
+    The anchor is also empty, so the video these pages are meant to open with
+    simply does not exist. Every other article has a click-to-load player. This
+    builds the same player from the link that is already there.
     """
-    return BROKEN_ANCHOR.sub(r"\1</a>", document)
+    if "lite-youtube" in document:
+        return document
+
+    match = BARE_VIDEO_LINK.search(document)
+    if not match:
+        return document
+
+    document = (
+        document[: match.start()]
+        + video_player(match.group("id"), spec.get("h1", "Develop Coaching"))
+        + document[match.end() :]
+    )
+    if VIDEO_SCRIPT_MARKER not in document:
+        start, end = body_span(document)
+        # Insert before the widget's trailing indentation, so the script does
+        # not leave a whitespace-only line behind it.
+        insert_at = len(document[:end].rstrip())
+        document = document[:insert_at] + VIDEO_SCRIPT + document[insert_at:]
+    return document
 
 
 def body_span(document: str) -> tuple:
@@ -439,7 +526,11 @@ def update_intro(document: str, spec: dict) -> str:
     body = document[start:end]
     block = build_intro(spec)
 
-    owned = re.compile(rf'<div class="dc-article-intro" id="{INTRO_ID}">.*?</div>', re.DOTALL)
+    owned = re.compile(
+        rf'<div class="dc-article-intro" id="{INTRO_ID}">.*?</div>'
+        r'|<div class="dc-lead-guide-intro" id="dc-lead-guide-intro">.*?</div>',
+        re.DOTALL,
+    )
     if owned.search(body):
         body = owned.sub(block, body, count=1)
         body = drop_duplicate_lead_image(body, spec)
@@ -477,7 +568,11 @@ def update_brief(document: str, spec: dict) -> str:
     start, end = body_span(document)
     body = document[start:end]
 
-    owned = re.compile(rf'<section class="dc-article-brief" id="{BRIEF_ID}".*?</section>\s*', re.DOTALL)
+    owned = re.compile(
+        rf'<section class="dc-article-brief" id="{BRIEF_ID}".*?</section>\s*'
+        r'|<section class="dc-lead-brief" id="dc-lead-quality-briefing".*?</section>\s*',
+        re.DOTALL,
+    )
     body = owned.sub("", body)
 
     anchor = spec["brief_before_heading"].strip()
@@ -607,7 +702,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 
 def transform(document: str, spec: dict) -> str:
-    document = repair_broken_anchors(document)
+    document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)
     document = update_visible_category(document, spec)

@@ -405,6 +405,12 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
    from scale, spacing and restraint rather than from ornament. */
 .dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
 
+/* In-article links. The Hello theme default is a magenta that appears nowhere
+   in the brand, so links inside article prose take the kit's secondary blue. */
+.elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.elementor-widget-theme-post-content p a:not([class]):hover,.elementor-widget-theme-post-content li a:not([class]):hover{color:#25262a}
+.elementor-widget-theme-post-content p a:not([class]):focus-visible,.elementor-widget-theme-post-content li a:not([class]):focus-visible{outline:3px solid #2C67AC;outline-offset:2px}
+
 /* Opening. A standfirst, not a warning callout. */
 .dc-article-intro{--ink:#25262a;--quiet:#424142;--signal:#FDCE36;margin:0 0 44px}
 .dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
@@ -419,7 +425,7 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 .dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
 .dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
 .dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
-.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(246,201,68,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(253,206,54,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
 .dc-article-brief__body{padding:30px}
 .dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
 
@@ -588,7 +594,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="elementor-element elementor-element-bf2a0f3 e-con-full e-flex e-con e-child" data-id="bf2a0f3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 				<div class="elementor-element elementor-element-7f727a1 elementor-widget elementor-widget-theme-post-content" data-id="7f727a1" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
 					<div>
-  <a href="https://www.youtube.com/watch?v=lWNMGSHK-_0" target="_blank" rel="noopener noreferrer"></a>
+  <div class="lite-youtube" style="position:relative;width:100%;padding-bottom:56.25%;background:#000;margin-bottom:1rem;" data-videoid="lWNMGSHK-_0">
+  <a href="https://www.youtube.com/watch?v=lWNMGSHK-_0" target="_blank" rel="noopener" aria-label="Play the video: Construction Sales Funnel: Win Contracts at Better Margins" style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-image:url(&#039;https://i.ytimg.com/vi/lWNMGSHK-_0/hqdefault.jpg&#039;);">
+    <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true" focusable="false" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
+      <path d="M66.52 7.02a8.27 8.27 0 00-5.83-5.83C56.18 0 34 0 34 0S11.82 0 7.3 1.19a8.27 8.27 0 00-5.83 5.83C0 11.54 0 24 0 24s0 12.46 1.47 16.98a8.27 8.27 0 005.83 5.83C11.82 48 34 48 34 48s22.18 0 26.7-1.19a8.27 8.27 0 005.83-5.83C68 36.46 68 24 68 24s0-12.46-1.48-16.98z" fill="#f00"></path>
+      <path d="M45 24L27 14v20l18-10z" fill="#fff"></path>
+    </svg>
+  </a>
+</div>
 </div>
 <div class="dc-article-intro" id="dc-article-intro">
   <p class="dc-article-intro__answer">Most construction businesses at £1M turnover are not short of enquiries. They are short of the right enquiries, at the right margin, from clients worth keeping. That is what a sales funnel actually solves.</p>
@@ -749,6 +762,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>If you&#8217;re running a construction business at £1M+ and your sales process is patchy rather than deliberate, the fix is more straightforward than it might look. You probably don&#8217;t need more leads. You need a better system for the ones you&#8217;re already getting.</p>
 <p>At Develop Coaching, we work exclusively with construction business owners at this stage: past £1M, aiming for £5M, ready to put the systems in place that make growth sustainable and predictable. If you&#8217;d like a clear picture of what&#8217;s holding your pipeline back and where to focus first, <a href="/business-coaching-for-construction/">book a strategy call with us today</a>.</p>
 <figure><img decoding="async" width="940" height="788" src="/wp-content/uploads/2024/04/construction-lead-generation.webp" alt="Construction lead generation"></figure>
+<script data-no-optimize="1" data-no-defer data-phast-no-defer  type="text/javascript" >
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".lite-youtube").forEach(function (el) {
+      const videoId = el.getAttribute("data-videoid");
+      el.addEventListener("click", function () {
+        const iframe = document.createElement("iframe");
+        iframe.style.position = "absolute";
+        iframe.style.top      = 0;
+        iframe.style.left     = 0;
+        iframe.style.width    = "100%";
+        iframe.style.height   = "100%";
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+        iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        el.innerHTML = "";
+        el.appendChild(iframe);
+      });
+    });
+  });
+</script>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-80792b7 e-con-full e-flex e-con e-child" data-id="80792b7" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
