@@ -1,0 +1,59 @@
+{
+  "slug": "marketing-for-construction-companies-the-blueprint-to-scale",
+  "pillar": "Attract",
+  "title": "Marketing for Construction Companies: Scale Past £1M",
+  "meta_description": "Marketing for construction companies turning over £1M+ needs a strategy, not luck. How to attract high-value clients and scale with proven methods.",
+  "h1": "Marketing for Construction Companies: Scale Past £1M",
+  "hero_subtitle": "A practical guide for businesses already at £1M and working harder for thinner margins.",
+  "intro": {
+    "answer": "Scaling from £1 million to £5 million is not about working harder on site. It is about working smarter off it, moving from reactive bidding to marketing that targets the clients you actually want.",
+    "image": {
+      "src": "/wp-content/uploads/2026/06/marketing-for-construction-companies.jpg",
+      "alt": "A construction company owner planning the marketing that scales the business past £1M",
+      "width": 1376,
+      "height": 768
+    },
+    "roadmap": "This guide follows the five stages: understanding the competitive landscape, attracting the right leads through your digital presence and outbound work, converting them without discounting, delivering so well that delivery becomes marketing, and scaling with a team."
+  },
+  "briefing": {
+    "eyebrow": "Marketing blueprint site briefing",
+    "title": "Know Who You Are Actually Competing With",
+    "intro": "The construction industry is traditionally slow to adopt modern business practice, which is exactly why it stays a large opportunity for the businesses that do. But nothing works until you know the real competition, and most owners get that wrong.",
+    "panels": [
+      {
+        "heading": "Who are you really competing against?",
+        "paragraphs": [
+          "Most owners assume it is the other local builders of roughly their size. Often it is not. On the work worth having you are up against a different set of companies entirely, sometimes larger, sometimes from an adjacent sector.",
+          "Work that out before you spend a penny on ads or content, because it changes the message, the channel and the price you can hold."
+        ]
+      },
+      {
+        "heading": "Then work the five stages in order",
+        "paragraphs": [
+          "Each stage assumes the one before it is done. Skipping ahead is why marketing budgets disappear without result."
+        ],
+        "steps": [
+          "Plan: understand the competitive landscape and where you genuinely win.",
+          "Attract: a professional digital presence, social media used for relationships, and outbound that reaches decision makers.",
+          "Convert: a sales funnel, and a way of handling price objections that does not end in a discount.",
+          "Deliver: systems, processes and cash flow management, because delivery is marketing.",
+          "Scale: hiring, retention, delegation and continuous improvement."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "The frustrations at £1M are consistent: cash flow gaps, the hunt for skilled labour, and working harder than your subcontractors for thinner margins. None of those are fixed by winning more of the same work."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "heading_rewrites": {
+    "The Plan: Understanding Your Competitive Landscape": "Plan: who are you actually competing with?"
+  },
+  "brief_before_heading": "Plan: who are you actually competing with?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
