@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 67 &nbsp;&nbsp; **Score recoverable:** 566 points
+**Articles affected:** 62 &nbsp;&nbsp; **Score recoverable:** 524 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 60 &nbsp;&nbsp; **Score recoverable:** 555 points
+**Articles affected:** 56 &nbsp;&nbsp; **Score recoverable:** 525 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -68,7 +68,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 6. Replace preamble openings with a direct answer
 
-**Articles affected:** 27 &nbsp;&nbsp; **Score recoverable:** 324 points
+**Articles affected:** 25 &nbsp;&nbsp; **Score recoverable:** 300 points
 
 27 articles open with a wind-up rather than an answer. Both a reader deciding whether to stay and a model deciding what to quote read the first block. If the answer is in paragraph five, neither finds it.
 
@@ -76,7 +76,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 7. Repair heading structure: single H1, at least four H2 sections
 
-**Articles affected:** 23 &nbsp;&nbsp; **Score recoverable:** 186 points
+**Articles affected:** 22 &nbsp;&nbsp; **Score recoverable:** 180 points
 
 13 articles use H1 for section headings, so the page has no single subject. 18 have fewer than four H2 sections, which leaves long unbroken runs of prose that cannot be extracted as a passage. The transformer can demote stray H1s; adding real sections is writing.
 
@@ -100,7 +100,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 10. Add a lead image with real alt text where one is missing
 
-**Articles affected:** 26 &nbsp;&nbsp; **Score recoverable:** 78 points
+**Articles affected:** 24 &nbsp;&nbsp; **Score recoverable:** 72 points
 
 21 articles have no image in the body at all. Others carry alt text that repeats the file name. The design puts a full width image directly under the answer, so an article without one cannot meet the standard.
 

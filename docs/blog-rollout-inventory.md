@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 19 |
+| Design only | 22 |
 | Recategorise | 6 |
-| Rewrite first | 45 |
+| Rewrite first | 42 |
 
 ## Plan (16)
 
@@ -40,12 +40,12 @@
 | [how-to-grow-a-construction-business-2](https://develop-coaching.com/how-to-grow-a-construction-business-2/) | 61 | 1490 | 5 | Rewrite first | Audit | fluffy-intro, listicle-headline, em-dashes-1, author-not-greg | no-pillar-link |
 | [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 61 | 858 | 0 | Rewrite first | Audit | h2-count-0, author-not-greg | schema-headline-drift, no-pillar-link |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 62 | 903 | 0 | Rewrite first | Audit | h2-count-0, author-not-greg | schema-headline-drift, no-pillar-link |
-| [getting-off-the-tools](https://develop-coaching.com/getting-off-the-tools/) | 70 | 1278 | 5 | Rewrite first | Audit | fluffy-intro, listicle-headline, author-not-greg | no-pillar-link |
 | [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 70 | 1127 | 5 | Design only | Audit | em-dashes-3, author-not-greg | no-pillar-link |
-| [construction-business-plan](https://develop-coaching.com/construction-business-plan/) | 72 | 2286 | 5 | Rewrite first | Audit | fluffy-intro, author-not-greg | no-pillar-link |
-| [construction-business-performance](https://develop-coaching.com/construction-business-performance/) | 74 | 1559 | 6 | Design only | Audit | alt-missing-1, author-not-greg | no-pillar-link |
-| [construction-project-management](https://develop-coaching.com/construction-project-management/) | 75 | 2043 | 1 | Rewrite first | Audit | h2-count-1, listicle-headline, author-not-greg | no-pillar-link |
-| [sell-construction-company](https://develop-coaching.com/sell-construction-company/) | 79 | 1441 | 5 | Design only | Audit | author-not-greg | schema-headline-drift, no-pillar-link |
+| [construction-business-plan](https://develop-coaching.com/construction-business-plan/) | 93 | 2390 | 6 | Design only | Audit | author-not-greg | none |
+| [construction-business-performance](https://develop-coaching.com/construction-business-performance/) | 97 | 1713 | 7 | Design only | Audit | author-not-greg | none |
+| [construction-project-management](https://develop-coaching.com/construction-project-management/) | 97 | 2347 | 12 | Design only | Audit | author-not-greg | none |
+| [getting-off-the-tools](https://develop-coaching.com/getting-off-the-tools/) | 97 | 1481 | 6 | Design only | Audit | author-not-greg | none |
+| [sell-construction-company](https://develop-coaching.com/sell-construction-company/) | 97 | 1583 | 6 | Design only | Audit | author-not-greg | none |
 
 ## Attract (15)
 

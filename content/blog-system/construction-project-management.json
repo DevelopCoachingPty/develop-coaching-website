@@ -1,0 +1,71 @@
+{
+  "slug": "construction-project-management",
+  "pillar": "Plan",
+  "title": "Construction Project Management: Run Projects That Pay",
+  "meta_description": "Construction project management for business owners: set goals the team can act on, control the budget, and run projects that finish without eating the margin.",
+  "h1": "Construction Project Management: Run Projects That Pay",
+  "hero_subtitle": "A practical guide to running projects that finish on budget and leave a margin behind.",
+  "intro": {
+    "answer": "Managing a construction business is not the same as managing a project. The owners who get both right run every project against a written budget and a goal the team can actually act on.",
+    "image": {
+      "src": "/wp-content/uploads/2024/05/Construction-Project-Management.webp",
+      "alt": "A construction project being managed against its programme and budget on site",
+      "width": 1200,
+      "height": 900
+    },
+    "roadmap": "This guide covers ten practices that make the difference, from setting goals and building the team through to communication, health and safety, finances, technology, client relationships and knowing when to bring in support."
+  },
+  "briefing": {
+    "eyebrow": "Project management site briefing",
+    "title": "Budget First, Then Everything Else",
+    "intro": "Most of what goes wrong on a project shows up as a money problem at the end, but it started as a planning problem at the beginning. Two habits catch the majority of it, and both happen before the first delivery arrives on site.",
+    "panels": [
+      {
+        "heading": "How do you stop a project running over budget?",
+        "paragraphs": [
+          "Build a detailed budget before the project starts, covering everything: materials, labour, permits and overheads. A budget built upfront is what lets you spot an overrun while there is still time to do something about it.",
+          "Then monitor spend against it while the work is running, not at the end. Track every cost as it lands and deal with a variance the week it appears rather than the month after."
+        ]
+      },
+      {
+        "heading": "Set a goal the team can act on",
+        "paragraphs": [
+          "A goal nobody can measure is a wish. Make each one specific, measurable, achievable, realistic and timely, then make sure the people delivering it know their part."
+        ],
+        "steps": [
+          "Write the goal as a number with a deadline. Not increase revenue, but increase revenue by 20% within the next 12 months.",
+          "Tell the team what it is, and what each person's part in it looks like.",
+          "Put the budget for each project in writing before anyone starts work.",
+          "Review actual spend against that budget while the project is still running."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Check weekly",
+      "text": "Costs against budget, and anything that has moved since last week. A cost overrun found in week two is a conversation. The same overrun found at handover is a loss."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "The Ten Practices That Make the Difference",
+  "intro_replaces_paragraphs": 2,
+  "promote_headings": [
+    "1. Establish Clear Goals and Objectives",
+    "2. Build a Skilled Workforce",
+    "3. Efficient Construction Project Management Practices",
+    "4. Effective Communication",
+    "5. Prioritise Health and Safety",
+    "6. How should you manage project finances?",
+    "7. Embrace Technology and Innovation",
+    "8. Build Strong Relationships with Clients",
+    "9. Continuously Evaluate and Improve Processes",
+    "10. Invest in support"
+  ],
+  "heading_rewrites": {
+    "Construction Project Management": "The Ten Practices That Make the Difference",
+    "6. Manage Finances Wisely": "6. How should you manage project finances?"
+  },
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

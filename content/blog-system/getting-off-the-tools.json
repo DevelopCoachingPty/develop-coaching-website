@@ -1,0 +1,59 @@
+{
+  "slug": "getting-off-the-tools",
+  "pillar": "Plan",
+  "title": "Getting Off the Tools Without Losing Your Grip",
+  "meta_description": "Getting off the tools without the work slipping: how to judge whether you are ready, plan the handover, and build a team that runs the job without you.",
+  "h1": "Getting Off the Tools Without Losing Your Grip",
+  "hero_subtitle": "A practical guide to stepping back from site while the quality holds.",
+  "intro": {
+    "answer": "Getting off the tools is not about working less. It is about the business being able to deliver without you on site, and that has to be true before you step back, not after.",
+    "image": {
+      "src": "/wp-content/uploads/2021/12/Getting-off-tools.webp",
+      "alt": "A tradesperson putting the tools down to move into running the business",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers how to judge whether you are ready, how to plan the handover in phases rather than overnight, how to build a team that runs the job without you, and how to hold quality once you are not the one checking it."
+  },
+  "briefing": {
+    "eyebrow": "Stepping back site briefing",
+    "title": "Test Readiness Before You Step Back",
+    "intro": "Most owners who step back too early end up back on site within months, and it is rarely because they missed the work. It is because one of two things was not ready. Test both honestly before you change anything.",
+    "panels": [
+      {
+        "heading": "How do you know when you are ready to get off the tools?",
+        "paragraphs": [
+          "Financial readiness is the first checkpoint. The business should be showing consistent profitability and stable cash flow before you take your hands off it. Stepping back does not fix a margin problem, it exposes one.",
+          "Team capability is the second. Assess it across three levels rather than as a single question: your direct reports and team leads, your key operational staff, and the people holding specialist skills that nobody else has."
+        ]
+      },
+      {
+        "heading": "Plan the handover in this order",
+        "paragraphs": [
+          "A phased transition beats a clean break. Each step should prove itself before the next one starts."
+        ],
+        "steps": [
+          "Check the financial position: profitable, and predictable, not just busy.",
+          "Assess the team at all three levels and name the gaps.",
+          "Phase the transition, handing over one area at a time rather than all at once.",
+          "Tell clients what is changing and who they now speak to.",
+          "Set the timeline, and put a quality check in place for the work you are no longer watching."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Watch for",
+      "text": "Everything you need in place to get off the tools is the same thing you need to run an efficient business anyway. If the handover keeps stalling, that is telling you something about the business, not about the plan."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "heading_rewrites": {
+    "Assessing Your Readiness to Getting off the Tools": "Are You Ready to Get Off the Tools?"
+  },
+  "brief_before_heading": "Are You Ready to Get Off the Tools?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

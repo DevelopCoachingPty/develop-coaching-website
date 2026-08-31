@@ -1,0 +1,72 @@
+{
+  "slug": "construction-business-performance",
+  "pillar": "Plan",
+  "title": "Construction Business Performance: The Numbers to Track",
+  "meta_description": "How to measure construction business performance: the financial KPIs worth tracking, what a healthy margin looks like, and where to act when one slips.",
+  "h1": "Construction Business Performance: The Numbers to Track",
+  "hero_subtitle": "A practical guide to knowing whether the business is actually healthy, not just busy.",
+  "intro": {
+    "answer": "You cannot improve construction business performance without measuring it. The numbers that matter most are financial: profit margin, return on investment and cash flow.",
+    "image": {
+      "src": "/wp-content/uploads/2022/10/Construction-sites.webp",
+      "alt": "A construction site being reviewed against the performance figures for the business",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers the KPIs worth tracking and what good looks like on each, then four areas where performance is usually won or lost: bidding and estimating, risk management, digital tools, and how quickly the business adapts."
+  },
+  "briefing": {
+    "eyebrow": "Performance site briefing",
+    "title": "Three Numbers That Tell You the Truth",
+    "intro": "A busy business and a healthy business are not the same thing, and the gap between them only ever shows up in the numbers. Three of them do most of the work. Track these before you add anything more sophisticated.",
+    "panels": [
+      {
+        "heading": "What is a healthy profit margin for a construction business?",
+        "paragraphs": [
+          "The industry average gross profit margin typically sits around 20%, while net profit margins usually range between 2% and 10%. Track both. Gross margin shows whether the projects themselves work once materials and labour are paid for. Net margin shows whether the business works once overheads are paid too.",
+          "A healthy gross margin with a thin net margin means the jobs are fine and the overhead is not. That is a different problem, with a different fix."
+        ]
+      },
+      {
+        "heading": "Track these in this order",
+        "paragraphs": [
+          "Financial metrics are the foundation. Operational, client and safety measures matter, but they explain what the financial ones are already telling you."
+        ],
+        "steps": [
+          "Gross profit margin, project by project, not just across the year.",
+          "Net profit margin, so overheads cannot hide inside a healthy looking job.",
+          "Return on investment, on the equipment, people and marketing you put money into.",
+          "Cash flow, because a profitable business can still run out of money."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review monthly",
+      "text": "Look for the direction of travel rather than the single figure. A margin drifting down for three months in a row is telling you something a good month will hide."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "Construction Business Performance Relies on Measurable Metrics",
+  "intro_replaces_paragraphs": 4,
+  "text_replacements": [
+    {
+      "find": "src=\"/wp-content/uploads/2023/01/Grow-construction-company.webp\" alt=\"\"",
+      "replace": "src=\"/wp-content/uploads/2023/01/Grow-construction-company.webp\" alt=\"A growing construction company reviewing performance against its targets\""
+    },
+    {
+      "find": "you must focus on optimising your bidding and estimating processes.",
+      "replace": "you must focus on optimising your bidding and <a href=\"/construction-job-pricing/\">estimating processes</a>."
+    },
+    {
+      "find": "Cash flow management proves crucial for construction businesses",
+      "replace": "<a href=\"/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/\">Cash flow management</a> proves crucial for construction businesses"
+    }
+  ],
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "heading_rewrites": {
+    "Optimising Bidding and Estimating Processes": "How do you improve bidding and estimating?"
+  }
+}

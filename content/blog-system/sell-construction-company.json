@@ -1,0 +1,65 @@
+{
+  "slug": "sell-construction-company",
+  "pillar": "Plan",
+  "title": "Sell Your Construction Company: How to Plan the Exit",
+  "meta_description": "How to sell your construction company: pick the right time, understand what really drives the valuation, and lift the value before you go to market.",
+  "h1": "Sell Your Construction Company: How to Plan the Exit",
+  "hero_subtitle": "A practical guide to timing the sale, valuing the business and getting it ready.",
+  "intro": {
+    "answer": "The best time to sell a construction company is while it is performing at its peak, not once you have had enough of it. A thriving business attracts more interest, and more interest is what moves the price.",
+    "image": {
+      "src": "/wp-content/uploads/2022/04/Image-100.webp",
+      "alt": "A construction business owner reviewing figures while planning the sale of the company",
+      "width": 1344,
+      "height": 768
+    },
+    "roadmap": "This guide covers how to judge the right time to sell, what actually drives the valuation of a UK construction business, the things that lift that value before you go to market, and how to manage the sale process and the negotiations that follow."
+  },
+  "briefing": {
+    "eyebrow": "Exit planning site briefing",
+    "title": "What Actually Drives the Price You Get",
+    "intro": "Most owners think about selling when they are ready to stop. Buyers price the business on what it looks like from the outside, and the things they look at take time to change. Knowing them early is the difference between accepting an offer and shaping one.",
+    "panels": [
+      {
+        "heading": "What determines the value of a construction business?",
+        "paragraphs": [
+          "Profitability first. Consistent and growing profits, shown through net profit margin and return on equity. Then revenue and growth, where recurring contracts and a diversified client base signal stability rather than luck.",
+          "After that: tangible assets such as equipment and property, intangible ones such as brand and client relationships, the strength of the management team and workforce, market conditions, and financial records that stand up to scrutiny."
+        ]
+      },
+      {
+        "heading": "Lift the value before you go to market",
+        "paragraphs": [
+          "These take months rather than weeks, which is why they belong at the start of the process and not the end."
+        ],
+        "steps": [
+          "Diversify the client base across sectors so no single market can sink the numbers.",
+          "Invest in developing the team, so the business is not dependent on you being in it.",
+          "Build the brand reputation that makes the company recognisable without your name attached.",
+          "Strengthen financial performance, and keep the records meticulous."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Before you speak to a buyer",
+      "text": "Succession planning is not paperwork. It is the proof that the company has a future beyond the current owner, and it is what a serious buyer looks for first."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "Determining the Right Time to Sell Construction Company",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "<strong>Manage cash flow:</strong> Invoice promptly",
+      "replace": "<strong>Manage <a href=\"/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/\">cash flow</a>:</strong> Invoice promptly"
+    },
+    {
+      "find": "Recurring contracts and a diversified client base signal stability.</li>",
+      "replace": "Recurring contracts and a <a href=\"/attract-the-right-clients/\">diversified client base</a> signal stability.</li>"
+    }
+  ]
+}
