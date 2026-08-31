@@ -328,6 +328,7 @@ def update_h1_and_hero(document: str, spec: dict) -> str:
 
 
 DIV_RE = re.compile(r"<div\b[^>]*>|</div>", re.I)
+NOISE_RE = re.compile(r"<(script|style|noscript)\b[\s\S]*?</\1>", re.I)
 WIDGET_RE = re.compile(r'data-widget_type="theme-post-content\.default"[^>]*>')
 TAG_RE = re.compile(r"<[^>]+>")
 
@@ -424,12 +425,7 @@ def update_intro(document: str, spec: dict) -> str:
         if heading_start is None:
             raise ValueError(f"intro_removes_heading {drop_heading!r} not found")
 
-    spans = [
-        (m.start(), m.end())
-        for m in re.finditer(r"<p[^>]*>.*?</p>", body[search_from:], re.DOTALL)
-        if len(text_of(m.group(0))) > 60
-    ]
-    spans = [(a + search_from, b + search_from) for a, b in spans]
+    spans = prose_paragraphs(body, search_from)
     if len(spans) < count:
         raise ValueError(
             f"only {len(spans)} substantial opening paragraphs, "
@@ -463,6 +459,64 @@ def update_brief(document: str, spec: dict) -> str:
         )
     block = build_brief(spec)
     body = body[: target.start()] + block + "\n" + body[target.start() :]
+    return document[:start] + body + document[end:]
+
+
+# A prose paragraph never contains an embed, a heading or a nested block. The
+# articles carry unclosed <p> tags around video embeds, so a plain
+# <p>...</p> match can start before an embed and swallow it. Scan from each
+# opening tag to the nearest close instead, and reject anything structural.
+FORBIDDEN_INSIDE_PARAGRAPH = re.compile(r"<(script|style|noscript|div|section|h[1-6]|ul|ol|figure)\b", re.I)
+
+
+def prose_paragraphs(body: str, search_from: int = 0) -> list:
+    """Spans of the substantial prose paragraphs in the body, in order."""
+    spans = []
+    for opening in re.finditer(r"<p\b[^>]*>", body[search_from:]):
+        start = opening.start() + search_from
+        closing = body.find("</p>", opening.end() + search_from)
+        if closing == -1:
+            continue
+        fragment = body[start : closing + 4]
+        if FORBIDDEN_INSIDE_PARAGRAPH.search(fragment):
+            continue
+        if len(text_of(fragment)) <= 60:
+            continue
+        if spans and start < spans[-1][1]:
+            continue
+        spans.append((start, closing + 4))
+    return spans
+
+
+def promote_headings(document: str, spec: dict) -> str:
+    """Lift named H3 section headings to H2.
+
+    Several articles mark their real sections as H3 beneath a single H2, which
+    leaves one enormous section that cannot be extracted as a passage. Naming
+    the headings explicitly keeps the change reviewable rather than sweeping
+    every H3 on the page.
+    """
+    wanted = spec.get("promote_headings") or []
+    if not wanted:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+    for heading in wanted:
+        target = None
+        for match in re.finditer(r"<h3\b([^>]*)>(.*?)</h3>", body, re.DOTALL):
+            if text_of(match.group(0)).casefold() == heading.strip().casefold():
+                target = match
+                break
+        if target is None:
+            already = any(
+                text_of(m.group(0)).casefold() == heading.strip().casefold()
+                for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+            )
+            if already:
+                continue
+            raise ValueError(f"promote_headings: {heading!r} not found as an h3 or an h2")
+        replacement = f"<h2{target.group(1)}>{target.group(2)}</h2>"
+        body = body[: target.start()] + replacement + body[target.end() :]
     return document[:start] + body + document[end:]
 
 
@@ -526,6 +580,7 @@ def transform(document: str, spec: dict) -> str:
     document = update_h1_and_hero(document, spec)
     document = demote_body_h1s(document, spec)
     document = apply_heading_rewrites(document, spec)
+    document = promote_headings(document, spec)
     document = apply_text_replacements(document, spec)
     document = update_intro(document, spec)
     document = update_brief(document, spec)

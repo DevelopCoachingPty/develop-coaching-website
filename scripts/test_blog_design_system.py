@@ -128,6 +128,25 @@ class TransformTests(unittest.TestCase):
         start, end = bds.body_span(out)
         self.assertEqual(out[start:end].count("/wp-content/uploads/example.webp"), 1)
 
+    def test_video_embed_and_its_script_survive(self):
+        """An unclosed <p> around an embed must not let the intro swallow it."""
+        embed = (
+            '<p>\n<div class="lite-youtube" data-videoid="abc">\n'
+            '  <a href="https://youtube.com/watch?v=abc"></a>\n</div>\n'
+            '<script>document.addEventListener("DOMContentLoaded", function(){});</script>\n'
+            "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
+            "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
+            "<h2>First Heading</h2>\n<p>Body copy under the first heading.</p>\n"
+            "<h2>Second Heading</h2>\n<p>Body copy under the second heading.</p>\n"
+        )
+        out = bds.transform(page(body_paragraphs=embed), SPEC)
+        start, end = bds.body_span(out)
+        body = out[start:end]
+        self.assertIn("lite-youtube", body)
+        self.assertIn("document.addEventListener", body)
+        self.assertIn('id="dc-article-intro"', body)
+        self.assertNotIn("The first opening paragraph", body)
+
     def test_broken_anchor_is_closed(self):
         out = self.transform(page(broken_anchor=True))
         self.assertNotIn('rel="noopener noreferrer"></p>', out)
