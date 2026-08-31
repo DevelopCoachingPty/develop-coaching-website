@@ -97,7 +97,11 @@ class AuthorTests(unittest.TestCase):
 class LiveArticleTests(unittest.TestCase):
     def test_every_article_transforms_and_is_idempotent(self):
         slugs = saa.article_slugs()
-        self.assertEqual(len(slugs), 71)
+        # Count is not hard coded: articles are retired as duplicate pairs are
+        # merged, so assert every sitemap entry has a page instead of a number.
+        self.assertTrue(slugs, "no articles found in the post sitemap")
+        for slug in slugs:
+            self.assertTrue((saa.WWW / slug / "index.html").exists(), slug)
         for slug in slugs:
             with self.subTest(article=slug):
                 document = (saa.WWW / slug / "index.html").read_text(encoding="utf-8")

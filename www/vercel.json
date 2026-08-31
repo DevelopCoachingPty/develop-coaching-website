@@ -2,6 +2,16 @@
  "trailingSlash": true,
  "redirects": [
   {
+   "source": "/usp-for-construction-company-2",
+   "destination": "/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/usp-for-construction-company-2/",
+   "destination": "/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
    "source": "/scale",
    "destination": "/5-pillars-free-trainings/scale/",
    "permanent": true
