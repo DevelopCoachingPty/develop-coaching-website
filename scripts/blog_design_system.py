@@ -732,6 +732,40 @@ def repair_escaped_markup(document: str) -> str:
     return document[:start] + body + document[end:]
 
 
+def deduplicate_sections(document: str, spec: dict) -> str:
+    """Remove an earlier copy of a section that appears twice.
+
+    One article carries a whole 325 word block twice, three headings and all,
+    because an edited version was pasted in without the original being taken
+    out. The reader sees the same three sections run past twice. Naming the
+    heading here keeps the removal explicit rather than letting a script guess
+    which copy to keep. The last copy is kept, since that is the edited one.
+    """
+    headings = spec.get("deduplicate_sections") or []
+    if not headings:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for wanted in headings:
+        while True:
+            found = [
+                match
+                for match in re.finditer(r"<h([23])\b[^>]*>.*?</h\1>", body, re.DOTALL)
+                if text_of(match.group(0)).casefold() == wanted.strip().casefold()
+            ]
+            if len(found) < 2:
+                break
+            first = found[0]
+            level = first.group(1)
+            # The block runs to the next heading at the same level or higher.
+            following = re.compile(rf"<h[1-{level}]\b[^>]*>", re.IGNORECASE)
+            nxt = following.search(body, first.end())
+            stop = nxt.start() if nxt else len(body)
+            body = body[: first.start()] + body[stop:]
+    return document[:start] + body + document[end:]
+
+
 def insert_headings(document: str, spec: dict) -> str:
     """Introduce H2 sections into articles that were published as flowing prose.
 
@@ -830,6 +864,7 @@ def transform(document: str, spec: dict) -> str:
     document = update_visible_category(document, spec)
     document = update_h1_and_hero(document, spec)
     document = demote_body_h1s(document, spec)
+    document = deduplicate_sections(document, spec)
     document = insert_headings(document, spec)
     document = apply_heading_rewrites(document, spec)
     document = promote_headings(document, spec)

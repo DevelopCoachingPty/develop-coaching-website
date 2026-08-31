@@ -1,6 +1,6 @@
 # Blog GEO audit: ranked action backlog
 
-70 articles audited. Median GEO readiness 93 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
+70 articles audited. Median GEO readiness 95 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## How the score is built
 
@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 28 &nbsp;&nbsp; **Score recoverable:** 308 points
+**Articles affected:** 26 &nbsp;&nbsp; **Score recoverable:** 292 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 33 &nbsp;&nbsp; **Score recoverable:** 270 points
+**Articles affected:** 32 &nbsp;&nbsp; **Score recoverable:** 260 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -76,7 +76,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 7. Repair heading structure: single H1, at least four H2 sections
 
-**Articles affected:** 11 &nbsp;&nbsp; **Score recoverable:** 90 points
+**Articles affected:** 10 &nbsp;&nbsp; **Score recoverable:** 84 points
 
 13 articles use H1 for section headings, so the page has no single subject. 18 have fewer than four H2 sections, which leaves long unbroken runs of prose that cannot be extracted as a passage. The transformer can demote stray H1s; adding real sections is writing.
 
@@ -84,7 +84,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 8. Assign one pillar to every article and make schema agree
 
-**Articles affected:** 16
+**Articles affected:** 14
 
 16 articles carry no pillar or the wrong one in their structured data, and some carry two at once. The pillar is how the site explains its own shape, in the visible tag, the body class, the meta tag and the schema together.
 
@@ -92,7 +92,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 9. Remove em dashes from article body copy
 
-**Articles affected:** 13 &nbsp;&nbsp; **Score recoverable:** 52 points
+**Articles affected:** 12 &nbsp;&nbsp; **Score recoverable:** 48 points
 
 22 articles carry em dashes, 121 in total, against the house style rule. Low search impact, but it is a visible inconsistency on pages being reviewed for exactly that.
 

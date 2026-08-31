@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 42 |
-| Recategorise | 6 |
-| Rewrite first | 21 |
+| Design only | 44 |
+| Recategorise | 5 |
+| Rewrite first | 20 |
 
 ## Plan (14)
 
@@ -87,7 +87,7 @@
 | [how-to-find-your-usp](https://develop-coaching.com/how-to-find-your-usp/) | 100 | 1709 | 10 | Design only | Audit | none | none |
 | [perform-at-your-best](https://develop-coaching.com/perform-at-your-best/) | 100 | 1339 | 4 | Design only | Audit | none | none |
 
-## Scale (13)
+## Scale (15)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -103,6 +103,8 @@
 | [construction-cash-flow-management-the-blueprint-to-scaling-past-1m](https://develop-coaching.com/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/) | 100 | 2776 | 8 | Design only | Audit | none | none |
 | [construction-profit-margin-uk](https://develop-coaching.com/construction-profit-margin-uk/) | 100 | 2334 | 6 | Design only | Audit | none | none |
 | [cost-cutting-in-construction](https://develop-coaching.com/cost-cutting-in-construction/) | 100 | 1561 | 7 | Design only | Audit | none | none |
+| [grow-building-company](https://develop-coaching.com/grow-building-company/) | 100 | 1885 | 7 | Design only | Audit | none | none |
+| [grow-carpentry-business](https://develop-coaching.com/grow-carpentry-business/) | 100 | 1555 | 11 | Design only | Audit | none | none |
 | [trade-mastermind-construction](https://develop-coaching.com/trade-mastermind-construction/) | 100 | 2008 | 8 | Design only | Audit | none | none |
 
 ## Attract/Convert (1)
@@ -117,7 +119,7 @@
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
 | [how-to-recruit-for-your-construction-business](https://develop-coaching.com/how-to-recruit-for-your-construction-business/) | 43 | 2282 | 0 | Rewrite first | Audit | h1-count-7, meta-107ch, fluffy-intro, h2-count-0 | schema-headline-drift, no-pillar-link, categories-2 |
 
-## Uncategorized (14)
+## Uncategorized (12)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -125,7 +127,6 @@
 | [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 48 | 1268 | 6 | Rewrite first | Audit | fluffy-intro, em-dashes-1 | schema-headline-drift, no-pillar-link |
 | [grow-groundworks-business](https://develop-coaching.com/grow-groundworks-business/) | 55 | 1182 | 6 | Rewrite first | Audit | fluffy-intro, em-dashes-5 | schema-headline-drift, no-pillar-link |
 | [how-to-recruit-for-your-construction-business-2](https://develop-coaching.com/how-to-recruit-for-your-construction-business-2/) | 55 | 1057 | 6 | Rewrite first | Audit | fluffy-intro | schema-headline-drift, no-pillar-link |
-| [grow-building-company](https://develop-coaching.com/grow-building-company/) | 62 | 1987 | 7 | Recategorise | Audit | meta-53ch, em-dashes-9 | canonical-mismatch, schema-headline-drift, no-pillar-link |
 | [grow-plastering-business](https://develop-coaching.com/grow-plastering-business/) | 63 | 1837 | 8 | Rewrite first | Audit | title-68ch, fluffy-intro, em-dashes-10 | schema-headline-drift, no-pillar-link |
 | [how-to-expand-electrical-business](https://develop-coaching.com/how-to-expand-electrical-business/) | 67 | 1181 | 6 | Recategorise | Audit | title-82ch, em-dashes-4 | schema-headline-drift, no-pillar-link |
 | [how-to-price-construction-work](https://develop-coaching.com/how-to-price-construction-work/) | 67 | 1320 | 3 | Rewrite first | Audit | h1-count-10 | schema-headline-drift, no-pillar-link |
@@ -134,5 +135,4 @@
 | [best-social-media-platforms-for-construction-companies](https://develop-coaching.com/best-social-media-platforms-for-construction-companies/) | 74 | 2062 | 6 | Rewrite first | Audit | fluffy-intro | no-pillar-link |
 | [construction-networking](https://develop-coaching.com/construction-networking/) | 74 | 1249 | 5 | Recategorise | Audit | em-dashes-1 | schema-headline-drift, no-pillar-link |
 | [digital-marketing-for-construction](https://develop-coaching.com/digital-marketing-for-construction/) | 75 | 1547 | 4 | Recategorise | Audit | em-dashes-2 | schema-headline-drift, no-pillar-link |
-| [grow-carpentry-business](https://develop-coaching.com/grow-carpentry-business/) | 82 | 1398 | 9 | Rewrite first | Audit | h1-count-2 | schema-headline-drift, no-pillar-link |
 
