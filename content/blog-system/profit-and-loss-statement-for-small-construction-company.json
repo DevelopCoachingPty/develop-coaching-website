@@ -1,0 +1,64 @@
+{
+  "slug": "profit-and-loss-statement-for-small-construction-company",
+  "pillar": "Scale",
+  "title": "Profit and Loss Statement for a Construction Company",
+  "meta_description": "How to build and read a profit and loss statement for a small construction company: what goes in it, how to analyse it, and what it tells you to change.",
+  "h1": "Profit and Loss Statement for a Construction Company",
+  "hero_subtitle": "A practical guide to the one report that tells you whether the year worked.",
+  "intro": {
+    "answer": "A profit and loss statement, also called an income statement, gives you a clear picture of what the business earned and what it cost to earn it. For a construction company it is the fastest way to see whether the work is priced correctly.",
+    "image": {
+      "src": "/wp-content/uploads/2025/04/PL.jpg",
+      "alt": "A profit and loss statement for a small construction company",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers the basics of a P&L, how to create a simplified version tailored to a construction business, how to analyse what it is telling you, and how to use those insights to grow."
+  },
+  "briefing": {
+    "eyebrow": "Financial reporting site briefing",
+    "title": "Revenue, Costs, and What Is Left",
+    "intro": "A P&L looks intimidating until you realise it answers one question in three parts: what came in, what it cost, and what remains. Everything else on the page is detail supporting those three numbers.",
+    "panels": [
+      {
+        "heading": "What goes into a construction P&L?",
+        "paragraphs": [
+          "Revenue first: money earned from completed projects, change orders and other construction activity. That is the fuel the rest of the statement runs on.",
+          "Then the costs, split between the direct costs of doing the work and the overheads of running the business. Keeping those separate is what lets you tell a pricing problem from an overhead problem."
+        ]
+      },
+      {
+        "heading": "How to use it once you have it",
+        "paragraphs": [
+          "A statement you file away is bookkeeping. A statement you read is management."
+        ],
+        "steps": [
+          "Produce it monthly rather than annually, so problems surface while they are small.",
+          "Compare periods rather than reading a single month in isolation.",
+          "Separate direct costs from overheads so the diagnosis is clear.",
+          "Act on what it shows: pricing, cost control, or the mix of work you take on."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "The P&L tells you whether the year worked. It does not tell you whether you can pay people next week. That is cash flow, and it is a separate discipline."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Understanding the Basics of a Profit and Loss Statement for Small Construction Company": "What is a profit and loss statement?"
+  },
+  "brief_before_heading": "What is a profit and loss statement?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "utilities, and marketing—the expenses required",
+      "replace": "utilities and marketing, the expenses required"
+    }
+  ]
+}

@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 38 |
+| Design only | 42 |
 | Recategorise | 6 |
-| Rewrite first | 25 |
+| Rewrite first | 21 |
 
 ## Plan (14)
 
@@ -91,17 +91,17 @@
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [mastering-construction-hiring-key-steps-for-building-a-skilled-workforce](https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/) | 50 | 2440 | 0 | Rewrite first | Audit | h1-count-8, fluffy-intro, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [profit-and-loss-statement-for-small-construction-company](https://develop-coaching.com/profit-and-loss-statement-for-small-construction-company/) | 54 | 1165 | 5 | Rewrite first | Audit | meta-62ch, fluffy-intro, em-dashes-1 | schema-headline-drift, no-pillar-link |
-| [why-you-need-to-come-off-the-tools](https://develop-coaching.com/why-you-need-to-come-off-the-tools/) | 57 | 815 | 0 | Rewrite first | Audit | h1-count-3, h2-count-0 | no-pillar-link |
 | [how-to-grow-a-construction-business](https://develop-coaching.com/how-to-grow-a-construction-business/) | 65 | 1687 | 5 | Rewrite first | Audit | fluffy-intro, alt-missing-1 | no-pillar-link |
-| [delegation-in-construction](https://develop-coaching.com/delegation-in-construction/) | 66 | 1160 | 8 | Design only | Audit | meta-59ch, em-dashes-10 | schema-headline-drift, no-pillar-link |
-| [construction-profit-margin-uk](https://develop-coaching.com/construction-profit-margin-uk/) | 69 | 2116 | 5 | Rewrite first | Audit | fluffy-intro, em-dashes-2 | schema-headline-drift, no-pillar-link |
-| [how-to-scale-your-construction-business](https://develop-coaching.com/how-to-scale-your-construction-business/) | 70 | 2028 | 5 | Design only | Audit | none | schema-headline-drift, no-pillar-link |
 | [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 84 | 915 | 5 | Design only | Audit | none | none |
+| [how-to-scale-your-construction-business](https://develop-coaching.com/how-to-scale-your-construction-business/) | 91 | 2141 | 5 | Design only | Audit | none | none |
+| [delegation-in-construction](https://develop-coaching.com/delegation-in-construction/) | 96 | 1337 | 9 | Design only | Audit | none | none |
 | [federation-of-master-builders](https://develop-coaching.com/federation-of-master-builders/) | 96 | 1529 | 7 | Design only | Audit | none | none |
+| [mastering-construction-hiring-key-steps-for-building-a-skilled-workforce](https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/) | 96 | 2672 | 13 | Design only | Audit | none | none |
 | [mistakes-when-scaling-a-construction-business](https://develop-coaching.com/mistakes-when-scaling-a-construction-business/) | 96 | 1251 | 9 | Design only | Audit | none | none |
+| [profit-and-loss-statement-for-small-construction-company](https://develop-coaching.com/profit-and-loss-statement-for-small-construction-company/) | 96 | 1304 | 6 | Design only | Audit | none | none |
+| [why-you-need-to-come-off-the-tools](https://develop-coaching.com/why-you-need-to-come-off-the-tools/) | 97 | 1019 | 6 | Design only | Audit | none | none |
 | [construction-cash-flow-management-the-blueprint-to-scaling-past-1m](https://develop-coaching.com/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/) | 100 | 2776 | 8 | Design only | Audit | none | none |
+| [construction-profit-margin-uk](https://develop-coaching.com/construction-profit-margin-uk/) | 100 | 2334 | 6 | Design only | Audit | none | none |
 | [cost-cutting-in-construction](https://develop-coaching.com/cost-cutting-in-construction/) | 100 | 1561 | 7 | Design only | Audit | none | none |
 | [trade-mastermind-construction](https://develop-coaching.com/trade-mastermind-construction/) | 100 | 2008 | 8 | Design only | Audit | none | none |
 

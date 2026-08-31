@@ -1,0 +1,58 @@
+{
+  "slug": "how-to-scale-your-construction-business",
+  "pillar": "Scale",
+  "title": "How to Scale Your Construction Business",
+  "meta_description": "How to scale a construction business: assess the model you have honestly, build a growth plan around it, then execute without breaking what already works.",
+  "h1": "How to Scale Your Construction Business",
+  "hero_subtitle": "A practical guide to growing without the wheels coming off.",
+  "intro": {
+    "answer": "Scaling starts with an honest assessment of the business you already have. Most growth plans fail because they are built on what the owner hopes is true rather than what the numbers say.",
+    "image": {
+      "src": "/wp-content/uploads/2023/08/Social-media-2.png",
+      "alt": "A construction business owner planning how to scale the company",
+      "width": 940,
+      "height": 788
+    },
+    "roadmap": "This guide works through three steps: assessing your current business model, developing a growth plan that fits it, and executing that plan in a way the business can actually absorb."
+  },
+  "briefing": {
+    "eyebrow": "Scaling site briefing",
+    "title": "Start With the Finances, Not the Ambition",
+    "intro": "Every scaling conversation wants to start with the target. The useful ones start with the current state, because growth magnifies whatever is already there. A margin problem at £1M is a much larger margin problem at £3M.",
+    "panels": [
+      {
+        "heading": "What should you assess before you scale?",
+        "paragraphs": [
+          "Begin with the finances. Look closely at profit margins, cash flow and overall expenses. That analysis tells you what the business can genuinely fund, which sets the pace of everything else.",
+          "Then the model itself: which work makes money, which clients are worth keeping, and which parts of delivery depend entirely on you being available."
+        ]
+      },
+      {
+        "heading": "Then the three steps",
+        "paragraphs": [
+          "In order, because each one depends on the honesty of the one before it."
+        ],
+        "steps": [
+          "Assess your business model, starting with the financial position.",
+          "Develop a growth plan built on that assessment rather than on ambition.",
+          "Execute it, adjusting as the business tells you what it can absorb."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth remembering",
+      "text": "Scaling requires a willingness to embrace change. If the plan lets you carry on working exactly as you do now, it is not a growth plan, it is a forecast."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "The first step: assess your business model": "Step one: assess your business model"
+  },
+  "brief_before_heading": "Step one: assess your business model",
+  "intro_removes_heading": "Introduction",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
