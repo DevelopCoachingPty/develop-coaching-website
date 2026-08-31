@@ -1,0 +1,59 @@
+{
+  "slug": "federation-of-master-builders",
+  "pillar": "Scale",
+  "title": "Federation of Master Builders: Is Membership Worth It?",
+  "meta_description": "What FMB membership actually gives a construction business: the eligibility criteria, the vetting process, the marketing benefits and the training included.",
+  "h1": "Federation of Master Builders: Is Membership Worth It?",
+  "hero_subtitle": "A practical look at what FMB membership gives you, and what it asks of you first.",
+  "intro": {
+    "answer": "FMB membership is not a badge you buy. You have to be a UK-based sole trader or a small to medium construction company that has been trading long enough to be vetted, and the vetting is the point.",
+    "image": {
+      "src": "/wp-content/uploads/2021/09/ChatGPT-Image-Apr-11-2025-01_40_53-PM.jpg",
+      "alt": "A master builder on site representing Federation of Master Builders membership",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers how to join, including the eligibility criteria and what the inspection involves, the marketing advantages that follow, and the professional development and training that comes with membership."
+  },
+  "briefing": {
+    "eyebrow": "Accreditation site briefing",
+    "title": "The Vetting Is What Makes It Worth Having",
+    "intro": "Any trade body will sell you a logo. What makes the FMB useful to a client is that not everyone gets one, so the check you have to pass is the thing you are actually buying.",
+    "panels": [
+      {
+        "heading": "Who can join the Federation of Master Builders?",
+        "paragraphs": [
+          "UK-based sole traders and small to medium construction companies that have been trading for a qualifying period. It is not open to a business on its first job.",
+          "The application then goes through a vetting process including an inspection, which is why the membership carries weight with a cautious client comparing two quotes."
+        ]
+      },
+      {
+        "heading": "What you get once you are in",
+        "paragraphs": [
+          "The value splits into two: what it does for winning work, and what it does for running the business."
+        ],
+        "steps": [
+          "Use of the FMB logo, which does the reassurance work before you speak.",
+          "A listing in the online directory, where clients actively look for vetted firms.",
+          "Promotional opportunities through the federation itself.",
+          "Webinars, events and online training resources.",
+          "Industry updates, so regulation changes do not arrive as a surprise."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth asking",
+      "text": "Whether it pays depends on where your work comes from. If clients find you through directories and comparison, accreditation earns its fee quickly. If everything arrives through referral, the training and updates are the stronger argument."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "Joining the Federation of Master Builders": "How do you join the Federation of Master Builders?"
+  },
+  "brief_before_heading": "How do you join the Federation of Master Builders?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

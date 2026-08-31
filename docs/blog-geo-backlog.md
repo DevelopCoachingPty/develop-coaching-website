@@ -1,6 +1,6 @@
 # Blog GEO audit: ranked action backlog
 
-70 articles audited. Median GEO readiness 75 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
+70 articles audited. Median GEO readiness 84 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## How the score is built
 
@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 38 &nbsp;&nbsp; **Score recoverable:** 376 points
+**Articles affected:** 34 &nbsp;&nbsp; **Score recoverable:** 348 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 40 &nbsp;&nbsp; **Score recoverable:** 340 points
+**Articles affected:** 37 &nbsp;&nbsp; **Score recoverable:** 315 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -100,7 +100,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 10. Add a lead image with real alt text where one is missing
 
-**Articles affected:** 15 &nbsp;&nbsp; **Score recoverable:** 45 points
+**Articles affected:** 14 &nbsp;&nbsp; **Score recoverable:** 42 points
 
 21 articles have no image in the body at all. Others carry alt text that repeats the file name. The design puts a full width image directly under the answer, so an article without one cannot meet the standard.
 
