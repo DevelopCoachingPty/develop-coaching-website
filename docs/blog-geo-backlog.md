@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 57 &nbsp;&nbsp; **Score recoverable:** 490 points
+**Articles affected:** 56 &nbsp;&nbsp; **Score recoverable:** 484 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 54 &nbsp;&nbsp; **Score recoverable:** 490 points
+**Articles affected:** 53 &nbsp;&nbsp; **Score recoverable:** 480 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 

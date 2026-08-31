@@ -1,0 +1,60 @@
+{
+  "slug": "how-to-find-good-tradesmen",
+  "pillar": "Attract",
+  "title": "How to Find Good Tradesmen and Keep Them",
+  "meta_description": "How to find good tradesmen for your construction business: define what you actually need, widen where you look, vet properly, and use referrals well.",
+  "h1": "How to Find Good Tradesmen and Keep Them",
+  "hero_subtitle": "A practical guide to hiring trades you can put in front of a client without worrying.",
+  "intro": {
+    "answer": "Finding good tradesmen is a process, not luck. Most bad hires trace back to a vague brief: if you cannot describe the work and the standard precisely, you cannot judge who is right for it.",
+    "image": {
+      "src": "/wp-content/uploads/2024/05/build-a-skilled-workforce.webp",
+      "alt": "A skilled construction team working together on site",
+      "width": 1200,
+      "height": 900
+    },
+    "roadmap": "This guide covers five steps: defining what you need, widening where you look, vetting properly before anyone starts, knowing when to trust your instincts, and using referrals so good people bring you more good people."
+  },
+  "briefing": {
+    "eyebrow": "Hiring site briefing",
+    "title": "Define the Job Before You Look",
+    "intro": "Almost every hiring problem in construction starts before the search does. A brief that says experienced carpenter tells you nothing you can vet against, so the decision falls back to whoever seemed keenest on the phone.",
+    "panels": [
+      {
+        "heading": "What should you decide before you start looking?",
+        "paragraphs": [
+          "The project scope in plain terms: what is being built, to what standard, and what finished looks like. Then the skills that scope actually demands, rather than a job title.",
+          "Then the practical constraints. Timeline, budget, and where the work is. Those three decide who is genuinely available to you, and they save both sides a conversation that was never going to work."
+        ]
+      },
+      {
+        "heading": "Then work through it in order",
+        "paragraphs": [
+          "Each step narrows the field. Skipping one means the next has to do work it was not designed for."
+        ],
+        "steps": [
+          "Define the need: scope, skills, timeline, budget, location.",
+          "Cast a wide net rather than reusing the same two sources every time.",
+          "Vet thoroughly, before anyone is on site rather than after.",
+          "Trust your instincts. If something feels wrong at interview, it usually is.",
+          "Ask for referrals, because good tradesmen tend to know other good tradesmen."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth remembering",
+      "text": "Vetting after someone has started is not vetting, it is damage control. The cost of a bad hire is rarely their day rate. It is the rework, the delay and the client who watched it happen."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "heading_rewrites": {
+    "1. Define Your Needs: Laying the Foundation": "1. What do you actually need?",
+    "3. Conduct Thorough Vetting: Essential Steps in How to Find Good Tradesmen": "3. How should you vet a tradesman?"
+  },
+  "brief_before_heading": "1. What do you actually need?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

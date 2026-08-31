@@ -676,6 +676,34 @@ def promote_headings(document: str, spec: dict) -> str:
     return document[:start] + body + document[end:]
 
 
+# Three articles embed an image from a generator's temporary storage, signed
+# with an access token that expired in September 2024. Every one returns 403,
+# so the live pages have rendered a broken image icon for close to two years.
+DEAD_IMAGE_HOSTS = ("wsstgprdphotosonic01.blob.core.windows.net",)
+
+
+def drop_dead_images(document: str) -> str:
+    """Remove images whose host is known to no longer serve them.
+
+    A broken image is worse than no image: it renders as a placeholder icon and
+    tells a reader the page is neglected. These are removed rather than
+    replaced, because inventing a substitute picture is not this script's job.
+    """
+    start, end = body_span(document)
+    body = document[start:end]
+    for host in DEAD_IMAGE_HOSTS:
+        wrapped = re.compile(
+            rf'\s*<(figure|p)\b[^>]*>\s*<img\b[^>]*src="[^"]*{re.escape(host)}[^"]*"[^>]*>\s*</\1>',
+            re.IGNORECASE,
+        )
+        body = wrapped.sub("", body)
+        bare = re.compile(
+            rf'\s*<img\b[^>]*src="[^"]*{re.escape(host)}[^"]*"[^>]*>', re.IGNORECASE
+        )
+        body = bare.sub("", body)
+    return document[:start] + body + document[end:]
+
+
 def insert_headings(document: str, spec: dict) -> str:
     """Introduce H2 sections into articles that were published as flowing prose.
 
@@ -766,6 +794,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
+    document = drop_dead_images(document)
     document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)

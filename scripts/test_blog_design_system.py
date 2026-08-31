@@ -147,6 +147,17 @@ class TransformTests(unittest.TestCase):
         self.assertIn('id="dc-article-intro"', body)
         self.assertNotIn("The first opening paragraph", body)
 
+    def test_dead_external_image_is_removed(self):
+        dead = (
+            '<p><img src="https://wsstgprdphotosonic01.blob.core.windows.net/photosonic/x.png?se=2024-09-01" alt="x"></p>\n'
+            "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
+            "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
+            "<h2>First Heading</h2>\n<p>Body.</p>\n<h2>Second Heading</h2>\n<p>Body.</p>\n"
+        )
+        out = self.transform(page(body_paragraphs=dead))
+        self.assertNotIn("wsstgprdphotosonic01", out)
+        self.assertIn('id="dc-article-brief"', out)
+
     def test_bare_video_link_becomes_a_real_player(self):
         out = self.transform(page(broken_anchor=True))
         self.assertNotIn('rel="noopener noreferrer"></p>', out)

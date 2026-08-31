@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 25 |
+| Design only | 26 |
 | Recategorise | 6 |
-| Rewrite first | 38 |
+| Rewrite first | 37 |
 
 ## Plan (13)
 
@@ -60,9 +60,9 @@
 | [the-construction-company-marketing-strategy-to-scale-past-1m](https://develop-coaching.com/the-construction-company-marketing-strategy-to-scale-past-1m/) | 64 | 2077 | 7 | Design only | Audit | title-80ch | schema-headline-drift, no-pillar-link |
 | [digital-marketing-construction](https://develop-coaching.com/digital-marketing-construction/) | 69 | 1223 | 5 | Design only | Audit | meta-88ch | schema-headline-drift, no-pillar-link |
 | [customer-reviews-for-construction-company](https://develop-coaching.com/customer-reviews-for-construction-company/) | 77 | 1692 | 5 | Rewrite first | Audit | listicle-headline | schema-headline-drift, no-pillar-link |
-| [how-to-find-good-tradesmen](https://develop-coaching.com/how-to-find-good-tradesmen/) | 80 | 1485 | 6 | Rewrite first | Audit | listicle-headline | no-pillar-link |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 93 | 1165 | 4 | Design only | Audit | none | none |
 | [construction-lead-generation](https://develop-coaching.com/construction-lead-generation/) | 96 | 1962 | 7 | Reference | Audit | none | none |
+| [how-to-find-good-tradesmen](https://develop-coaching.com/how-to-find-good-tradesmen/) | 96 | 1598 | 7 | Design only | Audit | none | none |
 | [attract-the-right-clients](https://develop-coaching.com/attract-the-right-clients/) **[batch 1]** | 100 | 1966 | 7 | Design only | Audit | none | none |
 
 ## Convert (5)
