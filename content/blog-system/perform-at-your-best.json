@@ -1,0 +1,70 @@
+{
+  "slug": "perform-at-your-best",
+  "pillar": "Deliver",
+  "title": "How to Perform at Your Best as a Business Owner",
+  "meta_description": "How to perform at your best when you run a construction business: the two things that decide it, how to handle stress, and a daily routine that survives a busy week.",
+  "h1": "How to Perform at Your Best as a Business Owner",
+  "hero_subtitle": "A practical guide to keeping your energy and your head clear while running a business.",
+  "intro": {
+    "answer": "Poor performance usually comes down to two things: energy levels and mental clarity. When both are high the work looks after itself. When either drops, everything gets harder at once.",
+    "image": {
+      "src": "/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg",
+      "alt": "A construction business owner taking time out to reset",
+      "width": 1200,
+      "height": 1200
+    },
+    "roadmap": "This guide covers what actually drives performance, why stress is the biggest enemy of clear thinking, two practical ways to deal with it, and a daily routine that survives a genuinely busy week."
+  },
+  "briefing": {
+    "eyebrow": "Performance site briefing",
+    "title": "Energy and Clarity, in That Order",
+    "intro": "You are running a business, providing for a family, and giving customers and staff the best of what you have got. When there is that much on your plate it is hard to know where to start, so start with the two things everything else sits on.",
+    "panels": [
+      {
+        "heading": "What actually decides how well you perform?",
+        "paragraphs": [
+          "Energy levels first, which comes down to the amount of calories and the quality of the food behind them. This is not a diet question, it is a fuel question.",
+          "Mental clarity second, and its biggest enemy is stress. Stress is the body trying to protect you, which is useful in short bursts and corrosive when it never switches off."
+        ]
+      },
+      {
+        "heading": "A routine that survives a busy week",
+        "paragraphs": [
+          "None of this needs an hour you do not have. It needs the edges of the day protecting."
+        ],
+        "steps": [
+          "Prepare the night before, so the morning does not start in a rush.",
+          "Do a 20 to 30 minute workout to start the day. It is sustainable even when you are busy.",
+          "Stop working for the last hour of the day.",
+          "If your mind will not shut down, write down everything on it and what needs doing.",
+          "When stress spikes, use your breathing, or bring your attention back through all five senses."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth checking",
+      "text": "It is not always easy, but taking the time to see how you are doing in these areas is what stops a bad month becoming a bad year."
+    },
+    "cta": {
+      "text": "Explore the Deliver pillar resources",
+      "href": "/5-pillars-free-trainings/deliver/"
+    }
+  },
+  "insert_headings": [
+    {
+      "before": "What would be considered a lack of work performance",
+      "text": "What Decides How Well You Perform?"
+    },
+    {
+      "before": "The biggest enemy for mental clarity is stress",
+      "text": "How Do You Deal With Stress?"
+    },
+    {
+      "before": "How can you fit it all in when you have a busy life",
+      "text": "How Do You Fit It Into a Busy Week?"
+    }
+  ],
+  "brief_before_heading": "What Decides How Well You Perform?",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

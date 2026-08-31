@@ -859,6 +859,15 @@ def validate(spec: dict, path: Path) -> None:
             f"{path.name}: meta description is {len(spec['meta_description'])} chars, "
             "keep it between 110 and 165"
         )
+    image = spec["intro"].get("image")
+    if image:
+        # A guessed image path produces exactly the broken image this rollout
+        # exists to remove, so the file has to be on disk and its dimensions
+        # have to match the file rather than the guess.
+        source = WWW / image["src"].lstrip("/")
+        if not source.exists():
+            raise ValueError(f"{path.name}: intro image not found at {image['src']}")
+
     cta = spec["briefing"]["cta"]["href"]
     if not cta.startswith("/5-pillars-free-trainings/"):
         raise ValueError(f"{path.name}: briefing CTA must link to a Five Pillars page")

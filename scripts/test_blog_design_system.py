@@ -22,7 +22,7 @@ SPEC = {
     "hero_subtitle": "A practical guide to the thing this article is about.",
     "intro": {
         "answer": "The direct answer to the question the reader searched for.",
-        "image": {"src": "/wp-content/uploads/example.webp", "alt": "Example", "width": 940, "height": 788},
+        "image": {"src": "/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg", "alt": "Example", "width": 1200, "height": 1200},
         "roadmap": "This guide covers the ground in the order it matters.",
     },
     "briefing": {
@@ -68,7 +68,7 @@ def page(body_paragraphs: str = "", broken_anchor: bool = False) -> str:
     body = body_paragraphs or (
         "<p>The first opening paragraph of the article, long enough to count as substantial prose.</p>\n"
         "<p>The second opening paragraph of the article, also long enough to count as substantial prose.</p>\n"
-        '<p><img src="/wp-content/uploads/example.webp" alt="Example" width="940" height="788"></p>\n'
+        '<p><img src="/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg" alt="Example" width="940" height="788"></p>\n'
         "<h2>First Heading</h2>\n<p>Body copy under the first heading.</p>\n"
         "<h2>Second Heading</h2>\n<p>Body copy under the second heading.</p>\n"
     )
@@ -126,7 +126,7 @@ class TransformTests(unittest.TestCase):
     def test_duplicate_lead_image_removed(self):
         out = self.transform()
         start, end = bds.body_span(out)
-        self.assertEqual(out[start:end].count("/wp-content/uploads/example.webp"), 1)
+        self.assertEqual(out[start:end].count("/wp-content/uploads/2021/09/shutterstock_493194055-1.jpg"), 1)
 
     def test_video_embed_and_its_script_survive(self):
         """An unclosed <p> around an embed must not let the intro swallow it."""
@@ -242,6 +242,14 @@ class ValidationTests(unittest.TestCase):
 
     def test_valid_spec_passes(self):
         self.check()
+
+    def test_missing_intro_image_rejected(self):
+        """A guessed image path is the exact fault this rollout removes."""
+        with self.assertRaises(ValueError) as caught:
+            self.check(intro={**SPEC["intro"], "image": {
+                "src": "/wp-content/uploads/2020/02/does-not-exist.jpg",
+                "alt": "x", "width": 10, "height": 10}})
+        self.assertIn("intro image not found", str(caught.exception))
 
     def test_long_title_rejected(self):
         with self.assertRaises(ValueError):

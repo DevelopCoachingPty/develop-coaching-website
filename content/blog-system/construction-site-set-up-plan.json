@@ -1,0 +1,56 @@
+{
+  "slug": "construction-site-set-up-plan",
+  "pillar": "Deliver",
+  "title": "How to Organise a Construction Site: A Setup Guide",
+  "meta_description": "How to organise a construction site properly: compound layout, CDM compliance, deliveries and daily management. A practical guide for UK contractors.",
+  "h1": "How to Organise a Construction Site: A Setup Guide",
+  "hero_subtitle": "A practical guide to setting a site up so the programme holds from day one.",
+  "intro": {
+    "answer": "Organising a site properly is the difference between a project that runs to programme and one that bleeds time, money and goodwill. Almost all of it is decided before a machine rolls on.",
+    "image": {
+      "src": "/wp-content/uploads/2025/04/Untitled-design-5.jpg",
+      "alt": "A well organised construction site compound and working area",
+      "width": 2560,
+      "height": 1440
+    },
+    "roadmap": "This guide covers planning the site before work starts, designing the compound and layout, the documentation and CDM compliance you are legally required to have, managing deliveries and materials, running safety and daily briefings, holding quality from day one, and building a setup system that scales."
+  },
+  "briefing": {
+    "eyebrow": "Site setup briefing",
+    "title": "Walk the Plot Before You Plan It",
+    "intro": "The costliest site problems are nearly always discovered rather than designed: a service nobody knew about, access that will not take the delivery, ground that behaves differently to the drawing. A pre-construction survey is the cheapest hour on the whole job.",
+    "panels": [
+      {
+        "heading": "What should a pre-construction survey cover?",
+        "paragraphs": [
+          "Ground conditions, underground services, overhead lines and anything existing that has to be worked around. Check with Dial Before You Dig rather than assuming the drawings are complete.",
+          "Then the access constraints. How the deliveries arrive, where they can be stored, and where plant can safely move once the compound is in."
+        ]
+      },
+      {
+        "heading": "Then get the compliance right, first time",
+        "paragraphs": [
+          "The CDM Regulations 2015 require a Principal Contractor to produce a Construction Phase Plan before work starts. It is not a tick-box exercise."
+        ],
+        "steps": [
+          "Walk the plot and complete the pre-construction survey.",
+          "Design the compound and layout around access and storage, not around what fits.",
+          "Produce the Construction Phase Plan before anyone starts.",
+          "Set the delivery and materials process, so plant is not waiting on a lorry.",
+          "Start the daily briefings on day one rather than when something goes wrong."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth doing early",
+      "text": "Quality control belongs at the start, not the week before handover. Snags found at the end are the same defects, just far more expensive and in front of the client."
+    },
+    "cta": {
+      "text": "Explore the Deliver pillar resources",
+      "href": "/5-pillars-free-trainings/deliver/"
+    }
+  },
+  "brief_before_heading": "Plan the Site Before Work Starts",
+  "intro_replaces_paragraphs": 1,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
