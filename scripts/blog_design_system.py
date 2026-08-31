@@ -20,6 +20,7 @@ import argparse
 import html
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -846,6 +847,26 @@ REQUIRED = ("slug", "pillar", "title", "meta_description", "h1", "hero_subtitle"
             "intro", "briefing", "brief_before_heading", "date_modified")
 
 
+def image_size(source: Path) -> tuple:
+    """Real pixel dimensions of an image, or None if they cannot be read."""
+    result = subprocess.run(
+        ["sips", "-g", "pixelWidth", "-g", "pixelHeight", str(source)],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return None
+    values = {}
+    for line in result.stdout.splitlines():
+        if ":" in line:
+            key, _, value = line.strip().partition(":")
+            if key.strip() in ("pixelWidth", "pixelHeight"):
+                values[key.strip()] = int(value.strip())
+    if len(values) != 2:
+        return None
+    return values["pixelWidth"], values["pixelHeight"]
+
+
 def validate(spec: dict, path: Path) -> None:
     missing = [key for key in REQUIRED if key not in spec]
     if missing:
@@ -867,6 +888,13 @@ def validate(spec: dict, path: Path) -> None:
         source = WWW / image["src"].lstrip("/")
         if not source.exists():
             raise ValueError(f"{path.name}: intro image not found at {image['src']}")
+        actual = image_size(source)
+        if actual and actual != (int(image["width"]), int(image["height"])):
+            raise ValueError(
+                f"{path.name}: intro image is {actual[0]}x{actual[1]} on disk, "
+                f"the content file says {image['width']}x{image['height']}. "
+                "Wrong dimensions make the page jump as the image loads."
+            )
 
     cta = spec["briefing"]["cta"]["href"]
     if not cta.startswith("/5-pillars-free-trainings/"):

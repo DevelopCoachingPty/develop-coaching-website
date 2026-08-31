@@ -1,0 +1,67 @@
+{
+  "slug": "time-in-construction",
+  "pillar": "Deliver",
+  "title": "Managing Time in Construction: Seven Practical Fixes",
+  "meta_description": "How to manage time in construction: what poor scheduling actually costs, and seven practical fixes from planning and technology through to resource allocation.",
+  "h1": "Managing Time in Construction: Seven Practical Fixes",
+  "hero_subtitle": "A practical guide to stopping delays eating the margin you priced for.",
+  "intro": {
+    "answer": "Every delay and every overrun eats directly into profit. Time management in construction is not an admin problem, it is the difference between the margin you quoted and the margin you keep.",
+    "image": {
+      "src": "/wp-content/uploads/2021/12/tools-down-scaled-1.jpg",
+      "alt": "Tools down on site while a construction project waits",
+      "width": 1387,
+      "height": 924
+    },
+    "roadmap": "This guide covers what poor time management actually costs a construction business, then seven fixes: planning properly, using technology, communicating clearly, managing risk before it lands, allocating resources, monitoring and adjusting, and not forgetting the people doing the work."
+  },
+  "briefing": {
+    "eyebrow": "Programme site briefing",
+    "title": "Delays Are a Planning Problem, Not a Pace Problem",
+    "intro": "When a job runs late the instinct is to push harder on site. Almost always the cause is upstream: a programme that was optimistic, a risk nobody owned, or resources committed to two places at once. Working faster does not fix any of those.",
+    "panels": [
+      {
+        "heading": "What does poor time management actually cost?",
+        "paragraphs": [
+          "More than missed deadlines. It costs the margin on the job, the credibility with the client, and the availability of the team for the next project you have already priced.",
+          "It also compounds. One programme slipping pushes the next start date, which is why a single bad job can affect a whole quarter."
+        ]
+      },
+      {
+        "heading": "The seven fixes, in order of impact",
+        "paragraphs": [
+          "The first four prevent problems. The last three catch the ones that get through."
+        ],
+        "steps": [
+          "Plan properly, with a realistic programme rather than an optimistic one.",
+          "Use the technology that removes manual tracking.",
+          "Communicate clearly, so nobody is waiting on information.",
+          "Manage risks proactively, with an owner for each one.",
+          "Optimise resource allocation, so people are not committed twice.",
+          "Monitor and adjust while the job is running, not at the end.",
+          "Remember the human factor. Tired teams make expensive mistakes."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review weekly",
+      "text": "Programme against actual, on every live job. A week's slippage spotted in week two is recoverable. The same slippage found at handover is a loss and a difficult conversation."
+    },
+    "cta": {
+      "text": "Explore the Deliver pillar resources",
+      "href": "/5-pillars-free-trainings/deliver/"
+    }
+  },
+  "heading_rewrites": {
+    "Cost of Poor Management of Time in Construction": "What does poor time management cost you?"
+  },
+  "brief_before_heading": "What does poor time management cost you?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "Your resources—your team, your equipment, your materials—are the lifeblood",
+      "replace": "Your resources, your team, your equipment and your materials, are the lifeblood"
+    }
+  ]
+}

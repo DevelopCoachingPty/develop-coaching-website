@@ -1,6 +1,6 @@
 # Blog GEO audit: ranked action backlog
 
-70 articles audited. Median GEO readiness 74 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
+70 articles audited. Median GEO readiness 75 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## How the score is built
 
@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 42 &nbsp;&nbsp; **Score recoverable:** 400 points
+**Articles affected:** 38 &nbsp;&nbsp; **Score recoverable:** 376 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 44 &nbsp;&nbsp; **Score recoverable:** 380 points
+**Articles affected:** 40 &nbsp;&nbsp; **Score recoverable:** 340 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -68,7 +68,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 6. Replace preamble openings with a direct answer
 
-**Articles affected:** 19 &nbsp;&nbsp; **Score recoverable:** 228 points
+**Articles affected:** 16 &nbsp;&nbsp; **Score recoverable:** 192 points
 
 27 articles open with a wind-up rather than an answer. Both a reader deciding whether to stay and a model deciding what to quote read the first block. If the answer is in paragraph five, neither finds it.
 
@@ -76,7 +76,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 7. Repair heading structure: single H1, at least four H2 sections
 
-**Articles affected:** 17 &nbsp;&nbsp; **Score recoverable:** 144 points
+**Articles affected:** 15 &nbsp;&nbsp; **Score recoverable:** 126 points
 
 13 articles use H1 for section headings, so the page has no single subject. 18 have fewer than four H2 sections, which leaves long unbroken runs of prose that cannot be extracted as a passage. The transformer can demote stray H1s; adding real sections is writing.
 
@@ -92,7 +92,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 9. Remove em dashes from article body copy
 
-**Articles affected:** 18 &nbsp;&nbsp; **Score recoverable:** 72 points
+**Articles affected:** 17 &nbsp;&nbsp; **Score recoverable:** 68 points
 
 22 articles carry em dashes, 121 in total, against the house style rule. Low search impact, but it is a visible inconsistency on pages being reviewed for exactly that.
 
@@ -100,7 +100,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 10. Add a lead image with real alt text where one is missing
 
-**Articles affected:** 16 &nbsp;&nbsp; **Score recoverable:** 48 points
+**Articles affected:** 15 &nbsp;&nbsp; **Score recoverable:** 45 points
 
 21 articles have no image in the body at all. Others carry alt text that repeats the file name. The design puts a full width image directly under the answer, so an article without one cannot meet the standard.
 
@@ -114,9 +114,9 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 | [how-to-recruit-for-your-construction-business](https://develop-coaching.com/how-to-recruit-for-your-construction-business/) | 43 | 2282 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Metadata; Internal routes; Images and alt text |
 | [construction-business-marketing](https://develop-coaching.com/construction-business-marketing/) | 46 | 775 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes |
 | [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 48 | 1268 | Direct answer up front; Question-shaped headings; Extractable lists; Schema integrity; Internal routes; Freshness; Brand compliance |
-| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 48 | 788 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Metadata; Internal routes |
 | [mastering-construction-hiring-key-steps-for-building-a-skilled-workforce](https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/) | 50 | 2440 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes; Images and alt text |
 | [how-to-get-clients-in-construction](https://develop-coaching.com/how-to-get-clients-in-construction/) | 51 | 1112 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Metadata; Internal routes; Images and alt text |
 | [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | Question-shaped headings; Extractable lists; Heading structure; Depth; Schema integrity; Internal routes; Images and alt text |
 | [profit-and-loss-statement-for-small-construction-company](https://develop-coaching.com/profit-and-loss-statement-for-small-construction-company/) | 54 | 1165 | Direct answer up front; Question-shaped headings; Depth; Schema integrity; Metadata; Internal routes; Brand compliance |
 | [grow-groundworks-business](https://develop-coaching.com/grow-groundworks-business/) | 55 | 1182 | Direct answer up front; Question-shaped headings; Depth; Schema integrity; Internal routes; Brand compliance |
+| [how-to-recruit-for-your-construction-business-2](https://develop-coaching.com/how-to-recruit-for-your-construction-business-2/) | 55 | 1057 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes |

@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 33 |
+| Design only | 36 |
 | Recategorise | 6 |
-| Rewrite first | 30 |
+| Rewrite first | 27 |
 
 ## Plan (14)
 
@@ -76,19 +76,18 @@
 | [construction-job-pricing](https://develop-coaching.com/construction-job-pricing/) **[batch 1]** | 100 | 1688 | 7 | Design only | Audit | none | none |
 | [construction-sales-funnel](https://develop-coaching.com/construction-sales-funnel/) **[batch 1]** | 100 | 2368 | 10 | Design only | Audit | none | none |
 
-## Deliver (7)
+## Deliver (6)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 48 | 788 | 5 | Rewrite first | Audit | meta-60ch, fluffy-intro | no-pillar-link |
-| [accounting-for-construction-companies](https://develop-coaching.com/accounting-for-construction-companies/) | 57 | 1987 | 0 | Rewrite first | Audit | h1-count-10, fluffy-intro, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [trade-mastermind-construction](https://develop-coaching.com/trade-mastermind-construction/) | 69 | 1836 | 7 | Rewrite first | Audit | fluffy-intro | no-pillar-link |
-| [time-in-construction](https://develop-coaching.com/time-in-construction/) | 70 | 1947 | 3 | Design only | Audit | em-dashes-2 | no-pillar-link |
+| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 89 | 958 | 6 | Design only | Audit | none | none |
+| [time-in-construction](https://develop-coaching.com/time-in-construction/) | 96 | 2112 | 4 | Design only | Audit | none | none |
+| [accounting-for-construction-companies](https://develop-coaching.com/accounting-for-construction-companies/) | 100 | 2126 | 14 | Design only | Audit | none | none |
 | [construction-site-set-up-plan](https://develop-coaching.com/construction-site-set-up-plan/) | 100 | 2422 | 10 | Design only | Audit | none | none |
 | [how-to-find-your-usp](https://develop-coaching.com/how-to-find-your-usp/) | 100 | 1709 | 10 | Design only | Audit | none | none |
 | [perform-at-your-best](https://develop-coaching.com/perform-at-your-best/) | 100 | 1339 | 4 | Design only | Audit | none | none |
 
-## Scale (12)
+## Scale (13)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -104,6 +103,7 @@
 | [mistakes-when-scaling-a-construction-business](https://develop-coaching.com/mistakes-when-scaling-a-construction-business/) | 75 | 1113 | 8 | Design only | Audit | em-dashes-7 | schema-headline-drift, no-pillar-link |
 | [federation-of-master-builders](https://develop-coaching.com/federation-of-master-builders/) | 81 | 1357 | 5 | Rewrite first | Audit | h1-count-2 | schema-headline-drift, no-pillar-link |
 | [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 84 | 915 | 5 | Design only | Audit | none | none |
+| [trade-mastermind-construction](https://develop-coaching.com/trade-mastermind-construction/) | 100 | 2008 | 8 | Design only | Audit | none | none |
 
 ## Attract/Convert (1)
 
