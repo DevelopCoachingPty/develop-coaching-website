@@ -1,0 +1,55 @@
+{
+  "slug": "construction-business-plan",
+  "pillar": "Plan",
+  "title": "Construction Business Plan: Build a 12 Month Plan",
+  "meta_description": "How to build a 12 month construction business plan: set quarterly goals, pick the KPIs that track them, and keep the plan flexible enough to survive the year.",
+  "h1": "Construction Business Plan: Build a 12 Month Plan",
+  "hero_subtitle": "A practical guide to planning the year so the business moves in one direction.",
+  "intro": {
+    "answer": "A 12 month plan is a roadmap: what you want to achieve, how you plan to achieve it, and by when. Its real job is making sure everyone in the business is pulling the same way.",
+    "image": {
+      "src": "/wp-content/uploads/2023/06/planner-1024x512.png",
+      "alt": "A 12 month planner laid out for a construction business planning session",
+      "width": 1024,
+      "height": 512
+    },
+    "roadmap": "This guide covers what a 12 month plan is, why it matters for a construction business, what belongs in it, and how to build one that fits your business rather than a template."
+  },
+  "briefing": {
+    "eyebrow": "Annual planning site briefing",
+    "title": "Quarterly Goals Beat an Annual Wish List",
+    "intro": "A year is too long a horizon to hold anyone to. The plans that survive contact with a real construction year break the twelve months into quarters, each with a number attached, and each with something that tells you early whether it is working.",
+    "panels": [
+      {
+        "heading": "What should a 12 month construction plan include?",
+        "paragraphs": [
+          "Financial goals first: revenue, profitability, or cost reduction, set against realistic project estimates and market conditions rather than hope.",
+          "Then marketing strategy, covering how leads arrive and how clients are kept. Then project planning, assessed against the pipeline you can actually see. Then the people side, because a plan that needs a bigger team is not a plan until the hiring is in it."
+        ]
+      },
+      {
+        "heading": "Build it in this order",
+        "paragraphs": [
+          "Break the year down rather than trying to write it in one sitting. Each quarter should be challenging and still attainable."
+        ],
+        "steps": [
+          "Set specific, measurable goals for each quarter, using last year's data as the guide.",
+          "Pick the KPIs that will tell you whether each goal is on track.",
+          "Align every quarterly goal with where the business is meant to be in three years.",
+          "Review at the end of each quarter and adjust. The plan is not carved in stone."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review quarterly",
+      "text": "Market conditions move and so does the business. A plan you have never revised is not disciplined, it is out of date."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "What is a 12-month plan?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
