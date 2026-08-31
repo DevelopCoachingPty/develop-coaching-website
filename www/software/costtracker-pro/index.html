@@ -93,14 +93,18 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
 }
 </style>
 <style id="dc-pillar-backlink-style">
-.dc-pillar-backlink{padding:clamp(44px,6vw,72px) 20px;background:#f4f7f8;color:#17232b;font-family:"Source Sans Pro",Arial,sans-serif}
-.dc-pillar-backlink__inner{max-width:1120px;margin:0 auto;padding:clamp(26px,4vw,42px);border:1px solid #d9e2e5;border-radius:14px;background:#fff;box-shadow:8px 8px 0 #087f86}
-.dc-pillar-backlink__eyebrow{margin:0 0 10px;color:#087f86;font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.dc-pillar-backlink h2{margin:0 0 12px;color:#17232b;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.12}
-.dc-pillar-backlink p:not(.dc-pillar-backlink__eyebrow){max-width:760px;margin:0 0 22px;font-size:1.08rem;line-height:1.65}
-.dc-pillar-backlink__link{box-sizing:border-box;display:inline-flex;align-items:center;min-height:50px;padding:13px 20px;border:1px solid #17232b;background:#f2b94b;color:#17232b!important;font-weight:800;text-decoration:none;box-shadow:4px 4px 0 #087f86}
-.dc-pillar-backlink__link:hover{background:#f6c966;transform:translate(1px,1px);box-shadow:3px 3px 0 #087f86}
-.dc-pillar-backlink__link:focus-visible{outline:3px solid #087f86;outline-offset:4px}
+/* Matches the article design system. Colours are the Elementor kit palette:
+   secondary #2C67AC, text #424142, yellow #FDCE36. */
+.dc-pillar-backlink{padding:clamp(40px,5vw,64px) 20px;background:#F6F5F2;color:#25262a;font-family:"Source Sans Pro",Arial,sans-serif}
+.dc-pillar-backlink__inner{max-width:1120px;margin:0 auto;padding:clamp(26px,4vw,40px);border:1px solid #E4E2DC;border-top:3px solid #FDCE36;background:#fff}
+.dc-pillar-backlink__eyebrow{margin:0 0 12px;color:#2C67AC;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.dc-pillar-backlink h2{margin:0 0 12px;color:#25262a;font-size:clamp(1.6rem,2.8vw,2.25rem);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+.dc-pillar-backlink p:not(.dc-pillar-backlink__eyebrow){max-width:64ch;margin:0 0 24px;color:#424142;font-size:1.05rem;line-height:1.7}
+.dc-pillar-backlink__link{box-sizing:border-box;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:13px 22px;border:0;background:#25262a;color:#fff!important;font-weight:700;text-decoration:none;transition:background .18s ease,gap .18s ease}
+.dc-pillar-backlink__link:after{content:"→";font-size:17px;line-height:1}
+.dc-pillar-backlink__link:hover{background:#2C67AC;gap:14px}
+.dc-pillar-backlink__link:focus-visible{background:#2C67AC;outline:3px solid #25262a;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.dc-pillar-backlink__link{transition:none}}
 @media(max-width:600px){.dc-pillar-backlink__link{display:flex;width:100%;justify-content:center;text-align:center}}
 </style>
 </head>
