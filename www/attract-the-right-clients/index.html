@@ -398,34 +398,68 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 @media(max-width:600px){.dc-pillar-backlink__link{display:flex;width:100%;justify-content:center;text-align:center}}
 </style>
 <style id="dc-article-system-styles">
-.dc-article-hero-subtitle{max-width:680px;margin:16px 0 0!important;color:#fff;font-size:clamp(17px,2vw,22px)!important;font-weight:600;line-height:1.45;text-shadow:0 2px 4px rgba(0,0,0,.35)}
-.dc-article-intro{margin:0 0 38px}
-.dc-article-intro__answer{margin:0 0 24px!important;padding:18px 22px;border-left:6px solid #f6c944;background:#f5f3ec;color:#25262a;font-size:20px;font-weight:700;line-height:1.5}
-.dc-article-intro img{display:block;width:100%;height:auto;margin:0 0 24px}
-.dc-article-intro__roadmap{margin:0!important;font-size:18px;line-height:1.65}
-.dc-article-brief{--ink:#25262a;--paper:#f5f3ec;--signal:#f6c944;--blue:#087f86;margin:56px 0;padding:0;background:var(--paper);border:1px solid #d9d5c9;box-shadow:8px 8px 0 var(--ink);color:var(--ink);overflow:hidden}
+/* Develop Coaching article system.
+   Set in Source Sans Pro, the face the site already loads. The weight comes
+   from scale, spacing and restraint rather than from ornament. */
+.dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/* Opening. A standfirst, not a warning callout. */
+.dc-article-intro{--ink:#25262a;--quiet:#5d5b54;--signal:#f6c944;margin:0 0 44px}
+.dc-article-intro__answer{position:relative;margin:0 0 30px!important;padding:26px 0 0!important;border:0!important;background:none!important;color:var(--ink)!important;font-size:clamp(20px,2.5vw,26px)!important;font-weight:600!important;line-height:1.38!important;letter-spacing:-.012em}
+.dc-article-intro__answer:before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;background:var(--signal)}
+.dc-article-intro img{display:block;width:100%;height:auto;margin:0 0 26px}
+.dc-article-intro__roadmap{margin:0!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important;max-width:64ch}
+
+/* Briefing. A site notice: dark head, quiet body, hairline divisions. */
+.dc-article-brief{--ink:#25262a;--paper:#f7f5ef;--edge:#e3dfd2;--rule:#d5d0c0;--quiet:#5d5b54;--signal:#f6c944;--teal:#0b7c83;
+  margin:52px 0;background:var(--paper);border:1px solid var(--edge);color:var(--ink);overflow:hidden}
 .dc-article-brief *{box-sizing:border-box}
-.dc-article-brief__header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;padding:32px;background:var(--ink);color:#fff;border-bottom:8px solid var(--signal)}
-.dc-article-brief__eyebrow{margin:0 0 10px!important;color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px!important;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(30px,4vw,48px)!important;line-height:1.02!important;letter-spacing:-.03em}
-.dc-article-brief__stamp{min-width:140px;padding:12px 16px;border:2px solid var(--signal);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:.1em;text-align:center;text-transform:uppercase;transform:rotate(2deg)}
-.dc-article-brief__body{padding:32px}
-.dc-article-brief__intro{max-width:760px;margin:0 0 30px!important;font-size:18px;line-height:1.65}
-.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
-.dc-article-brief__panel{padding:24px;background:#fff;border-top:5px solid var(--blue)}
-.dc-article-brief__panel h3{margin:0 0 12px!important;color:var(--ink)!important;font-size:24px!important;line-height:1.15!important}
-.dc-article-brief__panel p{margin:0 0 16px!important}
+.dc-article-brief__header{padding:26px 30px 24px;background:var(--ink);border-bottom:3px solid var(--signal)}
+.dc-article-brief__eyebrow{display:block;margin:0 0 14px!important;color:var(--signal)!important;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px!important;font-weight:700!important;letter-spacing:.2em;line-height:1!important;text-transform:uppercase}
+.dc-article-brief h2{margin:0!important;color:#fff!important;font-size:clamp(25px,3.4vw,36px)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em;max-width:22ch}
+.dc-article-brief__stamp{display:inline-block;margin-top:18px;padding:5px 11px;border:1px solid rgba(246,201,68,.55);color:var(--signal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:.18em;line-height:1.4;text-transform:uppercase}
+.dc-article-brief__body{padding:30px}
+.dc-article-brief__intro{max-width:62ch;margin:0 0 30px!important;color:var(--quiet)!important;font-size:17px!important;font-weight:400!important;line-height:1.72!important}
+
+/* Panels divided by a hairline, not boxed as cards. */
+.dc-article-brief__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.dc-article-brief__panel{padding:0 30px 0 0;background:none;border:0}
+.dc-article-brief__panel + .dc-article-brief__panel{padding:0 0 0 30px;border-left:1px solid var(--rule)}
+.dc-article-brief__panel h3{position:relative;margin:0 0 14px!important;padding-top:16px;color:var(--ink)!important;font-size:19px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.012em}
+.dc-article-brief__panel h3:before{content:"";position:absolute;top:0;left:0;width:26px;height:3px;background:var(--teal)}
+.dc-article-brief__panel p{margin:0 0 14px!important;color:var(--quiet)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
 .dc-article-brief__panel p:last-child{margin-bottom:0!important}
-.dc-article-brief__steps{margin:18px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
-.dc-article-brief__steps li{position:relative;margin:0!important;padding:0 0 18px 42px;counter-increment:dc-step}
-.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-2px;width:28px;height:28px;display:grid;place-items:center;background:var(--signal);border:2px solid var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:900}
-.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:13px;top:28px;bottom:0;border-left:2px dashed var(--blue)}
-.dc-article-brief__review{margin:24px 0 0;padding:20px 24px;background:var(--signal);border-left:8px solid var(--ink)}
-.dc-article-brief__review strong{display:block;margin-bottom:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.dc-article-brief__link{display:inline-block;margin-top:22px;padding:13px 17px;background:var(--ink);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:4px 4px 0 var(--blue)}
-.dc-article-brief__link:hover,.dc-article-brief__link:focus-visible{background:var(--blue)}
-.dc-article-brief__link:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-@media(max-width:767px){.dc-article-hero-subtitle{font-size:16px!important}.dc-article-intro__answer{padding:16px 18px;font-size:18px}.dc-article-brief{margin:38px 0;box-shadow:5px 5px 0 var(--ink)}.dc-article-brief__header{grid-template-columns:1fr;padding:24px}.dc-article-brief__stamp{justify-self:start;min-width:0}.dc-article-brief__body{padding:20px}.dc-article-brief__grid{grid-template-columns:1fr}.dc-article-brief__panel{padding:20px}}
+
+/* Steps. Quiet numerals on a fine spine. */
+.dc-article-brief__steps{margin:20px 0 0!important;padding:0!important;list-style:none!important;counter-reset:dc-step}
+.dc-article-brief__steps li{position:relative;margin:0!important;padding:1px 0 20px 40px;color:var(--quiet);font-size:15.5px;line-height:1.62;counter-increment:dc-step}
+.dc-article-brief__steps li:last-child{padding-bottom:0}
+.dc-article-brief__steps li:before{content:counter(dc-step);position:absolute;left:0;top:-1px;width:25px;height:25px;display:grid;place-items:center;border:1.5px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700}
+.dc-article-brief__steps li:not(:last-child):after{content:"";position:absolute;left:12px;top:29px;bottom:6px;border-left:1px solid var(--rule)}
+
+/* Closing note and action. */
+.dc-article-brief__review{margin:30px 0 0!important;padding:20px 24px!important;background:#efeade;border-left:3px solid var(--signal);color:var(--ink)!important;font-size:15.5px!important;font-weight:400!important;line-height:1.68!important}
+.dc-article-brief__review strong{display:block;margin-bottom:6px;color:var(--teal);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.dc-article-brief__link{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:14px 22px;background:var(--ink);border:0;color:#fff!important;font-size:15px;font-weight:700;letter-spacing:.005em;text-decoration:none!important;transition:background .18s ease,gap .18s ease}
+.dc-article-brief__link:after{content:"→";font-size:17px;line-height:1}
+.dc-article-brief__link:hover{background:var(--teal);gap:14px}
+.dc-article-brief__link:focus-visible{background:var(--teal);outline:3px solid var(--ink);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.dc-article-brief__link{transition:none}}
+
+@media(max-width:1100px){
+  .dc-article-brief__grid{grid-template-columns:1fr}
+  .dc-article-brief__panel{padding:0 0 26px!important}
+  .dc-article-brief__panel + .dc-article-brief__panel{padding:26px 0 0!important;border-left:0;border-top:1px solid var(--rule)}
+}
+@media(max-width:600px){
+  .dc-article-hero-subtitle{font-size:16px!important}
+  .dc-article-intro{margin-bottom:34px}
+  .dc-article-intro__answer{padding-top:22px!important}
+  .dc-article-brief{margin:38px 0}
+  .dc-article-brief__header{padding:22px 20px 20px}
+  .dc-article-brief__body{padding:22px 20px}
+  .dc-article-brief__review{padding:18px 20px!important}
+}
 </style>
 </head>
 <body class="wp-singular post-template-default single single-post postid-3091 single-format-standard wp-custom-logo wp-theme-hello-elementor elementor-default elementor-kit-4211 elementor-page-4666 category-attract">
@@ -559,11 +593,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>&nbsp;</p>
 <section class="dc-article-brief" id="dc-article-brief" aria-labelledby="dc-article-brief-title">
   <header class="dc-article-brief__header">
-    <div>
-      <p class="dc-article-brief__eyebrow">Client attraction site briefing</p>
-      <h2 id="dc-article-brief-title">Track Where Your Best Clients Came From</h2>
-    </div>
-    <div class="dc-article-brief__stamp">Attract pillar</div>
+    <p class="dc-article-brief__eyebrow">Client attraction site briefing</p>
+    <h2 id="dc-article-brief-title">Track Where Your Best Clients Came From</h2>
+    <p class="dc-article-brief__stamp">Attract pillar</p>
   </header>
   <div class="dc-article-brief__body">
     <p class="dc-article-brief__intro">Most builders can name their biggest client. Very few can say which source produced them, or what has happened to that source since. Without that, you cannot tell whether a quiet month is bad luck or a channel closing.</p>
