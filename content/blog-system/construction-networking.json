@@ -1,0 +1,60 @@
+{
+  "slug": "construction-networking",
+  "pillar": "Scale",
+  "title": "Construction Networking: Five Ways to Make It Work",
+  "meta_description": "How to make construction networking pay: choosing the right events, preparing before you go, building real relationships, and measuring whether it works.",
+  "h1": "Construction Networking: Five Ways to Make It Work",
+  "hero_subtitle": "A practical guide for people who find networking useful and awkward in equal measure.",
+  "intro": {
+    "answer": "Construction is a relationship business, and most of the work that matters moves through people rather than adverts. Networking only pays when it is treated as a process with a purpose, rather than an evening out.",
+    "image": {
+      "src": "/wp-content/uploads/2024/03/image.webp",
+      "alt": "Construction professionals networking at an industry event",
+      "width": 1280,
+      "height": 771
+    },
+    "roadmap": "This guide covers the modern networker's toolkit including digital and hybrid options, choosing and preparing for the right events, building relationships that go somewhere, and measuring whether any of it is producing work."
+  },
+  "briefing": {
+    "eyebrow": "Networking site briefing",
+    "title": "Choose the Event Before You Choose the Pitch",
+    "intro": "Most networking disappoints because the wrong room was chosen. An evening spent with people who will never buy from you or refer you is a pleasant evening, and nothing more. Selection does more work here than charm.",
+    "panels": [
+      {
+        "heading": "How do you pick the right events?",
+        "paragraphs": [
+          "Start from what you want the room to produce: better subcontractors, introductions to main contractors, or clients directly. Those are three different rooms, and very few events do all three.",
+          "Then research before you go. Knowing who will be there and what you want from two or three specific conversations turns an evening into a piece of work."
+        ]
+      },
+      {
+        "heading": "Then make it produce something",
+        "paragraphs": [
+          "The value is almost never in the event itself. It is in what happens in the fortnight afterwards."
+        ],
+        "steps": [
+          "Prepare a short, clear introduction that says what you do and who for.",
+          "Listen more than you pitch. People remember being asked about, not talked at.",
+          "Follow up within days, while they still remember the conversation.",
+          "Ask existing contacts for introductions rather than starting cold every time.",
+          "Track it: what you attended, who you met, and what work came of it."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Measure it",
+      "text": "Set networking KPIs the same way you would for any other channel. If a year of events has produced nothing traceable, that is information, not a reason to try harder at the same rooms."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "The Modern Construction Networker’s Toolkit": "What does construction networking look like now?",
+    "Hybrid networking strategies for 2024": "Hybrid networking strategies"
+  },
+  "brief_before_heading": "What does construction networking look like now?",
+  "intro_replaces_paragraphs": 3,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}

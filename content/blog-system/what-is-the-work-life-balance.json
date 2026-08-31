@@ -1,0 +1,93 @@
+{
+  "slug": "what-is-the-work-life-balance",
+  "pillar": "Deliver",
+  "title": "Work-Life Balance for Construction Business Owners",
+  "meta_description": "Work-life balance for construction business owners: delegate properly, block your time, take the holiday, and use the Wheel of Life to see where you stand.",
+  "h1": "Work-Life Balance for Construction Business Owners",
+  "hero_subtitle": "A practical guide to getting your life back without the business slipping.",
+  "intro": {
+    "answer": "Work-life balance is not about squeezing more hours into the day. It is about creating space for the business and for everything else, which means changing how the business runs rather than how hard you work.",
+    "image": {
+      "src": "/wp-content/uploads/2025/10/What-is-work-life.jpeg",
+      "alt": "A construction business owner taking time away from work",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers five actions: learning to delegate and come off the tools, blocking work and family time separately, actually taking holidays, using the Wheel of Life to see where you stand, and prioritising your own wellbeing."
+  },
+  "briefing": {
+    "eyebrow": "Owner wellbeing site briefing",
+    "title": "The Business Has to Change First",
+    "intro": "The industry demands long hours, tight deadlines and constant pressure, and no amount of personal discipline fixes a business that cannot run without you. That is why every item on this list is a change to the company, not a change to your attitude.",
+    "panels": [
+      {
+        "heading": "How do you find time when the business demands everything?",
+        "paragraphs": [
+          "You start by removing yourself from the work only you can do, which means delegating properly and coming off the tools rather than just doing fewer hours of them.",
+          "Then you protect the time deliberately. Blocking work and family time separately is what stops one quietly absorbing the other, which is how most owners end up working every evening without deciding to."
+        ]
+      },
+      {
+        "heading": "The five actions",
+        "paragraphs": [
+          "The last one is the one everybody skips, and it is the one that tells you whether the rest are working."
+        ],
+        "steps": [
+          "Delegate, and come off the tools.",
+          "Block work time and family time separately, and hold the line.",
+          "Take holidays, and get past the guilt of doing it.",
+          "Use the Wheel of Life to see honestly where you are out of balance.",
+          "Prioritise your own wellbeing rather than treating it as the reward for later."
+        ]
+      }
+    ],
+    "review": {
+      "label": "The good news",
+      "text": "Better balance is possible and it is within your control. It is a set of decisions about how the business runs, not a personality you either have or do not."
+    },
+    "cta": {
+      "text": "Explore the Deliver pillar resources",
+      "href": "/5-pillars-free-trainings/deliver/"
+    }
+  },
+  "heading_rewrites": {
+    "Learn to Delegate and “Come Off the Tools”": "1. Delegate and come off the tools"
+  },
+  "brief_before_heading": "1. Delegate and come off the tools",
+  "intro_replaces_paragraphs": 4,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "pressure to be everywhere—on-site, in the office",
+      "replace": "pressure to be everywhere: on-site, in the office"
+    },
+    {
+      "find": "focus on the bigger picture—strategic planning",
+      "replace": "focus on the bigger picture: strategic planning"
+    },
+    {
+      "find": "personal projects, or relaxation—just as you would",
+      "replace": "personal projects or relaxation, just as you would"
+    },
+    {
+      "find": "impact your well-being—it can also affect",
+      "replace": "impact your well-being. It can also affect"
+    },
+    {
+      "find": "recharging your batteries—you",
+      "replace": "recharging your batteries. You"
+    },
+    {
+      "find": "consists of several categories—each one representing",
+      "replace": "consists of several categories, each one representing"
+    },
+    {
+      "find": "a tool for personal reflection—it’s a powerful way",
+      "replace": "a tool for personal reflection. It’s a powerful way"
+    },
+    {
+      "find": "just about working less—it’s about working smarter",
+      "replace": "just about working less. It’s about working smarter"
+    }
+  ]
+}

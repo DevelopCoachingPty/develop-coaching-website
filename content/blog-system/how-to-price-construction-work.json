@@ -1,0 +1,60 @@
+{
+  "slug": "how-to-price-construction-work",
+  "pillar": "Convert",
+  "title": "How to Price Construction Work for Repeat Clients",
+  "meta_description": "How to price construction work in a way that builds trust, protects your margin, and turns a first-time client into someone who comes back.",
+  "h1": "How to Price Construction Work for Repeat Clients",
+  "hero_subtitle": "A practical guide to pricing that wins the second job as well as the first.",
+  "intro": {
+    "answer": "Most construction companies obsess over fresh enquiries. New leads, new ads, new architects, new everything. Growth rarely comes from that. A client who has already watched you deliver is far easier to sell to than a stranger.",
+    "image": {
+      "src": "/wp-content/uploads/2025/11/Gemini_Generated_Image_r7mk3sr7mk3sr7mk-1.png",
+      "alt": "A construction quote presented clearly to a client",
+      "width": 1024,
+      "height": 1024
+    },
+    "roadmap": "This guide covers how pricing, delivery and follow-up work together to produce repeat clients: a clear pricing structure that earns trust, a follow-up sequence that keeps you in mind, and how to ask for reviews and referrals without it feeling awkward."
+  },
+  "briefing": {
+    "eyebrow": "Pricing site briefing",
+    "title": "A Clear Price Buys Trust",
+    "intro": "Clients rarely reject a price because it is too high. They reject it because they cannot see what they are paying for. A vague number invites comparison shopping. A clear structure invites a conversation.",
+    "panels": [
+      {
+        "heading": "How should you structure a construction price?",
+        "paragraphs": [
+          "Break it down so the client can see the shape of the job rather than a single figure. What is included, what is excluded, and what would change it.",
+          "That transparency is what makes the second job possible. A client who understood the first price is not starting from suspicion when you quote again."
+        ]
+      },
+      {
+        "heading": "Then follow up properly",
+        "paragraphs": [
+          "This is where most construction businesses lose the repeat work they have already earned."
+        ],
+        "steps": [
+          "Price clearly enough that the client could explain it to someone else.",
+          "Deliver what you described, and flag anything that changes as it changes.",
+          "Follow up after handover rather than disappearing at the final invoice.",
+          "Ask for the review while the job is fresh in their mind.",
+          "Stay in touch, so you are the obvious call when the next project appears."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "A client who has already seen you deliver quality work on time is far easier to sell to than someone who has never met you. That is the cheapest pipeline available, and pricing is where it starts."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "heading_rewrites": {
+    "Repeat clients are worth more than any lead you’ll ever buy": "Why repeat clients beat new leads"
+  },
+  "brief_before_heading": "Why repeat clients beat new leads",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
+}

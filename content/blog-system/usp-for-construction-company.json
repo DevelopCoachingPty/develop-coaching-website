@@ -55,6 +55,14 @@
     {
       "find": "start by conducting a thorough SWOT analysis",
       "replace": "start with thorough market research, then conduct a SWOT analysis"
+    },
+    {
+      "find": "just a marketing tool—it",
+      "replace": "just a marketing tool. It"
+    },
+    {
+      "find": "just about listing services—it",
+      "replace": "just about listing services. It"
     }
   ],
   "date_modified": "2026-08-31T00:00:00+10:00"
