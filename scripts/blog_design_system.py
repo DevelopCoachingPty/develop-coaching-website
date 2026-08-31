@@ -46,6 +46,31 @@ STYLES = """<style id="%s">
    from scale, spacing and restraint rather than from ornament. */
 .dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
 
+/* Article prose.
+   The column runs 796px wide and the theme sets 20px text on a 1.4 line, which
+   is about 80 characters a line and too tight to read comfortably at length.
+   Headings came in at weight 500 with 8px of space above them, so sections did
+   not separate, and h3 was smaller than the body text it sat above. This fixes
+   the measure, the rhythm and the hierarchy. Images and the design blocks keep
+   the full column width. */
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol,.dc-prose > h2,.dc-prose > h3,.dc-prose > h4,.dc-prose > blockquote{max-width:66ch}
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol{margin-bottom:20px!important;color:#424142;font-size:19px!important;line-height:1.66!important;text-wrap:pretty}
+.dc-prose > h2{margin:52px 0 16px!important;color:#25262a!important;font-size:clamp(26px,2.6vw,33px)!important;font-weight:700!important;line-height:1.16!important;letter-spacing:-.022em;text-wrap:balance}
+.dc-prose > h3{margin:34px 0 10px!important;color:#25262a!important;font-size:22px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.015em;text-wrap:balance}
+.dc-prose > h4{margin:26px 0 8px!important;color:#25262a!important;font-size:19px!important;font-weight:700!important}
+.dc-prose > ul,.dc-prose > ol{padding-left:24px!important}
+.dc-prose > ul > li,.dc-prose > ol > li{margin:0 0 10px!important;padding-left:4px;line-height:1.66}
+.dc-prose > ul > li::marker{color:#2C67AC}
+.dc-prose > ol > li::marker{color:#2C67AC;font-weight:700}
+.dc-prose > figure{margin:30px 0}
+.dc-prose > figure img,.dc-prose > p > img{display:block;width:100%%;height:auto}
+.dc-prose > h2 + p,.dc-prose > h3 + p{margin-top:0!important}
+@media(max-width:600px){
+  .dc-prose > p,.dc-prose > ul,.dc-prose > ol{font-size:17.5px!important;line-height:1.62!important}
+  .dc-prose > h2{margin:38px 0 12px!important}
+  .dc-prose > h3{margin:26px 0 8px!important}
+}
+
 /* In-article links. The Hello theme default is a magenta that appears nowhere
    in the brand, so links inside article prose take the kit's secondary blue. */
 .elementor-widget-theme-post-content p a:not([class]),.elementor-widget-theme-post-content li a:not([class]){color:#2C67AC;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
@@ -467,6 +492,29 @@ def repair_video_embeds(document: str, spec: dict) -> str:
     return document
 
 
+def mark_prose_container(document: str) -> str:
+    """Add the dc-prose class to the post content widget.
+
+    The prose rules are scoped to direct children of this container, so they
+    style the article's own copy without reaching into the design blocks, the
+    sidebar or any other widget on the page.
+    """
+    match = WIDGET_RE.search(document)
+    if not match:
+        raise ValueError("post content widget not found")
+    opening_start = document.rfind("<div", 0, match.start())
+    opening = document[opening_start : match.end()]
+    if "dc-prose" in opening:
+        return document
+    if re.search(r'\bclass="', opening):
+        updated = re.sub(r'(\bclass=")', r"\1dc-prose ", opening, count=1)
+    else:
+        updated = re.sub(r"^<div\b", '<div class="dc-prose"', opening, count=1)
+    if updated == opening:
+        raise ValueError("could not tag the post content widget")
+    return document[:opening_start] + updated + document[match.end() :]
+
+
 def body_span(document: str) -> tuple:
     """(start, end) of the post-content widget, matched by div depth."""
     match = WIDGET_RE.search(document)
@@ -702,6 +750,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 
 def transform(document: str, spec: dict) -> str:
+    document = mark_prose_container(document)
     document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)

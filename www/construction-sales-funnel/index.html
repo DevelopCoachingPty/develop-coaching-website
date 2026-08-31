@@ -389,14 +389,18 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
 
 </style>
 <style id="dc-pillar-backlink-style">
-.dc-pillar-backlink{padding:clamp(44px,6vw,72px) 20px;background:#f4f7f8;color:#17232b;font-family:"Source Sans Pro",Arial,sans-serif}
-.dc-pillar-backlink__inner{max-width:1120px;margin:0 auto;padding:clamp(26px,4vw,42px);border:1px solid #d9e2e5;border-radius:14px;background:#fff;box-shadow:8px 8px 0 #087f86}
-.dc-pillar-backlink__eyebrow{margin:0 0 10px;color:#087f86;font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.dc-pillar-backlink h2{margin:0 0 12px;color:#17232b;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.12}
-.dc-pillar-backlink p:not(.dc-pillar-backlink__eyebrow){max-width:760px;margin:0 0 22px;font-size:1.08rem;line-height:1.65}
-.dc-pillar-backlink__link{box-sizing:border-box;display:inline-flex;align-items:center;min-height:50px;padding:13px 20px;border:1px solid #17232b;background:#f2b94b;color:#17232b!important;font-weight:800;text-decoration:none;box-shadow:4px 4px 0 #087f86}
-.dc-pillar-backlink__link:hover{background:#f6c966;transform:translate(1px,1px);box-shadow:3px 3px 0 #087f86}
-.dc-pillar-backlink__link:focus-visible{outline:3px solid #087f86;outline-offset:4px}
+/* Matches the article design system. Colours are the Elementor kit palette:
+   secondary #2C67AC, text #424142, yellow #FDCE36. */
+.dc-pillar-backlink{padding:clamp(40px,5vw,64px) 20px;background:#F6F5F2;color:#25262a;font-family:"Source Sans Pro",Arial,sans-serif}
+.dc-pillar-backlink__inner{max-width:1120px;margin:0 auto;padding:clamp(26px,4vw,40px);border:1px solid #E4E2DC;border-top:3px solid #FDCE36;background:#fff}
+.dc-pillar-backlink__eyebrow{margin:0 0 12px;color:#2C67AC;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.dc-pillar-backlink h2{margin:0 0 12px;color:#25262a;font-size:clamp(1.6rem,2.8vw,2.25rem);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+.dc-pillar-backlink p:not(.dc-pillar-backlink__eyebrow){max-width:64ch;margin:0 0 24px;color:#424142;font-size:1.05rem;line-height:1.7}
+.dc-pillar-backlink__link{box-sizing:border-box;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:13px 22px;border:0;background:#25262a;color:#fff!important;font-weight:700;text-decoration:none;transition:background .18s ease,gap .18s ease}
+.dc-pillar-backlink__link:after{content:"→";font-size:17px;line-height:1}
+.dc-pillar-backlink__link:hover{background:#2C67AC;gap:14px}
+.dc-pillar-backlink__link:focus-visible{background:#2C67AC;outline:3px solid #25262a;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.dc-pillar-backlink__link{transition:none}}
 @media(max-width:600px){.dc-pillar-backlink__link{display:flex;width:100%;justify-content:center;text-align:center}}
 </style>
 <style id="dc-article-system-styles">
@@ -404,6 +408,31 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"
    Set in Source Sans Pro, the face the site already loads. The weight comes
    from scale, spacing and restraint rather than from ornament. */
 .dc-article-hero-subtitle{max-width:640px;margin:14px 0 0!important;color:#fff;font-size:clamp(16px,1.9vw,21px)!important;font-weight:400;line-height:1.5;letter-spacing:.005em;opacity:.94;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/* Article prose.
+   The column runs 796px wide and the theme sets 20px text on a 1.4 line, which
+   is about 80 characters a line and too tight to read comfortably at length.
+   Headings came in at weight 500 with 8px of space above them, so sections did
+   not separate, and h3 was smaller than the body text it sat above. This fixes
+   the measure, the rhythm and the hierarchy. Images and the design blocks keep
+   the full column width. */
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol,.dc-prose > h2,.dc-prose > h3,.dc-prose > h4,.dc-prose > blockquote{max-width:66ch}
+.dc-prose > p,.dc-prose > ul,.dc-prose > ol{margin-bottom:20px!important;color:#424142;font-size:19px!important;line-height:1.66!important;text-wrap:pretty}
+.dc-prose > h2{margin:52px 0 16px!important;color:#25262a!important;font-size:clamp(26px,2.6vw,33px)!important;font-weight:700!important;line-height:1.16!important;letter-spacing:-.022em;text-wrap:balance}
+.dc-prose > h3{margin:34px 0 10px!important;color:#25262a!important;font-size:22px!important;font-weight:700!important;line-height:1.28!important;letter-spacing:-.015em;text-wrap:balance}
+.dc-prose > h4{margin:26px 0 8px!important;color:#25262a!important;font-size:19px!important;font-weight:700!important}
+.dc-prose > ul,.dc-prose > ol{padding-left:24px!important}
+.dc-prose > ul > li,.dc-prose > ol > li{margin:0 0 10px!important;padding-left:4px;line-height:1.66}
+.dc-prose > ul > li::marker{color:#2C67AC}
+.dc-prose > ol > li::marker{color:#2C67AC;font-weight:700}
+.dc-prose > figure{margin:30px 0}
+.dc-prose > figure img,.dc-prose > p > img{display:block;width:100%;height:auto}
+.dc-prose > h2 + p,.dc-prose > h3 + p{margin-top:0!important}
+@media(max-width:600px){
+  .dc-prose > p,.dc-prose > ul,.dc-prose > ol{font-size:17.5px!important;line-height:1.62!important}
+  .dc-prose > h2{margin:38px 0 12px!important}
+  .dc-prose > h3{margin:26px 0 8px!important}
+}
 
 /* In-article links. The Hello theme default is a magenta that appears nowhere
    in the brand, so links inside article prose take the kit's secondary blue. */
@@ -592,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="elementor-element elementor-element-63e5fdb e-flex e-con-boxed e-con e-parent" data-id="63e5fdb" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-bf2a0f3 e-con-full e-flex e-con e-child" data-id="bf2a0f3" data-element_type="container" data-e-type="container" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
-				<div class="elementor-element elementor-element-7f727a1 elementor-widget elementor-widget-theme-post-content" data-id="7f727a1" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
+				<div class="dc-prose elementor-element elementor-element-7f727a1 elementor-widget elementor-widget-theme-post-content" data-id="7f727a1" data-element_type="widget" data-e-type="widget" data-widget_type="theme-post-content.default">
 					<div>
   <div class="lite-youtube" style="position:relative;width:100%;padding-bottom:56.25%;background:#000;margin-bottom:1rem;" data-videoid="lWNMGSHK-_0">
   <a href="https://www.youtube.com/watch?v=lWNMGSHK-_0" target="_blank" rel="noopener" aria-label="Play the video: Construction Sales Funnel: Win Contracts at Better Margins" style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-image:url(&#039;https://i.ytimg.com/vi/lWNMGSHK-_0/hqdefault.jpg&#039;);">
