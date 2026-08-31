@@ -57,5 +57,32 @@
   },
   "brief_before_heading": "1. Why does poor cash flow stall growth?",
   "intro_replaces_paragraphs": 3,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true,
+  "text_replacements": [
+    {
+      "find": "doesn’t guarantee success—<strong>",
+      "replace": "doesn’t guarantee success. <strong>"
+    },
+    {
+      "find": "<strong>Invest in digital marketing</strong>—<a",
+      "replace": "<strong>Invest in digital marketing.</strong> <a"
+    },
+    {
+      "find": "<strong>Follow up with potential clients quickly</strong>—businesses",
+      "replace": "<strong>Follow up with potential clients quickly.</strong> Businesses"
+    },
+    {
+      "find": "<strong>Always be recruiting</strong>—keep job ads live",
+      "replace": "<strong>Always be recruiting.</strong> Keep job ads live"
+    },
+    {
+      "find": "<strong>Provide ongoing feedback</strong>—recognise good work",
+      "replace": "<strong>Provide ongoing feedback.</strong> Recognise good work"
+    },
+    {
+      "find": "<strong>Use the right technology</strong>—construction management software",
+      "replace": "<strong>Use the right technology.</strong> Construction management software"
+    }
+  ]
 }

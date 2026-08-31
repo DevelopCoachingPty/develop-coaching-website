@@ -76,7 +76,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 7. Repair heading structure: single H1, at least four H2 sections
 
-**Articles affected:** 15 &nbsp;&nbsp; **Score recoverable:** 126 points
+**Articles affected:** 13 &nbsp;&nbsp; **Score recoverable:** 114 points
 
 13 articles use H1 for section headings, so the page has no single subject. 18 have fewer than four H2 sections, which leaves long unbroken runs of prose that cannot be extracted as a passage. The transformer can demote stray H1s; adding real sections is writing.
 
@@ -92,7 +92,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 9. Remove em dashes from article body copy
 
-**Articles affected:** 17 &nbsp;&nbsp; **Score recoverable:** 68 points
+**Articles affected:** 16 &nbsp;&nbsp; **Score recoverable:** 64 points
 
 22 articles carry em dashes, 121 in total, against the house style rule. Low search impact, but it is a visible inconsistency on pages being reviewed for exactly that.
 

@@ -55,5 +55,6 @@
   },
   "brief_before_heading": "How do you join the Federation of Master Builders?",
   "intro_replaces_paragraphs": 2,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "demote_body_h1": true
 }

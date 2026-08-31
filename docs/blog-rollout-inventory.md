@@ -22,9 +22,9 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 36 |
+| Design only | 38 |
 | Recategorise | 6 |
-| Rewrite first | 27 |
+| Rewrite first | 25 |
 
 ## Plan (14)
 
@@ -99,10 +99,10 @@
 | [construction-profit-margin-uk](https://develop-coaching.com/construction-profit-margin-uk/) | 69 | 2116 | 5 | Rewrite first | Audit | fluffy-intro, em-dashes-2 | schema-headline-drift, no-pillar-link |
 | [how-to-scale-your-construction-business](https://develop-coaching.com/how-to-scale-your-construction-business/) | 70 | 2028 | 5 | Design only | Audit | none | schema-headline-drift, no-pillar-link |
 | [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 84 | 915 | 5 | Design only | Audit | none | none |
-| [federation-of-master-builders](https://develop-coaching.com/federation-of-master-builders/) | 90 | 1529 | 6 | Rewrite first | Audit | h1-count-2 | none |
-| [mistakes-when-scaling-a-construction-business](https://develop-coaching.com/mistakes-when-scaling-a-construction-business/) | 92 | 1252 | 9 | Design only | Audit | em-dashes-6 | none |
-| [cost-cutting-in-construction](https://develop-coaching.com/cost-cutting-in-construction/) | 94 | 1561 | 6 | Rewrite first | Audit | h1-count-2 | none |
+| [federation-of-master-builders](https://develop-coaching.com/federation-of-master-builders/) | 96 | 1529 | 7 | Design only | Audit | none | none |
+| [mistakes-when-scaling-a-construction-business](https://develop-coaching.com/mistakes-when-scaling-a-construction-business/) | 96 | 1251 | 9 | Design only | Audit | none | none |
 | [construction-cash-flow-management-the-blueprint-to-scaling-past-1m](https://develop-coaching.com/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/) | 100 | 2776 | 8 | Design only | Audit | none | none |
+| [cost-cutting-in-construction](https://develop-coaching.com/cost-cutting-in-construction/) | 100 | 1561 | 7 | Design only | Audit | none | none |
 | [trade-mastermind-construction](https://develop-coaching.com/trade-mastermind-construction/) | 100 | 2008 | 8 | Design only | Audit | none | none |
 
 ## Attract/Convert (1)
