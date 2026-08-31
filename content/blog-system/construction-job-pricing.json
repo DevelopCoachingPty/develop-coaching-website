@@ -52,5 +52,70 @@
   "brief_before_heading": "A Real Underbid Story: Learning the Hard Way",
   "intro_removes_heading": "Why Construction Job Pricing Is the Key to Profit",
   "intro_replaces_paragraphs": 2,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "heading_rewrites": {
+    "When to Say No to Low-Margin Jobs": "When should you say no to a low-margin job?"
+  },
+  "text_replacements": [
+    {
+      "find": "</em>—this article",
+      "replace": "</em>, this article"
+    },
+    {
+      "find": "went sideways—when the contractor",
+      "replace": "went sideways. When the contractor"
+    },
+    {
+      "find": "The homeowner—and commenters—agreed",
+      "replace": "The homeowner, and commenters, agreed"
+    },
+    {
+      "find": "</strong> — even if something seems simple",
+      "replace": "</strong>. Even if something seems simple"
+    },
+    {
+      "find": "converting—",
+      "replace": "converting, "
+    },
+    {
+      "find": "raw materials—it",
+      "replace": "raw materials. It"
+    },
+    {
+      "find": "accountancy—all of these",
+      "replace": "accountancy. All of these"
+    },
+    {
+      "find": "earns above that—fuel for growth",
+      "replace": "earns above that. It is fuel for growth"
+    },
+    {
+      "find": "—you might be busy",
+      "replace": ". You might be busy"
+    },
+    {
+      "find": "and—most importantly—what counts",
+      "replace": "and, most importantly, what counts"
+    },
+    {
+      "find": "the client is—you",
+      "replace": "the client is, you"
+    },
+    {
+      "find": "not a job—it",
+      "replace": "not a job, it"
+    },
+    {
+      "find": "the right jobs—the ones that",
+      "replace": "the right jobs, the ones that"
+    },
+    {
+      "find": "guesswork—it becomes a system",
+      "replace": "guesswork. It becomes a system"
+    },
+    {
+      "find": "Always use written contracts",
+      "replace": "Always use <a href=\"/construction-contracts/\">written contracts</a>"
+    }
+  ]
 }

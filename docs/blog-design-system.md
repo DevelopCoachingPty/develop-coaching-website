@@ -33,6 +33,17 @@ or a missing schema block raises rather than writing a half-transformed page.
 | Consistent mobile and keyboard behaviour | Two-column briefing collapses to one under 768px, 28px H1 on phones, a 3px focus ring on the CTA | shared stylesheet |
 | Page-specific metadata | Title, meta description, Open Graph, Twitter, canonical and article schema all carrying the same words | `title`, `meta_description`, `pillar` |
 
+Two optional fields carry copy changes to the existing article body, so every
+wording edit is reviewable in the content file rather than buried in a script:
+
+| Field | What it does |
+| --- | --- |
+| `heading_rewrites` | Renames body headings, exact old text to new text. Used to make a heading match the question a reader types. |
+| `text_replacements` | Targeted find and replace inside the body, for house style fixes and contextual internal links. |
+
+Both are tolerant on re-run: if the old text is gone and the new text is present,
+the change has already been applied. If neither is found, the run stops.
+
 ## What the transformer enforces
 
 Validation runs before anything touches a page. A content file is rejected if:
@@ -62,6 +73,9 @@ Every new brief uses this from the start. Nothing here is optional.
 - [ ] Exactly one H1. Section headings are H2. Sub-points are H3.
 - [ ] The opening answers the question directly. No "Are you looking to", no scene setting.
 - [ ] At least four H2 sections, at least 900 words.
+- [ ] At least two headings phrased as a question a reader would actually type.
+- [ ] At least three lists or step sequences, so an answer engine has something to lift.
+- [ ] At least three internal links from inside the body.
 - [ ] The briefing carries the single most useful thing in the article, and sits near the top.
 - [ ] One briefing panel is phrased as a question a reader would type.
 - [ ] Every figure is either from Greg or from the article's own research. Nothing invented.
@@ -74,10 +88,12 @@ Every new brief uses this from the start. Nothing here is optional.
 - [ ] Meta description 110 to 165 characters.
 - [ ] Lead image has descriptive alt text, not the file name.
 - [ ] Canonical URL matches the slug and does not change.
+- [ ] Author in the schema is Greg, not an agency address.
 
 **Before merge**
 
 - [ ] `python3 scripts/blog_design_system.py <slug> --check` passes.
+- [ ] `python3 scripts/audit_blog_library.py` shows the article scoring 90 or better.
 - [ ] `python3 -m unittest discover -s scripts -p 'test_*.py'` passes.
 - [ ] Desktop preview checked. One H1, two-column briefing, no horizontal scroll.
 - [ ] 390px phone preview checked. One-column briefing, 28px H1, no horizontal scroll.

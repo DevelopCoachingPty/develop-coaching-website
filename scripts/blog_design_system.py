@@ -466,6 +466,58 @@ def update_brief(document: str, spec: dict) -> str:
     return document[:start] + body + document[end:]
 
 
+def apply_heading_rewrites(document: str, spec: dict) -> str:
+    """Rename body headings, declared as exact old text to new text.
+
+    Tolerant on re-run: if the old heading is gone and the new one is present,
+    the rewrite has already been applied. If neither is there, that is a fault
+    worth stopping for.
+    """
+    rewrites = spec.get("heading_rewrites") or {}
+    if not rewrites:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+    for old, new in rewrites.items():
+        found = False
+        for match in list(re.finditer(r"<h([23])\b([^>]*)>(.*?)</h\1>", body, re.DOTALL)):
+            current = text_of(match.group(0))
+            if current.casefold() == old.strip().casefold():
+                replacement = f"<h{match.group(1)}{match.group(2)}>{esc(new)}</h{match.group(1)}>"
+                body = body[: match.start()] + replacement + body[match.end() :]
+                found = True
+                break
+        if not found:
+            already = any(
+                text_of(m.group(0)).casefold() == new.strip().casefold()
+                for m in re.finditer(r"<h[23]\b[^>]*>.*?</h[23]>", body, re.DOTALL)
+            )
+            if not already:
+                raise ValueError(f"heading_rewrites: neither {old!r} nor {new!r} found")
+    return document[:start] + body + document[end:]
+
+
+def apply_text_replacements(document: str, spec: dict) -> str:
+    """Targeted copy edits inside the article body, declared find and replace.
+
+    Used to bring published prose in line with house style. Every change is
+    visible in the content file rather than buried in a script, so it can be
+    read and approved like copy. Tolerant on re-run in the same way as headings.
+    """
+    replacements = spec.get("text_replacements") or []
+    if not replacements:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+    for item in replacements:
+        find, replace = item["find"], item["replace"]
+        if find in body:
+            body = body.replace(find, replace, 1)
+        elif replace not in body:
+            raise ValueError(f"text_replacements: neither {find!r} nor {replace!r} found")
+    return document[:start] + body + document[end:]
+
+
 def transform(document: str, spec: dict) -> str:
     document = repair_broken_anchors(document)
     document = update_head(document, spec)
@@ -473,6 +525,8 @@ def transform(document: str, spec: dict) -> str:
     document = update_visible_category(document, spec)
     document = update_h1_and_hero(document, spec)
     document = demote_body_h1s(document, spec)
+    document = apply_heading_rewrites(document, spec)
+    document = apply_text_replacements(document, spec)
     document = update_intro(document, spec)
     document = update_brief(document, spec)
     return document
@@ -509,6 +563,12 @@ def validate(spec: dict, path: Path) -> None:
     for field in ("title", "meta_description", "h1", "hero_subtitle"):
         if "\u2014" in spec[field]:
             raise ValueError(f"{path.name}: {field} contains an em dash")
+    for new_heading in (spec.get("heading_rewrites") or {}).values():
+        if "\u2014" in new_heading:
+            raise ValueError(f"{path.name}: heading rewrite contains an em dash")
+    for item in spec.get("text_replacements") or []:
+        if "\u2014" in item["replace"]:
+            raise ValueError(f"{path.name}: text replacement introduces an em dash")
     panels = spec["briefing"]["panels"]
     if not 1 <= len(panels) <= 2:
         raise ValueError(f"{path.name}: briefing needs one or two panels, got {len(panels)}")

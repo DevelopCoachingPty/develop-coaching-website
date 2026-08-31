@@ -52,5 +52,14 @@
   "brief_before_heading": "1. Track your lead sources",
   "intro_replaces_paragraphs": 6,
   "demote_body_h1": true,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "heading_rewrites": {
+    "3. Get your pitch on point": "3. Are you selling yourself, or solving their problem?"
+  },
+  "text_replacements": [
+    {
+      "find": "They’ll talk about how long they’ve been established, how trustworthy they are, how many awards they have won, and what trade memberships they belong to.</span></p>",
+      "replace": "They’ll talk about:</span></p>\n<ul>\n<li>How long they’ve been established</li>\n<li>How trustworthy they are</li>\n<li>How many awards they have won</li>\n<li>What trade memberships they belong to</li>\n</ul>"
+    }
+  ]
 }
