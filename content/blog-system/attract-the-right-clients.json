@@ -1,0 +1,65 @@
+{
+  "slug": "attract-the-right-clients",
+  "pillar": "Attract",
+  "title": "Attract the Right Construction Clients, Not Just More Leads",
+  "meta_description": "How to attract better construction clients: track where your leads come from, diversify past word of mouth, and pitch so architects and developers listen.",
+  "h1": "Attract the Right Construction Clients, Not Just More Leads",
+  "hero_subtitle": "A practical guide to winning higher value work from developers and architects.",
+  "intro": {
+    "answer": "Word of mouth gets a construction business started. It rarely gets one to the next level, because it brings you the same conversions, odd jobs and refurbishments you were already getting.",
+    "image": {
+      "src": "/wp-content/uploads/2022/08/shutterstock_1048992455-scaled-1.jpg",
+      "alt": "A builder meeting an architect on site to discuss a higher value construction project",
+      "width": 1386,
+      "height": 924
+    },
+    "roadmap": "This guide covers three ways to improve where your clients come from: tracking your lead sources so you can see what actually works, diversifying before a single source dries up, and changing the pitch so developers and architects hear what is in it for them."
+  },
+  "briefing": {
+    "eyebrow": "Client attraction site briefing",
+    "title": "Track Where Your Best Clients Came From",
+    "intro": "Most builders can name their biggest client. Very few can say which source produced them, or what has happened to that source since. Without that, you cannot tell whether a quiet month is bad luck or a channel closing.",
+    "panels": [
+      {
+        "heading": "How do you find out where your best construction clients come from?",
+        "paragraphs": [
+          "Ask every person who enquires how they heard about you, and record the answer. A spreadsheet is enough to start with. A CRM is better once the volume justifies it.",
+          "Look at total enquiries each month, then break them down by source. One of Greg's own businesses used to get steady work from the council. Tracking showed leads dropping off across August and September. A conversation revealed budget cuts. Because the trend was spotted early, there was time to diversify rather than react."
+        ]
+      },
+      {
+        "heading": "Diversify before a source dries up",
+        "paragraphs": [
+          "LinkedIn is where several of Greg's coaching clients have found higher value work. The sequence matters more than the effort."
+        ],
+        "steps": [
+          "Fix the profile first. A photo of you, not just a logo. An About section naming your expertise, your key services and the value of the jobs you want.",
+          "Search for the client type you want, filter by area, and filter to people who have posted in the last month so you are reaching active accounts.",
+          "Build a shortlist of 10 to 30 names rather than messaging everyone.",
+          "Lead with what the project needs, not with how long you have been established."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review monthly",
+      "text": "Enquiries by source, and which sources produced the work worth having. A source that is trending down for two months in a row is a decision, not a blip."
+    },
+    "cta": {
+      "text": "Explore the Attract pillar resources",
+      "href": "/5-pillars-free-trainings/attract/"
+    }
+  },
+  "brief_before_heading": "1. Track your lead sources",
+  "intro_replaces_paragraphs": 6,
+  "demote_body_h1": true,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "heading_rewrites": {
+    "3. Get your pitch on point": "3. Are you selling yourself, or solving their problem?"
+  },
+  "text_replacements": [
+    {
+      "find": "They’ll talk about how long they’ve been established, how trustworthy they are, how many awards they have won, and what trade memberships they belong to.</span></p>",
+      "replace": "They’ll talk about:</span></p>\n<ul>\n<li>How long they’ve been established</li>\n<li>How trustworthy they are</li>\n<li>How many awards they have won</li>\n<li>What trade memberships they belong to</li>\n</ul>"
+    }
+  ]
+}

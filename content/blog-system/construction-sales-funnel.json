@@ -1,0 +1,56 @@
+{
+  "slug": "construction-sales-funnel",
+  "pillar": "Convert",
+  "title": "Construction Sales Funnel: Win Contracts at Better Margins",
+  "meta_description": "A sales funnel for construction company owners turning over £1M+: qualify better leads, win more contracts, and build a pipeline that scales.",
+  "h1": "Construction Sales Funnel: Win Contracts at Better Margins",
+  "hero_subtitle": "A practical guide to turning the right enquiries into signed contracts at margins worth having.",
+  "intro": {
+    "answer": "Most construction businesses at £1M turnover are not short of enquiries. They are short of the right enquiries, at the right margin, from clients worth keeping. That is what a sales funnel actually solves.",
+    "image": {
+      "src": "/wp-content/uploads/2023/02/ab94f13f-39e4-4e8d-8323-277ba8861df0.webp",
+      "alt": "Construction sales funnel stages from first enquiry through to signed contract",
+      "width": 1344,
+      "height": 768
+    },
+    "roadmap": "This guide covers how to build and run that funnel from first contact through to repeat business, using the Plan, Attract, Convert, Deliver and Scale framework built for UK construction businesses scaling toward £5M. Whether you have never thought about your sales process systematically, or you are already doing parts of this and seeing gaps, the same five stages apply."
+  },
+  "briefing": {
+    "eyebrow": "Sales funnel site briefing",
+    "title": "Qualify Before You Quote, Then Track Four Numbers",
+    "intro": "Qualification and follow-up give the fastest visible return of anything in this guide, so they are worth doing before you change anything else. At £1M+ turnover a detailed quote can take four to eight hours of estimating time, plus site visits and supplier pricing. Spending that on someone who was never serious is a direct and measurable cost.",
+    "panels": [
+      {
+        "heading": "How do you qualify a construction enquiry before quoting?",
+        "paragraphs": [
+          "Not every enquiry deserves a full priced tender. Before you commit estimating time, find out the project scope and expected start date, their budget expectation, whether they have worked with a contractor before and what happened, whether they are the person who signs the contract, and why they contacted you specifically.",
+          "If their budget is half of what the job realistically costs, or they are vague on every detail, walk away early. That estimating time is worth more on a lead that fits your criteria."
+        ]
+      },
+      {
+        "heading": "Track the route from enquiry to signed contract",
+        "paragraphs": [
+          "You cannot improve what you do not measure. Track these four every month and the funnel will tell you where to focus."
+        ],
+        "steps": [
+          "Enquiries in. How many new leads entered the funnel this month?",
+          "Quote to contract rate. A well-run business targeting the right clients should be converting 35 to 50%.",
+          "Average project value. Is it growing year on year, or are you winning the same size jobs?",
+          "Time to close. Anything consistently over 30 days warrants a look at where deals stall."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Review monthly",
+      "text": "Pick the weakest link in your funnel and fix that one first. Trying to overhaul every stage at once is how the whole thing stalls."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "brief_before_heading": "Plan: Know Exactly Who You’re Targeting",
+  "intro_replaces_paragraphs": 2,
+  "demote_body_h1": false,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
