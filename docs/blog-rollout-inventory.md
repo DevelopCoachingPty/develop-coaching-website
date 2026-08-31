@@ -1,6 +1,6 @@
 # Blog rollout inventory
 
-71 articles. Inventory reconciled across three independent sources (post sitemap, filesystem body classes, search index); the audit fails closed if they disagree. Regenerate with `python3 scripts/audit_blog_library.py`.
+70 articles. Inventory reconciled across three independent sources (post sitemap, filesystem body classes, search index); the audit fails closed if they disagree. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## Status key
 
@@ -24,9 +24,9 @@
 | Reference | 1 |
 | Design only | 22 |
 | Recategorise | 6 |
-| Rewrite first | 42 |
+| Rewrite first | 41 |
 
-## Plan (16)
+## Plan (15)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -34,13 +34,12 @@
 | [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 46 | 731 | 4 | Rewrite first | Audit | fluffy-intro | no-pillar-link |
 | [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 48 | 992 | 6 | Rewrite first | Audit | fluffy-intro, listicle-headline | schema-headline-drift, no-pillar-link |
 | [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | 0 | Rewrite first | Audit | h1-count-4, thin-669w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [usp-for-construction-company-2](https://develop-coaching.com/usp-for-construction-company-2/) | 54 | 902 | 5 | Rewrite first | Audit | fluffy-intro, em-dashes-1 | schema-headline-drift, no-pillar-link |
 | [pandemic-affect-construction](https://develop-coaching.com/pandemic-affect-construction/) | 60 | 1248 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [2021-builders-trades](https://develop-coaching.com/2021-builders-trades/) | 61 | 1153 | 0 | Rewrite first | Audit | h2-count-0, listicle-headline | schema-headline-drift, no-pillar-link |
 | [how-to-grow-a-construction-business-2](https://develop-coaching.com/how-to-grow-a-construction-business-2/) | 64 | 1490 | 5 | Rewrite first | Audit | fluffy-intro, listicle-headline, em-dashes-1 | no-pillar-link |
 | [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 64 | 858 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 65 | 903 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
-| [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 73 | 1127 | 5 | Design only | Audit | em-dashes-3 | no-pillar-link |
+| [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 87 | 1287 | 6 | Design only | Audit | em-dashes-2 | none |
 | [construction-business-plan](https://develop-coaching.com/construction-business-plan/) | 96 | 2390 | 6 | Design only | Audit | none | none |
 | [construction-business-performance](https://develop-coaching.com/construction-business-performance/) | 100 | 1713 | 7 | Design only | Audit | none | none |
 | [construction-project-management](https://develop-coaching.com/construction-project-management/) | 100 | 2347 | 12 | Design only | Audit | none | none |
