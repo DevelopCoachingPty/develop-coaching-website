@@ -1,0 +1,73 @@
+{
+  "slug": "how-to-expand-electrical-business",
+  "pillar": "Scale",
+  "title": "How to Expand an Electrical Business",
+  "meta_description": "How to expand an electrical business: specialise in high-demand services, build partnerships, market locally, and use compliance as a selling point.",
+  "h1": "How to Expand an Electrical Business",
+  "hero_subtitle": "A practical guide for electricians who are skilled and still stuck.",
+  "intro": {
+    "answer": "Being a skilled electrician no longer guarantees growth on its own, and racing to the bottom on price will not fix it. What changes the trajectory is specialising, partnering, and being easy to choose.",
+    "image": {
+      "src": "/wp-content/uploads/2025/09/Electrician.png",
+      "alt": "An electrician working on a commercial installation",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide covers five strategies: specialising in high-demand services such as smart home technology, building partnerships with builders and facilities managers, local marketing, responding to enquiries faster, and using safety and compliance as a selling point."
+  },
+  "briefing": {
+    "eyebrow": "Electrical growth site briefing",
+    "title": "Specialise, Then Get Easy to Choose",
+    "intro": "In a crowded market the electrician who wins is rarely the cheapest or even the best. It is the one who is obviously right for the job and who answers the phone. Both of those are decisions rather than talents.",
+    "panels": [
+      {
+        "heading": "Why does competing on price not work?",
+        "paragraphs": [
+          "Because there is always someone quieter than you who will go lower, and matching them costs you the margin that funds any growth. It is a race with no finish line.",
+          "Specialising in high-demand services changes the comparison entirely. A client looking for smart home installation is not comparing you to a general spark, they are comparing you to the two other people who do it."
+        ]
+      },
+      {
+        "heading": "The five strategies",
+        "paragraphs": [
+          "Two of these win better work. Three of them make you the easy choice once you are in front of someone."
+        ],
+        "steps": [
+          "Specialise in high-demand services rather than taking everything.",
+          "Build partnerships with builders and facilities managers for repeat work.",
+          "Market locally, because most electrical work is bought within a few miles.",
+          "Improve response times to enquiries. Speed wins jobs that price does not.",
+          "Use safety and compliance as a selling point, not a formality."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Quick win",
+      "text": "Response time is the cheapest advantage on this list. Most enquiries go to whoever replies first, and almost nobody in the trade treats that as a system."
+    },
+    "cta": {
+      "text": "Explore the Scale pillar resources",
+      "href": "/5-pillars-free-trainings/scale/"
+    }
+  },
+  "heading_rewrites": {
+    "From Spark to Surge: Why Growth Needs Strategy": "Why does growth need a strategy?"
+  },
+  "brief_before_heading": "Why does growth need a strategy?",
+  "intro_replaces_paragraphs": 4,
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "text_replacements": [
+    {
+      "find": "don’t just read this—act on it",
+      "replace": "don’t just read this, act on it"
+    },
+    {
+      "find": "aren’t “nice ideas”—they’re the groundwork",
+      "replace": "aren’t “nice ideas”. They’re the groundwork"
+    },
+    {
+      "find": "electrical business?”</em>—the answer is in your hands",
+      "replace": "electrical business?”</em> The answer is in your hands"
+    }
+  ]
+}

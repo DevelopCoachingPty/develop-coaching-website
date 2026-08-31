@@ -36,7 +36,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 2. Add a contextual Five Pillars link inside every article body
 
-**Articles affected:** 26 &nbsp;&nbsp; **Score recoverable:** 292 points
+**Articles affected:** 22 &nbsp;&nbsp; **Score recoverable:** 264 points
 
 The pillar links that exist sit in page furniture, which crawlers and answer engines discount. A link from inside the article body, in context, is what routes a reader from a question to the pillar that answers it. It is also the single largest pool of recoverable score in the audit.
 
@@ -44,7 +44,7 @@ The pillar links that exist sit in page furniture, which crawlers and answer eng
 
 ### 3. Give every article at least two question-shaped headings
 
-**Articles affected:** 32 &nbsp;&nbsp; **Score recoverable:** 260 points
+**Articles affected:** 30 &nbsp;&nbsp; **Score recoverable:** 235 points
 
 51 articles contain no heading phrased as a question. Answer engines lift question-and-answer pairs; a heading that matches what someone typed is the cheapest way to become the passage that gets quoted. The briefing block supplies one, so most articles need one more in the body.
 
@@ -68,7 +68,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 6. Replace preamble openings with a direct answer
 
-**Articles affected:** 13 &nbsp;&nbsp; **Score recoverable:** 156 points
+**Articles affected:** 11 &nbsp;&nbsp; **Score recoverable:** 132 points
 
 27 articles open with a wind-up rather than an answer. Both a reader deciding whether to stay and a model deciding what to quote read the first block. If the answer is in paragraph five, neither finds it.
 
@@ -84,7 +84,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 8. Assign one pillar to every article and make schema agree
 
-**Articles affected:** 14
+**Articles affected:** 10
 
 16 articles carry no pillar or the wrong one in their structured data, and some carry two at once. The pillar is how the site explains its own shape, in the visible tag, the body class, the meta tag and the schema together.
 
@@ -92,7 +92,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 ### 9. Remove em dashes from article body copy
 
-**Articles affected:** 12 &nbsp;&nbsp; **Score recoverable:** 48 points
+**Articles affected:** 8 &nbsp;&nbsp; **Score recoverable:** 32 points
 
 22 articles carry em dashes, 121 in total, against the house style rule. Low search impact, but it is a visible inconsistency on pages being reviewed for exactly that.
 
@@ -116,7 +116,7 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 | [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 48 | 1268 | Direct answer up front; Question-shaped headings; Extractable lists; Schema integrity; Internal routes; Freshness; Brand compliance |
 | [how-to-get-clients-in-construction](https://develop-coaching.com/how-to-get-clients-in-construction/) | 51 | 1112 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Metadata; Internal routes; Images and alt text |
 | [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | Question-shaped headings; Extractable lists; Heading structure; Depth; Schema integrity; Internal routes; Images and alt text |
-| [grow-groundworks-business](https://develop-coaching.com/grow-groundworks-business/) | 55 | 1182 | Direct answer up front; Question-shaped headings; Depth; Schema integrity; Internal routes; Brand compliance |
 | [how-to-recruit-for-your-construction-business-2](https://develop-coaching.com/how-to-recruit-for-your-construction-business-2/) | 55 | 1057 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes |
 | [good-reviews](https://develop-coaching.com/good-reviews/) | 56 | 737 | Question-shaped headings; Extractable lists; Heading structure; Depth; Schema integrity; Internal routes; Images and alt text |
 | [construction-marketing](https://develop-coaching.com/construction-marketing/) | 57 | 2428 | Direct answer up front; Question-shaped headings; Heading structure; Schema integrity; Internal routes; Images and alt text; Brand compliance |
+| [pandemic-affect-construction](https://develop-coaching.com/pandemic-affect-construction/) | 60 | 1248 | Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes; Images and alt text |
