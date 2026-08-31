@@ -1,6 +1,6 @@
 # Blog GEO audit: ranked action backlog
 
-71 articles audited. Median GEO readiness 64 out of 100. Lowest 39, highest 97. Regenerate with `python3 scripts/audit_blog_library.py`.
+71 articles audited. Median GEO readiness 66 out of 100. Lowest 42, highest 100. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## How the score is built
 
@@ -28,7 +28,7 @@ It is a measure of whether a page is built to be quoted, not a measure of whethe
 
 ### 1. Credit Greg as the author in every article schema
 
-**Articles affected:** 67
+**Articles affected:** 0
 
 41 articles are attributed to seo@digital-progress.co.uk and five to jessica@digital-progress.co.uk. Seven name nobody. Four name Greg. Generative engines and Google both lean on the author entity when deciding whether a page carries real expertise, and the whole proposition here is Greg's experience. This is one field per page and the transformer can set it, but it is Greg's call whether he is named on all 71.
 
@@ -110,13 +110,13 @@ An anchor closed by a stray </p> is never closed at all, so the parser pulls the
 
 | Article | GEO | Words | Weakest dimensions |
 | --- | ---: | ---: | --- |
-| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 39 | 478 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Depth; Schema integrity; Internal routes; Images and alt text |
-| [how-to-recruit-for-your-construction-business](https://develop-coaching.com/how-to-recruit-for-your-construction-business/) | 40 | 2282 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Metadata; Internal routes; Images and alt text |
-| [construction-business-marketing](https://develop-coaching.com/construction-business-marketing/) | 43 | 775 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes |
-| [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 43 | 731 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes; Freshness |
-| [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 45 | 1268 | Direct answer up front; Question-shaped headings; Extractable lists; Schema integrity; Internal routes; Freshness; Brand compliance |
-| [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 45 | 992 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes; Freshness |
-| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 45 | 788 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Metadata; Internal routes |
-| [mastering-construction-hiring-key-steps-for-building-a-skilled-workforce](https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/) | 47 | 2440 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes; Images and alt text |
-| [construction-brand](https://develop-coaching.com/construction-brand/) | 48 | 1640 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes |
-| [how-to-get-clients-in-construction](https://develop-coaching.com/how-to-get-clients-in-construction/) | 48 | 1112 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Metadata; Internal routes; Images and alt text |
+| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 42 | 478 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Depth; Schema integrity; Internal routes; Images and alt text |
+| [how-to-recruit-for-your-construction-business](https://develop-coaching.com/how-to-recruit-for-your-construction-business/) | 43 | 2282 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Metadata; Internal routes; Images and alt text |
+| [construction-business-marketing](https://develop-coaching.com/construction-business-marketing/) | 46 | 775 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes |
+| [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 46 | 731 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Internal routes; Freshness |
+| [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 48 | 1268 | Direct answer up front; Question-shaped headings; Extractable lists; Schema integrity; Internal routes; Freshness; Brand compliance |
+| [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 48 | 992 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Internal routes; Freshness |
+| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 48 | 788 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Metadata; Internal routes |
+| [mastering-construction-hiring-key-steps-for-building-a-skilled-workforce](https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/) | 50 | 2440 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes; Images and alt text |
+| [construction-brand](https://develop-coaching.com/construction-brand/) | 51 | 1640 | Direct answer up front; Question-shaped headings; Extractable lists; Heading structure; Schema integrity; Internal routes |
+| [how-to-get-clients-in-construction](https://develop-coaching.com/how-to-get-clients-in-construction/) | 51 | 1112 | Direct answer up front; Question-shaped headings; Extractable lists; Depth; Schema integrity; Metadata; Internal routes; Images and alt text |
