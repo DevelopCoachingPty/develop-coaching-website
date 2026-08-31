@@ -172,6 +172,9 @@ def audit_page(slug: str) -> dict:
         flags.append("schema-headline-drift")
     if missing_alt:
         flags.append(f"alt-missing-{missing_alt}")
+    em_dashes = body.count("\u2014")
+    if em_dashes:
+        flags.append(f"em-dashes-{em_dashes}")
     if not pillar_links:
         flags.append("no-pillar-link")
     if len(categories) != 1:
@@ -197,10 +200,11 @@ def audit_page(slug: str) -> dict:
         "schema_headline": schema_headline,
         "images": len(images),
         "images_missing_alt": missing_alt,
+        "em_dashes": em_dashes,
         "pillar_links": "; ".join(sorted(set(p for p in pillar_links if p))),
         "category_links_in_body": "; ".join(sorted(set(category_links))),
         "modified": modified.group(1) if modified else "",
-        "already_migrated": "yes" if "dc-lead-quality-briefing" in doc or "dc-brief" in doc else "no",
+        "already_migrated": "yes" if 'id="dc-article-brief"' in doc or "dc-lead-quality-briefing" in doc else "no",
         "flags": "; ".join(flags),
         "flag_count": len(flags),
     }
@@ -341,7 +345,7 @@ def main() -> None:
 
     csv_path = DOCS / "blog-rollout-inventory.csv"
     with csv_path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

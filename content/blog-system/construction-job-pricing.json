@@ -1,0 +1,56 @@
+{
+  "slug": "construction-job-pricing",
+  "pillar": "Convert",
+  "title": "Construction Job Pricing: Price Every Job for Real Profit",
+  "meta_description": "How to price construction jobs for profit: work out true labour costs, cover waste and overheads, and hold a healthy net margin on every quote.",
+  "h1": "Construction Job Pricing: Price Every Job for Real Profit",
+  "hero_subtitle": "A step by step system for pricing jobs so the work you win actually pays.",
+  "intro": {
+    "answer": "Construction job pricing is not just covering labour and materials. It is understanding every cost, adding a proper profit margin, and protecting yourself with contracts that stop scope creep.",
+    "image": {
+      "src": "/wp-content/uploads/2025/09/job-pricing.png",
+      "alt": "A builder working through construction job pricing costs before sending a quote",
+      "width": 1536,
+      "height": 1024
+    },
+    "roadmap": "This guide gives you a clear system for pricing that works in the real world. It covers calculating your true costs, building in a healthy margin, writing quotes that hold, and knowing when to say no to jobs that do not serve your business."
+  },
+  "briefing": {
+    "eyebrow": "Job pricing site briefing",
+    "title": "Build Every Price From Four Real Costs",
+    "intro": "Most builders who underprice are not bad at maths. They are pricing from a day rate instead of from what the work actually costs them. Build the number up in the same order every time and the guesswork disappears.",
+    "panels": [
+      {
+        "heading": "What should a construction job price actually include?",
+        "paragraphs": [
+          "Start with true labour cost, not the day rate. If you pay a carpenter £180 per day, then once you add National Insurance, pension, holidays, sick days and downtime, the real cost is closer to £220 to £240 per day.",
+          "Then materials plus at least 10 to 15% for waste, offcuts, damaged goods, supplier price rises and delivery. Then overheads, spread across the year: annual overheads divided by number of jobs. £60,000 of overhead across 30 jobs is £2,000 per job."
+        ]
+      },
+      {
+        "heading": "Build the number up in this order",
+        "paragraphs": [
+          "Do these in sequence, every quote, and your margin stops being whatever is left over."
+        ],
+        "steps": [
+          "True labour cost, including the on-costs and the downtime.",
+          "Materials, plus 10 to 15% for waste and delivery.",
+          "Overheads for this job: annual overheads divided by jobs per year.",
+          "Net profit on top, at 10 to 12%. Your wage is not your profit."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Check before you send",
+      "text": "If the margin lands below 5%, it is not a job, it is a liability. If the scope is vague and the client will not sign a proper contract, do not touch it."
+    },
+    "cta": {
+      "text": "Explore the Convert pillar resources",
+      "href": "/5-pillars-free-trainings/convert/"
+    }
+  },
+  "brief_before_heading": "A Real Underbid Story: Learning the Hard Way",
+  "intro_removes_heading": "Why Construction Job Pricing Is the Key to Profit",
+  "intro_replaces_paragraphs": 2,
+  "date_modified": "2026-08-31T00:00:00+10:00"
+}
