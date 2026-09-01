@@ -670,7 +670,7 @@ def promote_headings(document: str, spec: dict) -> str:
     body = document[start:end]
     for heading in wanted:
         target = None
-        for match in re.finditer(r"<h3\b([^>]*)>(.*?)</h3>", body, re.DOTALL):
+        for match in re.finditer(r"<h([34])\b([^>]*)>(.*?)</h\1>", body, re.DOTALL):
             if text_of(match.group(0)).casefold() == heading.strip().casefold():
                 target = match
                 break
@@ -681,8 +681,10 @@ def promote_headings(document: str, spec: dict) -> str:
             )
             if already:
                 continue
-            raise ValueError(f"promote_headings: {heading!r} not found as an h3 or an h2")
-        replacement = f"<h2{target.group(1)}>{target.group(2)}</h2>"
+            raise ValueError(
+                f"promote_headings: {heading!r} not found as an h3, h4 or h2"
+            )
+        replacement = f"<h2{target.group(2)}>{target.group(3)}</h2>"
         body = body[: target.start()] + replacement + body[target.end() :]
     return document[:start] + body + document[end:]
 
@@ -768,6 +770,25 @@ def repair_escaped_markup(document: str) -> str:
     for broken, fixed in ESCAPED_MARKUP:
         body = body.replace(broken, fixed)
     return document[:start] + body + document[end:]
+
+
+def replace_body(document: str, spec: dict) -> str:
+    """Swap in a rewritten article body from <slug>.body.html.
+
+    Two articles were rewritten from their original podcast interviews rather
+    than restructured, because the published versions were too thin to meet the
+    standard and, in one case, misattributed a figure. The replacement body
+    lives beside the content file as plain HTML so it can be read and reviewed
+    as copy, rather than as an escaped blob inside JSON.
+
+    The intro block and the briefing are added afterwards in the normal way, so
+    a rewritten article goes through exactly the same pipeline as every other.
+    """
+    source = CONTENT / f"{spec['slug']}.body.html"
+    if not source.exists():
+        return document
+    start, end = body_span(document)
+    return document[:start] + "\n" + source.read_text(encoding="utf-8").strip() + "\n" + document[end:]
 
 
 def deduplicate_sections(document: str, spec: dict) -> str:
@@ -943,6 +964,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
+    document = replace_body(document, spec)
     document = drop_dead_images(document)
     document = repair_escaped_markup(document)
     document = repair_schema_text(document)
