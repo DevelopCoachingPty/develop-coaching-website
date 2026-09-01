@@ -56,5 +56,32 @@
   },
   "brief_before_heading": "1. What do you actually need?",
   "intro_replaces_paragraphs": 3,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-08-31T00:00:00+10:00",
+  "append_sections": [
+    {
+      "heading": "Write a Brief That Can Be Judged Against",
+      "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
+      "paragraphs": [
+        "Start by writing a brief that sets out the project specifics: measurements, architect plans, materials, finishes, and any fixtures or fittings you have in mind. That is what lets a tradesperson understand what you actually expect rather than guess at it.",
+        "Then be precise about qualifications. Some trades have no formal entry requirements while others need specific certifications: gas engineers must be Gas Safe registered, and electricians usually need Part P certification for domestic work. Getting this wrong is the kind of mistake that surfaces at inspection.",
+        "Think about experience too. Time served is a reasonable indicator of skill. Ask how long someone has been in the trade and get them to explain their approach to the job, because how they describe the work tells you more than how long they have done it."
+      ]
+    },
+    {
+      "heading": "Evaluate the Soft Skills, Not Just the Trade",
+      "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
+      "paragraphs": [
+        "Technical ability is the entry requirement. Communication, teamwork and problem solving decide whether someone is worth putting in front of a client, and a LinkedIn study found that 92% of professionals rate soft skills as equally or more important than technical ones.",
+        "Assess them by watching how candidates behave in the interview itself. Look for clear communication, active listening and adaptability. Ask about working in teams and handling conflict, and put a realistic scenario to them to see how they would approach it."
+      ]
+    },
+    {
+      "heading": "Screen With a Structure",
+      "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
+      "paragraphs": [
+        "Review CVs properly, looking for relevant experience and qualifications rather than scanning for a trade name. Plan the questions in advance, focusing on what they have actually achieved and why they left previous roles.",
+        "Then run the interview the same way every time. Open warmly, ask the candidate to talk through their experience, and listen closely, because the detail is where the useful information sits. Include behavioural questions so you are hearing about real situations rather than intentions."
+      ]
+    }
+  ]
 }

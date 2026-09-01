@@ -813,6 +813,55 @@ def deduplicate_sections(document: str, spec: dict) -> str:
     return document[:start] + body + document[end:]
 
 
+def append_sections(document: str, spec: dict) -> str:
+    """Add sections carried across from an article being retired.
+
+    Consolidating duplicates means the keeper inherits the material worth
+    keeping from the article being redirected into it. Declaring those sections
+    here keeps the merge reviewable as copy: you can read what moved, rather
+    than diffing two pages against each other.
+
+    Each entry is {"heading": ..., "paragraphs": [...], "steps": [...]} and is
+    placed before "before_heading" if given, otherwise at the end of the body.
+    Idempotent: a section whose heading is already present is skipped.
+    """
+    sections = spec.get("append_sections") or []
+    if not sections:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for section in sections:
+        heading = section["heading"].strip()
+        if any(
+            text_of(m.group(0)).casefold() == heading.casefold()
+            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+        ):
+            continue
+        block = [f"<h2>{esc(heading)}</h2>"]
+        for paragraph in section.get("paragraphs", []):
+            block.append(f"<p>{esc(paragraph)}</p>")
+        if section.get("steps"):
+            block.append("<ul>")
+            block.extend(f"<li>{esc(step)}</li>" for step in section["steps"])
+            block.append("</ul>")
+        markup = "\n" + "\n".join(block) + "\n"
+
+        anchor = section.get("before_heading")
+        position = len(body)
+        if anchor:
+            for match in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL):
+                if text_of(match.group(0)).casefold() == anchor.strip().casefold():
+                    position = match.start()
+                    break
+            else:
+                raise ValueError(
+                    f"append_sections: before_heading {anchor!r} not found"
+                )
+        body = body[:position] + markup + body[position:]
+    return document[:start] + body + document[end:]
+
+
 def insert_headings(document: str, spec: dict) -> str:
     """Introduce H2 sections into articles that were published as flowing prose.
 
@@ -914,6 +963,7 @@ def transform(document: str, spec: dict) -> str:
     document = demote_body_h1s(document, spec)
     document = deduplicate_sections(document, spec)
     document = insert_headings(document, spec)
+    document = append_sections(document, spec)
     document = apply_heading_rewrites(document, spec)
     document = promote_headings(document, spec)
     document = apply_text_replacements(document, spec)
