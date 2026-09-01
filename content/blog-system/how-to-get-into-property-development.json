@@ -1,0 +1,58 @@
+{
+  "slug": "how-to-get-into-property-development",
+  "pillar": "Plan",
+  "title": "How to Get Into Property Development From Construction",
+  "meta_description": "How to move from construction into property development: the seven stages, how to control a site without buying it, and the mistake that ends most developers.",
+  "h1": "How to Get Into Property Development From Construction",
+  "hero_subtitle": "A practical guide for contractors thinking about moving into development.",
+  "intro": {
+    "answer": "The build is the part you already know. Sourcing, appraising and planning are where development is won or lost, and all three happen long before anyone is on site.",
+    "image": {
+      "src": "/wp-content/uploads/2021/09/builders.jpg",
+      "alt": "A residential development under construction",
+      "width": 1920,
+      "height": 1271
+    },
+    "roadmap": "This guide is drawn from a conversation with Bryn Little, whose family business has been in land and development for three generations. It covers the seven stages of a development, which one is hardest, how to control a site without buying it outright, the risks in joint ventures, and the single mistake that ends most developers."
+  },
+  "briefing": {
+    "eyebrow": "Development site briefing",
+    "title": "Scaling Too Fast Is What Ends Developers",
+    "intro": "Asked what stops developers succeeding long term, Bryn Little did not hesitate. It is not planning, funding or the market. It is scaling up too quickly, and he has watched it happen repeatedly, both in his own acquisition business and among the SME developers his family consults with.",
+    "panels": [
+      {
+        "heading": "What does scaling too fast actually look like?",
+        "paragraphs": [
+          "Someone is already involved in property. They have a portfolio, or they are doing refurbishments, or small schemes. Then they jump straight to a twenty unit development.",
+          "The step is too big. The systems, the funding and the experience have not grown with the ambition, and the scheme exposes all three at once."
+        ]
+      },
+      {
+        "heading": "The seven stages, one gate at a time",
+        "paragraphs": [
+          "Bryn's business works through these in order, closing each one before opening the next."
+        ],
+        "steps": [
+          "Sourcing opportunities.",
+          "Appraising them, and working out whether they are viable.",
+          "Securing the site.",
+          "Planning.",
+          "Funding.",
+          "Construction.",
+          "Exit."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth knowing",
+      "text": "Bryn's own family business moved gradually, starting with one or two units and a small conversion while the contracting work carried on. The hardest stage, he says, is always the one you are facing next."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "brief_before_heading": "What Are the Seven Stages of a Development?",
+  "intro_replaces_paragraphs": 1,
+  "date_modified": "2026-09-02T00:00:00+10:00"
+}

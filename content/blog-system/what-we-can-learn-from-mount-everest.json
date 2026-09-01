@@ -1,0 +1,67 @@
+{
+  "slug": "what-we-can-learn-from-mount-everest",
+  "pillar": "Plan",
+  "title": "What Climbing Everest Teaches You About Growth",
+  "meta_description": "What Everest climbers can teach a construction business owner about growth: take it in stages, acclimatise at each camp, and know when to turn back.",
+  "h1": "What Climbing Everest Teaches You About Growth",
+  "hero_subtitle": "A guide to why the businesses that get there go slowly on purpose.",
+  "intro": {
+    "answer": "Nobody climbs Everest in one push. The route is broken into stages, and most of the time on the mountain is spent letting the body adjust rather than gaining height. Growing a business works the same way, and for the same reason.",
+    "image": {
+      "src": "/wp-content/uploads/2021/09/aziz-acharki-2fgnVgsm5uM-unsplash-scaled-1.jpg",
+      "alt": "The summit of Mount Everest above the clouds",
+      "width": 2560,
+      "height": 1606
+    },
+    "roadmap": "This guide walks the six stages of the climb, from base camp to the summit, and what each one has to say about scaling a construction business without coming unstuck."
+  },
+  "briefing": {
+    "eyebrow": "Growth mindset site briefing",
+    "title": "The Time Spent Not Climbing Is the Point",
+    "intro": "Climbers do not sit at each camp because they are tired. They sit there because the body has to adapt to the altitude before it can safely go higher. Push through it and you do not get to the top faster, you get carried down.",
+    "panels": [
+      {
+        "heading": "Why does taking it in stages actually matter?",
+        "paragraphs": [
+          "Because each camp changes what you can survive at the next one. Base camp lays the foundation for everything above it. Skip the adjustment and the altitude does not care how fit or motivated you are.",
+          "A business scales the same way. Every step up in size needs the systems, the people and the cash to adjust before the next step is survivable, and no amount of effort substitutes for that."
+        ]
+      },
+      {
+        "heading": "What the six stages ask of you",
+        "paragraphs": [
+          "Each one has a different difficulty, and knowing which is which is most of the skill."
+        ],
+        "steps": [
+          "Base camp: lay the foundation everything else rests on.",
+          "Camp 1 at 20,000 ft, reached across a moving glacier. The ground itself is not stable.",
+          "Camp 2, flatter but with extremes of temperature that are mentally harder than the steep climbing. The first sight of the peak.",
+          "Camp 3, an ice wall to traverse and a camp perched on the edge. Dangerous, and the views are the reward.",
+          "Camp 4 and the push for the summit.",
+          "The descent, which is when most accidents happen."
+        ]
+      }
+    ],
+    "review": {
+      "label": "Worth remembering",
+      "text": "Climbers change the goal when the weather turns, and they do not treat it as failure. They have already achieved something worth counting. A business owner adjusting a target mid-year is doing the same thing."
+    },
+    "cta": {
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
+    }
+  },
+  "promote_headings": [
+    "Take it in stages",
+    "How to climb your Everest"
+  ],
+  "brief_before_heading": "Take it in stages",
+  "intro_replaces_paragraphs": 2,
+  "text_replacements": [
+    {
+      "find": "If you would like to make 2022 a standout year",
+      "replace": "If you would like to make this a standout year"
+    }
+  ],
+  "date_modified": "2026-09-02T00:00:00+10:00"
+}

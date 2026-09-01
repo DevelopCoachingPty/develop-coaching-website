@@ -22,18 +22,18 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 51 |
+| Design only | 53 |
 | Recategorise | 1 |
-| Rewrite first | 10 |
+| Rewrite first | 8 |
 
 ## Plan (12)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 42 | 478 | 0 | Rewrite first | Audit | h1-count-4, fluffy-intro, thin-478w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | 0 | Rewrite first | Audit | h1-count-4, thin-669w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 64 | 858 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
+| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 79 | 697 | 5 | Rewrite first | Audit | thin-697w | none |
 | [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 84 | 1191 | 7 | Design only | Audit | none | none |
+| [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 86 | 1074 | 3 | Design only | Audit | none | none |
+| [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 89 | 990 | 8 | Design only | Audit | none | none |
 | [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 91 | 1575 | 9 | Design only | Audit | none | none |
 | [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 92 | 1417 | 7 | Design only | Audit | none | none |
 | [construction-business-goals](https://develop-coaching.com/construction-business-goals/) | 93 | 1173 | 7 | Design only | Audit | none | none |
