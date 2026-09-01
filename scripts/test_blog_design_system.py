@@ -158,6 +158,25 @@ class TransformTests(unittest.TestCase):
         self.assertNotIn("wsstgprdphotosonic01", out)
         self.assertIn('id="dc-article-brief"', out)
 
+    def test_escaped_markup_in_schema_is_cleaned(self):
+        """FAQ question text arriving as literal u003cbu003e is not readable data."""
+        broken = json.dumps({"@context": "https://schema.org", "@graph": [
+            {"@type": "WebPage", "@id": "https://develop-coaching.com/example-article/"},
+            {"@type": "BlogPosting", "headline": "Example", "subjectOf": [
+                {"@type": "FAQPage", "mainEntity": [
+                    {"@type": "Question",
+                     "name": "u003cbu003eu003cstrong class=u0022xu0022u003eA question?u003c/strongu003eu003c/bu003e"}]}]},
+        ]})
+        document = re.sub(
+            r'(class="rank-math-schema-pro">).*?(</script>)',
+            lambda m: m.group(1) + broken + m.group(2), page(), flags=re.DOTALL)
+        out = bds.transform(document, SPEC)
+        self.assertNotIn("u003c", out)
+        graph = json.loads(
+            re.search(r'class="rank-math-schema-pro">(.*?)</script>', out, re.DOTALL).group(1))["@graph"]
+        posting = next(n for n in graph if n["@type"] == "BlogPosting")
+        self.assertEqual(posting["subjectOf"][0]["mainEntity"][0]["name"], "A question?")
+
     def test_bare_video_link_becomes_a_real_player(self):
         out = self.transform(page(broken_anchor=True))
         self.assertNotIn('rel="noopener noreferrer"></p>', out)
