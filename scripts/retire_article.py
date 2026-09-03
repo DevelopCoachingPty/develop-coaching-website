@@ -56,6 +56,18 @@ def add_redirects(slug: str, destination: str, check: bool) -> int:
     return added
 
 
+def validate_destination_not_redirected(destination: str) -> None:
+    destination_key = destination.rstrip("/")
+    for path, key in ((MANUAL_REDIRECTS, None), (VERCEL, "redirects")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        redirects = data if key is None else data[key]
+        redirected_sources = {item["source"].rstrip("/") for item in redirects}
+        if destination_key in redirected_sources:
+            raise SystemExit(
+                f"destination is already redirected in {path.relative_to(ROOT)}: {destination}"
+            )
+
+
 def drop_from_sitemap(slug: str, check: bool) -> int:
     text = SITEMAP.read_text(encoding="utf-8")
     pattern = re.compile(
@@ -123,6 +135,7 @@ def main(argv: list) -> int:
         raise SystemExit("destination must look like /keeper/")
     if not (WWW / destination.strip("/") / "index.html").exists():
         raise SystemExit(f"destination does not exist: {destination}")
+    validate_destination_not_redirected(destination)
     article = WWW / slug / "index.html"
     if not article.exists():
         raise SystemExit(f"nothing to retire at /{slug}/")
