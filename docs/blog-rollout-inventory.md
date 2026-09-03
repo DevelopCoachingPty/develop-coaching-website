@@ -1,6 +1,6 @@
 # Blog rollout inventory
 
-70 articles. Inventory reconciled across three independent sources (post sitemap, filesystem body classes, search index); the audit fails closed if they disagree. Regenerate with `python3 scripts/audit_blog_library.py`.
+63 articles. Inventory reconciled across three independent sources (post sitemap, filesystem body classes, search index); the audit fails closed if they disagree. Regenerate with `python3 scripts/audit_blog_library.py`.
 
 ## Status key
 
@@ -22,22 +22,19 @@
 | Work needed | Articles |
 | --- | --- |
 | Reference | 1 |
-| Design only | 54 |
+| Design only | 53 |
 | Recategorise | 1 |
-| Rewrite first | 14 |
+| Rewrite first | 8 |
 
-## Plan (15)
+## Plan (12)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 42 | 478 | 0 | Rewrite first | Audit | h1-count-4, fluffy-intro, thin-478w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 54 | 669 | 0 | Rewrite first | Audit | h1-count-4, thin-669w, h2-count-0 | schema-headline-drift, no-pillar-link |
-| [pandemic-affect-construction](https://develop-coaching.com/pandemic-affect-construction/) | 60 | 1248 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
-| [2021-builders-trades](https://develop-coaching.com/2021-builders-trades/) | 61 | 1153 | 0 | Rewrite first | Audit | h2-count-0, listicle-headline | schema-headline-drift, no-pillar-link |
-| [how-to-grow-a-construction-business-2](https://develop-coaching.com/how-to-grow-a-construction-business-2/) | 64 | 1490 | 5 | Rewrite first | Audit | fluffy-intro, listicle-headline, em-dashes-1 | no-pillar-link |
-| [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 64 | 858 | 0 | Rewrite first | Audit | h2-count-0 | schema-headline-drift, no-pillar-link |
+| [become-financially-free](https://develop-coaching.com/become-financially-free/) | 79 | 697 | 5 | Rewrite first | Audit | thin-697w | none |
 | [construction-business-profits](https://develop-coaching.com/construction-business-profits/) | 84 | 1191 | 7 | Design only | Audit | none | none |
-| [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 91 | 1289 | 6 | Design only | Audit | none | none |
+| [what-we-can-learn-from-mount-everest](https://develop-coaching.com/what-we-can-learn-from-mount-everest/) | 86 | 1074 | 3 | Design only | Audit | none | none |
+| [how-to-get-into-property-development](https://develop-coaching.com/how-to-get-into-property-development/) | 89 | 990 | 8 | Design only | Audit | none | none |
+| [usp-for-construction-company](https://develop-coaching.com/usp-for-construction-company/) | 91 | 1575 | 9 | Design only | Audit | none | none |
 | [business-coaching-for-construction](https://develop-coaching.com/business-coaching-for-construction/) | 92 | 1417 | 7 | Design only | Audit | none | none |
 | [construction-business-goals](https://develop-coaching.com/construction-business-goals/) | 93 | 1173 | 7 | Design only | Audit | none | none |
 | [construction-business-plan](https://develop-coaching.com/construction-business-plan/) | 96 | 2390 | 6 | Design only | Audit | none | none |
@@ -46,7 +43,7 @@
 | [getting-off-the-tools](https://develop-coaching.com/getting-off-the-tools/) | 100 | 1481 | 6 | Design only | Audit | none | none |
 | [sell-construction-company](https://develop-coaching.com/sell-construction-company/) | 100 | 1583 | 6 | Design only | Audit | none | none |
 
-## Attract (18)
+## Attract (16)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
@@ -59,13 +56,11 @@
 | [how-to-get-clients-in-construction](https://develop-coaching.com/how-to-get-clients-in-construction/) | 91 | 1244 | 7 | Design only | Audit | none | none |
 | [construction-brand](https://develop-coaching.com/construction-brand/) | 92 | 1918 | 5 | Design only | Audit | none | none |
 | [how-to-deal-with-negative-reviews](https://develop-coaching.com/how-to-deal-with-negative-reviews/) | 93 | 1165 | 4 | Design only | Audit | none | none |
-| [construction-marketing-ideas-to-scale-your-1m-business-to-5m](https://develop-coaching.com/construction-marketing-ideas-to-scale-your-1m-business-to-5m/) | 95 | 2233 | 6 | Design only | Audit | none | none |
 | [grow-landscaping-business](https://develop-coaching.com/grow-landscaping-business/) | 95 | 1435 | 10 | Design only | Audit | none | none |
-| [the-construction-company-marketing-strategy-to-scale-past-1m](https://develop-coaching.com/the-construction-company-marketing-strategy-to-scale-past-1m/) | 95 | 2238 | 8 | Design only | Audit | none | none |
+| [the-construction-company-marketing-strategy-to-scale-past-1m](https://develop-coaching.com/the-construction-company-marketing-strategy-to-scale-past-1m/) | 95 | 2935 | 16 | Design only | Audit | none | none |
 | [construction-lead-generation](https://develop-coaching.com/construction-lead-generation/) | 96 | 1962 | 7 | Reference | Audit | none | none |
 | [customer-reviews-for-construction-company](https://develop-coaching.com/customer-reviews-for-construction-company/) | 96 | 1905 | 6 | Design only | Audit | none | none |
-| [how-to-find-good-tradesmen](https://develop-coaching.com/how-to-find-good-tradesmen/) | 96 | 1598 | 7 | Design only | Audit | none | none |
-| [marketing-for-construction-companies-the-blueprint-to-scale](https://develop-coaching.com/marketing-for-construction-companies-the-blueprint-to-scale/) | 96 | 1859 | 7 | Design only | Audit | none | none |
+| [how-to-find-good-tradesmen](https://develop-coaching.com/how-to-find-good-tradesmen/) | 96 | 1913 | 10 | Design only | Audit | none | none |
 | [attract-the-right-clients](https://develop-coaching.com/attract-the-right-clients/) **[batch 1]** | 100 | 1966 | 7 | Design only | Audit | none | none |
 | [best-social-media-platforms-for-construction-companies](https://develop-coaching.com/best-social-media-platforms-for-construction-companies/) | 100 | 2288 | 7 | Design only | Audit | none | none |
 
@@ -80,24 +75,22 @@
 | [construction-sales-funnel](https://develop-coaching.com/construction-sales-funnel/) **[batch 1]** | 100 | 2368 | 10 | Design only | Audit | none | none |
 | [how-to-price-construction-work](https://develop-coaching.com/how-to-price-construction-work/) | 100 | 1514 | 13 | Design only | Audit | none | none |
 
-## Deliver (7)
+## Deliver (5)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [finding-skilled-tradesmen](https://develop-coaching.com/finding-skilled-tradesmen/) | 89 | 958 | 6 | Design only | Audit | none | none |
 | [what-is-the-work-life-balance](https://develop-coaching.com/what-is-the-work-life-balance/) | 91 | 1847 | 5 | Design only | Audit | none | none |
 | [time-in-construction](https://develop-coaching.com/time-in-construction/) | 96 | 2112 | 4 | Design only | Audit | none | none |
 | [accounting-for-construction-companies](https://develop-coaching.com/accounting-for-construction-companies/) | 100 | 2126 | 14 | Design only | Audit | none | none |
 | [construction-site-set-up-plan](https://develop-coaching.com/construction-site-set-up-plan/) | 100 | 2422 | 10 | Design only | Audit | none | none |
-| [how-to-find-your-usp](https://develop-coaching.com/how-to-find-your-usp/) | 100 | 1709 | 10 | Design only | Audit | none | none |
 | [perform-at-your-best](https://develop-coaching.com/perform-at-your-best/) | 100 | 1339 | 4 | Design only | Audit | none | none |
 
 ## Scale (20)
 
 | Article | GEO | Words | H2s | Work | Stage | Human content work | Transformer handles |
 | --- | ---: | ---: | ---: | --- | --- | --- | --- |
-| [how-to-grow-a-construction-business](https://develop-coaching.com/how-to-grow-a-construction-business/) | 65 | 1687 | 5 | Rewrite first | Audit | fluffy-intro, alt-missing-1 | no-pillar-link |
 | [construction-business-systems](https://develop-coaching.com/construction-business-systems/) | 84 | 915 | 5 | Design only | Audit | none | none |
+| [how-to-grow-a-construction-business](https://develop-coaching.com/how-to-grow-a-construction-business/) | 91 | 2262 | 11 | Design only | Audit | none | none |
 | [how-to-scale-your-construction-business](https://develop-coaching.com/how-to-scale-your-construction-business/) | 91 | 2141 | 5 | Design only | Audit | none | none |
 | [grow-groundworks-business](https://develop-coaching.com/grow-groundworks-business/) | 95 | 1391 | 7 | Design only | Audit | none | none |
 | [grow-painting-business](https://develop-coaching.com/grow-painting-business/) | 95 | 1642 | 9 | Design only | Audit | none | none |

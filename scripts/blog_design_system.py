@@ -676,7 +676,7 @@ def promote_headings(document: str, spec: dict) -> str:
     body = document[start:end]
     for heading in wanted:
         target = None
-        for match in re.finditer(r"<h3\b([^>]*)>(.*?)</h3>", body, re.DOTALL):
+        for match in re.finditer(r"<h([34])\b([^>]*)>(.*?)</h\1>", body, re.DOTALL):
             if text_of(match.group(0)).casefold() == heading.strip().casefold():
                 target = match
                 break
@@ -687,8 +687,10 @@ def promote_headings(document: str, spec: dict) -> str:
             )
             if already:
                 continue
-            raise ValueError(f"promote_headings: {heading!r} not found as an h3 or an h2")
-        replacement = f"<h2{target.group(1)}>{target.group(2)}</h2>"
+            raise ValueError(
+                f"promote_headings: {heading!r} not found as an h3, h4 or h2"
+            )
+        replacement = f"<h2{target.group(2)}>{target.group(3)}</h2>"
         body = body[: target.start()] + replacement + body[target.end() :]
     return document[:start] + body + document[end:]
 
@@ -779,6 +781,25 @@ def repair_escaped_markup(document: str) -> str:
     return document[:start] + body + document[end:]
 
 
+def replace_body(document: str, spec: dict) -> str:
+    """Swap in a rewritten article body from <slug>.body.html.
+
+    Two articles were rewritten from their original podcast interviews rather
+    than restructured, because the published versions were too thin to meet the
+    standard and, in one case, misattributed a figure. The replacement body
+    lives beside the content file as plain HTML so it can be read and reviewed
+    as copy, rather than as an escaped blob inside JSON.
+
+    The intro block and the briefing are added afterwards in the normal way, so
+    a rewritten article goes through exactly the same pipeline as every other.
+    """
+    source = CONTENT / f"{spec['slug']}.body.html"
+    if not source.exists():
+        return document
+    start, end = body_span(document)
+    return document[:start] + "\n" + source.read_text(encoding="utf-8").strip() + "\n" + document[end:]
+
+
 def deduplicate_sections(document: str, spec: dict) -> str:
     """Remove an earlier copy of a section that appears twice.
 
@@ -810,6 +831,62 @@ def deduplicate_sections(document: str, spec: dict) -> str:
             nxt = following.search(body, first.end())
             stop = nxt.start() if nxt else len(body)
             body = body[: first.start()] + body[stop:]
+    return document[:start] + body + document[end:]
+
+
+def append_sections(document: str, spec: dict) -> str:
+    """Add sections carried across from an article being retired.
+
+    Consolidating duplicates means the keeper inherits the material worth
+    keeping from the article being redirected into it. Declaring those sections
+    here keeps the merge reviewable as copy: you can read what moved, rather
+    than diffing two pages against each other.
+
+    Each entry is {"heading": ..., "paragraphs": [...], "steps": [...]} and is
+    placed before "before_heading" if given, otherwise at the end of the body.
+    Idempotent: a section whose heading is already present is skipped.
+    """
+    sections = spec.get("append_sections") or []
+    if not sections:
+        return document
+    start, end = body_span(document)
+    body = document[start:end]
+
+    for section in sections:
+        heading = section["heading"].strip()
+        block = [f"<h2>{esc(heading)}</h2>"]
+        for paragraph in section.get("paragraphs", []):
+            block.append(f"<p>{esc(paragraph)}</p>")
+        if section.get("steps"):
+            block.append("<ul>")
+            block.extend(f"<li>{esc(step)}</li>" for step in section["steps"])
+            block.append("</ul>")
+        payload = "\n".join(block[1:])
+
+        heading_exists = any(
+            text_of(m.group(0)).casefold() == heading.casefold()
+            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+        )
+        if not heading_exists:
+            markup = "\n" + "\n".join(block) + "\n"
+
+            anchor = section.get("before_heading")
+            position = len(body)
+            if anchor:
+                for match in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL):
+                    if text_of(match.group(0)).casefold() == anchor.strip().casefold():
+                        position = match.start()
+                        break
+                else:
+                    raise ValueError(
+                        f"append_sections: before_heading {anchor!r} not found"
+                    )
+            body = body[:position] + markup + body[position:]
+
+        if payload and body.count(payload) != 1:
+            raise ValueError(
+                f"append_sections: content for {heading!r} appears {body.count(payload)} times"
+            )
     return document[:start] + body + document[end:]
 
 
@@ -903,6 +980,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
+    document = replace_body(document, spec)
     document = drop_dead_images(document)
     document = repair_schema_text(document)
     document = repair_escaped_markup(document)
@@ -914,6 +992,7 @@ def transform(document: str, spec: dict) -> str:
     document = demote_body_h1s(document, spec)
     document = deduplicate_sections(document, spec)
     document = insert_headings(document, spec)
+    document = append_sections(document, spec)
     document = apply_heading_rewrites(document, spec)
     document = promote_headings(document, spec)
     document = apply_text_replacements(document, spec)
