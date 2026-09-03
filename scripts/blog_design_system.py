@@ -854,11 +854,6 @@ def append_sections(document: str, spec: dict) -> str:
 
     for section in sections:
         heading = section["heading"].strip()
-        if any(
-            text_of(m.group(0)).casefold() == heading.casefold()
-            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
-        ):
-            continue
         block = [f"<h2>{esc(heading)}</h2>"]
         for paragraph in section.get("paragraphs", []):
             block.append(f"<p>{esc(paragraph)}</p>")
@@ -866,20 +861,32 @@ def append_sections(document: str, spec: dict) -> str:
             block.append("<ul>")
             block.extend(f"<li>{esc(step)}</li>" for step in section["steps"])
             block.append("</ul>")
-        markup = "\n" + "\n".join(block) + "\n"
+        payload = "\n".join(block[1:])
 
-        anchor = section.get("before_heading")
-        position = len(body)
-        if anchor:
-            for match in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL):
-                if text_of(match.group(0)).casefold() == anchor.strip().casefold():
-                    position = match.start()
-                    break
-            else:
-                raise ValueError(
-                    f"append_sections: before_heading {anchor!r} not found"
-                )
-        body = body[:position] + markup + body[position:]
+        heading_exists = any(
+            text_of(m.group(0)).casefold() == heading.casefold()
+            for m in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL)
+        )
+        if not heading_exists:
+            markup = "\n" + "\n".join(block) + "\n"
+
+            anchor = section.get("before_heading")
+            position = len(body)
+            if anchor:
+                for match in re.finditer(r"<h2\b[^>]*>.*?</h2>", body, re.DOTALL):
+                    if text_of(match.group(0)).casefold() == anchor.strip().casefold():
+                        position = match.start()
+                        break
+                else:
+                    raise ValueError(
+                        f"append_sections: before_heading {anchor!r} not found"
+                    )
+            body = body[:position] + markup + body[position:]
+
+        if payload and body.count(payload) != 1:
+            raise ValueError(
+                f"append_sections: content for {heading!r} appears {body.count(payload)} times"
+            )
     return document[:start] + body + document[end:]
 
 

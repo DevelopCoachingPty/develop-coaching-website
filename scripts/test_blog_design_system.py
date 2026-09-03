@@ -118,6 +118,37 @@ class TransformTests(unittest.TestCase):
         twice = bds.transform(self.transform(), SPEC)
         self.assertEqual(twice.count('id="dc-article-brief"'), 1)
 
+    def test_appended_section_is_idempotent(self):
+        spec = copy.deepcopy(SPEC)
+        spec["append_sections"] = [
+            {
+                "heading": "A New Section",
+                "paragraphs": ["Unique carried-over material."],
+                "before_heading": "Second Heading",
+            }
+        ]
+        once = self.transform(spec=spec)
+        twice = bds.transform(once, spec)
+        self.assertEqual(once, twice)
+        self.assertEqual(once.count("Unique carried-over material."), 1)
+
+    def test_appended_section_rejects_duplicate_content_under_another_heading(self):
+        spec = copy.deepcopy(SPEC)
+        spec["append_sections"] = [
+            {
+                "heading": "Numbered New Section",
+                "paragraphs": ["Unique carried-over material."],
+                "before_heading": "Second Heading",
+            }
+        ]
+        duplicate = page().replace(
+            "<h2>Second Heading</h2>",
+            "<h2>Old Unnumbered Section</h2>\n<p>Unique carried-over material.</p>\n"
+            "<h2>Second Heading</h2>",
+        )
+        with self.assertRaisesRegex(ValueError, "appears 2 times"):
+            self.transform(document=duplicate, spec=spec)
+
     def test_briefing_sits_before_its_anchor_heading(self):
         out = self.transform()
         self.assertLess(out.index('id="dc-article-brief"'), out.index("<h2>Second Heading</h2>"))
