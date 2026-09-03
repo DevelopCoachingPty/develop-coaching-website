@@ -54,6 +54,10 @@
     "Reliability wins every tender.": "Why reliability wins every tender"
   },
   "brief_before_heading": "Why reliability wins every tender",
+  "related_service": {
+    "text": "Explore groundworks business coaching",
+    "href": "/groundwork-business-coach/"
+  },
   "intro_replaces_paragraphs": 3,
   "date_modified": "2026-08-31T00:00:00+10:00",
   "text_replacements": [

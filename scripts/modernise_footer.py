@@ -66,6 +66,30 @@ FOOTER = """<footer id="site-footer" class="dc-site-footer" data-dc-modern-foote
 </footer>"""
 
 
+def add_priority_home_links(html: str, relative_path: str) -> str:
+    """Give priority resources a direct route from the site's main entry page."""
+    if relative_path != "index.html":
+        return html
+    links_anchor = '<div class="dc-site-footer__links">'
+    if 'href="/blog/"' not in html:
+        html = html.replace(
+            links_anchor,
+            links_anchor
+            + '\n      <a href="/blog/">Blog</a>'
+            + '\n      <a href="/trades-pipeline-diagnostic/">Pipeline Diagnostic</a>',
+            1,
+        )
+    terms_anchor = '<a href="/corporate-structure-notice/">Corporate Structure Notice</a>'
+    if 'href="/terms-conditions/"' not in html:
+        html = html.replace(
+            terms_anchor,
+            '<a href="/terms-conditions/">Terms &amp; Conditions</a> · '
+            + terms_anchor,
+            1,
+        )
+    return html
+
+
 def should_include_book_award(relative_path: str, html: str) -> bool:
     """Use the richer CTA on editorial and Five Pillars resource pages."""
     route = "/" + relative_path.replace("index.html", "").removesuffix(".html")
@@ -102,7 +126,8 @@ def modernise_footer(html: str, relative_path: str) -> str:
             html = html.replace(FOOTER, BOOK_AWARD + "\n" + FOOTER, 1)
         else:
             html = MODERN_BOOK_RE.sub("", html)
-        return STYLE_RE.sub(lambda _match: STYLE, html, count=1)
+        html = STYLE_RE.sub(lambda _match: STYLE, html, count=1)
+        return add_priority_home_links(html, relative_path)
     if not LEGACY_FOOTER_RE.search(html):
         return html
     replacement = FOOTER
@@ -110,14 +135,16 @@ def modernise_footer(html: str, relative_path: str) -> str:
         replacement = BOOK_AWARD + "\n" + replacement
     html = LEGACY_FOOTER_RE.sub(lambda _match: replacement, html, count=1)
     if STYLE_RE.search(html):
-        return STYLE_RE.sub(lambda _match: STYLE, html, count=1)
-    return re.sub(
+        html = STYLE_RE.sub(lambda _match: STYLE, html, count=1)
+        return add_priority_home_links(html, relative_path)
+    html = re.sub(
         r"</head>",
         lambda match: f"{STYLE}\n{match.group(0)}",
         html,
         count=1,
         flags=re.I,
     )
+    return add_priority_home_links(html, relative_path)
 
 
 def main() -> None:
