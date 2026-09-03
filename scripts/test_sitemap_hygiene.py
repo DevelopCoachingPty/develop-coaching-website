@@ -74,6 +74,23 @@ class SitemapHygieneTests(unittest.TestCase):
                         rf'href="(?:https://develop-coaching.com)?/category/'
                         rf'{category}/(?:page/2/)?\?[^\"]+"',
                     )
+                    next_page = (
+                        "3"
+                        if "page__2" in path.name or "/page/2/" in path.as_posix()
+                        else "2"
+                    )
+                    next_path = f"/category/{category}/page/{next_page}/"
+                    next_url = (
+                        f"https://develop-coaching.com{next_path}"
+                        if "export/reference" in path.as_posix()
+                        else next_path
+                    )
+                    self.assertIn(f'data-next-page="{next_url}"', html)
+                    self.assertNotRegex(
+                        html,
+                        rf'data-next-page="(?:https://develop-coaching.com)?/'
+                        rf'category/{category}/page/[23]/\?[^\"]+"',
+                    )
 
     def test_legacy_urls_have_permanent_redirects(self):
         config = json.loads((WWW / "vercel.json").read_text())
