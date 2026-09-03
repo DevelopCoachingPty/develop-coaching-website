@@ -24,13 +24,19 @@ DOMAIN = "https://develop-coaching.com"
 # Content types worth searching. Media and drafts are excluded.
 TYPES = ["posts", "pages", "podcast", "podcast-transcript", "courses", "webinars"]
 
-# Test pages and redirect-only aliases should not appear as search results.
+# Deliberately noindex pages and redirect-only aliases stay out of site search.
 EXCLUDED_PATHS = {
+    "/5-steps-to-5-million-events/",
+    "/5-steps-to-5-million-london-uk/",
+    "/build-your-future/",
     "/courses/test/",
+    "/podcast-transcript/podcast-2-test-trans/",
     "/podcast-transcript/test-podcast-v1-transcript/",
     "/scale/",
+    "/scale-hub-page/",
     "/sample-page/",
     "/stephen-and-salina-testimonial-2/",
+    "/systems-and-processes-subcategory-page/",
     "/test-page/",
     "/test-landing-page/",
     "/test/",

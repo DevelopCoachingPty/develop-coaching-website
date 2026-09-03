@@ -37,15 +37,21 @@ for root, dirs, files in os.walk(OUT):
         p = "/" + os.path.relpath(root, OUT).replace(os.sep, "/")
         built.add("/" if p == "/." else p.rstrip("/") + "/")
 
-# Pages that are deliberately kept out of search or served only as redirects.
+# Pages that are deliberately kept noindex or served only as redirects.
 # Match full paths so a valid page such as /testimonial/ is never mistaken for
 # a test page by a broad prefix check.
 EXCLUDED_PATHS = {
+    "/5-steps-to-5-million-events/",
+    "/5-steps-to-5-million-london-uk/",
+    "/build-your-future/",
     "/courses/test/",
+    "/podcast-transcript/podcast-2-test-trans/",
     "/podcast-transcript/test-podcast-v1-transcript/",
     "/scale/",
+    "/scale-hub-page/",
     "/sample-page/",
     "/stephen-and-salina-testimonial-2/",
+    "/systems-and-processes-subcategory-page/",
     "/test-page/",
     "/test-landing-page/",
     "/test/",
