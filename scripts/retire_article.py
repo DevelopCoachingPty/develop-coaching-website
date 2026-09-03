@@ -146,7 +146,7 @@ def drop_listing_cards(post_id: str, check: bool) -> int:
     )
     dynamic_style_re = re.compile(
         rf'<style\b[^>]*>(?:(?!</style>).)*?\.e-loop-item-{re.escape(post_id)}\b'
-        r'(?:(?!</style>).)*?</style>\s*$',
+        r'(?:(?!</style>).)*?</style>\s*',
         re.IGNORECASE | re.DOTALL,
     )
     removed = 0
@@ -154,17 +154,13 @@ def drop_listing_cards(post_id: str, check: bool) -> int:
         html = page.read_text(encoding="utf-8", errors="ignore")
         spans = []
         for match in card_re.finditer(html):
-            start = match.start()
-            style = dynamic_style_re.search(html[:start])
-            if style:
-                start = style.start()
-            spans.append((start, _balanced_element_end(html, match.start(), match.group("tag"))))
-        if not spans:
-            continue
+            spans.append((match.start(), _balanced_element_end(html, match.start(), match.group("tag"))))
         removed += len(spans)
-        if not check:
+        if not check and spans:
             for start, end in reversed(spans):
                 html = html[:start] + html[end:]
+        html, styles_removed = dynamic_style_re.subn("", html)
+        if not check and (spans or styles_removed):
             page.write_text(html, encoding="utf-8")
     return removed
 

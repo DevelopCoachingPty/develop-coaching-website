@@ -135,6 +135,7 @@ class RetirementOperationTests(unittest.TestCase):
             page.write_text(
                 '<style>.site-heading{color:blue}</style><h1>Keep this heading</h1>'
                 '<style>.e-loop-item-42{color:red}</style>'
+                '<style id="loop-7">.shared-card{color:black}</style>'
                 '<div data-elementor-type="loop-item" class="e-loop-item post-42 post">'
                 '<div><a href="/old/">Old card</a></div></div>'
                 '<p><a href="/old/">Useful contextual link</a></p>',
@@ -147,7 +148,23 @@ class RetirementOperationTests(unittest.TestCase):
             self.assertNotIn("e-loop-item-42", result)
             self.assertIn("<h1>Keep this heading</h1>", result)
             self.assertIn(".site-heading{color:blue}", result)
+            self.assertIn(".shared-card{color:black}", result)
             self.assertIn("Useful contextual link", result)
+
+    def test_orphaned_dynamic_style_is_removed_without_a_card(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            www = Path(tmp)
+            page = www / "archive" / "index.html"
+            page.parent.mkdir()
+            page.write_text(
+                '<style>.e-loop-item-42{background:red}</style><h1>Archive</h1>',
+                encoding="utf-8",
+            )
+            with mock.patch.object(retire_article, "WWW", www):
+                self.assertEqual(retire_article.drop_listing_cards("42", check=False), 0)
+            result = page.read_text(encoding="utf-8")
+            self.assertNotIn("e-loop-item-42", result)
+            self.assertIn("<h1>Archive</h1>", result)
 
     def test_archive_article_card_is_removed_in_check_and_write_modes(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -184,18 +201,12 @@ class RetirementOperationTests(unittest.TestCase):
 class PublishedListingTests(unittest.TestCase):
     def test_retired_post_cards_are_absent(self):
         retired_post_ids = ("2494", "17557", "2165", "2213", "2372", "17558", "2323")
-        listing_pages = (
-            ROOT / "www/blog/index.html",
-            ROOT / "www/category/attract/index.html",
-            ROOT / "www/category/deliver/index.html",
-            ROOT / "www/category/plan/page/2/index.html",
-            ROOT / "www/5-pillars-free-trainings/attract/index.html",
-        )
-        for page in listing_pages:
+        for page in (ROOT / "www").rglob("index.html"):
             html = page.read_text(encoding="utf-8")
             for post_id in retired_post_ids:
                 with self.subTest(page=page, post_id=post_id):
                     self.assertNotRegex(html, rf"\bpost-{post_id}\b")
+                    self.assertNotIn(f"e-loop-item-{post_id}", html)
 
     def test_retired_featured_widget_is_removed_from_blog(self):
         blog = (ROOT / "www/blog/index.html").read_text(encoding="utf-8")
