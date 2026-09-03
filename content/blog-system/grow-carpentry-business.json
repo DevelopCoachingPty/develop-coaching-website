@@ -55,6 +55,10 @@
     "1. Price like a professional carpentry company": "1. How should a carpentry company price?"
   },
   "brief_before_heading": "1. How should a carpentry company price?",
+  "related_service": {
+    "text": "Explore carpentry business coaching",
+    "href": "/carpentry-business-coach/"
+  },
   "intro_replaces_paragraphs": 3,
   "date_modified": "2026-08-31T00:00:00+10:00",
   "demote_body_h1": true

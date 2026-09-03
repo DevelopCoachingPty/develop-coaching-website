@@ -102,6 +102,15 @@ class ModerniseFooterTests(unittest.TestCase):
         self.assertIn('aria-label="Develop Coaching home"', footer_module.FOOTER)
         self.assertIn('/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg', footer_module.FOOTER)
 
+    def test_priority_links_are_scoped_to_the_home_page(self):
+        home = modernise_footer(LEGACY.replace("BODY_CLASSES", "home"), "index.html")
+        internal = modernise_footer(
+            LEGACY.replace("BODY_CLASSES", "page"), "contact/index.html"
+        )
+        for href in ("/blog/", "/trades-pipeline-diagnostic/", "/terms-conditions/"):
+            self.assertIn(f'href="{href}"', home)
+            self.assertNotIn(f'href="{href}"', internal)
+
 
 if __name__ == "__main__":
     unittest.main()

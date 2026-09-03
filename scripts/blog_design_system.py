@@ -195,6 +195,15 @@ def build_brief(spec: dict) -> str:
 
     review = brief["review"]
     cta = brief["cta"]
+    actions = [
+        f'    <a class="dc-article-brief__link" href="{esc(cta["href"])}">{esc(cta["text"])}</a>'
+    ]
+    related_service = spec.get("related_service")
+    if related_service:
+        actions.append(
+            '    <a class="dc-article-brief__link" '
+            f'href="{esc(related_service["href"])}">{esc(related_service["text"])}</a>'
+        )
     return "\n".join(
         [
             f'<section class="dc-article-brief" id="{BRIEF_ID}" aria-labelledby="{title_id}">',
@@ -210,7 +219,7 @@ def build_brief(spec: dict) -> str:
             "    </div>",
             f'    <p class="dc-article-brief__review"><strong>{esc(review["label"])}</strong> '
             f'{esc(review["text"])}</p>',
-            f'    <a class="dc-article-brief__link" href="{esc(cta["href"])}">{esc(cta["text"])}</a>',
+            *actions,
             "  </div>",
             "</section>",
         ]
@@ -938,6 +947,15 @@ def validate(spec: dict, path: Path) -> None:
         raise ValueError(
             f"{path.name}: briefing CTA {cta} does not match pillar {spec['pillar']}"
         )
+    related_service = spec.get("related_service")
+    if related_service:
+        if set(related_service) != {"text", "href"}:
+            raise ValueError(f"{path.name}: related_service needs text and href")
+        href = related_service["href"]
+        if not re.fullmatch(r"/[a-z0-9-]+-business-coach/", href):
+            raise ValueError(
+                f"{path.name}: related_service must link to a business-coach page"
+            )
     for field in ("title", "meta_description", "h1", "hero_subtitle"):
         if "\u2014" in spec[field]:
             raise ValueError(f"{path.name}: {field} contains an em dash")

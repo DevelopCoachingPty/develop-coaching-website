@@ -207,6 +207,19 @@ class TransformTests(unittest.TestCase):
         start, end = bds.body_span(out)
         self.assertIn("/5-pillars-free-trainings/convert/", out[start:end])
 
+    def test_optional_related_service_link_lands_in_the_article_body(self):
+        spec = copy.deepcopy(SPEC)
+        spec["related_service"] = {
+            "text": "Explore electrical business coaching",
+            "href": "/electrical-business-coach/",
+        }
+        out = self.transform(spec=spec)
+        start, end = bds.body_span(out)
+        body = out[start:end]
+        self.assertIn('href="/electrical-business-coach/"', body)
+        self.assertIn("Explore electrical business coaching", body)
+        self.assertEqual(body.count("/electrical-business-coach/"), 1)
+
 
 class FailClosedTests(unittest.TestCase):
     def test_missing_anchor_heading_raises(self):
