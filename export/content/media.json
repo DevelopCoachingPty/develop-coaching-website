@@ -3418,7 +3418,7 @@
   "date": "2026-02-20T05:54:16",
   "date_gmt": "2026-02-20T05:54:16",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/02/Landscape.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/02/Landscape.webp"
   },
   "modified": "2026-02-20T05:54:43",
   "modified_gmt": "2026-02-20T05:54:43",
@@ -3444,19 +3444,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.png'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.png\" class=\"attachment-medium size-medium\" alt=\"grow landscaping business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.png 1536w, https://develop-coaching.com/wp-content/uploads/2026/02/Landscape-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.webp\" class=\"attachment-medium size-medium\" alt=\"grow landscaping business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.webp 1536w, https://develop-coaching.com/wp-content/uploads/2026/02/Landscape-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "grow landscaping business",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1536,
    "height": 1024,
-   "file": "2026/02/Landscape.png",
-   "filesize": 3569045,
+   "file": "2026/02/Landscape.webp",
+   "filesize": 468632,
    "sizes": {
     "thumbnail": {
      "file": "Landscape-150x150.png",
@@ -3475,11 +3475,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2026/02/Landscape-768x512.png"
     },
     "full": {
-     "file": "Landscape.png",
+     "file": "Landscape.webp",
      "width": 1536,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.webp"
     }
    },
    "image_meta": {
@@ -3498,9 +3498,9 @@
    }
   },
   "post": 17269,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.png",
-  "filename": "Landscape.png",
-  "filesize": 3569045,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/02/Landscape.webp",
+  "filename": "Landscape.webp",
+  "filesize": 468632,
   "_links": {
    "self": [
     {
@@ -3563,7 +3563,7 @@
   "date": "2026-01-19T06:22:06",
   "date_gmt": "2026-01-19T06:22:06",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/01/Plastering-1.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/01/Plastering-1.webp"
   },
   "modified": "2026-01-19T06:22:43",
   "modified_gmt": "2026-01-19T06:22:43",
@@ -3589,19 +3589,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.png'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.png\" class=\"attachment-medium size-medium\" alt=\"grow plastering business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.png 1536w, https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.webp\" class=\"attachment-medium size-medium\" alt=\"grow plastering business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.webp 1536w, https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "grow plastering business",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1536,
    "height": 1024,
-   "file": "2026/01/Plastering-1.png",
-   "filesize": 2080158,
+   "file": "2026/01/Plastering-1.webp",
+   "filesize": 128746,
    "sizes": {
     "thumbnail": {
      "file": "Plastering-1-150x150.png",
@@ -3620,11 +3620,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1-768x512.png"
     },
     "full": {
-     "file": "Plastering-1.png",
+     "file": "Plastering-1.webp",
      "width": 1536,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.webp"
     }
    },
    "image_meta": {
@@ -3643,9 +3643,9 @@
    }
   },
   "post": 17178,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.png",
-  "filename": "Plastering-1.png",
-  "filesize": 2080158,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Plastering-1.webp",
+  "filename": "Plastering-1.webp",
+  "filesize": 128746,
   "_links": {
    "self": [
     {
@@ -3708,7 +3708,7 @@
   "date": "2026-01-13T03:25:42",
   "date_gmt": "2026-01-13T03:25:42",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/01/Grow-painting-business.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2026/01/Grow-painting-business.webp"
   },
   "modified": "2026-01-13T03:26:01",
   "modified_gmt": "2026-01-13T03:26:01",
@@ -3734,19 +3734,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.png'><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.png\" class=\"attachment-medium size-medium\" alt=\"grow painting business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.png 1024w, https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business-150x150.png 150w, https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business-768x768.png 768w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.webp\" class=\"attachment-medium size-medium\" alt=\"grow painting business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.webp 1024w, https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business-150x150.png 150w, https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business-768x768.png 768w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "grow painting business",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1024,
    "height": 1024,
-   "file": "2026/01/Grow-painting-business.png",
-   "filesize": 1812827,
+   "file": "2026/01/Grow-painting-business.webp",
+   "filesize": 63448,
    "sizes": {
     "thumbnail": {
      "file": "Grow-painting-business-150x150.png",
@@ -3765,11 +3765,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business-768x768.png"
     },
     "full": {
-     "file": "Grow-painting-business.png",
+     "file": "Grow-painting-business.webp",
      "width": 1024,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.webp"
     }
    },
    "image_meta": {
@@ -3788,9 +3788,9 @@
    }
   },
   "post": 17167,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.png",
-  "filename": "Grow-painting-business.png",
-  "filesize": 1812827,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2026/01/Grow-painting-business.webp",
+  "filename": "Grow-painting-business.webp",
+  "filesize": 63448,
   "_links": {
    "self": [
     {
@@ -4275,19 +4275,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png'><img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1396\" src=\"https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png\" class=\"attachment-medium size-medium\" alt=\"grow groundworks business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png 2560w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-768x419.png 768w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-1536x838.png 1536w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-2048x1117.png 2048w\" sizes=\"(max-width: 2560px) 100vw, 2560px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp'><img loading=\"lazy\" decoding=\"async\" width=\"2560\" height=\"1396\" src=\"https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp\" class=\"attachment-medium size-medium\" alt=\"grow groundworks business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp 2560w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-768x419.png 768w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-1536x838.png 1536w, https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-2048x1117.png 2048w\" sizes=\"(max-width: 2560px) 100vw, 2560px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "grow groundworks business",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 2560,
    "height": 1396,
-   "file": "2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png",
-   "filesize": 1915206,
+   "file": "2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp",
+   "filesize": 771908,
    "sizes": {
     "thumbnail": {
      "file": "Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-150x150.png",
@@ -4322,11 +4322,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-2048x1117.png"
     },
     "full": {
-     "file": "Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png",
+     "file": "Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp",
      "width": 2560,
      "height": 1396,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp"
     }
    },
    "image_meta": {
@@ -4346,9 +4346,9 @@
    "original_image": "Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1.png"
   },
   "post": 16473,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.png",
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/11/Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1-scaled.webp",
   "filename": "Gemini_Generated_Image_7wuq9o7wuq9o7wuq-1.png",
-  "filesize": 1915206,
+  "filesize": 771908,
   "_links": {
    "self": [
     {
@@ -6592,7 +6592,7 @@
   "date": "2025-09-25T01:15:35",
   "date_gmt": "2025-09-25T01:15:35",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/grow-building-company.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/grow-building-company.webp"
   },
   "modified": "2025-09-25T01:16:19",
   "modified_gmt": "2025-09-25T01:16:19",
@@ -6618,19 +6618,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.png'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.png\" class=\"attachment-medium size-medium\" alt=\"grow building company\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.png 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.webp\" class=\"attachment-medium size-medium\" alt=\"grow building company\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.webp 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "grow building company",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1536,
    "height": 1024,
-   "file": "2025/09/grow-building-company.png",
-   "filesize": 2303683,
+   "file": "2025/09/grow-building-company.webp",
+   "filesize": 105604,
    "sizes": {
     "thumbnail": {
      "file": "grow-building-company-150x150.png",
@@ -6649,11 +6649,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company-768x512.png"
     },
     "full": {
-     "file": "grow-building-company.png",
+     "file": "grow-building-company.webp",
      "width": 1536,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.webp"
     }
    },
    "image_meta": {
@@ -6672,9 +6672,9 @@
    }
   },
   "post": 15459,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.png",
-  "filename": "grow-building-company.png",
-  "filesize": 2303683,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/grow-building-company.webp",
+  "filename": "grow-building-company.webp",
+  "filesize": 105604,
   "_links": {
    "self": [
     {
@@ -6737,7 +6737,7 @@
   "date": "2025-09-11T06:07:39",
   "date_gmt": "2025-09-11T06:07:39",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/job-pricing.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/job-pricing.webp"
   },
   "modified": "2025-09-11T06:08:06",
   "modified_gmt": "2025-09-11T06:08:06",
@@ -6763,19 +6763,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.png'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.png\" class=\"attachment-medium size-medium\" alt=\"construction job pricing\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.png 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.webp\" class=\"attachment-medium size-medium\" alt=\"construction job pricing\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.webp 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "construction job pricing",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1536,
    "height": 1024,
-   "file": "2025/09/job-pricing.png",
-   "filesize": 2210380,
+   "file": "2025/09/job-pricing.webp",
+   "filesize": 102604,
    "sizes": {
     "thumbnail": {
      "file": "job-pricing-150x150.png",
@@ -6794,11 +6794,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing-768x512.png"
     },
     "full": {
-     "file": "job-pricing.png",
+     "file": "job-pricing.webp",
      "width": 1536,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.webp"
     }
    },
    "image_meta": {
@@ -6817,9 +6817,9 @@
    }
   },
   "post": 15381,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.png",
-  "filename": "job-pricing.png",
-  "filesize": 2210380,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/job-pricing.webp",
+  "filename": "job-pricing.webp",
+  "filesize": 102604,
   "_links": {
    "self": [
     {
@@ -7298,7 +7298,7 @@
   "date": "2025-09-05T01:44:36",
   "date_gmt": "2025-09-05T01:44:36",
   "guid": {
-   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/Electrician.png"
+   "rendered": "https://developcoaching.co.uk/wp-content/uploads/2025/09/Electrician.webp"
   },
   "modified": "2025-09-05T01:45:31",
   "modified_gmt": "2025-09-05T01:45:31",
@@ -7324,19 +7324,19 @@
    "hentry"
   ],
   "description": {
-   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.png'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.png\" class=\"attachment-medium size-medium\" alt=\"how to expand electrical business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.png 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/Electrician-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
+   "rendered": "<p class=\"attachment\"><a href='https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.webp'><img loading=\"lazy\" decoding=\"async\" width=\"1536\" height=\"1024\" src=\"https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.webp\" class=\"attachment-medium size-medium\" alt=\"how to expand electrical business\" srcset=\"https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.webp 1536w, https://develop-coaching.com/wp-content/uploads/2025/09/Electrician-768x512.png 768w\" sizes=\"(max-width: 1536px) 100vw, 1536px\" /></a></p>\n"
   },
   "caption": {
    "rendered": ""
   },
   "alt_text": "how to expand electrical business",
   "media_type": "image",
-  "mime_type": "image/png",
+  "mime_type": "image/webp",
   "media_details": {
    "width": 1536,
    "height": 1024,
-   "file": "2025/09/Electrician.png",
-   "filesize": 2648090,
+   "file": "2025/09/Electrician.webp",
+   "filesize": 173870,
    "sizes": {
     "thumbnail": {
      "file": "Electrician-150x150.png",
@@ -7355,11 +7355,11 @@
      "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/Electrician-768x512.png"
     },
     "full": {
-     "file": "Electrician.png",
+     "file": "Electrician.webp",
      "width": 1536,
      "height": 1024,
-     "mime_type": "image/png",
-     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.png"
+     "mime_type": "image/webp",
+     "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.webp"
     }
    },
    "image_meta": {
@@ -7378,9 +7378,9 @@
    }
   },
   "post": 15351,
-  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.png",
-  "filename": "Electrician.png",
-  "filesize": 2648090,
+  "source_url": "https://develop-coaching.com/wp-content/uploads/2025/09/Electrician.webp",
+  "filename": "Electrician.webp",
+  "filesize": 173870,
   "_links": {
    "self": [
     {
