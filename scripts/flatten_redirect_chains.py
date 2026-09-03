@@ -12,10 +12,20 @@ ROOT = Path(__file__).resolve().parents[1]
 WWW = ROOT / "www"
 MANUAL = ROOT / "export/manual-redirects.json"
 VERCEL = WWW / "vercel.json"
+BLOG_ARCHIVE_RULE = (
+    "/blog/:path(.+)/:slug([^/]+)",
+    "/:slug/",
+)
 
 
 def normalise(value):
-    path = urlsplit(value).path if value.startswith(("http://", "https://")) else value
+    parsed = urlsplit(value)
+    if parsed.scheme and parsed.netloc not in {
+        "develop-coaching.com",
+        "www.develop-coaching.com",
+    }:
+        return value
+    path = parsed.path
     return path.rstrip("/") or "/"
 
 
@@ -42,9 +52,20 @@ def exact_map(redirects):
     return result
 
 
+def require_routing_contract(redirects):
+    configured = {
+        (redirect["source"], redirect["destination"])
+        for redirect in redirects
+    }
+    if BLOG_ARCHIVE_RULE not in configured:
+        raise ValueError("the blog archive redirect pattern has changed")
+
+
 def next_path(path, redirects):
     if path in redirects:
         return redirects[path]
+    if path.startswith(("http://", "https://")):
+        return None
     match = re.fullmatch(r"/blog/.+/(?P<slug>[^/]+)", path)
     if match:
         return "/" + match.group("slug")
@@ -91,6 +112,8 @@ def main():
 
     manual = json.loads(MANUAL.read_text())
     vercel = json.loads(VERCEL.read_text())
+    require_routing_contract(manual)
+    require_routing_contract(vercel["redirects"])
     replacements = flattenable(exact_map(manual), local_pages())
     manual_changed, manual_matched = update_redirects(manual, replacements)
     vercel_changed, vercel_matched = update_redirects(vercel["redirects"], replacements)
