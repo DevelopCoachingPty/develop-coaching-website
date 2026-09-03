@@ -308,10 +308,7 @@ def update_head(document: str, spec: dict) -> str:
 
 
 def update_schema(document: str, spec: dict) -> str:
-    pattern = re.compile(
-        r'(<script type="application/ld\+json" class="rank-math-schema-pro">)(.*?)(</script>)',
-        re.DOTALL,
-    )
+    pattern = SCHEMA_RE
     match = pattern.search(document)
     if not match:
         raise ValueError("Rank Math schema block not found")
@@ -728,6 +725,47 @@ def drop_dead_images(document: str) -> str:
 # so tags arrive as the literal text u003cstrongu003e rather than <strong>.
 # Readers see the gibberish on the page, and so does a search engine.
 ESCAPED_MARKUP = (("u003c", "<"), ("u003e", ">"), ("u0022", '"'))
+ESCAPED_MARKERS = tuple(broken for broken, _ in ESCAPED_MARKUP)
+SCHEMA_RE = re.compile(
+    r'(<script\b(?=[^>]*\btype=["\']application/ld\+json["\'])'
+    r'(?=[^>]*\bclass=["\'][^"\']*\brank-math-schema-pro\b[^"\']*["\'])'
+    r'[^>]*>)(.*?)(</script>)',
+    re.DOTALL | re.IGNORECASE,
+)
+
+
+def repair_schema_text(document: str) -> str:
+    """Clean literally escaped markup out of the structured data.
+
+    One article's FAQ schema carries its question text as
+    u003cbu003eu003cstrongu003e... rather than as markup, so a search engine
+    reads the question name as that literal string. The JSON is parsed first
+    and the values cleaned inside it: decoding the escapes in the raw text
+    would introduce an unescaped quote and break the JSON.
+
+    Schema names are meant to be plain text, so the tags are stripped rather
+    than restored.
+    """
+    match = SCHEMA_RE.search(document)
+    if not match or not any(marker in match.group(2) for marker in ESCAPED_MARKERS):
+        return document
+    schema = json.loads(match.group(2))
+
+    def clean(value):
+        if isinstance(value, str):
+            if not any(marker in value for marker in ESCAPED_MARKERS):
+                return value
+            for broken, fixed in ESCAPED_MARKUP:
+                value = value.replace(broken, fixed)
+            return re.sub(r"\s+", " ", TAG_RE.sub(" ", value)).strip()
+        if isinstance(value, list):
+            return [clean(v) for v in value]
+        if isinstance(value, dict):
+            return {k: clean(v) for k, v in value.items()}
+        return value
+
+    rebuilt = json.dumps(clean(schema), separators=(",", ":"), ensure_ascii=False)
+    return document[: match.start()] + match.group(1) + rebuilt + match.group(3) + document[match.end() :]
 
 
 def repair_escaped_markup(document: str) -> str:
@@ -866,6 +904,7 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
     document = drop_dead_images(document)
+    document = repair_schema_text(document)
     document = repair_escaped_markup(document)
     document = repair_video_embeds(document, spec)
     document = update_head(document, spec)

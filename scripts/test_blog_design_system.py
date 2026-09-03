@@ -158,6 +158,46 @@ class TransformTests(unittest.TestCase):
         self.assertNotIn("wsstgprdphotosonic01", out)
         self.assertIn('id="dc-article-brief"', out)
 
+    def test_escaped_markup_in_schema_is_cleaned(self):
+        """FAQ question text arriving as literal u003cbu003e is not readable data."""
+        broken = json.dumps({"@context": "https://schema.org", "@graph": [
+            {"@type": "WebPage", "@id": "https://develop-coaching.com/example-article/"},
+            {"@type": "BlogPosting", "headline": "Example", "subjectOf": [
+                {"@type": "FAQPage", "mainEntity": [
+                    {"@type": "Question",
+                     "name": "u003cbu003eu003cstrong class=u0022xu0022u003eA question?u003c/strongu003eu003c/bu003e",
+                     "acceptedAnswer": {"@type": "Answer", "text": "Steps:u003cbru003e1. First"}}]}]},
+        ]})
+        document = re.sub(
+            r'(class="rank-math-schema-pro">).*?(</script>)',
+            lambda m: m.group(1) + broken + m.group(2), page(), flags=re.DOTALL)
+        schema_tag = re.search(
+            r'<script type="application/ld\+json" class="rank-math-schema-pro">.*?</script>',
+            document,
+            re.DOTALL,
+        ).group(0)
+        schema_tag = schema_tag.replace(
+            '<script type="application/ld+json" class="rank-math-schema-pro">',
+            '<script class="rank-math-schema-pro" type="application/ld+json">',
+        )
+        document = document.replace(
+            re.search(
+                r'<script type="application/ld\+json" class="rank-math-schema-pro">.*?</script>',
+                document,
+                re.DOTALL,
+            ).group(0),
+            "",
+        ).replace('postid-1">', f'postid-1">\n{schema_tag}', 1)
+        out = bds.transform(document, SPEC)
+        self.assertNotIn("u003c", out)
+        graph = json.loads(bds.SCHEMA_RE.search(out).group(2))["@graph"]
+        posting = next(n for n in graph if n["@type"] == "BlogPosting")
+        self.assertEqual(posting["subjectOf"][0]["mainEntity"][0]["name"], "A question?")
+        self.assertEqual(
+            posting["subjectOf"][0]["mainEntity"][0]["acceptedAnswer"]["text"],
+            "Steps: 1. First",
+        )
+
     def test_bare_video_link_becomes_a_real_player(self):
         out = self.transform(page(broken_anchor=True))
         self.assertNotIn('rel="noopener noreferrer"></p>', out)
