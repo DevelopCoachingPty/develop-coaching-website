@@ -115,7 +115,7 @@ def repoint_links(slug: str, destination: str, check: bool) -> int:
         html = page.read_text(encoding="utf-8", errors="ignore")
         if f"/{slug}/" not in html:
             continue
-        updated, count = pattern.subn(destination, html)
+        updated, count = pattern.subn(lambda _match: destination, html)
         if count:
             changed += count
             if not check:

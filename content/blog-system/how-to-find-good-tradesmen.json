@@ -52,14 +52,15 @@
   },
   "heading_rewrites": {
     "1. Define Your Needs: Laying the Foundation": "1. What do you actually need?",
-    "3. Conduct Thorough Vetting: Essential Steps in How to Find Good Tradesmen": "3. How should you vet a tradesman?"
+    "3. Conduct Thorough Vetting: Essential Steps in How to Find Good Tradesmen": "3. How should you vet a tradesman?",
+    "5. How to Find Good Tradesmen: The Power of Referrals": "8. How to Find Good Tradesmen: The Power of Referrals"
   },
   "brief_before_heading": "1. What do you actually need?",
   "intro_replaces_paragraphs": 3,
   "date_modified": "2026-08-31T00:00:00+10:00",
   "append_sections": [
     {
-      "heading": "Write a Brief That Can Be Judged Against",
+      "heading": "5. Write a Brief That Can Be Judged Against",
       "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
       "paragraphs": [
         "Start by writing a brief that sets out the project specifics: measurements, architect plans, materials, finishes, and any fixtures or fittings you have in mind. That is what lets a tradesperson understand what you actually expect rather than guess at it.",
@@ -68,7 +69,7 @@
       ]
     },
     {
-      "heading": "Evaluate the Soft Skills, Not Just the Trade",
+      "heading": "6. Evaluate the Soft Skills, Not Just the Trade",
       "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
       "paragraphs": [
         "Technical ability is the entry requirement. Communication, teamwork and problem solving decide whether someone is worth putting in front of a client, and a LinkedIn study found that 92% of professionals rate soft skills as equally or more important than technical ones.",
@@ -76,7 +77,7 @@
       ]
     },
     {
-      "heading": "Screen With a Structure",
+      "heading": "7. Screen With a Structure",
       "before_heading": "5. How to Find Good Tradesmen: The Power of Referrals",
       "paragraphs": [
         "Review CVs properly, looking for relevant experience and qualifications rather than scanning for a trade name. Plan the questions in advance, focusing on what they have actually achieved and why they left previous roles.",

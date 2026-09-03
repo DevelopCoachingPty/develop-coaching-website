@@ -97,6 +97,17 @@ class RetirementOperationTests(unittest.TestCase):
             self.assertIn('href="/foo-2/"', page.read_text(encoding="utf-8"))
             self.assertIn('href="/foo/"', retired_page.read_text(encoding="utf-8"))
 
+    def test_link_repointing_treats_destination_as_literal_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            www = Path(tmp)
+            page = www / "page" / "index.html"
+            page.parent.mkdir()
+            page.write_text('<a href="/foo/">Old</a>', encoding="utf-8")
+            destination = r"/keeper/\g<0>/"
+            with mock.patch.object(retire_article, "WWW", www):
+                self.assertEqual(retire_article.repoint_links("foo", destination, check=False), 1)
+            self.assertIn(destination, page.read_text(encoding="utf-8"))
+
     def test_add_redirects_updates_both_sources_without_duplicates(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
