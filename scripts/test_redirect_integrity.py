@@ -59,6 +59,24 @@ class RedirectIntegrityTests(unittest.TestCase):
             with self.subTest(source=item["source"]):
                 self.assertIn(pair, deployed_pairs)
 
+    def test_specific_blog_redirects_precede_generic_archive_rules(self):
+        deployed = json.loads(REDIRECT_FILES[1].read_text())["redirects"]
+        generic_positions = {
+            item["source"].endswith("/"): position
+            for position, item in enumerate(deployed)
+            if item["source"].startswith("/blog/:path(.+)/:slug")
+        }
+        self.assertEqual({False, True}, set(generic_positions))
+
+        for position, item in enumerate(deployed):
+            source = item["source"]
+            if not source.startswith("/blog/"):
+                continue
+            if any(marker in source for marker in (":", "(", "*")):
+                continue
+            with self.subTest(source=source):
+                self.assertLess(position, generic_positions[source.endswith("/")])
+
 
 if __name__ == "__main__":
     unittest.main()
