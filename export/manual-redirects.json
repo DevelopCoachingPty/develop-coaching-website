@@ -15,6 +15,16 @@
   "permanent": true
  },
  {
+  "source": "/scale-hub-page",
+  "destination": "/5-pillars-free-trainings/scale/",
+  "permanent": true
+ },
+ {
+  "source": "/systems-and-processes-subcategory-page",
+  "destination": "/construction-business-systems/",
+  "permanent": true
+ },
+ {
   "source": "/testimonial",
   "destination": "/client-wins/",
   "permanent": true
@@ -1661,7 +1671,7 @@
  },
  {
   "source": "/scale/systems-processes",
-  "destination": "/systems-and-processes-subcategory-page/",
+  "destination": "/construction-business-systems/",
   "permanent": true
  },
  {

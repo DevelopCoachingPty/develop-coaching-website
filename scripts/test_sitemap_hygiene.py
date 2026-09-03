@@ -12,6 +12,9 @@ WWW = ROOT / "www"
 
 REDIRECTS = {
     "/scale": "/5-pillars-free-trainings/scale/",
+    "/scale-hub-page": "/5-pillars-free-trainings/scale/",
+    "/scale/systems-processes": "/construction-business-systems/",
+    "/systems-and-processes-subcategory-page": "/construction-business-systems/",
     "/testimonial": "/client-wins/",
     "/stephen-and-salina-testimonial-2": "/stephen-and-salina-testimonial/",
 }
@@ -24,8 +27,6 @@ class SitemapHygieneTests(unittest.TestCase):
             "/5-steps-to-5-million-london-uk/",
             "/build-your-future/",
             "/podcast-transcript/podcast-2-test-trans/",
-            "/scale-hub-page/",
-            "/systems-and-processes-subcategory-page/",
         }
         sitemap_text = "\n".join(
             path.read_text() for path in WWW.glob("*sitemap.xml")
@@ -154,14 +155,14 @@ class SitemapHygieneTests(unittest.TestCase):
                 self.assertNotIn(f"https://develop-coaching.com{path}", sitemap_text)
                 self.assertNotIn(path, search_urls)
 
-    def test_scale_internal_link_uses_canonical_path(self):
-        for path in (
-            ROOT / "export/reference/systems-and-processes-subcategory-page.html",
-            WWW / "systems-and-processes-subcategory-page/index.html",
+    def test_retired_hubs_are_not_built_from_snapshots(self):
+        for slug in (
+            "scale-hub-page",
+            "systems-and-processes-subcategory-page",
         ):
-            with self.subTest(path=path):
-                html = path.read_text(errors="ignore")
-                self.assertNotRegex(html, r'href=["\']/scale/?["\']')
+            with self.subTest(slug=slug):
+                self.assertFalse((ROOT / f"export/reference/{slug}.html").exists())
+                self.assertFalse((WWW / slug / "index.html").exists())
 
     def test_test_page_filter_is_not_a_broad_prefix_match(self):
         source = (ROOT / "scripts/gen_seo_files.py").read_text()
