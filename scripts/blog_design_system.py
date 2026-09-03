@@ -757,7 +757,7 @@ def repair_schema_text(document: str) -> str:
                 return value
             for broken, fixed in ESCAPED_MARKUP:
                 value = value.replace(broken, fixed)
-            return re.sub(r"\s+", " ", TAG_RE.sub("", value)).strip()
+            return re.sub(r"\s+", " ", TAG_RE.sub(" ", value)).strip()
         if isinstance(value, list):
             return [clean(v) for v in value]
         if isinstance(value, dict):

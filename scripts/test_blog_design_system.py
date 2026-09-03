@@ -165,7 +165,8 @@ class TransformTests(unittest.TestCase):
             {"@type": "BlogPosting", "headline": "Example", "subjectOf": [
                 {"@type": "FAQPage", "mainEntity": [
                     {"@type": "Question",
-                     "name": "u003cbu003eu003cstrong class=u0022xu0022u003eA question?u003c/strongu003eu003c/bu003e"}]}]},
+                     "name": "u003cbu003eu003cstrong class=u0022xu0022u003eA question?u003c/strongu003eu003c/bu003e",
+                     "acceptedAnswer": {"@type": "Answer", "text": "Steps:u003cbru003e1. First"}}]}]},
         ]})
         document = re.sub(
             r'(class="rank-math-schema-pro">).*?(</script>)',
@@ -176,6 +177,10 @@ class TransformTests(unittest.TestCase):
             re.search(r'class="rank-math-schema-pro">(.*?)</script>', out, re.DOTALL).group(1))["@graph"]
         posting = next(n for n in graph if n["@type"] == "BlogPosting")
         self.assertEqual(posting["subjectOf"][0]["mainEntity"][0]["name"], "A question?")
+        self.assertEqual(
+            posting["subjectOf"][0]["mainEntity"][0]["acceptedAnswer"]["text"],
+            "Steps: 1. First",
+        )
 
     def test_bare_video_link_becomes_a_real_player(self):
         out = self.transform(page(broken_anchor=True))
