@@ -172,7 +172,7 @@ INTERNAL_LINK_FIXES = {
     "/scale": "/5-pillars-free-trainings/scale/",
     "/scale/business-transformation": "/5-pillars-free-trainings/scale/",
     "/scale/financial-growth": "/construction-cash-flow-management-the-blueprint-to-scaling-past-1m/",
-    "/scale/systems-processes": "/systems-and-processes-subcategory-page/",
+    "/scale/systems-processes": "/construction-business-systems/",
     "/scale/team-development": "/delegation-in-construction/",
     "/show-up-like-a-boss-in-2024": "/the-big-growth-plan/",
     "/strategic-planning-for-2024": "/5-pillars-free-trainings/plan/",
