@@ -537,11 +537,6 @@
    "permanent": true
   },
   {
-   "source": "/blog/:path(.+)/:slug([^/]+)",
-   "destination": "/:slug/",
-   "permanent": true
-  },
-  {
    "source": "/architect-advantage-thank-you",
    "destination": "/architect-advantage-thank-you.html",
    "permanent": true
@@ -2372,11 +2367,6 @@
    "permanent": true
   },
   {
-   "source": "/blog/:path(.+)/:slug([^/]+)/",
-   "destination": "/:slug/",
-   "permanent": true
-  },
-  {
    "source": "/architect-advantage-thank-you/",
    "destination": "/architect-advantage-thank-you.html",
    "permanent": true
@@ -3994,6 +3984,16 @@
   {
    "source": "/the-big/",
    "destination": "/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/:path(.+)/:slug([^/]+)",
+   "destination": "/:slug/",
+   "permanent": true
+  },
+  {
+   "source": "/blog/:path(.+)/:slug([^/]+)/",
+   "destination": "/:slug/",
    "permanent": true
   }
  ],

@@ -394,6 +394,13 @@ def main():
         if not r["source"].endswith("/") and not r["source"].endswith("*")
     ]
     redirects.extend(slashed)
+    # The dated-blog catch-all strips archive prefixes. Keep it after specific
+    # blog redirects, otherwise those legacy URLs are sent to unrelated 404s.
+    redirects.sort(
+        key=lambda redirect: redirect["source"].startswith(
+            "/blog/:path(.+)/:slug([^/]+)"
+        )
+    )
     vercel = {
         "trailingSlash": True,
         "redirects": redirects,
