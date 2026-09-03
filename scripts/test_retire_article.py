@@ -10,6 +10,9 @@ from unittest import mock
 import retire_article
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
 class RetireSourceTests(unittest.TestCase):
     def test_removes_all_existing_managed_sources(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -176,6 +179,27 @@ class RetirementOperationTests(unittest.TestCase):
                 self.assertEqual(retire_article.add_redirects("old", "/keeper/", check=False), 0)
             self.assertEqual(len(json.loads(manual.read_text(encoding="utf-8"))), 2)
             self.assertEqual(len(json.loads(vercel.read_text(encoding="utf-8"))["redirects"]), 2)
+
+
+class PublishedListingTests(unittest.TestCase):
+    def test_retired_post_cards_are_absent(self):
+        retired_post_ids = ("2494", "17557", "2165", "2213", "2372", "17558", "2323")
+        listing_pages = (
+            ROOT / "www/blog/index.html",
+            ROOT / "www/category/attract/index.html",
+            ROOT / "www/category/deliver/index.html",
+            ROOT / "www/category/plan/page/2/index.html",
+            ROOT / "www/5-pillars-free-trainings/attract/index.html",
+        )
+        for page in listing_pages:
+            html = page.read_text(encoding="utf-8")
+            for post_id in retired_post_ids:
+                with self.subTest(page=page, post_id=post_id):
+                    self.assertNotRegex(html, rf"\bpost-{post_id}\b")
+
+    def test_retired_featured_widget_is_removed_from_blog(self):
+        blog = (ROOT / "www/blog/index.html").read_text(encoding="utf-8")
+        self.assertNotIn('data-id="8389dcd"', blog)
 
 
 if __name__ == "__main__":
