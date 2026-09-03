@@ -51,6 +51,22 @@ NEWSLETTER_EMBED_RE = re.compile(
     re.S | re.I,
 )
 
+# Meta's noscript fallback is a hidden 1x1 tracking pixel, not page content.
+# Give it an explicit empty alt attribute so screen readers ignore it and
+# accessibility/SEO audits do not mistake it for an unlabelled content image.
+META_PIXEL_RE = re.compile(
+    r'(<img\b)(?=[^>]*\b(?:src|data-src|data-lazy-src)=["\']'
+    r'https://www\.facebook\.com/tr\?[^"\']*["\'])'
+    r'(?=[^>]*\bheight=["\']?1["\']?)'
+    r'(?=[^>]*\bwidth=["\']?1["\']?)'
+    r'(?![^>]*\balt\s*=)',
+    re.I,
+)
+
+
+def add_meta_pixel_empty_alt(html: str) -> str:
+    return META_PIXEL_RE.sub(r'\1 alt=""', html)
+
 
 def unblock_scripts(html: str) -> str:
     """Undo WP Meteor's script deferral so pages work without its runtime."""
@@ -246,6 +262,7 @@ def strip_legacy_discovery(html: str) -> str:
 
 def rewrite(html: str, relative_path: str = "") -> str:
     html = unblock_scripts(html)
+    html = add_meta_pixel_empty_alt(html)
     html = simplify_main_navigation(html)
     html = modernise_footer(html, relative_path)
     html = strip_dead_activecampaign(html)
