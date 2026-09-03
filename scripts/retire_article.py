@@ -10,7 +10,8 @@ times invites a missed step, so every step happens here or not at all:
   2. removed from www/post-sitemap.xml
   3. removed from www/search-index.json
   4. internal links across the site repointed at the destination
-  5. the article directory deleted
+  5. the generated article directory deleted
+  6. the managed article source files deleted
 
     python3 scripts/retire_article.py <slug> <destination-path> [--check]
 
@@ -34,6 +35,7 @@ MANUAL_REDIRECTS = ROOT / "export" / "manual-redirects.json"
 VERCEL = WWW / "vercel.json"
 SITEMAP = WWW / "post-sitemap.xml"
 SEARCH_INDEX = WWW / "search-index.json"
+BLOG_SYSTEM = ROOT / "content" / "blog-system"
 
 
 def add_redirects(slug: str, destination: str, check: bool) -> int:
@@ -71,9 +73,25 @@ def drop_from_search_index(slug: str, check: bool) -> int:
     removed = len(entries) - len(kept)
     if removed and not check:
         SEARCH_INDEX.write_text(
-            json.dumps(kept, separators=(",", ":"), ensure_ascii=False), encoding="utf-8"
+            json.dumps(kept, separators=(",", ":"), ensure_ascii=False) + "\n",
+            encoding="utf-8",
         )
     return removed
+
+
+def retire_sources(slug: str, check: bool) -> int:
+    sources = [
+        path
+        for path in (BLOG_SYSTEM / f"{slug}.json", BLOG_SYSTEM / f"{slug}.body.html")
+        if path.exists()
+    ]
+    if sources and not check:
+        subprocess.run(
+            ["git", "rm", "-q", "--", *(str(path) for path in sources)],
+            cwd=ROOT,
+            check=True,
+        )
+    return len(sources)
 
 
 def repoint_links(slug: str, destination: str, check: bool) -> int:
@@ -113,13 +131,14 @@ def main(argv: list) -> int:
     sitemap = drop_from_sitemap(slug, args.check)
     index = drop_from_search_index(slug, args.check)
     links = repoint_links(slug, destination, args.check)
+    sources = retire_sources(slug, args.check)
     if not args.check:
         subprocess.run(["git", "rm", "-r", "-q", str(WWW / slug)], cwd=ROOT, check=True)
 
     verb = "would" if args.check else ""
     print(
         f"{slug} -> {destination}: {verb} redirects {redirects}, sitemap {sitemap}, "
-        f"index {index}, links repointed {links}"
+        f"index {index}, links repointed {links}, sources {sources}"
     )
     return 0
 
