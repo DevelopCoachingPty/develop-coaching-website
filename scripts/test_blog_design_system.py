@@ -171,10 +171,26 @@ class TransformTests(unittest.TestCase):
         document = re.sub(
             r'(class="rank-math-schema-pro">).*?(</script>)',
             lambda m: m.group(1) + broken + m.group(2), page(), flags=re.DOTALL)
+        schema_tag = re.search(
+            r'<script type="application/ld\+json" class="rank-math-schema-pro">.*?</script>',
+            document,
+            re.DOTALL,
+        ).group(0)
+        schema_tag = schema_tag.replace(
+            '<script type="application/ld+json" class="rank-math-schema-pro">',
+            '<script class="rank-math-schema-pro" type="application/ld+json">',
+        )
+        document = document.replace(
+            re.search(
+                r'<script type="application/ld\+json" class="rank-math-schema-pro">.*?</script>',
+                document,
+                re.DOTALL,
+            ).group(0),
+            "",
+        ).replace('postid-1">', f'postid-1">\n{schema_tag}', 1)
         out = bds.transform(document, SPEC)
         self.assertNotIn("u003c", out)
-        graph = json.loads(
-            re.search(r'class="rank-math-schema-pro">(.*?)</script>', out, re.DOTALL).group(1))["@graph"]
+        graph = json.loads(bds.SCHEMA_RE.search(out).group(2))["@graph"]
         posting = next(n for n in graph if n["@type"] == "BlogPosting")
         self.assertEqual(posting["subjectOf"][0]["mainEntity"][0]["name"], "A question?")
         self.assertEqual(

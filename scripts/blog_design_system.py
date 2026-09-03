@@ -308,10 +308,7 @@ def update_head(document: str, spec: dict) -> str:
 
 
 def update_schema(document: str, spec: dict) -> str:
-    pattern = re.compile(
-        r'(<script type="application/ld\+json" class="rank-math-schema-pro">)(.*?)(</script>)',
-        re.DOTALL,
-    )
+    pattern = SCHEMA_RE
     match = pattern.search(document)
     if not match:
         raise ValueError("Rank Math schema block not found")
@@ -728,9 +725,12 @@ def drop_dead_images(document: str) -> str:
 # so tags arrive as the literal text u003cstrongu003e rather than <strong>.
 # Readers see the gibberish on the page, and so does a search engine.
 ESCAPED_MARKUP = (("u003c", "<"), ("u003e", ">"), ("u0022", '"'))
+ESCAPED_MARKERS = tuple(broken for broken, _ in ESCAPED_MARKUP)
 SCHEMA_RE = re.compile(
-    r'(<script type="application/ld\+json" class="rank-math-schema-pro">)(.*?)(</script>)',
-    re.DOTALL,
+    r'(<script\b(?=[^>]*\btype=["\']application/ld\+json["\'])'
+    r'(?=[^>]*\bclass=["\'][^"\']*\brank-math-schema-pro\b[^"\']*["\'])'
+    r'[^>]*>)(.*?)(</script>)',
+    re.DOTALL | re.IGNORECASE,
 )
 
 
@@ -747,13 +747,13 @@ def repair_schema_text(document: str) -> str:
     than restored.
     """
     match = SCHEMA_RE.search(document)
-    if not match or "u003c" not in match.group(2):
+    if not match or not any(marker in match.group(2) for marker in ESCAPED_MARKERS):
         return document
     schema = json.loads(match.group(2))
 
     def clean(value):
         if isinstance(value, str):
-            if "u003c" not in value and "u0022" not in value:
+            if not any(marker in value for marker in ESCAPED_MARKERS):
                 return value
             for broken, fixed in ESCAPED_MARKUP:
                 value = value.replace(broken, fixed)
@@ -904,8 +904,8 @@ def apply_text_replacements(document: str, spec: dict) -> str:
 def transform(document: str, spec: dict) -> str:
     document = mark_prose_container(document)
     document = drop_dead_images(document)
-    document = repair_escaped_markup(document)
     document = repair_schema_text(document)
+    document = repair_escaped_markup(document)
     document = repair_video_embeds(document, spec)
     document = update_head(document, spec)
     document = update_schema(document, spec)
