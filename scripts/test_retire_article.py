@@ -55,6 +55,22 @@ class RetirementOperationTests(unittest.TestCase):
                 with self.assertRaisesRegex(SystemExit, "destination is already redirected"):
                     retire_article.validate_destination_not_redirected("/keeper/")
 
+    def test_rejects_retirement_with_inbound_redirects(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manual = root / "manual.json"
+            vercel = root / "vercel.json"
+            manual.write_text(
+                json.dumps([{"source": "/legacy", "destination": "/old/"}]),
+                encoding="utf-8",
+            )
+            vercel.write_text(json.dumps({"redirects": []}), encoding="utf-8")
+            with mock.patch.object(retire_article, "ROOT", root), mock.patch.object(
+                retire_article, "MANUAL_REDIRECTS", manual
+            ), mock.patch.object(retire_article, "VERCEL", vercel):
+                with self.assertRaisesRegex(SystemExit, "existing redirects point to /old/"):
+                    retire_article.validate_no_inbound_redirects("old")
+
     def test_sitemap_removal_does_not_match_neighboring_slug(self):
         with tempfile.TemporaryDirectory() as tmp:
             sitemap = Path(tmp) / "post-sitemap.xml"
@@ -107,6 +123,44 @@ class RetirementOperationTests(unittest.TestCase):
             with mock.patch.object(retire_article, "WWW", www):
                 self.assertEqual(retire_article.repoint_links("foo", destination, check=False), 1)
             self.assertIn(destination, page.read_text(encoding="utf-8"))
+
+    def test_listing_cards_are_removed_but_contextual_links_remain(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            www = Path(tmp)
+            page = www / "archive" / "index.html"
+            page.parent.mkdir()
+            page.write_text(
+                '<style>.site-heading{color:blue}</style><h1>Keep this heading</h1>'
+                '<style>.e-loop-item-42{color:red}</style>'
+                '<div data-elementor-type="loop-item" class="e-loop-item post-42 post">'
+                '<div><a href="/old/">Old card</a></div></div>'
+                '<p><a href="/old/">Useful contextual link</a></p>',
+                encoding="utf-8",
+            )
+            with mock.patch.object(retire_article, "WWW", www):
+                self.assertEqual(retire_article.drop_listing_cards("42", check=False), 1)
+            result = page.read_text(encoding="utf-8")
+            self.assertNotIn("Old card", result)
+            self.assertNotIn("e-loop-item-42", result)
+            self.assertIn("<h1>Keep this heading</h1>", result)
+            self.assertIn(".site-heading{color:blue}", result)
+            self.assertIn("Useful contextual link", result)
+
+    def test_archive_article_card_is_removed_in_check_and_write_modes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            www = Path(tmp)
+            page = www / "archive" / "index.html"
+            page.parent.mkdir()
+            card = (
+                '<article class="elementor-post post-42 post"><div><a href="/old/">'
+                "Old card</a></div></article>"
+            )
+            page.write_text(card, encoding="utf-8")
+            with mock.patch.object(retire_article, "WWW", www):
+                self.assertEqual(retire_article.drop_listing_cards("42", check=True), 1)
+                self.assertEqual(page.read_text(encoding="utf-8"), card)
+                self.assertEqual(retire_article.drop_listing_cards("42", check=False), 1)
+            self.assertNotIn("Old card", page.read_text(encoding="utf-8"))
 
     def test_add_redirects_updates_both_sources_without_duplicates(self):
         with tempfile.TemporaryDirectory() as tmp:
