@@ -18,10 +18,17 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; dc-readiness/1.0)"}
 results = []
 
 
-def get(url, timeout=45):
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def get(url, timeout=45, follow_redirects=True):
     try:
         req = urllib.request.Request(url, headers=UA)
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        opener = (urllib.request.build_opener() if follow_redirects
+                  else urllib.request.build_opener(NoRedirect))
+        with opener.open(req, timeout=timeout) as r:
             return r.status, r.read(), dict(r.headers)
     except urllib.error.HTTPError as e:
         return e.code, b"", dict(e.headers or {})
@@ -85,7 +92,8 @@ check("contact booking widget present", "link.flow-build.com" in html_c)
 
 s, body, _ = get(f"{BASE}/")
 home = body.decode("utf-8", errors="ignore")
-check("newsletter embed present (ActiveCampaign)", "activehosted.com" in home)
+check("newsletter embed present (FlowBuild)",
+      "link.flow-build.com/widget/form/LrwamDnwkXRzgaIuSFn2" in home)
 check("GTM loader present", "GTM-T4HBRD3" in home)
 check("no legacy WP discovery tags", not re.search(
     r'type="application/rss|api\.w\.org|\+oembed"|rel="EditURI"', home))
@@ -107,7 +115,7 @@ redirect_samples = [
     ("/trades/", "/trades-pipeline-diagnostic/"),
 ]
 for src, expect in redirect_samples:
-    s, _, h = get(BASE + src)
+    s, _, h = get(BASE + src, follow_redirects=False)
     loc = h.get("location", h.get("Location", ""))
     check(f"redirect {src}", s in (301, 308) and expect in loc, f"HTTP {s} -> {loc[:60]}")
 
