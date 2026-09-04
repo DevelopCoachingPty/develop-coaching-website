@@ -29,12 +29,16 @@ The Develop Coaching team is verified Pro. No plan/capacity change is authorised
 
 Existing destinations in `export/manual-redirects.json` and `www/vercel.json`
 remain unchanged and are checked against the priority entries by tests.
+For these two slashless paths, `priority-redirects.json` is the active,
+authoritative rule. The two older files retain matching fallback rules for
+rollback and the explicitly gated legacy build; keep all three in sync.
 If a future full rebuild is explicitly authorised, preserve the priority file
 and `bulkRedirectsPath` configuration. Do not run the frozen-site rebuild here.
 
 ## Verification and release
 
-`python3 scripts/check_about_redirects.py` is an actual HTTP regression.
+`python3 scripts/check_about_redirects.py --base https://develop-coaching.com`
+is an actual HTTP regression; an explicit target is required.
 Before the fix it failed four slashless cases, while all slash cases passed.
 The new config test also failed before adding the priority configuration.
 Run the full Python suite, inspect the diff, and require an independent review.
@@ -46,3 +50,10 @@ Ahrefs reporting is separate and must await its next crawl.
 Rollback: revert only this change, restoring the old two-hop behaviour.
 Pre-change backup: `/tmp/dc-before-slashless.bundle` (origin/main).
 No runtime dashboard redirects, permissions, or site content are changed.
+
+First preview HTTP canary (2026-09-04): all four plain-path variants returned
+one 308 directly to `/about-greg-wilkes/`, which returned 200. Both slashless
+multi-parameter queries preserved `utm_source=redirect-check&note=a%20b`.
+`/podcast` still redirected to `/podcast/`; `/MY-STORY` to `/MY-STORY/`.
+Used the existing automation-test credential in memory, never printed or stored.
+The final reviewed head must have the same canary rerun before publication.

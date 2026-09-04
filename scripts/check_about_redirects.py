@@ -1,6 +1,6 @@
 """Read-only HTTP regression for the two legacy About redirects."""
 import argparse
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
@@ -14,11 +14,13 @@ def check(base):
     opener = build_opener(NoRedirect)
     failures = []
     for slug in ('my-story', 'case-study'):
-        for suffix in ('', '/', '?utm_source=redirect-check', '/?utm_source=redirect-check'):
+        for suffix in ('', '/', '?utm_source=redirect-check', '/?utm_source=redirect-check',
+                       '?utm_source=redirect-check&note=a%20b',
+                       '/?utm_source=redirect-check&note=a%20b'):
             path = '/' + slug + suffix
             expected = '/about-greg-wilkes/'
             if '?' in suffix:
-                expected += '?utm_source=redirect-check'
+                expected += '?' + suffix.split('?', 1)[1]
             try:
                 response = opener.open(Request(base + path), timeout=20)
             except HTTPError as response_error:
@@ -37,8 +39,13 @@ def check(base):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--base', default='https://develop-coaching.com')
+    parser.add_argument('--base', required=True, help='Explicit production or preview origin')
     args = parser.parse_args()
     base = args.base.rstrip('/')
     assert urlsplit(base).scheme in ('http', 'https')
-    raise SystemExit(bool(check(base)))
+    try:
+        failures = check(base)
+    except (URLError, TimeoutError) as error:
+        print('HTTP check failed:', error)
+        raise SystemExit(1)
+    raise SystemExit(bool(failures))
