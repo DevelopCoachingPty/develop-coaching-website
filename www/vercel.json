@@ -1,5 +1,6 @@
 {
  "trailingSlash": true,
+ "bulkRedirectsPath": "priority-redirects.json",
  "redirects": [
   {
    "source": "/2021-builders-trades",
