@@ -1423,7 +1423,7 @@
   },
   {
    "source": "/case-study",
-   "destination": "/about-greg-wilkes",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {
@@ -1443,7 +1443,7 @@
   },
   {
    "source": "/my-story",
-   "destination": "/about-greg-wilkes",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {
@@ -3253,7 +3253,7 @@
   },
   {
    "source": "/case-study/",
-   "destination": "/about-greg-wilkes",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {
@@ -3273,7 +3273,7 @@
   },
   {
    "source": "/my-story/",
-   "destination": "/about-greg-wilkes",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {

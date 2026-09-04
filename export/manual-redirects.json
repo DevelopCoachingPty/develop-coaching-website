@@ -1,5 +1,15 @@
 [
  {
+  "source": "/case-study/",
+  "destination": "/about-greg-wilkes/",
+  "permanent": true
+ },
+ {
+  "source": "/my-story/",
+  "destination": "/about-greg-wilkes/",
+  "permanent": true
+ },
+ {
   "source": "/2021-builders-trades",
   "destination": "/the-construction-company-marketing-strategy-to-scale-past-1m/",
   "permanent": true
@@ -981,7 +991,7 @@
  },
  {
   "source": "/case-study",
-  "destination": "/about-greg-wilkes",
+  "destination": "/about-greg-wilkes/",
   "permanent": true
  },
  {
@@ -1001,7 +1011,7 @@
  },
  {
   "source": "/my-story",
-  "destination": "/about-greg-wilkes",
+  "destination": "/about-greg-wilkes/",
   "permanent": true
  },
  {

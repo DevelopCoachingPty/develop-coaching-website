@@ -49,6 +49,13 @@ function escapeHtml(value) {
 }
 
 function cardMarkup(item) {
+  const testimonialPages = {
+    AePCs4liO0Q: '/brad-testimonial/',
+    MGAD2pxmNrc: '/stephen-and-ashley-testimonial-2/'
+  };
+  const testimonialLink = testimonialPages[item.id]
+    ? '\n              <a href="' + testimonialPages[item.id] + '">Visit ' + escapeHtml(item.name) + "'s testimonial page</a>"
+    : '';
   const watchUrl = `https://www.youtube.com/watch?v=${item.id}`;
   const thumbnail = item.thumbnailUrl || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
   return `
@@ -66,7 +73,7 @@ function cardMarkup(item) {
             <p class="cw-docket__context">${escapeHtml(item.context)}</p>
             <p class="cw-docket__summary">${escapeHtml(item.summary)}</p>
             <div class="cw-docket__source">
-              <a href="${watchUrl}" target="_blank" rel="noopener">Watch ${escapeHtml(item.name)}'s full story</a>
+              <a href="${watchUrl}" target="_blank" rel="noopener">Watch ${escapeHtml(item.name)}'s full story</a>${testimonialLink}
             </div>
           </div>
         </article>`;
