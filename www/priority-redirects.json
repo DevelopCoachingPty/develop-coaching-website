@@ -1,0 +1,16 @@
+[
+  {
+    "source": "/my-story",
+    "destination": "/about-greg-wilkes/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "/case-study",
+    "destination": "/about-greg-wilkes/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  }
+]

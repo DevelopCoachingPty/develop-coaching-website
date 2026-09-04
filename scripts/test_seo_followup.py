@@ -10,6 +10,24 @@ PODCASTS = (
 )
 
 class SeoFollowupTests(unittest.TestCase):
+    def test_slashless_redirects_precede_platform_normalisation(self):
+        config = json.loads((ROOT / 'www/vercel.json').read_text())
+        self.assertTrue(config['trailingSlash'])
+        self.assertEqual(config.get('bulkRedirectsPath'), 'priority-redirects.json')
+        rules = json.loads((ROOT / 'www' / config['bulkRedirectsPath']).read_text())
+        self.assertEqual(len(rules), 2)
+        self.assertEqual({r['source'] for r in rules}, {'/my-story', '/case-study'})
+        manual = json.loads((ROOT / 'export/manual-redirects.json').read_text())
+        for rule in rules:
+            self.assertEqual(rule['destination'], '/about-greg-wilkes/')
+            self.assertIs(rule['permanent'], True)
+            self.assertIs(rule['caseSensitive'], True)
+            self.assertIs(rule['preserveQueryParams'], True)
+            for existing in (config['redirects'], manual):
+                self.assertTrue(any(r['source'] == rule['source'] and
+                                    r['destination'] == rule['destination']
+                                    for r in existing))
+
     def test_about_redirects_skip_trailing_slash_hop(self):
         for filename in ('export/manual-redirects.json', 'www/vercel.json'):
             data = json.loads((ROOT / filename).read_text())
