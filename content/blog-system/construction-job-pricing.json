@@ -2,7 +2,7 @@
   "slug": "construction-job-pricing",
   "pillar": "Convert",
   "title": "Construction Job Pricing: Price Every Job for Real Profit",
-  "meta_description": "How to price construction jobs for profit: work out true labour costs, cover waste and overheads, and hold a healthy net margin on every quote.",
+  "meta_description": "Price construction jobs using real labour, materials, overheads and risk allowances. See a worked example showing the difference between markup and margin.",
   "h1": "Construction Job Pricing: Price Every Job for Real Profit",
   "hero_subtitle": "A step by step system for pricing jobs so the work you win actually pays.",
   "intro": {
@@ -18,13 +18,13 @@
   "briefing": {
     "eyebrow": "Job pricing site briefing",
     "title": "Build Every Price From Four Real Costs",
-    "intro": "Most builders who underprice are not bad at maths. They are pricing from a day rate instead of from what the work actually costs them. Build the number up in the same order every time and the guesswork disappears.",
+    "intro": "Build the cost from the scope, programme and resources needed. Then check the proposed price against your required margin and the risks you are accepting.",
     "panels": [
       {
         "heading": "What should a construction job price actually include?",
         "paragraphs": [
-          "Start with true labour cost, not the day rate. If you pay a carpenter £180 per day, then once you add National Insurance, pension, holidays, sick days and downtime, the real cost is closer to £220 to £240 per day.",
-          "Then materials plus at least 10 to 15% for waste, offcuts, damaged goods, supplier price rises and delivery. Then overheads, spread across the year: annual overheads divided by number of jobs. £60,000 of overhead across 30 jobs is £2,000 per job."
+          "Calculate labour using your actual employer costs and productive time. Use supplier quotes, measured quantities, delivery charges and job-specific waste allowances for materials.",
+          "Allow for site costs and an appropriate share of company overheads. Divide overheads equally only if jobs are comparable; otherwise use a consistent driver such as labour hours, job value or duration."
         ]
       },
       {
@@ -33,16 +33,16 @@
           "Do these in sequence, every quote, and your margin stops being whatever is left over."
         ],
         "steps": [
-          "True labour cost, including the on-costs and the downtime.",
-          "Materials, plus 10 to 15% for waste and delivery.",
-          "Overheads for this job: annual overheads divided by jobs per year.",
-          "Net profit on top, at 10 to 12%. Your wage is not your profit."
+          "Define the scope, exclusions and programme before estimating.",
+          "Calculate labour, materials, subcontractors and site costs, with explicit assumptions.",
+          "Allow for overheads and assessed risks without counting the same cost twice.",
+          "Set a margin target using your business plan, then calculate price from that target."
         ]
       }
     ],
     "review": {
       "label": "Check before you send",
-      "text": "If the margin lands below 5%, it is not a job, it is a liability. If the scope is vague and the client will not sign a proper contract, do not touch it."
+      "text": "A small margin leaves less room for error. Test the effect of a delay or cost increase, and agree scope, payment terms and the variation process before committing."
     },
     "cta": {
       "text": "Explore the Convert pillar resources",
@@ -52,7 +52,7 @@
   "brief_before_heading": "A Real Underbid Story: Learning the Hard Way",
   "intro_removes_heading": "Why Construction Job Pricing Is the Key to Profit",
   "intro_replaces_paragraphs": 2,
-  "date_modified": "2026-08-31T00:00:00+10:00",
+  "date_modified": "2026-09-08T00:00:00+10:00",
   "heading_rewrites": {
     "When to Say No to Low-Margin Jobs": "When should you say no to a low-margin job?"
   },
@@ -78,20 +78,8 @@
       "replace": "converting, "
     },
     {
-      "find": "raw materials—it",
-      "replace": "raw materials. It"
-    },
-    {
-      "find": "accountancy—all of these",
-      "replace": "accountancy. All of these"
-    },
-    {
       "find": "earns above that—fuel for growth",
       "replace": "earns above that. It is fuel for growth"
-    },
-    {
-      "find": "—you might be busy",
-      "replace": ". You might be busy"
     },
     {
       "find": "and—most importantly—what counts",
@@ -100,10 +88,6 @@
     {
       "find": "the client is—you",
       "replace": "the client is, you"
-    },
-    {
-      "find": "not a job—it",
-      "replace": "not a job, it"
     },
     {
       "find": "the right jobs—the ones that",
@@ -116,6 +100,57 @@
     {
       "find": "Always use written contracts",
       "replace": "Always use <a href=\"/construction-contracts/\">written contracts</a>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">Too many builders just multiply day rates by the number of days they <em>think</em> the job will take. That’s not accurate. Proper <strong>construction job pricing</strong> starts with knowing your team’s real hourly or daily cost. For example: if you pay a carpenter £180 per day, once you add National Insurance, pension, holidays, sick days, and downtime, the real cost is closer to <strong>£220–£240 per day</strong>. If you only charge for “productive hours,” you’ll always be short.</p>",
+      "replace": "<p>Start with wages, actual employer on-costs and available productive time. Divide the relevant employment cost by the hours you realistically expect to recover on jobs. Avoid treating a generic day-rate uplift as a payroll calculation.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">It’s not just the raw materials. It’s the offcuts, mistakes, damaged goods, supplier price hikes, and delivery fees. Smart <strong>construction job pricing</strong> adds at least 10–15% on top of material costs to cover waste. If you don’t, those “small” extras will eat straight into your margin.</p>",
+      "replace": "<p>Estimate materials from measured quantities and current supplier prices. Add delivery and an allowance for waste appropriate to the material and method. Keep price uncertainty and other risks explicit; a blanket waste percentage will not suit every job.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">Office rent, vans, phones, software, insurance, accountancy. All of these are part of your costs. Yet many contractors forget to include them in their quotes. A simple way to build overhead into <strong>construction job pricing</strong> is to spread it across your workload. Use this formula:<br><strong>Annual Overheads ÷ Number of Jobs = Overhead Cost Per Job.</strong><br>If your overhead is £60,000 a year and you do 30 jobs, that’s <strong>£2,000 overhead per job</strong>. Forget to add it, and you’re paying to work.</p>",
+      "replace": "<p>Office rent, vans, software, insurance and accountancy need to be funded by the work you sell. Allocate overheads consistently across realistic capacity, using job value, labour hours or duration where jobs differ substantially.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">From my own experience and what I share in <em>Building Your Future</em>, a healthy net margin for <strong>construction job pricing</strong> is <strong>10–12%</strong>. That’s what keeps your business stable, scalable, and profitable. Anything below 5% and you’re on “life support”. You might be busy, but you’re working for nothing once mistakes, delays, or slow payments kick in.</p>",
+      "replace": "<p>Choose a planned margin that covers your business requirements and the uncertainty in the work. A quoted job margin is a forecast; the company net margin also depends on all overheads, other income and expenses, and how the job is delivered. See <a href=\"https://www.business.qld.gov.au/running-business/marketing-sales/marketing/calculators/mark-up\">Business Queensland’s markup calculator and explanation</a>.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">Professional <strong>construction job pricing</strong> means separating your wage as the owner from your company’s profit margin. Pay yourself a fair wage for your role, but always add 10–12% profit on top of that when pricing jobs. That’s how you build a business that grows instead of a job that just keeps you afloat.</p>",
+      "replace": "<p>Cost the owner’s operational role appropriately and keep it separate from the return the business is expected to earn. Agree the treatment with your accountant so the same cost is not omitted or counted twice.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">When you calculate costs properly, add overheads, build in a 10–12% profit margin, and protect yourself with contracts, you’re not just winning work, you’re building a business. And when you learn to say no to low-margin jobs, you free up your time and energy for projects that actually grow your company.</p>",
+      "replace": "<p>When you calculate costs properly, allow for overheads, set a deliberate margin target and document the scope, you can assess whether a job supports the business you want to build.</p>"
+    },
+    {
+      "find": "<li>If the margin is <strong>below 5%</strong>, it’s not a job, it’s a liability.</li>",
+      "replace": "<li>If the margin cannot absorb the realistic risks you have identified, revise the price or scope before accepting the job.</li>"
+    },
+    {
+      "find": "<li><strong>Add materials plus 10–15% for waste</strong> – Protect your profit from offcuts, supplier increases, and delivery fees.</li>",
+      "replace": "<li><strong>Estimate materials and waste</strong>: use quantities, supplier prices, delivery costs and a job-specific allowance.</li>"
+    },
+    {
+      "find": "<li><strong>Spread overheads across jobs</strong> – Use the formula: Annual Overheads ÷ Jobs = Overhead per job.</li>",
+      "replace": "<li><strong>Allocate overheads consistently</strong>: choose a driver that reflects job size and duration, then reconcile to your annual budget.</li>"
+    },
+    {
+      "find": "<li><strong>Include 10–12% net profit</strong> – Anything less than 5% margin isn’t sustainable. Always separate your wage from profit.</li>",
+      "replace": "<li><strong>Set and calculate a margin target</strong>: distinguish margin on selling price from markup on cost, and test the downside.</li>"
+    }
+  ],
+  "append_sections": [
+    {
+      "heading": "Worked quote: 20% margin is not 20% markup",
+      "before_heading": "5 Steps to Mastering Construction Job Pricing",
+      "paragraphs": [
+        "Illustrative figures, excluding VAT: direct job costs are £80,000. To target a 20% gross margin, divide £80,000 by 0.80. The selling price is £100,000 and gross profit is £20,000. Company overheads still need to be paid from that gross profit.",
+        "Adding 20% markup to £80,000 gives £96,000. The £16,000 gross profit is only 16.7% of the selling price. Markup and margin are different calculations.",
+        "If direct costs rise by £5,000 and the price stays at £100,000, gross margin falls to 15%. Use a cost-to-complete review while the job is live to spot that change early. These figures illustrate the calculation and are not recommended margin targets."
+      ]
     }
   ]
 }
