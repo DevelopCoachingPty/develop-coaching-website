@@ -1,85 +1,26 @@
-const STRIPE_API = 'https://api.stripe.com/v1/checkout/sessions';
-
-function clean(value) {
-  return String(value || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 50);
-}
-
-module.exports = async function handler(request, response) {
-  if (request.method !== 'POST') {
-    response.setHeader('Allow', 'POST');
-    return response.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const secretKey = process.env.STRIPE_SECRET_KEY;
-  const publishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
-  const priceId = process.env.STRIPE_AI_BUILDERS_PRICE_ID;
-
-  if (!secretKey || !publishableKey || !priceId) {
-    return response.status(503).json({ error: 'Checkout is not configured' });
-  }
-
-  const forwardedHost = request.headers['x-forwarded-host'];
-  const host = String(forwardedHost || request.headers.host || '').toLowerCase();
-  const allowedHost = host === 'develop-coaching.com'
-    || host === 'www.develop-coaching.com'
-    || /^[a-z0-9-]+\.vercel\.app$/.test(host)
-    || /^localhost:\d+$/.test(host)
-    || /^127\.0\.0\.1:\d+$/.test(host);
-
-  if (!allowedHost) {
-    return response.status(400).json({ error: 'Invalid checkout origin' });
-  }
-
-  const protocol = request.headers['x-forwarded-proto'] || 'https';
-  const origin = `${protocol}://${host}`;
-  let body = request.body || {};
-  if (typeof body === 'string') {
-    try {
-      body = JSON.parse(body || '{}');
-    } catch (error) {
-      return response.status(400).json({ error: 'Invalid request body' });
-    }
-  }
-  const reference = [
-    `s-${clean(body.source) || 'direct'}`,
-    clean(body.campaign) ? `c-${clean(body.campaign)}` : '',
-    clean(body.content) ? `a-${clean(body.content)}` : '',
-  ].filter(Boolean).join('__').slice(0, 200);
-
-  const parameters = new URLSearchParams();
-  parameters.set('mode', 'payment');
-  parameters.set('ui_mode', 'embedded');
-  parameters.set('line_items[0][price]', priceId);
-  parameters.set('line_items[0][quantity]', '1');
-  parameters.set('return_url', `${origin}/ai-for-builders-september-2026/?checkout=complete&session_id={CHECKOUT_SESSION_ID}`);
-  parameters.set('client_reference_id', reference);
-  parameters.set('metadata[event]', 'ai-for-builders-september-2026');
-
+const EVENT = 'ai-for-builders-september-2026';
+const STRIPE = 'https://api.stripe.com/v1';
+module.exports = async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-store');
+  if (req.method !== 'POST') { res.setHeader('Allow', 'POST'); return res.status(405).json({ error: 'Method not allowed' }); }
+  const key = process.env.STRIPE_SECRET_KEY, publishableKey = process.env.STRIPE_PUBLISHABLE_KEY, priceId = process.env.STRIPE_AI_BUILDERS_PRICE_ID;
+  if (!key || !publishableKey || !priceId) return res.status(503).json({ error: 'Booking is temporarily unavailable. Please try again shortly.' });
+  const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
+  if (!/^(develop-coaching\.com|www\.develop-coaching\.com|[a-z0-9-]+\.vercel\.app|localhost:\d+|127\.0\.0\.1:\d+)$/.test(host)) return res.status(400).json({ error: 'Invalid origin' });
+  const origin = `${/^(localhost|127\.)/.test(host) ? 'http' : 'https'}://${host}`;
+  if (req.headers.origin && req.headers.origin !== origin) return res.status(403).json({ error: 'Invalid origin' });
+  let body;
+  try { body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body || {}; } catch { return res.status(400).json({ error: 'Invalid request' }); }
+  if (!/^[a-zA-Z0-9-]{16,80}$/.test(body.attemptId || '')) return res.status(400).json({ error: 'Please refresh and try again.' });
   try {
-    const stripeResponse = await fetch(STRIPE_API, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${secretKey}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: parameters,
-    });
-    const session = await stripeResponse.json();
-
-    if (!stripeResponse.ok || !session.client_secret) {
-      return response.status(502).json({ error: 'Stripe could not create the checkout session' });
-    }
-
-    response.setHeader('Cache-Control', 'no-store');
-    return response.status(200).json({
-      clientSecret: session.client_secret,
-      publishableKey,
-    });
-  } catch (error) {
-    return response.status(502).json({ error: 'Stripe is temporarily unavailable' });
-  }
-}
+    const headers = { Authorization: `Bearer ${key}` };
+    const priceResponse = await fetch(`${STRIPE}/prices/${encodeURIComponent(priceId)}`, { headers });
+    const price = await priceResponse.json();
+    if (!priceResponse.ok || !price.active || price.product !== 'prod_T9GTRdidVpjXVZ' || price.type !== 'one_time' || price.recurring || price.currency !== 'gbp' || price.unit_amount !== 4500) return res.status(503).json({ error: 'Booking is temporarily unavailable. Please contact hello@develop-coaching.com.' });
+    const params = new URLSearchParams({ mode: 'payment', ui_mode: 'embedded', 'line_items[0][price]': priceId, 'line_items[0][quantity]': '1', 'payment_method_types[0]': 'card', return_url: `${origin}/${EVENT}/?checkout=complete&session_id={CHECKOUT_SESSION_ID}`, 'metadata[event]': EVENT, 'payment_intent_data[metadata][event]': EVENT, client_reference_id: EVENT });
+    const response = await fetch(`${STRIPE}/checkout/sessions`, { method: 'POST', headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded', 'Idempotency-Key': `${EVENT}-${body.attemptId}` }, body: params });
+    const session = await response.json();
+    if (!response.ok || !session.client_secret) return res.status(502).json({ error: 'Booking is temporarily unavailable. Please try again shortly.' });
+    return res.status(200).json({ clientSecret: session.client_secret, publishableKey });
+  } catch { return res.status(502).json({ error: 'Booking is temporarily unavailable. Please try again shortly.' }); }
+};
