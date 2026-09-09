@@ -1,433 +1,51 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI for Builders | Live Online Workshop | Develop Coaching</title>
-  <link rel="canonical" href="https://develop-coaching.com/ai-for-builders-september-2026/">
-  <meta name="description" content="Live online workshop for UK building company owners turning over £1m+. Follow one project through sales, pricing, handover and office coordination using AI. £45.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://develop-coaching.com/ai-for-builders-september-2026/">
-  <meta property="og:title" content="AI for Builders: Win Bigger Jobs. Deliver Them Profitably.">
-  <meta property="og:description" content="One project. Eight practical AI demonstrations. Live online on Thursday 24 September 2026 at 9.30am UK. £45.">
-  <meta property="og:image" content="https://develop-coaching.com/ai-for-builders-september-2026/og-ai-for-builders-september-2026.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI for Builders: Win Bigger Jobs. Deliver Them Profitably.">
-  <meta name="twitter:description" content="One project. Eight practical AI demonstrations. Live online on Thursday 24 September 2026 at 9.30am UK. £45.">
-  <meta name="twitter:image" content="https://develop-coaching.com/ai-for-builders-september-2026/og-ai-for-builders-september-2026.png">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "AI for Builders",
-    "description": "A practical live online workshop for owners of UK building companies turning over £1m+. Follow one project from client meeting to pricing, handover and office coordination using AI.",
-    "startDate": "2026-09-24T09:30:00+01:00",
-    "endDate": "2026-09-24T11:00:00+01:00",
-    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "VirtualLocation",
-      "url": "https://develop-coaching.com/ai-for-builders-september-2026/"
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": "Develop Coaching",
-      "url": "https://develop-coaching.com/"
-    },
-    "performer": {
-      "@type": "Person",
-      "name": "Greg Wilkes",
-      "url": "https://develop-coaching.com/about-greg-wilkes/"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "45",
-      "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock",
-      "url": "https://develop-coaching.com/ai-for-builders-september-2026/"
-    }
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #f7f7f7;
-      --bg-2: #ececec;
-      --surface: #ffffff;
-      --ink: #1a1a1a;
-      --muted: #6a6a6c;
-      --border: #e5e5e5;
-      --gold: #face35;
-      --gold-dark: #8a6800;
-      --gold-light: #ffe88a;
-      --blue: #0069b1;
-      --green: #18794e;
-      --red: #b42318;
-      --radius: 18px;
-      --shadow: 0 18px 48px rgba(0, 0, 0, .10);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, Arial, sans-serif; line-height: 1.65; }
-    h1, h2, h3 { font-family: Archivo, Arial, sans-serif; line-height: 1.08; letter-spacing: -.025em; margin-top: 0; }
-    h1 { font-size: clamp(2.7rem, 7vw, 5.8rem); margin-bottom: 1.2rem; }
-    h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1rem; }
-    h3 { font-size: 1.28rem; margin-bottom: .6rem; }
-    p { margin: 0 0 1rem; }
-    a { color: inherit; }
-    .container { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
-    .narrow { width: min(790px, calc(100% - 48px)); margin: 0 auto; }
-    .bar { position: sticky; top: 0; z-index: 50; background: #111; color: white; padding: 10px 0; border-bottom: 1px solid rgba(250, 206, 53, .35); }
-    .bar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: .9rem; }
-    .bar strong { color: var(--gold); }
-    .countdown { font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .hero { position: relative; isolation: isolate; overflow: hidden; color: white; min-height: 88vh; display: grid; align-items: center; padding: 92px 0 76px; background: #242326; }
-    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(20, 20, 20, .96) 0%, rgba(30, 29, 31, .84) 58%, rgba(30, 29, 31, .42) 100%), url('greg-workshop-room.jpeg') center/cover; }
-    .hero::after { content: ""; position: absolute; width: 520px; height: 520px; right: -190px; top: -150px; border-radius: 50%; z-index: -1; background: rgba(250, 206, 53, .15); }
-    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .16em; font-weight: 800; font-size: .8rem; margin-bottom: 1rem; }
-    .accent { color: var(--gold); }
-    .hero-copy { max-width: 880px; }
-    .hero-sub { color: #f1f1f1; font-size: clamp(1.12rem, 2vw, 1.4rem); max-width: 760px; }
-    .date-pill { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(250, 206, 53, .45); background: rgba(255, 255, 255, .07); border-radius: 999px; padding: 10px 18px; margin: 1rem 0 1.7rem; }
-    .dot { width: 9px; height: 9px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 6px rgba(250, 206, 53, .13); }
-    .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 1.8rem; }
-    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 54px; padding: 0 25px; border-radius: 7px; background: var(--gold); color: #171717; font-weight: 800; text-decoration: none; border: 2px solid var(--gold); transition: transform .2s, box-shadow .2s; }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 7px 24px rgba(250, 206, 53, .32); }
-    .button.secondary { background: transparent; color: white; border-color: rgba(255, 255, 255, .45); }
-    .hero-note { color: #d6d6d6; font-size: .93rem; margin-top: .9rem; }
-    section { padding: 88px 0; }
-    section.alt { background: var(--bg-2); }
-    .section-lede { color: var(--muted); font-size: 1.12rem; max-width: 760px; margin-bottom: 2.2rem; }
-    .wall { font-size: clamp(1.18rem, 2vw, 1.42rem); line-height: 1.72; }
-    .wall strong { background: linear-gradient(transparent 60%, var(--gold-light) 60%); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 26px; box-shadow: 0 7px 22px rgba(0, 0, 0, .04); transition: transform .2s, box-shadow .2s; }
-    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .tag { display: inline-block; color: var(--gold-dark); font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .8rem; }
-    .card p { color: var(--muted); margin-bottom: 0; }
-    .mid-cta { text-align: center; margin-top: 42px; }
-    .mid-cta p { color: var(--muted); margin: 10px 0 0; font-size: .95rem; }
-    .journey { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; counter-reset: demo; }
-    .step { counter-increment: demo; display: grid; grid-template-columns: 48px 1fr; gap: 16px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
-    .step::before { content: counter(demo, decimal-leading-zero); width: 42px; height: 42px; display: grid; place-items: center; background: var(--gold); color: #161616; font-family: Archivo, sans-serif; font-weight: 900; border-radius: 10px; }
-    .step h3 { margin-bottom: .4rem; }
-    .step p { color: var(--muted); margin: 0; }
-    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .compare-box { background: white; border-radius: var(--radius); padding: 30px; border: 1px solid var(--border); }
-    .compare-box.yes { border-top: 4px solid var(--green); }
-    .compare-box.no { border-top: 4px solid var(--red); }
-    .compare ul { margin: 1rem 0 0; padding: 0; list-style: none; }
-    .compare li { padding: 10px 0 10px 28px; position: relative; }
-    .yes li::before { content: "✓"; color: var(--green); position: absolute; left: 0; font-weight: 900; }
-    .no li::before { content: "✕"; color: var(--red); position: absolute; left: 0; font-weight: 900; }
-    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .proof { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; border-top: 4px solid var(--gold); }
-    .stars { color: #f9a934; letter-spacing: 2px; margin-bottom: 10px; }
-    .proof blockquote { margin: 0; color: #494949; }
-    .proof cite { display: block; margin-top: 16px; font-style: normal; font-weight: 800; }
-    .why-now { background: #242326; color: white; }
-    .why-now p { color: #e3e3e3; font-size: 1.15rem; }
-    .why-now strong { color: var(--gold); }
-    .details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .detail { background: #272629; color: white; padding: 25px; border-radius: 14px; }
-    .detail span { display: block; color: var(--gold); text-transform: uppercase; font-size: .72rem; letter-spacing: .13em; font-weight: 800; margin-bottom: .45rem; }
-    .detail strong { font-size: 1.08rem; }
-    .host { text-align: center; }
-    .host p { color: var(--muted); font-size: 1.08rem; }
-    .faq details { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
-    .faq summary { font-weight: 800; cursor: pointer; }
-    .faq details p { color: var(--muted); padding-top: 12px; margin: 0; }
-    .register { text-align: center; background: linear-gradient(135deg, #0069b1, #004b7d); color: white; }
-    .register p { color: #e8f4fc; max-width: 680px; margin: 0 auto 1.5rem; }
-    .ticket-line { display: flex; justify-content: center; gap: 14px 28px; flex-wrap: wrap; margin: 18px auto 26px; font-weight: 700; }
-    footer { background: #151515; color: #cfcfcf; text-align: center; padding: 32px 20px; font-size: .9rem; }
-    footer p { margin: 0; }
-    footer a { color: var(--gold); }
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    @media (max-width: 850px) {
-      .grid, .proof-grid { grid-template-columns: 1fr 1fr; }
-      .details { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 640px) {
-      .container, .narrow { width: min(100% - 32px, 1180px); }
-      .bar-inner { display: block; text-align: center; }
-      .countdown { display: block; margin-top: 2px; }
-      .hero { min-height: auto; padding: 70px 0 62px; }
-      section { padding: 66px 0; }
-      .grid, .journey, .compare, .proof-grid, .details { grid-template-columns: 1fr; }
-      .hero-actions .button { width: 100%; }
-      .date-pill { align-items: flex-start; border-radius: 14px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
-  </style>
-
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '260128381862353');
-    fbq('track', 'PageView');
-    fbq('track', 'ViewContent', {content_name: 'AI for Builders September 2026 Workshop'});
-  </script>
-  <noscript><img alt="" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=260128381862353&amp;ev=PageView&amp;noscript=1"></noscript>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EX5H3P27NP');
-  </script>
-</head>
-<body>
-  <div class="bar">
-    <div class="container bar-inner">
-      <div><strong>AI for Builders</strong> | Thursday 24 September 2026 | 9.30am UK</div>
-      <div class="countdown" id="countdown">Live online in September</div>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="container hero-copy reveal">
-      <div class="eyebrow">Live online for owners of UK building companies turning over £1m+</div>
-      <h1>Win Bigger Jobs.<br><span class="accent">Deliver Them Profitably.</span><br>Get Your Office Under Control.</h1>
-      <p class="hero-sub">Follow one desirable building project from the first client meeting through pricing, handover and office coordination. See how practical AI can help your team win the right work, protect the margin and deliver it properly.</p>
-      <div class="date-pill"><span class="dot"></span>Thursday 24 September, 9.30am to 11.00am UK</div>
-      <p>One sample project. Eight demonstrations, each under five minutes. Ninety minutes including live Q&amp;A. £45.</p>
-      <div class="hero-actions">
-        <a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">See the workshop and book for £45</a>
-        <a class="button secondary" href="#journey">See what Greg will demonstrate</a>
-      </div>
-      <p class="hero-note">£1m+ means company turnover, not project value. This is for owners with an existing team and office support. It is not a beginners' prompt session or a promise of instant leads.</p>
-    </div>
-  </header>
-
-  <main>
-    <section class="alt">
-      <div class="container reveal">
-        <div class="eyebrow">Check this is for you</div>
-        <h2>For owners building a company, not another job for themselves.</h2>
-        <div class="compare">
-          <div class="compare-box yes">
-            <h3>This is for you if</h3>
-            <ul>
-              <li>Your UK building company turns over £1m or more.</li>
-              <li>You already have a team and office support.</li>
-              <li>You want larger, more desirable projects.</li>
-              <li>You care about professional client presentations and reliable margins.</li>
-              <li>You want the team to get answers without every question landing on you.</li>
-            </ul>
-          </div>
-          <div class="compare-box no">
-            <h3>This is not for you if</h3>
-            <ul>
-              <li>You are looking for beginner prompts or a list of model names.</li>
-              <li>You expect AI to make commercial decisions nobody checks.</li>
-              <li>You want a magic replacement for a capable team.</li>
-              <li>You only want more enquiries, regardless of project fit or margin.</li>
-              <li>You run every job alone and have no team to coordinate yet.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="narrow wall reveal">
-        <div class="eyebrow">Then what?</div>
-        <h2>A bigger job can expose every loose end in the business.</h2>
-        <p>The first client meeting sounds promising. Then what? The useful details get buried in notes and nobody turns them into a sharper proposal.</p>
-        <p>A supplier looks £3,000 cheaper. Then what? The specification, delivery and lead time have not been compared. Two subcontractor quotes look similar, but the exclusions leave you carrying different risks.</p>
-        <p>The project is won. Then what? The project manager has the headline scope but not every decision behind it. The office still needs the owner to answer the same questions again.</p>
-        <p><strong>AI is useful when it joins those pieces up.</strong> Not as another bit of software to manage. As practical help for the team you already have.</p>
-        <div class="mid-cta"><a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Book your place for £45</a></div>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container reveal">
-        <div class="eyebrow">What you leave with</div>
-        <h2>Six ways to make the next ideal project easier to win and safer to deliver.</h2>
-        <p class="section-lede">The workshop follows the work in the order your team actually handles it.</p>
-        <div class="grid">
-          <article class="card"><span class="tag">01 | Convert</span><h3>Read the room after the meeting</h3><p>Pull out what the client cares about, what worries them, who decides and which questions still need an answer.</p></article>
-          <article class="card"><span class="tag">02 | Convert</span><h3>Build a presentation around this client</h3><p>Use their priorities, your relevant project photos and the right case studies. No generic claims about quality.</p></article>
-          <article class="card"><span class="tag">03 | Plan</span><h3>Compare the real materials cost</h3><p>Check specification, quantities, delivery and lead time before a cheap headline price becomes an expensive mistake.</p></article>
-          <article class="card"><span class="tag">04 | Deliver</span><h3>Find the gaps in subcontractor quotes</h3><p>Compare each quote against the same scope, spot exclusions and prepare clarification questions for approval.</p></article>
-          <article class="card"><span class="tag">05 | Deliver</span><h3>Hand the project over properly</h3><p>Give the project manager the agreed scope, budget, outstanding decisions and a clear financial record.</p></article>
-          <article class="card"><span class="tag">06 | Scale</span><h3>Take repeatable work off your desk</h3><p>Prepare weekly client updates, record an office process and request progress from your phone without removing sensible approval checks.</p></article>
-        </div>
-        <div class="mid-cta">
-          <a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Get your workshop ticket</a>
-          <p>£45. Live online on Thursday 24 September.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="journey">
-      <div class="container reveal">
-        <div class="eyebrow">One project from start to finish</div>
-        <h2>Eight practical demonstrations. Each under five minutes.</h2>
-        <p class="section-lede">Processing waits are cut transparently. Greg will use short live interactions between the clips so you can see what is happening and where human approval still matters.</p>
-        <div class="journey">
-          <article class="step"><div><h3>Client meeting to sales insight</h3><p>Turn a meeting transcript into grounded priorities, worries, decision-makers and unanswered questions.</p></div></article>
-          <article class="step"><div><h3>Sales insight to tailored presentation</h3><p>Combine the transcript, project photos and relevant case studies, then refine the presentation around the client's priorities.</p></div></article>
-          <article class="step"><div><h3>Materials research</h3><p>Search suppliers and compare the full purchase, including suitability, quantity, delivery and lead time.</p></div></article>
-          <article class="step"><div><h3>Subcontractor quote comparison</h3><p>Compare like with like, identify exclusions and draft clarification questions for your approval.</p></div></article>
-          <article class="step"><div><h3>Project manager handover</h3><p>Turn scope, budget and open decisions into a pack the delivery team can actually use.</p></div></article>
-          <article class="step"><div><h3>Friday client update pack</h3><p>Ask by voice, gather the right project files, surface missing information and prepare the update.</p></div></article>
-          <article class="step"><div><h3>Record and reuse an office task</h3><p>Capture a repeatable process, then test it on a second sample project and check exactly what has been retained.</p></div></article>
-          <article class="step"><div><h3>Remote owner request</h3><p>Ask for a change or progress check from a phone and show the result on the office computer.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container reveal">
-        <div class="eyebrow">Builders on Greg's training</div>
-        <h2>Practical. Clear. Built for construction.</h2>
-        <p class="section-lede">Feedback from builders who have attended Develop Coaching training and events.</p>
-        <div class="proof-grid">
-          <article class="proof"><div class="stars">★★★★★</div><blockquote>“Really informative AI webinar which I got a lot out of. The content and presentation was fantastic.”</blockquote><cite>Michael Murphy</cite></article>
-          <article class="proof"><div class="stars">★★★★★</div><blockquote>“I really enjoyed the content and resources provided. The day has helped me identify areas I need to focus on. Also, the software recommendations have been excellent.”</blockquote><cite>Sean MacDonald</cite></article>
-          <article class="proof"><div class="stars">★★★★★</div><blockquote>“This course is a must do for anyone in the construction industry looking to scale a business. Everyone comes away with great knowledge to improve your business.”</blockquote><cite>Mostyn Pritchard</cite></article>
-        </div>
-        <div class="mid-cta"><a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Book your place for £45</a></div>
-      </div>
-    </section>
-
-    <section class="why-now">
-      <div class="narrow reveal">
-        <div class="eyebrow">Why this is different</div>
-        <h2>Not eight disconnected tricks.</h2>
-        <p>April showed useful tasks across different departments. This time, you will follow one fictional ideal project from the first client meeting through pricing, handover and office coordination.</p>
-        <p><strong>You see how the work connects.</strong> You also see what still needs a person to check it before anything important goes to a client, supplier or project team.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container reveal">
-        <div class="eyebrow">The workshop</div>
-        <h2>Ninety minutes. Practical from the first ten.</h2>
-        <div class="details">
-          <div class="detail"><span>Date</span><strong>Thursday 24 September 2026</strong></div>
-          <div class="detail"><span>UK time</span><strong>9.30am to 11.00am BST</strong></div>
-          <div class="detail"><span>Sydney time</span><strong>6.30pm to 8.00pm AEST</strong></div>
-          <div class="detail"><span>Format</span><strong>Live online, including 15 minutes of Q&amp;A</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt host">
-      <div class="narrow reveal">
-        <div class="eyebrow">Your host</div>
-        <h2>Greg Wilkes</h2>
-        <p>I've coached 300+ builders. I focus on the practical business moves that help building companies improve profit, build capable teams and grow without every decision running through the owner.</p>
-        <p>For AI for Builders, I'll show the tools in the context of one realistic project. I'll explain what I would trust them to do, what still needs checking and what a growing building company can put to work now.</p>
-      </div>
-    </section>
-
-    <section class="faq">
-      <div class="narrow reveal">
-        <div class="eyebrow">Questions</div>
-        <h2>What owners usually want to know.</h2>
-        <details><summary>Is £1m the minimum project size?</summary><p>No. It refers to company turnover. The workshop is designed for owners of UK building companies turning over £1m or more, with an existing team and office support.</p></details>
-        <details><summary>Is this a tour of AI tools?</summary><p>No. The point is not the model name. You will follow one project through eight connected business tasks and see the useful output at each stage.</p></details>
-        <details><summary>Will AI make decisions for my team?</summary><p>No. The demonstrations show sensible approval boundaries. AI can research, compare, organise and prepare. Your team remains responsible for commercial and delivery decisions.</p></details>
-        <details><summary>Do I need technical experience or new software?</summary><p>No technical experience is needed. You can watch and complete the workshop exercises without buying a new software subscription on the day. Greg will make it clear when a demonstration uses a paid tool or needs additional access.</p></details>
-        <details><summary>Will there be time for questions?</summary><p>Yes. The final 15 minutes are set aside for live Q&amp;A.</p></details>
-      </div>
-    </section>
-
-    <section class="register" id="register">
-      <div class="narrow reveal">
-        <div class="eyebrow">AI for Builders</div>
-        <h2>See what practical AI looks like across one building project.</h2>
-        <p>Live online for owners of UK building companies turning over £1m+.</p>
-        <div class="ticket-line">
-          <span>Thursday 24 September 2026</span>
-          <span>9.30am to 11.00am UK</span>
-          <span>£45</span>
-        </div>
-        <a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Book your place for £45</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Develop Coaching. All rights reserved.</p>
-    <p><a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a> | <a href="https://develop-coaching.com/">develop-coaching.com</a></p>
-  </footer>
-
-  <script>
-    const target = new Date('2026-09-24T08:30:00Z').getTime();
-    const countdown = document.getElementById('countdown');
-    function updateCountdown() {
-      const distance = target - Date.now();
-      if (distance <= 0) { countdown.textContent = 'The live workshop has started'; return; }
-      const days = Math.floor(distance / 86400000);
-      const hours = Math.floor((distance % 86400000) / 3600000);
-      const minutes = Math.floor((distance % 3600000) / 60000);
-      countdown.textContent = days + 'd ' + hours + 'h ' + minutes + 'm';
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 60000);
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      function clean(value, max) {
-        return (value || '').toString().toLowerCase()
-          .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, max || 50);
-      }
-      const source = clean(params.get('utm_source')) || 'direct';
-      const campaign = clean(params.get('utm_campaign'));
-      const content = clean(params.get('utm_content'));
-      const term = clean(params.get('utm_term'));
-      const parts = ['s-' + source];
-      if (campaign) parts.push('c-' + campaign);
-      if (content) parts.push('a-' + content);
-      if (term) parts.push('t-' + term);
-      const reference = parts.join('__').slice(0, 200);
-      document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(link => {
-        try {
-          const checkout = new URL(link.href);
-          checkout.searchParams.set('client_reference_id', reference);
-          link.href = checkout.toString();
-        } catch (error) {}
-      });
-    })();
-
-    document.addEventListener('click', function (event) {
-      const link = event.target.closest('a[href*="buy.stripe.com"]');
-      if (!link) return;
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {value: 45.00, currency: 'GBP', content_name: 'AI for Builders September 2026 Ticket'});
-      }
-      if (typeof gtag === 'function') {
-        gtag('event', 'event_button_click', {event_name: 'AI for Builders September 2026', ticket_value: 45.00, currency: 'GBP'});
-      }
-    });
-  </script>
-</body>
-</html>
+<!doctype html>
+<html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI for Builders | Live Online Workshop | Develop Coaching</title>
+<link rel="canonical" href="https://develop-coaching.com/ai-for-builders-september-2026/">
+<meta name="description" content="Live online workshop for UK building company owners turning over £1m+. Follow one project through sales, pricing, handover and office coordination using AI. £45.">
+<meta property="og:title" content="AI for Builders: Win Bigger Jobs. Deliver Them Profitably."><meta property="og:description" content="One project. Eight practical AI demonstrations. Thursday 24 September 2026 at 9.30am UK. £45."><meta property="og:image" content="https://develop-coaching.com/ai-for-builders-september-2026/og-ai-for-builders-september-2026.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"AI for Builders","startDate":"2026-09-24T09:30:00+01:00","endDate":"2026-09-24T11:00:00+01:00","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://develop-coaching.com/ai-for-builders-september-2026/"},"organizer":{"@type":"Organization","name":"Develop Coaching"},"performer":{"@type":"Person","name":"Greg Wilkes"},"offers":{"@type":"Offer","price":"45","priceCurrency":"GBP","url":"https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F"}}</script>
+<style>
+:root{--ink:#171717;--muted:#646468;--gold:#face35;--blue:#0069b1;--paper:#f4f3ef;--line:#deddd8;--dark:#202023;--shadow:0 20px 55px #0002}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}h1,h2,h3{font-family:Archivo,Arial,sans-serif;line-height:1.04;letter-spacing:-.03em;margin:0 0 1rem}h1{font-size:clamp(3rem,7.5vw,6.4rem)}h2{font-size:clamp(2.15rem,4.6vw,4rem)}h3{font-size:1.25rem}p{margin:0 0 1rem}a{color:inherit}.container{width:min(1180px,calc(100% - 48px));margin:auto}.narrow{width:min(800px,calc(100% - 48px));margin:auto}section{padding:90px 0}.eyebrow{color:#896700;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:900;margin-bottom:1rem}.lede{color:var(--muted);font-size:1.13rem;max-width:780px;margin-bottom:2.2rem}.dark .eyebrow,.hero .eyebrow,.checkout .eyebrow,.watch .eyebrow,.final .eyebrow{color:var(--gold)}
+.bar{position:sticky;top:0;z-index:20;background:#101010;color:#fff;border-bottom:1px solid #face3560;padding:10px 0;font-size:.9rem}.bar-inner{display:flex;justify-content:space-between;gap:20px}.bar strong{color:var(--gold)}.countdown{white-space:nowrap}.hero{position:relative;isolation:isolate;min-height:84vh;display:grid;align-items:center;color:#fff;background:#222;padding:96px 0}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0d0d0ff7 0%,#121214df 58%,#12121470),url('greg-workshop-room.jpeg') center/cover}.hero-copy{max-width:960px}.hero h1 span{color:var(--gold)}.hero-caption{font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:800}.hero-support{font-size:1.08rem;color:#ddd;max-width:760px}.date-pill{display:inline-flex;gap:10px;align-items:center;border:1px solid #face3577;background:#ffffff12;border-radius:99px;padding:10px 18px;margin-top:1rem}.dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px #face3523}
+.watch{background:#151515;color:#fff;text-align:center}.watch h2{max-width:860px;margin-left:auto;margin-right:auto}.watch .lede{color:#d1d1d1;margin-left:auto;margin-right:auto}.video-stage{display:grid;grid-template-columns:1fr minmax(280px,430px) 1fr;gap:24px;align-items:center}.video-quote{background:#fff;color:#222;border-radius:14px;padding:18px;text-align:left;box-shadow:var(--shadow);transform:rotate(-2deg)}.video-quote.right{transform:rotate(2deg)}.stars{color:#eba900;letter-spacing:2px}.video-shell{margin:auto;background:#000;border:7px solid #2d2d2d;border-radius:24px;overflow:hidden;box-shadow:0 28px 70px #0007}.video-shell video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;max-height:650px}.watch-label{color:var(--gold);font-weight:900;margin-top:12px}
+.checkout{background:linear-gradient(135deg,#0069b1,#004776);color:#fff}.checkout-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}.checkout-copy p{color:#e2f2fc;font-size:1.1rem}.ticket{background:#fff;color:#171717;border-radius:22px;padding:32px;box-shadow:var(--shadow)}.ticket-top{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:18px}.price{font:900 3.1rem/1 Archivo}.price small{display:block;font:600 .72rem Inter;color:var(--muted)}.ticket ul{list-style:none;padding:0;margin:0 0 22px}.ticket li{position:relative;padding:7px 0 7px 27px}.ticket li:before{content:"✓";position:absolute;left:0;color:#18794e;font-weight:900}.button{display:inline-flex;justify-content:center;align-items:center;min-height:56px;padding:0 26px;border-radius:8px;background:var(--gold);border:2px solid var(--gold);font-weight:900;text-decoration:none;transition:.2s}.button:hover{transform:translateY(-2px);box-shadow:0 8px 28px #face3550}.ticket .button{width:100%}.secure{text-align:center;color:var(--muted);font-size:.84rem;margin:9px 0 0}
+.fit{background:#e8e6df}.compare,.how-grid,.journey,.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.compare-box,.how-card,.review{background:#fff;border-radius:18px;padding:28px;border-top:5px solid #18794e}.compare-box.no{border-top-color:#b42318}.compare ul{list-style:none;padding:0}.compare li{position:relative;padding:8px 0 8px 27px}.compare li:before{content:"✓";position:absolute;left:0;color:#18794e;font-weight:900}.compare .no li:before{content:"✕";color:#b42318}.how-card{padding:0;border-top:0;overflow:hidden;box-shadow:0 8px 25px #0000000d}.how-image{height:235px;overflow:hidden;background:#ddd}.how-image img{width:100%;height:100%;object-fit:cover}.how-copy{padding:26px}.number{display:grid;place-items:center;width:40px;height:40px;border-radius:9px;background:var(--gold);font-family:Archivo;font-weight:900;margin-bottom:14px}.how-copy p,.step p{color:var(--muted);margin:0}.journey{gap:15px;margin-top:34px;counter-reset:item}.step{counter-increment:item;background:#eeece6;border-radius:12px;padding:20px;display:grid;grid-template-columns:42px 1fr;gap:14px}.step:before{content:counter(item,decimal-leading-zero);display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:#171717;color:var(--gold);font-weight:900}.step h3{font-size:1.1rem;margin-bottom:.4rem}
+.dark{background:#202023;color:#fff}.dark .lede{color:#d0d0d0}.testimonial-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.testimonial{position:relative;padding:0;border:0;border-radius:14px;overflow:hidden;background:#333;cursor:pointer;aspect-ratio:16/10;color:#fff;text-align:left}.testimonial img{width:100%;height:100%;object-fit:cover;display:block;opacity:.78;transition:.2s}.testimonial:hover img{opacity:.98;transform:scale(1.02)}.testimonial .name{position:absolute;left:13px;bottom:11px;font-weight:900;text-shadow:0 2px 8px #000}.play{position:absolute;inset:0;margin:auto;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#111;font-size:1.2rem;box-shadow:0 8px 24px #0005}.testimonial iframe{width:100%;height:100%;border:0}.wall-note{text-align:center;color:#bbb;margin-top:23px}.reviews{background:#fff}.review-grid{grid-template-columns:repeat(3,1fr)}.review{background:var(--paper);border-top-color:var(--gold)}.review blockquote{margin:8px 0;color:#444}.review cite{font-style:normal;font-weight:900}.proof-shots{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:18px;align-items:start}.proof-shot{margin:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px #0002}.proof-shot img{width:100%;display:block}.proof-shot figcaption{padding:13px 16px;color:var(--muted);font-size:.88rem}
+.details{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}.detail{background:#2b2a2d;border-radius:14px;padding:24px}.detail span{display:block;color:var(--gold);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.13em}.host{text-align:center}.host p{color:var(--muted);font-size:1.08rem}.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px}.faq summary{font-weight:900;cursor:pointer}.faq details p{color:var(--muted);padding-top:10px;margin:0}.final{text-align:center;background:#151515;color:#fff}.final p{color:#d1d1d1}.ticket-line{display:flex;justify-content:center;gap:14px 28px;flex-wrap:wrap;margin:18px 0 25px;font-weight:800}footer{background:#0c0c0c;color:#bbb;text-align:center;padding:28px;font-size:.88rem}footer p{margin:0}footer a{color:var(--gold)}.reveal{opacity:0;transform:translateY(16px);transition:.5s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.testimonial-wall{grid-template-columns:repeat(3,1fr)}.details{grid-template-columns:1fr 1fr}.proof-shots{grid-template-columns:1fr 1fr}.proof-shot:first-child{grid-column:1/-1}.video-stage{grid-template-columns:1fr 360px 1fr}}
+@media(max-width:700px){.container,.narrow{width:min(100% - 32px,1180px)}section{padding:66px 0}.bar-inner{display:block;text-align:center}.hero{min-height:auto;padding:72px 0 64px}.hero h1{font-size:clamp(2.7rem,14vw,4.2rem)}.video-stage,.checkout-grid,.compare,.how-grid,.journey,.review-grid,.proof-shots{grid-template-columns:1fr}.video-quote{display:none}.testimonial-wall{grid-template-columns:repeat(2,1fr)}.testimonial{aspect-ratio:1}.details{grid-template-columns:1fr}.proof-shot:first-child{grid-column:auto}.ticket{padding:24px}.date-pill{border-radius:14px;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','260128381862353');fbq('track','PageView');</script>
+</head><body>
+<div class="bar"><div class="container bar-inner"><div><strong>AI for Builders</strong> | Thursday 24 September 2026 | 9.30am UK</div><div id="countdown" class="countdown">Live online in September</div></div></div>
+<header class="hero"><div class="container hero-copy reveal"><div class="eyebrow">For UK building company owners turning over £1m+</div><h1>The Bigger The Job, <span>The More Expensive A Missed Detail Becomes.</span></h1><p class="hero-caption">Win bigger jobs. Deliver them profitably. Get your office under control.</p><p class="hero-support">Follow one desirable project from the first client meeting through pricing, handover and office coordination. See practical AI working across the whole job, with your team still in control.</p><div class="date-pill"><span class="dot"></span>Live online: Thursday 24 September, 9.30am to 11.00am UK</div></div></header>
+<main>
+<section class="watch"><div class="container reveal"><div class="eyebrow">Watch this first</div><h2>Your Team Does Not Need Another Clever Tool. It Needs Fewer Loose Ends.</h2><p class="lede">A quick AI demonstration from Greg. Then see exactly what the September workshop covers.</p><div class="video-stage"><div class="video-quote"><div class="stars">★★★★★</div><strong>“Really informative AI webinar.”</strong><p>Michael Murphy</p></div><div><div class="video-shell"><video controls playsinline preload="metadata" poster="greg-ai-preview-poster.jpg"><source src="greg-ai-preview.mp4" type="video/mp4">Your browser does not support video.</video></div><div class="watch-label">31 seconds</div></div><div class="video-quote right"><div class="stars">★★★★★</div><strong>“The software recommendations have been excellent.”</strong><p>Sean MacDonald</p></div></div></div></section>
+<section class="checkout" id="register"><div class="container checkout-grid reveal"><div class="checkout-copy"><div class="eyebrow">Your next step</div><h2>Put Your Next Ideal Project Through The System.</h2><p>Join Greg live for 90 minutes. See eight practical demonstrations across one project, complete the exercises, then ask your questions.</p><p>£1m+ refers to company turnover, not individual project size.</p></div><div class="ticket"><div class="ticket-top"><div><strong>AI for Builders</strong><br>Live online workshop</div><div class="price">£45<small>one ticket</small></div></div><ul><li>Thursday 24 September 2026</li><li>9.30am to 11.00am BST</li><li>75 minutes teaching and exercises</li><li>15 minutes live Q&amp;A</li><li>Eight short practical demonstrations</li></ul><a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Buy your ticket securely</a><p class="secure">Secure checkout provided by Stripe</p></div></div></section>
+<section class="fit"><div class="container reveal"><div class="eyebrow">Read this before you book</div><h2>For Owners Building A Company, Not Another Job For Themselves.</h2><div class="compare"><div class="compare-box"><h3>This is for you if</h3><ul><li>Your UK building company turns over £1m or more.</li><li>You already have a team and office support.</li><li>You want larger, more desirable projects.</li><li>You care about reliable margins and professional delivery.</li><li>You want fewer questions landing on your desk.</li></ul></div><div class="compare-box no"><h3>This is not for you if</h3><ul><li>You want beginner prompts or a tour of model names.</li><li>You expect AI to make unchecked commercial decisions.</li><li>You want a magic replacement for a capable team.</li><li>You only want more leads, regardless of fit or margin.</li><li>You run every job alone and have no team to coordinate.</li></ul></div></div></div></section>
+<section><div class="container reveal"><div class="eyebrow">How it works</div><h2>One Project. From Promising Enquiry To An Organised Office.</h2><p class="lede">No disconnected party tricks. You see the work in the order a growing building company actually handles it.</p><div class="how-grid">
+<article class="how-card"><div class="how-image"><img src="greg-workshop-room.jpeg" alt="Greg Wilkes teaching building company owners" loading="lazy"></div><div class="how-copy"><span class="number">1</span><h3>Win the right job</h3><p>Turn the client meeting into useful sales insight, then build a presentation around that client's priorities.</p></div></article>
+<article class="how-card"><div class="how-image"><img src="/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-4.43.59%E2%80%AFpm.jpg" alt="Develop Coaching builders and workshop sessions" loading="lazy"></div><div class="how-copy"><span class="number">2</span><h3>Price and prepare it properly</h3><p>Compare materials and subcontractor quotes, find hidden gaps and prepare questions before margin disappears.</p></div></article>
+<article class="how-card"><div class="how-image"><img src="/wp-content/uploads/2025/08/Tim-Client-Testimonial-4-Cover.jpg" alt="Develop Coaching client Tim" loading="lazy"></div><div class="how-copy"><span class="number">3</span><h3>Hand it over clearly</h3><p>Turn the agreed scope, budget and open decisions into a handover pack the project manager can use.</p></div></article>
+<article class="how-card"><div class="how-image"><img src="/wp-content/uploads/2025/06/Review-2.jpg" alt="Reviews from Develop Coaching clients" loading="lazy"></div><div class="how-copy"><span class="number">4</span><h3>Keep the office moving</h3><p>Prepare client updates, reuse office processes and check progress remotely with sensible approval boundaries.</p></div></article></div>
+<div class="journey"><article class="step"><div><h3>Client meeting to sales insight</h3><p>Priorities, worries, decision-makers and unanswered questions.</p></div></article><article class="step"><div><h3>Tailored presentation</h3><p>Their priorities, your relevant projects and useful proof.</p></div></article><article class="step"><div><h3>Materials research</h3><p>Specification, quantity, price, delivery and lead time.</p></div></article><article class="step"><div><h3>Quote comparison</h3><p>Exclusions, missing items and questions for approval.</p></div></article><article class="step"><div><h3>Project manager handover</h3><p>Scope, budget, decisions and financial record.</p></div></article><article class="step"><div><h3>Friday client update</h3><p>Useful outputs with missing-information checks.</p></div></article><article class="step"><div><h3>Record and reuse a task</h3><p>Test a repeatable process on a second project.</p></div></article><article class="step"><div><h3>Remote owner request</h3><p>Request a change from a phone and see the result.</p></div></article></div></div></section>
+<section class="dark"><div class="container reveal"><div class="eyebrow">Hear it from the builders</div><h2>Real Owners. Real Building Companies.</h2><p class="lede">Click any story to hear what changed after working with Develop Coaching.</p><div class="testimonial-wall" id="testimonial-wall">
++<button class="testimonial" data-video="PLdAg3fO9Bk" aria-label="Play Brad's story"><img src="https://i.ytimg.com/vi/PLdAg3fO9Bk/hqdefault.jpg" alt="Brad client story" loading="lazy"><span class="play">▶</span><span class="name">Brad</span></button>\n+<button class="testimonial" data-video="7iLnXeuYoMg" aria-label="Play Bradley's story"><img src="https://i.ytimg.com/vi/7iLnXeuYoMg/hqdefault.jpg" alt="Bradley client story" loading="lazy"><span class="play">▶</span><span class="name">Bradley</span></button>\n+<button class="testimonial" data-video="GSEM3O9HYvg" aria-label="Play Dale's story"><img src="https://i.ytimg.com/vi/GSEM3O9HYvg/hqdefault.jpg" alt="Dale client story" loading="lazy"><span class="play">▶</span><span class="name">Dale</span></button>\n+<button class="testimonial" data-video="zhoS5F5oYy4" aria-label="Play Dan's story"><img src="https://i.ytimg.com/vi/zhoS5F5oYy4/hqdefault.jpg" alt="Dan client story" loading="lazy"><span class="play">▶</span><span class="name">Dan</span></button>\n+<button class="testimonial" data-video="1C2yT_tP-Aw" aria-label="Play Dave's story"><img src="https://i.ytimg.com/vi/1C2yT_tP-Aw/hqdefault.jpg" alt="Dave client story" loading="lazy"><span class="play">▶</span><span class="name">Dave</span></button>\n+<button class="testimonial" data-video="oktEjmz9B6s" aria-label="Play Dominic's story"><img src="https://i.ytimg.com/vi/oktEjmz9B6s/hqdefault.jpg" alt="Dominic client story" loading="lazy"><span class="play">▶</span><span class="name">Dominic</span></button>\n+<button class="testimonial" data-video="yXqEwu6FEog" aria-label="Play Geoff's story"><img src="https://i.ytimg.com/vi/yXqEwu6FEog/hqdefault.jpg" alt="Geoff client story" loading="lazy"><span class="play">▶</span><span class="name">Geoff</span></button>\n+<button class="testimonial" data-video="gKrNClKEzVU" aria-label="Play George's story"><img src="https://i.ytimg.com/vi/gKrNClKEzVU/hqdefault.jpg" alt="George client story" loading="lazy"><span class="play">▶</span><span class="name">George</span></button>\n+<button class="testimonial" data-video="_etRh5XtGgk" aria-label="Play Greg's story"><img src="https://i.ytimg.com/vi/_etRh5XtGgk/hqdefault.jpg" alt="Greg client story" loading="lazy"><span class="play">▶</span><span class="name">Greg</span></button>\n+<button class="testimonial" data-video="D-M9a1i4PQU" aria-label="Play James Overton's story"><img src="https://i.ytimg.com/vi/D-M9a1i4PQU/hqdefault.jpg" alt="James Overton client story" loading="lazy"><span class="play">▶</span><span class="name">James Overton</span></button>\n+<button class="testimonial" data-video="NzonAtTiHlg" aria-label="Play James Wilcock's story"><img src="https://i.ytimg.com/vi/NzonAtTiHlg/hqdefault.jpg" alt="James Wilcock client story" loading="lazy"><span class="play">▶</span><span class="name">James Wilcock</span></button>\n+<button class="testimonial" data-video="r572G_WcimQ" aria-label="Play Lukas's story"><img src="https://i.ytimg.com/vi/r572G_WcimQ/hqdefault.jpg" alt="Lukas client story" loading="lazy"><span class="play">▶</span><span class="name">Lukas</span></button>\n+<button class="testimonial" data-video="snrx2DrLISg" aria-label="Play Mike and Nick's story"><img src="https://i.ytimg.com/vi/snrx2DrLISg/hqdefault.jpg" alt="Mike &amp; Nick client story" loading="lazy"><span class="play">▶</span><span class="name">Mike &amp; Nick</span></button>\n+<button class="testimonial" data-video="tZxceh60Zc8" aria-label="Play Richard Abrahams's story"><img src="https://i.ytimg.com/vi/tZxceh60Zc8/hqdefault.jpg" alt="Richard Abrahams client story" loading="lazy"><span class="play">▶</span><span class="name">Richard Abrahams</span></button>\n+<button class="testimonial" data-video="9i31Jk89THQ" aria-label="Play Richard Jenkinson's story"><img src="https://i.ytimg.com/vi/9i31Jk89THQ/hqdefault.jpg" alt="Richard Jenkinson client story" loading="lazy"><span class="play">▶</span><span class="name">Richard Jenkinson</span></button>\n+<button class="testimonial" data-video="HcS63FwTv_A" aria-label="Play Sam and Nathan's story"><img src="https://i.ytimg.com/vi/HcS63FwTv_A/hqdefault.jpg" alt="Sam &amp; Nathan client story" loading="lazy"><span class="play">▶</span><span class="name">Sam &amp; Nathan</span></button>\n+<button class="testimonial" data-video="IZYls1vXkQo" aria-label="Play Sophie and Neil's story"><img src="https://i.ytimg.com/vi/IZYls1vXkQo/hqdefault.jpg" alt="Sophie &amp; Neil client story" loading="lazy"><span class="play">▶</span><span class="name">Sophie &amp; Neil</span></button>\n+<button class="testimonial" data-video="MGAD2pxmNrc" aria-label="Play Stephen and Ashley's story"><img src="https://i.ytimg.com/vi/MGAD2pxmNrc/hqdefault.jpg" alt="Stephen &amp; Ashley client story" loading="lazy"><span class="play">▶</span><span class="name">Stephen &amp; Ashley</span></button>\n+<button class="testimonial" data-video="H1eWYQjMaFA" aria-label="Play Stephen and Salina's story"><img src="https://i.ytimg.com/vi/H1eWYQjMaFA/hqdefault.jpg" alt="Stephen &amp; Salina client story" loading="lazy"><span class="play">▶</span><span class="name">Stephen &amp; Salina</span></button>\n+<button class="testimonial" data-video="4w0XjmkgUx0" aria-label="Play Valy's story"><img src="https://i.ytimg.com/vi/4w0XjmkgUx0/hqdefault.jpg" alt="Valy client story" loading="lazy"><span class="play">▶</span><span class="name">Valy</span></button>\n+<button class="testimonial" data-video="m2XL_6DJCe8" aria-label="Play Tim's story"><img src="/wp-content/uploads/2025/08/Tim-Client-Testimonial-4-Cover.jpg" alt="Tim client story" loading="lazy"><span class="play">▶</span><span class="name">Tim</span></button>\n+ </div><p class="wall-note">21 builder stories. Videos play here without sending you to another page.</p></div></section>
+<section class="reviews"><div class="container reveal"><div class="eyebrow">Reviews</div><h2>Practical. Clear. Built For Construction.</h2><div class="review-grid"><article class="review"><div class="stars">★★★★★</div><blockquote>“Really informative AI webinar which I got a lot out of. The content and presentation was fantastic.”</blockquote><cite>Michael Murphy</cite></article><article class="review"><div class="stars">★★★★★</div><blockquote>“I really enjoyed the content and resources provided. The day has helped me identify areas I need to focus on. Also, the software recommendations have been excellent.”</blockquote><cite>Sean MacDonald</cite></article><article class="review"><div class="stars">★★★★★</div><blockquote>“This course is a must do for anyone in the construction industry looking to scale a business. Everyone comes away with great knowledge to improve your business.”</blockquote><cite>Mostyn Pritchard</cite></article></div></div></section>
+<section class="fit"><div class="container reveal"><div class="eyebrow">More proof</div><h2>Builders In The Room. Feedback In Their Own Names.</h2><p class="lede">Workshop photos and review screenshots already published by Develop Coaching.</p><div class="proof-shots"><figure class="proof-shot"><img src="/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-4.43.59%E2%80%AFpm.jpg" alt="Develop Coaching workshop photo wall" loading="lazy"><figcaption>Develop Coaching workshops and client sessions.</figcaption></figure><figure class="proof-shot"><img src="/wp-content/uploads/2025/06/Review-2.jpg" alt="Google reviews for Develop Coaching" loading="lazy"><figcaption>Named client reviews.</figcaption></figure><figure class="proof-shot"><img src="/wp-content/uploads/2025/06/Review-3.jpg" alt="More Google reviews for Develop Coaching" loading="lazy"><figcaption>More named client reviews.</figcaption></figure></div></div></section>
+<section class="dark"><div class="container reveal"><div class="eyebrow">The workshop</div><h2>Ninety Minutes. Practical From The First Ten.</h2><div class="details"><div class="detail"><span>Date</span><strong>Thursday 24 September 2026</strong></div><div class="detail"><span>UK time</span><strong>9.30am to 11.00am BST</strong></div><div class="detail"><span>Sydney time</span><strong>6.30pm to 8.00pm AEST</strong></div><div class="detail"><span>Format</span><strong>Live online, including Q&amp;A</strong></div></div></div></section>
+<section class="host"><div class="narrow reveal"><div class="eyebrow">Your host</div><h2>Greg Wilkes</h2><p>I've coached 300+ builders. I focus on practical moves that help building companies improve profit, build capable teams and grow without every decision running through the owner.</p><p>I'll show the tools in one realistic project, explain what I would trust them to do and what still needs checking.</p></div></section>
+<section class="faq fit"><div class="narrow reveal"><div class="eyebrow">Questions</div><h2>What Owners Usually Want To Know.</h2><details><summary>Is £1m the minimum project size?</summary><p>No. It refers to company turnover. This is for owners with an existing team and office support.</p></details><details><summary>Is this a tour of AI tools?</summary><p>No. You follow one project through eight connected business tasks.</p></details><details><summary>Will AI make decisions for my team?</summary><p>No. AI can research, compare, organise and prepare. Your team remains responsible for commercial and delivery decisions.</p></details><details><summary>Do I need technical experience?</summary><p>No. Greg will make it clear when a demonstration uses a paid tool or needs additional access.</p></details><details><summary>Will there be time for questions?</summary><p>Yes. The final 15 minutes are live Q&amp;A.</p></details></div></section>
+<section class="final"><div class="narrow reveal"><div class="eyebrow">AI for Builders</div><h2>Make The Next Bigger Job Easier To Win And Safer To Deliver.</h2><p>Live online for owners of UK building companies turning over £1m+.</p><div class="ticket-line"><span>Thursday 24 September 2026</span><span>9.30am UK</span><span>£45</span></div><a class="button" href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" target="_blank" rel="noopener">Buy your ticket securely</a></div></section>
+</main><footer><p>© 2026 Develop Coaching. All rights reserved.</p><p><a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a> | <a href="https://develop-coaching.com/">develop-coaching.com</a></p></footer>
+<script>
+const target=new Date('2026-09-24T08:30:00Z').getTime(),countdown=document.getElementById('countdown');function updateCountdown(){const d=target-Date.now();if(d<=0){countdown.textContent='The live workshop has started';return}countdown.textContent=Math.floor(d/86400000)+'d '+Math.floor(d%86400000/3600000)+'h '+Math.floor(d%3600000/60000)+'m'}updateCountdown();setInterval(updateCountdown,60000);
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+document.getElementById('testimonial-wall').addEventListener('click',e=>{const t=e.target.closest('[data-video]');if(!t)return;const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+t.dataset.video+'?autoplay=1&rel=0';f.title=t.getAttribute('aria-label');f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';f.allowFullscreen=true;t.replaceWith(f)});
+(function(){const p=new URLSearchParams(location.search),clean=v=>(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,50),parts=['s-'+(clean(p.get('utm_source'))||'direct')];[['utm_campaign','c-'],['utm_content','a-'],['utm_term','t-']].forEach(([k,x])=>{const v=clean(p.get(k));if(v)parts.push(x+v)});document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('client_reference_id',parts.join('__').slice(0,200));a.href=u})})();
+document.addEventListener('click',e=>{if(!e.target.closest('a[href*="buy.stripe.com"]'))return;if(typeof fbq==='function')fbq('track','InitiateCheckout',{value:45,currency:'GBP'});if(typeof gtag==='function')gtag('event','event_button_click',{ticket_value:45,currency:'GBP'})});
+</script></body></html>
