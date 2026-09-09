@@ -41,6 +41,8 @@ for root, dirs, files in os.walk(OUT):
 # Match full paths so a valid page such as /testimonial/ is never mistaken for
 # a test page by a broad prefix check.
 EXCLUDED_PATHS = {
+    "/10795-2/",
+    "/thank-you-5m-builder-gameplan/",
     "/5-steps-to-5-million-events/",
     "/5-steps-to-5-million-london-uk/",
     "/build-your-future/",

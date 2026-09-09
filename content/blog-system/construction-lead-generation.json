@@ -51,5 +51,20 @@
   },
   "brief_before_heading": "Identify and Target Your Ideal Client",
   "intro_replaces_paragraphs": 2,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-09-08T00:00:00+10:00",
+  "append_sections": [
+    {
+      "heading": "Compare qualified opportunities, not just lead count",
+      "paragraphs": [
+        "Illustrative example: one source produces 20 enquiries but only four fit your project type, area, budget and timing. Another produces 10 enquiries and six fit. The second creates more suitable opportunities, but compare acquisition cost, quotes, wins and expected margin before reallocating spend."
+      ],
+      "steps": [
+        "Record the source and first landing page for each enquiry where available.",
+        "Use the same qualification questions across referrals, architects, search and paid campaigns.",
+        "Review enquiries, qualified opportunities, quotes, wins and reasons lost each week.",
+        "Assign follow-up ownership and a next action date."
+      ],
+      "before_heading": "Leverage Technology for Lead Generation"
+    }
+  ]
 }

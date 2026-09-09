@@ -1,19 +1,19 @@
 {
   "slug": "construction-profit-margin-uk",
-  "pillar": "Scale",
+  "pillar": "Plan",
   "title": "Construction Profit Margin UK: What Good Looks Like",
   "meta_description": "What a good construction profit margin looks like in the UK, how gross, operating and net margins differ, and eight practical ways to improve yours.",
   "h1": "Construction Profit Margin UK: What Good Looks Like",
   "hero_subtitle": "A practical guide to knowing whether your margin is healthy or just survivable.",
   "intro": {
-    "answer": "Margins in UK construction have been steadily decreasing over recent years, which makes knowing your own numbers more important, not less. The three that matter are gross, operating and net, and they tell you different things.",
+    "answer": "Construction profit margin is profit divided by revenue, expressed as a percentage. Use gross margin to review direct job costs, operating margin to include overheads, and net margin to see what remains after the other expenses in your accounts.",
     "image": {
       "src": "/wp-content/uploads/2024/06/construction-profit-margin-uk.webp",
       "alt": "A construction business owner reviewing profit margins",
       "width": 1200,
       "height": 900
     },
-    "roadmap": "This guide covers what a good construction profit margin looks like in the UK, how much profit a construction company should make by sector, the difference between gross, operating and net margin, and eight ways to improve the number."
+    "roadmap": "Start with a worked example, distinguish margin from markup, then use your own project and company figures to choose the next action."
   },
   "briefing": {
     "eyebrow": "Margin site briefing",
@@ -23,43 +23,96 @@
       {
         "heading": "What is the difference between the three margins?",
         "paragraphs": [
-          "Gross profit margin tells you whether the work itself is priced correctly, once direct costs are out. Operating margin tells you whether the business around that work is efficient. Net margin tells you what is actually left.",
-          "A healthy gross margin with a poor net margin is an overhead problem, not a pricing problem. Treating it as a pricing problem is how businesses price themselves out of work they could have won."
+          "Gross profit is revenue less direct costs. Gross margin is gross profit divided by revenue. Operating profit also deducts operating overheads; net profit includes the remaining income and expenses reported in your accounts.",
+          "A fall in gross margin can reflect pricing, cost overruns or the mix of work. If gross margin holds but operating profit falls, check overheads and revenue volume before deciding what to change."
         ]
       },
       {
-        "heading": "Eight ways to improve the number",
+        "heading": "Worked example: where did the profit go?",
         "paragraphs": [
-          "Benchmarking against your sector matters here, because a good margin for specialised services is not a good margin for residential."
+          "Illustrative figures, excluding VAT: £100,000 revenue less £60,000 direct costs gives £40,000 gross profit and a 40% gross margin. Deduct £20,000 operating overheads to get £20,000 operating profit, or 20%.",
+          "If interest and tax together are an assumed £10,000, net profit is £10,000, or 10%. The tax amount is an example, not a tax calculation or recommended target."
         ],
         "steps": [
-          "Estimate projects precisely rather than optimistically.",
-          "Manage projects efficiently, because time lost is margin lost.",
-          "Integrate technology where it removes manual work.",
-          "Negotiate supplier contracts rather than accepting list terms.",
-          "Upskill the workforce so quality costs less to achieve.",
-          "Review the finances regularly, not annually.",
-          "Adopt lean construction practices.",
-          "Market strategically, so you are bidding for better projects."
+          "Compare the quoted direct cost with actual cost and remaining cost to complete.",
+          "Identify whether labour, materials, variations or programme delays explain the gap.",
+          "Assign one corrective action, an owner and a review date."
         ]
       }
     ],
     "review": {
-      "label": "Benchmark properly",
-      "text": "Compare yourself against your own sector, whether that is residential, commercial or specialised services. A number that looks weak in one is perfectly healthy in another."
+      "label": "Margin is not markup",
+      "text": "£80,000 direct cost priced at £100,000 gives 20% gross margin but 25% markup on cost. Adding 20% to cost gives a £96,000 price and only 16.7% gross margin. Overheads still come out of gross profit."
     },
     "cta": {
-      "text": "Explore the Scale pillar resources",
-      "href": "/5-pillars-free-trainings/scale/"
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
     }
   },
   "brief_before_heading": "What is a Good Construction Profit Margin UK?",
   "intro_replaces_paragraphs": 3,
-  "date_modified": "2026-08-31T00:00:00+10:00",
+  "date_modified": "2026-09-08T00:00:00+10:00",
   "text_replacements": [
     {
       "find": "core of your business—the actual construction work—is financially sound",
       "replace": "core of your business, the actual construction work, is financially sound"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">On average, a healthy profit margin for a construction business falls within the range of 10% to 15%. This benchmark acts as a guide, indicating the financial health of your company. However, it&#8217;s crucial to note that this range isn&#8217;t a one-size-fits-all. Several factors influence where your business falls within this spectrum, including the typical contractor overhead and profit uk.</p>",
+      "replace": "<p>There is no single verified UK construction margin benchmark used in this guide. Compare businesses with a similar trade, project mix and accounting basis, and check whether a quoted percentage means gross, operating or net margin.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">First things first, to get into the nitty-gritty of construction company profit margins we need to know what we should be aiming for. This figure is your compass, guiding you through the financial landscape of the construction industry. So, what&#8217;s the typical contractor markup on materials uk? Let&#8217;s break it down.</p>",
+      "replace": "<p><a href=\"https://www.business.qld.gov.au/running-business/finance/essentials/break-even-profit\">Business Queensland explains gross profit and margin</a>. Set your target from the overheads, capacity and risks of your own business. A margin percentage and a markup percentage use different denominators, so do not substitute one for the other when pricing work.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">Benchmarking against industry standards helps you gauge the effectiveness of your business strategies. However, in my opinion often industry benchmarks, such as the ones above, are too low. It is possible to achieve much more profit if you run your business in the correct way. Verne Harnish in his book Scaling Up agrees that any business reaching under 5% profit percentage are on life support.</p>",
+      "replace": "<p>Use a benchmark only when its source, date, sample and definition are clear. The sector descriptions here describe considerations, not measured industry averages.</p>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">I always encourage my coaching clients to aim for on average 30% Gross Profit and 15% Net Profit for a 1m-10m company. If you would like to know more about how I can help you to get there then see the last paragraph of this article.</p>",
+      "replace": "<p>Greg has previously described coaching aims of 30% gross profit and 15% net profit for companies turning over £1m to £10m. These are coaching ambitions, not measured industry averages or guaranteed outcomes. Agree a realistic target using your own figures.</p>"
+    },
+    {
+      "find": "<li><strong>Application:</strong>\n<ul class=\"wp-block-list\">\n<li>Example: If your total expenses (direct costs and operating expenses) sum up to £30,000, your net profit is £10,000 (£40,000 &#8211; £20,000 &#8211; £30,000).</li>",
+      "replace": "<li><strong>Application:</strong>\n<ul class=\"wp-block-list\">\n<li><strong>Example:</strong> Continuing the same illustrative figures, £20,000 operating profit less an assumed £10,000 of interest and tax gives £10,000 net profit. On £100,000 revenue, that is a 10% net margin.</li>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">In Mastermind we are aiming for 15%. I would suggest using the phrases from Verne Harnish in Scaling Up (I mention in my book too) where he says companies doing under 5% are on life support</p>",
+      "replace": ""
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">It’s important to note here that industry benchmarks are too low in my opinion &amp; it is possible to achieve much more profit if run the correct way. We don’t want to be average!</p>",
+      "replace": ""
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">I would also add we aim for on average 30% Gross Profit &amp; 15% Net Profit for a 1m-10m company.</p>",
+      "replace": ""
+    },
+    {
+      "find": "<li>Average Profit Margin: 3% to 7%</li>",
+      "replace": "<li>Check the target: compare your planned margin with the cost and risk of this specific work.</li>"
+    },
+    {
+      "find": "<li>Average Profit Margin: 8% to 10%</li>",
+      "replace": "<li>Check the target: compare your planned margin with the cost and risk of this specific work.</li>"
+    },
+    {
+      "find": "<li>Average Profit Margin: Varies (e.g., HVAC, Electrical)</li>",
+      "replace": "<li>Check the target: compare your planned margin with the cost and risk of this specific work.</li>"
+    },
+    {
+      "find": "<p class=\"wp-block-paragraph\">This is especially the case when we think about the last few years. Profit margins in construction have been steadily decreasing in the UK over the last few years, with many construction companies being affected by Brexit, the war in Ukraine and material shortages.</p>",
+      "replace": "<p>Review your own margin trend using consistent figures. Changes in labour, material costs, project mix and delivery performance can all affect the result. Start with these questions:</p>"
+    }
+  ],
+  "append_sections": [
+    {
+      "heading": "Check your numbers before choosing a target",
+      "paragraphs": [
+        "Use the same revenue and cost definitions across periods. Review the P&L alongside individual job forecasts and cash flow, because profitable work can still leave a timing gap in the bank."
+      ],
+      "before_heading": "How to Increase Construction Profit Margin UK?"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "slug": "profit-and-loss-statement-for-small-construction-company",
-  "pillar": "Scale",
+  "pillar": "Plan",
   "title": "Profit and Loss Statement for a Construction Company",
   "meta_description": "How to build and read a profit and loss statement for a small construction company: what goes in it, how to analyse it, and what it tells you to change.",
   "h1": "Profit and Loss Statement for a Construction Company",
   "hero_subtitle": "A practical guide to the one report that tells you whether the year worked.",
   "intro": {
-    "answer": "A profit and loss statement, also called an income statement, gives you a clear picture of what the business earned and what it cost to earn it. For a construction company it is the fastest way to see whether the work is priced correctly.",
+    "answer": "A construction profit and loss statement summarises revenue, costs and profit for a reporting period. Read it alongside job forecasts and cash flow: the company total alone cannot show which live project is losing margin or when customers will pay.",
     "image": {
       "src": "/wp-content/uploads/2025/04/PL.jpg",
       "alt": "A profit and loss statement for a small construction company",
@@ -18,12 +18,12 @@
   "briefing": {
     "eyebrow": "Financial reporting site briefing",
     "title": "Revenue, Costs, and What Is Left",
-    "intro": "A P&L looks intimidating until you realise it answers one question in three parts: what came in, what it cost, and what remains. Everything else on the page is detail supporting those three numbers.",
+    "intro": "Separate revenue, direct job costs and overheads, then compare the result with your plan. Revenue recognised in the accounts is not necessarily cash collected in the same month.",
     "panels": [
       {
         "heading": "What goes into a construction P&L?",
         "paragraphs": [
-          "Revenue first: money earned from completed projects, change orders and other construction activity. That is the fuel the rest of the statement runs on.",
+          "Revenue belongs to the reporting period under the accounting basis used in your accounts. Ask your accountant how work in progress, stage payments and variations are treated; do not assume revenue means only completed jobs or bank receipts.",
           "Then the costs, split between the direct costs of doing the work and the overheads of running the business. Keeping those separate is what lets you tell a pricing problem from an overhead problem."
         ]
       },
@@ -45,8 +45,8 @@
       "text": "The P&L tells you whether the year worked. It does not tell you whether you can pay people next week. That is cash flow, and it is a separate discipline."
     },
     "cta": {
-      "text": "Explore the Scale pillar resources",
-      "href": "/5-pillars-free-trainings/scale/"
+      "text": "Explore the Plan pillar resources",
+      "href": "/5-pillars-free-trainings/plan/"
     }
   },
   "heading_rewrites": {
@@ -54,11 +54,32 @@
   },
   "brief_before_heading": "What is a profit and loss statement?",
   "intro_replaces_paragraphs": 2,
-  "date_modified": "2026-08-31T00:00:00+10:00",
+  "date_modified": "2026-09-08T00:00:00+10:00",
   "text_replacements": [
     {
       "find": "utilities, and marketing—the expenses required",
       "replace": "utilities and marketing, the expenses required"
+    },
+    {
+      "find": "<p><strong>Revenue</strong>: This is the money your business earns from completed projects, change orders, and other construction activities. Think of it as the fuel that keeps your business running.</p>",
+      "replace": "<p><strong>Revenue:</strong> The revenue recognised for the reporting period using the accounting basis in your accounts. Work in progress, stage payments and variations need consistent treatment; your accountant can confirm the appropriate method.</p>"
+    }
+  ],
+  "append_sections": [
+    {
+      "heading": "A monthly owner review you can repeat",
+      "before_heading": "Analysing Your Profit and Loss Statement",
+      "paragraphs": [
+        "Illustrative month, excluding VAT: revenue £100,000, direct costs £70,000 and overheads £20,000 give gross profit of £30,000 (30%) and operating profit of £10,000 (10%), before interest and tax. These are example figures, not target margins.",
+        "If direct costs rise to £75,000 on the same revenue and overheads, operating profit falls to £5,000. Identify the jobs behind the extra £5,000 before changing prices across the business."
+      ],
+      "steps": [
+        "Reconcile the report and check consistent treatment of work in progress and variations.",
+        "Compare actual revenue, direct costs and overheads with budget and the previous period.",
+        "Match the largest variance to job-level costs and forecasts.",
+        "Review debtor collections and the cash forecast separately.",
+        "Record one action, its owner and the date you will check the result."
+      ]
     }
   ]
 }
