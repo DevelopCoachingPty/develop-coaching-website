@@ -17,8 +17,9 @@
   const sent = new Set();
   const production = /^(www\.)?develop-coaching\.com$/.test(location.hostname);
   const confirmation = location.pathname.includes('/thank-you/');
+  const legacyReturn = !confirmation && (params.has('session_id') || params.get('checkout') === 'complete');
   function flush() {
-    if (consent !== 'yes' || navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;
+    if (legacyReturn || consent !== 'yes' || navigator.globalPrivacyControl || navigator.doNotTrack === '1') return;
     write(local, 'attribution', JSON.stringify(attribution));
     if (!production) return;
     if (!loaded) {

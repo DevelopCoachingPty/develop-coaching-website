@@ -10,7 +10,7 @@ async function run(search = '', fail = false, paymentStatus = 'paid') {
   function element() { return { textContent: '', children: [], classList: { add() {}, remove() {} }, setAttribute() {}, remove() { this.removed = true; }, replaceChildren(...children) { this.children = children; }, addEventListener(name, fn) { this[name] = fn; }, scrollIntoView() {} }; }
   const nodes = Object.fromEntries(['stripe-checkout', 'checkout-status', 'stripe-fallback', 'register'].map(id => [id, element()]));
   let mounts = 0;
-  const context = { URLSearchParams, location: { search, replace: url => redirects.push(url) }, window: { dcWorkshop: { attribution: { source: 'facebook' }, checkoutReady() { ready++; } } }, crypto: { randomUUID: () => 'test-attempt-12345678' }, sessionStorage: { getItem: () => 'test-attempt-12345678', setItem() {} },
+  const context = { URLSearchParams, location: { search, replace: url => redirects.push(url) }, window: { dcWorkshop: { attribution: { source: 'facebook' }, checkoutReady() { ready++; } } }, crypto: { randomUUID: () => 'test-attempt-12345678' }, sessionStorage: { getItem: key => { assert.equal(key, 'ai-builders-attempt-v2'); return null; }, setItem(key) { assert.equal(key, 'ai-builders-attempt-v2'); } },
     document: { getElementById: id => nodes[id], createElement: tag => { const node = element(); if (tag === 'button') buttons.push(node); return node; } },
     fetch: async (url, options) => { calls.push(url); requests.push(options); return { ok: !fail, json: async () => url.includes('checkout-status') ? { status: paymentStatus } : { clientSecret: 'fixture', publishableKey: 'fixture' } }; },
     Stripe: () => ({ initEmbeddedCheckout: async () => ({ mount: () => { mounts++; } }) }) };

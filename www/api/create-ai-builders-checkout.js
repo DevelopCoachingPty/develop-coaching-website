@@ -26,7 +26,7 @@ module.exports = async function handler(req, res) {
       params.set(`metadata[utm_${field}]`, value);
       params.set(`payment_intent_data[metadata][utm_${field}]`, value);
     }
-    const response = await fetch(`${STRIPE}/checkout/sessions`, { method: 'POST', headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded', 'Idempotency-Key': `${EVENT}-${body.attemptId}` }, body: params });
+    const response = await fetch(`${STRIPE}/checkout/sessions`, { method: 'POST', headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded', 'Idempotency-Key': `${EVENT}-v2-${body.attemptId}` }, body: params });
     const session = await response.json();
     if (!response.ok || !session.client_secret) return res.status(502).json({ error: 'Booking is temporarily unavailable. Please try again shortly.' });
     return res.status(200).json({ clientSecret: session.client_secret, publishableKey });

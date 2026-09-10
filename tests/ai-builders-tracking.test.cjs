@@ -68,3 +68,10 @@ test('blocked storage does not break tracking and fails closed for purchase',()=
  const blocked={getItem:key=>key===prefix+'consent'?'yes':null,setItem(){throw Error('blocked');},removeItem(){throw Error('blocked');}};
  const result=run({local:blocked,session:blocked});result.window.dcWorkshop.verified(paid);assert.equal(result.purchases().length,0);
 });
+test('legacy returns never initialise pixels even with stored consent before redirect commits',()=>{
+ for(const search of ['?session_id=cs_live_old','?checkout=complete']) {
+  const result=run({search,local:storage({[prefix+'consent']:'yes'})});
+  result.window.dcWorkshop.checkoutReady();result.window.dcWorkshop.verified(paid);
+  assert.equal(result.calls.length,0);assert.equal(result.scripts.length,0);
+ }
+});

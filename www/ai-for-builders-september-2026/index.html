@@ -167,7 +167,7 @@ async function mountCheckout(){
  }
  const button=document.createElement('button');button.className='button';
  let attemptId;
- try{attemptId=sessionStorage.getItem('ai-builders-attempt');if(!attemptId){attemptId=crypto.randomUUID();sessionStorage.setItem('ai-builders-attempt',attemptId);}}catch{attemptId=crypto.randomUUID();}
+ try{attemptId=sessionStorage.getItem('ai-builders-attempt-v2');if(!attemptId){attemptId=crypto.randomUUID();sessionStorage.setItem('ai-builders-attempt-v2',attemptId);}}catch{attemptId=crypto.randomUUID();}
  async function loadCheckout(){
   button.disabled=true;status.textContent='Loading secure checkout…';
   try{

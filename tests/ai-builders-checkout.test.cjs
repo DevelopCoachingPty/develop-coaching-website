@@ -11,6 +11,7 @@ test('checkout contract and idempotent retries',async()=>{
  global.fetch=async(url,options)=>{calls.push({url,options});return {ok:true,json:async()=>url.includes('/prices/')?price:{client_secret:'mock_secret'}};};
  for(let i=0;i<2;i++){const res=response();await create(request,res);assert.equal(res.code,200);}
  assert.equal(calls[1].options.headers['Idempotency-Key'],calls[3].options.headers['Idempotency-Key']);
+ assert.equal(calls[1].options.headers['Idempotency-Key'], 'ai-for-builders-september-2026-v2-' + request.body.attemptId);
  const body=calls[1].options.body;assert.equal(body.get('metadata[event]'),'ai-for-builders-september-2026');assert.equal(body.get('line_items[0][quantity]'),'1');assert.equal(body.get('payment_method_types[0]'),'card');
 });
 test('reject wrong price, recurring, inactive, currency; never create session',async()=>{
