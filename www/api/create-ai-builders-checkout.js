@@ -17,8 +17,16 @@ module.exports = async function handler(req, res) {
     const priceResponse = await fetch(`${STRIPE}/prices/${encodeURIComponent(priceId)}`, { headers });
     const price = await priceResponse.json();
     if (!priceResponse.ok || !price.active || price.product !== 'prod_T9GTRdidVpjXVZ' || price.type !== 'one_time' || price.recurring || price.currency !== 'gbp' || price.unit_amount !== 4500) return res.status(503).json({ error: 'Booking is temporarily unavailable. Please contact hello@develop-coaching.com.' });
-    const params = new URLSearchParams({ mode: 'payment', ui_mode: 'embedded', 'line_items[0][price]': priceId, 'line_items[0][quantity]': '1', 'payment_method_types[0]': 'card', return_url: `${origin}/${EVENT}/?checkout=complete&session_id={CHECKOUT_SESSION_ID}`, 'metadata[event]': EVENT, 'payment_intent_data[metadata][event]': EVENT, client_reference_id: EVENT });
-    const response = await fetch(`${STRIPE}/checkout/sessions`, { method: 'POST', headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded', 'Idempotency-Key': `${EVENT}-${body.attemptId}` }, body: params });
+    const params = new URLSearchParams({ mode: 'payment', ui_mode: 'embedded', 'line_items[0][price]': priceId, 'line_items[0][quantity]': '1', 'payment_method_types[0]': 'card', return_url: `${origin}/${EVENT}/thank-you/?session_id={CHECKOUT_SESSION_ID}`, 'metadata[event]': EVENT, 'payment_intent_data[metadata][event]': EVENT, client_reference_id: EVENT });
+    // Campaign labels only: bounded allowlist, no arbitrary metadata or buyer fields.
+    const attribution = body.attribution && typeof body.attribution === 'object' ? body.attribution : {};
+    const clean = value => typeof value === 'string' && /^[a-z0-9][a-z0-9_-]{0,49}$/.test(value) ? value : '';
+    for (const field of ['source', 'medium', 'campaign', 'content', 'term']) {
+      const value = clean(attribution[field]) || (field === 'source' ? 'direct' : '');
+      params.set(`metadata[utm_${field}]`, value);
+      params.set(`payment_intent_data[metadata][utm_${field}]`, value);
+    }
+    const response = await fetch(`${STRIPE}/checkout/sessions`, { method: 'POST', headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded', 'Idempotency-Key': `${EVENT}-v2-${body.attemptId}` }, body: params });
     const session = await response.json();
     if (!response.ok || !session.client_secret) return res.status(502).json({ error: 'Booking is temporarily unavailable. Please try again shortly.' });
     return res.status(200).json({ clientSecret: session.client_secret, publishableKey });

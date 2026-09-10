@@ -87,7 +87,7 @@ section{padding:64px 0}
 @media(max-width:700px){.watch .eyebrow{font-size:1.05rem}.watch h2{font-size:1.3rem}.watch .lede{font-size:1.1rem}}
 #register{scroll-margin-top:140px}
 </style>
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','260128381862353');fbq('track','PageView');</script>
+<script src="/ai-for-builders-september-2026/tracking.js"></script>
 </head><body>
 <div class="bar"><div class="container bar-inner"><div class="bar-event"><strong>AI FOR BUILDERS</strong><span>THU 24 SEP 2026</span><span>9.30AM UK</span></div><div class="urgency"><span id="countdown" class="countdown">Live in September</span><span id="seat-copy" hidden></span><span class="seat-track" id="seat-track" aria-hidden="true" hidden><i id="seat-fill"></i></span></div></div></div>
 <header class="hero"><div class="container hero-copy reveal"><div class="eyebrow">For building company owners</div><h1>Use AI To Win Better Work, <span>Price And Prepare It Properly, And Stop Every Loose End Coming Back To You.</span></h1><p class="hero-caption">If you’ve only used AI to write emails, you’re missing the bigger opportunity. See what it could do for your building company in 90 minutes, with practical demonstrations you can relate to.</p></div></header>
@@ -162,26 +162,19 @@ async function mountCheckout(){
  mount.classList.add('is-error');
  status.setAttribute('role','status'); status.setAttribute('aria-live','polite');
  if(params.get('checkout')==='complete'||params.has('session_id')){
-  status.textContent='Checking your payment…';
-  try{
-   const response=await fetch('/api/ai-builders-checkout-status?session_id='+encodeURIComponent(params.get('session_id')||''));
-   const data=await response.json();
-   if(!response.ok)throw new Error();
-   status.textContent=data.status==='paid'?'Payment confirmed — £45 received for AI for Builders, 24 September at 9.30am UK / 6.30pm Sydney. Replay included. For your joining details, contact hello@develop-coaching.com.':'Your payment is still being confirmed. Please refresh this page shortly. Do not pay again.';
-  }catch{status.textContent='We could not confirm your payment just now. If you have paid, please do not pay again. Contact hello@develop-coaching.com for help.';}
-  document.getElementById('register').scrollIntoView();
+  location.replace('/ai-for-builders-september-2026/thank-you/?'+params.toString());
   return;
  }
  const button=document.createElement('button');button.className='button';
  let attemptId;
- try{attemptId=sessionStorage.getItem('ai-builders-attempt');if(!attemptId){attemptId=crypto.randomUUID();sessionStorage.setItem('ai-builders-attempt',attemptId);}}catch{attemptId=crypto.randomUUID();}
+ try{attemptId=sessionStorage.getItem('ai-builders-attempt-v2');if(!attemptId){attemptId=crypto.randomUUID();sessionStorage.setItem('ai-builders-attempt-v2',attemptId);}}catch{attemptId=crypto.randomUUID();}
  async function loadCheckout(){
   button.disabled=true;status.textContent='Loading secure checkout…';
   try{
-   const response=await fetch('/api/create-ai-builders-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({attemptId})});
+   const response=await fetch('/api/create-ai-builders-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({attemptId,attribution:window.dcWorkshop.attribution})});
    const data=await response.json();if(!response.ok||!data.clientSecret||!data.publishableKey)throw new Error();
    const checkout=await Stripe(data.publishableKey).initEmbeddedCheckout({clientSecret:data.clientSecret});
-   status.remove();mount.classList.remove('is-error');checkout.mount('#stripe-checkout');
+   status.remove();mount.classList.remove('is-error');checkout.mount('#stripe-checkout');window.dcWorkshop.checkoutReady();
   }catch{
    button.disabled=false;button.textContent='Try secure checkout again';
    const message=document.createElement('p');status.replaceChildren(message,button);
@@ -193,6 +186,4 @@ async function mountCheckout(){
 }mountCheckout();
 const target=new Date('2026-09-24T08:30:00Z').getTime(),countdown=document.getElementById('countdown');function updateCountdown(){const d=target-Date.now();if(d<=0){countdown.textContent='The live workshop has started';return}countdown.textContent=Math.floor(d/86400000)+'d '+Math.floor(d%86400000/3600000)+'h '+Math.floor(d%3600000/60000)+'m'}updateCountdown();setInterval(updateCountdown,60000);
 const confirmedSeatCapacity=0,confirmedSeatsRemaining=0,seatCopy=document.getElementById('seat-copy'),seatTrack=document.getElementById('seat-track'),seatFill=document.getElementById('seat-fill');if(confirmedSeatCapacity>0){seatCopy.hidden=false;seatCopy.textContent=confirmedSeatsRemaining+' of '+confirmedSeatCapacity+' places left';seatTrack.hidden=false;seatFill.style.width=Math.max(0,Math.min(100,(confirmedSeatCapacity-confirmedSeatsRemaining)/confirmedSeatCapacity*100))+'%'}
-(function(){const p=new URLSearchParams(location.search),clean=v=>(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,50),parts=['s-'+(clean(p.get('utm_source'))||'direct')];[['utm_campaign','c-'],['utm_content','a-'],['utm_term','t-']].forEach(([k,x])=>{const v=clean(p.get(k));if(v)parts.push(x+v)});document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('client_reference_id',parts.join('__').slice(0,200));a.href=u})})();
-document.addEventListener('click',e=>{if(!e.target.closest('a[href*="buy.stripe.com"]'))return;if(typeof fbq==='function')fbq('track','InitiateCheckout',{value:45,currency:'GBP'});if(typeof gtag==='function')gtag('event','event_button_click',{ticket_value:45,currency:'GBP'})});
 </script></body></html>
