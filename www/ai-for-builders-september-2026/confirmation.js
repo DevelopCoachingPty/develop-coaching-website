@@ -11,12 +11,12 @@
   const video = document.querySelector('video'); video.addEventListener('play',()=>video.parentElement.classList.add('is-playing'));video.addEventListener('ended',()=>video.parentElement.classList.remove('is-playing'));
   async function check() {
     retry.hidden = true; title.textContent = 'Checking your payment';
-    if (!reference || !/^cs_(test_|live_)[a-zA-Z0-9]+$/.test(reference)) { title.textContent='We need your booking reference';message.textContent='Open the confirmation link from your Stripe checkout. If you have already paid, do not pay again. Contact us for help.';return; }
+    if (!reference || !/^cs_(test_|live_)[a-zA-Z0-9]+$/.test(reference)) { title.textContent='Thank you';message.textContent='Your booking confirmation appears here automatically after checkout. If you’ve paid and your confirmation isn’t showing, contact us and we’ll help. You do not need to pay again.';return; }
     try {
       const response = await fetch('/api/ai-builders-checkout-status?session_id='+encodeURIComponent(reference), {cache:'no-store',signal:AbortSignal.timeout(15000)});
       const data = await response.json(); if (!response.ok) throw Error();
       if (data.status === 'paid' && data.event === 'ai-for-builders-september-2026' && data.amount === 4500 && data.currency === 'gbp' && data.transactionId === reference) {
-        title.textContent='You’re booked in.';message.textContent='Payment confirmed. We’ve received £45 for your AI for Builders ticket.';document.getElementById('confirmed-details').hidden=false;
+        title.textContent='Thank you. You’re booked in.';message.textContent='Payment confirmed. We’ve received £45 for your AI for Builders ticket.';document.getElementById('confirmed-details').hidden=false;
         window.dcWorkshop.verified(data);
       } else { title.textContent='Your payment is still being confirmed';message.textContent='Please check again shortly. Do not pay again.';retry.hidden=false; }
     } catch { title.textContent='We could not confirm your payment just now';message.textContent='If you have paid, do not pay again. Check again or contact us for help.';retry.hidden=false; }
