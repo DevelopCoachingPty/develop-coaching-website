@@ -172,11 +172,11 @@ async function mountCheckout(){
   document.getElementById('register').scrollIntoView();
   return;
  }
- const button=document.createElement('button');button.className='button';button.textContent='Buy your £45 ticket';status.replaceChildren(button);
+ const button=document.createElement('button');button.className='button';
  let attemptId;
  try{attemptId=sessionStorage.getItem('ai-builders-attempt');if(!attemptId){attemptId=crypto.randomUUID();sessionStorage.setItem('ai-builders-attempt',attemptId);}}catch{attemptId=crypto.randomUUID();}
- button.addEventListener('click',async()=>{
-  button.disabled=true;button.textContent='Loading secure checkout…';
+ async function loadCheckout(){
+  button.disabled=true;status.textContent='Loading secure checkout…';
   try{
    const response=await fetch('/api/create-ai-builders-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({attemptId})});
    const data=await response.json();if(!response.ok||!data.clientSecret||!data.publishableKey)throw new Error();
@@ -184,10 +184,12 @@ async function mountCheckout(){
    status.remove();mount.classList.remove('is-error');checkout.mount('#stripe-checkout');
   }catch{
    button.disabled=false;button.textContent='Try secure checkout again';
-   let message=status.querySelector('p');if(!message){message=document.createElement('p');status.prepend(message);}
+   const message=document.createElement('p');status.replaceChildren(message,button);
    message.textContent='Ticket booking is temporarily unavailable. Please try again shortly or email hello@develop-coaching.com.';
   }
- });
+ }
+ button.addEventListener('click',loadCheckout);
+ await loadCheckout();
 }mountCheckout();
 const target=new Date('2026-09-24T08:30:00Z').getTime(),countdown=document.getElementById('countdown');function updateCountdown(){const d=target-Date.now();if(d<=0){countdown.textContent='The live workshop has started';return}countdown.textContent=Math.floor(d/86400000)+'d '+Math.floor(d%86400000/3600000)+'h '+Math.floor(d%3600000/60000)+'m'}updateCountdown();setInterval(updateCountdown,60000);
 const confirmedSeatCapacity=0,confirmedSeatsRemaining=0,seatCopy=document.getElementById('seat-copy'),seatTrack=document.getElementById('seat-track'),seatFill=document.getElementById('seat-fill');if(confirmedSeatCapacity>0){seatCopy.hidden=false;seatCopy.textContent=confirmedSeatsRemaining+' of '+confirmedSeatCapacity+' places left';seatTrack.hidden=false;seatFill.style.width=Math.max(0,Math.min(100,(confirmedSeatCapacity-confirmedSeatsRemaining)/confirmedSeatCapacity*100))+'%'}
