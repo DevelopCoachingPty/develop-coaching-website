@@ -10,6 +10,6 @@ module.exports = async function handler(req, res) {
     const session = await response.json();
     const items = session.line_items && session.line_items.data;
     if (!response.ok || session.mode !== 'payment' || session.metadata?.event !== EVENT || session.amount_total !== 4500 || session.currency !== 'gbp' || !items || items.length !== 1 || items[0].quantity !== 1 || items[0].price?.id !== process.env.STRIPE_AI_BUILDERS_PRICE_ID) return res.status(400).json({ error: 'We could not verify this workshop payment.' });
-    return res.status(200).json({ status: session.status === 'complete' && session.payment_status === 'paid' ? 'paid' : 'pending', event: EVENT, amount: 4500, currency: 'gbp' });
+    return res.status(200).json({ status: session.status === 'complete' && session.payment_status === 'paid' ? 'paid' : 'pending', event: EVENT, amount: 4500, currency: 'gbp', transactionId: id, live: session.livemode === true, attribution: Object.fromEntries(['source', 'medium', 'campaign', 'content', 'term'].map(field => { const value = session.metadata?.['utm_' + field]; return [field, typeof value === 'string' && /^[a-z0-9][a-z0-9_-]{0,49}$/.test(value) ? value : (field === 'source' ? 'direct' : '')]; })) });
   } catch { return res.status(502).json({ error: 'Confirmation temporarily unavailable' }); }
 };
