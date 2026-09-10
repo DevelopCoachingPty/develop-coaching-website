@@ -3,7 +3,7 @@ const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'../www');
 http.createServer((req,res)=>{
  const url=new URL(req.url,'http://127.0.0.1');
- res.setHeader('Content-Security-Policy',"connect-src 'self'; script-src 'self' 'unsafe-inline'; frame-src 'none'");
+ res.setHeader('Content-Security-Policy',"connect-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://link.flow-build.com");
  if(url.pathname==='/api/create-ai-builders-checkout'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({clientSecret:'local-fixture',publishableKey:'local-fixture'}));}
  if(url.pathname==='/api/ai-builders-checkout-status'){
   const id=url.searchParams.get('session_id');res.setHeader('Content-Type','application/json');
