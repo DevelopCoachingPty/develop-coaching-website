@@ -64,6 +64,15 @@ section{padding:64px 0}
 @media(max-width:900px){.testimonial-wall{grid-template-columns:repeat(2,1fr)}.proof-shots{grid-template-columns:1fr 1fr}.proof-shot:first-child{grid-column:1/-1;grid-row:auto}.project-flow{grid-template-columns:1fr}.flow-stage:not(:last-child):after{content:"↓";right:28px;top:auto;bottom:-28px}}
 @media(max-width:700px){h1{font-size:2.25rem;line-height:1.12}h2{font-size:2rem;line-height:1.15}section{padding:48px 0}.bar-inner{display:grid;gap:8px;text-align:center}.bar-event,.urgency{justify-content:center}.bar-event strong{width:100%}.seat-track{width:88px}.hero{padding:48px 0 30px;background-attachment:scroll}.hero-caption{font-size:1.12rem}.watch{padding-top:22px;background-attachment:scroll}.watch h2{font-size:.76rem;line-height:1.6}.video-hook{font-size:1.25rem}.checkout-grid{width:min(100% - 32px,868px)}.checkout h2{font-size:1.35rem}.testimonial-wall{grid-template-columns:1fr}.testimonial{aspect-ratio:16/9}.proof-shots{grid-template-columns:1fr}.proof-shot:first-child{grid-column:auto}.ticket-top{align-items:flex-start}.price{font-size:2.5rem}}
 @media(max-width:700px){.hero h1{font-size:2.25rem;line-height:1.12}.testimonial-wall{grid-template-columns:1fr}.stripe-embed{height:1020px;border-radius:10px}.stripe-embed.is-error{height:auto;min-height:0}.stripe-embed.is-error .checkout-status{min-height:180px}}
+/* Keep the event facts compact above the card form on phones. */
+@media(max-width:700px){
+ .checkout .event-details{gap:0;margin:20px auto;background:#414042;border-radius:12px;overflow:hidden}
+ .checkout .event-detail{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:baseline;padding:10px 14px;border-radius:0}
+ .checkout .event-detail + .event-detail{border-top:1px solid #ffffff26}
+ .checkout .event-detail span{margin:0}
+ .checkout .event-detail strong{font-size:.94rem;line-height:1.4}
+ .checkout .checkout-panel{margin-top:20px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 
 /* Greg's seven preview corrections, 9 September 2026. */
