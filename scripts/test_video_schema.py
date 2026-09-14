@@ -26,6 +26,26 @@ def walk_json(value):
 
 
 class VideoSchemaTest(unittest.TestCase):
+    def test_family_friendly_values_are_boolean(self):
+        paths = [
+            ROOT / "www/win-big-clients/index.html",
+            ROOT / "export/reference/win-big-clients.html"
+        ]
+        failures = []
+        checked = 0
+        for path in paths:
+            for raw in SCRIPT_RE.findall(path.read_text(encoding="utf-8")):
+                for item in walk_json(json.loads(raw)):
+                    if "isFamilyFriendly" in item:
+                        checked += 1
+                        if type(item["isFamilyFriendly"]) is not bool:
+                            failures.append(
+                                f"{path.relative_to(ROOT)}: {item.get('@id')} "
+                                f"isFamilyFriendly must be Boolean"
+                            )
+        self.assertGreater(checked, 0, "No isFamilyFriendly properties detected")
+        self.assertEqual([], failures, "\n" + "\n".join(failures))
+
     def test_video_objects_have_google_fields(self):
         failures = []
 
