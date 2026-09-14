@@ -11,7 +11,11 @@ class BreadcrumbSchemaTest(unittest.TestCase):
     def test_breadcrumb_positions(self):
         failures = []
         count = 0
-        for path in sorted((ROOT / "www").rglob("*.html")):
+        paths = sorted((ROOT / "www").rglob("*.html")) + [
+            ROOT / "export/reference/podcast__how-4d-tech-can-improve-your-delivery.html"
+        ]
+        for path in paths:
+            page_count = 0
             for raw in SCRIPT_RE.findall(path.read_text(encoding="utf-8")):
                 for node in walk_json(json.loads(raw)):
                     types = node.get("@type", [])
@@ -19,8 +23,9 @@ class BreadcrumbSchemaTest(unittest.TestCase):
                     if "BreadcrumbList" not in types:
                         continue
                     count += 1
+                    page_count += 1
                     items = node.get("itemListElement")
-                    label = f"{path.relative_to(ROOT)} breadcrumb {count}"
+                    label = f"{path.relative_to(ROOT)} breadcrumb {page_count}"
                     if not isinstance(items, list) or not items:
                         failures.append(f"{label}: missing breadcrumb items")
                         continue
