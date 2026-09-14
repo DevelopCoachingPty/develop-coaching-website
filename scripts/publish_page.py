@@ -34,6 +34,7 @@ import os
 import re
 import sys
 import urllib.parse
+from install_booking_tracking import install as install_booking_tracking
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WWW = os.path.join(ROOT, "www")
@@ -341,7 +342,7 @@ def build_page(payload: dict) -> str:
             print("publish_page: warning, hero image slot not found", file=sys.stderr)
 
     html = replace_post_content(html, payload["body_html"])
-    return html
+    return install_booking_tracking(html)
 
 
 def update_sitemap(slug: str, date: str) -> bool:
