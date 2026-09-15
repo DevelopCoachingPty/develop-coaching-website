@@ -59,7 +59,7 @@
     },
     {
       "find": "<p class=\"wp-block-paragraph\">On average, a healthy profit margin for a construction business falls within the range of 10% to 15%. This benchmark acts as a guide, indicating the financial health of your company. However, it&#8217;s crucial to note that this range isn&#8217;t a one-size-fits-all. Several factors influence where your business falls within this spectrum, including the typical contractor overhead and profit uk.</p>",
-      "replace": "<p>There is no single verified UK construction margin benchmark used in this guide. Compare businesses with a similar trade, project mix and accounting basis, and check whether a quoted percentage means gross, operating or net margin.</p>"
+      "replace": "<p>There is no single verified UK construction margin benchmark used in this guide. Compare businesses with a similar trade, project mix and accounting basis, and check whether a quoted percentage means gross, operating or net margin. The <a href=\"https://www.ons.gov.uk/businessindustryandtrade/constructionindustry/articles/constructionstatistics/2024\">ONS construction statistics for Great Britain, 2024</a> describe output, firms and employment; those measures are not a typical builder’s net profit margin.</p>\n<p>Use the <a href=\"/construction-job-pricing/\">worked job-pricing and cost-to-complete examples</a> to connect quote assumptions to delivery. See also <a href=\"https://www.business.qld.gov.au/running-business/finance/improve-performance/profit\">Business Queensland’s profit improvement guide</a> for the relationship between pricing, costs and profit.</p>"
     },
     {
       "find": "<p class=\"wp-block-paragraph\">First things first, to get into the nitty-gritty of construction company profit margins we need to know what we should be aiming for. This figure is your compass, guiding you through the financial landscape of the construction industry. So, what&#8217;s the typical contractor markup on materials uk? Let&#8217;s break it down.</p>",
@@ -104,6 +104,22 @@
     {
       "find": "<p class=\"wp-block-paragraph\">This is especially the case when we think about the last few years. Profit margins in construction have been steadily decreasing in the UK over the last few years, with many construction companies being affected by Brexit, the war in Ukraine and material shortages.</p>",
       "replace": "<p>Review your own margin trend using consistent figures. Changes in labour, material costs, project mix and delivery performance can all affect the result. Start with these questions:</p>"
+    },
+    {
+      "find": "<li><strong>Self-Assessment:</strong>&nbsp;Evaluate where your construction business fits within the average range. If you&#8217;re below, identify areas for improvement; if you&#8217;re above, maintain and seek ways to further enhance profitability. Regularly review your cashflow position.</li>",
+      "replace": "<li><strong>Self-assessment:</strong> Compare your own results across equivalent periods first. Use an external benchmark only when its sample and accounting basis are comparable. Review cash flow separately from profit.</li>"
+    },
+    {
+      "find": "Understanding the average construction company profit margin isn&#8217;t just about numbers; it&#8217;s about positioning your business for sustainable growth.&nbsp;",
+      "replace": "Understanding your construction company’s profit margin helps you choose which costs, prices or delivery processes to review."
+    },
+    {
+      "find": "It&#8217;s your baseline, and from here, you can implement strategies tailored to your unique circumstances, like to cut unnecessary costs.&nbsp;",
+      "replace": "Use your own consistent figures as the baseline, then assess the effect of each change."
+    },
+    {
+      "find": "We don&#8217;t want to be average however, so take the industry benchmarks with higher profit goals in mind.&nbsp;",
+      "replace": "Set a target that reflects your overheads, capacity and risk, rather than adopting an industry percentage without checking its basis."
     }
   ],
   "append_sections": [
@@ -112,6 +128,39 @@
       "paragraphs": [
         "Use the same revenue and cost definitions across periods. Review the P&L alongside individual job forecasts and cash flow, because profitable work can still leave a timing gap in the bank."
       ],
+      "before_heading": "How to Increase Construction Profit Margin UK?"
+    },
+    {
+      "heading": "What is the average net profit margin for a UK builder?",
+      "paragraphs": [
+        "This guide does not include a verified representative average net profit margin for a UK builder. Published figures can cover different periods, segments and sizes, so they are not directly comparable without matching those factors.",
+        "Before using an average, check the source, year, sample size, business size and project mix. Match direct cost and owner-pay treatment, and compare gross, operating and net margin separately. A figure from a large listed contractor is not automatically a suitable target for a smaller building company."
+      ],
+      "steps": [],
+      "before_heading": "What is a Good Construction Profit Margin UK?"
+    },
+    {
+      "heading": "How do you improve construction profit margins first?",
+      "paragraphs": [
+        "Start with a diagnostic sequence rather than a single fix. First check whether quoted margin is too low. Then check whether cost overruns are eroding the margin. Then check whether overheads are too high for the work actually delivered.",
+        "Use planned versus forecast final direct costs, labour hours, procurement and rework, and approved variations to find where margin is lost. Record an owner, action and review date for each issue. Profit is not the same as bank cash."
+      ],
+      "steps": [
+        "Compare planned and forecast final direct costs job by job.",
+        "Review labour hours against quoted or planned hours.",
+        "Review procurement prices, waste and rework.",
+        "Add approved variation revenue to the contract forecast, track disputed revenue separately and include incurred or unavoidable costs.",
+        "Assign owner, action and review date, then check progress."
+      ],
+      "before_heading": "How to Increase Construction Profit Margin UK?"
+    },
+    {
+      "heading": "How should builders use revenue per employee?",
+      "paragraphs": [
+        "Divide annual revenue excluding VAT by average employee full-time equivalents (FTE) over the same period. Illustrative figures: £1,500,000 revenue divided by 10 average FTE gives £150,000 per FTE. This is not a UK benchmark.",
+        "Use a consistent definition of employees and disclose whether working owners are included. A subcontractor-heavy builder can show higher revenue per employee because subcontractor labour sits outside the employee count. Read the figure alongside subcontractor spend, gross profit and delivery performance; it does not measure profit or productivity on its own."
+      ],
+      "steps": [],
       "before_heading": "How to Increase Construction Profit Margin UK?"
     }
   ]

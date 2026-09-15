@@ -115,7 +115,7 @@
     },
     {
       "find": "<p class=\"wp-block-paragraph\">From my own experience and what I share in <em>Building Your Future</em>, a healthy net margin for <strong>construction job pricing</strong> is <strong>10–12%</strong>. That’s what keeps your business stable, scalable, and profitable. Anything below 5% and you’re on “life support”. You might be busy, but you’re working for nothing once mistakes, delays, or slow payments kick in.</p>",
-      "replace": "<p>Choose a planned margin that covers your business requirements and the uncertainty in the work. A quoted job margin is a forecast; the company net margin also depends on all overheads, other income and expenses, and how the job is delivered. See <a href=\"https://www.business.qld.gov.au/running-business/marketing-sales/marketing/calculators/mark-up\">Business Queensland’s markup calculator and explanation</a>.</p>"
+      "replace": "<p>Choose a planned margin that covers your business requirements and the uncertainty in the work. A quoted job margin is a forecast; the company net margin also depends on all overheads, other income and expenses, and how the job is delivered. See <a href=\"https://www.business.qld.gov.au/running-business/marketing-sales/marketing/calculators/mark-up\">Business Queensland’s markup calculator and explanation</a>. Compare the result with your <a href=\"/construction-profit-margin-uk/\">company gross, operating and net margins</a>.</p>"
     },
     {
       "find": "<p class=\"wp-block-paragraph\">Professional <strong>construction job pricing</strong> means separating your wage as the owner from your company’s profit margin. Pay yourself a fair wage for your role, but always add 10–12% profit on top of that when pricing jobs. That’s how you build a business that grows instead of a job that just keeps you afloat.</p>",
@@ -151,6 +151,31 @@
         "Adding 20% markup to £80,000 gives £96,000. The £16,000 gross profit is only 16.7% of the selling price. Markup and margin are different calculations.",
         "If direct costs rise by £5,000 and the price stays at £100,000, gross margin falls to 15%. Use a cost-to-complete review while the job is live to spot that change early. These figures illustrate the calculation and are not recommended margin targets."
       ]
+    },
+    {
+      "heading": "How does job costing work for builders?",
+      "paragraphs": [
+        "Start with the quote budget as your baseline scope and price. Then track the job week by week against comparable cost codes, so labour, materials, plant and subcontractor costs can be compared like for like.",
+        "Forecast final direct cost as incurred actual costs plus outstanding commitments plus the remaining uncommitted estimate. Do not count a cost twice when an order becomes an invoice. Start forecast revenue with the agreed contract value and add approved variations. Track unapproved variation revenue separately; include costs already incurred or needed to complete the work, even when recovery is disputed.",
+        "Illustrative figures, excluding VAT: £100,000 agreed revenue, £50,000 incurred direct costs, £20,000 commitments not yet incurred and £15,000 further uncommitted cost to finish. Forecast direct cost is £85,000, gross profit £15,000 and gross margin 15% before overheads. Against the original £80,000 cost estimate, that is a £5,000 overrun."
+      ],
+      "steps": [
+        "Set cost codes before work starts and use them consistently across quotes, purchase orders, timesheets and subcontractor applications.",
+        "Update actuals, commitments and remaining estimate weekly, then reconcile to avoid double counting.",
+        "Keep unapproved variation revenue separate, while retaining incurred and unavoidable costs in the forecast.",
+        "Compare forecast final direct cost with the original estimate and name the owner, action and date for any overrun."
+      ],
+      "before_heading": "5 Steps to Mastering Construction Job Pricing"
+    },
+    {
+      "heading": "How do you check overhead recovery before accepting a price?",
+      "paragraphs": [
+        "Before accepting a price, test whether the gross margin you expect can recover overheads at the turnover you can realistically deliver. Forecast annual turnover multiplied by gross margin percentage, then subtract forecast annual overheads.",
+        "Illustrative figures, excluding VAT: £1,000,000 turnover at 25% gross margin gives £250,000 gross profit. With £200,000 overheads, operating profit is £50,000 before interest and tax. These are examples, not recommended targets. This calculation assumes company overheads are excluded from direct job costs; reconcile any overhead allocation so you deduct them once only.",
+        "Review job mix, capacity and likely delays. Include the cost of the owner’s operational role consistently in your management plan. Drawings and dividends are not wages or operating expenses; agree any notional owner-pay adjustment with your accountant when comparing businesses."
+      ],
+      "steps": [],
+      "before_heading": "5 Steps to Mastering Construction Job Pricing"
     }
   ]
 }
