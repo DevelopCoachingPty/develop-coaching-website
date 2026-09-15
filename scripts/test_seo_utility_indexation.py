@@ -52,9 +52,19 @@ class Metadata(HTMLParser):
         if tag == 'meta' and attrs.get('name') == 'robots':
             self.robots.append(attrs.get('content', ''))
 
+RETIRED = ('annual-growth-calculator', 'contact-2', 'how-we-work')
+
+def redirect_rules():
+    """Every deployed and source-of-truth redirect, as (file, rule) pairs."""
+    for name in ('www/vercel.json', 'export/manual-redirects.json'):
+        loaded = json.loads((ROOT / name).read_text())
+        rules = loaded['redirects'] if isinstance(loaded, dict) else loaded
+        for rule in rules:
+            yield name, rule
+
 class UtilityIndexationTests(unittest.TestCase):
     def test_retired_pages_are_not_deployed_or_rebuilt(self):
-        for slug in ('annual-growth-calculator', 'contact-2', 'how-we-work'):
+        for slug in RETIRED:
             with self.subTest(slug=slug):
                 self.assertFalse((ROOT / 'www' / slug / 'index.html').exists())
                 self.assertFalse((ROOT / 'export/reference' / (slug + '.html')).exists())
@@ -62,6 +72,13 @@ class UtilityIndexationTests(unittest.TestCase):
                                  [r['u'] for r in json.loads((ROOT / 'www/search-index.json').read_text())])
                 for sitemap in (ROOT / 'www').glob('*sitemap.xml'):
                     self.assertNotIn('https://develop-coaching.com/' + slug + '/', sitemap.read_text())
+
+    def test_no_redirect_sends_visitors_to_a_retired_page(self):
+        for name, rule in redirect_rules():
+            destination = rule.get('destination', '').split('?')[0].strip('/')
+            if destination in RETIRED:
+                self.fail(name + ': ' + rule.get('source', '') + ' redirects to retired /'
+                          + destination + '/, which 404s')
 
     def test_utilities_remain_available_but_noindex(self):
         for path in UTILITIES:
