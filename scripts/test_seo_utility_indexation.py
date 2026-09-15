@@ -7,6 +7,19 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 UTILITIES = (
+    '/contact-2/',
+    '/annual-growth-calculator/',
+    '/how-we-work/',
+    '/5-profit-leaks-bonus/',
+
+    '/the-build-and-scale-summit-2025/',
+    '/build-your-future-event-page/',
+    '/5-steps-to-5-million-2/',
+    '/5-steps-to-5-million-in-2024-vip/',
+    '/upgradelondonvip/',
+    '/the-perfect-project/',
+    '/the-5m-builder-game-plan-workshop/',
+
     '/valy-testimonial/',
     '/mike-and-nick-testimonial/',
     '/dan-testimonial/',
