@@ -4086,6 +4086,16 @@
    "source": "/blog/:path(.+)/:slug([^/]+)/",
    "destination": "/:slug/",
    "permanent": true
+  },
+  {
+   "source": "/blog_2",
+   "destination": "/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/blog_2/",
+   "destination": "/blog/",
+   "permanent": true
   }
  ],
  "rewrites": [

@@ -26,6 +26,7 @@ TYPES = ["posts", "pages", "podcast", "podcast-transcript", "courses", "webinars
 
 # Deliberately noindex pages and redirect-only aliases stay out of site search.
 EXCLUDED_PATHS = {
+    "/blog_2/",
     "/contact-2/",
     "/annual-growth-calculator/",
     "/how-we-work/",
