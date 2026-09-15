@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Tender | Develop Coaching Members Event</title>
+<meta name="description" content="Beyond the Tender. A Develop Coaching members-only live event at The Lensbury, Teddington on Friday 6 November 2026.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f7f7;
+    --bg-2: #ececec;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #414042;
+    --muted: #6a6a6c;
+    --border: #dedede;
+    --gold: #face35;
+    --gold-dark: #705800;
+    --gold-light: #ffe88a;
+    --blue: #0069b0;
+    --success: #2f6f3e;
+    --error: #9a2d2d;
+    --radius: 18px;
+    --shadow: 0 18px 50px rgba(26, 26, 26, .1);
+    --shadow-sm: 0 8px 24px rgba(26, 26, 26, .07);
+    --dark: linear-gradient(135deg, #181818 0%, #323033 100%);
+    --accent: linear-gradient(135deg, #face35 0%, #f9a934 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: Archivo, sans-serif; line-height: 1.06; letter-spacing: -.025em; }
+  h1 { font-size: clamp(3.1rem, 8vw, 7.4rem); }
+  h2 { font-size: clamp(2rem, 4vw, 3.6rem); }
+  h3 { font-size: 1.35rem; }
+  p + p { margin-top: 1rem; }
+  a { color: inherit; }
+  .container { max-width: 1180px; padding: 0 24px; margin: 0 auto; }
+  .narrow { max-width: 790px; margin: 0 auto; }
+  section { padding: 96px 0; }
+  section.alt { background: var(--bg-2); }
+  .eyebrow { color: var(--gold-dark); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .2em; margin-bottom: 16px; }
+  .eyebrow::before { content: "◆"; color: var(--gold); margin-right: 10px; }
+  .section-head { max-width: 760px; margin-bottom: 48px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-head p { color: var(--muted); font-size: 1.08rem; margin-top: 18px; }
+
+  .members-bar { position: sticky; top: 0; z-index: 20; background: #111; color: #fff; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .members-bar .inner { min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .members-bar .members-only { color: var(--gold); display: flex; align-items: center; gap: 9px; }
+  .members-bar .members-only::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 rgba(250,206,53,.65); animation: pulse 2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(250,206,53,0); } 100% { box-shadow: 0 0 0 0 rgba(250,206,53,0); } }
+
+  .hero { min-height: calc(100vh - 48px); color: #fff; display: flex; align-items: center; position: relative; overflow: hidden; background: var(--dark); }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 78% 22%, rgba(250,206,53,.3), transparent 31%), linear-gradient(115deg, transparent 51%, rgba(255,255,255,.035) 51% 52%, transparent 52%); }
+  .hero::after { content: "BT"; position: absolute; right: -2vw; bottom: -9vw; font: 900 clamp(15rem, 36vw, 34rem)/.72 Archivo, sans-serif; color: transparent; -webkit-text-stroke: 1px rgba(250,206,53,.16); pointer-events: none; }
+  .hero .container { width: 100%; position: relative; z-index: 1; padding-top: 78px; padding-bottom: 78px; }
+  .hero .eyebrow { color: var(--gold-light); }
+  .hero h1 { max-width: 920px; color: #fff; }
+  .hero h1 span { color: var(--gold); }
+  .hero .subhead { max-width: 700px; font-size: clamp(1.15rem, 2.2vw, 1.52rem); color: #e6e6e6; margin: 26px 0; }
+  .date-chip { display: inline-flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; padding: 12px 18px; border: 1px solid rgba(250,206,53,.4); background: rgba(255,255,255,.06); border-radius: 999px; font-size: .9rem; backdrop-filter: blur(10px); }
+  .date-chip span + span::before { content: "•"; color: var(--gold); margin-right: 22px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 34px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 28px; border: 0; border-radius: 8px; background: var(--accent); color: #171717; font: 800 .84rem Archivo, sans-serif; text-decoration: none; text-transform: uppercase; letter-spacing: .09em; cursor: pointer; transition: transform .22s, box-shadow .22s; box-shadow: 0 10px 28px rgba(250,206,53,.25); }
+  .btn::after { content: "→"; font-size: 1rem; transition: transform .22s; }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 34px rgba(250,206,53,.38); }
+  .btn:hover::after { transform: translateX(4px); }
+  .btn.outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); box-shadow: none; }
+  .btn.outline:hover { border-color: var(--gold); background: rgba(250,206,53,.08); }
+  .rsvp-note { color: #bdbdbd; font-size: .85rem; }
+  .rsvp-note strong { color: #fff; }
+  .countdown { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 34px; }
+  .countdown .unit { min-width: 74px; padding: 12px; text-align: center; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; background: rgba(255,255,255,.04); }
+  .countdown .num { display: block; font: 800 1.55rem/1 Archivo, sans-serif; color: var(--gold-light); font-variant-numeric: tabular-nums; }
+  .countdown .label { display: block; margin-top: 6px; color: #aaa; font-size: .62rem; text-transform: uppercase; letter-spacing: .14em; }
+
+  .opening-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
+  .opening-grid .copy { font-size: 1.08rem; color: var(--ink-soft); }
+  .opening-grid .pull { margin-top: 28px; padding: 22px 24px; border-left: 4px solid var(--gold); background: #fff9df; font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.15rem; }
+
+  .session-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .session-card { position: relative; overflow: hidden; min-height: 410px; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 34px 30px 30px; box-shadow: var(--shadow-sm); transition: transform .25s, box-shadow .25s; }
+  .session-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .session-card::after { content: attr(data-number); position: absolute; right: 18px; bottom: -30px; font: 900 9rem/1 Archivo, sans-serif; color: rgba(26,26,26,.035); }
+  .session-card .time { display: inline-block; align-self: flex-start; background: var(--ink); color: var(--gold); padding: 6px 10px; border-radius: 999px; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; }
+  .session-card h3 { margin-bottom: 16px; }
+  .session-card p { color: var(--muted); }
+  .session-card .takeaway { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border); color: var(--ink); font-weight: 600; position: relative; z-index: 1; }
+  .session-card .takeaway strong { color: var(--gold-dark); }
+
+  .day-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 70px; align-items: start; }
+  .day-intro { position: sticky; top: 92px; }
+  .day-intro p { color: var(--muted); max-width: 370px; margin-top: 20px; }
+  .agenda { list-style: none; border-top: 1px solid var(--border); }
+  .agenda li { display: grid; grid-template-columns: 118px 1fr; gap: 26px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .agenda time { color: var(--gold-dark); font: 800 .86rem Archivo, sans-serif; letter-spacing: .04em; }
+  .agenda strong { display: block; font-family: Archivo, sans-serif; }
+  .agenda small { display: block; margin-top: 4px; color: var(--muted); }
+  .agenda .featured { background: #fff; margin: 0 -22px; padding-left: 22px; padding-right: 22px; border-left: 4px solid var(--gold); }
+
+  .venue-card { background: var(--dark); color: #fff; border-radius: var(--radius); padding: 48px; display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; margin-bottom: 22px; position: relative; overflow: hidden; }
+  .venue-card::after { content: "06"; position: absolute; right: 20%; bottom: -85px; font: 900 13rem/1 Archivo, sans-serif; color: rgba(250,206,53,.06); }
+  .venue-card .eyebrow { color: var(--gold-light); }
+  .venue-card h3 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+  .venue-card p { color: #bbb; margin-top: 10px; }
+  .venue-date { position: relative; z-index: 1; border-left: 1px solid rgba(250,206,53,.35); padding-left: 34px; text-align: center; font: 900 2.4rem/1 Archivo, sans-serif; color: var(--gold); }
+  .venue-date small { display: block; margin-top: 7px; color: #bbb; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fact { background: var(--surface); padding: 28px; border: 1px solid var(--border); border-top: 4px solid var(--gold); border-radius: var(--radius); transition: transform .25s, box-shadow .25s; }
+  .fact:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+  .fact .icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 10px; background: var(--accent); margin-bottom: 18px; }
+  .fact h3 { font-size: 1.05rem; margin-bottom: 9px; }
+  .fact p { color: var(--muted); font-size: .94rem; }
+
+  .faq { max-width: 820px; margin: 0 auto; }
+  .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; }
+  .faq details[open] { border-color: var(--gold); }
+  .faq summary { list-style: none; cursor: pointer; padding: 22px 58px 22px 24px; font-weight: 700; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 24px; top: 18px; color: var(--gold-dark); font: 700 1.45rem Archivo, sans-serif; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p { color: var(--muted); padding: 0 24px 22px; }
+
+  .form-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
+  .form-card { max-width: 730px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-top: 5px solid var(--gold); border-radius: var(--radius); padding: 52px 48px; box-shadow: var(--shadow); }
+  .form-card .section-head { text-align: center; margin: 0 auto 34px; }
+  .field { margin-bottom: 20px; }
+  .field label, .group-label { display: block; font-weight: 700; font-size: .9rem; margin-bottom: 8px; }
+  input, select, textarea { width: 100%; padding: 14px 15px; border: 1.5px solid var(--border); border-radius: 9px; background: #fff; color: var(--ink); font: inherit; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold-dark); box-shadow: 0 0 0 4px rgba(250,206,53,.18); }
+  textarea { min-height: 100px; resize: vertical; }
+  .choice { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .choice label { display: flex; align-items: center; justify-content: center; min-height: 54px; border: 1.5px solid var(--border); border-radius: 999px; cursor: pointer; font-weight: 700; }
+  .choice input { width: auto; margin-right: 9px; accent-color: var(--gold-dark); }
+  .submit { width: 100%; margin-top: 8px; }
+  .form-status { display: none; margin-top: 18px; border-radius: 10px; padding: 16px 18px; }
+  .form-status.show { display: block; }
+  .form-status.error { color: var(--error); background: #fbe8e8; border: 1px solid #e5adad; }
+  .small { color: var(--muted); font-size: .8rem; margin-top: 14px; text-align: center; }
+
+  .closing { background: var(--dark); color: #fff; text-align: center; }
+  .closing h2 { color: #fff; max-width: 780px; margin: 0 auto 20px; }
+  .closing p { max-width: 620px; margin: 0 auto 30px; color: #c8c8c8; }
+  .closing .signoff { margin-top: 34px; color: var(--gold-light); font-family: Archivo, sans-serif; font-weight: 700; }
+  footer { padding: 34px 0; background: #111; color: #999; font-size: .8rem; }
+  footer .container { display: flex; justify-content: space-between; gap: 22px; flex-wrap: wrap; }
+
+  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s, transform .65s; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal, .js .reveal { opacity: 1; transform: none; transition: none; } * { animation: none !important; } }
+  @media (max-width: 900px) {
+    .session-grid, .facts { grid-template-columns: 1fr; }
+    .session-card { min-height: 0; }
+    .opening-grid, .day-grid { grid-template-columns: 1fr; gap: 38px; }
+    .day-intro { position: static; }
+  }
+  @media (max-width: 640px) {
+    section { padding: 72px 0; }
+    .members-bar .inner { justify-content: center; }
+    .members-bar .brand { display: none; }
+    .hero { min-height: auto; }
+    .hero .container { padding-top: 70px; padding-bottom: 70px; }
+    .date-chip { border-radius: 14px; align-items: flex-start; flex-direction: column; }
+    .date-chip span + span::before { display: none; }
+    .hero-actions { align-items: stretch; flex-direction: column; }
+    .btn { width: 100%; }
+    .countdown .unit { flex: 1; min-width: 64px; }
+    .agenda li { grid-template-columns: 82px 1fr; gap: 14px; }
+    .venue-card { grid-template-columns: 1fr; padding: 34px 28px; }
+    .venue-date { border-left: 0; border-top: 1px solid rgba(250,206,53,.35); padding: 26px 0 0; }
+    .form-card { padding: 40px 24px; }
+    .choice { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="members-bar">
+  <div class="container inner">
+    <span class="brand">Develop Coaching</span>
+    <span class="members-only">Members only</span>
+    <span>Friday 6 November 2026</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">A Develop Coaching live event</div>
+    <h1>Beyond<br><span>the Tender.</span></h1>
+    <p class="subhead">Winning the job is the easy bit. What happens after the contract is signed decides whether you keep the margin, keep your head, and keep growing.</p>
+    <div class="date-chip">
+      <span>Friday 6 November 2026</span>
+      <span>The Lensbury, Teddington</span>
+      <span>From 08:30</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn" href="#rsvp">Let us know you're coming</a>
+      <a class="btn outline" href="#day">See the running order</a>
+      <span class="rsvp-note">RSVP by <strong>Friday 9 October</strong></span>
+    </div>
+    <div class="countdown" id="countdown" aria-label="Countdown to the event">
+      <div class="unit"><span class="num" id="cdDays">00</span><span class="label">Days</span></div>
+      <div class="unit"><span class="num" id="cdHours">00</span><span class="label">Hours</span></div>
+      <div class="unit"><span class="num" id="cdMins">00</span><span class="label">Mins</span></div>
+      <div class="unit"><span class="num" id="cdSecs">00</span><span class="label">Secs</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container opening-grid">
+      <div class="reveal">
+        <div class="eyebrow">The next step</div>
+        <h2>February was about not getting burned. This one is about getting ahead.</h2>
+      </div>
+      <div class="copy reveal">
+        <p>In February we covered protection: site, payment, adjudication. How to stop a job going wrong.</p>
+        <p>This day covers the other side. The margin you quoted is only real if it survives delivery. The business only grows if the person running it can carry the load. And the fastest way to see what actually moves the needle is to hear it from members who are a step or two ahead of you.</p>
+        <p>Three sessions, one thread: what it takes to run the job, and the business, well beyond the tender.</p>
+        <div class="pull">Not theory. Practical ways to protect the margin, share the load and scale with fewer surprises.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="sessions">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">What we're covering</div>
+        <h2>Three sessions. One thread.</h2>
+        <p>From the number on the tender to the reality of delivering the work.</p>
+      </div>
+      <div class="session-grid">
+        <article class="session-card reveal" data-number="01">
+          <span class="time">09:15 · 60 minutes</span>
+          <h3>Pricing to Deliver a Project, Not Just Win the Tender</h3>
+          <p>Where margin actually leaks: allowances, variations, and the QS review that should happen before you quote. Control the number all the way through delivery, not just on the day you win.</p>
+          <p class="takeaway"><strong>Leave with:</strong> a way to protect the margin after the contract is signed.</p>
+        </article>
+        <article class="session-card reveal" data-number="02">
+          <span class="time">10:30 · 45 minutes</span>
+          <h3>Sharing the Load</h3>
+          <p>Practical tools for handling the stress and workload of a tough industry. Not a lecture. Tactics that work, and how to use the people in this room instead of carrying it alone.</p>
+          <p class="takeaway"><strong>Leave with:</strong> tools you'll actually use on a bad week.</p>
+        </article>
+        <article class="session-card reveal" data-number="03">
+          <span class="time">11:15 · 60 minutes</span>
+          <h3>Member Panel</h3>
+          <p>Members further down the road on their real challenges, their wins, and what has given them the most value: the tools, the coaching and the community.</p>
+          <p class="takeaway"><strong>Leave with:</strong> a clearer picture of what changes as your business scales.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="day">
+    <div class="container day-grid">
+      <div class="day-intro reveal">
+        <div class="eyebrow">The day</div>
+        <h2>One focused morning. Lunch and a drink after.</h2>
+        <p>Same shape as February. Registration, welcome, three teaching blocks with a break, Q&amp;A, then time together over lunch.</p>
+      </div>
+      <ol class="agenda reveal">
+        <li><time>08:30</time><div><strong>Registration</strong><small>Coffee and pastries</small></div></li>
+        <li><time>09:00</time><div><strong>Welcome and housekeeping</strong><small>With Greg live from Sydney</small></div></li>
+        <li class="featured"><time>09:15</time><div><strong>Pricing to Deliver a Project, Not Just Win the Tender</strong></div></li>
+        <li><time>10:15</time><div><strong>Break</strong></div></li>
+        <li class="featured"><time>10:30</time><div><strong>Sharing the Load</strong></div></li>
+        <li class="featured"><time>11:15</time><div><strong>Member Panel</strong><small>Challenges, wins and what's added the most value</small></div></li>
+        <li><time>12:15</time><div><strong>Q&amp;A</strong></div></li>
+        <li><time>12:30</time><div><strong>Lunch</strong></div></li>
+        <li><time>13:30</time><div><strong>Drinks</strong><small>Stay as long as you like</small></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">The practical bits</div>
+        <h2>Everything you need to know.</h2>
+      </div>
+      <div class="venue-card reveal">
+        <div>
+          <div class="eyebrow">Venue</div>
+          <h3>The Lensbury</h3>
+          <p>Broom Road, Teddington TW11 9NU. Same venue as February.</p>
+        </div>
+        <div class="venue-date">6 Nov<small>Friday · 2026</small></div>
+      </div>
+      <div class="facts">
+        <article class="fact reveal"><div class="icon">🎟️</div><h3>Included</h3><p>No ticket and no payment. The day is included in your membership.</p></article>
+        <article class="fact reveal"><div class="icon">🍽️</div><h3>Food and drink</h3><p>Coffee and pastries on arrival, lunch, and your first drink on Greg.</p></article>
+        <article class="fact reveal"><div class="icon">🛏️</div><h3>Staying over</h3><p>We're arranging discounted room rates. Tell us in the RSVP if you want a room and we'll come back to you first.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>Before you reply.</h2>
+      </div>
+      <div class="faq reveal">
+        <details><summary>What does it cost?</summary><p>Nothing extra. The event, lunch and your first drink are included in your Develop Coaching membership.</p></details>
+        <details><summary>What if I can't make it?</summary><p>Please RSVP anyway and choose "Not this time". We need a clear answer for the venue and catering.</p></details>
+        <details><summary>Can I stay at The Lensbury?</summary><p>We're arranging discounted room rates. Choose your preferred night in the RSVP and we'll send the details once they're confirmed.</p></details>
+        <details><summary>When do I need to reply?</summary><p>Please RSVP by Friday 9 October 2026, even if you can't attend.</p></details>
+        <details><summary>What should I bring?</summary><p>Bring a notebook and the real questions you're working through in your business. We'll take care of the rest.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="rsvp">
+    <div class="container">
+      <div class="form-card reveal">
+        <div class="section-head">
+          <div class="eyebrow">Your RSVP</div>
+          <h2>Are you coming?</h2>
+          <p>No ticket and no payment. We just need numbers for the venue and catering. Please reply by Friday 9 October, even if it's a no.</p>
+        </div>
+        <form id="rsvpForm">
+          <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" required maxlength="100" autocomplete="name"></div>
+          <div class="field"><label for="company">Business</label><input type="text" id="company" name="company" maxlength="120" autocomplete="organization"></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required maxlength="254" autocomplete="email"></div>
+          <div class="field">
+            <span class="group-label">Will you be there?</span>
+            <div class="choice" role="radiogroup" aria-label="Will you be there?">
+              <label><input type="radio" name="attending" value="yes" required>Yes, count me in</label>
+              <label><input type="radio" name="attending" value="no">Not this time</label>
+            </div>
+          </div>
+          <div class="field"><label for="room">Interested in a discounted hotel room?</label><select id="room" name="room"><option value="">Choose one</option><option>Yes, night before</option><option>Yes, night of the event</option><option>Yes, both nights</option><option>No, I'll travel on the day</option></select></div>
+          <div class="field"><label for="notes">Dietary needs or anything else we should know</label><textarea id="notes" name="notes" maxlength="1000"></textarea></div>
+          <button class="btn submit" type="submit">Prepare my RSVP email</button>
+          <div class="form-status error" id="formStatus" role="alert">Your email app should open with the details ready to send. If it doesn't, email <a href="mailto:greg@develop-coaching.com">greg@develop-coaching.com</a>.</div>
+          <p class="small">Clicking the button opens an email ready to send to Greg. You can change your answer later.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="container reveal">
+      <div class="eyebrow">Beyond the tender</div>
+      <h2>Protect the margin. Share the load. See what changes next.</h2>
+      <p>One morning with people who understand the jobs, the pressure and the decisions you're carrying.</p>
+      <a class="btn" href="#rsvp">Send my RSVP</a>
+      <div class="signoff">See you at The Lensbury.<br>Greg</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container"><span>&copy; <span id="year"></span> Develop Coaching</span><span>Members-only page. Please don't share it publicly.</span></div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    const target = new Date(Date.UTC(2026, 10, 6, 8, 30, 0));
+    const els = {
+      days: document.getElementById('cdDays'), hours: document.getElementById('cdHours'),
+      mins: document.getElementById('cdMins'), secs: document.getElementById('cdSecs')
+    };
+    function pad(value) { return String(Math.max(0, value)).padStart(2, '0'); }
+    function tick() {
+      const remaining = target - new Date();
+      const diff = Math.max(0, remaining);
+      els.days.textContent = pad(Math.floor(diff / 86400000));
+      els.hours.textContent = pad(Math.floor(diff / 3600000) % 24);
+      els.mins.textContent = pad(Math.floor(diff / 60000) % 60);
+      els.secs.textContent = pad(Math.floor(diff / 1000) % 60);
+      if (remaining <= 0) document.getElementById('countdown').setAttribute('aria-label', 'The event has started');
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      return;
+    }
+    document.documentElement.classList.add('js');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: .12, rootMargin: '0px 0px -36px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  })();
+
+  document.getElementById('rsvpForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!this.reportValidity()) return;
+    const formData = new FormData(this);
+    const attending = formData.get('attending') === 'yes' ? 'Yes, count me in' : 'Not this time';
+    const lines = [
+      'Name: ' + formData.get('name'),
+      'Business: ' + (formData.get('company') || 'Not provided'),
+      'Email: ' + formData.get('email'),
+      'Attending: ' + attending,
+      'Hotel room: ' + (formData.get('room') || 'Not selected'),
+      'Dietary needs or notes: ' + (formData.get('notes') || 'None')
+    ];
+    const subject = encodeURIComponent('Beyond the Tender RSVP: ' + formData.get('name'));
+    const body = encodeURIComponent(lines.join('\n'));
+    const status = document.getElementById('formStatus');
+    status.classList.add('show');
+    window.location.href = 'mailto:greg@develop-coaching.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
