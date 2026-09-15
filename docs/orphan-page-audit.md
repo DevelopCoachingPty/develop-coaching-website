@@ -139,3 +139,32 @@ local `www/**/*.html` anchors, ignores self-links and external domains, and repo
 sitemap paths with no href source page. Live HTTP checks confirmed the priority
 targets return 200. Redirect, sitemap, robots, image and head metadata changes are
 deliberately outside this pull request.
+
+## Follow-up, 15 September 2026
+
+All 96 rows from the current Ahrefs issue were captured. PR 73 excluded five
+confirmation pages. This follow-up addresses another 59 rows:
+
+- Seventeen standalone testimonial videos exactly match the existing Client Wins
+  hub. Keep these campaign landing pages and their booking/tracking unchanged,
+  but set noindex and exclude them from sitemap and site search. Greg's video
+  has no matching hub entry and remains unchanged pending a content decision.
+- Three more post-action pages explicitly confirm a book request, email signup
+  or booked call: schedule-a-call-book, schedule-a-call-subscribe and
+  before-your-scale-session-2. Apply the same discovery exclusions.
+- Restore a homepage-to-About-to-archive route for all 39 flagged podcast and
+  transcript URLs. Add two clearly labelled archive links to Greg's biography
+  and remove old optimisation query parameters from both archive pagination
+  chains. Preserve the archived material; this is not a podcast relaunch.
+
+This leaves 32 rows requiring purpose/content decisions: Greg's testimonial and
+31 campaign, resource or legacy pages. Expired event pages still advertise old
+dates; a separate decision on their search visibility is pending. The annual
+growth calculator exposes a Gravity Forms shortcode instead of a calculator,
+and how-we-work is a sparse Media Appearances page. Do not promote these.
+Active campaigns, lead magnets and download funnels require purpose review
+before public linking or retirement. No blanket redirects or removals applied.
+
+The raw link graph now reaches all 39 archived issue URLs from the homepage
+without query strings. This verifies website discovery paths, not Ahrefs
+clearance. The crawler must process the changes before its count can be judged.
