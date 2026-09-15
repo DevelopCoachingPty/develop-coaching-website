@@ -7,8 +7,6 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 UTILITIES = (
-    '/contact-2/',
-    '/how-we-work/',
     '/5-profit-leaks-bonus/',
 
     '/the-build-and-scale-summit-2025/',
@@ -55,13 +53,15 @@ class Metadata(HTMLParser):
             self.robots.append(attrs.get('content', ''))
 
 class UtilityIndexationTests(unittest.TestCase):
-    def test_retired_calculator_is_not_deployed_or_rebuilt(self):
-        self.assertFalse((ROOT / 'www/annual-growth-calculator/index.html').exists())
-        self.assertFalse((ROOT / 'export/reference/annual-growth-calculator.html').exists())
-        self.assertNotIn('/annual-growth-calculator/',
-                         [r['u'] for r in json.loads((ROOT / 'www/search-index.json').read_text())])
-        for sitemap in (ROOT / 'www').glob('*sitemap.xml'):
-            self.assertNotIn('https://develop-coaching.com/annual-growth-calculator/', sitemap.read_text())
+    def test_retired_pages_are_not_deployed_or_rebuilt(self):
+        for slug in ('annual-growth-calculator', 'contact-2', 'how-we-work'):
+            with self.subTest(slug=slug):
+                self.assertFalse((ROOT / 'www' / slug / 'index.html').exists())
+                self.assertFalse((ROOT / 'export/reference' / (slug + '.html')).exists())
+                self.assertNotIn('/' + slug + '/',
+                                 [r['u'] for r in json.loads((ROOT / 'www/search-index.json').read_text())])
+                for sitemap in (ROOT / 'www').glob('*sitemap.xml'):
+                    self.assertNotIn('https://develop-coaching.com/' + slug + '/', sitemap.read_text())
 
     def test_utilities_remain_available_but_noindex(self):
         for path in UTILITIES:
