@@ -7,6 +7,27 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 UTILITIES = (
+    '/valy-testimonial/',
+    '/mike-and-nick-testimonial/',
+    '/dan-testimonial/',
+    '/dale-testimonial/',
+    '/james-wilcock-testimonial/',
+    '/bradley-testimonial/',
+    '/dave-testimonial/',
+    '/stephen-and-salina-testimonial/',
+    '/richard-abrahams-testimonial/',
+    '/geoff-testimonial/',
+    '/lukas-testimonial/',
+    '/sam-and-nathan-testimonial/',
+    '/james-overton-testimonial/',
+    '/george-testimonial/',
+    '/sophie-and-neil-testimonial/',
+    '/dominic-testimonial/',
+    '/richard-jenkinson-testimonial/',
+    '/schedule-a-call-book/',
+    '/schedule-a-call-subscribe/',
+    '/before-your-scale-session-2/',
+
     '/10795-2/', '/thank-you-5m-builder-gameplan/',
     '/thank-you-built-to-cash-out/', '/thankyou/',
     '/thank-you-build-scale-summit/', '/thank-you/', '/thank-you-subscribe-2/',
