@@ -366,6 +366,8 @@ class LivePageTests(unittest.TestCase):
         slug = "business-coaching-for-construction"
         document = (bds.WWW / slug / "index.html").read_text(encoding="utf-8")
         updated = bds.transform(document, bds.load(slug))
+        self.assertNotIn("css-1ap07mx", updated)
+        self.assertNotIn("ws-scroll-bar", updated)
         start, end = bds.body_span(document)
         new_start, new_end = bds.body_span(updated)
         normalise = lambda value: re.sub(r">\s+<", "><", value.strip())
