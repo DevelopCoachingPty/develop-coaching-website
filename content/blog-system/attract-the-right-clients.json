@@ -49,10 +49,10 @@
       "href": "/5-pillars-free-trainings/attract/"
     }
   },
-  "brief_before_heading": "1. Track your lead sources",
+  "brief_before_heading": "How can UK builders win higher-value contracts without taking on the wrong work?",
   "intro_replaces_paragraphs": 6,
   "demote_body_h1": true,
-  "date_modified": "2026-08-31T00:00:00+10:00",
+  "date_modified": "2026-09-15T00:00:00+00:00",
   "heading_rewrites": {
     "3. Get your pitch on point": "3. Are you selling yourself, or solving their problem?"
   },
@@ -60,6 +60,47 @@
     {
       "find": "They’ll talk about how long they’ve been established, how trustworthy they are, how many awards they have won, and what trade memberships they belong to.</span></p>",
       "replace": "They’ll talk about:</span></p>\n<ul>\n<li>How long they’ve been established</li>\n<li>How trustworthy they are</li>\n<li>How many awards they have won</li>\n<li>What trade memberships they belong to</li>\n</ul>"
+    },
+    {
+      "find": "Get that cleaned up and optimised to be a source for your leads and I guarantee you will start having more interest in the areas you want it.",
+      "replace": "Make the profile clear about the projects you can deliver, then track whether it brings suitable enquiries."
+    },
+    {
+      "find": "Once you have the leads though how can you convert them into",
+      "replace": "For a repeatable qualification and follow-up process, see the <a href=\"/construction-sales-funnel/\">construction sales funnel guide</a>. How do those qualified enquiries become"
+    }
+  ],
+  "append_sections": [
+    {
+      "heading": "How can UK builders win higher-value contracts without taking on the wrong work?",
+      "paragraphs": [
+        "A higher-value contract is one that supports profit, cash flow and reliable delivery, not simply a larger contract price. Clear scope and workable payment stages can make a smaller job a better fit than a larger project that stretches the team.",
+        "Test four things. Capacity: can the right people and trades do it without harming existing clients? Job contribution: after direct costs, supervision, defects and disruption, does it improve the business? Cash exposure: do payment terms, retention and materials leave the builder funding the work? Ability to deliver: can the builder meet the client's quality, programme and communication needs?",
+        "Example: a larger refurbishment with unclear scope and late payment may look attractive, but a smaller job with a clear brief, staged payments and realistic dates can contribute more and protect reputation."
+      ],
+      "steps": [
+        "Go or no-go checklist: confirm the client and decision maker are clear.",
+        "Check scope, drawings, approvals and site information are sufficient to price and build.",
+        "Match start and duration against current and known future workload.",
+        "Review payment terms, retention and materials against cash available.",
+        "Say no or ask for changes when a key risk is unresolved."
+      ],
+      "before_heading": "1. Track your lead sources"
+    },
+    {
+      "heading": "What evidence helps an architect or developer shortlist a builder?",
+      "paragraphs": [
+        "Make it easy for an architect or developer to check relevant completed work. Explain your actual role and scope, including work delivered by others, and only share material you have permission to use.",
+        "Offer references from people who saw the work. Describe relevant constraints, such as occupied sites or restricted access, and explain how you managed changes, quality checks and aftercare. If project details are confidential, use another approved example."
+      ],
+      "steps": [
+        "Provide a short list of completed jobs relevant to the project type and size.",
+        "State the actual role, scope and subcontractor involvement.",
+        "Confirm permission for every client name, image, drawing or reference.",
+        "Offer references who can speak to delivery, communication and aftercare.",
+        "Name constraints and how they were managed, and show examples of quality control and defect close-out."
+      ],
+      "before_heading": "1. Track your lead sources"
     }
   ]
 }
