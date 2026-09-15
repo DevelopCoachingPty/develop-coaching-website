@@ -1514,7 +1514,12 @@
   },
   {
    "source": "/media",
-   "destination": "/how-we-work/",
+   "destination": "/about-greg-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/how-we-work",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {
@@ -3344,7 +3349,12 @@
   },
   {
    "source": "/media/",
-   "destination": "/how-we-work/",
+   "destination": "/about-greg-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/how-we-work/",
+   "destination": "/about-greg-wilkes/",
    "permanent": true
   },
   {
