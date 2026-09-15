@@ -34,9 +34,9 @@
         ],
         "steps": [
           "Enquiries in. How many new leads entered the funnel this month?",
-          "Quote to contract rate. A well-run business targeting the right clients should be converting 35 to 50%.",
+          "Decided-quote win rate. Compare similar projects and periods; report pending quotes separately.",
           "Average project value. Is it growing year on year, or are you winning the same size jobs?",
-          "Time to close. Anything consistently over 30 days warrants a look at where deals stall."
+          "Time to close. Compare similar project types and the decision timetable agreed with each buyer."
         ]
       }
     ],
@@ -52,5 +52,66 @@
   "brief_before_heading": "Plan: Know Exactly Who You’re Targeting",
   "intro_replaces_paragraphs": 2,
   "demote_body_h1": false,
-  "date_modified": "2026-08-31T00:00:00+10:00"
+  "date_modified": "2026-09-15T00:00:00+00:00",
+  "append_sections": [
+    {
+      "heading": "What should a builder say when following up a quote?",
+      "paragraphs": [
+        "Follow-up should reduce uncertainty, not create pressure. Ask about the decision process and any blocker. Avoid false urgency or invented deadlines.",
+        "Receipt and clarification: Hi, did the proposal for your project come through clearly? Are there any questions about the scope, timing or payment stages? Would a short call help, and when are you expecting to make a decision?",
+        "Agreed decision date: Hi, we agreed to check in today about your project. Has the decision timetable changed, or is there anything you need us to clarify? If the project is on hold, let me know whether and when you would like us to contact you again."
+      ],
+      "steps": [
+        "Use the templates as starting points and adapt the tone to the client.",
+        "Ask about the decision process, the blocker and the next action.",
+        "Offer to clarify scope, programme or terms without pressure.",
+        "Record the reply, agreed next action, date and owner."
+      ],
+      "before_heading": "Deliver: Turn Every Project Into Your Next Contract"
+    },
+    {
+      "heading": "When should you stop chasing a building quote?",
+      "paragraphs": [
+        "Stop when the buyer asks you to stop. Respect contact permissions and preferences. Otherwise, work from an agreed next action, date and owner. A promised decision date is more useful than a universal interval. If no date is promised, agree one or pause.",
+        "Separate paused from lost. Paused means timing, scope or budget is not ready, but future contact is welcome. Lost means no fit, another choice or a clear no. Scheduled tenders follow the buyer's rules and deadlines, not normal quote follow-up.",
+        "For quotes issued in the same period, calculate decided-quote win rate as wins divided by wins plus losses, multiplied by 100. Show paused and still-pending quotes separately. If none has reached a decision, report the rate as not yet available. Compare similar job types and allow time for larger projects to decide."
+      ],
+      "steps": [],
+      "before_heading": "Deliver: Turn Every Project Into Your Next Contract"
+    }
+  ],
+  "text_replacements": [
+    {
+      "find": "<p>Research consistently shows that over 80% of sales require five or more follow-up contacts before a decision is made. In construction, a client might be sitting on three quotes while they finalise planning permission, secure funding, or wait for a board sign-off. The contractor who stays in contact professionally, without being pushy, is almost always the one who wins when the client is ready to move.</p>",
+      "replace": "<p>A client may be comparing proposals while waiting for drawings, funding or an internal decision. Agree when to reconnect and use each conversation to clarify the next step. Follow-up cannot guarantee a win.</p>"
+    },
+    {
+      "find": "<p>Your website is the single most valuable lead-generation asset you own. For most construction businesses at this level, 60 to 70% of inbound enquiries start with a Google search. Yet most construction websites are thin on substance: no case studies, no clear offer, no social proof, and no obvious reason to get in touch.</p>",
+      "replace": "<p>Your website should help a suitable prospect assess your work. Show relevant projects, a clear offer, credible proof and a straightforward way to enquire. Track your own lead sources before deciding where to invest.</p>"
+    },
+    {
+      "find": "<p>Architects, structural engineers, quantity surveyors, planning consultants: these professionals refer work to contractors constantly. One solid relationship with a well-connected architect can be worth £150,000 to £250,000 a year in project flow. You don&#8217;t need dozens of these relationships. You need to be the contractor they call first when the right opportunity comes up.</p>",
+      "replace": "<p>Architects, engineers and quantity surveyors can introduce suitable work when they understand your capabilities. Build relationships around relevant completed projects and reliable delivery. See how to <a href=\"/attract-the-right-clients/\">attract the right construction clients</a> and assess higher-value opportunities.</p>"
+    },
+    {
+      "find": "<p>The average satisfied construction client personally knows two or three other potential clients. Your funnel doesn&#8217;t just run forward; it loops back and compounds over time.</p>",
+      "replace": "<p>Ask satisfied clients whether they would be comfortable making a relevant introduction. Record referrals and the work they produce rather than assuming every client will bring another project.</p>"
+    },
+    {
+      "find": "<p>At Develop Coaching, we work exclusively with construction business owners at this stage: past £1M, aiming for £5M, ready to put the systems in place that make growth sustainable and predictable. If you&#8217;d like a clear picture of what&#8217;s holding your pipeline back and where to focus first, <a href=\"/business-coaching-for-construction/\">book a strategy call with us today</a>.</p>",
+      "replace": "<p>Develop Coaching helps established building-company owners improve their numbers, sales process and systems. To explore whether the support fits your business, review <a href=\"/business-coaching-for-construction/\">business coaching for UK builders</a> or <a href=\"/schedule-a-call/\">book a Freedom Roadmap Session</a>.</p>"
+    },
+    {
+      "find": "A well-run business targeting the right clients should be converting 35 to 50%.",
+      "replace": "Compare decided quotes from similar projects and periods, keeping pending quotes separate."
+    },
+    {
+      "find": "Anything consistently over 30 days warrants a close look at where deals are stalling.",
+      "replace": "Compare similar project types and their agreed decision timetables before judging delays."
+    },
+    {
+      "find": "A simple sequence that works:",
+      "replace": "An illustrative sequence, to adapt to the buyer’s agreed timetable:"
+    }
+  ]
 }

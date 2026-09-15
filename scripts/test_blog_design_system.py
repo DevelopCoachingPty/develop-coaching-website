@@ -361,6 +361,18 @@ class ValidationTests(unittest.TestCase):
 class LivePageTests(unittest.TestCase):
     """The transformer must stay idempotent against the real pages it owns."""
 
+    def test_coaching_source_preserves_published_rewrite(self):
+        """A source refresh must not silently revert the reviewed article."""
+        slug = "business-coaching-for-construction"
+        document = (bds.WWW / slug / "index.html").read_text(encoding="utf-8")
+        updated = bds.transform(document, bds.load(slug))
+        start, end = bds.body_span(document)
+        new_start, new_end = bds.body_span(updated)
+        normalise = lambda value: re.sub(r">\s+<", "><", value.strip())
+        self.assertEqual(normalise(document[start:end]), normalise(updated[new_start:new_end]))
+        self.assertEqual(re.findall(r"<h1\b[^>]*>.*?</h1>", document),
+                         re.findall(r"<h1\b[^>]*>.*?</h1>", updated))
+
     def test_every_content_file_is_valid_and_idempotent(self):
         files = sorted(bds.CONTENT.glob("*.json"))
         self.assertTrue(files, "no content files to check")
