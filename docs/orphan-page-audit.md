@@ -168,3 +168,23 @@ before public linking or retirement. No blanket redirects or removals applied.
 The raw link graph now reaches all 39 archived issue URLs from the homepage
 without query strings. This verifies website discovery paths, not Ahrefs
 clearance. The crawler must process the changes before its count can be judged.
+
+## Expired events and unfinished pages, 15 September 2026
+
+Following approval to continue with the recommended expired-event exclusions,
+seven explicitly expired event/upgrade pages are noindex and removed from
+sitemap/search. Their URLs, payment links and tracking remain unchanged.
+Three unfinished pages (contact-2, how-we-work, annual-growth-calculator) and
+one post-purchase bonus booking page (5-profit-leaks-bonus) receive the same
+search exclusions. This does not restore the broken calculator or complete
+the placeholder pages; those content decisions remain open.
+
+The dated events include June 2023, June 2024, June 2025, the December workshop
+preparing for January 2026 and the February 2026 members event. Shared Stripe
+links remain untouched because some are also used by current campaigns.
+The current September AI workshop and other undetermined funnels stay intact.
+
+Total search/discovery treatment is now 75 of the original 96 issue URLs.
+Twenty-one URLs remain under purpose review, plus the separate restoration
+decisions for the three unfinished noindex pages. No Ahrefs clearance or
+search-ranking improvement is claimed without subsequent crawler evidence.
