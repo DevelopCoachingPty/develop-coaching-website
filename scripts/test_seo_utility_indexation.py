@@ -6,7 +6,11 @@ import unittest
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-UTILITIES = ('/10795-2/', '/thank-you-5m-builder-gameplan/')
+UTILITIES = (
+    '/10795-2/', '/thank-you-5m-builder-gameplan/',
+    '/thank-you-built-to-cash-out/', '/thankyou/',
+    '/thank-you-build-scale-summit/', '/thank-you/', '/thank-you-subscribe-2/',
+)
 
 class Metadata(HTMLParser):
     def __init__(self):
