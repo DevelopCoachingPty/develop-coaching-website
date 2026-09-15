@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WWW = ROOT / "www"
 
 REDIRECTS = {
+    "/blog_2": "/blog/",
     "/scale": "/5-pillars-free-trainings/scale/",
     "/scale-hub-page": "/5-pillars-free-trainings/scale/",
     "/scale/systems-processes": "/construction-business-systems/",
@@ -134,6 +135,7 @@ class SitemapHygieneTests(unittest.TestCase):
 
     def test_noncanonical_urls_are_not_in_sitemaps_or_search(self):
         blocked = {
+            "/blog_2/",
             "/courses/test/",
             "/podcast-transcript/test-podcast-v1-transcript/",
             "/scale/",

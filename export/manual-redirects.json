@@ -1918,5 +1918,15 @@
   "source": "/recruit-construction-business",
   "destination": "/how-to-recruit-for-your-construction-business-2/",
   "permanent": true
+ },
+ {
+  "source": "/blog_2",
+  "destination": "/blog/",
+  "permanent": true
+ },
+ {
+  "source": "/blog_2/",
+  "destination": "/blog/",
+  "permanent": true
  }
 ]
