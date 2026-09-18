@@ -12,5 +12,19 @@
     "permanent": true,
     "caseSensitive": true,
     "preserveQueryParams": true
+  },
+  {
+    "source": "/contact-2",
+    "destination": "/contact/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "/contact-2/",
+    "destination": "/contact/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
   }
 ]

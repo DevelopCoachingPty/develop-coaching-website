@@ -3838,6 +3838,16 @@
    "permanent": true
   },
   {
+   "source": "/contact-2/",
+   "destination": "/contact/",
+   "permanent": true
+  },
+  {
+   "source": "/contact-2",
+   "destination": "/contact/",
+   "permanent": true
+  },
+  {
    "source": "/galleries/public-sector.html/",
    "destination": "/portfolio/",
    "permanent": true
