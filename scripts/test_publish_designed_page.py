@@ -181,9 +181,10 @@ def main() -> None:
         and all(f"<h3>{question}</h3>" in html for question in answer_questions),
     )
     check(
-        "GEO answers preserve verified cost and results qualifications",
-        "paid monthly or annually with a 12-month minimum commitment" in html
-        and "the exact figure openly on the Scale Session" in html
+        "GEO answers publish the verified cost and qualify results",
+        "£1,500 a month" in html
+        and "£15,000" in html
+        and "a saving of £3,000" in html
         and "Individual results vary." in html,
     )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
