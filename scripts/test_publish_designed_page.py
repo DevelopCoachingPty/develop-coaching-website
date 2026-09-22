@@ -181,12 +181,25 @@ def main() -> None:
         and all(f"<h3>{question}</h3>" in html for question in answer_questions),
     )
     check(
-        "GEO answers publish the verified cost and qualify results",
-        "£1,500 a month" in html
-        and "£15,000" in html
-        and "a saving of £3,000" in html
+        "GEO answers publish the programme range without a fixed Mastermind price",
+        "£2,000 to £18,000 annually" in html
+        and "demonstrate the value first" in html
+        and "£1,500 a month" not in html
+        and "£15,000" not in html
+        and "a saving of £3,000" not in html
         and "Individual results vary." in html,
     )
+    for relative_path in (
+        os.path.join("courses", "win-big-clients", "index.html"),
+        os.path.join("win-big-clients", "index.html"),
+    ):
+        with open(os.path.join(designed.pp.WWW, relative_path), encoding="utf-8") as handle:
+            wbc_html = handle.read()
+        check(
+            f"{relative_path} uses the programme range without a fixed Win Big Clients price",
+            "£2,000 to £18,000 annually" in wbc_html
+            and "£1,970" not in wbc_html,
+        )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
         "official Develop Coaching palette present",
