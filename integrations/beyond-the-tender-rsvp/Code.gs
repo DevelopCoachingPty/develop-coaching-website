@@ -102,12 +102,12 @@ function saveRsvp_(row) {
 
     sheet.appendRow([
       row.timestamp,
-      row.name,
-      row.business,
-      row.email,
+      sheetText_(row.name),
+      sheetText_(row.business),
+      sheetText_(row.email),
       row.attendance,
-      row.hotel,
-      row.notes,
+      sheetText_(row.hotel),
+      sheetText_(row.notes),
       row.event,
       row.source,
       'Pending',
@@ -172,7 +172,7 @@ function updateDelivery_(submissionId, delivery) {
     const ids = sheet.getRange(2, 12, lastRow - 1, 1).getDisplayValues();
     for (let i = ids.length - 1; i >= 0; i--) {
       if (ids[i][0] === submissionId) {
-        sheet.getRange(i + 2, 10, 1, 2).setValues([[delivery.status, delivery.detail]]);
+        sheet.getRange(i + 2, 10, 1, 2).setValues([[sheetText_(delivery.status), sheetText_(delivery.detail)]]);
         return;
       }
     }
@@ -207,6 +207,14 @@ function isEmail_(value) {
 
 function clean_(value, maxLength) {
   return String(value || '').trim().slice(0, maxLength || 500);
+}
+
+// Sheets treats a cell starting with = + - @ (or a leading tab / CR) as a
+// formula. Prefix an apostrophe so user text is always stored as literal text.
+// getValues() returns the text without the apostrophe.
+function sheetText_(value) {
+  const text = String(value == null ? '' : value);
+  return /^[=+\-@\t\r]/.test(text) ? "'" + text : text;
 }
 
 function json_(body) {
