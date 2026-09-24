@@ -138,8 +138,9 @@
   .choice input { width: auto; margin-right: 9px; accent-color: var(--gold-dark); }
   .submit { width: 100%; margin-top: 8px; }
   .form-status { display: none; margin-top: 18px; border-radius: 10px; padding: 16px 18px; }
-  .form-status.show { display: block; }
+  .form-status.show { display: block; color: #245c36; background: #edf8f0; border: 1px solid #afd0b8; }
   .form-status.error { color: var(--error); background: #fbe8e8; border: 1px solid #e5adad; }
+  .submit:disabled { opacity: .72; cursor: wait; }
   .small { color: var(--muted); font-size: .8rem; margin-top: 14px; text-align: center; }
 
   .closing { background: var(--dark); color: #fff; text-align: center; }
@@ -337,9 +338,10 @@
           </div>
           <div class="field"><label for="room">Interested in a discounted hotel room?</label><select id="room" name="room"><option value="">Choose one</option><option>Yes, night before</option><option>Yes, night of the event</option><option>Yes, both nights</option><option>No, I'll travel on the day</option></select></div>
           <div class="field"><label for="notes">Dietary needs or anything else we should know</label><textarea id="notes" name="notes" maxlength="1000"></textarea></div>
-          <button class="btn submit" type="submit">Prepare my RSVP email</button>
-          <div class="form-status error" id="formStatus" role="alert">Your email app should open with the details ready to send. If it doesn't, email <a href="mailto:greg@develop-coaching.com">greg@develop-coaching.com</a>.</div>
-          <p class="small">Clicking the button opens an email ready to send to Greg. You can change your answer later.</p>
+          <div class="field" aria-hidden="true" style="position:absolute;left:-9999px"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="btn submit" id="submitBtn" type="submit">Submit RSVP</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <p class="small">We'll save your RSVP and send confirmation to your email. You can change your answer later by contacting the team.</p>
         </form>
       </div>
     </div>
@@ -396,24 +398,49 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   })();
 
-  document.getElementById('rsvpForm').addEventListener('submit', function (event) {
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyknVqZ0j_QDxSZXy3sq5YUeuEBr1LSjLLtIBNzfIvmI7MgPR8mFl0KahTfw7_yh-IZ/exec';
+
+  document.getElementById('rsvpForm').addEventListener('submit', async function (event) {
     event.preventDefault();
     if (!this.reportValidity()) return;
+
     const formData = new FormData(this);
-    const attending = formData.get('attending') === 'yes' ? 'Yes, count me in' : 'Not this time';
-    const lines = [
-      'Name: ' + formData.get('name'),
-      'Business: ' + (formData.get('company') || 'Not provided'),
-      'Email: ' + formData.get('email'),
-      'Attending: ' + attending,
-      'Hotel room: ' + (formData.get('room') || 'Not selected'),
-      'Dietary needs or notes: ' + (formData.get('notes') || 'None')
-    ];
-    const subject = encodeURIComponent('Beyond the Tender RSVP: ' + formData.get('name'));
-    const body = encodeURIComponent(lines.join('\n'));
+    formData.append('event', 'beyond-the-tender-2026');
+    formData.append('source', 'members-page');
+
     const status = document.getElementById('formStatus');
-    status.classList.add('show');
-    window.location.href = 'mailto:greg@develop-coaching.com?subject=' + subject + '&body=' + body;
+    const submitButton = document.getElementById('submitBtn');
+    status.className = 'form-status';
+    status.textContent = '';
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
+    try {
+      if (!APPS_SCRIPT_URL.startsWith('https://script.google.com/macros/s/')) {
+        throw new Error('The RSVP form is not connected yet.');
+      }
+
+      const response = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: new URLSearchParams(formData).toString()
+      });
+      const result = await response.json();
+      if (!result.ok) throw new Error(result.error || 'We could not submit your RSVP.');
+
+      const isAttending = formData.get('attending') === 'yes';
+      status.textContent = isAttending
+        ? "You're in. Check your inbox for confirmation."
+        : 'Thanks for letting us know. Your response has been saved.';
+      status.classList.add('show');
+      submitButton.textContent = 'RSVP submitted';
+      this.reset();
+    } catch (error) {
+      status.textContent = error.message || 'We could not submit your RSVP. Please try again.';
+      status.classList.add('error', 'show');
+      submitButton.disabled = false;
+      submitButton.textContent = 'Submit RSVP';
+    }
   });
 </script>
 </body>
