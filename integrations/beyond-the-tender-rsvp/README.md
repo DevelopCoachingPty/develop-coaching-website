@@ -25,6 +25,9 @@ match `HEADERS` in `Code.gs` exactly.
 
 Never commit the GHL webhook URL.
 
+User text that starts with a formula character (`=`, `+`, `-`, `@`) is written to
+the Sheet with a leading apostrophe so it is stored as plain text, never run as a formula.
+
 ## GoHighLevel / Flow Build workflow
 
 Create and publish **Beyond the Tender 2026 — RSVP Confirmation** with an
