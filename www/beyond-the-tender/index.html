@@ -422,11 +422,19 @@
 
       const response = await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
         body: new URLSearchParams(formData).toString()
       });
-      const result = await response.json();
-      if (!result.ok) throw new Error(result.error || 'We could not submit your RSVP.');
+
+      // Apps Script web apps can return their ContentService payload through
+      // a cross-origin HTML redirect. In the browser that response cannot be
+      // read reliably, even though the submission has already succeeded.
+      // An opaque response here means the POST completed without a network
+      // failure; delivery failures are surfaced by the Flow Build alert path.
+      if (response.type !== 'opaque' && !response.ok) {
+        throw new Error('We could not submit your RSVP.');
+      }
 
       const isAttending = formData.get('attending') === 'yes';
       status.textContent = isAttending
