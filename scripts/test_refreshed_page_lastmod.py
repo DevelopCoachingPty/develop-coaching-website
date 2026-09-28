@@ -50,7 +50,10 @@ class RefreshedPageLastmodTest(unittest.TestCase):
                 self.assertEqual(exports[url]["modified_gmt"], expected_utc)
                 self.assertEqual(sitemaps[url], expected_date)
 
-                if not slug.startswith("courses/"):
+                if slug.startswith("courses/"):
+                    source = json.loads((ROOT / "content" / "mastermind-page.json").read_text())
+                    self.assertEqual(source["date"], expected_date)
+                else:
                     source = json.loads(
                         (ROOT / "content" / "blog-system" / f"{slug}.json").read_text()
                     )
