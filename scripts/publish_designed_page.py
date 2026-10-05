@@ -451,7 +451,13 @@ def main() -> None:
 
     out_file = os.path.join(pp.WWW, slug, "index.html")
     existed = os.path.exists(out_file)
-    overwrite = bool(args.overwrite or payload.get("overwrite"))
+    # Only a JSON true counts as consent: "false" or 1 would be truthy in
+    # Python, so anything that is not a real boolean is refused outright.
+    if "overwrite" in payload and not isinstance(payload["overwrite"], bool):
+        raise SystemExit(
+            f"publish_designed_page: \"overwrite\" must be JSON true or false, got {payload['overwrite']!r}"
+        )
+    overwrite = args.overwrite or payload.get("overwrite") is True
     if existed and not overwrite and not args.dry_run:
         raise SystemExit(
             f"publish_designed_page: page already exists: {out_file}. "

@@ -127,6 +127,23 @@ def check_overwrite_needs_opt_in() -> None:
             "overwrite payload field replaces the page",
             "<title>Test Page Title Gamma</title>" in open(out_file, encoding="utf-8").read(),
         )
+
+        # Only a JSON true is consent. A string like "false" is truthy in
+        # Python, so it must be refused rather than read as a yes.
+        current = open(out_file, encoding="utf-8").read()
+        for value in (False, "false", "no", "0", "true", 1, 0, None):
+            attempt = {**PAYLOAD, "title": "Test Page Title Delta", "overwrite": value}
+            check(f"overwrite {value!r} refused", refused(lambda: run_cli(www, attempt)))
+            check(
+                f"overwrite {value!r} left the page alone",
+                open(out_file, encoding="utf-8").read() == current,
+            )
+
+        run_cli(www, {**PAYLOAD, "title": "Test Page Title Epsilon", "overwrite": True})
+        check(
+            "overwrite true still replaces the page",
+            "<title>Test Page Title Epsilon</title>" in open(out_file, encoding="utf-8").read(),
+        )
     finally:
         shutil.rmtree(www, ignore_errors=True)
 

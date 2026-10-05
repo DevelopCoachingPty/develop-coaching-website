@@ -417,7 +417,13 @@ def main() -> None:
     out_dir = os.path.join(WWW, slug)
     out_file = os.path.join(out_dir, "index.html")
     existed = os.path.exists(out_file)
-    overwrite = bool(args.overwrite or payload.get("overwrite"))
+    # Only a JSON true counts as consent: "false" or 1 would be truthy in
+    # Python, so anything that is not a real boolean is refused outright.
+    if "overwrite" in payload and not isinstance(payload["overwrite"], bool):
+        raise SystemExit(
+            f"publish_page: \"overwrite\" must be JSON true or false, got {payload['overwrite']!r}"
+        )
+    overwrite = args.overwrite or payload.get("overwrite") is True
 
     # Replacing a live page is destructive and irreversible here, so it needs
     # saying out loud rather than happening as a side effect of a reused slug.
