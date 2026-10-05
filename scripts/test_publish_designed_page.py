@@ -6,6 +6,7 @@ import io
 import json
 import os
 import re
+import shutil
 import sys
 import tempfile
 
@@ -65,6 +66,46 @@ def run_main(payload: dict, *flags: str) -> None:
     finally:
         sys.argv = real_argv
         os.unlink(payload_path)
+
+
+def check_overwrite_needs_json_true() -> None:
+    """Only the CLI flag or a JSON true may replace an existing page.
+
+    Runs against a temp copy of the shell page so the real www/ tree is never
+    written to, even if the guard is broken.
+    """
+    real_www = designed.pp.WWW
+    www = tempfile.mkdtemp(prefix="designed-page-test-")
+    try:
+        shell = PAYLOAD["shell"]
+        os.makedirs(os.path.join(www, shell))
+        shutil.copy(
+            os.path.join(real_www, shell, "index.html"),
+            os.path.join(www, shell, "index.html"),
+        )
+        out_file = os.path.join(www, PAYLOAD["slug"], "index.html")
+        os.makedirs(os.path.dirname(out_file))
+        sentinel = "<html>existing live page</html>"
+        with open(out_file, "w", encoding="utf-8") as handle:
+            handle.write(sentinel)
+        designed.pp.WWW = www
+
+        for value in (False, "false", "no", "0", "true", 1, 0, None):
+            attempt = {**PAYLOAD, "overwrite": value}
+            check(f"overwrite {value!r} refused", refused(lambda: run_main(attempt)))
+            check(
+                f"overwrite {value!r} left the page alone",
+                open(out_file, encoding="utf-8").read() == sentinel,
+            )
+
+        run_main({**PAYLOAD, "overwrite": True})
+        check(
+            "overwrite true replaces the page",
+            open(out_file, encoding="utf-8").read() != sentinel,
+        )
+    finally:
+        designed.pp.WWW = real_www
+        shutil.rmtree(www, ignore_errors=True)
 
 
 def main() -> None:
@@ -437,6 +478,7 @@ def main() -> None:
     run_main(PAYLOAD, "--dry-run")
     after = hashlib.sha256(open(out_file, "rb").read()).hexdigest()
     check("dry run leaves existing page unchanged", before == after)
+    check_overwrite_needs_json_true()
 
     if failures:
         raise SystemExit(f"{len(failures)} check(s) failed: {', '.join(failures)}")
