@@ -499,8 +499,8 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
     <!-- Open Graph: without these, shared links render blank in ads, email and WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://develop-coaching.com/fill-the-order-book/">
-    <meta property="og:title" content="Fill The Order Book | Will your lads have work in January?">
-    <meta property="og:description" content="Live on Zoom, Thursday 22 October, 9.30am UK. Chase old quotes, offer January starts, get follow-up running. £45 covers you and your office manager. Live recording included.">
+    <meta property="og:title" content="Your lads will ask what's on in January. What will you tell them?">
+    <meta property="og:description" content="January gets booked in October. 90 minutes live with Greg Wilkes to chase old quotes and lock in January starts. Thu 22 Oct, 9.30am UK.">
     <meta property="og:image" content="https://develop-coaching.com/fill-the-order-book/og-fill-the-order-book.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -574,25 +574,20 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
 </head>
 <body>
 
-<!-- Top banner with seats bar (time based, starts 20% on 12 Oct, climbs to 95% by the day) -->
 <div class="top-banner">
-    Thursday 22 October, 9.30am UK, live on Zoom. <strong>£45 for you and your office manager. Live recording included.</strong>
-    <div class="seats-bar-container"><div class="seats-bar-fill" id="seatsBar"></div></div>
-    <div class="seats-label" id="seatsLabel">Seats nearly full</div>
+    Thursday 22 October <strong>9.30am UK</strong>
 </div>
 
 <!-- 1. Hero -->
 <section class="hero">
     <div class="hero-content">
-        <div class="workshop-eyebrow">Live Online Workshop | Thursday 22 October | 9.30am UK</div>
         <p class="event-name">Fill The Order Book</p>
-        <h1>Will your lads have work in January?</h1>
-        <p class="subheadline">Every winter the same builders sit on an empty planner, ringing round, dropping their price to keep the team busy. The ones who are flat out in January booked it in October and November. This is the 90 minutes where you do yours.</p>
+        <h1>Your lads will ask what's on in January. What are you going to tell them?</h1>
+        <p class="subheadline">January gets booked in October. Leave it and you'll be dropping your price to keep the team busy.</p>
 
         <div class="hero-cta">
             <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button" target="_blank" rel="noopener">Book My Seat for £45</a>
         </div>
-        <p class="credit-note">One ticket covers you and your office manager. Live recording included.</p>
 
         <div class="workshop-details">
             <span class="replay-stamp">Live Recording Included</span>
@@ -864,7 +859,7 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
         const progress = Math.min(Math.max((Date.now() - start) / (workshopDate - start), 0), 1);
         const pct = Math.round(20 + progress * 75);
         const bar = document.getElementById('seatsBar');
-        if (bar) bar.style.width = pct + '%';
+        if (!bar) return; bar.style.width = pct + '%';
         if (pct > 85 && bar) bar.style.background = 'linear-gradient(90deg, #c0392b 0%, #a93226 100%)';
     })();
 </script>
