@@ -41,6 +41,8 @@ UTILITIES = (
     '/10795-2/', '/thank-you-5m-builder-gameplan/',
     '/thank-you-built-to-cash-out/', '/thankyou/',
     '/thank-you-build-scale-summit/', '/thank-you/', '/thank-you-subscribe-2/',
+
+    '/stay-subscribed/', '/workshop-emails-stopped/',
 )
 
 class Metadata(HTMLParser):

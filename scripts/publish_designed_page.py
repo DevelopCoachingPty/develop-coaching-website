@@ -20,8 +20,13 @@ div-balanced in the export, so dropping it whole leaves valid HTML.
       "content_file": "content/mastermind.html",   # body markup + its <style>
       "shell": "courses/mastermind-course",        # page to borrow chrome from
       "date": "2026-08-11",
-      "image_url": "/wp-content/..."
+      "image_url": "/wp-content/...",
+      "noindex": true                              # optional utility page
     }
+
+A "noindex": true page (email confirmations and the like) gets a noindex robots
+tag and is left out of the sitemap and the site search, so it works when linked
+from an email but is never advertised for discovery.
 """
 import argparse
 import datetime
@@ -79,6 +84,24 @@ def remove_meta(head: str, attribute: str, key_pattern: str) -> str:
         head,
         flags=re.S,
     )
+
+
+def set_noindex(head: str) -> str:
+    """Replace the shell's robots tag with a single noindex, follow tag."""
+    tag = '<meta name="robots" content="noindex, follow"/>'
+    head, n = re.subn(r'<meta name="robots" content="[^"]*"\s*/>', "", head)
+    if n == 0:
+        raise SystemExit("publish_designed_page: robots tag not found in the shell page")
+    return head.replace("</head>", tag + "\n</head>", 1)
+
+
+def wants_noindex(payload: dict) -> bool:
+    """Only a JSON true marks a page noindex; anything else is a payload error."""
+    if "noindex" in payload and not isinstance(payload["noindex"], bool):
+        raise SystemExit(
+            f"publish_designed_page: \"noindex\" must be JSON true or false, got {payload['noindex']!r}"
+        )
+    return payload.get("noindex") is True
 
 
 def rewrite_service_jsonld(
@@ -339,12 +362,13 @@ def build_page(payload: dict) -> str:
 
     # Same SEO slots as the blog publisher, applied to the chrome's <head>.
     head = pp.slot(head, r"<title>.*?</title>", f"<title>{esc(title)}</title>", "<title>", 1)
+    # Stay inside one tag: shell descriptions end in '" />', and a lazy .*?
+    # would run on to the robots tag's '"/>' and delete it.
     head = re.sub(
-        r'<meta name="description" content=".*?"/>',
+        r'<meta name="description" content="[^"]*"\s*/>',
         lambda _: f'<meta name="description" content="{esc(description)}"/>',
         head,
         count=1,
-        flags=re.S,
     )
     head = re.sub(
         r'<link rel="canonical" href=".*?" />',
@@ -402,6 +426,8 @@ def build_page(payload: dict) -> str:
     )
     if payload.get("ga4_event_transport"):
         head = head.replace("</head>", GA4_EVENT_TRANSPORT + "\n</head>", 1)
+    if wants_noindex(payload):
+        head = set_noindex(head)
     for pattern in pp.STALE_TAGS:
         head = pattern.sub("", head)
     footer = re.sub(r"\s*<!-- Page cached by LiteSpeed Cache[^>]*-->\s*$", "\n", footer)
@@ -466,16 +492,17 @@ def main() -> None:
     if not args.dry_run:
         os.makedirs(os.path.dirname(out_file), exist_ok=True)
         open(out_file, "w", encoding="utf-8").write(html)
-        pp.update_sitemap(slug, date)
-        search_kind = payload.get("search_kind") or (
-            "courses" if slug.startswith("courses/") else "pages"
-        )
-        pp.update_search_index(
-            payload["title"],
-            slug,
-            payload.get("meta_description") or "",
-            kind=search_kind,
-        )
+        if not wants_noindex(payload):
+            pp.update_sitemap(slug, date)
+            search_kind = payload.get("search_kind") or (
+                "courses" if slug.startswith("courses/") else "pages"
+            )
+            pp.update_search_index(
+                payload["title"],
+                slug,
+                payload.get("meta_description") or "",
+                kind=search_kind,
+            )
 
     print(
         json.dumps(

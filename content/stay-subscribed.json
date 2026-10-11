@@ -1,0 +1,10 @@
+{
+  "title": "You're staying on the list | Develop Coaching",
+  "slug": "stay-subscribed",
+  "meta_description": "Thanks for staying subscribed to Develop Coaching emails for building company owners.",
+  "content_file": "content/stay-subscribed.html",
+  "css_files": ["content/_design-system.css", "content/_email-preferences.css"],
+  "shell": "about-greg-wilkes",
+  "date": "2026-10-12",
+  "noindex": true
+}

@@ -108,6 +108,79 @@ def check_overwrite_needs_json_true() -> None:
         shutil.rmtree(www, ignore_errors=True)
 
 
+def robots_tags(html: str) -> list:
+    return re.findall(r'<meta name="robots" content="([^"]*)"\s*/>', html)
+
+
+def check_robots_and_description(html: str) -> None:
+    """The description swap must not eat the robots tag that follows it."""
+    check("indexable page keeps exactly one robots tag", len(robots_tags(html)) == 1)
+    check(
+        "indexable page robots tag still says index",
+        bool(robots_tags(html)) and "index" in robots_tags(html)[0].split(", "),
+    )
+    descriptions = re.findall(r'<meta name="description" content="([^"]*)"\s*/>', html)
+    check(
+        "description replaced once",
+        descriptions == [PAYLOAD["meta_description"]],
+    )
+
+
+NOINDEX_PAGES = ("content/stay-subscribed.json", "content/workshop-emails-stopped.json")
+
+
+def check_noindex_pages() -> None:
+    """Email confirmation pages are noindex and never listed for discovery.
+
+    Runs main() against a temp site so the real sitemaps and search index are
+    untouched even if the guard is broken.
+    """
+    real_www = designed.pp.WWW
+    www = tempfile.mkdtemp(prefix="designed-noindex-test-")
+    try:
+        for name in ("about-greg-wilkes",):
+            os.makedirs(os.path.join(www, name))
+            shutil.copy(
+                os.path.join(real_www, name, "index.html"),
+                os.path.join(www, name, "index.html"),
+            )
+        for name in ("post-sitemap.xml", "page-sitemap.xml", "search-index.json"):
+            shutil.copy(os.path.join(real_www, name), os.path.join(www, name))
+        before = {
+            name: hashlib.sha256(open(os.path.join(www, name), "rb").read()).hexdigest()
+            for name in ("post-sitemap.xml", "page-sitemap.xml", "search-index.json")
+        }
+        designed.pp.WWW = www
+
+        for payload_file in NOINDEX_PAGES:
+            payload = json.load(open(os.path.join(designed.pp.ROOT, payload_file), encoding="utf-8"))
+            run_main(payload)
+            page = open(os.path.join(www, payload["slug"], "index.html"), encoding="utf-8").read()
+            tags = robots_tags(page)
+            check(f"{payload['slug']}: one robots tag", len(tags) == 1)
+            check(f"{payload['slug']}: robots says noindex", bool(tags) and "noindex" in tags[0].split(", "))
+            check(
+                f"{payload['slug']}: canonical is its own URL",
+                f'<link rel="canonical" href="https://develop-coaching.com/{payload["slug"]}/" />' in page,
+            )
+
+        after = {
+            name: hashlib.sha256(open(os.path.join(www, name), "rb").read()).hexdigest()
+            for name in before
+        }
+        check("noindex pages left sitemaps and search index untouched", before == after)
+
+        base = json.load(open(os.path.join(designed.pp.ROOT, NOINDEX_PAGES[0]), encoding="utf-8"))
+        for value in ("true", 1, "yes", None):
+            check(
+                f"noindex {value!r} refused",
+                refused(lambda: designed.build_page({**base, "noindex": value})),
+            )
+    finally:
+        designed.pp.WWW = real_www
+        shutil.rmtree(www, ignore_errors=True)
+
+
 def main() -> None:
     html = designed.build_page(PAYLOAD)
     with open("content/_design-system.css", encoding="utf-8") as handle:
@@ -479,6 +552,8 @@ def main() -> None:
     after = hashlib.sha256(open(out_file, "rb").read()).hexdigest()
     check("dry run leaves existing page unchanged", before == after)
     check_overwrite_needs_json_true()
+    check_robots_and_description(html)
+    check_noindex_pages()
 
     if failures:
         raise SystemExit(f"{len(failures)} check(s) failed: {', '.join(failures)}")
