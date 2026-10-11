@@ -1,0 +1,58 @@
+/* Short confirmation pages reached from email links. */
+.dc2-confirm {
+  padding: 72px 0 96px;
+}
+
+.dc2-confirm__inner {
+  max-width: 680px;
+}
+
+.dc2-confirm__tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--dc2-yellow);
+  color: var(--dc2-ink);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dc2-page .dc2-confirm h1 {
+  max-width: none;
+  margin-bottom: 20px;
+  font-size: 2.6rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.dc2-page .dc2-confirm p {
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+}
+
+.dc2-confirm__note {
+  color: var(--dc2-muted);
+}
+
+.dc2-confirm .dc2-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+@media (max-width: 680px) {
+  .dc2-confirm {
+    padding: 48px 0 64px;
+  }
+
+  .dc2-page .dc2-confirm h1 {
+    font-size: 2rem;
+  }
+}

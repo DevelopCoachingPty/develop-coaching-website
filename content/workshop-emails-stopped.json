@@ -1,0 +1,10 @@
+{
+  "title": "Done: no more emails about this workshop | Develop Coaching",
+  "slug": "workshop-emails-stopped",
+  "meta_description": "You won't get any more emails about this workshop. You're still on the Develop Coaching list for everything else.",
+  "content_file": "content/workshop-emails-stopped.html",
+  "css_files": ["content/_design-system.css", "content/_email-preferences.css"],
+  "shell": "about-greg-wilkes",
+  "date": "2026-10-12",
+  "noindex": true
+}
