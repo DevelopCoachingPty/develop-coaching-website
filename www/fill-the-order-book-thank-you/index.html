@@ -193,15 +193,10 @@
     </style>
 <!-- GA4 -->
 
+<script src="/assets/ftob-attribution.js"></script>
 <script>
-  // UTM pickup: landing page saves utm_* to localStorage (dc_ftob_utm); attach to purchase events.
-  window.dcUtm = (function () {
-    var out = {};
-    try { out = JSON.parse(localStorage.getItem("dc_ftob_utm") || "{}"); } catch (e) {}
-    var p = new URLSearchParams(window.location.search);
-    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function (k) { if (p.get(k)) out[k] = p.get(k); });
-    return out;
-  })();
+  // Use the same last tagged source as checkout, including untagged return visits.
+  window.dcUtm = window.dcFtobAttribution();
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
 <script>
