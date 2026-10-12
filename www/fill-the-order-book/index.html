@@ -957,24 +957,19 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
     })();
 </script>
 
+<script src="/assets/ftob-attribution.js"></script>
 <script>
     // Source attribution packed into client_reference_id for the ticket counter.
     (function () {
-        var p = new URLSearchParams(window.location.search);
-        // Keep the first-touch UTMs so the thank-you page can attach them to Purchase.
-        try {
-            var keep = {};
-            ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function (k) { if (p.get(k)) keep[k] = p.get(k); });
-            if (keep.utm_source) localStorage.setItem('dc_ftob_utm', JSON.stringify(keep));
-        } catch (e) {}
+        var attribution = window.dcFtobAttribution();
         function clean(v, max) {
             return (v || '').toString().toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, max || 50);
         }
-        var source = clean(p.get('utm_source')) || 'direct';
-        var campaign = clean(p.get('utm_campaign'));
-        var content = clean(p.get('utm_content'));
-        var term = clean(p.get('utm_term'));
+        var source = clean(attribution.utm_source) || 'direct';
+        var campaign = clean(attribution.utm_campaign);
+        var content = clean(attribution.utm_content);
+        var term = clean(attribution.utm_term);
         var parts = ['s-' + source];
         if (campaign) parts.push('c-' + campaign);
         if (content) parts.push('a-' + content);
