@@ -109,7 +109,14 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .hero-cta { margin-bottom: 14px; }
+        .hero-cta { margin-bottom: 56px; }
+        .cta-button { animation: ctaPulse 1.8s ease-in-out infinite; }
+        .cta-button:hover { animation-play-state: paused; }
+        @keyframes ctaPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(253,206,54,0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 14px rgba(253,206,54,0); }
+        }
+        @media (prefers-reduced-motion: reduce) { .cta-button { animation: none; } }
         .credit-note {
             font-size: 1.05rem;
             color: var(--yellow);
