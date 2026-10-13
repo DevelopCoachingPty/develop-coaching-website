@@ -3,6 +3,3053 @@
  "bulkRedirectsPath": "priority-redirects.json",
  "redirects": [
   {
+   "source": "/",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/",
+   "permanent": true
+  },
+  {
+   "source": "/about-greg-wilkes{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/about-greg-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/attract-the-best{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/attract-the-best/",
+   "permanent": true
+  },
+  {
+   "source": "/attract-the-right-clients{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/attract-the-right-clients/",
+   "permanent": true
+  },
+  {
+   "source": "/become-financially-free{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/become-financially-free/",
+   "permanent": true
+  },
+  {
+   "source": "/blog{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/book-download{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/book-download/",
+   "permanent": true
+  },
+  {
+   "source": "/carpentry-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/carpentry-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/client-wins{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/client-wins/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-business-goals{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-goals/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-business-systems{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-systems/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-marketing{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-podcast{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/contact{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/contact/",
+   "permanent": true
+  },
+  {
+   "source": "/courses/mastermind-course{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/courses/mastermind-course/",
+   "permanent": true
+  },
+  {
+   "source": "/double-your-profits-workshop{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/double-your-profits-workshop/",
+   "permanent": true
+  },
+  {
+   "source": "/download-book{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/download-book/",
+   "permanent": true
+  },
+  {
+   "source": "/electrical-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/electrical-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/event-booking{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/event-booking/",
+   "permanent": true
+  },
+  {
+   "source": "/feedback-frenzy-how-to-get-more-5-star-reviews{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/feedback-frenzy-how-to-get-more-5-star-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/finish-on-time-every-time{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/finish-on-time-every-time/",
+   "permanent": true
+  },
+  {
+   "source": "/free-trainings{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/free-trainings/",
+   "permanent": true
+  },
+  {
+   "source": "/getting-off-the-tools{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/getting-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/good-reviews{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/good-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/greg-wilkes-media{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/greg-wilkes-media/",
+   "permanent": true
+  },
+  {
+   "source": "/groundwork-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/groundwork-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-deal-with-negative-reviews{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-deal-with-negative-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-find-good-tradesmen{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-find-good-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-get-clients-in-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-get-clients-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-get-good-reviews{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-get-good-reviews/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-get-into-property-development{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-get-into-property-development/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-recruit-for-your-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-scale-your-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-scale-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/landscaping-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/landscaping-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/mastering-construction-hiring-key-steps-for-building-a-skilled-workforce/",
+   "permanent": true
+  },
+  {
+   "source": "/perform-at-your-best{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/perform-at-your-best/",
+   "permanent": true
+  },
+  {
+   "source": "/plumbing-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/plumbing-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/5-core-systems{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/5-core-systems/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/5-numbers-to-5m-with-gavin-smith-the-profit-analyst{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/5-numbers-to-5m-with-gavin-smith-the-profit-analyst/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/a-journey-from-contractor-to-20m{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/a-journey-from-contractor-to-20m/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/active-campaign-with-ernie-santeralli-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/active-campaign-with-ernie-santeralli-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/ai-unleashed-the-future-of-construction-marketing-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/ai-unleashed-the-future-of-construction-marketing-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/are-coaches-a-waste-of-time-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/are-coaches-a-waste-of-time-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/are-you-a-terrible-leader-with-sondra-norris{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/are-you-a-terrible-leader-with-sondra-norris/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/benefits-of-federation-master-builders-with-hayley-lorimer-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/benefits-of-federation-master-builders-with-hayley-lorimer-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/branding-with-sapna-pieroux-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/branding-with-sapna-pieroux-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/building-a-32m-electric-empire-with-mike-agugliaro-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/building-a-32m-electric-empire-with-mike-agugliaro-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/building-wealth-with-bricks-a-property-portfolio-journey-with-danielle-bell-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/building-wealth-with-bricks-a-property-portfolio-journey-with-danielle-bell-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/can-i-sell-my-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/can-i-sell-my-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/digital-marketing-with-apprentice-finalist-michaela-wain-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/digital-marketing-with-apprentice-finalist-michaela-wain-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/earn-additional-revenue-streams-with-uk-fire-door-training{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/earn-additional-revenue-streams-with-uk-fire-door-training/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/fire-regs-made-easy{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/fire-regs-made-easy/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/get-citb-funding{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/get-citb-funding/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/good-to-great-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/good-to-great-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/growing-a-140m-plumbing-company-with-charlie-mullins-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/growing-a-140m-plumbing-company-with-charlie-mullins-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/harnessing-hidden-talent-the-case-for-internal-hiring-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/harnessing-hidden-talent-the-case-for-internal-hiring-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/high-performing-project-managers{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/high-performing-project-managers/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/hire-a-project-manager{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/hire-a-project-manager/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-4d-tech-can-improve-your-delivery{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-4d-tech-can-improve-your-delivery/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-i-generated-43-million-tiktok-views-with-ashley-mackintosh-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-i-generated-43-million-tiktok-views-with-ashley-mackintosh-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-remote-assistance-is-changing-construction-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-remote-assistance-is-changing-construction-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-come-back-from-failure-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-come-back-from-failure-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-free-up-1-day-per-week-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-free-up-1-day-per-week-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-get-more-women-into-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-get-more-women-into-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-get-on-a-framework-agreement-with-shamayne-harris{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-get-on-a-framework-agreement-with-shamayne-harris/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-step-off-the-tools{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-step-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-succeed-as-a-dadpreneur-with-carl-taylor{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-succeed-as-a-dadpreneur-with-carl-taylor/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-to-survive-thrive-during-a-recession{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-to-survive-thrive-during-a-recession/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/improve-subcontractor-procurement-with-paul-heming{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/improve-subcontractor-procurement-with-paul-heming/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/lessons-from-an-olympic-gold-medalist-with-grace-prendergast{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/lessons-from-an-olympic-gold-medalist-with-grace-prendergast/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/low-testosterone-ruins-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/low-testosterone-ruins-business/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/mental-health-and-construction-sports-with-steven-kerslake{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/mental-health-and-construction-sports-with-steven-kerslake/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/mortgages-marketing-with-gary-das-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/mortgages-marketing-with-gary-das-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/new-rules-of-marketing-with-david-meerman-scott-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/new-rules-of-marketing-with-david-meerman-scott-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/nurturing-your-leads{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/nurturing-your-leads/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/optimising-peak-performance-with-jairek-robbins{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/optimising-peak-performance-with-jairek-robbins/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/overcoming-deep-insecurities-with-jaemin-frazer{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/overcoming-deep-insecurities-with-jaemin-frazer/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/part-1-7-tips-to-grow-your-business-with-tim-charles-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/part-1-7-tips-to-grow-your-business-with-tim-charles-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/part-2-7-tips-to-grow-your-business-with-tim-charles-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/part-2-7-tips-to-grow-your-business-with-tim-charles-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/peak-performance-with-vinnie-vecchio-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/peak-performance-with-vinnie-vecchio-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/prepare-to-sell-your-business-with-chris-dufey{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/prepare-to-sell-your-business-with-chris-dufey/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/profit-first-with-specialist-dan-edwards{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/profit-first-with-specialist-dan-edwards/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/property-development-with-bryn-little-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/property-development-with-bryn-little-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/protect-your-profit-margin-with-greg-wilkes{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/protect-your-profit-margin-with-greg-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/recruitment-techniques-with-stephanie-buck-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/recruitment-techniques-with-stephanie-buck-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/resilience-unleashed-sebastian-bates-journey-to-a-global-brand-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/resilience-unleashed-sebastian-bates-journey-to-a-global-brand-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/secrets-to-finding-top-tradie-talent-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/secrets-to-finding-top-tradie-talent-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/should-i-get-iso-certified-with-andrew-foy-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/should-i-get-iso-certified-with-andrew-foy-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/steps-to-overcome-addiction-with-conrad-tracey-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/steps-to-overcome-addiction-with-conrad-tracey-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/stop-firefighting-with-barbara-nixon{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/stop-firefighting-with-barbara-nixon/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/stop-losing-clients-after-the-sale-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/stop-losing-clients-after-the-sale-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/systemise-your-business-with-james-brown{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/systemise-your-business-with-james-brown/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/tax-breaks-and-funding-with-william-petko-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/tax-breaks-and-funding-with-william-petko-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-5-pillars-to-growth{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-5-pillars-to-growth/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-essential-linkedin-playbook-with-louise-brogan-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-essential-linkedin-playbook-with-louise-brogan-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-importance-of-goal-setting-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-importance-of-goal-setting-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-perfect-site-setup{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-perfect-week-with-emma-mills{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-perfect-week-with-emma-mills/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-rise-of-women-in-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-rise-of-women-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/the-wealth-mentor-with-jackson-millan{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/the-wealth-mentor-with-jackson-millan/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/uk-tax-changes-for-2023-with-tim-charles{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/uk-tax-changes-for-2023-with-tim-charles/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/understanding-your-numbers-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/understanding-your-numbers-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/using-your-brand-to-gain-a-competitor-advantage-with-john-lenker{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/using-your-brand-to-gain-a-competitor-advantage-with-john-lenker/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/websites-the-pop-with-angie-wilkes{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/websites-the-pop-with-angie-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/what-i-learned-from-mo-farah-about-scaling-with-adam-strong{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/what-i-learned-from-mo-farah-about-scaling-with-adam-strong/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/why-a-va-is-essential-to-get-you-to-1m-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/why-a-va-is-essential-to-get-you-to-1m-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/why-you-must-use-video-in-your-marketing-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/why-you-must-use-video-in-your-marketing-transcript/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/5-core-systems{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/5-core-systems/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/5-numbers-to-5m-with-gavin-smith-the-profit-analyst{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/5-numbers-to-5m-with-gavin-smith-the-profit-analyst/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/a-journey-from-contractor-to-20m-developer{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/a-journey-from-contractor-to-20m-developer/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/active-campaign-with-ernie-santeralli{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/active-campaign-with-ernie-santeralli/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/ai-unleashed-the-future-of-construction-marketing{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/ai-unleashed-the-future-of-construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/are-coaches-a-waste-of-time{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/are-coaches-a-waste-of-time/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/are-you-a-terrible-leader-with-sondra-norris{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/are-you-a-terrible-leader-with-sondra-norris/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/benefits-of-federation-master-builders-with-hayley-lorimer{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/benefits-of-federation-master-builders-with-hayley-lorimer/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/branding-with-sapna-pieroux{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/branding-with-sapna-pieroux/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/building-a-32m-electric-empire-with-mike-agugliaro{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/building-a-32m-electric-empire-with-mike-agugliaro/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/building-a-strong-construction-team-tips-for-successful-recruiting-with-gaelle-blake/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/building-wealth-with-bricks-a-property-portfolio-journey{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/building-wealth-with-bricks-a-property-portfolio-journey/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/can-i-sell-my-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/can-i-sell-my-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/digital-marketing-with-apprentice-finalist-michaela-wain{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/digital-marketing-with-apprentice-finalist-michaela-wain/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/earn-additional-revenue-streams-with-uk-fire-door-training{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/earn-additional-revenue-streams-with-uk-fire-door-training/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/fire-regs-made-easy{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/fire-regs-made-easy/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/from-firefighting-to-fueling-a-1m-electrical-company-the-journey-of-dan-james/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/get-citb-funding{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/get-citb-funding/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/good-to-great{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/good-to-great/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/growing-a-140m-plumbing-company-with-charlie-mullins{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/growing-a-140m-plumbing-company-with-charlie-mullins/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/harnessing-hidden-talent-the-case-for-internal-hiring{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/harnessing-hidden-talent-the-case-for-internal-hiring/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/high-performing-project-managers{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/high-performing-project-managers/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/houzz-pro-with-andrew-small{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/houzz-pro-with-andrew-small/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-4d-tech-can-improve-your-delivery{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-4d-tech-can-improve-your-delivery/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-i-generated-43-million-tiktok-views-with-ashley-mackintosh{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-i-generated-43-million-tiktok-views-with-ashley-mackintosh/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-i-overcome-a-65m-property-portfolio-collapse-with-gavin-gallagher/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-remote-assistance-is-changing-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-remote-assistance-is-changing-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-come-back-from-failure-2{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-come-back-from-failure-2/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-free-up-1-day-per-week{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-free-up-1-day-per-week/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-get-more-women-into-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-get-more-women-into-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-get-on-a-framework-agreement-with-shamayne-harris{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-get-on-a-framework-agreement-with-shamayne-harris/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-scale-a-team-rapidly-in-the-philippines-with-kody-thompson/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-step-off-the-tools{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-step-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-succeed-as-a-dadpreneur-with-carl-taylor{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-succeed-as-a-dadpreneur-with-carl-taylor/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-to-survive-and-thrive-during-a-recession{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/how-to-survive-and-thrive-during-a-recession/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/improve-subcontractor-procurement-with-paul-heming{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/improve-subcontractor-procurement-with-paul-heming/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/its-ok-to-quit-and-change-direction-with-rodric-lenheart{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/its-ok-to-quit-and-change-direction-with-rodric-lenheart/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/lessons-from-an-olympic-gold-medalist-with-grace-prendergast{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/lessons-from-an-olympic-gold-medalist-with-grace-prendergast/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/low-testosterone-ruins-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/low-testosterone-ruins-business/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/mental-health-and-construction-sports-with-steven-kerslake{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/mental-health-and-construction-sports-with-steven-kerslake/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/mortgages-marketing-with-gary-das{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/mortgages-marketing-with-gary-das/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/negotiating-contracts-the-right-way{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/negotiating-contracts-the-right-way/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/new-rules-of-marketing-with-david-meerman-scott{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/new-rules-of-marketing-with-david-meerman-scott/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/nurturing-your-leads{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/nurturing-your-leads/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/optimising-peak-performance-with-jairek-robbins{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/optimising-peak-performance-with-jairek-robbins/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/part-1-7-tips-to-grow-your-business-with-tim-charles{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/part-1-7-tips-to-grow-your-business-with-tim-charles/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/part-2-7-tips-to-grow-your-business-with-tim-charles{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/part-2-7-tips-to-grow-your-business-with-tim-charles/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/peak-performance-with-vinnie-vecchio{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/peak-performance-with-vinnie-vecchio/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/prepare-to-sell-your-business-with-chris-dufey{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/prepare-to-sell-your-business-with-chris-dufey/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/profit-first-with-specialist-dan-edwards{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/profit-first-with-specialist-dan-edwards/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/property-development-with-bryn-little{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/property-development-with-bryn-little/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/protect-your-profit-margin-podcast{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/protect-your-profit-margin-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/recruitment-techniques-with-stephanie-buck{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/recruitment-techniques-with-stephanie-buck/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/resilience-unleashed-sebastian-bates-journey-to-a-global-brand{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/resilience-unleashed-sebastian-bates-journey-to-a-global-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/secrets-to-finding-top-tradie-talent{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/secrets-to-finding-top-tradie-talent/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/should-i-get-iso-certified-with-andrew-foy{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/should-i-get-iso-certified-with-andrew-foy/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/steps-to-overcome-addiction-conrad-tracey{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/steps-to-overcome-addiction-conrad-tracey/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/stop-firefighting-with-barbara-nixon{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/stop-firefighting-with-barbara-nixon/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/stop-losing-clients-after-the-sale{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/stop-losing-clients-after-the-sale/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/systemise-your-business-with-james-brown{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/systemise-your-business-with-james-brown/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/tax-breaks-and-funding-with-william-petko{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/tax-breaks-and-funding-with-william-petko/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-5-pillars-to-growth{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-5-pillars-to-growth/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-essential-linkedin-playbook-with-louise-brogan{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-essential-linkedin-playbook-with-louise-brogan/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-importance-of-goal-setting{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-importance-of-goal-setting/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-perfect-site-setup{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-perfect-week-with-emma-mills{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-perfect-week-with-emma-mills/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/the-wealth-mentor-with-jackson-millan{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/the-wealth-mentor-with-jackson-millan/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/top-mistakes-construction-business-owners-make-and-how-to-avoid-them-with-jason-graystone/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/uk-tax-changes-for-2023-with-tim-charles{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/uk-tax-changes-for-2023-with-tim-charles/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/understanding-your-numbers{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/understanding-your-numbers/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/websites-the-pop-with-angie-wilkes{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/websites-the-pop-with-angie-wilkes/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/what-i-learned-from-mo-farah-about-scaling-with-adam-strong{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/what-i-learned-from-mo-farah-about-scaling-with-adam-strong/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/why-a-va-is-essential-to-get-you-to-1m{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/why-a-va-is-essential-to-get-you-to-1m/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/why-you-must-use-video-in-your-marketing{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/why-you-must-use-video-in-your-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/privacy{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/privacy/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule-a-call{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/sell-construction-company{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/sell-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/streamlined-procurement-system{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/streamlined-procurement-system/",
+   "permanent": true
+  },
+  {
+   "source": "/terms-conditions{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/terms-conditions/",
+   "permanent": true
+  },
+  {
+   "source": "/the-5-pillars{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-5-pillars/",
+   "permanent": true
+  },
+  {
+   "source": "/the-architect-attractor{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-architect-attractor/",
+   "permanent": true
+  },
+  {
+   "source": "/the-big-5{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-big-5/",
+   "permanent": true
+  },
+  {
+   "source": "/the-big-growth-plan{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-big-growth-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/the-client-magnet{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-client-magnet/",
+   "permanent": true
+  },
+  {
+   "source": "/the-daily-timeout{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-daily-timeout/",
+   "permanent": true
+  },
+  {
+   "source": "/the-freedom-figure{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-freedom-figure/",
+   "permanent": true
+  },
+  {
+   "source": "/the-funnel-optimiser{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-funnel-optimiser/",
+   "permanent": true
+  },
+  {
+   "source": "/the-hand-off{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-hand-off/",
+   "permanent": true
+  },
+  {
+   "source": "/the-lead-analyser{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-lead-analyser/",
+   "permanent": true
+  },
+  {
+   "source": "/the-optimised-office-team{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-optimised-office-team/",
+   "permanent": true
+  },
+  {
+   "source": "/the-outbound-marketing-machine{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-outbound-marketing-machine/",
+   "permanent": true
+  },
+  {
+   "source": "/the-perfect-presentation{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-perfect-presentation/",
+   "permanent": true
+  },
+  {
+   "source": "/the-perfect-site-setup{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-perfect-site-setup/",
+   "permanent": true
+  },
+  {
+   "source": "/the-sales-mastery{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-sales-mastery/",
+   "permanent": true
+  },
+  {
+   "source": "/the-schedule-page{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-schedule-page/",
+   "permanent": true
+  },
+  {
+   "source": "/the-social-supercharge{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-social-supercharge/",
+   "permanent": true
+  },
+  {
+   "source": "/the-switch-off{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-switch-off/",
+   "permanent": true
+  },
+  {
+   "source": "/the-system-saver{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-system-saver/",
+   "permanent": true
+  },
+  {
+   "source": "/the-time-trade{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/the-time-trade/",
+   "permanent": true
+  },
+  {
+   "source": "/usp-for-construction-company{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/va{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/va/",
+   "permanent": true
+  },
+  {
+   "source": "/webinar{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/what-we-can-learn-from-mount-everest{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/what-we-can-learn-from-mount-everest/",
+   "permanent": true
+  },
+  {
+   "source": "/why-you-need-to-come-off-the-tools{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/why-you-need-to-come-off-the-tools/",
+   "permanent": true
+  },
+  {
+   "source": "/win-big-clients-webinar{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/win-big-clients-webinar/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-accounting{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/accounting-for-construction-companies/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-business-profit{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-profits/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-company-business-plan{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-marketing-2{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-marketing/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-metrics{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-performance/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-recruitment{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-recruit-for-your-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-social-media-marketing{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-use-social-media-for-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/construction-time-management{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/time-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/drylining-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/plastering-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/grow-a-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-grow-a-construction-business/",
+   "permanent": true
+  },
+  {
+   "source": "/painting-business-coach{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/decorating-business-coach/",
+   "permanent": true
+  },
+  {
+   "source": "/plan-your-site-set-up{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-site-set-up-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/a-safer-workplace-adds-profit-with-gavin-coyle{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/a-safer-workplace-adds-profit-with-gavin-coyle-2/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/get-citb-funding-with-debb-madden-nathan-wilkins-2{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/get-citb-funding/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/get-citb-funding-with-debb-madden-nathan-wilkins{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/get-citb-funding/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/houzz-pro-with-andrew-small{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/houzz-pro-with-andrew-small-transcript-2/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/how-jamie-mills-built-a-multi-million-pound{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-jamie-mills-built-a-multi-million-pound-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/its-ok-to-quit-and-change-direction-with-rodric-lenheart-3/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast-transcript/negotiating-contracts-the-right-way{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/negotiating-contract-the-right-way/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/5-signs-you-need-to-hire-a-project-manager{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/hire-a-project-manager/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/a-safer-workplace-adds-profit-with-gavin-coyle{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/a-safer-workplace-adds-profit-with-gavin-coyle-2/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/how-jamie-mills-built-a-multi-million-pound{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/how-jamie-mills-built-a-multi-million-pound-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/overcoming-deep-insecurities-with-jaemin-frazer-2-2{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast/overcoming-deep-insecurities-with-jaemin-frazer/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/using-brand-gain-competitor-advantage-john-lenker{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/podcast-transcript/using-your-brand-to-gain-a-competitor-advantage-with-john-lenker/",
+   "permanent": true
+  },
+  {
+   "source": "/reviews-for-construction-company{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/customer-reviews-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule-a-call-book{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/schedule-a-call-subscribe{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/social-media-construction-company{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/social-media-for-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/social-media-construction-industry/",
+   "permanent": true
+  },
+  {
+   "source": "/stop-wasting-time-on-quotes{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-stop-wasting-time-on-quotes/",
+   "permanent": true
+  },
+  {
+   "source": "/2021-builders-trades{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/before-your-scale-session{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/schedule-a-call/",
+   "permanent": true
+  },
+  {
+   "source": "/build-your-future-event-page{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/5-steps-to-5-million-navigation/",
+   "permanent": true
+  },
+  {
+   "source": "/business-coach-for-builders{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/courses{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/free-trainings/",
+   "permanent": true
+  },
+  {
+   "source": "/cut-expenses-for-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/cost-cutting-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/digital-marketing{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/digital-marketing-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/finding-your-usp{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/how-can-i-make-the-best-use-of-my-time-at-home{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/time-in-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-become-a-trade-mastermind-in-your-construction-business{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/trade-mastermind-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-find-and-keep-excellent-staff{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/how-to-find-good-tradesmen/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-find-your-usp{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/usp-for-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/how-to-optimise-your-sales-funnel{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-sales-funnel/",
+   "permanent": true
+  },
+  {
+   "source": "/how-we-work{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/business-coaching-for-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/image-and-branding{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-brand/",
+   "permanent": true
+  },
+  {
+   "source": "/master-builders-australia{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/federation-of-master-builders/",
+   "permanent": true
+  },
+  {
+   "source": "/paid-digital-advertising{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/digital-marketing-construction/",
+   "permanent": true
+  },
+  {
+   "source": "/pandemic-affect-construction{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/profit-and-loss-report{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/profit-and-loss-statement-for-small-construction-company/",
+   "permanent": true
+  },
+  {
+   "source": "/show-up-like-a-boss-in-2024{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/perform-at-your-best/",
+   "permanent": true
+  },
+  {
+   "source": "/strategic-planning-for-2024{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-business-plan/",
+   "permanent": true
+  },
+  {
+   "source": "/test-page{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/",
+   "permanent": true
+  },
+  {
+   "source": "/feed{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/podcast/feed{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/category/podcast/feed{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/construction-podcast/",
+   "permanent": true
+  },
+  {
+   "source": "/comments/feed{/}?",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/blog/",
+   "permanent": true
+  },
+  {
+   "source": "/wp-content/uploads/:path*",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/",
+   "permanent": true
+  },
+  {
+   "source": "/:path*",
+   "has": [
+    {
+     "type": "host",
+     "value": "(www\\.)?developcoaching\\.com\\.au"
+    }
+   ],
+   "destination": "https://develop-coaching.com/",
+   "permanent": true
+  },
+  {
    "source": "/2021-builders-trades",
    "destination": "/the-construction-company-marketing-strategy-to-scale-past-1m/",
    "permanent": true
