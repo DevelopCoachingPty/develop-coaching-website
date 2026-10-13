@@ -14,6 +14,7 @@ import shutil
 
 from simplify_navigation import simplify_main_navigation
 from modernise_footer import modernise_footer
+import comau_redirects
 
 REF = "export/reference"
 OUT = "www"
@@ -418,8 +419,14 @@ def main():
             "/blog/:path(.+)/:slug([^/]+)"
         )
     )
+    # developcoaching.com.au retirement: host-scoped 301s from
+    # export/comau-redirect-map.csv, placed FIRST (catch-all last in block).
+    redirects = comau_redirects.apply(redirects)
     vercel = {
         "trailingSlash": True,
+        # Bulk redirects run before trailingSlash; see
+        # docs/slashless-redirects-2026-09-04.md. Keep www/priority-redirects.json.
+        "bulkRedirectsPath": "priority-redirects.json",
         "redirects": redirects,
         "rewrites": [
             {"source": "/feed/podcast", "destination": "/feeds/podcast.xml"},

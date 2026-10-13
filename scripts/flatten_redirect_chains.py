@@ -45,6 +45,10 @@ def exact_map(redirects):
     result = {}
     for redirect in redirects:
         source = redirect["source"]
+        # Host-scoped rules (e.g. the developcoaching.com.au retirement map)
+        # never fire on this site's own hosts, so they are not local chains.
+        if redirect.get("has"):
+            continue
         if any(marker in source for marker in (":", "(", "*")):
             continue
         key = normalise(source)

@@ -1,27 +1,55 @@
 [
   {
-    "source": "/my-story",
+    "source": "https://develop-coaching.com/my-story",
     "destination": "/about-greg-wilkes/",
     "permanent": true,
     "caseSensitive": true,
     "preserveQueryParams": true
   },
   {
-    "source": "/case-study",
+    "source": "https://develop-coaching.com/case-study",
     "destination": "/about-greg-wilkes/",
     "permanent": true,
     "caseSensitive": true,
     "preserveQueryParams": true
   },
   {
-    "source": "/contact-2",
+    "source": "https://develop-coaching.com/contact-2",
     "destination": "/contact/",
     "permanent": true,
     "caseSensitive": true,
     "preserveQueryParams": true
   },
   {
-    "source": "/contact-2/",
+    "source": "https://develop-coaching.com/contact-2/",
+    "destination": "/contact/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "https://www.develop-coaching.com/my-story",
+    "destination": "/about-greg-wilkes/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "https://www.develop-coaching.com/case-study",
+    "destination": "/about-greg-wilkes/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "https://www.develop-coaching.com/contact-2",
+    "destination": "/contact/",
+    "permanent": true,
+    "caseSensitive": true,
+    "preserveQueryParams": true
+  },
+  {
+    "source": "https://www.develop-coaching.com/contact-2/",
     "destination": "/contact/",
     "permanent": true,
     "caseSensitive": true,
