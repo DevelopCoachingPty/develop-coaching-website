@@ -15,16 +15,25 @@ class SeoFollowupTests(unittest.TestCase):
         self.assertTrue(config['trailingSlash'])
         self.assertEqual(config.get('bulkRedirectsPath'), 'priority-redirects.json')
         rules = json.loads((ROOT / 'www' / config['bulkRedirectsPath']).read_text())
-        self.assertEqual(len(rules), 2)
-        self.assertEqual({r['source'] for r in rules}, {'/my-story', '/case-study'})
+        # Bulk redirects cannot take a host condition and run before every
+        # deployment route, so they are pinned to the .com hosts with fully
+        # qualified sources (never fire on developcoaching.com.au).
+        hosts = ('https://develop-coaching.com', 'https://www.develop-coaching.com')
+        paths = {'/my-story', '/case-study', '/contact-2', '/contact-2/'}
+        self.assertEqual(len(rules), 8)
+        self.assertEqual({r['source'] for r in rules}, {h + p for h in hosts for p in paths})
         manual = json.loads((ROOT / 'export/manual-redirects.json').read_text())
         for rule in rules:
-            self.assertEqual(rule['destination'], '/about-greg-wilkes/')
+            path = rule['source'].split('.com', 1)[1]
+            expected = '/contact/' if path.startswith('/contact-2') else '/about-greg-wilkes/'
+            self.assertEqual(rule['destination'], expected)
             self.assertIs(rule['permanent'], True)
             self.assertIs(rule['caseSensitive'], True)
             self.assertIs(rule['preserveQueryParams'], True)
+            if path.startswith('/contact-2'):
+                continue  # priority-only rule (c0f072f); no fallback copy kept
             for existing in (config['redirects'], manual):
-                self.assertTrue(any(r['source'] == rule['source'] and
+                self.assertTrue(any(r['source'] == path and
                                     r['destination'] == rule['destination']
                                     for r in existing))
 
