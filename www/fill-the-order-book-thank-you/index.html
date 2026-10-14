@@ -357,29 +357,27 @@ summary:focus-visible,
   // Use the same last tagged source as checkout, including untagged return visits.
   window.dcUtm = window.dcFtobAttribution();
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-EX5H3P27NP');
-  // GA4 purchase, gated on the Stripe session_id exactly like the Meta Purchase event.
-  // Without the gate, any direct hit or bookmark would log a fake sale in GA4 too.
-  (function () {
-    var sid = new URLSearchParams(window.location.search).get('session_id');
-    if (sid) {
-      gtag('event', 'purchase', {
-        transaction_id: sid,
-        campaign_source: window.dcUtm.utm_source || "direct",
-        campaign_name: window.dcUtm.utm_campaign || "",
-        campaign_content: window.dcUtm.utm_content || "",
-        campaign_term: window.dcUtm.utm_term || "",
-        value: 45.00,
-        currency: 'GBP',
-        items: [{item_id: 'fill-the-order-book-oct-2026', item_name: 'Fill The Order Book Ticket', price: 45.00, quantity: 1}]
-      });
-    }
-  })();
+  // Keep the Stripe session ID out of Analytics page URLs.
+  gtag('config', 'G-PXT2VCVFLW', {page_location: window.location.origin + window.location.pathname});
+  // A return URL is not proof of payment. Revenue comes from verified Stripe payments.
+  // Measure this separately, without a transaction ID, value or purchase event.
+  if (new URLSearchParams(window.location.search).has('session_id')) {
+    gtag('event', 'checkout_return', {
+      send_to: 'G-PXT2VCVFLW',
+      workshop_id: 'fill-the-order-book-october-2026',
+      payment_verified: false,
+      campaign_source: window.dcUtm.utm_source || 'direct',
+      campaign_medium: window.dcUtm.utm_medium || '',
+      campaign_name: window.dcUtm.utm_campaign || '',
+      campaign_content: window.dcUtm.utm_content || '',
+      campaign_term: window.dcUtm.utm_term || ''
+    });
+  }
 </script>
 <!-- Meta Pixel -->
 <script>
@@ -393,10 +391,9 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '260128381862353');
 fbq('track', 'PageView');
-// Only fire Purchase for genuine buyers redirected from Stripe (Stripe appends ?session_id=cs_... on the redirect).
-// Prevents phantom conversions from direct hits, bookmarks, back-button, previews and bots.
-if (new URLSearchParams(window.location.search).get('session_id')) {
-  fbq('track', 'Purchase', {value: 45.00, currency: 'GBP', content_name: 'Fill The Order Book Ticket', utm_source: window.dcUtm.utm_source || 'direct', utm_campaign: window.dcUtm.utm_campaign || '', utm_content: window.dcUtm.utm_content || '', utm_term: window.dcUtm.utm_term || ''}, {eventID: new URLSearchParams(window.location.search).get('session_id')});
+// Keep unverified return visits separate from paid conversions in Meta too.
+if (new URLSearchParams(window.location.search).has('session_id')) {
+  fbq('trackCustom', 'CheckoutReturn', {content_name: 'Fill The Order Book Ticket', payment_verified: false, utm_source: window.dcUtm.utm_source || 'direct', utm_campaign: window.dcUtm.utm_campaign || '', utm_content: window.dcUtm.utm_content || '', utm_term: window.dcUtm.utm_term || ''});
 }
 </script>
 <noscript><img alt="" height="1" width="1" style="display:none"
