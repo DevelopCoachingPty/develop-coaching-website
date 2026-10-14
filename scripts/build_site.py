@@ -293,6 +293,8 @@ def rewrite(html: str, relative_path: str = "") -> str:
     # resolve after cutover, but only via an extra www-to-apex redirect hop on
     # the primary conversion path, and on the preview they send visitors to
     # the live WordPress site instead of the copy being reviewed.
+    # Retired domain: the template logo still linked to developcoaching.com.au.
+    html = html.replace('href="https://developcoaching.com.au/"', 'href="/"')
     html = html.replace("https://www.develop-coaching.com/", "/")
     html = html.replace("https://www.develop-coaching.com", "/")
     html = html.replace("http://www.develop-coaching.com/", "/")
