@@ -391,9 +391,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '260128381862353');
 fbq('track', 'PageView');
-// Keep unverified return visits separate from paid conversions in Meta too.
-if (new URLSearchParams(window.location.search).has('session_id')) {
-  fbq('trackCustom', 'CheckoutReturn', {content_name: 'Fill The Order Book Ticket', payment_verified: false, utm_source: window.dcUtm.utm_source || 'direct', utm_campaign: window.dcUtm.utm_campaign || '', utm_content: window.dcUtm.utm_content || '', utm_term: window.dcUtm.utm_term || ''});
+// Only fire Purchase for genuine buyers redirected from Stripe (Stripe appends ?session_id=cs_... on the redirect).
+// Prevents phantom conversions from direct hits, bookmarks, back-button, previews and bots.
+if (new URLSearchParams(window.location.search).get('session_id')) {
+  fbq('track', 'Purchase', {value: 45.00, currency: 'GBP', content_name: 'Fill The Order Book Ticket', utm_source: window.dcUtm.utm_source || 'direct', utm_campaign: window.dcUtm.utm_campaign || '', utm_content: window.dcUtm.utm_content || '', utm_term: window.dcUtm.utm_term || ''}, {eventID: new URLSearchParams(window.location.search).get('session_id')});
 }
 </script>
 <noscript><img alt="" height="1" width="1" style="display:none"

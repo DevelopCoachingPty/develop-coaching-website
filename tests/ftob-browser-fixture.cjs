@@ -20,7 +20,7 @@ http.createServer((req, res) => {
     if (script.includes("fbq('init'")) {
       // Keep the return instrumentation, but prevent loading the real Meta library.
       return '<script>window.fixtureMeta=[];function fbq(){window.fixtureMeta.push(Array.from(arguments));}' +
-        (script.includes('// Keep unverified return visits') ? script.slice(script.indexOf('// Keep unverified return visits')) : '') + '</script>';
+        (script.includes('// Only fire Purchase') ? script.slice(script.indexOf('// Only fire Purchase')) : '') + '</script>';
     }
     if (whole.includes('src=') && !whole.includes('googletagmanager.com') && !whole.includes('/assets/ftob-attribution.js')) return '';
     return whole;

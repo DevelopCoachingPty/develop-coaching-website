@@ -32,7 +32,7 @@ test('both pages load only the owner-verified GA4 stream and initialize one auto
   }
 });
 
-test('every booking control uses the same attributable first-party payment link', () => {
+test('every booking control uses the same attributable Stripe payment link', () => {
   const result = run('?utm_source=flowbuild&utm_medium=email&utm_campaign=fill-the-order-book&utm_content=e2');
   assert.equal(result.links.length, 7); // Five section CTAs, final booking CTA, direct fallback.
   assert.doesNotMatch(landing, /<stripe-buy-button|buy-button\.js/);
@@ -79,13 +79,13 @@ test('blocked storage, unrelated clicks and deceptive Stripe URLs cannot manufac
   assert.match(result.links[0].href, /client_reference_id=s-flowbuild__a-e3/);
 });
 
-test('thank-you URL cannot produce paid conversions or leak the session ID to Analytics', () => {
+test('thank-you URL produces only an unverified GA4 return and keeps session IDs out of Analytics', () => {
   for (const search of ['', '?session_id=cs_live_fake', '?session_id=cs_test_fixture', '?session_id=']) {
     const result = run(search);
     result.window.location.pathname = '/fill-the-order-book-thank-you/';
     result.window.dcUtm = result.window.dcFtobAttribution();
     result.context.dataLayer = result.window.dataLayer = [];
-    // Execute the actual GA4 block and Meta return section without loading external pixels.
+    // Execute the actual GA4 block without loading external pixels.
     vm.runInContext(inline(thanks).find(script => script.includes("gtag('config'")), result.context);
     const calls = Array.from(result.window.dataLayer, args => Array.from(args));
     const config = calls.find(call => call[0] === 'config');
@@ -98,9 +98,33 @@ test('thank-you URL cannot produce paid conversions or leak the session ID to An
       assert.equal(returns[0][2].payment_verified, false);
       for (const field of ['value', 'currency', 'items', 'transaction_id']) assert.equal(returns[0][2][field], undefined);
     }
-    const metaReturn = inline(thanks).find(script => script.includes('// Keep unverified return visits'));
-    vm.runInContext(metaReturn.slice(metaReturn.indexOf('// Keep unverified return visits')), result.context);
-    assert.equal(result.meta.filter(call => call[1] === 'Purchase').length, 0);
-    if (search) assert.equal(result.meta[0][1], 'CheckoutReturn');
+  }
+});
+
+// Preserve the existing ad signal until a verified paid-event replacement is separately reviewed.
+const legacyMetaReturn = `// Only fire Purchase for genuine buyers redirected from Stripe (Stripe appends ?session_id=cs_... on the redirect).
+// Prevents phantom conversions from direct hits, bookmarks, back-button, previews and bots.
+if (new URLSearchParams(window.location.search).get('session_id')) {
+  fbq('track', 'Purchase', {value: 45.00, currency: 'GBP', content_name: 'Fill The Order Book Ticket', utm_source: window.dcUtm.utm_source || 'direct', utm_campaign: window.dcUtm.utm_campaign || '', utm_content: window.dcUtm.utm_content || '', utm_term: window.dcUtm.utm_term || ''}, {eventID: new URLSearchParams(window.location.search).get('session_id')});
+}`;
+test('legacy Meta Purchase block remains unchanged with its session gate and event ID', () => {
+  const metaScript = inline(thanks).find(script => script.includes("fbq('init'"));
+  const metaReturn = metaScript.slice(metaScript.indexOf('// Only fire Purchase')).trim();
+  assert.equal(metaReturn, legacyMetaReturn);
+  assert.doesNotMatch(metaScript, /CheckoutReturn/);
+  for (const search of ['', '?session_id=cs_live_fixture', '?session_id=cs_test_fixture', '?session_id=']) {
+    const result = run(search);
+    result.window.dcUtm = {utm_source: 'meta', utm_campaign: 'fill-the-order-book-oct-2026', utm_content: 'cold-old-quotes', utm_term: 'cold-uk'};
+    vm.runInContext(metaReturn, result.context);
+    const purchases = result.meta.filter(call => call[0] === 'track' && call[1] === 'Purchase');
+    const sid = new URLSearchParams(search).get('session_id');
+    assert.equal(purchases.length, sid ? 1 : 0);
+    if (sid) {
+      assert.equal(purchases[0][2].value, 45);
+      assert.equal(purchases[0][2].currency, 'GBP');
+      assert.equal(purchases[0][2].utm_source, 'meta');
+      assert.equal(purchases[0][2].utm_content, 'cold-old-quotes');
+      assert.equal(purchases[0][3].eventID, sid);
+    }
   }
 });
