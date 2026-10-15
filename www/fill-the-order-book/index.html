@@ -109,7 +109,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .hero-video { max-width: 820px; margin: 0 auto 24px; }
+        .hero-video { max-width: 820px; margin: 40px auto 0; }
         .hero-video__label { margin-bottom: 12px; font-size: 1.1rem; font-weight: 700; }
         .hero-video__wrapper { position: relative; }
         .hero-video__play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: clamp(76px, 12vw, 112px); height: clamp(76px, 12vw, 112px); border: 3px solid white; border-radius: 50%; background: var(--yellow); color: #242424; box-shadow: 0 4px 24px rgba(0,0,0,.45); cursor: pointer; display: grid; place-items: center; }
@@ -598,19 +598,6 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
         <h1>Get fully booked through winter and into 2027</h1>
         <p class="subheadline">A 90-minute live workshop for UK building company owners. Know which jobs to chase, what to say and how to move clients towards a signed start date, so you can plan your team's work with more confidence.</p>
 
-        <div class="hero-video">
-            <p class="hero-video__label" id="workshop-video-label">Watch Greg explain the workshop · 90 seconds</p>
-            <div class="hero-video__wrapper">
-            <video class="hero-video__player" controls playsinline preload="none" width="1280" height="720" poster="./greg-workshop-thumbnail.jpg" aria-labelledby="workshop-video-label">
-                <source src="./greg-workshop-sharpened.mp4" type="video/mp4">
-                <a href="./greg-workshop-sharpened.mp4">Watch Greg explain the workshop</a>
-            </video>
-            <button class="hero-video__play" type="button" hidden aria-label="Play Greg’s workshop video">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 3v18l16-9z"/></svg>
-            </button>
-            </div>
-        </div>
-
         <div class="hero-cta">
             <a href="https://buy.stripe.com/bJe9AT3Wtfrtamk7uF9k40F" class="cta-button" target="_blank" rel="noopener">Book My Place · £45</a>
         </div>
@@ -624,6 +611,19 @@ src="https://www.facebook.com/tr?id=260128381862353&ev=PageView&noscript=1"/></n
             <div class="detail-row"><span class="detail-label">Format:</span><span>Live on Zoom</span></div>
             <div class="detail-row"><span class="detail-label">Ticket:</span><span>£45</span></div>
             <div class="detail-row"><span class="detail-label">Recording:</span><span>Yours for four weeks</span></div>
+        </div>
+
+        <div class="hero-video">
+            <p class="hero-video__label" id="workshop-video-label">Watch Greg explain the workshop · 90 seconds</p>
+            <div class="hero-video__wrapper">
+            <video class="hero-video__player" controls playsinline preload="none" width="1280" height="720" poster="./greg-workshop-thumbnail.jpg" aria-labelledby="workshop-video-label">
+                <source src="./greg-workshop-sharpened.mp4" type="video/mp4">
+                <a href="./greg-workshop-sharpened.mp4">Watch Greg explain the workshop</a>
+            </video>
+            <button class="hero-video__play" type="button" hidden aria-label="Play Greg’s workshop video">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 3v18l16-9z"/></svg>
+            </button>
+            </div>
         </div>
     </div>
 </section>
