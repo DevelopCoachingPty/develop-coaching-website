@@ -3,7 +3,7 @@
 
 Single source of truth: export/comau-redirect-map.csv. Generates host-scoped
 301 rules that only fire on (www.)developcoaching.com.au and must sit at the
-FRONT of vercel.json "redirects" (catch-all /:path* last within the block).
+FRONT of vercel.json "redirects" (catch-all /:path(.*) last within the block).
 
   python3 scripts/comau_redirects.py --check        # exit 1 if www/vercel.json is out of date
   python3 scripts/comau_redirects.py --write        # splice regenerated rules into www/vercel.json
@@ -26,7 +26,7 @@ NEW_PREFIX = "https://develop-coaching.com/"
 
 def _source(path):
     if path.endswith("/*"):
-        return path[:-2] + "/:path*"
+        return path[:-2] + "/:path(.*)"
     if path == "/":
         return "/"
     if not path.endswith("/"):
@@ -54,7 +54,7 @@ def build_rules(csv_path=CSV):
     sources = [r["source"] for r in rules]
     if len(set(sources)) != len(sources):
         raise ValueError("duplicate sources")
-    if sources[-1] != "/:path*":
+    if sources[-1] != "/:path(.*)":
         raise ValueError("catch-all must be last")
     return rules
 

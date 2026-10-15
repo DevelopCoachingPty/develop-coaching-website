@@ -25,7 +25,7 @@ class ComauRedirectTests(unittest.TestCase):
         self.assertEqual(n, 277)
         self.assertEqual(self.config["redirects"][:n], self.rules)
         self.assertFalse(any(comau.is_comau(r) for r in self.config["redirects"][n:]))
-        self.assertEqual(self.rules[-1]["source"], "/:path*")
+        self.assertEqual(self.rules[-1]["source"], "/:path(.*)")
 
     def test_host_condition_never_matches_dot_com(self):
         rx = re.compile("^(?:" + comau.HOST_VALUE + ")$")
