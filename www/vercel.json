@@ -3028,7 +3028,7 @@
    "statusCode": 301
   },
   {
-   "source": "/wp-content/uploads/:path*",
+   "source": "/wp-content/uploads/:path(.*)",
    "has": [
     {
      "type": "host",
@@ -3039,7 +3039,7 @@
    "statusCode": 301
   },
   {
-   "source": "/:path*",
+   "source": "/:path(.*)",
    "has": [
     {
      "type": "host",
