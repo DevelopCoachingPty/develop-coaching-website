@@ -34,7 +34,7 @@ test('both pages load only the owner-verified GA4 stream and initialize one auto
 
 test('every booking control uses the same attributable Stripe payment link', () => {
   const result = run('?utm_source=flowbuild&utm_medium=email&utm_campaign=fill-the-order-book&utm_content=e2');
-  assert.equal(result.links.length, 7); // Five section CTAs, final booking CTA, direct fallback.
+  assert.equal(result.links.length, 9); // Seven section CTAs, final booking CTA, direct fallback.
   assert.doesNotMatch(landing, /<stripe-buy-button|buy-button\.js/);
   assert.equal(result.google.length, 0); // Loading the page is not checkout intent.
   for (const link of result.links) {
@@ -43,8 +43,8 @@ test('every booking control uses the same attributable Stripe payment link', () 
     assert.equal(destination.searchParams.get('client_reference_id'), 's-flowbuild__c-fill-the-order-book__a-e2');
     result.click(link);
   }
-  assert.equal(result.google.length, 7);
-  assert.equal(result.meta.length, 7);
+  assert.equal(result.google.length, 9);
+  assert.equal(result.meta.length, 9);
   for (const call of result.google) {
     assert.equal(call[0], 'event'); assert.equal(call[1], 'begin_checkout');
     assert.equal(call[2].send_to, 'G-PXT2VCVFLW');
