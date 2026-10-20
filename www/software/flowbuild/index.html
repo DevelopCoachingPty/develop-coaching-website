@@ -1,16 +1,208 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FlowBuild | CRM and Follow-Up for Builders</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowBuild pricing and features | Develop Coaching</title>
 <link rel="canonical" href="https://develop-coaching.com/software/flowbuild/">
-<meta name="description" content="CRM built for builders. Pipeline management, automated follow-up, two-way SMS and email, review management. £197/month for 10 users.">
+<meta name="description" content="Your CRM and marketing platform: capture enquiries, follow up automatically and keep every lead moving through your pipeline. No setup fees, free onboarding." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/software.css">
+<style>
+:root{
+  --yellow:#fdce36; --accent:#facd22; --orange:#fbaa35; --blue:#0069b1;
+  --grey:#414042; --ink:#232224; --muted:#5d5c60; --soft:#77767a;
+  --cool:#d6d5d2; --line:#ebe9e4; --paper:#f8f7f4; --white:#fff; --green:#22744a;
+  --display:'Oswald',Arial,sans-serif; --body:'Inter',Arial,Helvetica,sans-serif;
+  --r:18px; --shadow:0 1px 2px rgba(35,34,36,.05),0 10px 30px rgba(35,34,36,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:.01em;margin:0;color:var(--ink);line-height:1.12}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
+.draft-bar{background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:7px 16px;letter-spacing:.03em}
+.draft-bar b{color:var(--yellow)}
+header.site{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header.site:after{content:"";display:block;height:4px;background:var(--accent)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:10px;padding-bottom:10px}
+header.site img{height:46px;width:auto;display:block}
+header.site nav{display:flex;gap:24px;font-size:14px;font-weight:600}
+header.site nav a{color:var(--grey);text-decoration:none}
+header.site nav a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:6px}
+.hdr-ctl{display:flex;gap:10px;align-items:center}
+.hdr-ctl .seg button{padding:7px 12px;font-size:13px}
 
+.nav{position:sticky;top:0;z-index:50;background:#2b2a2c;border-bottom:3px solid var(--yellow)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
+.nav-logo{font-family:var(--display);font-weight:700;color:#fff;text-decoration:none;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em}
+.nav-logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:26px;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--cool);text-decoration:none;font-size:.9rem;font-weight:500}
+.nav-links a:hover{color:var(--yellow)}
+.nav-cta{background:var(--yellow);color:#2b2a2c!important;font-family:var(--display);font-weight:600;text-transform:uppercase;padding:9px 18px;border-radius:4px;letter-spacing:.05em}
+.nav .hdr-ctl .seg{background:#3a393b;border-color:#565558}
+.nav .hdr-ctl .seg button{color:#d6d5d2}
+.nav .hdr-ctl .seg button[aria-pressed="true"]{background:var(--yellow);color:#2b2a2c}
+.footer{background:#2b2a2c;border-top:1px solid #565558;color:#9b9a9e;font-size:.85rem;padding:28px 0}
+.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer a{color:var(--cool);text-decoration:none}
+.footer a:hover{color:var(--yellow)}
+.more{font-size:14px;font-weight:600;margin:-8px 0 16px;display:inline-block}
+@media (max-width:900px){.nav-links li:not(:last-child){display:none}}
+/* hero */
+.hero{background:radial-gradient(1200px 400px at 85% -10%,#fff3c4 0,transparent 60%),var(--paper);padding:60px 0 56px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
+.eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--muted);font-weight:500}
+.hero h1{font-size:clamp(36px,5.2vw,62px);text-transform:uppercase;margin:12px 0 16px}
+.hero h1 .hl{background:linear-gradient(transparent 60%,var(--yellow) 60%);padding:0 4px}
+.hero p.lead{font-size:19px;color:var(--grey);max-width:640px;margin:0 0 24px}
+.pills{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-bottom:28px;max-width:600px}
+.pill{font-size:15px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:10px}
+.pill:before{content:"";width:20px;height:20px;border-radius:50%;flex:none;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23fdce36' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.controls{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.seg{display:inline-flex;background:#fff;border:1px solid var(--cool);border-radius:999px;padding:4px}
+.seg button{font:600 14px var(--body);border:0;background:transparent;color:var(--grey);padding:9px 18px;border-radius:999px;cursor:pointer;transition:background .15s}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.seg button .tag{display:inline-block;margin-left:6px;font-size:11px;background:var(--yellow);color:var(--ink);border-radius:6px;padding:1px 6px}
+.ctl-label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600;margin-right:8px}
+.spot{background:#fff;border:3px solid var(--accent);border-radius:22px;padding:28px;box-shadow:0 20px 50px rgba(250,205,34,.25);position:relative}
+.spot .ribbon{left:28px}
+.spot h3{font-size:30px;text-transform:uppercase;margin:6px 0 4px}
+.spot .contents{font-size:14.5px;color:var(--grey);margin:0 0 16px}
+.spot .price .amt{font-size:58px}
+.spot .btn{width:100%;margin-top:18px}
+.ov-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.ov-row b{display:block;font-family:var(--display);font-size:18px;text-transform:uppercase;font-weight:600}
+.ov-row small{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.ov-row .price-block{border:0;padding:0;white-space:nowrap}
+.ov-row .amt{font-family:var(--display);font-size:26px;font-weight:600}
+.ov-row .per{font-size:13px;color:var(--muted);margin-left:3px}
+.ov-row .na-note{margin:0;padding:4px 8px;font-size:12px}
+.ov-foot{margin-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.spot h3{font-size:26px !important}
+/* sections */
+section{padding:76px 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;margin-top:6px}
+.sec-head p{margin:8px 0 0;color:var(--muted);max-width:660px;font-size:16.5px}
+.note{font-size:13px;color:var(--muted)}
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;position:relative;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(35,34,36,.06),0 18px 40px rgba(35,34,36,.1)}
+.card:before{content:"";position:absolute;left:28px;right:28px;top:0;height:4px;border-radius:0 0 4px 4px;background:var(--accent)}
+.card .cat{font-size:11.5px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:700}
+.card h3{font-size:28px;margin:6px 0 8px;text-transform:uppercase}
+.card .desc{color:var(--grey);font-size:15px;margin:0 0 18px;min-height:92px}
+.price-block{border-top:1px solid var(--line);padding-top:16px}
+.price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.price .amt{font-family:var(--display);font-size:46px;font-weight:600;color:var(--ink);line-height:1}
+.price .per{color:var(--muted);font-size:15px;font-weight:500}
+.eff{font-size:13px;color:var(--green);font-weight:600;min-height:20px;margin-top:4px}
+.offer{display:inline-block;align-self:flex-start;margin:10px 0 4px;font-size:13px;font-weight:700;color:var(--ink);background:#fff6cf;border:1px solid #f1d978;border-radius:999px;padding:5px 12px}
+.offer.mb{background:#e6f3eb;border-color:#b6dbc4}
+ul.feat{list-style:none;padding:0;margin:16px 0 22px;font-size:14.5px;color:var(--grey)}
+ul.feat li{padding:6px 0 6px 28px;position:relative}
+ul.feat li:before{content:"";position:absolute;left:0;top:9px;width:17px;height:17px;border-radius:50%;background:#fff3c4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23232224' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/17px no-repeat}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;font:700 15px var(--body);text-decoration:none;border-radius:12px;padding:14px 18px;border:2px solid var(--ink);color:var(--ink);background:#fff;margin-top:auto;cursor:pointer;transition:filter .15s,transform .15s}
+.btn.primary{background:var(--yellow);border-color:var(--yellow)}
+.btn:after{content:"→";font-weight:700}
+.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.addon{margin:0 0 18px;border:1px dashed var(--cool);border-radius:12px;padding:12px 14px;font-size:14px;background:var(--paper)}
+.addon b{font-weight:700}
+.soon{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--yellow);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+.sub-price{font-size:14px;color:var(--grey);margin-top:8px;background:var(--paper);border-radius:8px;padding:6px 10px;display:inline-block}
+.sub-price b{color:var(--ink)}
+.na-note{display:none;margin:10px 0;font-weight:600;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px}
+body[data-region="au"] .uk-only-product .price-block,
+body[data-region="au"] .uk-only-product .btn,
+body[data-region="au"] .uk-only-product .offer{display:none}
+body[data-region="au"] .uk-only-product .na-note{display:block}
+body[data-region="au"] .uk-only-product{opacity:.6;box-shadow:none}
+body[data-region="au"] .only-uk{display:none !important}
+body[data-region="uk"] .only-au{display:none !important}
+.vs{margin-top:28px;background:var(--ink);color:#e9e8e6;border-radius:16px;padding:20px 26px;display:flex;flex-wrap:wrap;gap:10px 34px;align-items:center;font-size:15px}
+.vs .eyebrow{color:var(--yellow) !important}
+.vs b{font-family:var(--display);font-weight:600;font-size:24px;color:#fff}
+.vs .note{color:#b9b8bb}
+/* bundles */
+.bundles{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch;padding-top:10px}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 22px;display:flex;flex-direction:column;box-shadow:var(--shadow);position:relative}
+.bcard h3{font-size:25px;text-transform:uppercase;margin-bottom:4px}
+.bcard .contents{font-size:14px;color:var(--grey);margin:0 0 14px;min-height:63px}
+.was{font-size:14px;color:var(--muted);margin-top:8px}
+.was s{color:var(--soft)}
+.save{display:inline-block;background:var(--green);color:#fff;font-weight:700;font-size:12.5px;border-radius:999px;padding:3px 10px;margin-left:4px}
+.bcard.best{border:3px solid var(--accent);box-shadow:0 18px 44px rgba(250,205,34,.3);transform:translateY(-8px)}
+.ribbon{position:absolute;top:-14px;left:22px;background:var(--yellow);color:var(--ink);font:700 12px var(--body);text-transform:uppercase;letter-spacing:.1em;padding:6px 12px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.bcard ul.feat{margin:14px 0 20px}
+.au-bundle{max-width:540px}
+/* comparison table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);background:#fff}
+table.cmp{width:100%;border-collapse:collapse;min-width:760px;font-size:14.5px}
+.cmp th,.cmp td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
+.cmp th:first-child,.cmp td:first-child{text-align:left;font-weight:600;color:var(--ink);width:30%}
+.cmp thead th{font-family:var(--display);font-weight:600;font-size:17px;text-transform:uppercase;background:var(--paper);letter-spacing:.03em;position:sticky;top:0}
+.cmp thead th.best{background:var(--yellow)}
+.cmp td.best{background:#fffbea}
+.cmp tbody tr:not(.group):hover td{background:#fcfbf8}
+.cmp tbody tr:not(.group):hover td.best{background:#fff6d4}
+.cmp tr.group td{background:var(--ink);color:#fff;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:13px;text-align:left;padding:8px 16px}
+.cmp tbody tr:last-child td{border-bottom:0}
+.y{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--ink);position:relative;vertical-align:middle}
+.y:after{content:"";position:absolute;left:7px;top:5px;width:6px;height:10px;border-right:2.5px solid var(--yellow);border-bottom:2.5px solid var(--yellow);transform:rotate(45deg)}
+.n{color:var(--cool);font-weight:700}
+.cmp .small{font-size:12.5px;color:var(--muted);display:block;font-weight:400}
+.cmp .pr{font-family:var(--display);font-size:22px;font-weight:600}
+/* info strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.strip div{background:var(--paper);border-radius:16px;padding:22px;border-top:4px solid var(--accent)}
+.strip h4{font-size:18px;text-transform:uppercase;margin-bottom:6px}
+.strip p{margin:0;color:var(--grey);font-size:14.5px}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;align-items:start}
+details{border-bottom:1px solid var(--cool);padding:2px 0;break-inside:avoid}
+summary{cursor:pointer;list-style:none;font-weight:600;font-size:16.5px;padding:16px 40px 16px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:6px;top:9px;font:500 28px var(--display);color:var(--muted)}
+details[open] summary:after{content:"–"}
+details p{margin:0 0 18px;color:var(--grey)}
+.footnote{font-size:13px;color:var(--muted);margin-top:20px}
+.cta-band{background:var(--yellow);padding:46px 0}
+.cta-band .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.cta-band h2{font-size:clamp(26px,3.4vw,38px);text-transform:uppercase}
+.cta-band .btn{margin:0;background:var(--ink);color:#fff;border-color:var(--ink)}
+footer.site{background:var(--ink);color:#cfcfd1;padding:34px 0;font-size:14px}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer.site a{color:#fff}
+/* internal */
+.internal{background:repeating-linear-gradient(-45deg,#fff3f3,#fff3f3 18px,#fff 18px,#fff 36px);border-top:8px solid #b3261e;padding:56px 0 64px}
+.internal .badge{display:inline-block;background:#b3261e;color:#fff;font:700 13px var(--body);text-transform:uppercase;letter-spacing:.12em;padding:7px 12px;border-radius:6px}
+.internal h2{font-size:32px;text-transform:uppercase;margin:14px 0 6px}
+.internal .panel{background:#fff;border:1px solid #f0cfcf;border-radius:12px;padding:22px;margin-top:22px}
+.internal h3{font-size:20px;text-transform:uppercase;margin-bottom:10px}
+table.int{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+.int th,.int td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right}
+.int th:first-child,.int td:first-child{text-align:left}
+.int th{background:var(--paper);font-weight:600}
+.pass{color:var(--green);font-weight:700}
+.fail{color:#b3261e;font-weight:700}
+.int-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.internal ul{margin:6px 0 0;padding-left:20px;color:var(--grey);font-size:14.5px}
+.internal li{margin:5px 0}
+@media (max-width:1080px){.grid{grid-template-columns:1fr 1fr}.bgrid{grid-template-columns:1fr 1fr;row-gap:30px}.strip{grid-template-columns:1fr 1fr}.hdr-ctl{display:none}}
+@media (max-width:760px){
+  header.site nav{display:none}
+  .hero{padding:40px 0 34px}.hero-grid{grid-template-columns:1fr}
+  section{padding:50px 0}
+  .grid,.bgrid,.strip,.faq,.pills{grid-template-columns:1fr}
+  .bcard.best{transform:none}.card .desc{min-height:0}
+}
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
 <script>
@@ -31,185 +223,91 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1934173480574455');
 fbq('track', 'PageView');
-fbq('track','ViewContent',{content_name:'FlowBuild'});
 </script>
 <noscript><img alt="" height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></noscript>
-<style id="dc-simplified-navigation">
-@media (min-width: 1025px) {
-  .elementor-element-d083c1c {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-rows: auto auto;
-    align-items: center;
-  }
-  .elementor-element-dcb2a0c {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    justify-self: end;
-    width: auto !important;
-  }
-  .elementor-element-b81d386 {
-    grid-column: 1;
-    grid-row: 2;
-    width: auto !important;
-    max-width: none !important;
-  }
-  .elementor-element-7804adf {
-    grid-column: 2;
-    grid-row: 2;
-    align-self: center;
-    width: auto !important;
-    margin-left: 18px !important;
-  }
-}
-@media (max-width: 767px) {
-  .elementor-element-bca47e7 > .e-con-inner {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px 8px !important;
-  }
-  .elementor-element-41f4756,
-  .elementor-element-d083c1c,
-  .elementor-element-b81d386 {
-    width: auto !important;
-    min-width: 0 !important;
-  }
-  .elementor-element-f54cf12 {
-    width: 190px !important;
-  }
-  .elementor-element-f54cf12 img {
-    width: 190px !important;
-    height: auto !important;
-  }
-  .elementor-element-12f3659 > .e-con-inner {
-    padding: 0 16px 8px !important;
-  }
-  .elementor-element-79870bb {
-    justify-content: flex-end !important;
-  }
-}
+<style>
+.phero{background:radial-gradient(1200px 400px at 85% -10%,#fff3c4 0,transparent 60%),var(--paper);padding:56px 0;border-bottom:1px solid var(--line)}
+.phero .hero-grid{align-items:start}
+.crumb{font-size:13px;margin-bottom:14px}.crumb a{color:var(--muted)}
+.vid{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:var(--shadow)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 36px}
+.fgrid li{font-size:16px}
+.pb-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
+.pb-row .btn{margin:0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.ctas .btn{margin:0}
+@media (max-width:760px){.fgrid{grid-template-columns:1fr}}
 </style>
 </head>
-<body>
-
-<!-- ============ NAV ============ -->
+<body data-region="uk" data-billing="m">
 <nav class="nav" aria-label="Main">
   <div class="wrap nav-inner">
     <a class="nav-logo" href="https://develop-coaching.com">Develop <span>Coaching</span></a>
+    <div class="hdr-ctl">
+      <div class="seg" role="group" aria-label="Region (header)"><button type="button" data-region-btn="uk" aria-pressed="true">🇬🇧 UK</button><button type="button" data-region-btn="au" aria-pressed="false">🇦🇺 AU</button></div>
+      <div class="seg" role="group" aria-label="Billing (header)"><button type="button" data-billing-btn="m" aria-pressed="true">Monthly</button><button type="button" data-billing-btn="y" aria-pressed="false">Annual</button></div>
+    </div>
     <ul class="nav-links">
-      <li><a href="/software#crew">The Workforce</a></li>
-      <li><a href="/software#bundles">Bundles</a></li>
-      <li><a href="/software#products">Products</a></li>
-      <li><a href="/software#faq">FAQ</a></li>
-      <li><a class="nav-cta" href="#pricing">Hire Now</a></li>
+      <li><a href="/software/#products">Products</a></li>
+      <li><a href="/software/#bundles">Bundles</a></li>
+      <li><a href="/software/#compare">Compare</a></li>
+      <li><a href="/software/#faq">FAQ</a></li>
+      <li><a class="nav-cta" href="/software/#products">See Pricing</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<header class="phero">
-  <div class="wrap phero-grid">
-    <div>
-      <span class="eyebrow">FlowBuild</span>
-      <h1>The follow-up engine of your <em>AI Marketing Team</em></h1>
-      <p class="phero-sub">Every lead followed up, every review chased, every enquiry answered, automatically, while your competitors' enquiries sit unread in an inbox.</p>
-      <p class="phero-anchor"><strong>£197/month.</strong></p>
-      <p class="setup-note">You pay the £350 setup today. Your £197/month subscription starts after your onboarding call.</p>
-      <div class="phero-ctas">
-        <a class="btn btn-yellow" href="https://buy.stripe.com/aFa14ncsZ0wzamk4it9k415" target="_blank" rel="noopener">Get FlowBuild – £350 setup</a>
-        <a class="btn btn-ghost" href="#features">What it does</a>
-      </div>
+<div class="phero"><div class="wrap hero-grid">
+  <div class="">
+    <div class="crumb"><a href="/software/">Software</a> › FlowBuild</div>
+    <div class="eyebrow">CRM &amp; marketing</div>
+    <h1 style="font-size:clamp(36px,5vw,58px);text-transform:uppercase;margin:10px 0 14px">FlowBuild</h1>
+    <p class="lead" style="font-size:19px;color:var(--grey);max-width:640px">Your CRM and marketing platform: capture enquiries, follow up automatically and keep every lead moving through your pipeline.</p>
+    <div class="price-block" style="border:0;padding:0">
+      <div class="price"><span class="amt" data-k="fb"></span><span class="per" data-per="fb"></span></div>
+      <div class="eff" data-eff="fb"></div>
     </div>
-    <div class="phero-avatar">
-      <img src="../assets/avatar-marketing.png" alt="The AI Marketing Team">
-      <span class="role-tag">The AI Marketing Team</span>
+    
+    <span class="offer" data-offer="trial"></span>
+    <div class="ctas"><a class="btn primary" href="https://buy.stripe.com/9B69ATboV935520aGR9k417" data-plan="fb" data-cta="trial"></a><a class="btn" href="/software/#products">Compare all products</a></div>
+    <p class="note" style="margin-top:16px"><span class="only-uk">Prices in GBP.*</span><span class="only-au">Prices in AUD and include 10% GST.</span> No setup fees. Free onboarding and data migration. Annual billing: 2 months free.</p>
+  </div>
+  <div><div class="vid"><iframe src="https://www.youtube.com/embed/ho0jBpDjtXo" title="FlowBuild" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div>
+
+<section id="features"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">What's included</div><h2>What you get with FlowBuild</h2></div></div>
+  <ul class="feat fgrid"><li>Sales pipeline and automated follow-up</li>
+          <li>Two-way SMS and email from one inbox</li>
+          <li>Review management and website chat widget</li>
+          <li>Funnels, calendars, courses and memberships</li>
+          <li>Unlimited workflows and automations</li>
+          <li>10 users, 50,000 contacts, 10,000 emails a month</li>
+          <li>24/7 chat support plus 1:1 Zoom support</li></ul>
+  
+  <p class="note">Extra emails, SMS, AI actions and premium integrations are pay-per-use.</p>
+</div></section>
+
+<section class="bundles" id="bundles"><div class="wrap">
+  <div class="sec-head"><div><div class="eyebrow">Bundles</div><h2>Get FlowBuild in a bundle</h2></div></div>
+  <div class="bgrid only-uk" style="grid-template-columns:repeat(3,1fr)"><article class="bcard"><h3>Marketing Lite</h3><p class="contents">FlowBuild + Architect Attractor Lite</p><div class="price"><span class="amt" data-k="b_mktl"></span><span class="per" data-per="b_mktl"></span></div><div class="was">List <s data-list="b_mktl"></s> <span class="save" data-save="b_mktl"></span></div><div class="eff" data-eff="b_mktl"></div><span class="offer">£1 for your first 30 days</span><a class="btn primary" href="https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l" data-plan="b_mktl" style="margin-top:16px">Start £1 trial</a></article><article class="bcard"><h3>Marketing</h3><p class="contents">FlowBuild + Architect Attractor Lite + Jarvis</p><div class="price"><span class="amt" data-k="b_mkt"></span><span class="per" data-per="b_mkt"></span></div><div class="was">List <s data-list="b_mkt"></s> <span class="save" data-save="b_mkt"></span></div><div class="eff" data-eff="b_mkt"></div><span class="offer mb">30-day money-back guarantee</span><a class="btn primary" href="https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x" data-plan="b_mkt" style="margin-top:16px">Get Marketing</a></article><article class="bcard best"><span class="ribbon">Best value</span><h3>Full Suite</h3><p class="contents">All six: CostTracker Pro, SiteSafe Pro, Muster, FlowBuild, Architect Attractor Lite, Jarvis</p><div class="price"><span class="amt" data-k="b_full"></span><span class="per" data-per="b_full"></span></div><div class="was">List <s data-list="b_full"></s> <span class="save" data-save="b_full"></span></div><div class="eff" data-eff="b_full"></div><span class="offer mb">30-day money-back guarantee</span><a class="btn primary" href="https://buy.stripe.com/cNieVdakR9351PO3ep9k41z" data-plan="b_full" style="margin-top:16px">Get the Full Suite</a></article></div>
+  <div class="only-au"><article class="bcard best au-bundle"><span class="ribbon">Best value</span><h3>Builder Bundle (Australia)</h3><p class="contents">CostTracker Pro + FlowBuild + Muster</p><div class="price"><span class="amt" data-k="b_au"></span><span class="per" data-per="b_au"></span></div><div class="was">List <s data-list="b_au"></s> <span class="save" data-save="b_au"></span></div><div class="eff" data-eff="b_au"></div><span class="offer mb">30-day money-back guarantee</span><a class="btn primary" href="https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B" data-plan="b_au" style="margin-top:16px">Get the Builder Bundle</a></article></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="strip" style="margin-top:44px">
+      <div><h4>No setup fees</h4><p>Nothing to pay up front beyond your plan. Onboarding and data migration are free.</p></div>
+      <div><h4>Sign up online</h4><p>Choose a plan and start today. No sales call, no quote to wait for.</p></div>
+      <div><h4>One way to start safe</h4><p>Single products, Projects &amp; Ops<span class="only-uk"> and Marketing Lite</span> start at <span class="only-uk">£1</span><span class="only-au">A$1</span> for 30 days. Other bundles come with a 30-day money-back guarantee.</p></div>
+      <div><h4>Priced per business</h4><p>No per-seat maths. Add your team, subbies and clients without the bill going up.</p></div>
     </div>
-  </div>
-</header>
 
-<!-- ============ VIDEO ============ -->
-<section class="section" id="video">
-  <div class="wrap">
-    <div class="section-intro"><h2>See it in action</h2></div>
-    <div style="position:relative;max-width:960px;margin:0 auto;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid #565558;background:#000">
-      <iframe src="https://www.youtube.com/embed/ho0jBpDjtXo" title="FlowBuild" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
+  <p class="footnote only-uk">* UK prices exclude VAT: supplied B2B under the reverse charge.</p>
+</div></section>
 
-<!-- ============ FEATURES ============ -->
-<section class="section" id="features">
-  <div class="wrap">
-    <span class="eyebrow">What it does</span>
-    <div class="section-intro">
-      <h2>No enquiry left behind</h2>
-    </div>
-    <ul class="checklist">
-      <li><strong>Pipeline management</strong>Every enquiry, quote and job in one view.</li>
-      <li><strong>Automated follow-up</strong>Sequences that chase leads so you don't have to.</li>
-      <li><strong>Two-way SMS and email</strong>Conversations in one place, visible to the whole team.</li>
-      <li><strong>Review management</strong>Reviews requested and responded to on autopilot.</li>
-      <li><strong>Chat widget</strong>Catch website visitors while they're still on the page.</li>
-      <li><strong>Courses, memberships, funnels, calendars</strong>Unlimited workflows, automations and CRM pipelines.</li>
-    </ul>
-    <div class="mid-cta">
-      <a class="btn btn-yellow" href="https://buy.stripe.com/aFa14ncsZ0wzamk4it9k415" target="_blank" rel="noopener">Get FlowBuild – £350 setup</a>
-    </div>
-  </div>
-</section>
+<div class="cta-band"><div class="wrap"><h2>Sign up online, no sales call needed.</h2><a class="btn" href="/software/#products">Choose a plan</a></div></div>
 
-<!-- ============ WHAT'S INCLUDED ============ -->
-<section class="section band">
-  <div class="wrap band-inner">
-    <span class="eyebrow">What's included</span>
-    <h2>Room to run a serious pipeline</h2>
-    <p><strong>10,000 emails a month, 10 users, 50,000 contacts</strong>, unlimited workflows, calendars, courses, memberships, funnels, automations and CRM pipelines. 24/7 chat support plus 1:1 Zoom support.</p>
-    <p><strong>Pay-per-use extras:</strong> excess emails above 10,000/month and email verification charged at cost; SMS, AI actions and premium integrations (Slack, custom webhooks, ChatGPT) pay-per-use.</p>
-  </div>
-</section>
-
-<!-- ============ PRICING ============ -->
-<section class="section" id="pricing">
-  <div class="wrap">
-    <figure class="pull-quote"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <blockquote>"Everything within the system has become more efficient, everything's been more streamlined. Staff performance is improving with the systems we're implementing."</blockquote>
-      <figcaption>Richard J<span>Construction company</span></figcaption>
-    </figure>
-    <div class="pricebox">
-      <div>
-        <h2>FlowBuild</h2>
-        <div class="big">£197<small>/month</small></div>
-        <p>CRM and automated follow-up built for builders. UK-based support.</p>
-        <p class="fine">You pay the £350 setup today. Your £197/month subscription starts after your onboarding call. Free for Mastermind members.<br>Every hire comes with a 30-day working interview: full refund, including setup, if you wouldn't keep them on.</p>
-      </div>
-      <div class="cta-col">
-        <a class="btn btn-yellow" href="https://buy.stripe.com/aFa14ncsZ0wzamk4it9k415" target="_blank" rel="noopener">Get FlowBuild – £350 setup</a>
-        <span class="alt-link">Or get it inside <a href="/software#bundles">Builder Stack from £547/m</a></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SETUP STRIP ============ -->
-<section class="setup-strip">
-  <div class="wrap">
-    <p><strong>Get started for £350.</strong> That covers account setup, data migration, integration and live team training. Your monthly subscription starts after your onboarding call, within 7 days. <a href="https://develop-coaching.com/courses/mastermind-course/" target="_blank" rel="noopener">In the Mastermind?</a> It's already included in your programme.</p>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="section final">
-  <div class="wrap">
-    <h2>Your competitors' enquiries <em>sit unread</em></h2>
-    <p>Yours get followed up automatically. The follow-up engine starts within 7 days.</p>
-    <a class="btn btn-yellow" href="https://buy.stripe.com/aFa14ncsZ0wzamk4it9k415" target="_blank" rel="noopener">Get FlowBuild – £350 setup</a>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="wrap">
     <div>© 2026 Develop Coaching. All rights reserved. Develop Coaching Pty Ltd | ABN 47 666 725 659</div>
@@ -217,15 +315,74 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var P={
+    uk:{c:'£',m:{fb:197,aa_lite:147,aa_plus:196,aa_pro:275,ctp:247,ss:175,ss_ctp:147,mu:75,jv:297,
+      b_mktl:[287,344],b_mkt:[537,641],b_po:[417,497],b_full:[947,1138]}},
+    au:{c:'A$',m:{ctp:497,fb:397,mu:157,b_au:[897,1051]}}
+  };
+  function fmt(c,n){var d=Math.round(n)===n?0:2;return c+n.toLocaleString('en-GB',{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function render(){
+    var r=document.body.dataset.region, b=document.body.dataset.billing, R=P[r];
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      var k=el.dataset.k,v=R.m[k]; if(v===undefined){return;}
+      var bundle=Array.isArray(v), m=bundle?v[0]:v, mult=bundle?11:10;
+      el.textContent=fmt(R.c,b==='y'?m*mult:m);
+    });
+    document.querySelectorAll('[data-per]').forEach(function(el){
+      var k=el.dataset.per; if(R.m[k]===undefined){return;}
+      el.textContent=b==='y'?'/year':'/month';
+    });
+    document.querySelectorAll('[data-eff]').forEach(function(el){
+      var k=el.dataset.eff,v=R.m[k]; if(v===undefined){el.textContent='';return;}
+      var bundle=Array.isArray(v), m=bundle?v[0]:v;
+      if(b!=='y'){el.textContent='';return;}
+      if(el.dataset.effGeneric){el.textContent='Annual: 2 months free on every tier';return;}
+      var eff=Math.round(m*(bundle?11:10)/12*100)/100;
+      el.textContent='Works out at '+fmt(R.c,eff)+'/month · '+(bundle?'1 month':'2 months')+' free';
+    });
+    document.querySelectorAll('[data-list]').forEach(function(el){var v=R.m[el.dataset.list]; if(v){el.textContent=fmt(R.c,v[1])+'/month';}});
+    document.querySelectorAll('[data-save]').forEach(function(el){var v=R.m[el.dataset.save]; if(v){el.textContent='Save '+fmt(R.c,v[1]-v[0])+'/month';}});
+    document.querySelectorAll('[data-offer="trial"]').forEach(function(el){el.textContent=R.c+'1 for your first 30 days';});
+    document.querySelectorAll('[data-cta="trial"]').forEach(function(el){el.textContent='Start '+R.c+'1 trial';});
+    document.querySelectorAll('[data-region-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.regionBtn===r);});
+    document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.billingBtn===b);});
+  }
+  document.querySelectorAll('[data-region-btn]').forEach(function(x){x.addEventListener('click',function(){document.body.dataset.region=x.dataset.regionBtn;render();});});
+  document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.addEventListener('click',function(){document.body.dataset.billing=x.dataset.billingBtn;render();});});
+  var q=new URLSearchParams(location.search);
+  if(q.get('region')==='au'){document.body.dataset.region='au';}
+  if(q.get('billing')==='annual'){document.body.dataset.billing='y';}
+  render();
+})();
+</script>
 <script>
 document.addEventListener('click', function (e) {
   var a = e.target.closest('a'); if (!a) return;
   var h = a.getAttribute('href') || '';
-  if (h.indexOf('STRIPE') > -1 || h.indexOf('stripe.com') > -1) {
+  if (h.indexOf('stripe.com') > -1) {
     if (window.gtag) gtag('event', 'event_button_click', {button_text: a.textContent.trim(), page_path: location.pathname});
     if (window.fbq) fbq('track', 'InitiateCheckout');
   }
 });
+</script>
+<script>
+/* Stripe Payment Links, pricing set 2026-10 (source: stripe-links.md). Buttons with data-plan get the link for the current region + billing. */
+(function(){
+  var L={"uk":{"fb":{"m":"https://buy.stripe.com/9B69ATboV935520aGR9k417","y":"https://buy.stripe.com/6oU4gz0Kh5QT2TS4it9k418"},"aa_lite":{"m":"https://buy.stripe.com/4gM5kDeB75QTcus7uF9k419","y":"https://buy.stripe.com/aFa8wP1OlcfhfGE5mx9k41a"},"ctp":{"m":"https://buy.stripe.com/00w5kDdx3935fGE2al9k41b","y":"https://buy.stripe.com/3cIeVd9gNfrtgKI6qB9k41c"},"ss":{"m":"https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d","y":"https://buy.stripe.com/00w3cv9gN7Z18ec6qB9k41e"},"ss_ctp":{"m":"https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f","y":"https://buy.stripe.com/bJeeVd0Kh7Z1fGE5mx9k41g"},"mu":{"m":"https://buy.stripe.com/7sYeVdcsZfrt7a816h9k41h","y":"https://buy.stripe.com/cNi8wPcsZgvxeCA6qB9k41i"},"jv":{"m":"https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j","y":"https://buy.stripe.com/bJeaEX9gNenp1PO4it9k41k"},"b_mktl":{"m":"https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l","y":"https://buy.stripe.com/8x24gzfFbgvxbqoeX79k41m"},"b_po":{"m":"https://buy.stripe.com/dRm28rcsZ6UX2TScOZ9k41n","y":"https://buy.stripe.com/28E7sLcsZgvx0LK8yJ9k41o"},"b_mkt":{"m":"https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x","y":"https://buy.stripe.com/28EfZh8cJ9356642al9k41y"},"b_full":{"m":"https://buy.stripe.com/cNieVdakR9351PO3ep9k41z","y":"https://buy.stripe.com/bJefZh0Kh7Z1bqo16h9k41A"}},"au":{"ctp":{"m":"https://buy.stripe.com/6oU8wPeB71ADgKI4it9k41p","y":"https://buy.stripe.com/14A9ATakR4MP6648yJ9k41q"},"fb":{"m":"https://buy.stripe.com/cNicN5gJf3IL1PO7uF9k41r","y":"https://buy.stripe.com/28E7sLboV9352TS2al9k41s"},"mu":{"m":"https://buy.stripe.com/4gM00jgJf5QT5209CN9k41t","y":"https://buy.stripe.com/28EeVddx39352TSeX79k41u"},"b_au":{"m":"https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B","y":"https://buy.stripe.com/9B6fZh64B0wz8ec02d9k41C"}}};
+  function wire(){
+    var r=document.body.dataset.region, b=document.body.dataset.billing;
+    document.querySelectorAll('[data-plan]').forEach(function(a){
+      var p=(L[r]||{})[a.dataset.plan], u=p&&p[b];
+      if(u){a.href=u;a.removeAttribute('data-todo');}
+      else{a.href='#TODO-checkout-'+a.dataset.plan+'-'+r+'-'+b;a.setAttribute('data-todo','No Stripe link for '+a.dataset.plan+' ('+r+', '+b+')');}
+    });
+  }
+  document.querySelectorAll('[data-region-btn],[data-billing-btn]').forEach(function(x){x.addEventListener("click",wire);});
+  wire();
+})();
 </script>
 </body>
 </html>
