@@ -22,3 +22,5 @@
         .elementor-4222 .elementor-element.elementor-element-83c537f {
           display: none;
         }  }/* End custom CSS */
+/* Header region flags: 6% width shrank them to ~8px slivers with object-fit:cover. Fixed size keeps their shape. */
+@media(min-width:1025px){.elementor-4222 .elementor-element.elementor-element-760db8b,.elementor-4222 .elementor-element.elementor-element-a45c51e{width:45px;max-width:45px;--container-widget-width:45px;flex-shrink:0;}}
