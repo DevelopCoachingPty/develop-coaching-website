@@ -168,6 +168,10 @@ def main() -> None:
     # Template content is gone
     check("template title removed", "Sales Funnel for Construction Company" not in html)
     check("template body removed", "Most construction businesses at" not in html)
+    widget = html.find('elementor-widget-theme-post-content" data-id')
+    check("body lands inside the post content widget", widget != -1 and html.find("Body heading") > widget)
+    check("template subtitle removed", "turning the right enquiries into signed contracts" not in html)
+    check("template hero image removed", "/images/blog/construction-sales-funnel/hero.jpg" not in html)
     check("template author removed", "digital-progress" not in html)
     check("gravatar removed", "gravatar.com" not in html)
     check("wp-json link removed", 'rel="alternate" title="JSON"' not in html)

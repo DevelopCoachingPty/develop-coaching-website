@@ -3,6 +3,11 @@
  "bulkRedirectsPath": "priority-redirects.json",
  "redirects": [
   {
+   "source": "/construction-cash-flow-forecast-the-system-that-lets-you-sca{/}?",
+   "destination": "/construction-cash-flow-forecast/",
+   "permanent": true
+  },
+  {
    "source": "/",
    "has": [
     {

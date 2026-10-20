@@ -110,10 +110,13 @@ def balanced_div(html: str, start: int) -> tuple[int, int]:
 
 
 def replace_post_content(html: str, body_html: str) -> str:
-    marker = html.find("elementor-widget-theme-post-content")
-    if marker == -1:
+    # Match the widget's own <div class="..."> tag. A plain text search also
+    # hits the class name inside inline <style> blocks in the head, and the
+    # body then lands in whatever div precedes that (the site header).
+    m = re.search(r'<div\b[^>]*class="[^"]*\belementor-widget-theme-post-content\b[^"]*"', html)
+    if not m:
         raise SystemExit("publish_page: post content widget not found in template")
-    widget_open = html.rfind("<div", 0, marker)
+    widget_open = m.start()
     inner_start, inner_end = balanced_div(html, widget_open)
     return html[:inner_start] + "\n" + body_html.strip() + "\n\t\t\t\t" + html[inner_end:]
 
@@ -168,7 +171,9 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
         node_id = node.get("@id", "")
         # The template's own featured image, its author (the old SEO agency's
         # WordPress user) and that author's gravatar.
-        if node.get("@type") == "ImageObject" and node_id.startswith(f"{DOMAIN}/wp-content"):
+        if node.get("@type") == "ImageObject" and (
+            node_id.startswith(f"{DOMAIN}/wp-content") or node_id.startswith(f"{DOMAIN}/images/")
+        ):
             return True
         if node.get("@type") == "ImageObject" and "gravatar.com" in node_id:
             return True
@@ -281,6 +286,19 @@ def build_page(payload: dict) -> str:
             flags=re.S,
         )
 
+    # The template's image metadata and update stamp describe the template post.
+    html = re.sub(
+        r'<meta property="og:image:secure_url" content=".*?" />',
+        lambda _: f'<meta property="og:image:secure_url" content="{esc(image or LOGO)}" />',
+        html, count=1, flags=re.S,
+    )
+    html = re.sub(r'\s*<meta property="og:image:(?:width|height|alt|type)" content="[^"]*" />', "", html)
+    html = re.sub(
+        r'<meta property="og:updated_time" content=".*?" />',
+        lambda _: f'<meta property="og:updated_time" content="{date}T00:00:00+00:00" />',
+        html, count=1, flags=re.S,
+    )
+
     html = rewrite_jsonld(
         html, title=title, description=description, url=url, date=date, image=image
     )
@@ -295,6 +313,17 @@ def build_page(payload: dict) -> str:
         f'<h1 class="elementor-heading-title elementor-size-default">{esc(title)}</h1>',
         "post title h1",
         1,
+    )
+
+    # The designed templates carry their own subtitle under the H1. Left
+    # alone, the new page shows the template post's subtitle.
+    subtitle = (payload.get("subtitle") or "").strip()
+    html = re.sub(
+        r'\s*<p class="dc-article-hero-subtitle"[^>]*>.*?</p>',
+        (lambda _: f'<p class="dc-article-hero-subtitle" id="dc-article-hero-subtitle">{esc(subtitle)}</p>') if subtitle else (lambda _: ""),
+        html,
+        count=1,
+        flags=re.S,
     )
 
     # Category term shown under the title
