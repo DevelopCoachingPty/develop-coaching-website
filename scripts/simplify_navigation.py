@@ -9,6 +9,12 @@ from pathlib import Path
 REMOVED_MENU_IDS = ("menu-item-7952", "menu-item-9177", "menu-item-14446")
 FREE_TRAININGS_MENU_ID = "menu-item-16753"
 MY_STORY_MENU_ID = "menu-item-9176"
+SOFTWARE_MENU_CLASS = "menu-item-software"
+SOFTWARE_ITEM = (
+    '<li class="menu-item menu-item-type-custom menu-item-object-custom '
+    'menu-item-software"><a href="/software/" class="elementor-item"{tabindex}>'
+    "Software</a></li>"
+)
 NAVIGATION_STYLE = """<style id="dc-simplified-navigation">
 @media (min-width: 1025px) {
   .elementor-element-d083c1c {
@@ -131,6 +137,29 @@ def _rename_menu_item(html: str, menu_id: str, old_label: str, new_label: str) -
     return html
 
 
+def _ensure_software_item(html: str) -> str:
+    """Keep a Software link before Free Resources in every copy of the menu
+    (desktop and mobile dropdown). Idempotent: menus that already have it are left alone."""
+    out = []
+    pos = 0
+    for match in re.finditer(
+        rf'<li\b[^>]*class="[^"]*\b{re.escape(FREE_TRAININGS_MENU_ID)}\b[^"]*"[^>]*>\s*<a\b[^>]*>',
+        html,
+        re.I,
+    ):
+        start = match.start()
+        # Look back to the start of this menu's <ul> for an existing Software item.
+        ul_start = html.rfind("<ul", 0, start)
+        if SOFTWARE_MENU_CLASS in html[ul_start:start]:
+            continue
+        tabindex = ' tabindex="-1"' if 'tabindex="-1"' in match.group(0) else ""
+        out.append(html[pos:start])
+        out.append(SOFTWARE_ITEM.format(tabindex=tabindex))
+        pos = start
+    out.append(html[pos:])
+    return "".join(out)
+
+
 def simplify_main_navigation(html: str) -> str:
     """Remove outdated top-level items without deleting their destination pages."""
     for menu_id in REMOVED_MENU_IDS:
@@ -139,6 +168,7 @@ def simplify_main_navigation(html: str) -> str:
         html, FREE_TRAININGS_MENU_ID, "Free Trainings", "Free Resources"
     )
     html = _rename_menu_item(html, MY_STORY_MENU_ID, "My Story", "About Greg")
+    html = _ensure_software_item(html)
     style_pattern = re.compile(
         r'<style id="dc-simplified-navigation">.*?</style>', re.S | re.I
     )
