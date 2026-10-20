@@ -171,7 +171,9 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
         node_id = node.get("@id", "")
         # The template's own featured image, its author (the old SEO agency's
         # WordPress user) and that author's gravatar.
-        if node.get("@type") == "ImageObject" and node_id.startswith(f"{DOMAIN}/wp-content"):
+        if node.get("@type") == "ImageObject" and (
+            node_id.startswith(f"{DOMAIN}/wp-content") or node_id.startswith(f"{DOMAIN}/images/")
+        ):
             return True
         if node.get("@type") == "ImageObject" and "gravatar.com" in node_id:
             return True
@@ -283,6 +285,19 @@ def build_page(payload: dict) -> str:
             count=1,
             flags=re.S,
         )
+
+    # The template's image metadata and update stamp describe the template post.
+    html = re.sub(
+        r'<meta property="og:image:secure_url" content=".*?" />',
+        lambda _: f'<meta property="og:image:secure_url" content="{esc(image or LOGO)}" />',
+        html, count=1, flags=re.S,
+    )
+    html = re.sub(r'\s*<meta property="og:image:(?:width|height|alt|type)" content="[^"]*" />', "", html)
+    html = re.sub(
+        r'<meta property="og:updated_time" content=".*?" />',
+        lambda _: f'<meta property="og:updated_time" content="{date}T00:00:00+00:00" />',
+        html, count=1, flags=re.S,
+    )
 
     html = rewrite_jsonld(
         html, title=title, description=description, url=url, date=date, image=image
