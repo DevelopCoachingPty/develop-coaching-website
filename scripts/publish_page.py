@@ -357,18 +357,20 @@ def build_page(payload: dict) -> str:
     # A stale page-cache stamp from the old host.
     html = re.sub(r"\s*<!-- Page cached by LiteSpeed Cache[^>]*-->\s*$", "\n", html)
 
-    # The title container's inline background is the post's hero image. Left
-    # alone, a new page would wear the template post's photo.
-    if payload.get("image_url"):
-        hero = payload["image_url"]
-        html, n = re.subn(
-            r'(elementor-element-cec9484 > \.elementor-motion-effects-container > \.elementor-motion-effects-layer\{background-image:url\(")[^"]*(")',
-            lambda m: m.group(1) + hero + m.group(2),
-            html,
-            count=1,
-        )
-        if n == 0:
-            print("publish_page: warning, hero image slot not found", file=sys.stderr)
+    # The title container's inline background is the template post's hero
+    # image. A new page gets its own banner image only when one is passed
+    # explicitly ("banner_image"); otherwise the banner is cleared to the plain
+    # brand colour rather than wearing another article's photo. The social
+    # image (image_url, often a tall infographic) is not reused as a banner.
+    banner = payload.get("banner_image")
+    html, n = re.subn(
+        r'(elementor-element-cec9484 > \.elementor-motion-effects-container > \.elementor-motion-effects-layer\{background-image:)url\("[^"]*"\)',
+        lambda m: m.group(1) + (f'url("{banner}")' if banner else "none"),
+        html,
+        count=1,
+    )
+    if n == 0:
+        print("publish_page: warning, hero image slot not found", file=sys.stderr)
 
     html = replace_post_content(html, payload["body_html"])
     return install_booking_tracking(html)
