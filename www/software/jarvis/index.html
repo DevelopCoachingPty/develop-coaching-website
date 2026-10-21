@@ -249,6 +249,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
       <div class="seg" role="group" aria-label="Billing (header)"><button type="button" data-billing-btn="m" aria-pressed="true">Monthly</button><button type="button" data-billing-btn="y" aria-pressed="false">Annual</button></div>
     </div>
     <ul class="nav-links">
+      <li><a href="/software/">Software</a></li>
       <li><a href="/software/#products">Products</a></li>
       <li><a href="/software/#bundles">Bundles</a></li>
       <li><a href="/software/#compare">Compare</a></li>
@@ -259,7 +260,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
 </nav>
 
 <div class="phero"><div class="wrap hero-grid">
-  <div class="uk-only-product">
+  <div class="">
     <div class="crumb"><a href="/software/">Software</a> › Jarvis</div>
     <div class="eyebrow">AI office assistant</div>
     <h1 style="font-size:clamp(36px,5vw,58px);text-transform:uppercase;margin:10px 0 14px">Jarvis</h1>
@@ -268,7 +269,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
       <div class="price"><span class="amt" data-k="jv"></span><span class="per" data-per="jv"></span></div>
       <div class="eff" data-eff="jv"></div>
     </div>
-    <div class="na-note">Not yet available in Australia.</div>
+    
     <span class="offer" data-offer="trial"></span>
     <div class="ctas"><a class="btn primary" href="https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j" data-plan="jv" data-cta="trial"></a><a class="btn" href="/software/#products">Compare all products</a></div>
     <p class="note" style="margin-top:16px"><span class="only-uk">Prices in GBP.*</span><span class="only-au">Prices in AUD and include 10% GST.</span> No setup fees. Free onboarding and data migration. Annual billing: 2 months free.</p>
@@ -288,7 +289,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
   
 </div></section>
 
-<section class="bundles" id="bundles"><div class="wrap">
+<section class="bundles only-uk" id="bundles"><div class="wrap">
   <div class="sec-head"><div><div class="eyebrow">Bundles</div><h2>Get Jarvis in a bundle</h2></div></div>
   <div class="bgrid only-uk" style="grid-template-columns:repeat(2,1fr)"><article class="bcard"><h3>Marketing</h3><p class="contents">FlowBuild + Architect Attractor Lite + Jarvis</p><div class="price"><span class="amt" data-k="b_mkt"></span><span class="per" data-per="b_mkt"></span></div><div class="was">List <s data-list="b_mkt"></s> <span class="save" data-save="b_mkt"></span></div><div class="eff" data-eff="b_mkt"></div><span class="offer mb">30-day money-back guarantee</span><a class="btn primary" href="https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x" data-plan="b_mkt" style="margin-top:16px">Get Marketing</a></article><article class="bcard best"><span class="ribbon">Best value</span><h3>Full Suite</h3><p class="contents">All six: CostTracker Pro, SiteSafe Pro, Muster, FlowBuild, Architect Attractor Lite, Jarvis</p><div class="price"><span class="amt" data-k="b_full"></span><span class="per" data-per="b_full"></span></div><div class="was">List <s data-list="b_full"></s> <span class="save" data-save="b_full"></span></div><div class="eff" data-eff="b_full"></div><span class="offer mb">30-day money-back guarantee</span><a class="btn primary" href="https://buy.stripe.com/cNieVdakR9351PO3ep9k41z" data-plan="b_full" style="margin-top:16px">Get the Full Suite</a></article></div>
   
@@ -320,7 +321,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
   var P={
     uk:{c:'£',m:{fb:197,aa_lite:147,aa_plus:196,aa_pro:275,ctp:247,ss:175,ss_ctp:147,mu:75,jv:297,
       b_mktl:[287,344],b_mkt:[537,641],b_po:[417,497],b_full:[947,1138]}},
-    au:{c:'A$',m:{ctp:497,fb:397,mu:157,b_au:[897,1051]}}
+    au:{c:'A$',m:{ctp:497,fb:397,mu:157,jv:597,b_au:[897,1051]}}
   };
   function fmt(c,n){var d=Math.round(n)===n?0:2;return c+n.toLocaleString('en-GB',{minimumFractionDigits:d,maximumFractionDigits:d});}
   function render(){
@@ -370,7 +371,7 @@ document.addEventListener('click', function (e) {
 <script>
 /* Stripe Payment Links, pricing set 2026-10 (source: stripe-links.md). Buttons with data-plan get the link for the current region + billing. */
 (function(){
-  var L={"uk":{"fb":{"m":"https://buy.stripe.com/9B69ATboV935520aGR9k417","y":"https://buy.stripe.com/6oU4gz0Kh5QT2TS4it9k418"},"aa_lite":{"m":"https://buy.stripe.com/4gM5kDeB75QTcus7uF9k419","y":"https://buy.stripe.com/aFa8wP1OlcfhfGE5mx9k41a"},"ctp":{"m":"https://buy.stripe.com/00w5kDdx3935fGE2al9k41b","y":"https://buy.stripe.com/3cIeVd9gNfrtgKI6qB9k41c"},"ss":{"m":"https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d","y":"https://buy.stripe.com/00w3cv9gN7Z18ec6qB9k41e"},"ss_ctp":{"m":"https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f","y":"https://buy.stripe.com/bJeeVd0Kh7Z1fGE5mx9k41g"},"mu":{"m":"https://buy.stripe.com/7sYeVdcsZfrt7a816h9k41h","y":"https://buy.stripe.com/cNi8wPcsZgvxeCA6qB9k41i"},"jv":{"m":"https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j","y":"https://buy.stripe.com/bJeaEX9gNenp1PO4it9k41k"},"b_mktl":{"m":"https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l","y":"https://buy.stripe.com/8x24gzfFbgvxbqoeX79k41m"},"b_po":{"m":"https://buy.stripe.com/dRm28rcsZ6UX2TScOZ9k41n","y":"https://buy.stripe.com/28E7sLcsZgvx0LK8yJ9k41o"},"b_mkt":{"m":"https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x","y":"https://buy.stripe.com/28EfZh8cJ9356642al9k41y"},"b_full":{"m":"https://buy.stripe.com/cNieVdakR9351PO3ep9k41z","y":"https://buy.stripe.com/bJefZh0Kh7Z1bqo16h9k41A"}},"au":{"ctp":{"m":"https://buy.stripe.com/6oU8wPeB71ADgKI4it9k41p","y":"https://buy.stripe.com/14A9ATakR4MP6648yJ9k41q"},"fb":{"m":"https://buy.stripe.com/cNicN5gJf3IL1PO7uF9k41r","y":"https://buy.stripe.com/28E7sLboV9352TS2al9k41s"},"mu":{"m":"https://buy.stripe.com/4gM00jgJf5QT5209CN9k41t","y":"https://buy.stripe.com/28EeVddx39352TSeX79k41u"},"b_au":{"m":"https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B","y":"https://buy.stripe.com/9B6fZh64B0wz8ec02d9k41C"}}};
+  var L={"uk":{"fb":{"m":"https://buy.stripe.com/9B69ATboV935520aGR9k417","y":"https://buy.stripe.com/6oU4gz0Kh5QT2TS4it9k418"},"aa_lite":{"m":"https://buy.stripe.com/4gM5kDeB75QTcus7uF9k419","y":"https://buy.stripe.com/aFa8wP1OlcfhfGE5mx9k41a"},"ctp":{"m":"https://buy.stripe.com/00w5kDdx3935fGE2al9k41b","y":"https://buy.stripe.com/3cIeVd9gNfrtgKI6qB9k41c"},"ss":{"m":"https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d","y":"https://buy.stripe.com/00w3cv9gN7Z18ec6qB9k41e"},"ss_ctp":{"m":"https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f","y":"https://buy.stripe.com/bJeeVd0Kh7Z1fGE5mx9k41g"},"mu":{"m":"https://buy.stripe.com/7sYeVdcsZfrt7a816h9k41h","y":"https://buy.stripe.com/cNi8wPcsZgvxeCA6qB9k41i"},"jv":{"m":"https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j","y":"https://buy.stripe.com/bJeaEX9gNenp1PO4it9k41k"},"b_mktl":{"m":"https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l","y":"https://buy.stripe.com/8x24gzfFbgvxbqoeX79k41m"},"b_po":{"m":"https://buy.stripe.com/dRm28rcsZ6UX2TScOZ9k41n","y":"https://buy.stripe.com/28E7sLcsZgvx0LK8yJ9k41o"},"b_mkt":{"m":"https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x","y":"https://buy.stripe.com/28EfZh8cJ9356642al9k41y"},"b_full":{"m":"https://buy.stripe.com/cNieVdakR9351PO3ep9k41z","y":"https://buy.stripe.com/bJefZh0Kh7Z1bqo16h9k41A"}},"au":{"jv":{"m":"https://buy.stripe.com/00w6oHeB7gvxamk4it9k41D","y":"https://buy.stripe.com/28EfZh78Fbbd3XW9CN9k41E"},"ctp":{"m":"https://buy.stripe.com/6oU8wPeB71ADgKI4it9k41p","y":"https://buy.stripe.com/14A9ATakR4MP6648yJ9k41q"},"fb":{"m":"https://buy.stripe.com/cNicN5gJf3IL1PO7uF9k41r","y":"https://buy.stripe.com/28E7sLboV9352TS2al9k41s"},"mu":{"m":"https://buy.stripe.com/4gM00jgJf5QT5209CN9k41t","y":"https://buy.stripe.com/28EeVddx39352TSeX79k41u"},"b_au":{"m":"https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B","y":"https://buy.stripe.com/9B6fZh64B0wz8ec02d9k41C"}}};
   function wire(){
     var r=document.body.dataset.region, b=document.body.dataset.billing;
     document.querySelectorAll('[data-plan]').forEach(function(a){
