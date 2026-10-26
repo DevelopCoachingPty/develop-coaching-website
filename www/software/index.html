@@ -89,6 +89,8 @@ section{padding:76px 0}
 .sec-head h2{font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;margin-top:6px}
 .sec-head p{margin:8px 0 0;color:var(--muted);max-width:660px;font-size:16.5px}
 .note{font-size:13px;color:var(--muted)}
+.annual-only{display:none}
+body[data-billing="y"] .annual-only{display:block}
 /* product grid */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;position:relative;transition:transform .15s,box-shadow .15s}
@@ -333,7 +335,8 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
         <div class="addon only-uk"><b>AI Takeoff add-on</b><span class="soon">Coming soon</span><br>+£50/month for 150 sheets a month.</div>
         <div class="addon only-au"><b>AI Takeoff add-on</b><span class="soon">Coming soon</span></div>
         <p></p>
-        <a class="btn primary" href="https://buy.stripe.com/00w5kDdx3935fGE2al9k41b" data-plan="ctp" data-cta="trial"></a>
+        <a class="btn primary" href="https://costtrackerpro.develop-coaching.com/signup" data-plan="ctp" data-cta="trial"></a>
+        <p class="note ctp-signup-note" style="margin-top:10px">You create your account first, then check out. <span class="only-au">Choose Australia as your country at sign-up to pay in AUD.</span><span class="annual-only">Sign-up starts you on the monthly plan.</span></p>
       </article>
 
       <!-- FlowBuild -->
@@ -671,7 +674,7 @@ src="https://www.facebook.com/tr?id=1934173480574455&ev=PageView&noscript=1"/></
 document.addEventListener('click', function (e) {
   var a = e.target.closest('a'); if (!a) return;
   var h = a.getAttribute('href') || '';
-  if (h.indexOf('stripe.com') > -1) {
+  if (h.indexOf('stripe.com') > -1 || h.indexOf('costtrackerpro.develop-coaching.com/signup') > -1) {
     if (window.gtag) gtag('event', 'event_button_click', {button_text: a.textContent.trim(), page_path: location.pathname});
     if (window.fbq) fbq('track', 'InitiateCheckout');
   }
@@ -680,7 +683,7 @@ document.addEventListener('click', function (e) {
 <script>
 /* Stripe Payment Links, pricing set 2026-10 (source: stripe-links.md). Buttons with data-plan get the link for the current region + billing. */
 (function(){
-  var L={"uk":{"fb":{"m":"https://buy.stripe.com/9B69ATboV935520aGR9k417","y":"https://buy.stripe.com/6oU4gz0Kh5QT2TS4it9k418"},"aa_lite":{"m":"https://buy.stripe.com/4gM5kDeB75QTcus7uF9k419","y":"https://buy.stripe.com/aFa8wP1OlcfhfGE5mx9k41a"},"ctp":{"m":"https://buy.stripe.com/00w5kDdx3935fGE2al9k41b","y":"https://buy.stripe.com/3cIeVd9gNfrtgKI6qB9k41c"},"ss":{"m":"https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d","y":"https://buy.stripe.com/00w3cv9gN7Z18ec6qB9k41e"},"ss_ctp":{"m":"https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f","y":"https://buy.stripe.com/bJeeVd0Kh7Z1fGE5mx9k41g"},"mu":{"m":"https://buy.stripe.com/7sYeVdcsZfrt7a816h9k41h","y":"https://buy.stripe.com/cNi8wPcsZgvxeCA6qB9k41i"},"jv":{"m":"https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j","y":"https://buy.stripe.com/bJeaEX9gNenp1PO4it9k41k"},"b_mktl":{"m":"https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l","y":"https://buy.stripe.com/8x24gzfFbgvxbqoeX79k41m"},"b_po":{"m":"https://buy.stripe.com/dRm28rcsZ6UX2TScOZ9k41n","y":"https://buy.stripe.com/28E7sLcsZgvx0LK8yJ9k41o"},"b_mkt":{"m":"https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x","y":"https://buy.stripe.com/28EfZh8cJ9356642al9k41y"},"b_full":{"m":"https://buy.stripe.com/cNieVdakR9351PO3ep9k41z","y":"https://buy.stripe.com/bJefZh0Kh7Z1bqo16h9k41A"}},"au":{"jv":{"m":"https://buy.stripe.com/00w6oHeB7gvxamk4it9k41D","y":"https://buy.stripe.com/28EfZh78Fbbd3XW9CN9k41E"},"ctp":{"m":"https://buy.stripe.com/6oU8wPeB71ADgKI4it9k41p","y":"https://buy.stripe.com/14A9ATakR4MP6648yJ9k41q"},"fb":{"m":"https://buy.stripe.com/cNicN5gJf3IL1PO7uF9k41r","y":"https://buy.stripe.com/28E7sLboV9352TS2al9k41s"},"mu":{"m":"https://buy.stripe.com/4gM00jgJf5QT5209CN9k41t","y":"https://buy.stripe.com/28EeVddx39352TSeX79k41u"},"b_au":{"m":"https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B","y":"https://buy.stripe.com/9B6fZh64B0wz8ec02d9k41C"}}};
+  var L={"uk":{"fb":{"m":"https://buy.stripe.com/9B69ATboV935520aGR9k417","y":"https://buy.stripe.com/6oU4gz0Kh5QT2TS4it9k418"},"aa_lite":{"m":"https://buy.stripe.com/4gM5kDeB75QTcus7uF9k419","y":"https://buy.stripe.com/aFa8wP1OlcfhfGE5mx9k41a"},"ctp":{"m":"https://costtrackerpro.develop-coaching.com/signup","y":"https://costtrackerpro.develop-coaching.com/signup"},"ss":{"m":"https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d","y":"https://buy.stripe.com/00w3cv9gN7Z18ec6qB9k41e"},"ss_ctp":{"m":"https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f","y":"https://buy.stripe.com/bJeeVd0Kh7Z1fGE5mx9k41g"},"mu":{"m":"https://buy.stripe.com/7sYeVdcsZfrt7a816h9k41h","y":"https://buy.stripe.com/cNi8wPcsZgvxeCA6qB9k41i"},"jv":{"m":"https://buy.stripe.com/7sY28rdx37Z19ig7uF9k41j","y":"https://buy.stripe.com/bJeaEX9gNenp1PO4it9k41k"},"b_mktl":{"m":"https://buy.stripe.com/00w5kDcsZ3IL1POcOZ9k41l","y":"https://buy.stripe.com/8x24gzfFbgvxbqoeX79k41m"},"b_po":{"m":"https://buy.stripe.com/dRm28rcsZ6UX2TScOZ9k41n","y":"https://buy.stripe.com/28E7sLcsZgvx0LK8yJ9k41o"},"b_mkt":{"m":"https://buy.stripe.com/6oUcN5boVcfhbqo16h9k41x","y":"https://buy.stripe.com/28EfZh8cJ9356642al9k41y"},"b_full":{"m":"https://buy.stripe.com/cNieVdakR9351PO3ep9k41z","y":"https://buy.stripe.com/bJefZh0Kh7Z1bqo16h9k41A"}},"au":{"jv":{"m":"https://buy.stripe.com/00w6oHeB7gvxamk4it9k41D","y":"https://buy.stripe.com/28EfZh78Fbbd3XW9CN9k41E"},"ctp":{"m":"https://costtrackerpro.develop-coaching.com/signup?region=au","y":"https://costtrackerpro.develop-coaching.com/signup?region=au"},"fb":{"m":"https://buy.stripe.com/cNicN5gJf3IL1PO7uF9k41r","y":"https://buy.stripe.com/28E7sLboV9352TS2al9k41s"},"mu":{"m":"https://buy.stripe.com/4gM00jgJf5QT5209CN9k41t","y":"https://buy.stripe.com/28EeVddx39352TSeX79k41u"},"b_au":{"m":"https://buy.stripe.com/9B6bJ18cJ5QTamkg1b9k41B","y":"https://buy.stripe.com/9B6fZh64B0wz8ec02d9k41C"}}};
   function wire(){
     var r=document.body.dataset.region, b=document.body.dataset.billing;
     document.querySelectorAll('[data-plan]').forEach(function(a){
