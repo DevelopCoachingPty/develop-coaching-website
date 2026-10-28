@@ -73,9 +73,11 @@ YouTube embeds, FlowBuild/GoHighLevel form and calendar iframes
    scripts cannot be unloaded, so a page reload completes it.
 
 It fails closed. If `CONSENT_TOOL_ID` is not a real key, no banner can load and so
-no tracker ever loads. The key is set (CookieYes website key `e5ee5d26e0341217ffb7eccd`,
-website id 1496174, a public site key that is visible in the page source anyway). `window.dcConsent.allowed('analytics' | 'advertising')`
+no tracker ever loads. The key is set (CookieYes website key `2f7e13589ff822640e02507774d2f82c`,
+from Greg's own CookieYes account for develop-coaching.com, a public site key that is visible in the page source anyway). `window.dcConsent.allowed('analytics' | 'advertising')`
 is available to other scripts.
+
+Check the key before relying on it: the CookieYes `script.js` for a key contains `registeredDomain:"<site>"`. It must be `develop-coaching.com`. A key registered under another domain makes the script throw "Looks like your website URL has changed..." and no banner shows (the gate then keeps every tracker off). The first key used here (`e5ee5d26...`, 24 hex) was registered under `cookieyes.com` and showed no banner.
 
 ## Consent tool recommendation: CookieYes
 
@@ -107,7 +109,7 @@ v2. CookieYes is the cheapest that meets the whole checklist.
 ## What Greg needs to supply and do
 
 1. Done: CookieYes account created (free plan), `develop-coaching.com` added.
-2. Done: website key `e5ee5d26e0341217ffb7eccd` copied from `.../client_data/<KEY>/script.js`.
+2. Done: website key `2f7e13589ff822640e02507774d2f82c` copied from `.../client_data/<KEY>/script.js`.
 3. Done: `CONSENT_TOOL_ID` in `www/dc-consent.js` is set to that key.
 4. In CookieYes (confirm these are set):
    - Advanced settings: turn **Support GCM** on. Leave **Allow Google tags to fire

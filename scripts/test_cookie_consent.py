@@ -116,13 +116,17 @@ class SiteTests(unittest.TestCase):
 
     def test_gate_script_shape(self):
         js = (WWW / "dc-consent.js").read_text()
-        self.assertRegex(js, r"var CONSENT_TOOL_ID = '(CONSENT_TOOL_ID|[A-Fa-f0-9]{24})';")
+        # a real CookieYes website key is 32 hex characters
+        self.assertRegex(js, r"var CONSENT_TOOL_ID = '[A-Fa-f0-9]{32}';")
         # default denied is set before anything else can run
         self.assertLess(js.index("'consent', 'default'"), js.index("function patch"))
         for key in ("ad_storage", "analytics_storage", "ad_user_data", "ad_personalization"):
             self.assertRegex(js, rf"{key}: 'denied'")
         # fail closed: the banner only loads for a real key
         self.assertIn("/^[a-f0-9]{16,}$/i.test(CONSENT_TOOL_ID)", js)
+        gate = re.compile(r"^[a-f0-9]{16,}$", re.I)
+        self.assertIsNone(gate.match("CONSENT_TOOL_ID"), "the placeholder must not pass the gate")
+        self.assertIsNotNone(gate.match("2f7e13589ff822640e02507774d2f82c"))
 
     def test_publish_scripts_install_the_gate(self):
         for name in ("publish_page.py", "publish_designed_page.py"):

@@ -25,9 +25,9 @@
   'use strict';
   if (w.dcConsent) return;
 
-  // Supplied by Greg: the CookieYes "website key" (24 hex characters, from
+  // Supplied by Greg: the CookieYes "website key" (32 hex characters, from
   // CookieYes dashboard > Advanced settings > Get installation code).
-  var CONSENT_TOOL_ID = 'e5ee5d26e0341217ffb7eccd';
+  var CONSENT_TOOL_ID = '2f7e13589ff822640e02507774d2f82c';
 
   var state = { analytics: false, advertising: false };
   var held = [];
