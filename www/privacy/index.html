@@ -498,11 +498,11 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <table>
 <thead><tr><th>Provider</th><th>What for</th></tr></thead>
 <tbody>
-<tr><td>Vercel</td><td>Hosting this site and our software</td></tr>
+<tr><td>Vercel</td><td>Hosting this site and our software (Cost Tracker Pro servers are in Mumbai, India)</td></tr>
 <tr><td>Stripe</td><td>Payments, invoices and billing</td></tr>
 <tr><td>FlowBuild (built on GoHighLevel)</td><td>Website forms, booking calendars, email and text messages</td></tr>
 <tr><td>ActiveCampaign</td><td>Email and customer records. With your consent, it also links visits to this site to your contact record.</td></tr>
-<tr><td>Supabase</td><td>Database, sign-in and file storage for our software</td></tr>
+<tr><td>Supabase</td><td>Database, sign-in and file storage for our software (Cost Tracker Pro data is in Mumbai, India)</td></tr>
 <tr><td>Anthropic, OpenAI and Google</td><td>AI features in our software, such as reading documents and answering questions about your jobs</td></tr>
 <tr><td>Intuit (QuickBooks) and Xero</td><td>Accounting links that you switch on</td></tr>
 <tr><td>Google, Meta, Microsoft, Cabin</td><td>Website analytics and advertising, only if you accept the relevant cookies</td></tr>
@@ -519,7 +519,13 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <h2 id="abroad">7. Sending data abroad</h2>
 <p>We are based in Australia. Our providers work in several countries, including Australia, India and the United States. If UK or EU law applies to you and your data goes to a country that does not have an adequacy decision, the law requires a safeguard, such as the UK International Data Transfer Agreement or the UK Addendum to the EU Standard Contractual Clauses. For Australian customers, we take reasonable steps to make sure overseas providers handle your information in line with the Australian Privacy Principles. Email <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a> if you want details of the safeguards for a particular provider.</p>
 <!-- OPEN: which transfer tool covers which provider, and whether it is signed. The old text said you "are deemed to accept" transfers by using the site. That is not a valid safeguard and was removed. -->
-<!-- OPEN: where CostTrackerPro data is stored (Mumbai today, a move to London or Sydney is under decision). Say it on the CostTrackerPro notice, not here, until decided. -->
+<p><strong>Cost Tracker Pro.</strong> The Cost Tracker Pro database, file storage and app servers are in Mumbai, India, so the personal data of its UK and Australian users is processed in India. A second copy of its backups is kept with Cloudflare. Its own privacy and cookie notice has the detail.</p>
+<p><strong>UK customers.</strong> India does not currently have a UK adequacy decision. UK law therefore requires a safeguard for sending personal data there, such as the UK International Data Transfer Agreement or the UK Addendum to the EU Standard Contractual Clauses. We are confirming which safeguard applies with each provider.</p>
+<div class="dc-review-note" data-dc-transfer-review-note>
+<p><strong>For lawyer review.</strong> The India transfer wording above is a draft. We have not confirmed that a UK transfer safeguard (for example the UK International Data Transfer Agreement or the UK Addendum) is in place with Supabase or Vercel. Confirm it, rewrite this section to match, then remove this box.</p>
+</div>
+<!-- OPEN: LAWYER REVIEW. Greg decided on 28 Oct 2026 that Cost Tracker Pro stays in Mumbai and discloses it. The planned region move is cancelled. Do not state a transfer mechanism as in place until the Supabase and Vercel data processing agreements are checked (IDTA or UK Addendum, signed or not). -->
+<!-- OPEN: facts checked 28 Oct 2026: Supabase production ap-south-1 (Mumbai), Vercel functions bom1 (Mumbai), backups mirrored to Cloudflare R2. Not checked: the R2 bucket location. -->
 
 <h2 id="security">8. Keeping your data safe</h2>
 <p>We use physical, electronic and management controls to protect your data, and only people who need access to it to do their work can see it. No method of sending data over the internet is completely secure, so please take sensible care when you send us anything.</p>

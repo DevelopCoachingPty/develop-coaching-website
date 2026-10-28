@@ -50,6 +50,19 @@ class PrivacyPolicyTest(unittest.TestCase):
         self.assertIn("data-dc-review-note", MAIN)
         self.assertIn("legal review", TEXT)
 
+    def test_cost_tracker_pro_data_is_in_mumbai_india(self):
+        self.assertIn("database, file storage and app servers are in Mumbai, India", TEXT)
+        self.assertIn("personal data of its UK and Australian users is processed in India", TEXT)
+        self.assertNotRegex(MAIN, r"London|eu-west-2|lhr1|Version 2")
+
+    def test_transfer_wording_flagged_for_lawyer_review(self):
+        # Delete with the box once the lawyer has approved the wording.
+        self.assertIn("data-dc-transfer-review-note", MAIN)
+        self.assertIn("For lawyer review", TEXT)
+        self.assertIn("We are confirming which safeguard applies", TEXT)
+        self.assertNotRegex(TEXT, r"(?i)we use approved transfer safeguards|safeguards (are|is) in place")
+        self.assertIn("<!-- OPEN: LAWYER REVIEW", MAIN)
+
     def test_company_details(self):
         for s in ("666 725 659", "47 666 725 659", "PO Box 181", "hello@develop-coaching.com"):
             self.assertIn(s, TEXT)
