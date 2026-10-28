@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 WWW = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'www')
 CHROME = os.environ.get('CHROME', '/usr/bin/google-chrome')
 PORT = 8765
-FAKE = 'abcdef0123456789abcdef01'
+FAKE = 'abcdef0123456789abcdef0123456789'
 PAGES = ['/', '/software/muster/', '/5-pillars-free-trainings/attract/', '/schedule-a-call/',
          '/fill-the-order-book/', '/win-big-clients/']
 TRACK = re.compile(r'googletagmanager\.com|facebook\.(com|net)|clarity\.ms|app-us1\.com|withcabin\.com|trackcmp|doubleclick|google-analytics|googleadservices')
