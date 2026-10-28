@@ -29,8 +29,11 @@ def run(p, path, scenario):
     def handle(route):
         url = route.request.url
         if url.startswith(f'http://127.0.0.1:{PORT}'):
-            if url.endswith('/dc-consent.js') and scenario != 'placeholder':
-                body = open(WWW + '/dc-consent.js').read().replace("'CONSENT_TOOL_ID'", f"'{FAKE}'")
+            if url.endswith('/dc-consent.js'):
+                # Swap the shipped key: a fake key for the normal scenarios, the
+                # not-a-key placeholder for the fail-closed scenario.
+                key = 'CONSENT_TOOL_ID' if scenario == 'placeholder' else FAKE
+                body = re.sub(r"var CONSENT_TOOL_ID = '[^']*';", f"var CONSENT_TOOL_ID = '{key}';", open(WWW + '/dc-consent.js').read())
                 return route.fulfill(status=200, content_type='application/javascript', body=body)
             return route.continue_()
         reqs.append(url)

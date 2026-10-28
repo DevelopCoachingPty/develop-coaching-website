@@ -72,16 +72,22 @@ YouTube embeds, FlowBuild/GoHighLevel form and calendar iframes
    `consentv2`, Meta `consent revoke`, GA4 `ga-disable-<id>`). Already loaded
    scripts cannot be unloaded, so a page reload completes it.
 
-It fails closed. Until `CONSENT_TOOL_ID` is a real key, no banner can load and so
-no tracker ever loads. Do not deploy before the ID is set unless a tracking
-blackout is acceptable. `window.dcConsent.allowed('analytics' | 'advertising')`
+It fails closed. If `CONSENT_TOOL_ID` is not a real key, no banner can load and so
+no tracker ever loads. The key is set (CookieYes website key `e5ee5d26e0341217ffb7eccd`,
+website id 1496174, a public site key that is visible in the page source anyway). `window.dcConsent.allowed('analytics' | 'advertising')`
 is available to other scripts.
 
 ## Consent tool recommendation: CookieYes
 
-CookieYes, paid "Basic" plan. List price at time of research is about 8 GBP a
-month (about 80 GBP a year billed yearly). Greg to confirm current price at
-checkout.
+CookieYes. **Greg is on the FREE plan for now** (decision 28 Oct 2026). The paid
+"Basic" plan is about 8 GBP a month (about 80 GBP a year billed yearly) if it is
+needed later.
+
+**Risk on the free plan:** it is limited to 5,000 page views a month and the banner
+switches off at the limit. With no banner no choice can be made, so no tracker
+loads (the gate fails closed) and analytics and ads go dark until the next month or
+until Greg upgrades. Watch the CookieYes page view count and upgrade before the
+limit if traffic or paid campaigns will exceed it.
 
 Why:
 - Google-certified for Consent Mode v2, and has a Tag Manager template.
@@ -90,7 +96,7 @@ Why:
   prominence, which the ICO expects. It keeps a consent log and has a floating
   "revisit" button.
 - Covers a site this size. The free plan is limited to 5,000 page views a month and
-  100 scanned pages (and the banner switches off at the limit), so it is not enough
+  100 scanned pages (and the banner switches off at the limit), so it may not be enough
   for 420 pages with paid traffic.
 
 Alternatives considered: Cookiebot (about 30 EUR a month at this size, free only to
@@ -100,11 +106,10 @@ v2. CookieYes is the cheapest that meets the whole checklist.
 
 ## What Greg needs to supply and do
 
-1. Create a CookieYes account (Greg, not an agent), add `develop-coaching.com`.
-2. Copy the website key: Dashboard, Advanced settings, Get installation code. It is
-   the 24 character hex string in `.../client_data/<KEY>/script.js`.
-3. Replace `CONSENT_TOOL_ID` in `www/dc-consent.js` with that key. One line.
-4. In CookieYes:
+1. Done: CookieYes account created (free plan), `develop-coaching.com` added.
+2. Done: website key `e5ee5d26e0341217ffb7eccd` copied from `.../client_data/<KEY>/script.js`.
+3. Done: `CONSENT_TOOL_ID` in `www/dc-consent.js` is set to that key.
+4. In CookieYes (confirm these are set):
    - Advanced settings: turn **Support GCM** on. Leave **Allow Google tags to fire
      before consent** OFF (that is advanced mode, and this build is basic).
    - Banner template: use the strict opt-in (GDPR style) banner for **all
@@ -154,12 +159,12 @@ so this list is from the public container file and has to be checked in GTM.
   (gate first in `<head>`, no ungated static tracker, no tracking noscript, a
   Cookie settings link on every tracker page).
 - `scripts/check_consent_gate_browser.py` (headless Chrome, external hosts stubbed):
-  six page types, four scenarios (no banner key, reject, analytics only, accept
+  six page types, four scenarios (banner key not valid so it fails closed, reject, analytics only, accept
   all). With no choice, zero tracker requests. Reject keeps it at zero. Analytics
   only loads GTM, GA4, Clarity and Cabin and not Meta or ActiveCampaign. Accept all
   loads everything. Before this change the same pages made 2 to 6 tracker requests
   on load.
-- Not tested: the real CookieYes banner (no key yet), real GTM container contents,
+- Not tested: the real CookieYes banner (the stub check swaps in a fake key), real GTM container contents,
   real Meta/Clarity/ActiveCampaign endpoints, Safari and Firefox.
 
 ## Limits and open questions

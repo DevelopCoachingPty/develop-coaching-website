@@ -12,7 +12,7 @@
  *   4. Watches for the consent choice (a Consent Mode "update" on the data layer,
  *      or the banner's own event) and releases the right scripts.
  *
- * Fails closed: until CONSENT_TOOL_ID is set to a real CookieYes website key no
+ * Fails closed: if CONSENT_TOOL_ID is not a real CookieYes website key no
  * banner can load, so no tracker ever loads. Nothing here sets a cookie.
  *
  * Static <script type="text/plain" data-dc-category="..."> tags (Cabin, gtag.js
@@ -27,7 +27,7 @@
 
   // Supplied by Greg: the CookieYes "website key" (24 hex characters, from
   // CookieYes dashboard > Advanced settings > Get installation code).
-  var CONSENT_TOOL_ID = 'CONSENT_TOOL_ID';
+  var CONSENT_TOOL_ID = 'e5ee5d26e0341217ffb7eccd';
 
   var state = { analytics: false, advertising: false };
   var held = [];
