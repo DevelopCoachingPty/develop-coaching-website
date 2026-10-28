@@ -49,8 +49,10 @@ YouTube embeds, FlowBuild/GoHighLevel form and calendar iframes
    ActiveCampaign, Cabin) that the page adds from JavaScript, and releases them in
    place after consent. The existing inline snippets are unchanged, so their
    queued calls (`fbq`, `clarity`, `vgo`, `dataLayer`) replay normally once the
-   script arrives. This is "basic" Consent Mode: Google tags do not load, and
-   send no cookieless pings, until the visitor says yes.
+   script arrives. This is "basic" Consent Mode: the hard-coded Google loaders are held,
+   so they send no cookieless pings until the visitor says yes. If GTM is released by
+   advertising-only consent, GA4 inside GTM can still send cookieless pings unless
+   the GTM change for GA4 (analytics_storage required) has been made.
 3. Static tags that cannot be intercepted (Cabin, gtag.js on the software pages)
    are rewritten to `type="text/plain" data-dc-category="..."` in the HTML and
    switched on by the same release step.
@@ -164,7 +166,15 @@ so this list is from the public container file and has to be checked in GTM.
 
 - Events fired before the visitor chooses (a click on a buy button, a form
   submit) are queued in the page's data layer, and are sent if the visitor then
-  accepts later on the same page. They are dropped if the page is left.
+  accepts later on the same page. They are dropped if the page is left. The one
+  exception is the FlowBuild booking-complete event in `booking-tracking.js`, which
+  is dropped (not queued) if analytics consent has not been given at that moment.
+- The consent tool itself (CookieYes) loads, and sets its own consent cookie,
+  before any choice. That is normal for a consent tool and is listed as strictly
+  necessary in the privacy page.
+- The browser gate check stubs external scripts with empty bodies, so it proves which
+  scripts are requested, not what GTM does internally. What GTM fires depends on the
+  GTM changes below.
 - `document.write` of a tracker is not intercepted. None exist on the site today.
 - Google Fonts, YouTube embeds, FlowBuild iframes and the Trustindex widget load
   third-party content before consent and set their own cookies or send IP

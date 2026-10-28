@@ -95,6 +95,8 @@
     var src = node.getAttribute('src');
     if (!src) return null;
     var cat = classify(src);
+    // Always give a second gtag data layer its denied default, even when the script is not held.
+    if (cat && /googletagmanager\.com\/gtag\/js/i.test(src)) rememberGtag(src);
     if (!cat || allowed(cat)) return null;
     return cat;
   }
