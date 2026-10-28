@@ -2,7 +2,7 @@
 
 For Greg and legal review. This is not legal advice. Page: `www/privacy/index.html`,
 text source: `content/privacy-policy-body.html`, applied by `scripts/apply_privacy_policy.py`.
-Every item below is also marked `OPEN:` in the page source (invisible to visitors).
+Most items below are also marked `OPEN:` in the page source (invisible to visitors).
 
 ## What was wrong on the old page
 
@@ -29,7 +29,7 @@ reviewed for OAuth).
 1. **UK representative and ICO registration** (UK GDPR Art. 27). Not confirmed. Launch plan lists both as to do. Name and address go in section 1 when known.
 2. **Does the Australian Privacy Act apply in full** (small business exemption)? Lawyer to confirm.
 3. **Marketing legal basis** per list: consent, or legitimate interests for business contacts.
-4. **Which transfer tool covers which provider** (IDTA, UK Addendum, other) and whether it is signed. **The India transfer wording is a draft flagged for lawyer review** (second review box in section 7, test `test_transfer_wording_flagged_for_lawyer_review`). The page says only that we are confirming which safeguard applies. Check whether the Supabase and Vercel data processing agreements include the UK IDTA or UK Addendum and whether they are signed, then rewrite and remove the box.
+4. **Which transfer tool covers which provider** (IDTA, UK Addendum, other) and whether it is signed. **The India transfer wording is a draft flagged for lawyer review** (second review box in section 7, test `test_transfer_wording_flagged_for_lawyer_review`). The page says only that we are confirming which safeguard applies and invites readers to ask which safeguard, if any, we rely on. Check whether the Supabase and Vercel data processing agreements include the UK IDTA or UK Addendum and whether they are signed, then rewrite and remove the box.
 5. **Where CostTrackerPro data lives.** Decided 28 Oct 2026: it stays in Mumbai, India (Supabase ap-south-1, Vercel functions bom1, checked that day) and the planned region move is cancelled. Section 7 now says UK and Australian user data is processed in India. Not checked: the Cloudflare R2 backup bucket location. Same wording is on the CostTrackerPro notice.
 6. **Old provider names removed** (Zoho, Infusionsoft, Twitter, Pinterest, LinkedIn, Instagram, Power BI, DocuSign, SharePoint/OneDrive, Data Molino, Royal Mail). If any still handle customer data, add them back. A generic line about accounting, storage and e-signing tools stays.
 7. **Email sending service.** Resend is listed as a cost in the launch plan but was not seen in site code.
@@ -37,7 +37,7 @@ reviewed for OAuth).
 9. **Retention.** Closed account deletion period (the CostTrackerPro notice says 30 days, backups?), Google Analytics retention setting, Clarity retention.
 10. **Clarity masking** for form fields. The cookie table says form entries are hidden. Check the Clarity project setting.
 11. **Cabin cookies.** "No cookie" is the vendor's claim, not checked.
-12. **Embedded content** (YouTube, Trustindex, FlowBuild forms, Google Fonts) loads before any banner choice and is not gated. Options: add a click to load step and an "embedded content" category, self-host fonts, or accept and disclose. The page currently discloses.
+12. **Embedded content** (YouTube, Trustindex, FlowBuild forms, Google Fonts) loads before any banner choice and is not gated. Options: add a click to load step and an "embedded content" category, self-host fonts, or accept and disclose. The page currently discloses. Sections 3 and 11 say embedded content is set outside the banner choice, so they do not claim gating that is not there.
 13. **Consent tool name and settings.** The page names CookieYes and says choices last 12 months and Reject all is on the first layer. These must match what is set in the CookieYes dashboard. Once the first scan exists, paste CookieYes's generated cookie list under the table or update the table.
 14. **Universal Analytics** (UA-136319056-1) is not listed because it is retired. Remove it from GTM. If it stays it must be listed.
 15. **Jarvis section** ends with "contact greg@develop-coaching.com", every other contact is hello@develop-coaching.com. Left as is because changing text Google reviewed may need a new review.

@@ -60,7 +60,7 @@ class PrivacyPolicyTest(unittest.TestCase):
         self.assertIn("data-dc-transfer-review-note", MAIN)
         self.assertIn("For lawyer review", TEXT)
         self.assertIn("We are confirming which safeguard applies", TEXT)
-        self.assertNotRegex(TEXT, r"(?i)we use approved transfer safeguards|safeguards (are|is) in place")
+        self.assertNotRegex(TEXT, r"(?i)we use approved transfer safeguards|safeguards (are|is) in place|details of the safeguards")
         self.assertIn("<!-- OPEN: LAWYER REVIEW", MAIN)
 
     def test_company_details(self):
