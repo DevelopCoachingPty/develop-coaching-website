@@ -66,6 +66,8 @@
     if (!dl || typeof dl.push !== "function") return false;
     if (window['ga-disable-G-PXT2VCVFLW']) return false;
     if (window.navigator && (window.navigator.globalPrivacyControl || window.navigator.doNotTrack === '1')) return false;
+    // The consent gate (dc-consent.js) is not present on every test page, so only check when it is.
+    if (window.dcConsent && !window.dcConsent.allowed('analytics')) return false;
     function googleEvent() { dl.push(arguments); }
     googleEvent('event', DL_EVENT, {
       send_to: 'G-PXT2VCVFLW',

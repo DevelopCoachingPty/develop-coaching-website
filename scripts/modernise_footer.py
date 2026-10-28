@@ -60,7 +60,7 @@ FOOTER = """<footer id="site-footer" class="dc-site-footer" data-dc-modern-foote
   </div>
   <div class="dc-footer-wrap dc-site-footer__bottom">
     <p>© Copyright 2026 by Develop Coaching Pty Ltd. All Rights Reserved.</p>
-    <p><a href="/privacy/">Privacy Policy</a> · <a href="/corporate-structure-notice/">Corporate Structure Notice</a></p>
+    <p><a href="/privacy/">Privacy Policy</a> · <a href="/corporate-structure-notice/">Corporate Structure Notice</a> · <a href="#" class="cky-banner-element dc-cookie-settings">Cookie settings</a></p>
     <p class="dc-site-footer__disclaimer">This site is not part of or endorsed by Facebook Inc. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
   </div>
 </footer>"""

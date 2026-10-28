@@ -27,6 +27,10 @@ def install(html):
     parser.feed(html)
     if not parser.found or 'data-booking-tracking' in html:
         return html
+    # The cookie consent gate must stay the first script in <head>.
+    consent = re.search(r'<script\b[^>]*\bdata-dc-consent\b[^>]*></script>[ \t]*\n?', html)
+    if consent:
+        return html[:consent.end()] + TAG + '\n' + html[consent.end():]
     return re.sub(r'<head\b[^>]*>', lambda m: m.group(0) + '\n' + TAG + '\n', html, count=1, flags=re.I)
 
 
