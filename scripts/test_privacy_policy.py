@@ -46,19 +46,18 @@ class PrivacyPolicyTest(unittest.TestCase):
         self.assertIn('id="cookies"', MAIN)
         self.assertIn('class="cky-banner-element"', MAIN)
 
-    def test_review_marker_present(self):
-        self.assertIn("data-dc-review-note", MAIN)
-        self.assertIn("legal review", TEXT)
+    def test_no_visible_review_banners(self):
+        self.assertNotIn("dc-review-note", MAIN)
+        self.assertNotIn("data-dc-review-note", MAIN)
+        self.assertNotIn("data-dc-transfer-review-note", MAIN)
+        self.assertNotRegex(TEXT, r"(?i)for (greg and )?(lawyer|legal) review|remove this box|corrected draft|pending (lawyer|legal)")
 
     def test_cost_tracker_pro_data_is_in_mumbai_india(self):
         self.assertIn("database, file storage and app servers are in Mumbai, India", TEXT)
         self.assertIn("personal data of its UK and Australian users is processed in India", TEXT)
         self.assertNotRegex(MAIN, r"London|eu-west-2|lhr1|Version 2")
 
-    def test_transfer_wording_flagged_for_lawyer_review(self):
-        # Delete with the box once the lawyer has approved the wording.
-        self.assertIn("data-dc-transfer-review-note", MAIN)
-        self.assertIn("For lawyer review", TEXT)
+    def test_transfer_wording_is_honest_about_safeguards(self):
         self.assertIn("We are confirming which safeguard applies", TEXT)
         self.assertNotRegex(TEXT, r"(?i)we use approved transfer safeguards|safeguards (are|is) in place|details of the safeguards")
         self.assertIn("<!-- OPEN: LAWYER REVIEW", MAIN)

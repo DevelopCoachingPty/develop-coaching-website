@@ -438,18 +438,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .dc-privacy table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em}
 .dc-privacy th,.dc-privacy td{border:1px solid #c9c9c9;padding:.5em .6em;text-align:left;vertical-align:top}
 .dc-privacy th{background:#f3f3f3}
-.dc-privacy .dc-review-note{border:2px solid #b45309;background:#fff7ed;padding:1em 1.2em;margin:0 0 2em}
 </style>
 <div class="dc-privacy">
 
 <!--
 OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/privacy-page-open-questions.md
 -->
-
-<div class="dc-review-note" data-dc-review-note>
-<p><strong>For Greg and legal review. Remove this box before publishing.</strong></p>
-<p>This is a corrected draft. The earlier version described a cookie pop-up that did not exist and listed tools the site does not use. Items that could not be checked are listed in docs/privacy-page-open-questions.md and marked OPEN in the page source.</p>
-</div>
 
 <p><em>Last updated: 28 October 2026</em></p>
 
@@ -521,9 +515,6 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <!-- OPEN: which transfer tool covers which provider, and whether it is signed. The old text said you "are deemed to accept" transfers by using the site. That is not a valid safeguard and was removed. -->
 <p><strong>Cost Tracker Pro.</strong> The Cost Tracker Pro database, file storage and app servers are in Mumbai, India, so the personal data of its UK and Australian users is processed in India. A second copy of its backups is kept with Cloudflare. Its own privacy and cookie notice has the detail.</p>
 <p><strong>UK customers.</strong> India does not currently have a UK adequacy decision. UK law therefore requires a safeguard for sending personal data there, such as the UK International Data Transfer Agreement or the UK Addendum to the EU Standard Contractual Clauses. We are confirming which safeguard applies with each provider.</p>
-<div class="dc-review-note" data-dc-transfer-review-note>
-<p><strong>For lawyer review.</strong> The India transfer wording above is a draft. We have not confirmed that a UK transfer safeguard (for example the UK International Data Transfer Agreement or the UK Addendum) is in place with Supabase or Vercel. Also confirm where the Cloudflare backup copy is stored. Confirm it, rewrite this section to match, then remove this box.</p>
-</div>
 <!-- OPEN: LAWYER REVIEW. Greg decided on 28 Oct 2026 that Cost Tracker Pro stays in Mumbai and discloses it. The planned region move is cancelled. Do not state a transfer mechanism as in place until the Supabase and Vercel data processing agreements are checked (IDTA or UK Addendum, signed or not). -->
 <!-- OPEN: facts checked 28 Oct 2026: Supabase production ap-south-1 (Mumbai), Vercel functions bom1 (Mumbai), backups mirrored to Cloudflare R2. Not checked: the R2 bucket location. -->
 

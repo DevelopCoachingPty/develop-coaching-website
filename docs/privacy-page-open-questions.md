@@ -1,6 +1,6 @@
 # Privacy and cookie policy: audit and open questions
 
-For Greg and legal review. This is not legal advice. Page: `www/privacy/index.html`,
+Open questions for Greg. This is not legal advice. Greg decided on 28 Oct 2026 to publish without a lawyer review; the page has no visible review boxes. Page: `www/privacy/index.html`,
 text source: `content/privacy-policy-body.html`, applied by `scripts/apply_privacy_policy.py`.
 Most items below are also marked `OPEN:` in the page source (invisible to visitors).
 
@@ -29,7 +29,7 @@ reviewed for OAuth).
 1. **UK representative and ICO registration** (UK GDPR Art. 27). Not confirmed. Launch plan lists both as to do. Name and address go in section 1 when known.
 2. **Does the Australian Privacy Act apply in full** (small business exemption)? Lawyer to confirm.
 3. **Marketing legal basis** per list: consent, or legitimate interests for business contacts.
-4. **Which transfer tool covers which provider** (IDTA, UK Addendum, other) and whether it is signed. **The India transfer wording is a draft flagged for lawyer review** (second review box in section 7, test `test_transfer_wording_flagged_for_lawyer_review`). The page says only that we are confirming which safeguard applies and invites readers to ask which safeguard, if any, we rely on. Check whether the Supabase and Vercel data processing agreements include the UK IDTA or UK Addendum and whether they are signed, then rewrite and remove the box.
+4. **Which transfer tool covers which provider** (IDTA, UK Addendum, other) and whether it is signed. **The India transfer wording is published without lawyer review** (Greg's decision, 28 Oct 2026; no visible review box, an invisible `OPEN:` comment marks it, test `test_transfer_wording_is_honest_about_safeguards`). The page says only that we are confirming which safeguard applies and invites readers to ask which safeguard, if any, we rely on. Check whether the Supabase and Vercel data processing agreements include the UK IDTA or UK Addendum and whether they are signed, then update section 7 to match. Do not say a safeguard is in place until that is confirmed.
 5. **Where CostTrackerPro data lives.** Decided 28 Oct 2026: it stays in Mumbai, India (Supabase ap-south-1, Vercel functions bom1, checked that day) and the planned region move is cancelled. Section 7 now says UK and Australian user data is processed in India. Not checked: the Cloudflare R2 backup bucket location. Same wording is on the CostTrackerPro notice.
 6. **Old provider names removed** (Zoho, Infusionsoft, Twitter, Pinterest, LinkedIn, Instagram, Power BI, DocuSign, SharePoint/OneDrive, Data Molino, Royal Mail). If any still handle customer data, add them back. A generic line about accounting, storage and e-signing tools stays.
 7. **Email sending service.** Resend is listed as a cost in the launch plan but was not seen in site code.
@@ -43,7 +43,7 @@ reviewed for OAuth).
 15. **Jarvis section** ends with "contact greg@develop-coaching.com", every other contact is hello@develop-coaching.com. Left as is because changing text Google reviewed may need a new review.
 16. **Org schema phone.** The page's JSON-LD (and the site template) carries a UK phone number, +44 20 8610 9674, and `en-GB`, `HomeAndConstructionBusiness`. Not touched here. Check it is a live number.
 17. **Date.** "Last updated: 28 October 2026" and the modified dates in the page head and sitemap are set to the day of drafting. Update them on the day it goes live.
-18. **Review box.** The orange "For Greg and legal review" box at the top of the page must be deleted from `content/privacy-policy-body.html` before merge. The test `test_review_marker_present` expects it, so remove that test line too.
+18. **Review boxes.** Removed on 28 Oct 2026 (Greg: "I'm not going to get a lawyer to review it; it's fine"). `test_no_visible_review_banners` stops them coming back. The `OPEN:` comments in the page source stay; visitors cannot see them.
 
 ## Order of release
 
