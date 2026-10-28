@@ -1,7 +1,7 @@
 /* dc-consent.js - cookie consent gate for develop-coaching.com
  *
  * Loaded synchronously as the FIRST script in <head> on every page that carries
- * a tracker. It does four things, in this order:
+ * a tracker. It does five things, in this order:
  *   1. Sets Google Consent Mode v2 to "denied" before any Google tag can exist.
  *   2. Holds back every tracker script (GTM, GA4, Google Ads, Meta Pixel,
  *      Microsoft Clarity, ActiveCampaign, Cabin) until the visitor consents to
@@ -9,7 +9,9 @@
  *      snippets keep working and their queued calls (fbq, clarity, vgo,
  *      dataLayer) replay as normal.
  *   3. Loads the hosted consent banner (CookieYes) using CONSENT_TOOL_ID.
- *   4. Watches for the consent choice (a Consent Mode "update" on the data layer,
+ *   4. Keeps the floating WhatsApp chat button (#ht-ctc-chat) out from under
+ *      the banner while the banner or its preference panel is showing.
+ *   5. Watches for the consent choice (a Consent Mode "update" on the data layer,
  *      or the banner's own event) and releases the right scripts.
  *
  * Fails closed: if CONSENT_TOOL_ID is not a real CookieYes website key no
@@ -305,7 +307,22 @@
   };
   w.dcConsent = api;
 
-  // ---- 3. load the hosted banner ----
+  // ---- 3. keep the WhatsApp chat button clear of the banner ----
+  // The chat button is fixed bottom-right with a higher z-index than the banner,
+  // so it sat on top of Reject All and the "Powered by" row. While the banner
+  // (.cky-consent-container without .cky-hide) or the preference panel
+  // (.cky-modal-open) is showing, hide the button; it returns by itself as soon
+  // as CookieYes adds .cky-hide / removes .cky-modal-open. Pure CSS: no timers,
+  // no observers. A browser without :has() just keeps the old behaviour.
+  var layout = d.createElement('style');
+  layout.setAttribute('data-dc-consent-layout', '1');
+  layout.textContent =
+    'body:has(.cky-consent-container:not(.cky-hide)) #ht-ctc-chat,' +
+    'body:has(.cky-modal.cky-modal-open) #ht-ctc-chat' +
+    '{visibility:hidden!important;pointer-events:none!important}';
+  (d.head || d.documentElement).appendChild(layout);
+
+  // ---- 4. load the hosted banner ----
   if (/^[a-f0-9]{16,}$/i.test(CONSENT_TOOL_ID)) {
     var cmp = d.createElement('script');
     cmp.src = 'https://cdn-cookieyes.com/client_data/' + CONSENT_TOOL_ID + '/script.js';

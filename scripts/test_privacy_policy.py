@@ -21,6 +21,12 @@ class PrivacyPolicyTest(unittest.TestCase):
         again, _ = ap.apply(HTML, BODY)
         self.assertEqual(again, HTML)
 
+    def test_tables_cannot_widen_the_page_on_phones(self):
+        # A table wider than the screen makes phones zoom out and pushes the
+        # fixed cookie banner partly off screen. Cells must wrap, tables must fit.
+        self.assertIn(".dc-privacy table{max-width:100%}", BODY)
+        self.assertIn(".dc-privacy th,.dc-privacy td{overflow-wrap:anywhere}", BODY)
+
     def test_no_false_popup_claim(self):
         self.assertNotIn("you will be shown a pop-up", TEXT)
         self.assertNotIn("By viewing the pop-up", TEXT)

@@ -128,6 +128,22 @@ class SiteTests(unittest.TestCase):
         self.assertIsNone(gate.match("CONSENT_TOOL_ID"), "the placeholder must not pass the gate")
         self.assertIsNotNone(gate.match("2f7e13589ff822640e02507774d2f82c"))
 
+    def test_whatsapp_button_yields_to_the_banner(self):
+        js = (WWW / "dc-consent.js").read_text()
+        # the chat button is hidden while the banner or its preference panel shows,
+        # using CookieYes's own state classes, and nothing else about it changes
+        self.assertIn("body:has(.cky-consent-container:not(.cky-hide)) #ht-ctc-chat", js)
+        self.assertIn("body:has(.cky-modal.cky-modal-open) #ht-ctc-chat", js)
+        self.assertRegex(js, r"visibility:hidden!important;pointer-events:none!important")
+        self.assertNotIn("display:none!important", js)
+        # every page that has the chat button also loads the gate
+        missing = []
+        for page in WWW.rglob("*.html"):
+            html = page.read_text(errors="ignore")
+            if 'id="ht-ctc-chat"' in html and "dc-consent.js" not in html:
+                missing.append(str(page.relative_to(WWW)))
+        self.assertEqual(missing, [], "pages with the WhatsApp button but no consent gate")
+
     def test_publish_scripts_install_the_gate(self):
         for name in ("publish_page.py", "publish_designed_page.py"):
             self.assertIn("install_cookie_consent", (ROOT / "scripts" / name).read_text(), name)
