@@ -35,6 +35,7 @@ import re
 import sys
 import urllib.parse
 from install_booking_tracking import install as install_booking_tracking
+from install_cookie_consent import install as install_cookie_consent
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WWW = os.path.join(ROOT, "www")
@@ -373,7 +374,8 @@ def build_page(payload: dict) -> str:
         print("publish_page: warning, hero image slot not found", file=sys.stderr)
 
     html = replace_post_content(html, payload["body_html"])
-    return install_booking_tracking(html)
+    # Consent gate last: it must end up as the first script in <head>.
+    return install_cookie_consent(install_booking_tracking(html))
 
 
 def update_sitemap(slug: str, date: str) -> bool:
