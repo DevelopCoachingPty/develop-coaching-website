@@ -85,6 +85,15 @@
       });
       target.unshift(def);
       layers[name] = target;
+      if (state.analytics || state.advertising) {
+        // Consent was already given (stored choice replayed early): tell the new layer too.
+        target.push((function () { return arguments; })('consent', 'update', {
+          analytics_storage: g(state.analytics),
+          ad_storage: g(state.advertising),
+          ad_user_data: g(state.advertising),
+          ad_personalization: g(state.advertising)
+        }));
+      }
     }
   }
 

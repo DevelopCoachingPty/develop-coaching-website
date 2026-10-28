@@ -116,7 +116,7 @@ class SiteTests(unittest.TestCase):
 
     def test_gate_script_shape(self):
         js = (WWW / "dc-consent.js").read_text()
-        self.assertRegex(js, r"var CONSENT_TOOL_ID = '(CONSENT_TOOL_ID|[A-Za-z0-9]{16,})';")
+        self.assertRegex(js, r"var CONSENT_TOOL_ID = '(CONSENT_TOOL_ID|[A-Fa-f0-9]{24})';")
         # default denied is set before anything else can run
         self.assertLess(js.index("'consent', 'default'"), js.index("function patch"))
         for key in ("ad_storage", "analytics_storage", "ad_user_data", "ad_personalization"):

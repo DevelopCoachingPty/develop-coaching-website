@@ -174,7 +174,7 @@ so this list is from the public container file and has to be checked in GTM.
   necessary in the privacy page.
 - The browser gate check stubs external scripts with empty bodies, so it proves which
   scripts are requested, not what GTM does internally. What GTM fires depends on the
-  GTM changes below.
+  GTM changes above.
 - `document.write` of a tracker is not intercepted. None exist on the site today.
 - Google Fonts, YouTube embeds, FlowBuild iframes and the Trustindex widget load
   third-party content before consent and set their own cookies or send IP
@@ -182,6 +182,6 @@ so this list is from the public container file and has to be checked in GTM.
   a decision: use a click-to-load facade for YouTube and host fonts locally.
 - Cabin says it is cookieless. Gated anyway to match the banner wording.
 - `www/privacy/` still describes the old behaviour until the privacy page branch
-  is merged. Merge both together.
+  is merged. Merge this first and the privacy page straight after.
 - A global Privacy Control or Do Not Track signal is not treated as a "reject" by
   the banner. `booking-tracking.js` still honours both.
