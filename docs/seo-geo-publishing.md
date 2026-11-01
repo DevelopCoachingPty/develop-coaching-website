@@ -44,7 +44,9 @@ another approved article or resurrect a deliberately retired URL.
 
 On a clean article branch, fetch the latest target branch and merge it normally.
 If Git reports conflicts, run `python3 scripts/reconcile_publish_indexes.py`
-from a trusted copy of the target branch's helper. This resolves only
+from a trusted copy of the target branch's helper, before hand-editing conflicts.
+It reads Git's original merge stages, not manual edits in conflicted files; save
+any such edits separately first. This resolves only
 `www/post-sitemap.xml` and `www/search-index.json`, keyed by URL, using Git's
 three stages. Independent additions/updates/deletions survive. Duplicate URLs,
 invalid input, divergent edits to the same URL, non-index conflicts and missing
