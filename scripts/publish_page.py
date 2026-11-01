@@ -19,6 +19,7 @@ post-sitemap.xml plus search-index.json. Prints a JSON result on stdout.
       "date": "2026-08-11",               # optional, defaults to today
       "template": "construction-sales-funnel",  # optional
       "image_url": "/wp-content/...",     # optional social/schema image
+      "keywords": "construction pricing", # optional; never inherited from template
       "overwrite": true                   # optional, needed to replace a page
     }
 
@@ -122,7 +123,7 @@ def replace_post_content(html: str, body_html: str) -> str:
     return html[:inner_start] + "\n" + body_html.strip() + "\n\t\t\t\t" + html[inner_end:]
 
 
-def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
+def rewrite_jsonld(html: str, *, title, description, url, date, image, keywords=None) -> str:
     m = re.search(r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', html, re.S)
     if not m:
         raise SystemExit("publish_page: JSON-LD block not found in template")
@@ -140,6 +141,11 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             node["headline"] = title
             node["name"] = title
             node["description"] = description
+            # Keywords describe the new article, never the template.
+            if keywords:
+                node["keywords"] = keywords
+            else:
+                node.pop("keywords", None)
             node["author"] = {"@id": AUTHOR_ID}
             node["datePublished"] = date
             node["dateModified"] = date
@@ -161,6 +167,16 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             node.pop("primaryImageOfPage", None)
             if "breadcrumb" in node:
                 node.pop("breadcrumb")
+        elif "Organization" in types and node.get("@id") == f"{DOMAIN}/#organization":
+            # Some reused pages accidentally put the article image in the brand
+            # logo. Repair only this known entity, preserving its other fields.
+            logo = node.get("logo")
+            if not isinstance(logo, dict):
+                logo = {}
+            logo.update({"@type": "ImageObject", "@id": f"{DOMAIN}/#logo",
+                         "url": LOGO, "contentUrl": LOGO})
+            node["logo"] = logo
+            node["image"] = {"@id": f"{DOMAIN}/#logo"}
         elif "BreadcrumbList" in types:
             node["itemListElement"] = [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": DOMAIN},
@@ -178,7 +194,13 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             return True
         if node.get("@type") == "ImageObject" and "gravatar.com" in node_id:
             return True
-        if node.get("@type") == "Person" and "/author/" in node_id:
+        node_types = node.get("@type")
+        node_types = node_types if isinstance(node_types, list) else [node_types]
+        if "Person" in node_types and (
+            "/author/" in node_id or node_id in {
+                AUTHOR_ID, f"{DOMAIN}/#/schema/person/greg-wilkes"
+            }
+        ):
             return True
         # Video schema belongs to the shell page's own body. Designed pages
         # replace that body completely, so retaining these nodes would describe
@@ -204,6 +226,17 @@ def rewrite_jsonld(html: str, *, title, description, url, date, image) -> str:
             "worksFor": {"@id": f"{DOMAIN}/#organization"},
         }
     )
+    def canonical_author_refs(value):
+        if isinstance(value, dict):
+            if value.get("@id") == f"{DOMAIN}/#/schema/person/greg-wilkes":
+                value["@id"] = AUTHOR_ID
+            for child in value.values():
+                canonical_author_refs(child)
+        elif isinstance(value, list):
+            for child in value:
+                canonical_author_refs(child)
+
+    canonical_author_refs(nodes)
     graph["@graph"] = nodes
     return html[: m.start()] + m.group(1) + json.dumps(graph, separators=(",", ":")) + m.group(3) + html[m.end():]
 
@@ -301,7 +334,8 @@ def build_page(payload: dict) -> str:
     )
 
     html = rewrite_jsonld(
-        html, title=title, description=description, url=url, date=date, image=image
+        html, title=title, description=description, url=url, date=date, image=image,
+        keywords=payload.get("keywords"),
     )
 
     for pattern in STALE_TAGS:
