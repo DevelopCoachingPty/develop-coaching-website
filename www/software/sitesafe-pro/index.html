@@ -228,7 +228,7 @@ fbq('track', 'PageView');
 .crumb{font-size:13px;margin-bottom:14px}.crumb a{color:var(--muted)}
 .vid{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:var(--shadow)}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 36px}
 .fgrid li{font-size:16px}
 .pb-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
@@ -350,7 +350,7 @@ fbq('track', 'PageView');
     document.querySelectorAll('[data-region-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.regionBtn===r);});
     document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.billingBtn===b);});
   }
-  document.querySelectorAll('[data-region-btn]').forEach(function(x){x.addEventListener('click',function(){document.querySelectorAll('video').forEach(function(v){v.pause();});document.body.dataset.region=x.dataset.regionBtn;render();});});
+  document.querySelectorAll('[data-region-btn]').forEach(function(x){x.addEventListener('click',function(){if(document.body.dataset.region===x.dataset.regionBtn)return;document.querySelectorAll('video').forEach(function(v){v.pause();});document.body.dataset.region=x.dataset.regionBtn;render();});});
   document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.addEventListener('click',function(){document.body.dataset.billing=x.dataset.billingBtn;render();});});
   var q=new URLSearchParams(location.search);
   if(q.get('region')==='au'){document.body.dataset.region='au';}
