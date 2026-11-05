@@ -350,7 +350,7 @@ fbq('track', 'PageView');
     document.querySelectorAll('[data-region-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.regionBtn===r);});
     document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.billingBtn===b);});
   }
-  document.querySelectorAll('[data-region-btn]').forEach(function(x){x.addEventListener('click',function(){document.body.dataset.region=x.dataset.regionBtn;render();});});
+  document.querySelectorAll('[data-region-btn]').forEach(function(x){x.addEventListener('click',function(){document.querySelectorAll('video').forEach(function(v){v.pause();});document.body.dataset.region=x.dataset.regionBtn;render();});});
   document.querySelectorAll('[data-billing-btn]').forEach(function(x){x.addEventListener('click',function(){document.body.dataset.billing=x.dataset.billingBtn;render();});});
   var q=new URLSearchParams(location.search);
   if(q.get('region')==='au'){document.body.dataset.region='au';}
