@@ -198,7 +198,7 @@ function normalizeSchema(html, canonical, title, description, image, faqs, hubVi
   const organization = {
     '@type': 'Organization', '@id': 'https://develop-coaching.com/#organization', name: 'Develop Coaching',
     url: 'https://develop-coaching.com',
-    sameAs: ['https://www.facebook.com/developcoach/','https://twitter.com/developcoaching','https://www.instagram.com/develop_coaching_greg_wilkes/','https://www.linkedin.com/company/developcoaching/','https://www.youtube.com/@DevelopCoaching'],
+    sameAs: ['https://www.facebook.com/developcoach/','https://twitter.com/developcoaching','https://www.instagram.com/develop_coaching_greg_wilkes/','https://www.linkedin.com/company/developcoaching/','https://www.youtube.com/@Greg.wilkes'],
     logo: {'@type':'ImageObject','@id':'https://develop-coaching.com/#logo',url:'https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg',contentUrl:'https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg',caption:'Develop Coaching',inLanguage:'en-GB',width:259,height:82},
     image: {'@id':'https://develop-coaching.com/#logo'}, telephone: '+442086109674'
   };
