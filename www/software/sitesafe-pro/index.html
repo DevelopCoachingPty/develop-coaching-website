@@ -116,6 +116,10 @@ ul.feat li:before{content:"";position:absolute;left:0;top:9px;width:17px;height:
 .addon{margin:0 0 18px;border:1px dashed var(--cool);border-radius:12px;padding:12px 14px;font-size:14px;background:var(--paper)}
 .addon b{font-weight:700}
 .soon{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--ink);color:var(--yellow);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+.btn.coming-soon{opacity:.55;cursor:not-allowed;pointer-events:none;filter:none}
+.btn.coming-soon:after{content:none}
+.btn.coming-soon:hover{transform:none;filter:none}
+
 .sub-price{font-size:14px;color:var(--grey);margin-top:8px;background:var(--paper);border-radius:8px;padding:6px 10px;display:inline-block}
 .sub-price b{color:var(--ink)}
 .na-note{display:none;margin:10px 0;font-weight:600;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px}
@@ -264,11 +268,11 @@ fbq('track', 'PageView');
     <p class="lead" style="font-size:19px;color:var(--grey);max-width:640px">Health and safety paperwork drafted for you and kept up to date. Stay on top of compliance, get everyone home safe, and sleep better at night. Flat price per company, unlimited workers.</p>
     <div class="price-block" style="border:0;padding:0">
       <div class="price"><span class="amt" data-k="ss"></span><span class="per" data-per="ss"></span></div>
-      <div class="eff" data-eff="ss"></div><div class="sub-price">Already on CostTracker Pro? <a href="https://buy.stripe.com/bJe4gzdx35QT3XW4it9k41f" data-plan="ss_ctp"><b data-k="ss_ctp"></b><span data-per="ss_ctp"></span></a></div>
+      <div class="eff" data-eff="ss"></div><div class="sub-price">Already on CostTracker Pro? <b data-k="ss_ctp"></b><span data-per="ss_ctp"></span></div>
     </div>
     <div class="na-note">Not yet available in Australia.</div>
-    <span class="offer" data-offer="trial"></span>
-    <div class="ctas"><a class="btn primary" href="https://buy.stripe.com/6oUeVd64B1AD2TSeX79k41d" data-plan="ss" data-cta="trial"></a><a class="btn" href="/software/#products">Compare all products</a></div>
+    <span class="soon" style="margin:10px 0 4px;align-self:flex-start">Coming soon</span>
+    <div class="ctas"><span class="btn primary coming-soon" aria-disabled="true" role="text">Coming soon</span><a class="btn" href="/software/#products">Compare all products</a></div>
     <p class="note" style="margin-top:16px"><span class="only-uk">Prices in GBP.*</span><span class="only-au">Prices in AUD and include 10% GST.</span> No setup fees. Free onboarding and data migration. Annual billing: 2 months free.</p>
   </div>
   <div>
