@@ -295,13 +295,37 @@ def main() -> None:
         and all(f"<h3>{question}</h3>" in html for question in answer_questions),
     )
     check(
-        "GEO answers publish the programme range without a fixed Mastermind price",
-        "£2,000 to £18,000 annually" in html
+        "GEO answers publish the confirmed Mastermind investment",
+        "The Develop Mastermind is £15,000 paid in full, or £18,000 annually by instalments." in html
         and "demonstrate the value first" in html
+        and "£2,000 to £18,000 annually" not in html
         and "£1,500 a month" not in html
-        and "£15,000" not in html
         and "a saving of £3,000" not in html
+        and "Monthly or annual payment is available" not in html
         and "Individual results vary." in html,
+    )
+    live_mastermind = os.path.join(
+        designed.pp.WWW, "courses", "mastermind-course", "index.html"
+    )
+    with open(live_mastermind, encoding="utf-8") as handle:
+        live_mastermind_html = handle.read()
+    live_schema_match = re.search(
+        r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
+        live_mastermind_html,
+        re.S,
+    )
+    live_schema = json.loads(live_schema_match.group(1)) if live_schema_match else {}
+    live_services = [
+        node for node in live_schema.get("@graph", []) if node.get("@type") == "Service"
+    ]
+    check(
+        "live Mastermind page publishes the same confirmed investment",
+        "The Develop Mastermind is £15,000 paid in full, or £18,000 annually by instalments."
+        in live_mastermind_html
+        and "£2,000 to £18,000 annually" not in live_mastermind_html
+        and "£1,500 a month" not in live_mastermind_html
+        and len(live_services) == 1
+        and live_services[0].get("offers") == [dict(offer) for offer in designed.MASTERMIND_OFFERS],
     )
     for relative_path in (
         os.path.join("courses", "win-big-clients", "index.html"),
@@ -309,11 +333,66 @@ def main() -> None:
     ):
         with open(os.path.join(designed.pp.WWW, relative_path), encoding="utf-8") as handle:
             wbc_html = handle.read()
-        check(
-            f"{relative_path} uses the programme range without a fixed Win Big Clients price",
-            "£2,000 to £18,000 annually" in wbc_html
-            and "£1,970" not in wbc_html,
+        wbc_schema_match = re.search(
+            r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
+            wbc_html,
+            re.S,
         )
+        wbc_schema = json.loads(wbc_schema_match.group(1)) if wbc_schema_match else {}
+        wbc_courses = [
+            node for node in wbc_schema.get("@graph", []) if node.get("@type") == "Course"
+        ]
+        wbc_offer_blob = json.dumps(
+            wbc_courses[0].get("offers") if wbc_courses else [],
+            ensure_ascii=False,
+        )
+        check(
+            f"{relative_path} publishes the confirmed Win Big Clients investment",
+            "Win Big Clients is £1,800 paid in full, or £2,400 total by instalments." in wbc_html
+            and "£2,000 to £18,000" not in wbc_html
+            and "annually" not in wbc_html.lower()
+            and "£1,970" not in wbc_html
+            and len(wbc_courses) == 1
+            and [offer.get("price") for offer in wbc_courses[0].get("offers", [])] == ["1800", "2400"]
+            and "valueAddedTaxIncluded" not in wbc_offer_blob
+            and "billingDuration" not in wbc_offer_blob
+            and "unitCode" not in wbc_offer_blob,
+        )
+    plastering_path = os.path.join(
+        designed.pp.WWW, "plastering-business-coach", "index.html"
+    )
+    with open(plastering_path, encoding="utf-8") as handle:
+        plastering_html = handle.read()
+    plastering_schema_match = re.search(
+        r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
+        plastering_html,
+        re.S,
+    )
+    plastering_schema = json.loads(plastering_schema_match.group(1)) if plastering_schema_match else {}
+    plastering_answers = []
+    for node in plastering_schema.get("@graph", []):
+        for faq in node.get("subjectOf") or []:
+            if faq.get("@type") != "FAQPage":
+                continue
+            for question in faq.get("mainEntity") or []:
+                if "cost" in question.get("name", "").lower():
+                    plastering_answers.append(question.get("acceptedAnswer", {}).get("text", ""))
+    confirmed_plastering = (
+        "The Develop Mastermind is £15,000 paid in full, or £18,000 annually by instalments. "
+        "It is a minimum 12-month programme. "
+        "Win Big Clients is £1,800 paid in full, or £2,400 total by instalments. "
+        "Book a free Scale Session™ to see which programme fits your plastering business."
+    )
+    check(
+        "plastering cost answer uses the confirmed programme prices",
+        confirmed_plastering in plastering_html
+        and plastering_answers == [confirmed_plastering]
+        and "£5,000 range" not in plastering_html
+        and "mid-£1,000s" not in plastering_html
+        and "mid‑£1,000s" not in plastering_html
+        and "doesn’t publish fixed pricing" not in plastering_html
+        and "doesn’t list set prices" not in plastering_html,
+    )
     check("pillar headings use aligned rows", "grid-template-rows: auto 64px 1fr" in html)
     check(
         "official Develop Coaching palette present",
@@ -380,12 +459,23 @@ def main() -> None:
         node for node in graph if node.get("@id") == f"{designed.pp.DOMAIN}/#organization"
     ]
     webpages = [node for node in graph if node.get("@id") == f"{designed.pp.DOMAIN}/{PAYLOAD['slug']}/"]
+    offers = services[0].get("offers") if services else None
+    offer_blob = json.dumps(offers or [], ensure_ascii=False)
     check(
         "JSON-LD describes the coaching offer as a Service",
         len(services) == 1
         and services[0].get("serviceType") == "Construction business coaching programme"
         and services[0].get("provider", {}).get("@id") == f"{designed.pp.DOMAIN}/#organization"
         and services[0].get("areaServed", {}).get("name") == "United Kingdom",
+    )
+    check(
+        "JSON-LD publishes the two confirmed Mastermind prices",
+        offers == [dict(offer) for offer in designed.MASTERMIND_OFFERS]
+        and "15000" in offer_blob
+        and "18000" in offer_blob
+        and "valueAddedTaxIncluded" not in offer_blob
+        and "billingDuration" not in offer_blob
+        and "unitCode" not in offer_blob,
     )
     check(
         "JSON-LD removes inaccurate local business details",
