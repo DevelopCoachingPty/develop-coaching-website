@@ -58,8 +58,15 @@ function cardMarkup(item) {
     : '';
   const watchUrl = `https://www.youtube.com/watch?v=${item.id}`;
   const thumbnail = item.thumbnailUrl || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
+  const storyAnchors = {
+    'D-M9a1i4PQU': 'james-overton',
+    'ecKFCE1r-18': 'marek',
+    '9i31Jk89THQ': 'richard',
+    snrx2DrLISg: 'mike-and-nick',
+  };
+  const storyAnchor = storyAnchors[item.id] ? ` id="${storyAnchors[item.id]}"` : '';
   return `
-        <article class="cw-win-card" data-client-win data-youtube-id="${item.id}">
+        <article${storyAnchor} class="cw-win-card" data-client-win data-youtube-id="${item.id}">
           <button class="cw-video" type="button" data-video-play="${item.id}" aria-label="Play ${escapeHtml(item.name)} client story">
             <img src="${thumbnail}" alt="${escapeHtml(item.name)} sharing their construction business experience" loading="lazy" width="480" height="360">
             <span class="cw-video__play" aria-hidden="true">

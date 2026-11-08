@@ -319,6 +319,49 @@ def main() -> None:
         node for node in live_schema.get("@graph", []) if node.get("@type") == "Service"
     ]
     check(
+        "worth-it answer links the existing public client accounts",
+        'href="/client-wins/#marek"' in html
+        and 'href="/client-wins/#richard"' in html
+        and 'href="/client-wins/#mike-and-nick"' in html
+        and "£1.4 million" not in html
+        and "£870,000" not in html,
+    )
+    coaching_page = os.path.join(
+        designed.pp.WWW, "business-coaching-for-construction", "index.html"
+    )
+    with open(coaching_page, encoding="utf-8") as handle:
+        coaching_html = handle.read()
+    coaching_schema_match = re.search(
+        r'<script type="application/ld\+json"[^>]*>(.*?)</script>',
+        coaching_html,
+        re.S,
+    )
+    coaching_schema = json.loads(coaching_schema_match.group(1)) if coaching_schema_match else {}
+    coaching_answers = []
+    for node in coaching_schema.get("@graph", []):
+        for faq in node.get("subjectOf") or []:
+            if faq.get("@type") != "FAQPage":
+                continue
+            for question in faq.get("mainEntity") or []:
+                if question.get("name", "").startswith("How much does construction"):
+                    coaching_answers.append(question.get("acceptedAnswer", {}).get("text", ""))
+    confirmed_coaching_price = (
+        "The Develop Mastermind is £15,000 paid in full, or £18,000 annually by instalments. "
+        "It is a minimum 12-month programme. "
+        "Win Big Clients is £1,800 paid in full, or £2,400 total by instalments."
+    )
+    check(
+        "coaching guide states the confirmed prices and links existing proof",
+        confirmed_coaching_price in coaching_html
+        and coaching_answers == [confirmed_coaching_price]
+        and 'href="/courses/mastermind-course/#investment"' in coaching_html
+        and 'href="/courses/win-big-clients/"' in coaching_html
+        and 'href="/client-wins/#james-overton"' in coaching_html
+        and 'href="/client-wins/#marek"' in coaching_html
+        and "£2,000 to £18,000" not in coaching_html
+        and "£1.4 million" not in coaching_html,
+    )
+    check(
         "live Mastermind page publishes the same confirmed investment",
         "The Develop Mastermind is £15,000 paid in full, or £18,000 annually by instalments."
         in live_mastermind_html
