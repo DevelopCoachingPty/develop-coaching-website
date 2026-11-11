@@ -35,3 +35,43 @@ Initial September release covers two utility URLs, verified redirecting anchors
 and four existing guides. Homepage commercial terms remain pending Greg's
 confirmation. Broader archive decisions need page-level performance and campaign
 checks. Shared entity schema and legacy metadata remain separate follow-up work.
+
+## Concurrent article branches
+
+Never resolve generated-index conflicts with `--ours`, `--theirs`, a union text
+merge, or a fresh index built from an incomplete article branch. Those can lose
+another approved article or resurrect a deliberately retired URL.
+
+On a clean article branch, fetch the latest target branch and merge it normally.
+If Git reports conflicts, run `python3 scripts/reconcile_publish_indexes.py`
+from a trusted copy of the target branch's helper, before hand-editing conflicts.
+It reads Git's original merge stages, not manual edits in conflicted files; save
+any such edits separately first. This resolves only
+`www/post-sitemap.xml` and `www/search-index.json`, keyed by URL, using Git's
+three stages. Independent additions/updates/deletions survive. Duplicate URLs,
+invalid input, divergent edits to the same URL, non-index conflicts and missing
+merge stages stop for human review without staging a partial resolution.
+
+The helper stages only the resolved indexes. It does not commit, push, merge a
+PR, clear publisher state, or bypass protections. Review the complete merge,
+run publisher and index tests, then commit and push normally to the article
+branch. Require fresh checks and reviews for that exact new head before merge;
+if the base moves again, repeat against its new head. Never use `--admin`.
+
+Regression checks (no live files changed):
+
+```
+python3 scripts/test_publish_page.py
+python3 scripts/test_publish_designed_page.py
+python3 scripts/test_reconcile_publish_indexes.py
+python3 -m unittest discover -s scripts -p test_sitemap_hygiene.py
+```
+
+The scheduled runner is maintained separately in
+`DevelopCoachingPty/seo-automation-engine` (`scripts/auto-publish.mjs`). A website
+PR does **not** update its Mac Mini checkout or restart its schedule. Deploy the
+website helper and the compatible runner together under the normal review and
+deployment approvals; verify both checked-out commit IDs on the runner host.
+Do not delete `~/.seo-auto-publish-state.json` to retry an already merged article:
+first confirm its PR/commit and live publication, then reconcile only that item
+through an explicitly authorized recovery step.

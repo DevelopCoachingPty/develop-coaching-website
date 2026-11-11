@@ -148,6 +148,43 @@ def check_overwrite_needs_opt_in() -> None:
         shutil.rmtree(www, ignore_errors=True)
 
 
+def check_metadata_is_article_specific() -> None:
+    def graph_from(html):
+        return json.loads(re.search(
+            r'<script type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S
+        ).group(1))["@graph"]
+
+    html = publish_page.build_page(PAYLOAD)
+    graph = graph_from(html)
+    article = next(n for n in graph if n.get("@type") == "BlogPosting")
+    check("template keywords omitted without payload", "keywords" not in article)
+    logo = next(n for n in graph if n.get("@id") == publish_page.DOMAIN + "/#organization")["logo"]
+    check("organization logo is not article image", logo["url"] == publish_page.LOGO and logo["contentUrl"] == publish_page.LOGO)
+    for keywords in ("markup vs margin", ["markup", "margin"]):
+        updated = graph_from(publish_page.build_page({**PAYLOAD, "keywords": keywords}))
+        check(f"payload keywords used: {keywords!r}", next(n for n in updated if n.get("@type") == "BlogPosting")["keywords"] == keywords)
+
+    # Repair a previously corrupted template without changing unrelated people
+    # or organization identity, and remain idempotent when it is reused again.
+    org = next(n for n in graph if n.get("@id") == publish_page.DOMAIN + "/#organization")
+    org["logo"]["url"] = org["logo"]["contentUrl"] = "https://example.com/article.jpg"
+    graph.append({"@type": ["Person"], "@id": publish_page.DOMAIN + "/#/schema/person/greg-wilkes", "name": "Greg Wilkes"})
+    graph.append({"@type": "Person", "@id": "https://example.com/interviewee", "name": "Interviewee"})
+    graph.append({"@type": "Thing", "creator": {"@id": publish_page.DOMAIN + "/#/schema/person/greg-wilkes"}})
+    synthetic = '<script type="application/ld+json">' + json.dumps({"@graph": graph}) + '</script>'
+    args = dict(title="New", description="New description", url=publish_page.DOMAIN + "/new/", date="2026-01-03", image="https://example.com/new.jpg")
+    rewritten = publish_page.rewrite_jsonld(synthetic, **args)
+    result = graph_from(rewritten)
+    check("metadata rewrite idempotent", publish_page.rewrite_jsonld(rewritten, **args) == rewritten)
+    greg = [n for n in result if n.get("name") == "Greg Wilkes"]
+    check("legacy and canonical Greg collapse to one", len(greg) == 1 and greg[0]["@id"] == publish_page.AUTHOR_ID)
+    check("unrelated person preserved", any(n.get("name") == "Interviewee" for n in result))
+    check("legacy author references remapped", next(n for n in result if n.get("@type") == "Thing")["creator"] == {"@id": publish_page.AUTHOR_ID})
+    repaired_org = next(n for n in result if n.get("@id") == publish_page.DOMAIN + "/#organization")
+    check("corrupted logo repaired", repaired_org["logo"]["url"] == repaired_org["logo"]["contentUrl"] == publish_page.LOGO)
+    check("organization identity preserved", repaired_org["name"] == org["name"] and repaired_org["sameAs"] == org["sameAs"])
+
+
 def main() -> None:
     template_html = open(
         os.path.join(publish_page.WWW, TEMPLATE, "index.html"), encoding="utf-8"
@@ -206,6 +243,7 @@ def main() -> None:
         check("json-ld single author node", people == ["Greg Wilkes"])
 
     # Payload paths and existing pages
+    check_metadata_is_article_specific()
     check_paths_are_contained()
     check_overwrite_needs_opt_in()
 
