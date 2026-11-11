@@ -220,6 +220,19 @@ class ClientWinsRebuildTests(unittest.TestCase):
         self.assertEqual(25, len(re.findall(r'alt="[^"]+ sharing their construction business experience"', self.html)))
         self.assertIn("youtube-nocookie.com/embed/", self.html)
         self.assertIn("@media (prefers-reduced-motion: reduce)", self.html)
+        for anchor, video_id in (
+            ("james-overton", "D-M9a1i4PQU"),
+            ("marek", "ecKFCE1r-18"),
+            ("richard", "9i31Jk89THQ"),
+            ("mike-and-nick", "snrx2DrLISg"),
+        ):
+            self.assertEqual(
+                1,
+                len(re.findall(
+                    rf'<article id="{anchor}" class="cw-win-card" data-client-win data-youtube-id="{video_id}"',
+                    self.html,
+                )),
+            )
 
 
 if __name__ == "__main__":

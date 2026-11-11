@@ -52,6 +52,26 @@ CURRENT_MENU_CLASSES = {
     "elementor-item-active",
 }
 
+# Confirmed 8 November 2026. Paid-in-full and instalment totals only.
+# Do not add VAT, billing frequency, instalment count, or a WBC duration here.
+MASTERMIND_OFFERS = [
+    {
+        "@type": "Offer",
+        "name": "Paid in full",
+        "price": "15000",
+        "priceCurrency": "GBP",
+        "description": "£15,000 paid in full",
+    },
+    {
+        "@type": "Offer",
+        "name": "Annually by instalments",
+        "price": "18000",
+        "priceCurrency": "GBP",
+        "description": "£18,000 annually by instalments",
+    },
+]
+
+
 GA4_EVENT_TRANSPORT = """<script data-ga4-event-transport>
 (function(w,d){
   var previewHost=location.hostname.endsWith('.vercel.app');
@@ -175,6 +195,8 @@ def rewrite_service_jsonld(
             "mainEntityOfPage": {"@id": webpage_id},
         }
     )
+    if url.rstrip("/") == f"{pp.DOMAIN}/courses/mastermind-course":
+        cleaned[-1]["offers"] = [dict(offer) for offer in MASTERMIND_OFFERS]
 
     required_video_fields = {
         "id",
