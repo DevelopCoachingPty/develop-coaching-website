@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<script src="/dc-consent.js" data-dc-consent></script>
+
+<script defer src="/booking-tracking.js" data-booking-tracking></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Last Step: Book Your Free Scale Session | Develop Coaching</title>
+
+<!-- Google tag (consent-gated, same pattern as /book-a-call/) -->
+<script type="text/plain" data-dc-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EX5H3P27NP');
+</script>
+
+<!-- Meta Pixel 454680953864989. This page fires PageView ONLY.
+     Lead already fired on the application page. Schedule is NOT fired in the
+     browser: it comes server-side from FlowBuild workflow 004 (Customer Booked
+     Appointment on calendar zXUkPVoGKzRyirwYa0Ck), so bookings are not double counted. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '454680953864989');
+fbq('track', 'PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:#f7f7f7; --bg-2:#ececec; --ink:#1a1a1a; --dark:#141415; --muted:#6a6a6c;
+    --border:#e0e0e0; --surface:#ffffff; --gold:#face35; --gold-dark:#b58900;
+    --accent-grad:linear-gradient(135deg,#face35 0%,#f9a934 100%);
+    --radius:12px; --radius-lg:18px;
+    --shadow-sm:0 2px 8px rgba(26,26,26,0.06); --shadow-lg:0 20px 60px rgba(0,0,0,0.3);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  .container { max-width:1180px; margin:0 auto; padding:0 24px; }
+  h1,h2,h3 { font-family:'Archivo',sans-serif; font-weight:800; line-height:1.1; letter-spacing:-0.02em; }
+  h1 { font-size:clamp(1.9rem,4.4vw,3.1rem); font-weight:900; }
+  p { margin-bottom:1rem; }
+  a { color:var(--gold-dark); }
+  .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--accent-grad); color:var(--ink); padding:16px 30px; border-radius:8px; font-weight:700; font-size:0.9rem; text-decoration:none; text-transform:uppercase; letter-spacing:1.4px; box-shadow:0 8px 24px rgba(250,206,53,0.3); transition:transform .2s, box-shadow .2s; }
+  .btn:hover { transform:translateY(-2px); box-shadow:0 14px 32px rgba(250,206,53,0.45); }
+  .top { background:var(--dark); color:#f4f4f4; text-align:center; padding:28px 0 190px; position:relative; }
+  .top::after { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%, rgba(250,206,53,0.14) 0%, transparent 55%); pointer-events:none; }
+  .top .container { position:relative; z-index:1; }
+  .top h1 { color:#fff; margin-bottom:0.9rem; }
+  .top p.note { color:#d6d6d6; max-width:660px; margin:0 auto; font-size:1.06rem; }
+  .steps { max-width:520px; margin:0 auto 34px; }
+  .steps .track { height:8px; border-radius:99px; background:rgba(255,255,255,0.14); overflow:hidden; }
+  .steps .track i { display:block; height:100%; background:var(--accent-grad); border-radius:99px; }
+  .steps span { display:block; margin-top:8px; color:var(--gold); font-weight:700; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; }
+  .shell { margin-top:-150px; padding-bottom:80px; position:relative; z-index:2; }
+  .card { background:var(--surface); border:1px solid var(--border); border-top:5px solid var(--gold); border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); }
+  footer { background:#0d0d0e; color:#8a8a8c; text-align:center; padding:36px 0; font-size:0.86rem; }
+  footer a { color:var(--gold); }
+  .cal { display:grid; grid-template-columns:1fr; }
+  @media (min-width:940px) { .cal { grid-template-columns:340px 1fr; } }
+  .cal-info { padding:34px 30px; background:var(--bg); border-bottom:1px solid var(--border); border-radius:var(--radius-lg) var(--radius-lg) 0 0; }
+  @media (min-width:940px) { .cal-info { border-bottom:0; border-right:1px solid var(--border); border-radius:0 0 0 var(--radius-lg); } }
+  .cal-info .org { color:var(--muted); font-weight:600; font-size:0.92rem; }
+  .cal-info h2 { font-size:1.7rem; margin:4px 0 10px; }
+  .cal-info .dur { display:inline-block; background:var(--gold); font-weight:700; font-size:0.84rem; padding:5px 12px; border-radius:99px; margin-bottom:22px; }
+  .cal-info h3 { font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dark); margin-bottom:10px; }
+  .cal-info ul { list-style:none; margin-bottom:18px; }
+  .cal-info li { position:relative; padding:0 0 10px 26px; font-size:0.95rem; }
+  .cal-info li::before { content:""; position:absolute; left:0; top:8px; width:12px; height:12px; border-radius:50%; background:var(--gold); }
+  .cal-info p { font-size:0.93rem; color:#3d3d3f; margin:0; }
+  .cal-frame { padding:14px; min-width:0; }
+  .cal-frame iframe { display:block; width:100%; min-height:820px; border:0; }
+  .cal-help { text-align:center; color:var(--muted); font-size:0.85rem; margin:0; padding:0 14px 16px; }
+  .loil { text-align:center; max-width:700px; margin:30px auto 0; font-size:1rem; color:#3d3d3f; }
+  @media (max-width:640px) { .top { padding-bottom:170px; } .cal-frame { padding:6px; } }
+</style>
+</head>
+<body>
+
+<section class="top">
+  <div class="container">
+    <div class="steps" role="img" aria-label="Almost done">
+      <div class="track"><i style="width:85%"></i></div>
+      <span>Almost done</span>
+    </div>
+    <h1>Last step: book your free Scale Session</h1>
+    <p class="note">Pick a time that suits you. It's 15 minutes on the phone or Zoom with the Develop team. Have a rough idea of your last 12 months' turnover to hand.</p>
+  </div>
+</section>
+
+<div class="shell">
+  <div class="container">
+    <div class="card cal">
+      <div class="cal-info">
+        <div class="org">Develop Coaching</div>
+        <h2>Scale Session</h2>
+        <span class="dur">15 minutes</span>
+        <h3>What we'll cover</h3>
+        <ul>
+          <li>Where your business is and what's getting in the way</li>
+          <li>A quick look at your systems, projects, pricing and team for the next 90 days</li>
+          <li>Three things to do next</li>
+        </ul>
+        <p>If it still makes sense, there's a second session, where we map out what to fix first and go through the cost.</p>
+      </div>
+      <div>
+        <div class="cal-frame">
+          <!-- FlowBuild calendar: the current Scale Session calendar
+               (id zXUkPVoGKzRyirwYa0Ck), same one that is live on /book-a-call/.
+               UK TIME ZONE is a calendar setting in FlowBuild, not something this
+               page can force. See HANDOFF.md.
+               CONFIRMATION SCREEN: set this calendar's (or a clone's) form
+               confirmation to redirect to https://develop-coaching.com/busy-trap/booked/. See HANDOFF.md. -->
+          <iframe id="dcCalendar"
+            src="https://link.flow-build.com/widget/booking/zXUkPVoGKzRyirwYa0Ck"
+            scrolling="no"
+            title="Book your free 15-minute Scale Session"></iframe>
+        </div>
+        <p class="cal-help">Calendar not loading? <a href="https://link.flow-build.com/widget/booking/zXUkPVoGKzRyirwYa0Ck" id="dcCalendarLink" target="_blank" rel="noopener">Open the booking form</a>.</p>
+      </div>
+    </div>
+    <p class="loil">If you're unsure, there's a paid thirty-day love it or leave it. The details of the 30-day option are covered on your call.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Develop Coaching · develop-coaching.com</p>
+    <p style="margin-top:6px;">Questions? <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a></p>
+  </div>
+</footer>
+
+<!-- FlowBuild widget helper: auto-sizes the booking iframe -->
+<script src="https://link.flow-build.com/js/form_embed.js"></script>
+<script>
+(function(){
+  // Prefill the calendar with the applicant's details (held in sessionStorage
+  // by the application page, so they never sit in this page's URL) and carry
+  // the UTMs and fbclid so FlowBuild stores the ad source on the booking.
+  var carry = new URLSearchParams();
+  try {
+    var d = JSON.parse(sessionStorage.getItem('dcVslApplication') || '{}');
+    ['first_name','last_name','email','phone'].forEach(function(k){ if (d[k]) carry.set(k, d[k]); });
+  } catch (err) {}
+  var params = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function(k){
+    if (params.get(k)) carry.set(k, params.get(k));
+  });
+  var qs = carry.toString();
+  if (!qs) return;
+  var iframe = document.getElementById('dcCalendar');
+  var link = document.getElementById('dcCalendarLink');
+  iframe.src = iframe.src + (iframe.src.indexOf('?') > -1 ? '&' : '?') + qs;
+  link.href = link.href + '?' + qs;
+})();
+</script>
+</body>
+</html>

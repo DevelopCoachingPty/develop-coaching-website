@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<script src="/dc-consent.js" data-dc-consent></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>A Full Diary Hides a Lot | Develop Coaching</title>
+<meta name="description" content="A short video for UK builders turning over £750k to £5m on how to get out of the busy trap, then a walk through the first 90 days.">
+
+<!-- Google tag (consent-gated, same pattern as /book-a-call/) -->
+<script type="text/plain" data-dc-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EX5H3P27NP');
+</script>
+
+<!-- Meta Pixel 454680953864989.
+     On load: PageView + ViewContent.
+     Lead: ONLY on a real, QUALIFIED application submit (see script at end of body).
+     Not-qualified submits fire the custom event ApplicationNotQualified instead,
+     so Meta is never taught to find people we route away from the calendar.
+     Schedule: server-side only, from the FlowBuild workflow on the calendar. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '454680953864989');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'VSL Application'});
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:          #f7f7f7;
+    --bg-2:        #ececec;
+    --ink:         #1a1a1a;
+    --ink-2:       #2c2b2d;
+    --dark:        #141415;
+    --muted:       #6a6a6c;
+    --border:      #e0e0e0;
+    --surface:     #ffffff;
+    --gold:        #face35;
+    --gold-light:  #ffe88a;
+    --gold-dark:   #b58900;
+    --accent-grad: linear-gradient(135deg, #face35 0%, #f9a934 100%);
+    --radius:      12px;
+    --radius-lg:   18px;
+    --shadow-sm:   0 2px 8px rgba(26, 26, 26, 0.06);
+    --shadow:      0 8px 28px rgba(26, 26, 26, 0.12);
+    --shadow-lg:   0 20px 60px rgba(0, 0, 0, 0.35);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3, h4 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    line-height: 1.08;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); font-weight: 900; }
+  h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 1rem; }
+  h3 { font-size: 1.3rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+  p  { margin-bottom: 1rem; }
+  a  { color: var(--gold-dark); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--accent-grad); color: var(--ink);
+    padding: 17px 34px; border-radius: 8px; border: none; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.92rem;
+    text-decoration: none; text-transform: uppercase; letter-spacing: 1.4px;
+    box-shadow: 0 8px 24px rgba(250, 206, 53, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(250, 206, 53, 0.45); }
+  .btn[disabled] { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-ghost {
+    background: transparent; color: var(--muted); box-shadow: none;
+    padding: 17px 18px; letter-spacing: 1px;
+  }
+  .btn-ghost:hover { box-shadow: none; color: var(--ink); transform: none; }
+
+  section { padding: 88px 0; position: relative; }
+  section.alt { background: var(--bg-2); }
+  .section-head { text-align: center; max-width: 760px; margin: 0 auto 3rem; }
+  .section-head p { color: var(--muted); font-size: 1.06rem; }
+
+  /* ---------- 1. Top of page ---------- */
+  .hero {
+    background: var(--dark);
+    color: #f4f4f4;
+    text-align: center;
+    padding: 64px 0 56px;
+    overflow: hidden;
+  }
+  /* Stills behind the headline. STAND-IN: frames from the nine client story
+     videos used further down. Swap for stills from the VSL once it is filmed. */
+  .hero-stills {
+    position: absolute; inset: 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr;
+    opacity: 0.16; filter: grayscale(1) contrast(1.1);
+    pointer-events: none;
+  }
+  .hero-stills div { background-size: cover; background-position: center; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(250, 206, 53, 0.14) 0%, transparent 55%),
+      linear-gradient(180deg, rgba(20,20,21,0.55) 0%, rgba(20,20,21,0.82) 55%, var(--dark) 100%);
+  }
+  .hero > .container-narrow { position: relative; z-index: 1; }
+  .hero h1 { color: #fff; margin-bottom: 0.5rem; }
+  .hero .underline {
+    font-family: 'Archivo', sans-serif; font-weight: 700;
+    color: var(--gold); font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+    margin-bottom: 1.4rem;
+  }
+  .hero .subhead {
+    color: #d6d6d6; font-size: clamp(1rem, 1.7vw, 1.14rem);
+    max-width: 720px; margin: 0 auto 2rem;
+  }
+  .watch-bar {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--ink);
+    font-weight: 700; font-size: 0.86rem; letter-spacing: 1px; text-transform: uppercase;
+    padding: 10px 20px; border-radius: 8px 8px 0 0;
+  }
+  .watch-bar .dot {
+    width: 9px; height: 9px; border-radius: 50%; background: #c0392b;
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  .video-wrap {
+    position: relative; aspect-ratio: 16 / 9; background: #000;
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: 0 0 0 2px var(--gold), var(--shadow-lg);
+  }
+  .video-wrap iframe, .video-wrap video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    background: repeating-linear-gradient(135deg, #1b1b1c 0 22px, #202022 22px 44px);
+    color: #bdbdbd;
+  }
+  .video-placeholder .play {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: rgba(250, 206, 53, 0.16); border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .video-placeholder .play::after {
+    content: ""; margin-left: 6px;
+    border-style: solid; border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent var(--gold);
+  }
+  .video-placeholder strong { color: #fff; font-family: 'Archivo', sans-serif; font-size: 1.25rem; }
+  .video-placeholder span { font-size: 0.9rem; }
+  .cred-strip {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 26px;
+    margin-top: 22px; color: #cfcfcf; font-size: 0.92rem; font-weight: 600;
+  }
+  .cred-strip span { display: inline-flex; align-items: center; gap: 8px; }
+  .cred-strip span::before { content: "★"; color: var(--gold); font-size: 0.85rem; }
+
+  /* ---------- 2. Application ---------- */
+  .apply { background: var(--dark); padding: 0 0 88px; }
+  .apply-card {
+    background: var(--surface); color: var(--ink);
+    border-top: 5px solid var(--gold); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 760px; margin: 0 auto; padding: 38px 40px 34px;
+  }
+  .apply-card h2 { font-size: clamp(1.35rem, 2.6vw, 1.8rem); text-align: center; margin-bottom: 1.4rem; }
+  .progress { height: 6px; background: var(--bg-2); border-radius: 99px; overflow: hidden; margin-bottom: 8px; }
+  .progress i { display: block; height: 100%; width: 14.28%; background: var(--accent-grad); transition: width 0.3s; }
+  .progress-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.3rem; }
+  .step { display: none; border: 0; }
+  .step.active { display: block; animation: stepIn 0.25s ease; }
+  @keyframes stepIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+  .step legend, .step .q {
+    font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1.22rem;
+    line-height: 1.25; margin-bottom: 1.1rem; padding: 0; display: block; width: 100%;
+  }
+  .opt { display: block; position: relative; margin-bottom: 10px; cursor: pointer; }
+  .opt input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .opt span {
+    display: block; padding: 15px 18px 15px 50px;
+    border: 2px solid var(--border); border-radius: 10px; background: var(--bg);
+    font-weight: 600; font-size: 1rem; transition: border-color 0.15s, background 0.15s;
+  }
+  .opt span::before {
+    content: ""; position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid #bdbdbd; background: #fff;
+  }
+  .opt:hover span { border-color: var(--gold); }
+  .opt input:checked + span { border-color: var(--gold); background: #fff8dc; }
+  .opt input:checked + span::before { border-color: var(--gold-dark); background: var(--gold); box-shadow: inset 0 0 0 3px #fff; }
+  .opt input:focus-visible + span { outline: 3px solid rgba(250, 206, 53, 0.5); outline-offset: 2px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-weight: 600; font-size: 0.86rem; margin-bottom: 6px; }
+  .field input {
+    width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: 10px;
+    font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--ink); background: var(--bg);
+  }
+  .field input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(250, 206, 53, 0.25); }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .consent { color: var(--muted); font-size: 0.84rem; margin: 6px 0 0; }
+  .form-error { display: none; color: #c0392b; font-size: 0.88rem; font-weight: 600; margin: 4px 0 0; }
+  .step-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; }
+  .step-nav .btn { min-width: 170px; }
+
+  /* ---------- 3. Proof ---------- */
+  .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 2.2rem; }
+  .filters button {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
+    padding: 9px 20px; border-radius: 99px; cursor: pointer;
+    border: 2px solid var(--border); background: var(--surface); color: var(--ink);
+    transition: all 0.15s;
+  }
+  .filters button:hover { border-color: var(--gold); }
+  .filters button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .story-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 680px)  { .story-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .story-grid { grid-template-columns: repeat(3, 1fr); } }
+  .story {
+    background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold);
+    border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .story:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .story[hidden] { display: none; }
+  .story-video { position: relative; aspect-ratio: 16 / 9; background: #000; }
+  .story-video button {
+    position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer;
+    background-size: cover; background-position: center;
+  }
+  .story-video button::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.22); transition: background 0.2s; }
+  .story-video button:hover::before { background: rgba(0,0,0,0.05); }
+  .story-video button::after {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%;
+    background: var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6v12l10-6z' fill='%231a1a1a'/%3E%3C/svg%3E") center / 30px no-repeat;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .story-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .story-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+  .story-body blockquote { font-weight: 600; font-size: 1.02rem; line-height: 1.5; margin-bottom: 1rem; flex: 1; }
+  .story-body .summary { font-size: 0.96rem; line-height: 1.55; color: #3d3d3f; margin-bottom: 1rem; flex: 1; }
+  .story-body .who { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1rem; }
+  .story-body .stat { color: var(--muted); font-size: 0.88rem; margin: 2px 0 0; }
+  .story-body .stat em { font-style: normal; font-weight: 700; color: var(--gold-dark); }
+  .wall { columns: 1; column-gap: 24px; margin-top: 24px; }
+  @media (min-width: 680px)  { .wall { columns: 2; } }
+  @media (min-width: 1000px) { .wall { columns: 3; } }
+  .wall-card {
+    break-inside: avoid; margin: 0 0 24px; padding: 24px 26px;
+    background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--gold);
+    border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  }
+  .wall-card blockquote { font-weight: 600; font-size: 1.05rem; line-height: 1.5; margin-bottom: 0.7rem; }
+  .wall-card figcaption { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 0.92rem; color: var(--muted); }
+  .wall-card img { width: 100%; display: block; border-radius: 8px; }
+  .proof-note { text-align: center; color: var(--muted); font-size: 0.86rem; margin: 2rem 0 0; }
+
+  /* ---------- 4. How it works ---------- */
+  .how-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 940px) { .how-grid { grid-template-columns: 1fr 1fr 1.25fr; } }
+  .how-card {
+    background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold);
+    border-radius: var(--radius); padding: 32px 30px; box-shadow: var(--shadow-sm);
+  }
+  .how-card .tag {
+    font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 0.76rem;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark);
+    display: block; margin-bottom: 0.6rem;
+  }
+  .how-card p { color: #3d3d3f; font-size: 0.97rem; margin-bottom: 0.8rem; }
+  .how-card p:last-child { margin-bottom: 0; }
+  .how-card ul { list-style: none; }
+  .how-card li { font-size: 0.93rem; color: #3d3d3f; padding: 10px 0; border-top: 1px solid var(--border); }
+  .how-card li strong { color: var(--ink); }
+  .ninety { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 40px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+  @media (min-width: 760px) { .ninety { grid-template-columns: repeat(3, 1fr); } }
+  .ninety-head { text-align: center; margin: 56px 0 0; }
+  .ninety-head h3 { font-size: 1.5rem; margin: 0; }
+  .ninety div { background: var(--ink); color: #fff; padding: 26px 28px; border-left: 1px solid rgba(255,255,255,0.12); }
+  .ninety div:first-child { border-left: 0; }
+  .ninety small { display: block; color: var(--gold); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.78rem; margin-bottom: 4px; }
+  .ninety strong { font-family: 'Archivo', sans-serif; font-size: 1.25rem; }
+  .events-line { text-align: center; max-width: 760px; margin: 34px auto 0; font-size: 1.04rem; font-weight: 600; }
+
+  /* ---------- 5. FAQ ---------- */
+  .faq { max-width: 800px; margin: 0 auto; }
+  .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; }
+  .faq details[open] { border-color: var(--gold); }
+  .faq summary {
+    padding: 20px 56px 20px 24px; cursor: pointer; font-weight: 700; font-size: 1.02rem;
+    list-style: none; position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
+    color: var(--gold-dark); font-size: 1.5rem; line-height: 1; font-weight: 400;
+  }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq .answer { padding: 0 24px 22px; color: #3d3d3f; }
+  .faq .answer p:last-child { margin-bottom: 0; }
+  .loil-card {
+    margin-top: 16px; padding: 18px 22px; border-radius: 10px;
+    background: #fff8dc; border: 1px solid var(--gold); border-left: 5px solid var(--gold);
+  }
+  .loil-card strong { font-family: 'Archivo', sans-serif; font-size: 1.12rem; display: block; }
+  .loil-card small { color: var(--muted); font-size: 0.86rem; }
+
+  /* ---------- 6. About Greg ---------- */
+  .about { background: var(--dark); color: #e8e8e8; }
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; max-width: 960px; margin: 0 auto; }
+  @media (min-width: 800px) { .about-grid { grid-template-columns: 300px 1fr; gap: 56px; } }
+  .about img {
+    width: 100%; max-width: 300px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
+    border-radius: var(--radius-lg); border: 3px solid var(--gold); display: block; margin: 0 auto;
+  }
+  .about h2 { color: #fff; }
+  .about p { color: #d6d6d6; font-size: 1.06rem; }
+  .about .btn { margin-top: 0.6rem; }
+
+  footer { background: #0d0d0e; color: #8a8a8c; text-align: center; padding: 36px 0; font-size: 0.86rem; }
+  footer a { color: var(--gold); }
+
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s, transform 0.6s; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 640px) {
+    section { padding: 60px 0; }
+    .hero { padding: 40px 0 36px; }
+    .apply { padding-bottom: 60px; }
+    .apply-card { padding: 28px 20px 24px; }
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+    .step-nav .btn { min-width: 0; flex: 1; }
+    .watch-bar { font-size: 0.74rem; padding: 9px 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= 1. TOP OF PAGE ================= -->
+<section class="hero">
+  <div class="hero-stills" aria-hidden="true">
+    <div style="background-image:url('https://i.ytimg.com/vi/D-M9a1i4PQU/hqdefault.jpg')"></div>
+    <div style="background-image:url('https://i.ytimg.com/vi/Kfx-SeLmNig/hqdefault.jpg')"></div>
+    <div style="background-image:url('https://i.ytimg.com/vi/1C2yT_tP-Aw/hqdefault.jpg')"></div>
+    <div style="background-image:url('https://i.ytimg.com/vi/snrx2DrLISg/hqdefault.jpg')"></div>
+    <div style="background-image:url('https://i.ytimg.com/vi/4w0XjmkgUx0/hqdefault.jpg')"></div>
+    <div style="background-image:url('https://i.ytimg.com/vi/B5ZTJu97_Gs/hqdefault.jpg')"></div>
+  </div>
+  <div class="container-narrow">
+    <!-- Headline, line under it and subhead: FINAL per Greg, 12 Nov 2026
+         (the headline is the first line of the video). -->
+    <h1>A full diary hides a lot</h1>
+    <p class="underline">(Even if this is your busiest year yet)</p>
+    <p class="subhead">Nothing left at the end of the year. No weekend the phone didn't ring. Taking whatever comes in, while the jobs you actually want go to someone else. That's the busy trap, and more work won't get you out of it. This video shows how UK builders turning over £750k to £5m do get out, then walks through the first 90 days.</p>
+
+    <div class="watch-bar"><span class="dot"></span>Watch this first (18 minutes, sound on)</div>
+    <div class="video-wrap" id="vsl">
+      <!-- VSL SLOT. Placeholder until the video is filmed.
+           When live: replace .video-placeholder with the player, set to
+           AUTOPLAY MUTED with CAPTIONS ON, e.g.
+           <video autoplay muted playsinline controls poster="...">
+             <source src="VSL.mp4" type="video/mp4">
+             <track kind="captions" src="vsl-captions.vtt" srclang="en" label="English" default>
+           </video> -->
+      <div class="video-placeholder">
+        <div class="play"></div>
+        <strong>Video coming soon</strong>
+        <span>Placeholder. The player goes here.</span>
+      </div>
+    </div>
+    <div class="cred-strip">
+      <span>300+ builders helped</span>
+      <span>No. 1 Amazon bestseller</span>
+      <span>2024 Best Construction Training Company</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. APPLICATION ================= -->
+<section class="apply" id="apply">
+  <div class="container">
+    <div class="apply-card">
+      <h2>Next step: answer a few questions to see if the Mastermind is right for your business</h2>
+      <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+      <div class="progress-label" id="progressLabel">Question 1 of 7</div>
+
+      <form id="applyForm" novalidate>
+        <fieldset class="step active" data-step="1">
+          <legend>Where does most of your work come from right now?</legend>
+          <label class="opt"><input type="radio" name="work_source" value="Referrals and repeat clients"><span>Referrals and repeat clients</span></label>
+          <label class="opt"><input type="radio" name="work_source" value="One or two architects or main contractors"><span>One or two architects or main contractors</span></label>
+          <label class="opt"><input type="radio" name="work_source" value="Lead sites and directories"><span>Lead sites and directories</span></label>
+          <label class="opt"><input type="radio" name="work_source" value="Our own marketing and ads"><span>Our own marketing and ads</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="2">
+          <legend>What best describes your business?</legend>
+          <label class="opt"><input type="radio" name="business_type" value="Building company (residential or commercial)"><span>Building company (residential or commercial)</span></label>
+          <label class="opt"><input type="radio" name="business_type" value="Trade contractor"><span>Trade contractor</span></label>
+          <label class="opt"><input type="radio" name="business_type" value="Design and build, or development"><span>Design and build, or development</span></label>
+          <label class="opt"><input type="radio" name="business_type" value="We sell services to builders" data-route="free"><span>We sell services to builders</span></label>
+          <label class="opt"><input type="radio" name="business_type" value="Other"><span>Other</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="3">
+          <legend>What was your turnover over the last 12 months?</legend>
+          <label class="opt"><input type="radio" name="turnover" value="Under £250k" data-route="free"><span>Under £250k</span></label>
+          <label class="opt"><input type="radio" name="turnover" value="£250k to £750k" data-route="free"><span>£250k to £750k</span></label>
+          <label class="opt"><input type="radio" name="turnover" value="£750k to £1.5m"><span>£750k to £1.5m</span></label>
+          <label class="opt"><input type="radio" name="turnover" value="£1.5m to £3m"><span>£1.5m to £3m</span></label>
+          <label class="opt"><input type="radio" name="turnover" value="£3m to £5m"><span>£3m to £5m</span></label>
+          <label class="opt"><input type="radio" name="turnover" value="Over £5m"><span>Over £5m</span></label>
+        </fieldset>
+
+        <fieldset class="step" data-step="4">
+          <legend>How many people work in your office team, not counting site?</legend>
+          <label class="opt"><input type="radio" name="office_team" value="Just me" data-route="free"><span>Just me</span></label>
+          <label class="opt"><input type="radio" name="office_team" value="1 to 2"><span>1 to 2</span></label>
+          <label class="opt"><input type="radio" name="office_team" value="3 to 10"><span>3 to 10</span></label>
+          <label class="opt"><input type="radio" name="office_team" value="More than 10"><span>More than 10</span></label>
+        </fieldset>
+
+        <!-- Q5 is for call notes only. It never affects routing. -->
+        <fieldset class="step" data-step="5">
+          <legend>Which sounds most like you?</legend>
+          <label class="opt"><input type="radio" name="approach" value="Give me a clear plan and I'll put the work in"><span>Give me a clear plan and I'll put the work in</span></label>
+          <label class="opt"><input type="radio" name="approach" value="I'd rather someone did it all for me"><span>I'd rather someone did it all for me</span></label>
+          <label class="opt"><input type="radio" name="approach" value="I want results fast without changing much"><span>I want results fast without changing much</span></label>
+          <label class="opt"><input type="radio" name="approach" value="I'm not sure yet"><span>I'm not sure yet</span></label>
+        </fieldset>
+
+        <div class="step" data-step="6">
+          <label class="q" for="website">Your website or Facebook page</label>
+          <div class="field"><input type="text" id="website" name="website" autocomplete="url" inputmode="url"></div>
+        </div>
+
+        <div class="step" data-step="7">
+          <span class="q">Your details</span>
+          <div class="field-row">
+            <div class="field"><label for="firstName">First name</label><input type="text" id="firstName" name="first_name" autocomplete="given-name"></div>
+            <div class="field"><label for="lastName">Last name</label><input type="text" id="lastName" name="last_name" autocomplete="family-name"></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"></div>
+          <div class="field"><label for="phone">Mobile</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          <p class="consent">By applying you agree we can contact you about your application. We never share your details.</p>
+        </div>
+
+        <p class="form-error" id="formError" role="alert"></p>
+        <div class="step-nav">
+          <button type="button" class="btn btn-ghost" id="backBtn" hidden>Back</button>
+          <span></span>
+          <button type="button" class="btn" id="nextBtn">Next</button>
+          <button type="submit" class="btn" id="submitBtn" hidden>Send my application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. HOW IT WORKS ================= -->
+<section class="alt" id="how">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <span class="tag">01</span>
+        <h3>Your plan</h3>
+        <p>We find the leaks first. Your numbers, a five-pillar heatmap, and a planning session that produces your 12-month plan.</p>
+      </div>
+      <div class="how-card reveal">
+        <span class="tag">02</span>
+        <h3>Your coaching</h3>
+        <p>A live group coaching call every week. A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one.</p>
+        <p>Coaches who understand construction, with quantity surveying and finance on the team, and a messaging app you can use any time, day or night.</p>
+      </div>
+      <div class="how-card reveal">
+        <span class="tag">03</span>
+        <h3>Your software, all included</h3>
+        <p>You get the lot, set up with you.</p>
+        <ul>
+          <li><strong>CostTracker Pro:</strong> run every job in one place and see committed costs against what you quoted, with a full Spon rate library.</li>
+          <li><strong>FlowBuild:</strong> where your enquiries go. Every one captured and followed up automatically, and your processes written down.</li>
+          <li><strong>Architect Attractor:</strong> new planning applications in your area, filtered to the jobs you want, with the introduction ready to send.</li>
+          <li><strong>Momentum Builder:</strong> your 12-month plan turned into this week's priorities, with names against them.</li>
+          <li><strong>Jarvis:</strong> an AI assistant for enquiry replies, quotes, client letters, job adverts and procedures.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ninety-head"><h3>Your first 90 days</h3></div>
+    <div class="ninety reveal" style="margin-top:20px;">
+      <div><small>Days 1 to 30</small><strong>Find the leaks</strong></div>
+      <div><small>Days 31 to 60</small><strong>Protect the margin</strong></div>
+      <div><small>Days 61 to 90</small><strong>Build momentum</strong></div>
+    </div>
+    <p class="events-line">Three live events a year, included, including the Summit. Plus a group WhatsApp with the other members.</p>
+  </div>
+</section>
+
+<!-- ================= 5. FAQ ================= -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>Straight answers</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Who is it for?</summary>
+        <div class="answer"><p>Building and trade company owners turning over roughly £750k to £5m, with an office team of two to ten plus trades. The work's coming in, but the margins don't match the effort, and too much still depends on you.</p></div>
+      </details>
+      <details>
+        <summary>Who isn't it for?</summary>
+        <div class="answer"><p>Sole traders without a team, start-ups with no trading history, companies selling services to builders, and anyone looking for a quick fix.</p></div>
+      </details>
+      <details>
+        <summary>How much time does it take?</summary>
+        <div class="answer"><p>The first month's the busiest, with a one-to-one every week. After that it's an hour to an hour and a half a week, on the business. Monday morning, Friday afternoon, whatever suits you.</p></div>
+      </details>
+      <details>
+        <summary>How much is it?</summary>
+        <div class="answer"><p>We go through the cost on your second call, once we've looked at your business and what it needs. You can pay monthly or annually. And there's nothing extra to buy later. The plan, the coaching, the community, the live events and the software are the programme.</p></div>
+      </details>
+      <details>
+        <summary>Is it really twelve months?</summary>
+        <div class="answer">
+          <p>Yes. It's a twelve-month commitment. It gives your plan room to work, and it stops good changes being dropped the first busy month.</p>
+          <p>But if you're unsure, there's a paid thirty-day love it or leave it. You test out the programme first. Then you make an informed decision. Thirty days in, you've been through your own numbers with a coach. The first leak often shows up in that first month. You're deciding on what you've seen, not on what you've been sold.</p>
+          <p>Love it, and you commit to the twelve months knowing what you're in for. Leave it, and you leave. But once you've committed, you're in for the year. We'll go through how the thirty days work, and what they cost, on the call.</p>
+          <div class="loil-card">
+            <strong>30-day love it or leave it</strong>
+            <small>The details of the 30-day option are covered on your call.</small>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>What support do I get between calls?</summary>
+        <div class="answer"><p>A messaging app you can use any time, day or night, and a group WhatsApp with the other members.</p></div>
+      </details>
+      <details>
+        <summary>I'm not good with software.</summary>
+        <div class="answer"><p>You don't need to be. We set your tools up with you on your first one-to-one, and you don't have to move the whole firm across in a week. Start with one job. If you get stuck, you message us and we'll sort it.</p></div>
+      </details>
+      <details>
+        <summary>Do you promise results?</summary>
+        <div class="answer"><p>No. Nobody honest can. What we do promise is a plan built around your business, and the support to carry it out.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PROOF ================= -->
+<!-- All nine clients and videos are from develop-coaching.com/client-wins/.
+     Quotes are as supplied in Greg's brief. The results-screenshot strip and the
+     Google/Trustpilot review row are deliberately left out: no approved ones yet,
+     and they must never be mocked up. -->
+<section class="alt" id="proof">
+  <div class="container">
+    <div class="section-head">
+      <h2>Real builders. Real results.</h2>
+    </div>
+    <div class="filters" role="group" aria-label="Filter client stories">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="ext" aria-pressed="false">Extensions and refurbs</button>
+      <button type="button" data-filter="db" aria-pressed="false">Design and build</button>
+      <button type="button" data-filter="trades" aria-pressed="false">Trades</button>
+    </div>
+
+    <div class="story-grid">
+      <article class="story reveal" data-tags="db">
+        <div class="story-video" data-yt="D-M9a1i4PQU" data-start="50" data-title="James and Kate's story"></div>
+        <div class="story-body">
+          <blockquote>"It's a profitable year for the first time in what feels like a very long time"</blockquote>
+          <div class="who">James &amp; Kate</div>
+          <p class="stat">£1.9m in 2022 at a loss, then on track for £4m <em>(forecast)</em></p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="trades">
+        <div class="story-video" data-yt="Kfx-SeLmNig" data-title="Will's story"></div>
+        <div class="story-body">
+          <blockquote>"We traded the year before at 1.5 million ... 2%, we broke even basically"</blockquote>
+          <div class="who">Will</div>
+          <p class="stat">Bricklaying contractor</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="ext">
+        <div class="story-video" data-yt="1C2yT_tP-Aw" data-title="Dave Darby's story"></div>
+        <div class="story-body">
+          <blockquote>"We smashed that, did 635,000. In turnover, not profit"</blockquote>
+          <div class="who">Dave Darby</div>
+          <p class="stat">£150k to £635k, then on for just shy of £1m <em>(forecast)</em></p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="ext">
+        <div class="story-video" data-yt="snrx2DrLISg" data-title="Mike and Nick's story"></div>
+        <div class="story-body">
+          <blockquote>"From two tradesmen and a labourer to a team of eight"</blockquote>
+          <div class="who">Mike &amp; Nick</div>
+          <p class="stat">£35k to £80k a month</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="4w0XjmkgUx0" data-title="Valy Stan's story"></div>
+        <div class="story-body">
+          <blockquote>"I had few doubts in my mind whether this is going to work"</blockquote>
+          <div class="who">Valy Stan</div>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="B5ZTJu97_Gs" data-title="Robert McGill's story"></div>
+        <div class="story-body">
+          <blockquote>"I was on a hamster wheel and couldn't get off"</blockquote>
+          <div class="who">Robert McGill</div>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="ext">
+        <div class="story-video" data-yt="AePCs4liO0Q" data-title="Brad's story"></div>
+        <div class="story-body">
+          <blockquote>"I wouldn't be asking if you can afford it. I'd be asking, can you afford not to do it"</blockquote>
+          <div class="who">Brad</div>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="GSEM3O9HYvg" data-title="Dale Marshall's story"></div>
+        <div class="story-body">
+          <blockquote>"The value of the coaching way outweighs the amount you need to pay for it"</blockquote>
+          <div class="who">Dale Marshall</div>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="7iLnXeuYoMg" data-title="Bradley Wheaton's story"></div>
+        <div class="story-body">
+          <blockquote>"I wouldn't be where I am with this business now if you wasn't coaching me along the way"</blockquote>
+          <div class="who">Bradley Wheaton</div>
+          <p class="stat">£440k in his second year, then on target for £800k+ <em>(forecast)</em></p>
+        </div>
+      </article>
+      <!-- The 16 stories below were added 12 Nov at Chloe's request (all client
+           wins, not just Greg's nine). Quotes are word for word from each
+           client's own testimonial: 12 from the transcripts in the testimonials
+           index, 4 (Marek, Rachel Moors, Jordan Stubley, Paul Murphy) from the
+           YouTube auto-captions with filler words removed. Listen to those four
+           before go-live. Greg has not approved these 16 quotes. -->
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="ecKFCE1r-18" data-title="Marek&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"Since we joined Greg and his team, effectively our turnover doubled in a space of a year"</blockquote>
+          <div class="who">Marek</div>
+          <p class="stat">Construction business owner</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="in8bRqFRC0I" data-title="Rachel Moors&#x27; story"></div>
+        <div class="story-body">
+          <blockquote>"I knew where I wanted to go, but had no idea how I could get there"</blockquote>
+          <div class="who">Rachel Moors</div>
+          <p class="stat">Construction business owner</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="i0p_SEU2xpg" data-title="Jordan Stubley&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"Being able to get advice from people that are in the same boat as us has definitely helped"</blockquote>
+          <div class="who">Jordan Stubley</div>
+          <p class="stat">JTS, construction business</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="9J1c94plNRE" data-title="Paul Murphy&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"You feel like you're not on your own, and a lot of the answers are actually amongst the other members"</blockquote>
+          <div class="who">Paul Murphy</div>
+          <p class="stat">MPD, family-run construction business</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="9i31Jk89THQ" data-title="Richard&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"Everything within the system has become more efficient, everything's been more streamlined"</blockquote>
+          <div class="who">Richard</div>
+          <p class="stat">Construction or trades business</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="H1eWYQjMaFA" data-title="Stephen and Salina&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"We can see month on month just the growth that there's been"</blockquote>
+          <div class="who">Stephen and Salina</div>
+          <p class="stat">Construction business owners</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="yXqEwu6FEog" data-title="Geoff Walker&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"If doubling my turnover over the last two consecutive years is anything to go by, then I think it's very much worth it"</blockquote>
+          <div class="who">Geoff Walker</div>
+          <p class="stat">Refuse Limited, commercial interiors</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="zhoS5F5oYy4" data-title="Dan Burke&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"None of us were businessmen. We were all on site on the tools"</blockquote>
+          <div class="who">Dan Burke</div>
+          <p class="stat">Construction business run with three cousins</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="r572G_WcimQ" data-title="Lukas&#x27; story"></div>
+        <div class="story-body">
+          <blockquote>"I wasn't running the business, business was running me"</blockquote>
+          <div class="who">Lukas</div>
+          <p class="stat">Construction and building contractor</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="NzonAtTiHlg" data-title="James Wilcock&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"I couldn't see a way out of being on the tools"</blockquote>
+          <div class="who">James Wilcock</div>
+          <p class="stat">Construction business owner</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="tZxceh60Zc8" data-title="Richard Abrahams&#x27; story"></div>
+        <div class="story-body">
+          <blockquote>"We invest heavily in our tools and we invest heavily in our techniques. So to us, it just seemed a no brainer to invest heavily into someone who could actually guide us through the growth process"</blockquote>
+          <div class="who">Richard Abrahams</div>
+          <p class="stat">Construction business owner</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="trades">
+        <div class="story-video" data-yt="HcS63FwTv_A" data-title="Sam John and Nathan Tanner&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"We wanted to do larger scale projects more, and make more money"</blockquote>
+          <div class="who">Sam John and Nathan Tanner</div>
+          <p class="stat">Complete Connectrix, an electrical company in Somerset</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="ext">
+        <div class="story-video" data-yt="MGAD2pxmNrc" data-title="Stephen and Ashley&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"It's like a helping hand to move you to the next stage"</blockquote>
+          <div class="who">Stephen and Ashley</div>
+          <p class="stat">London property renovation and maintenance company</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="ext">
+        <div class="story-video" data-yt="IZYls1vXkQo" data-title="Sophie and Neil&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"We're not going to hit a target that we can't see"</blockquote>
+          <div class="who">Sophie and Neil</div>
+          <p class="stat">Luxury bathrooms and wider construction work in London and Surrey</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="oktEjmz9B6s" data-title="Dominic Marchant&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"You wouldn't drive your car without a sat nav or a map"</blockquote>
+          <div class="who">Dominic Marchant</div>
+          <p class="stat">Construction business owner</p>
+        </div>
+      </article>
+      <article class="story reveal" data-tags="">
+        <div class="story-video" data-yt="gKrNClKEzVU" data-title="George&#x27;s story"></div>
+        <div class="story-body">
+          <blockquote>"I wanted to get my time back pretty much"</blockquote>
+          <div class="who">George</div>
+          <p class="stat">Builder and construction business owner</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Quote wall: 20 more lines from the same client-wins clients, each word
+         for word from that client's testimonial transcript
+         (~/Code/testimonials/index.json). Added 12 Nov at Chloe's request.
+         Greg has not approved these. NO review screenshots or Google/Trustpilot
+         rows here: Greg's brief says none are approved and never to mock them up.
+         When real approved screenshots exist, add them as
+         <figure class="wall-card"><img src="..." alt="..."></figure>. -->
+    <div class="wall">
+      <figure class="wall-card reveal"><blockquote>"It's totally changed our lives."</blockquote><figcaption>Brad</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"I never thought this was possible as a builder to be able to sit on holiday and let go."</blockquote><figcaption>Geoff Walker</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"You will see the benefits straight away"</blockquote><figcaption>Bradley Wheaton</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"My turnover's probably doubled or almost doubled"</blockquote><figcaption>Dale Marshall</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"There's always somebody there who's got an answer to help you."</blockquote><figcaption>Dan Burke</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"It's been incredible, it's been a massive game changer for me"</blockquote><figcaption>James Wilcock</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Everyone needs a coach in life."</blockquote><figcaption>Mike &amp; Nick</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"We found it absolutely invaluable for our business."</blockquote><figcaption>Richard</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"I feel like this is giving us more purpose"</blockquote><figcaption>Sophie and Neil</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"If you're passionate about growing your business, it's exactly what you need."</blockquote><figcaption>Stephen and Salina</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"It's become completely streamlined now."</blockquote><figcaption>Brad</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Just take the plunge. It's well worth it."</blockquote><figcaption>Bradley Wheaton</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"I've never had a plan that's actually set out to aim for something"</blockquote><figcaption>James Wilcock</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"That's just two things that we've implemented and it's made a big difference already."</blockquote><figcaption>Dan Burke</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Greg has been that critical and pivotal point there."</blockquote><figcaption>Mike &amp; Nick</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Everything looks a lot more professional, a lot more uniform now."</blockquote><figcaption>Richard</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"More excitement that someone was there to support me and I wasn't on my own"</blockquote><figcaption>Richard Abrahams</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Everything just works together"</blockquote><figcaption>George</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"More heads are better than one"</blockquote><figcaption>Sophie and Neil</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"100 percent go for it"</blockquote><figcaption>Dale Marshall</figcaption></figure>
+      <!-- The 8 cards below are members who are NOT on the client wins page
+           (Greg Partridge, Lewis Clements, Alexandra, Tim, Jono and Aileen).
+           Added 12 Nov on Chloe's instruction. This goes beyond Greg's rule
+           that every client shown is from the client wins page, so he needs
+           to OK them. First names only. All are in the permissioned
+           testimonials index, word for word from their transcripts. -->
+      <figure class="wall-card reveal"><blockquote>"Knowing that I'm not alone is a huge thing for me"</blockquote><figcaption>Greg P.</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"There is a cost to it, but it's worth it, it helps your business"</blockquote><figcaption>Lewis</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"I have a clear plan ahead for how I'm going to grow the business"</blockquote><figcaption>Alexandra</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"You can't beat having practical help from other people in your situation"</blockquote><figcaption>Tim</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"My mindset has flipped 180 from what we've been doing"</blockquote><figcaption>Jono and Aileen</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Every company, no matter how successful can be improved"</blockquote><figcaption>Greg P.</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"Finding the right person who has been there and done what you want to achieve is a no brainer"</blockquote><figcaption>Alexandra</figcaption></figure>
+      <figure class="wall-card reveal"><blockquote>"The key is to follow the programme"</blockquote><figcaption>Tim</figcaption></figure>
+    </div>
+    <p class="proof-note">Members' own words. Self-reported. Individual results vary. Forecasts are marked.</p>
+  </div>
+</section>
+
+<!-- ================= 6. ABOUT GREG ================= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <img src="/busy-trap/greg.jpg" alt="Greg Wilkes, founder of Develop Coaching" loading="lazy">
+      <div>
+        <h2>About Greg</h2>
+        <p>Greg Wilkes has spent 30 years in construction. At twenty he was on the tools, building loft conversions. He went on to run companies turning over millions, had one fail, and rebuilt knowing his numbers every month. He's the author of the No. 1 Amazon bestseller <em>Building Your Future</em>, and Develop Coaching was named 2024 Best Construction Training Company.</p>
+        <a href="#apply" class="btn" id="applyNow">Apply now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Develop Coaching · develop-coaching.com</p>
+    <p style="margin-top:6px;">Questions? <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ------------------------------------------------------------------
+  // CONFIG. Fill before go-live (see HANDOFF.md).
+  // ------------------------------------------------------------------
+  var CONFIG = {
+    // FlowBuild inbound-webhook URL. Receives every application (qualified or
+    // not) with all seven answers, the route, and the UTMs. Empty = the form
+    // still routes correctly, but the answers are NOT saved anywhere.
+    WEBHOOK_URL: '',
+    QUALIFIED_PAGE: '/busy-trap/book/',
+    NOT_QUALIFIED_PAGE: '/busy-trap/free-training/'
+  };
+
+  var form = document.getElementById('applyForm');
+  var steps = [].slice.call(form.querySelectorAll('.step'));
+  var total = steps.length;
+  var current = 0;
+  var nextBtn = document.getElementById('nextBtn');
+  var backBtn = document.getElementById('backBtn');
+  var submitBtn = document.getElementById('submitBtn');
+  var errEl = document.getElementById('formError');
+  var bar = document.getElementById('progressBar');
+  var label = document.getElementById('progressLabel');
+
+  function showError(msg){ errEl.textContent = msg; errEl.style.display = msg ? 'block' : 'none'; }
+
+  function show(i, focus){
+    current = i;
+    steps.forEach(function(s, n){ s.classList.toggle('active', n === i); });
+    bar.style.width = ((i + 1) / total * 100) + '%';
+    label.textContent = 'Question ' + (i + 1) + ' of ' + total;
+    backBtn.hidden = i === 0;
+    nextBtn.hidden = i === total - 1;
+    submitBtn.hidden = i !== total - 1;
+    showError('');
+    if (focus) {
+      var first = steps[i].querySelector('input[type=text], input[type=email], input[type=tel]');
+      if (first) first.focus({preventScroll: true});
+    }
+  }
+
+  function validate(i){
+    var step = steps[i];
+    var radios = step.querySelectorAll('input[type=radio]');
+    if (radios.length) {
+      if (!step.querySelector('input[type=radio]:checked')) { showError('Pick one to carry on.'); return false; }
+      return true;
+    }
+    if (i === 5) {
+      if (!form.website.value.trim()) { showError('Add your website or Facebook page to carry on.'); return false; }
+      return true;
+    }
+    var email = form.email.value.trim();
+    var phoneDigits = form.phone.value.replace(/\D/g, '');
+    if (!form.first_name.value.trim() || !form.last_name.value.trim()) { showError('Add your first and last name.'); return false; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Check your email address.'); return false; }
+    if (phoneDigits.length < 9) { showError('Check your mobile number.'); return false; }
+    return true;
+  }
+
+  nextBtn.addEventListener('click', function(){ if (validate(current)) show(current + 1, true); });
+  backBtn.addEventListener('click', function(){ show(current - 1, true); });
+  // Enter on a text field moves on instead of submitting early.
+  form.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' && current < total - 1) { e.preventDefault(); nextBtn.click(); }
+  });
+  form.addEventListener('change', function(){ showError(''); });
+
+  // UTMs carried through the funnel.
+  var params = new URLSearchParams(window.location.search);
+  var carried = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function(k){
+    if (params.get(k)) carried[k] = params.get(k);
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!validate(current)) return;
+
+    // Routing: any answer marked data-route="free" sends them to the free
+    // training page. Q5 (approach) is call notes only and never routes.
+    var notQualified = !!form.querySelector('input[data-route="free"]:checked');
+    var val = function(n){ var el = form.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : ''; };
+    var data = {
+      work_source: val('work_source'),
+      business_type: val('business_type'),
+      turnover: val('turnover'),
+      office_team: val('office_team'),
+      approach: val('approach'),
+      website: form.website.value.trim(),
+      first_name: form.first_name.value.trim(),
+      last_name: form.last_name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      route: notQualified ? 'free-training' : 'qualified',
+      source: 'vsl-application'
+    };
+    Object.keys(carried).forEach(function(k){ data[k] = carried[k]; });
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'One moment...';
+
+    if (CONFIG.WEBHOOK_URL) {
+      try {
+        fetch(CONFIG.WEBHOOK_URL, {
+          method: 'POST', keepalive: true,
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        });
+      } catch (err) { /* never block the funnel on the webhook */ }
+    }
+
+    if (window.fbq) {
+      if (notQualified) fbq('trackCustom', 'ApplicationNotQualified');
+      else fbq('track', 'Lead', {content_name: 'VSL Application'});
+    }
+    if (window.gtag) {
+      gtag('event', 'event_button_click', {button_name: notQualified ? 'vsl_application_not_qualified' : 'vsl_application_qualified'});
+    }
+
+    // Contact details travel in sessionStorage, not the page URL, so they stay
+    // out of analytics and browser history. Only UTMs go in the query string.
+    try {
+      sessionStorage.setItem('dcVslApplication', JSON.stringify({
+        first_name: data.first_name, last_name: data.last_name, email: data.email, phone: data.phone
+      }));
+    } catch (err) {}
+
+    var qs = new URLSearchParams(carried).toString();
+    var dest = (notQualified ? CONFIG.NOT_QUALIFIED_PAGE : CONFIG.QUALIFIED_PAGE) + (qs ? '?' + qs : '');
+    setTimeout(function(){ window.location.href = dest; }, 350);
+  });
+
+  show(0, false);
+
+  // APPLY NOW scrolls back up to the application.
+  document.getElementById('applyNow').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('apply').scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+
+  // Client story tiles: thumbnail first, YouTube loads only on click.
+  [].forEach.call(document.querySelectorAll('.story-video'), function(box){
+    var id = box.getAttribute('data-yt');
+    var start = box.getAttribute('data-start');
+    var title = box.getAttribute('data-title');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Play ' + title);
+    b.style.backgroundImage = "url('https://i.ytimg.com/vi/" + id + "/hqdefault.jpg')";
+    b.addEventListener('click', function(){
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0' + (start ? '&start=' + start : '');
+      f.title = title;
+      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      box.innerHTML = '';
+      box.appendChild(f);
+    });
+    box.appendChild(b);
+  });
+
+  // Filter tags.
+  var filterBtns = [].slice.call(document.querySelectorAll('.filters button'));
+  var stories = [].slice.call(document.querySelectorAll('.story'));
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = btn.getAttribute('data-filter');
+      filterBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      stories.forEach(function(s){
+        var tags = (s.getAttribute('data-tags') || '').split(' ');
+        s.hidden = !(f === 'all' || tags.indexOf(f) > -1);
+        s.classList.add('in');
+      });
+    });
+  });
+
+  // Scroll reveal.
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
