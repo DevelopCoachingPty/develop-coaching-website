@@ -2,6 +2,7 @@
 <html lang="en-GB">
 <head>
 <script src="/dc-consent.js" data-dc-consent></script>
+<script src="/enquiry-attribution.js" data-enquiry-attribution></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
@@ -974,6 +975,10 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application'});
       source: 'vsl-application'
     };
     Object.keys(carried).forEach(function(k){ data[k] = carried[k]; });
+    // First-touch attribution (enquiry-attribution.js): landing page, UTMs,
+    // referrer and AI referrer, under the same dc_* names the FlowBuild forms use.
+    var attr = window.dcAttribution ? window.dcAttribution.params() : {};
+    Object.keys(attr).forEach(function(k){ if (attr[k]) data[k] = attr[k]; });
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'One moment...';
@@ -994,6 +999,9 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application'});
     }
     if (window.gtag) {
       gtag('event', 'event_button_click', {button_name: notQualified ? 'vsl_application_not_qualified' : 'vsl_application_qualified'});
+    }
+    if (window.dcAttribution) {
+      window.dcAttribution.lead({form_id: 'busy-trap-application', form_name: 'VSL application', lead_type: notQualified ? 'application_not_qualified' : 'application'});
     }
 
     // Contact details travel in sessionStorage, not the page URL, so they stay
