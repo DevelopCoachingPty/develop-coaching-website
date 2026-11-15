@@ -190,6 +190,10 @@ test("no analytics consent, no GA4 event (but the form still gets its fields)", 
   e.message(["set-sticky-contacts", "embedded_iframe_a", "a"]);
   assert.strictEqual(e.pushed.length, 0);
   assert.ok(e.src(0).searchParams.has("dc_ai_referrer"));
+  // Consent given later on the same page: the next submit still counts.
+  e.setConsent(true);
+  e.message(["set-sticky-contacts", "embedded_iframe_a", "a"]);
+  assert.strictEqual(e.pushed.length, 1);
 });
 
 test("lookalike hosts and non-widget iframes are left alone", () => {

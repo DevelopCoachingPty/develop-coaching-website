@@ -226,8 +226,9 @@
     for (var i = 0; i < list.length; i++) tagFrame(list[i]);
   }
 
-  // Catch each iframe as the parser inserts it, before its first request
-  // finishes, so the form loads once with the parameters.
+  // Catch each iframe as the parser inserts it, so its src changes as early as
+  // possible. The browser may already have started the first request; that
+  // one is then abandoned and the form loads with the parameters.
   if (w.MutationObserver) {
     var mo = new MutationObserver(function (records) {
       for (var i = 0; i < records.length; i++) {
@@ -252,12 +253,12 @@
     info = info || {};
     var id = clip(info.form_id || 'unknown');
     if (sent[id]) return false;
-    sent[id] = true;
     var known = FORMS[id] || [];
     var dl = w.dataLayer;
     if (!dl || typeof dl.push !== 'function') return false;
     if (!analyticsAllowed()) return false;
     if (w['ga-disable-' + GA_ID]) return false;
+    sent[id] = true;
     var p = params();
     // gtag() form (an arguments object), as booking-tracking.js does, so the
     // Google tag already on the page processes it. No second config or client ID.
