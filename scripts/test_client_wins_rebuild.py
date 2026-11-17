@@ -38,8 +38,8 @@ class ClientWinsRebuildTests(unittest.TestCase):
 
     def test_one_h1_and_useful_metadata(self):
         self.assertEqual(1, len(re.findall(r"<h1\b", self.html, re.IGNORECASE)))
-        self.assertIn("Construction Business Coaching Results | Develop Coaching", self.html)
-        self.assertIn("builders and construction business owners share", self.html)
+        self.assertIn("Develop Coaching Case Studies and Client Reviews | UK Builders' Results", self.html)
+        self.assertIn("client-reported before-and-after turnover", self.html)
         self.assertIn(
             "James reports annual revenue grew from £1.5m, with a £4m forecast.",
             self.html,
@@ -51,7 +51,8 @@ class ClientWinsRebuildTests(unittest.TestCase):
             25,
             len(re.findall(r"<article\b[^>]*\bdata-client-win(?:\s|>)", self.html)),
         )
-        self.assertEqual(25, self.html.count('class="cw-docket__source"'))
+        self.assertEqual(33, self.html.count('class="cw-docket__source"'))
+        self.assertEqual(8, self.html.count('class="cw-case"'))
         self.assertEqual(26, self.html.count("data-video-play="))
         self.assertEqual(26, self.html.count("client story\">"))
 
@@ -114,11 +115,13 @@ class ClientWinsRebuildTests(unittest.TestCase):
             self.assertNotIn("</script><script>alert('unsafe')</script>", rendered)
             self.assertIn(r"\u003c/script>\u003cscript>alert('unsafe')\u003c/script>", rendered)
 
-    def test_no_unsupported_review_schema_or_rating_markup(self):
+    def test_review_schema_attributes_quotes_without_ratings(self):
         types = [schema_type for item in self.graph for schema_type in schema_types(item)]
-        self.assertNotIn("Review", types)
+        self.assertEqual(8, types.count("Review"))
+        self.assertEqual(1, types.count("ItemList"))
         self.assertNotIn("AggregateRating", types)
         self.assertNotIn('itemprop="reviewRating"', self.html)
+        self.assertNotIn("ratingValue", self.html)
         self.assertNotIn("Rated 5 out of 5", self.html)
 
     def test_known_cross_client_copy_is_removed(self):

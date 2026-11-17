@@ -19,7 +19,18 @@
     "focus": "Marketing and growth",
     "uploadDate": "2024-04-30",
     "duration": "PT2M12S",
-    "durationLabel": "2:12"
+    "durationLabel": "2:12",
+    "caseStudy": {
+      "order": 7,
+      "slug": "bradley-wheaton",
+      "headline": "Bradley Wheaton: £440,000 towards at least £800,000",
+      "starting": "Bradley does not come from a construction background. He was paying for leads on sites such as Rated People and Bark and says it was easy to overspend.",
+      "changed": "He describes automating marketing and going directly to architects.",
+      "before": "£440,000 turnover in his second year",
+      "after": "On target for at least £800,000 the following year (target at filming)",
+      "timeframe": "About one year (second year to the following year's target).",
+      "quote": "I wouldn't be where I am with this business now, if you wasn't coaching me along the way, that's for sure."
+    }
   },
   {
     "id": "GSEM3O9HYvg",
@@ -41,7 +52,18 @@
     "focus": "Brand and lead generation",
     "uploadDate": "2024-08-07",
     "duration": "PT1M18S",
-    "durationLabel": "1:18"
+    "durationLabel": "1:18",
+    "caseStudy": {
+      "order": 8,
+      "slug": "dan-burke",
+      "headline": "Dan Burke: £470,000 towards £700,000 to £800,000",
+      "starting": "Dan runs the business with his three cousins, all of whom were on the tools, and says none of them were businessmen.",
+      "changed": "They rebranded, made changes to the website and started collecting Google reviews, which Dan says has already brought in leads.",
+      "before": "£470,000 turnover last year",
+      "after": "Projected £700,000 to £800,000 this year (forecast at filming)",
+      "timeframe": "Six months into the programme at the time of filming.",
+      "quote": "So that's just two things that we've implemented and it's made a big difference already."
+    }
   },
   {
     "id": "1C2yT_tP-Aw",
@@ -52,7 +74,18 @@
     "focus": "Turnover and lead generation",
     "uploadDate": "2024-08-07",
     "duration": "PT2M58S",
-    "durationLabel": "2:58"
+    "durationLabel": "2:58",
+    "caseStudy": {
+      "order": 1,
+      "slug": "dave-darby",
+      "headline": "Dave Darby: £150,000 to £635,000 turnover",
+      "starting": "Dave says the business had been running for about ten years, four of them \"a complete uphill struggle\". Turnover in 2022 was £150,000.",
+      "changed": "Greg set a £500,000 target. Dave describes lead generation as the major catalyst, then a focus on building out systems to cope with fast growth.",
+      "before": "£150,000 turnover (2022)",
+      "after": "£635,000 turnover the following year, then \"just shy of a 1,000,000\" (forecast at filming)",
+      "timeframe": "About 12 months for the first step. The near-£1 million figure was a forecast at the time of filming.",
+      "quote": "We smashed that, did 635,000. In turnover, not profit."
+    }
   },
   {
     "id": "yXqEwu6FEog",
@@ -63,7 +96,18 @@
     "focus": "Turnover and support",
     "uploadDate": "2024-08-07",
     "duration": "PT1M3S",
-    "durationLabel": "1:03"
+    "durationLabel": "1:03",
+    "caseStudy": {
+      "order": 3,
+      "slug": "geoff-walker",
+      "headline": "Geoff Walker, Refuse Limited: turnover doubled two years running",
+      "starting": "Geoff runs Refuse Limited, a commercial interiors business. He says that most of what the programme covers did not exist in his business before.",
+      "changed": "He describes using the full programme, plus the community for problems he previously would not have known how to solve.",
+      "before": "Turnover before joining (figure not stated)",
+      "after": "Turnover doubled in each of two consecutive years",
+      "timeframe": "Two consecutive years.",
+      "quote": "if doubling my turnover over the last two consecutive years is anything to go by, then I think it's very much worth it."
+    }
   },
   {
     "id": "oktEjmz9B6s",
@@ -129,7 +173,18 @@
     "focus": "Systems and team growth",
     "uploadDate": "2024-04-30",
     "duration": "PT2M39S",
-    "durationLabel": "2:39"
+    "durationLabel": "2:39",
+    "caseStudy": {
+      "order": 4,
+      "slug": "mike-and-nick",
+      "headline": "Mike and Nick: about £35,000 to about £80,000 a month",
+      "starting": "Mike and Nick were turning over roughly £35,000 a month, with the two of them and a labourer, and little back-office structure.",
+      "changed": "They describe putting systems and processes in place, job tracking with the apps, growing the extensions side, opening a showroom and bringing in a designer.",
+      "before": "About £35,000 a month; Mike, Nick and a labourer",
+      "after": "About £80,000 a month; eight people around them plus subcontractors",
+      "timeframe": "Not stated.",
+      "quote": "Everyone needs a coach in life."
+    }
   },
   {
     "id": "tZxceh60Zc8",
@@ -152,7 +207,18 @@
     "focus": "Turnover and delegation",
     "uploadDate": "2024-08-07",
     "duration": "PT2M6S",
-    "durationLabel": "2:06"
+    "durationLabel": "2:06",
+    "caseStudy": {
+      "order": 5,
+      "slug": "richard",
+      "headline": "Richard: about £750,000 to about £1.1 million turnover",
+      "starting": "Richard says the business was \"becoming a bit stale\" and he was bogged down in day-to-day firefighting.",
+      "changed": "He describes more efficient systems, delegating his responsibilities and a full rebrand: website, marketing material, vehicles and staff uniforms.",
+      "before": "About £750,000 turnover",
+      "after": "About £1.1 million turnover, with the next goal set on gross and net profit",
+      "timeframe": "Not stated.",
+      "quote": "We found it absolutely invaluable for our business"
+    }
   },
   {
     "id": "HcS63FwTv_A",
@@ -196,7 +262,18 @@
     "focus": "Systems and turnover",
     "uploadDate": "2024-04-30",
     "duration": "PT2M19S",
-    "durationLabel": "2:19"
+    "durationLabel": "2:19",
+    "caseStudy": {
+      "order": 6,
+      "slug": "stephen-and-salina",
+      "headline": "Stephen and Salina: about £870,000 towards £1.4 million",
+      "starting": "Stephen and Salina say that coming out of lockdown they had very little in place on the operating-systems side.",
+      "changed": "They describe a big improvement in operating systems and tracking the growth of the business month on month.",
+      "before": "About £870,000 turnover when they started",
+      "after": "On track for about £1.4 million (forecast at filming)",
+      "timeframe": "Not stated.",
+      "quote": "It's a lot, it's a lot of work, but it's, it's good work."
+    }
   },
   {
     "id": "4w0XjmkgUx0",
@@ -229,7 +306,18 @@
     "focus": "Turnover and operations",
     "uploadDate": "2026-08-03",
     "duration": "PT2M28S",
-    "durationLabel": "2:28"
+    "durationLabel": "2:28",
+    "caseStudy": {
+      "order": 2,
+      "slug": "marek",
+      "headline": "Marek: turnover doubled in a year from just over £1 million",
+      "starting": "Marek says the business was turning over \"perhaps around just over a million\" before joining.",
+      "changed": "He points to operations, how the company presents itself on social media and other platforms, and rolling out AI across the company.",
+      "before": "Just over £1 million turnover",
+      "after": "Turnover doubled within a year. After a difficult year across construction, he expects the best year so far (forecast at filming).",
+      "timeframe": "About one year for the doubling.",
+      "quote": "Since we joined Greg and his team, effectively our turnover doubled in the space of a year."
+    }
   },
   {
     "id": "B5ZTJu97_Gs",
