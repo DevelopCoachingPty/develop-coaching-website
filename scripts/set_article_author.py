@@ -33,7 +33,8 @@ WWW = ROOT / "www"
 SITEMAP = WWW / "post-sitemap.xml"
 SITE = "https://develop-coaching.com"
 
-AUTHOR_ID = f"{SITE}/#/schema/person/greg-wilkes"
+# The one id the whole site uses for Greg (install_structured_data.py, publish_page.py).
+AUTHOR_ID = f"{SITE}/about-greg-wilkes/#person"
 AUTHOR_NAME = "Greg Wilkes"
 AUTHOR_URL = f"{SITE}/about-greg-wilkes/"
 ORGANISATION_ID = f"{SITE}/#organization"

@@ -40,6 +40,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import publish_page as pp  # noqa: E402
 from install_booking_tracking import install as install_booking_tracking
 from install_cookie_consent import install as install_cookie_consent  # noqa: E402
+from install_structured_data import install as install_structured_data  # noqa: E402
 from modernise_footer import modernise_footer  # noqa: E402
 from simplify_navigation import simplify_main_navigation  # noqa: E402
 
@@ -475,6 +476,9 @@ def build_page(payload: dict) -> str:
         f'<div class="dc-page">\n{content.strip()}\n</div>\n{footer}'
     )
     rendered = simplify_main_navigation(rendered)
+    # JSON-LD follows the finished page: Organization, Greg, and an FAQPage
+    # only for FAQs this page actually shows.
+    rendered = install_structured_data(rendered, url=url)
     # Consent gate last: it must end up as the first script in <head>.
     return install_cookie_consent(
         install_booking_tracking(modernise_footer(rendered, f"{slug}/index.html"))
