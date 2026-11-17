@@ -38,6 +38,7 @@ import urllib.parse
 from install_booking_tracking import install as install_booking_tracking
 from install_enquiry_attribution import install as install_enquiry_attribution
 from install_cookie_consent import install as install_cookie_consent
+from install_structured_data import install as install_structured_data
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WWW = os.path.join(ROOT, "www")
@@ -409,6 +410,9 @@ def build_page(payload: dict) -> str:
         print("publish_page: warning, hero image slot not found", file=sys.stderr)
 
     html = replace_post_content(html, payload["body_html"])
+    # JSON-LD follows the finished body: Organization, Greg, and an FAQPage
+    # only for FAQs this page actually shows.
+    html = install_structured_data(html, url=url)
     # Consent gate last: it must end up as the first script in <head>.
     return install_cookie_consent(install_enquiry_attribution(install_booking_tracking(html)))
 
