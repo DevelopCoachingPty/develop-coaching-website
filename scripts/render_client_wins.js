@@ -8,8 +8,9 @@ const defaultPagePath = path.join(root, 'www/client-wins/index.html');
 const defaultDataPath = path.join(root, 'content/client-wins.json');
 const defaultCssPath = path.join(root, 'content/_client-wins.css');
 const styleId = 'dc-client-wins-redesign';
-const pageTitle = 'Construction Business Coaching Results | Develop Coaching';
-const pageDescription = 'Watch builders and construction business owners share how they improved turnover, marketing, systems, teams, profit and control of their time.';
+const pageTitle = "Develop Coaching Case Studies and Client Reviews | UK Builders' Results";
+const pageDescription = 'Develop Coaching case studies and reviews from UK construction business owners: client-reported before-and-after turnover, team and systems results, with the video for each.';
+const resultsDisclaimer = "Members' own words. Self-reported, not independently audited. Individual results vary. Forecasts are marked.";
 const featuredClientId = 'D-M9a1i4PQU';
 const clientWinOrder = [
   'D-M9a1i4PQU',
@@ -86,6 +87,81 @@ function cardMarkup(item) {
         </article>`;
 }
 
+function caseStudyItems(items) {
+  return items.filter((item) => item.caseStudy).sort((a, b) => a.caseStudy.order - b.caseStudy.order);
+}
+
+function caseStudyMarkup(item) {
+  const c = item.caseStudy;
+  const watchUrl = `https://www.youtube.com/watch?v=${item.id}`;
+  const quote = c.quote
+    ? `
+          <blockquote class="cw-case__quote">
+            <p>&ldquo;${escapeHtml(c.quote)}&rdquo;</p>
+            <cite>${escapeHtml(item.name)}, in the video</cite>
+          </blockquote>`
+    : '';
+  return `
+        <article class="cw-case" id="case-study-${c.slug}" aria-labelledby="case-study-${c.slug}-title">
+          <p class="cw-docket__focus">Case study ${c.order}</p>
+          <h3 id="case-study-${c.slug}-title">${escapeHtml(c.headline)} <span class="cw-case__tag">(client-reported)</span></h3>
+          <p class="cw-docket__context">${escapeHtml(item.context)}</p>
+          <dl class="cw-case__facts">
+            <div><dt>Starting point</dt><dd>${escapeHtml(c.starting)}</dd></div>
+            <div><dt>What changed</dt><dd>${escapeHtml(c.changed)}</dd></div>
+            <div><dt>Before</dt><dd>${escapeHtml(c.before)}</dd></div>
+            <div><dt>After</dt><dd>${escapeHtml(c.after)}</dd></div>
+            <div><dt>Timeframe</dt><dd>${escapeHtml(c.timeframe)}</dd></div>
+          </dl>${quote}
+          <div class="cw-docket__source">
+            <a href="${watchUrl}" target="_blank" rel="noopener">Watch ${escapeHtml(item.name)}'s video (source)</a>
+          </div>
+        </article>`;
+}
+
+function resultsAtAGlanceMarkup() {
+  const rows = [
+    ['4x turnover', 'Dave Darby, £150,000 to £635,000 in a year, later heading towards £1 million (forecast)', '#case-study-dave-darby'],
+    ['Doubled in a year', 'Marek, from just over £1 million turnover', '#case-study-marek'],
+    ['Doubled two years running', 'Geoff Walker, Refuse Limited', '#case-study-geoff-walker'],
+    ['About £35k to about £80k a month', 'Mike and Nick, kitchens and extensions', '#case-study-mike-and-nick'],
+    ['About £750k to about £1.1m', 'Richard', '#case-study-richard'],
+    ['£1.5m at roughly 2% profit', 'Will, bricklaying contractor, describing where he started before adding office support and job-level tracking', 'https://www.youtube.com/watch?v=Kfx-SeLmNig'],
+    ['£100k–£150k jobs to a £250k minimum', 'Lukas, construction and building contractor', 'https://www.youtube.com/watch?v=r572G_WcimQ']
+  ];
+  const list = rows.map(([figure, detail, href]) => {
+    const external = href.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
+    return `
+          <li><a href="${href}"${external}><strong>${escapeHtml(figure)}</strong><span>${escapeHtml(detail)}</span></a></li>`;
+  }).join('');
+  return `
+  <section class="cw-glance" aria-labelledby="results-at-a-glance-title">
+    <div class="cw-wrap">
+      <p class="cw-kicker">Results at a glance</p>
+      <h2 id="results-at-a-glance-title">25 UK construction business owners share their results on video.</h2>
+      <p class="cw-glance__lead">Every figure below is client-reported, in the owner's own words, with a link to the source.</p>
+      <ul class="cw-glance__list">${list}
+      </ul>
+      <p class="cw-glance__note">${escapeHtml(resultsDisclaimer)}</p>
+    </div>
+  </section>`;
+}
+
+function caseStudiesSectionMarkup(items) {
+  const cases = caseStudyItems(items).map(caseStudyMarkup).join('');
+  return `
+  <section class="cw-cases" id="case-studies" aria-labelledby="case-studies-title">
+    <div class="cw-wrap">
+      <p class="cw-kicker">Develop Coaching case studies</p>
+      <h2 id="case-studies-title">Case studies: before and after</h2>
+      <p class="cw-cases__lead">Eight owners, in their own words. Each case study is taken from the client's published video. Figures are client-reported and have not been independently audited. Quotation marks are used only for the client's exact words.</p>
+      <div class="cw-case-grid">${cases}
+      </div>
+      <p class="cw-glance__note">${escapeHtml(resultsDisclaimer)}</p>
+    </div>
+  </section>`;
+}
+
 function pageMarkup(items) {
   const firstCards = items.slice(0, 10).map(cardMarkup).join('');
   const remainingCards = items.slice(10).map(cardMarkup).join('');
@@ -95,11 +171,12 @@ function pageMarkup(items) {
   <section class="cw-hero" aria-labelledby="client-wins-title">
     <div class="cw-wrap cw-hero__grid">
       <div class="cw-hero__copy">
-        <p class="cw-kicker">Real construction business stories</p>
-        <h1 id="client-wins-title">See how builders are winning better work, building stronger teams and taking back control.</h1>
-        <p class="cw-hero__lead">Hear directly from construction business owners who changed how they approached leads, cash flow, pricing, systems, people and their own time.</p>
+        <p class="cw-kicker">Develop Coaching case studies and reviews</p>
+        <h1 id="client-wins-title">Develop Coaching case studies and reviews: real results from UK builders</h1>
+        <p class="cw-hero__lead">See how builders are winning better work, building stronger teams and taking back control. Hear directly from construction business owners who changed how they approached leads, cash flow, pricing, systems, people and their own time.</p>
         <div class="cw-hero__actions">
-          <a class="cw-button" href="#client-stories">Find a story like yours</a>
+          <a class="cw-button" href="#case-studies">Read the case studies</a>
+          <a class="cw-hero__link" href="#client-stories">Watch all client reviews <span aria-hidden="true">→</span></a>
           <a class="cw-hero__link" href="/courses/mastermind-course/">See how the Mastermind works <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -117,10 +194,10 @@ function pageMarkup(items) {
       </aside>
     </div>
   </section>
-
+${resultsAtAGlanceMarkup()}${caseStudiesSectionMarkup(items)}
   <section class="cw-intro" aria-labelledby="client-stories-heading">
     <div class="cw-wrap cw-intro__inner">
-      <p class="cw-kicker">Where do you recognise yourself?</p>
+      <p class="cw-kicker">All client reviews (video)</p>
       <h2 id="client-stories-heading">Find the story closest to where your business is now.</h2>
       <p>Maybe you are still carrying too much yourself. Perhaps the leads are inconsistent, the margins are too tight, the team needs more structure or the business has grown without giving you more freedom. These owners started with familiar problems and explain what they changed next.</p>
     </div>
@@ -145,7 +222,7 @@ function pageMarkup(items) {
     </div>
 
     <div class="cw-wrap cw-results-note">
-      <p>Every construction business is different. These clients describe their own experience, and individual results will depend on your starting point, market, decisions and implementation.</p>
+      <p>Every construction business is different. These clients describe their own experience, and individual results will depend on your starting point, market, decisions and implementation. ${escapeHtml(resultsDisclaimer)}</p>
     </div>
   </section>
 
@@ -207,6 +284,43 @@ function videoSchema(item) {
   };
 }
 
+function caseStudySchema(items) {
+  const cases = caseStudyItems(items);
+  const list = {
+    '@type': 'ItemList',
+    '@id': 'https://develop-coaching.com/client-wins/#case-studies',
+    name: 'Develop Coaching case studies',
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: cases.length,
+    itemListElement: cases.map((item) => ({
+      '@type': 'ListItem',
+      position: item.caseStudy.order,
+      url: `https://develop-coaching.com/client-wins/#case-study-${item.caseStudy.slug}`,
+      item: {
+        '@type': 'Article',
+        '@id': `https://develop-coaching.com/client-wins/#case-study-${item.caseStudy.slug}`,
+        headline: `${item.caseStudy.headline} (client-reported)`,
+        description: `Before: ${item.caseStudy.before}. After: ${item.caseStudy.after}. Timeframe: ${item.caseStudy.timeframe}`,
+        about: {'@id': 'https://develop-coaching.com/#organization'},
+        video: {'@id': `https://develop-coaching.com/client-wins/#video-${item.id}`},
+        isPartOf: {'@id': 'https://develop-coaching.com/client-wins/#webpage'},
+        publisher: {'@id': 'https://develop-coaching.com/#organization'},
+        inLanguage: 'en-GB'
+      }
+    }))
+  };
+  const reviews = cases.filter((item) => item.caseStudy.quote).map((item) => ({
+    '@type': 'Review',
+    '@id': `https://develop-coaching.com/client-wins/#review-${item.caseStudy.slug}`,
+    itemReviewed: {'@id': 'https://develop-coaching.com/#organization'},
+    author: {'@type': 'Person', name: item.name},
+    reviewBody: item.caseStudy.quote,
+    associatedMedia: {'@id': `https://develop-coaching.com/client-wins/#video-${item.id}`},
+    inLanguage: 'en-GB'
+  }));
+  return [list, ...reviews];
+}
+
 function replaceMeta(html, attribute, key, value) {
   const pattern = new RegExp(`<meta\\s+${attribute}=["']${key}["'][^>]*>`, 'i');
   const replacement = `<meta ${attribute}="${key}" content="${escapeHtml(value)}" />`;
@@ -221,7 +335,7 @@ function replaceSchema(html, items) {
   const schema = JSON.parse(match[1]);
   const graph = (schema['@graph'] || []).filter((item) => {
     const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
-    if (types.includes('VideoObject') || types.includes('Article')) return false;
+    if (types.includes('VideoObject') || types.includes('Article') || types.includes('ItemList') || types.includes('Review')) return false;
     return !(types.includes('Person') && String(item['@id'] || '').includes('/author/dipti/'));
   });
   for (const item of graph) {
@@ -232,10 +346,10 @@ function replaceSchema(html, items) {
     }
     if (types.includes('BreadcrumbList')) {
       const last = item.itemListElement && item.itemListElement.at(-1);
-      if (last && last.item) last.item.name = 'Client Results';
+      if (last && last.item) last.item.name = 'Case Studies and Reviews';
     }
   }
-  schema['@graph'] = graph.concat(items.map(videoSchema));
+  schema['@graph'] = graph.concat(items.map(videoSchema), caseStudySchema(items));
   const safeSchema = JSON.stringify(schema).replace(/</g, '\\u003c');
   const replacement = `<script type="application/ld+json" class="rank-math-schema-pro">${safeSchema}</script>`;
   return html.replace(pattern, replacement);
@@ -252,6 +366,16 @@ function renderClientWins(options = {}) {
   if (sourceItems.length !== 25) throw new Error(`Expected 25 client stories, found ${sourceItems.length}`);
   const uniqueIds = new Set(sourceItems.map((item) => item.id));
   if (uniqueIds.size !== sourceItems.length) throw new Error('Client story video IDs must be unique');
+  const caseStudies = sourceItems.filter((item) => item.caseStudy);
+  if (caseStudies.length !== 8) throw new Error(`Expected 8 case studies, found ${caseStudies.length}`);
+  for (const item of caseStudies) {
+    for (const field of ['order', 'slug', 'headline', 'starting', 'changed', 'before', 'after', 'timeframe']) {
+      const value = item.caseStudy[field];
+      if (value === undefined || value === null || String(value).trim() === '') {
+        throw new Error(`Case study for ${item.name} is missing ${field}`);
+      }
+    }
+  }
   if (clientWinOrder.length !== sourceItems.length || clientWinOrder.some((id) => !uniqueIds.has(id))) {
     throw new Error('Client story display order must contain every approved video ID exactly once');
   }
@@ -287,4 +411,4 @@ if (require.main === module) {
   console.log('Rendered evidence-led Client Wins page.');
 }
 
-module.exports = {renderClientWins, videoSchema};
+module.exports = {renderClientWins, videoSchema, caseStudySchema};
