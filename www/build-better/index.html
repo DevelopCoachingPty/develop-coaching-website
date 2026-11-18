@@ -244,15 +244,6 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   .step-nav .btn { min-width: 170px; }
 
   /* ---------- 3. Proof ---------- */
-  .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 2.2rem; }
-  .filters button {
-    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
-    padding: 9px 20px; border-radius: 99px; cursor: pointer;
-    border: 2px solid var(--border); background: var(--surface); color: var(--ink);
-    transition: all 0.15s;
-  }
-  .filters button:hover { border-color: var(--gold); }
-  .filters button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
   .story-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
   @media (min-width: 680px)  { .story-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1000px) { .story-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -399,15 +390,64 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   .apply-sub { text-align: center; color: var(--muted); margin: -0.8rem 0 1.4rem; }
   .progress i { width: 20%; }
   #consentLine { text-align: center; margin-top: 14px; }
-  .results-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-  @media (min-width: 900px) { .results-grid { grid-template-columns: repeat(3, 1fr); } }
-  .result-card {
-    background: var(--surface); border: 1px solid var(--border); border-top: 4px solid var(--gold);
-    border-radius: var(--radius); padding: 28px 28px 24px; box-shadow: var(--shadow-sm);
+  .section-head .lead { color: #3d3d3f; }
+  .how-card li:last-child { padding-bottom: 0; }
+  .how-facts { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 24px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+  @media (min-width: 760px) { .how-facts { grid-template-columns: repeat(3, 1fr); } }
+  .how-facts div { background: var(--ink); color: #e8e8e8; padding: 22px 26px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.93rem; line-height: 1.5; }
+  .how-facts div:first-child { border-top: 0; }
+  @media (min-width: 760px) {
+    .how-facts div { border-top: 0; border-left: 1px solid rgba(255,255,255,0.12); }
+    .how-facts div:first-child { border-left: 0; }
   }
-  .result-card h3 { font-size: 1.25rem; line-height: 1.25; margin-bottom: 0.7rem; }
-  .result-card .who { font-weight: 700; font-size: 0.9rem; color: var(--gold-dark); margin-bottom: 0.7rem; }
-  .result-card p { color: #3d3d3f; font-size: 0.97rem; margin: 0; }
+  .how-facts strong { display: block; font-family: 'Archivo', sans-serif; font-size: 1.12rem; color: #fff; margin-bottom: 4px; }
+  .value {
+    margin-top: 40px; background: var(--surface); border: 1px solid var(--border);
+    border-top: 4px solid var(--gold); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden;
+  }
+  .value-head { padding: 32px 30px 8px; }
+  .value-head .tag {
+    font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 0.76rem;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: 0.6rem;
+  }
+  .value-head h3 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); line-height: 1.2; }
+  .value-head p { color: #3d3d3f; font-size: 0.97rem; margin: 0; }
+  .tool-list { list-style: none; padding: 0 30px; }
+  .tool-list li { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .tool-list li:last-child { border-bottom: 0; }
+  .tool-list .tool { flex: 1; min-width: 0; }
+  .tool-list .tool strong { display: block; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1.04rem; }
+  .tool-list .tool span { display: block; color: #3d3d3f; font-size: 0.92rem; line-height: 1.5; }
+  .tool-list .price { flex: none; text-align: right; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
+  .tool-list .price small { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.76rem; color: var(--muted); }
+  .tool-list .price.incl { font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); padding-top: 4px; }
+  .value-total { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .value-total { grid-template-columns: 1fr 1fr; } }
+  .value-total div { padding: 26px 30px; }
+  .value-total small { display: block; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.76rem; margin-bottom: 4px; }
+  .value-total strong { display: block; font-family: 'Archivo', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 4vw, 1.9rem); line-height: 1.15; margin-bottom: 6px; }
+  .value-total span { display: block; font-size: 0.93rem; line-height: 1.5; }
+  .value-total .apart { background: var(--ink); color: #e8e8e8; }
+  .value-total .apart small { color: var(--gold); }
+  .value-total .apart strong { color: #fff; }
+  .value-total .member { background: var(--gold); color: var(--ink); }
+  .value-note { color: var(--muted); font-size: 0.82rem; padding: 14px 30px 18px; margin: 0; }
+  .final-steps { list-style: none; max-width: 520px; margin: 0 auto 1rem; text-align: left; counter-reset: fs; }
+  .final-steps li { counter-increment: fs; position: relative; padding: 10px 0 10px 44px; color: #d6d6d6; font-size: 1rem; border-top: 1px solid #2a2a2c; }
+  .final-steps li:first-child { border-top: 0; }
+  .final-steps li::before {
+    content: counter(fs); position: absolute; left: 0; top: 10px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--gold); color: var(--ink); font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 640px) {
+    .value-head { padding: 26px 20px 4px; }
+    .tool-list { padding: 0 20px; }
+    .tool-list li { gap: 12px; }
+    .value-total div { padding: 22px 20px; }
+    .value-note { padding: 12px 20px 16px; }
+    .how-card { padding: 26px 22px; }
+  }
   .story-body .who { margin-bottom: 4px; }
   .mid-cta { text-align: center; margin-top: 40px; }
   .mid-cta small { display: block; margin-top: 12px; color: var(--muted); font-size: 0.88rem; }
@@ -427,7 +467,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     .watch-bar { font-size: 0.68rem; letter-spacing: 0.5px; }
   }
 </style>
-<script type="application/ld+json" data-dc-schema>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://develop-coaching.com/#organization","name":"Develop Coaching","legalName":"Develop Coaching Pty Ltd","url":"https://develop-coaching.com/","email":"hello@develop-coaching.com","logo":{"@type":"ImageObject","@id":"https://develop-coaching.com/#logo","url":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","contentUrl":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","caption":"Develop Coaching","width":"259","height":"82","inLanguage":"en-GB"},"image":{"@id":"https://develop-coaching.com/#logo"},"founder":{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/"},"sameAs":["https://www.facebook.com/developcoach/","https://www.linkedin.com/company/developcoaching/","https://www.instagram.com/greg.wilkes.coach","https://www.youtube.com/@Greg.wilkes"]},{"@type":"FAQPage","@id":"https://develop-coaching.com/build-better/#faq","url":"https://develop-coaching.com/build-better/","mainEntity":[{"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Owners of building and trade companies turning over about £750k to £5m. The work's coming in, but the profit doesn't match the effort, and too much still goes through you. You're hungry to improve and open to honest feedback."}},{"@type":"Question","name":"Who isn't it for?","acceptedAnswer":{"@type":"Answer","text":"One-man bands, start-ups with no trading history, property developers, companies that sell services to builders, and anyone looking for a quick fix."}},{"@type":"Question","name":"What do I actually get?","acceptedAnswer":{"@type":"Answer","text":"A 12-month plan built on your numbers, broken down into what to do this week. A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one. A live group coaching call every week. 24/7 messaging straight to the coaches. A members' WhatsApp group. Three live events a year, in person. The software: Architect Attractor, CostTracker Pro, Momentum Builder, FlowBuild and Jarvis."}},{"@type":"Question","name":"What happens after I apply?","acceptedAnswer":{"@type":"Answer","text":"If it looks right, you book a Scale Session. It's a 15-minute call, and we both get a clear picture of which pillar is holding you back. Then there's a second call, where we go deep on how to fix it. You either take that away and work on it yourself, or you ask what it looks like to work together. If it isn't right for you yet, we send you our free training."}},{"@type":"Question","name":"How much is it?","acceptedAnswer":{"@type":"Answer","text":"£15,000 a year, or £1,500 a month. That covers everything: the coaching, the one-to-ones, the messaging, the live events and all the software. There's nothing extra to buy later."}},{"@type":"Question","name":"How much time does it take?","acceptedAnswer":{"@type":"Answer","text":"The first month's the busiest, with a one-to-one every week. After that it's an hour to an hour and a half a week, working on the business. Monday morning or Friday afternoon, whatever suits you."}},{"@type":"Question","name":"Is it really twelve months?","acceptedAnswer":{"@type":"Answer","text":"Yes. Twelve months gives your plan time to work, and the changes time to bed in. If you're unsure, there's a paid 30-day love it or leave it. You test out the programme first, then you make an informed decision. It's like taking on a new subbie. You try them on one job, you pay them for it, and you watch. We'll go through how the 30 days work, and what they cost, on the call."}},{"@type":"Question","name":"What support do I get between calls?","acceptedAnswer":{"@type":"Answer","text":"You're never waiting for the next call to get an answer. 24/7 messaging to the coaches. Day or night, message us and you'll get a reply. One-to-ones whenever you need them. Stuck on a price, a hire or a difficult client? Book one. The members' WhatsApp group. Builders who've been exactly where you are, sharing what's working for them."}},{"@type":"Question","name":"I've had a coach before and it didn't work.","acceptedAnswer":{"@type":"Answer","text":"So had Sam and Nathan. Their last coach, in their words, \"promised the earth and didn't really deliver\". Most coaching fails for two reasons. It isn't built for construction, and nobody holds you to it. All we do is construction, with quantity surveying and finance on the team. Your plan is built on your numbers, there's a live coaching call every week to keep it moving, and a coach is a message away when you're stuck."}},{"@type":"Question","name":"I'm not good with software.","acceptedAnswer":{"@type":"Answer","text":"You don't need to be. We'll help you set up all your tools, so you're comfortable with them before you rely on them. You don't move the whole firm across in a week. Start with one job. If you get stuck, message the coaches and we'll sort it."}},{"@type":"Question","name":"Do you promise results?","acceptedAnswer":{"@type":"Answer","text":"We won't promise you a number. Anyone who does is guessing, because the results come from the work you put in. Here's what we do promise. A plan built on your numbers. A coach in your corner every week, holding you to it. Help whenever you're stuck. And a straight answer, even when it isn't the one you want to hear. When members do the work, the numbers move. Richard J went from about £750,000 to about £1.1m in turnover. Mike and Nick went from about £35,000 to about £80,000 a month. Will moved a contract worth over £1m to fortnightly payments with one email. Still unsure? The paid 30-day love it or leave it lets you see it working on your own business before you commit to the year. Members' own words. Self-reported. Individual results vary."}}]}]}</script>
+<script type="application/ld+json" data-dc-schema>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://develop-coaching.com/#organization","name":"Develop Coaching","legalName":"Develop Coaching Pty Ltd","url":"https://develop-coaching.com/","email":"hello@develop-coaching.com","logo":{"@type":"ImageObject","@id":"https://develop-coaching.com/#logo","url":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","contentUrl":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","caption":"Develop Coaching","width":"259","height":"82","inLanguage":"en-GB"},"image":{"@id":"https://develop-coaching.com/#logo"},"founder":{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/"},"sameAs":["https://www.facebook.com/developcoach/","https://www.linkedin.com/company/developcoaching/","https://www.instagram.com/greg.wilkes.coach","https://www.youtube.com/@Greg.wilkes"]},{"@type":"FAQPage","@id":"https://develop-coaching.com/build-better/#faq","url":"https://develop-coaching.com/build-better/","mainEntity":[{"@type":"Question","name":"Is this for a business like mine?","acceptedAnswer":{"@type":"Answer","text":"If you own a building or trade company turning over about £750k to £5m, yes. Members on this page include a design and build firm, a kitchens and extensions company, a bricklaying contractor and electrical contractors. It fits when the work's coming in, but the profit doesn't match the effort, and too much still goes through you. It isn't for one-man bands, start-ups with no trading history, property developers, companies that sell services to builders, or anyone looking for a quick fix."}},{"@type":"Question","name":"How much is it?","acceptedAnswer":{"@type":"Answer","text":"£15,000 a year, or £1,500 a month. That covers everything: your plan, the coaching, the one-to-ones, the 24/7 messaging, three live events a year and all five software tools. There's nothing extra to buy from us later. To put that in context, four of those tools have a UK list price. Bought on their own they come to £888 a month, which is £10,656 a year."}},{"@type":"Question","name":"What do I actually get?","acceptedAnswer":{"@type":"Answer","text":"A score on each of the five pillars, so you know where to start. A 12-month plan built on your numbers, broken down into weekly actions. A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one. A live group coaching call every week. 24/7 messaging straight to the coaches. The members' WhatsApp group. Three live events a year, in person. The software: Architect Attractor, CostTracker Pro, FlowBuild, Jarvis and Momentum Builder."}},{"@type":"Question","name":"I'm flat out. Where do I find the time?","acceptedAnswer":{"@type":"Answer","text":"Being flat out is the problem we're here to fix. A quiet month to sort the business out never comes. The first month's the busiest, with a one-to-one every week. After that, plan on an hour to an hour and a half a week, working on the business. Monday morning or Friday afternoon, whatever suits you. Your plan is broken down into weekly actions, so that time goes on the next thing that matters, not on working out where to start."}},{"@type":"Question","name":"What happens after I apply?","acceptedAnswer":{"@type":"Answer","text":"If it looks right, you book a Scale Session. It's a free 15-minute call, and we both get a clear picture of which pillar is holding you back. Then there's a second call, where we go deep on how to fix it. You either take that away and work on it yourself, or you ask what it looks like to work together. If it isn't right for you yet, we send you our free training."}},{"@type":"Question","name":"Who will I be working with?","acceptedAnswer":{"@type":"Answer","text":"A team that only works with construction companies. That's all we do. There's quantity surveying and finance on the team. So when you ask about pricing a job, your margin or your cash, the answer comes from someone who knows the trade. And there's me, Greg. I've been in construction for 30 years. I was on the tools at twenty, then ran companies turning over millions. One failed, and I rebuilt knowing my numbers every month."}},{"@type":"Question","name":"I've already got an accountant. How is this different?","acceptedAnswer":{"@type":"Answer","text":"Keep your accountant. Year-end accounts tell you how last year went, long after those jobs have finished. We work on this week. Which jobs to go after. What each job is costing against what you quoted. How and when you get paid. Who does what, so it doesn't all go through you. It isn't a consultant's report either. You get the plan, the software to run it, and a coach holding you to it every week."}},{"@type":"Question","name":"Is it really twelve months?","acceptedAnswer":{"@type":"Answer","text":"Yes. Twelve months gives your plan time to work, and the changes time to bed in. If you're unsure, there's a paid 30-day love it or leave it. You test out the programme first, then you make an informed decision. It's like taking on a new subbie. You try them on one job, you pay them for it, and you watch. We'll go through how the 30 days work, and what they cost, on the call."}},{"@type":"Question","name":"What support do I get between calls?","acceptedAnswer":{"@type":"Answer","text":"You're never waiting for the next call to get an answer. 24/7 messaging to the coaches. Message us any time, day or night. One-to-ones whenever you need them. Stuck on a price, a hire or a difficult client? Book one. The members' WhatsApp group. Other builders and trade contractors, sharing what's working for them."}},{"@type":"Question","name":"I've had a coach before and it didn't work.","acceptedAnswer":{"@type":"Answer","text":"So had Sam and Nathan. Their last coach, in their words, \"promised the earth and didn't really deliver\". Here's what's different. All we do is construction, with quantity surveying and finance on the team. Your plan is built on your numbers, not a template. There's a live coaching call every week to keep it moving, and a coach is a message away when you're stuck. And you don't have to take our word for it. The paid 30-day love it or leave it lets you test the programme before you commit to the year."}},{"@type":"Question","name":"I'm not good with software.","acceptedAnswer":{"@type":"Answer","text":"You don't need to be. We'll help you set up all your tools so you're comfortable with them. You don't move the whole company across in a week. Start with one tool, on one job. If you get stuck, message the coaches and we'll sort it."}},{"@type":"Question","name":"Do you promise results?","acceptedAnswer":{"@type":"Answer","text":"We won't promise you a number. Anyone who does is guessing, because the result depends on the work you put in. Here's what we do promise. A plan built on your numbers. A coach holding you to it every week. Help whenever you're stuck. And a straight answer, even when it isn't the one you want to hear. Here's what members on this page report: Richard J: turnover up from about £750,000 to about £1.1m. Mike and Nick: monthly turnover up from about £35,000 to about £80,000. Will: one email moved a contract worth over £1m from monthly payments to fortnightly. James and Kate: \"a profitable year for the first time in what feels like a very long time\". Still unsure? The paid 30-day love it or leave it lets you test the programme on your own business before you commit to the year. Members' own words. Self-reported. Individual results vary."}}]}]}</script>
 </head>
 <body>
 
@@ -445,7 +485,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     <!-- Copy: vsl-page-copy-v4 (18 Nov 2026), recommended headline. Draft for Greg's review. -->
     <p class="callout">For UK builders turning over £750k to £5m</p>
     <h1>How UK builders make proper profit, win better jobs and get their evenings back, without taking on more work</h1>
-    <p class="subhead">This video shows where a full diary hides the cracks, and how other builders have fixed them.</p>
+    <p class="subhead">A full diary hides the cracks. This video shows where they are, and how other builders have fixed them.</p>
     <div class="cred-strip">
       <span>300+ builders scaled</span>
       <span>Rated 5.0 on Google</span>
@@ -539,64 +579,88 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   </div>
 </section>
 
-<!-- ================= 3. THREE RESULTS ================= -->
-<section id="results">
-  <div class="container">
-    <div class="section-head">
-      <h2>What changed for the three builders in the video</h2>
-    </div>
-    <div class="results-grid">
-      <div class="result-card reveal">
-        <h3>One email. Paid every fortnight, not every month.</h3>
-        <div class="who">Will, bricklaying contractor</div>
-        <p>He'd turned over £1.5m at about 2% profit. Then one email moved a contract worth over £1m from monthly payments to fortnightly.</p>
-      </div>
-      <div class="result-card reveal">
-        <h3>"The business is materially doing better financially."</h3>
-        <div class="who">Robert McGill, construction business owner</div>
-        <p>He was working long hours and weekends. Now he has a strategy for each part of the business.</p>
-      </div>
-      <div class="result-card reveal">
-        <h3>"My threshold was 250,000. No less than that."</h3>
-        <div class="who">Lukas, building contractor</div>
-        <p>He set a £250,000 minimum job size and went after bigger projects. In his words, "eventually they came".</p>
-      </div>
-    </div>
-    <p class="proof-note">Members' own words. Self-reported. Individual results vary.</p>
-  </div>
-</section>
-
-<!-- ================= 4. HOW IT WORKS ================= -->
+<!-- ================= 3. HOW IT WORKS ================= -->
 <section class="alt" id="how">
   <div class="container">
     <div class="section-head">
-      <h2>How it works</h2>
-      <p>We fix the business one part at a time. Five pillars: Plan, Attract, Convert, Deliver and Scale. We score you on each one, strong, average or weak. Then we start with the one that's costing you most.</p>
+      <h2>How it works, and what you get</h2>
+      <p class="lead">We fix the business one part at a time. No big relaunch. One part, then the next.</p>
     </div>
     <div class="how-grid">
       <div class="how-card reveal">
         <span class="tag">01</span>
-        <h3>Your plan</h3>
-        <p>Built around your business and your numbers. A 12-month plan, broken down into what to do this week.</p>
+        <h3>We score your business</h3>
+        <p>Five pillars: Plan, Attract, Convert, Deliver and Scale. You get a score on each one: strong, average or weak.</p>
+        <p>Then we start with the one that's costing you most.</p>
       </div>
       <div class="how-card reveal">
         <span class="tag">02</span>
-        <h3>Your coaching</h3>
-        <p>A one-to-one with a coach every week in your first month. A live group coaching call every week. One-to-ones when you're stuck. All we do is construction.</p>
+        <h3>You get a 12-month plan</h3>
+        <p>Built on your business and your numbers, not a template.</p>
+        <p>Then it's broken down into weekly actions, so you always know what to do this week.</p>
       </div>
       <div class="how-card reveal">
         <span class="tag">03</span>
-        <h3>Your software, included</h3>
+        <h3>A coach keeps you on it</h3>
         <ul>
-          <li><strong>Architect Attractor</strong> to win the work.</li>
-          <li><strong>CostTracker Pro</strong> to track every job.</li>
-          <li><strong>Momentum Builder</strong> to keep the plan moving.</li>
-          <li><strong>FlowBuild</strong> to chase every enquiry.</li>
-          <li><strong>Jarvis</strong>, an AI assistant for your replies, quotes and letters.</li>
+          <li><strong>A one-to-one every week</strong> in your first month.</li>
+          <li><strong>A live group coaching call</strong> every week.</li>
+          <li><strong>One-to-ones whenever you need them</strong> after that.</li>
+          <li><strong>24/7 messaging</strong> straight to the coaches.</li>
+          <li><strong>The members' WhatsApp group.</strong></li>
+          <li><strong>Three live events a year</strong>, in person.</li>
         </ul>
       </div>
     </div>
-    <p class="events-line">Plus three live events a year, in person, and a WhatsApp group with the other members. After the first month it takes an hour to an hour and a half a week.</p>
+    <div class="how-facts reveal">
+      <div><strong>All we do is construction</strong>No other industries. Builders and trade contractors only.</div>
+      <div><strong>Quantity surveying and finance on the team</strong>So questions about pricing, margin and cash get a proper answer.</div>
+      <div><strong>About 1 to 1.5 hours a week</strong>That's what it takes after the first month, working on the business.</div>
+    </div>
+
+    <div class="value reveal">
+      <div class="value-head">
+        <span class="tag">Your software, included</span>
+        <h3>Five tools come with your membership. Here's what they cost on their own.</h3>
+        <p>We help you set each one up, so you're comfortable with it.</p>
+      </div>
+      <ul class="tool-list">
+        <li>
+          <div class="tool"><strong>Architect Attractor</strong><span>New planning applications in your area, filtered to the jobs you want, with the introduction ready to send.</span></div>
+          <div class="price">£147<small>a month</small></div>
+        </li>
+        <li>
+          <div class="tool"><strong>CostTracker Pro</strong><span>Every job in one place. See committed costs against what you quoted.</span></div>
+          <div class="price">£247<small>a month</small></div>
+        </li>
+        <li>
+          <div class="tool"><strong>FlowBuild</strong><span>Every enquiry captured and followed up automatically.</span></div>
+          <div class="price">£197<small>a month</small></div>
+        </li>
+        <li>
+          <div class="tool"><strong>Jarvis</strong><span>An AI assistant for your enquiry replies, quotes, client letters, job adverts and procedures.</span></div>
+          <div class="price">£297<small>a month</small></div>
+        </li>
+        <li>
+          <div class="tool"><strong>Momentum Builder</strong><span>Your 12-month plan turned into this week's priorities, with names against them.</span></div>
+          <div class="price incl">Members only</div>
+        </li>
+      </ul>
+      <div class="value-total">
+        <div class="apart">
+          <small>Bought on their own</small>
+          <strong>£888 a month</strong>
+          <span>That's £10,656 a year for the four priced tools. Momentum Builder isn't in that total.</span>
+        </div>
+        <div class="member">
+          <small>As a member</small>
+          <strong>All five included</strong>
+          <span>Membership is £15,000 a year, or £1,500 a month. That covers the software, the coaching and the three live events.</span>
+        </div>
+      </div>
+      <p class="value-note">UK list prices per month from our software page, November 2026. Architect Attractor is shown at its Lite price.</p>
+    </div>
+
     <div class="mid-cta">
       <a href="#apply" class="btn js-apply">See if I qualify</a>
       <small>5 quick questions. Free 15-minute call.</small>
@@ -604,7 +668,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   </div>
 </section>
 
-<!-- ================= 5. TWELVE PROOF TILES ================= -->
+<!-- ================= 4. TWELVE PROOF TILES ================= -->
 <!-- Video IDs and thumbnails are the busy-trap client-wins tiles. Clip starts:
      James and Kate 0:50 (as busy-trap), Rob 0:40 to 0:46, Lukas 2:19 to 2:26
      (v4 clip notes). The other v3 clip timings were not in the v4 file, so
@@ -613,16 +677,11 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   <div class="container">
     <div class="section-head">
       <h2>Real builders. Real results.</h2>
-    </div>
-    <div class="filters" role="group" aria-label="Filter client stories">
-      <button type="button" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" data-filter="money" aria-pressed="false">The money</button>
-      <button type="button" data-filter="time" aria-pressed="false">The time</button>
-      <button type="button" data-filter="work" aria-pressed="false">The work</button>
+      <p>Twelve members, in their own words. Tap a tile to watch.</p>
     </div>
 
     <div class="story-grid">
-      <article class="story reveal" data-tags="money">
+      <article class="story reveal">
         <div class="story-video" data-yt="D-M9a1i4PQU" data-start="50" data-title="James and Kate's story"></div>
         <div class="story-body">
           <blockquote>"It's a profitable year for the first time in what feels like a very long time"</blockquote>
@@ -630,31 +689,31 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">£1.9m turnover in 2022, at a loss. From one part-timer in the office to seven office staff. Forecast: over £8m <em>(their forecast, February 2026)</em>.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="money">
+      <article class="story reveal">
         <div class="story-video" data-yt="snrx2DrLISg" data-title="Mike and Nick's story"></div>
         <div class="story-body">
           <blockquote>"From two tradesmen and a labourer to a team of eight"</blockquote>
           <div class="who">Mike and Nick, kitchens and extensions</div>
-          <p class="stat">Monthly turnover from about £35,000 to about £80,000.</p>
+          <p class="stat">Monthly turnover up from about £35,000 to about £80,000.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="money">
+      <article class="story reveal">
         <div class="story-video" data-yt="Kfx-SeLmNig" data-title="Will's story"></div>
         <div class="story-body">
           <blockquote>"We traded the year before at 1.5 million ... 2%, we broke even basically"</blockquote>
           <div class="who">Will, bricklaying contractor</div>
-          <p class="stat">Then he added office support and tracked the money on every job. One email later moved a contract worth over £1m to fortnightly payments.</p>
+          <p class="stat">Then he added office support and tracked the money on every job. Later, one email moved a contract worth over £1m from monthly payments to fortnightly.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="money">
+      <article class="story reveal">
         <div class="story-video" data-yt="AePCs4liO0Q" data-title="Brad's story"></div>
         <div class="story-body">
           <blockquote>"Implementing cost tracking systems allows us to monitor each project individually"</blockquote>
           <div class="who">Brad, family building company (new builds, extensions, lofts and refurbs)</div>
-          <p class="stat">In his words, it "gives you a much better business".</p>
+          <p class="stat">He now tracks the cost of each project on its own. In his words, it "gives you a much better business".</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="time">
+      <article class="story reveal">
         <div class="story-video" data-yt="B5ZTJu97_Gs" data-start="40" data-end="46" data-title="Robert McGill's story"></div>
         <div class="story-body">
           <blockquote>"I don't feel as overwhelmed because I feel like I've got a strategy for each of the areas of the business now."</blockquote>
@@ -662,15 +721,15 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">Before: "ridiculously long hours, weekends, not seeing my kids".</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="time">
+      <article class="story reveal">
         <div class="story-video" data-yt="9i31Jk89THQ" data-title="Richard J's story"></div>
         <div class="story-body">
           <blockquote>"My time and my responsibilities have been delegated"</blockquote>
           <div class="who">Richard J, construction business owner</div>
-          <p class="stat">Turnover from about £750,000 to about £1.1m.</p>
+          <p class="stat">Turnover up from about £750,000 to about £1.1m.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="time">
+      <article class="story reveal">
         <div class="story-video" data-yt="4w0XjmkgUx0" data-title="Valy Stan's story"></div>
         <div class="story-body">
           <blockquote>"I had few doubts in my mind whether this is going to work"</blockquote>
@@ -678,7 +737,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">He'd read the book, had the call, and still wasn't sure. Processes and delegation freed up most of his time.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="time">
+      <article class="story reveal">
         <div class="story-video" data-yt="gKrNClKEzVU" data-title="George's story"></div>
         <div class="story-body">
           <blockquote>"I was working probably 14 hour days ... the profit wasn't as good as what you thought it was going to be"</blockquote>
@@ -686,15 +745,15 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">He wanted his time back. Now every enquiry gets a set call-back time, set questions and a structured quote.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="work">
+      <article class="story reveal">
         <div class="story-video" data-yt="r572G_WcimQ" data-start="139" data-end="146" data-title="Lukas' story"></div>
         <div class="story-body">
           <blockquote>"You have helped me not just to improve my business but in a way improve my life"</blockquote>
           <div class="who">Lukas, building contractor</div>
-          <p class="stat">He set a £250,000 minimum job size and went after bigger projects.</p>
+          <p class="stat">He set a £250,000 minimum job size and went after bigger projects. In his words, "eventually they came".</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="work">
+      <article class="story reveal">
         <div class="story-video" data-yt="GSEM3O9HYvg" data-title="Dale Marshall's story"></div>
         <div class="story-body">
           <blockquote>"What sort of range we should be working in, what projects we should be going after"</blockquote>
@@ -702,7 +761,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">He got clear on which architects and which jobs to go after. In his words: "I think my turnover is probably doubled or almost doubled".</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="work">
+      <article class="story reveal">
         <div class="story-video" data-yt="7iLnXeuYoMg" data-title="Bradley Wheaton's story"></div>
         <div class="story-body">
           <blockquote>"Go directly for the architects"</blockquote>
@@ -710,7 +769,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">He'd been paying for leads on lead sites and overspending. £440,000 turnover in his second year, with a target of at least £800,000 <em>(a target, not a result)</em>.</p>
         </div>
       </article>
-      <article class="story reveal" data-tags="work">
+      <article class="story reveal">
         <div class="story-video" data-yt="HcS63FwTv_A" data-title="Sam and Nathan's story"></div>
         <div class="story-body">
           <blockquote>"We wanted to do larger scale projects"</blockquote>
@@ -727,7 +786,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   </div>
 </section>
 
-<!-- ================= 6. FAQ ================= -->
+<!-- ================= 5. FAQ ================= -->
 <section class="alt" id="faq">
   <div class="container">
     <div class="section-head">
@@ -735,41 +794,67 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     </div>
     <div class="faq">
       <details>
-        <summary>Who is it for?</summary>
-        <div class="answer"><p>Owners of building and trade companies turning over about £750k to £5m. The work's coming in, but the profit doesn't match the effort, and too much still goes through you. You're hungry to improve and open to honest feedback.</p></div>
-      </details>
-      <details>
-        <summary>Who isn't it for?</summary>
-        <div class="answer"><p>One-man bands, start-ups with no trading history, property developers, companies that sell services to builders, and anyone looking for a quick fix.</p></div>
-      </details>
-      <details>
-        <summary>What do I actually get?</summary>
+        <summary>Is this for a business like mine?</summary>
         <div class="answer">
-          <ul>
-            <li>A 12-month plan built on your numbers, broken down into what to do this week.</li>
-            <li>A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one.</li>
-            <li>A live group coaching call every week.</li>
-            <li>24/7 messaging straight to the coaches.</li>
-            <li>A members' WhatsApp group.</li>
-            <li>Three live events a year, in person.</li>
-            <li>The software: Architect Attractor, CostTracker Pro, Momentum Builder, FlowBuild and Jarvis.</li>
-          </ul>
+          <p>If you own a building or trade company turning over about £750k to £5m, yes. Members on this page include a design and build firm, a kitchens and extensions company, a bricklaying contractor and electrical contractors.</p>
+          <p>It fits when the work's coming in, but the profit doesn't match the effort, and too much still goes through you.</p>
+          <p>It isn't for one-man bands, start-ups with no trading history, property developers, companies that sell services to builders, or anyone looking for a quick fix.</p>
         </div>
-      </details>
-      <details>
-        <summary>What happens after I apply?</summary>
-        <div class="answer"><p>If it looks right, you book a Scale Session. It's a 15-minute call, and we both get a clear picture of which pillar is holding you back. Then there's a second call, where we go deep on how to fix it. You either take that away and work on it yourself, or you ask what it looks like to work together. If it isn't right for you yet, we send you our free training.</p></div>
       </details>
       <details>
         <summary>How much is it?</summary>
         <div class="answer">
           <p>£15,000 a year, or £1,500 a month.</p>
-          <p>That covers everything: the coaching, the one-to-ones, the messaging, the live events and all the software. There's nothing extra to buy later.</p>
+          <p>That covers everything: your plan, the coaching, the one-to-ones, the 24/7 messaging, three live events a year and all five software tools. There's nothing extra to buy from us later.</p>
+          <p>To put that in context, four of those tools have a UK list price. Bought on their own they come to £888 a month, which is £10,656 a year.</p>
         </div>
       </details>
       <details>
-        <summary>How much time does it take?</summary>
-        <div class="answer"><p>The first month's the busiest, with a one-to-one every week. After that it's an hour to an hour and a half a week, working on the business. Monday morning or Friday afternoon, whatever suits you.</p></div>
+        <summary>What do I actually get?</summary>
+        <div class="answer">
+          <ul>
+            <li>A score on each of the five pillars, so you know where to start.</li>
+            <li>A 12-month plan built on your numbers, broken down into weekly actions.</li>
+            <li>A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one.</li>
+            <li>A live group coaching call every week.</li>
+            <li>24/7 messaging straight to the coaches.</li>
+            <li>The members' WhatsApp group.</li>
+            <li>Three live events a year, in person.</li>
+            <li>The software: Architect Attractor, CostTracker Pro, FlowBuild, Jarvis and Momentum Builder.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>I'm flat out. Where do I find the time?</summary>
+        <div class="answer">
+          <p>Being flat out is the problem we're here to fix. A quiet month to sort the business out never comes.</p>
+          <p>The first month's the busiest, with a one-to-one every week. After that, plan on an hour to an hour and a half a week, working on the business. Monday morning or Friday afternoon, whatever suits you.</p>
+          <p>Your plan is broken down into weekly actions, so that time goes on the next thing that matters, not on working out where to start.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What happens after I apply?</summary>
+        <div class="answer">
+          <p>If it looks right, you book a Scale Session. It's a free 15-minute call, and we both get a clear picture of which pillar is holding you back.</p>
+          <p>Then there's a second call, where we go deep on how to fix it. You either take that away and work on it yourself, or you ask what it looks like to work together.</p>
+          <p>If it isn't right for you yet, we send you our free training.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Who will I be working with?</summary>
+        <div class="answer">
+          <p>A team that only works with construction companies. That's all we do.</p>
+          <p>There's quantity surveying and finance on the team. So when you ask about pricing a job, your margin or your cash, the answer comes from someone who knows the trade.</p>
+          <p>And there's me, Greg. I've been in construction for 30 years. I was on the tools at twenty, then ran companies turning over millions. One failed, and I rebuilt knowing my numbers every month.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I've already got an accountant. How is this different?</summary>
+        <div class="answer">
+          <p>Keep your accountant. Year-end accounts tell you how last year went, long after those jobs have finished.</p>
+          <p>We work on this week. Which jobs to go after. What each job is costing against what you quoted. How and when you get paid. Who does what, so it doesn't all go through you.</p>
+          <p>It isn't a consultant's report either. You get the plan, the software to run it, and a coach holding you to it every week.</p>
+        </div>
       </details>
       <details>
         <summary>Is it really twelve months?</summary>
@@ -784,9 +869,9 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
         <div class="answer">
           <p>You're never waiting for the next call to get an answer.</p>
           <ul>
-            <li><strong>24/7 messaging to the coaches.</strong> Day or night, message us and you'll get a reply.</li>
+            <li><strong>24/7 messaging to the coaches.</strong> Message us any time, day or night.</li>
             <li><strong>One-to-ones whenever you need them.</strong> Stuck on a price, a hire or a difficult client? Book one.</li>
-            <li><strong>The members' WhatsApp group.</strong> Builders who've been exactly where you are, sharing what's working for them.</li>
+            <li><strong>The members' WhatsApp group.</strong> Other builders and trade contractors, sharing what's working for them.</li>
           </ul>
         </div>
       </details>
@@ -794,20 +879,30 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
         <summary>I've had a coach before and it didn't work.</summary>
         <div class="answer">
           <p>So had Sam and Nathan. Their last coach, in their words, "promised the earth and didn't really deliver".</p>
-          <p>Most coaching fails for two reasons. It isn't built for construction, and nobody holds you to it. All we do is construction, with quantity surveying and finance on the team. Your plan is built on your numbers, there's a live coaching call every week to keep it moving, and a coach is a message away when you're stuck.</p>
+          <p>Here's what's different. All we do is construction, with quantity surveying and finance on the team. Your plan is built on your numbers, not a template. There's a live coaching call every week to keep it moving, and a coach is a message away when you're stuck.</p>
+          <p>And you don't have to take our word for it. The paid 30-day love it or leave it lets you test the programme before you commit to the year.</p>
         </div>
       </details>
       <details>
         <summary>I'm not good with software.</summary>
-        <div class="answer"><p>You don't need to be. We'll help you set up all your tools, so you're comfortable with them before you rely on them. You don't move the whole firm across in a week. Start with one job. If you get stuck, message the coaches and we'll sort it.</p></div>
+        <div class="answer">
+          <p>You don't need to be. We'll help you set up all your tools so you're comfortable with them.</p>
+          <p>You don't move the whole company across in a week. Start with one tool, on one job. If you get stuck, message the coaches and we'll sort it.</p>
+        </div>
       </details>
       <details>
         <summary>Do you promise results?</summary>
         <div class="answer">
-          <p>We won't promise you a number. Anyone who does is guessing, because the results come from the work you put in.</p>
-          <p>Here's what we do promise. A plan built on your numbers. A coach in your corner every week, holding you to it. Help whenever you're stuck. And a straight answer, even when it isn't the one you want to hear.</p>
-          <p>When members do the work, the numbers move. Richard J went from about £750,000 to about £1.1m in turnover. Mike and Nick went from about £35,000 to about £80,000 a month. Will moved a contract worth over £1m to fortnightly payments with one email.</p>
-          <p>Still unsure? The paid 30-day love it or leave it lets you see it working on your own business before you commit to the year.</p>
+          <p>We won't promise you a number. Anyone who does is guessing, because the result depends on the work you put in.</p>
+          <p>Here's what we do promise. A plan built on your numbers. A coach holding you to it every week. Help whenever you're stuck. And a straight answer, even when it isn't the one you want to hear.</p>
+          <p>Here's what members on this page report:</p>
+          <ul>
+            <li>Richard J: turnover up from about £750,000 to about £1.1m.</li>
+            <li>Mike and Nick: monthly turnover up from about £35,000 to about £80,000.</li>
+            <li>Will: one email moved a contract worth over £1m from monthly payments to fortnightly.</li>
+            <li>James and Kate: "a profitable year for the first time in what feels like a very long time".</li>
+          </ul>
+          <p>Still unsure? The paid 30-day love it or leave it lets you test the programme on your own business before you commit to the year.</p>
           <p class="faq-note">Members' own words. Self-reported. Individual results vary.</p>
         </div>
       </details>
@@ -815,14 +910,15 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   </div>
 </section>
 
-<!-- ================= 7. ABOUT GREG ================= -->
+<!-- ================= 6. ABOUT GREG ================= -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <img src="/build-better/greg.jpg" alt="Greg Wilkes, founder of Develop Coaching" loading="lazy">
       <div>
-        <h2>Who you'll be working with</h2>
-        <p>I've been in construction for 30 years. At twenty I was on the tools, building loft conversions. I went on to run companies turning over millions. Then one failed.</p>
+        <h2>I've run the busy building company. One of mine failed.</h2>
+        <p>I've been in construction for 30 years. At twenty I was on the tools, building loft conversions. I went on to run companies turning over millions.</p>
+        <p>Then one failed.</p>
         <p>I rebuilt, and this time I knew my numbers every month. That's what we coach now.</p>
         <p class="sig"><strong>Greg Wilkes, founder of Develop Coaching</strong><br>Author of the No. 1 Amazon bestseller <em>Building Your Future</em> · 2024 Best Construction Training Company</p>
       </div>
@@ -830,11 +926,17 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   </div>
 </section>
 
-<!-- ================= 8. FINAL CALL TO ACTION ================= -->
+<!-- ================= 7. FINAL CALL TO ACTION ================= -->
 <section class="final-cta" id="final">
   <div class="container-narrow">
     <h2>Another busy year won't fix the business.</h2>
     <p>Picture Monday, 7am. Your phone's quiet. Your extras are already priced. Your next job is signed. The weekends are yours. And you know exactly what profit you made last month.</p>
+    <p>That starts with one 15-minute call. Here's how you get it.</p>
+    <ol class="final-steps">
+      <li>Answer 5 quick questions.</li>
+      <li>If it looks right, book your free Scale Session.</li>
+      <li>We work out which pillar is holding you back.</li>
+    </ol>
     <div class="mid-cta">
       <a href="#apply" class="btn js-apply">See if I qualify</a>
       <small>5 quick questions, then a free 15-minute Scale Session.</small>
@@ -1030,21 +1132,6 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
       box.appendChild(f);
     });
     box.appendChild(b);
-  });
-
-  // Filter tags.
-  var filterBtns = [].slice.call(document.querySelectorAll('.filters button'));
-  var stories = [].slice.call(document.querySelectorAll('.story'));
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var f = btn.getAttribute('data-filter');
-      filterBtns.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
-      stories.forEach(function(s){
-        var tags = (s.getAttribute('data-tags') || '').split(' ');
-        s.hidden = !(f === 'all' || tags.indexOf(f) > -1);
-        s.classList.add('in');
-      });
-    });
   });
 
   // Scroll reveal.
