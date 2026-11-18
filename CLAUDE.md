@@ -42,9 +42,10 @@ JSON-LD, tracking and navigation that must match the rest of the site.
       "category": "Convert"
     }' | python3 scripts/publish_page.py
 
-It writes `www/<slug>/index.html` and updates the sitemap and search index. It
-refuses to replace an existing page unless you pass `--overwrite`, which is
-deliberate.
+It writes `www/<slug>/index.html`, updates the sitemap and search index, and
+links the new article from `/blog/`, its category hub, and 3 or 4 related
+posts. Funnel, download and webinar pages are not linked. It refuses to
+replace an existing page unless you pass `--overwrite`, which is deliberate.
 
 ## Editing an existing page
 

@@ -7,8 +7,9 @@ swapped. Diffing two exported posts shows those slots are the SEO head block,
 the JSON-LD graph, the post title, the category term, the post content widget,
 and a handful of WordPress leftovers that carry the template's post id.
 
-Reads JSON on stdin (or --json FILE), writes www/<slug>/index.html, and updates
-post-sitemap.xml plus search-index.json. Prints a JSON result on stdout.
+Reads JSON on stdin (or --json FILE), writes www/<slug>/index.html, updates
+post-sitemap.xml plus search-index.json, and links the article from /blog/,
+its category hub, and 3 or 4 related posts. Prints a JSON result on stdout.
 
     {
       "title": "...",
@@ -511,11 +512,14 @@ def main() -> None:
                 'Pass --overwrite (or "overwrite": true in the payload) to replace it.'
             )
 
+    internal_links = None
     if not args.dry_run:
         os.makedirs(out_dir, exist_ok=True)
         open(out_file, "w", encoding="utf-8").write(html)
         update_sitemap(slug, date)
         update_search_index(payload["title"], slug, payload["body_html"])
+        from link_published_article import link_published_article
+        internal_links = link_published_article(WWW, slug, title=payload["title"].strip(), category=payload.get("category"), date=date)
 
     print(
         json.dumps(
@@ -525,6 +529,7 @@ def main() -> None:
                 "created": not existed,
                 "bytes": len(html),
                 "dry_run": bool(args.dry_run),
+                "internal_links": internal_links,
             }
         )
     )
