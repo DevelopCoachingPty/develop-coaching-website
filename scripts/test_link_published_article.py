@@ -247,6 +247,7 @@ class FixtureTests(unittest.TestCase):
             "the-construction-company-marketing-strategy-to-scale-past-1m",
             marketing["sources"],
         )
+        self.assertNotIn("construction-site-set-up-plan", marketing["sources"])
 
     def test_refuses_unsafe_slugs_and_funnel_pages(self):
         before = snapshot(self.www)

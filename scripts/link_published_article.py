@@ -175,16 +175,17 @@ def expand_slug(tokens: frozenset) -> frozenset:
 
 
 def counted_overlap(left: frozenset, right: frozenset, candidate_slug_tokens: frozenset) -> frozenset:
-    """Token overlap. 'time' counts only when it is the candidate's only significant slug token.
+    """Token overlap against the candidate's own slug or title tokens.
 
-    Callers pass the candidate's own slug or title tokens on the right. The
-    candidate is never expanded, or a page whose slug merely contains
-    "marketing" would inherit the whole marketing topic and outrank the
-    article that is actually about marketing strategy.
+    'time' and 'plan' count only when that word is the candidate's only
+    significant slug token. Otherwise construction-site-set-up-plan matches
+    every article about a plan, and how-to-stop-wasting-time-on-quotes matches
+    every article about time.
     """
     overlap = set(left & right)
-    if "time" in overlap and candidate_slug_tokens != frozenset({"time"}):
-        overlap.discard("time")
+    for token in ("time", "plan"):
+        if token in overlap and candidate_slug_tokens != frozenset({token}):
+            overlap.discard(token)
     return frozenset(overlap)
 
 
