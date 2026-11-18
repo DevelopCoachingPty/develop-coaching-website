@@ -198,6 +198,56 @@ class FixtureTests(unittest.TestCase):
             duplicate,
         )
 
+    def test_strong_match_does_not_expand_the_candidate(self):
+        """A candidate keeps only its own slug tokens.
+
+        Expanding the candidate too would let every "marketing" slug inherit
+        the whole marketing topic, and would let snagging, risk, programme and
+        subcontractors outrank construction-project-management.
+        """
+        www = Path(self.tmp) / "score"
+        posts = [
+            ("construction-programme", "The Construction Programme", "Scale", "2026-10-26"),
+            ("snagging-list", "Snagging List", "Deliver", "2026-11-01"),
+            ("construction-risk-management", "Construction Risk Management", "Deliver", "2026-11-17"),
+            ("managing-subcontractors-on-site", "Managing Subcontractors on Site", "Convert", "2026-11-17"),
+            ("construction-project-management", "Construction Project Management", "Plan", "2024-05-06"),
+            ("construction-site-set-up-plan", "How to Organise a Construction Site", "Deliver", "2022-02-13"),
+            ("time-in-construction", "Managing Time in Construction", "Deliver", "2022-05-03"),
+            ("construction-marketing-plan", "Construction Marketing Plan", "Attract", "2026-11-17"),
+            ("digital-marketing-construction", "Digital Marketing Construction", "Attract", "2020-01-01"),
+            ("digital-marketing-for-construction", "Digital Marketing for Construction", "Attract", "2020-02-01"),
+            ("construction-marketing", "Construction Marketing", "Attract", "2020-03-01"),
+            ("construction-business-marketing", "Construction Business Marketing", "Attract", "2020-04-01"),
+            (
+                "the-construction-company-marketing-strategy-to-scale-past-1m",
+                "Construction Company Marketing Strategy",
+                "Attract",
+                "2026-06-05",
+            ),
+        ]
+        locs = []
+        for slug, title, category, date in posts:
+            write(www / slug / "index.html", page(title, category, date, slug))
+            locs.append(
+                f"<url><loc>https://develop-coaching.com/{slug}/</loc><lastmod>{date}</lastmod></url>"
+            )
+        write(www / "post-sitemap.xml", "<urlset>" + "".join(locs) + "</urlset>")
+
+        programme = linker.link_published_article(www, "construction-programme")
+        self.assertIn("construction-project-management", programme["sources"])
+        self.assertTrue(
+            {"construction-site-set-up-plan", "time-in-construction"} & set(programme["sources"])
+        )
+        self.assertNotIn("snagging-list", programme["sources"])
+        self.assertNotIn("construction-risk-management", programme["sources"])
+
+        marketing = linker.link_published_article(www, "construction-marketing-plan")
+        self.assertIn(
+            "the-construction-company-marketing-strategy-to-scale-past-1m",
+            marketing["sources"],
+        )
+
     def test_refuses_unsafe_slugs_and_funnel_pages(self):
         before = snapshot(self.www)
         for slug in (

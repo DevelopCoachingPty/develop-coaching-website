@@ -175,7 +175,13 @@ def expand_slug(tokens: frozenset) -> frozenset:
 
 
 def counted_overlap(left: frozenset, right: frozenset, candidate_slug_tokens: frozenset) -> frozenset:
-    """Slug overlap. 'time' counts only for a candidate whose only real slug token is time."""
+    """Token overlap. 'time' counts only when it is the candidate's only significant slug token.
+
+    Callers pass the candidate's own slug or title tokens on the right. The
+    candidate is never expanded, or a page whose slug merely contains
+    "marketing" would inherit the whole marketing topic and outrank the
+    article that is actually about marketing strategy.
+    """
     overlap = set(left & right)
     if "time" in overlap and candidate_slug_tokens != frozenset({"time"}):
         overlap.discard("time")
@@ -510,7 +516,9 @@ class Library:
         strong = []
         strong_slugs = set()
         for page in candidates:
-            overlap = counted_overlap(target.expanded, page.expanded, page.slug_tokens)
+            # Target slug tokens are expanded. The candidate contributes only
+            # its own slug tokens, never its topic-map expansion.
+            overlap = counted_overlap(target.expanded, page.slug_tokens, page.slug_tokens)
             if not overlap:
                 continue
             direct = counted_overlap(target.slug_tokens, page.slug_tokens, page.slug_tokens)
@@ -525,7 +533,8 @@ class Library:
         for page in candidates:
             if page.slug in strong_slugs:
                 continue
-            # Title tokens only. Expanded slug tokens stay in the strong pass.
+            # Title fallback uses the candidate's own slug and title tokens.
+            # Neither side is run through the topic map.
             title_hit = counted_overlap(
                 target.title_tokens, page.title_tokens | page.slug_tokens, page.slug_tokens
             ) | counted_overlap(target.slug_tokens, page.title_tokens, page.slug_tokens)
