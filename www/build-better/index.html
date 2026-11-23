@@ -425,7 +425,9 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   .tool-list .tool span { display: block; color: #3d3d3f; font-size: 0.92rem; line-height: 1.5; }
   .tool-list .price { flex: none; text-align: right; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
   .tool-list .price small { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.76rem; color: var(--muted); }
-  .tool-list .price:not(.incl), .tool-list .price:not(.incl) small { text-decoration: line-through; text-decoration-color: rgba(220,38,38,.55); text-decoration-thickness: 2px; }
+  /* Hand-drawn red cross over each price: members don't pay these. */
+  .tool-list .price:not(.incl) { position: relative; }
+  .tool-list .price:not(.incl)::after { content: ""; position: absolute; top: -3px; bottom: -3px; left: -7px; right: -7px; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M5 9 Q 28 30 50 49 T 96 91' fill='none' stroke='%23dc2626' stroke-opacity='.85' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M93 6 Q 72 31 52 52 T 3 95' fill='none' stroke='%23dc2626' stroke-opacity='.85' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center / 100% 100%; }
   .tool-list .price.incl { font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); padding-top: 4px; }
   .value-total { display: grid; grid-template-columns: 1fr; }
   @media (min-width: 760px) { .value-total { grid-template-columns: 1fr 1fr; } }
@@ -636,7 +638,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <div class="price">£275<small>a month</small></div>
         </li>
         <li>
-          <div class="tool"><strong>CostTracker Pro</strong><span>Every job in one place. See committed costs against what you quoted.</span></div>
+          <div class="tool"><strong>CostTracker Pro</strong><span>Runs every job from start to finish: quotes, programme, orders, subbies, costs and invoices in one app, so you always know what each job is really making.</span></div>
           <div class="price">£247<small>a month</small></div>
         </li>
         <li>
@@ -644,7 +646,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <div class="price">£197<small>a month</small></div>
         </li>
         <li>
-          <div class="tool"><strong>Jarvis</strong><span>An AI assistant for your enquiry replies, quotes, client letters, job adverts and procedures.</span></div>
+          <div class="tool"><strong>Jarvis</strong><span>An AI assistant for your enquiry replies, quotes, client letters, variations and procedures.</span></div>
           <div class="price">£297<small>a month</small></div>
         </li>
         <li>
@@ -652,7 +654,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <div class="price">£175<small>a month</small></div>
         </li>
         <li>
-          <div class="tool"><strong>Momentum Builder</strong><span>Your 12-month plan turned into this week's priorities, with names against them.</span></div>
+          <div class="tool"><strong>Momentum Builder</strong><span>See your plan turned into action, day by day.</span></div>
           <div class="price incl">Members only</div>
         </li>
       </ul>
