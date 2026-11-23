@@ -425,9 +425,9 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   .tool-list .tool span { display: block; color: #3d3d3f; font-size: 0.92rem; line-height: 1.5; }
   .tool-list .price { flex: none; text-align: right; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
   .tool-list .price small { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.76rem; color: var(--muted); }
-  /* Hand-drawn red cross over each price: members don't pay these. */
+  /* Hand-drawn red line through each price: members don't pay these. */
   .tool-list .price:not(.incl) { position: relative; }
-  .tool-list .price:not(.incl)::after { content: ""; position: absolute; top: -3px; bottom: -3px; left: -7px; right: -7px; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M5 9 Q 28 30 50 49 T 96 91' fill='none' stroke='%23dc2626' stroke-opacity='.85' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3Cpath d='M93 6 Q 72 31 52 52 T 3 95' fill='none' stroke='%23dc2626' stroke-opacity='.85' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center / 100% 100%; }
+  .tool-list .price:not(.incl)::after { content: ""; position: absolute; top: -3px; bottom: -3px; left: -7px; right: -7px; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M3 90 Q 27 70 50 50 T 97 9' fill='none' stroke='%23dc2626' stroke-opacity='.85' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center / 100% 100%; }
   .tool-list .price.incl { font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-dark); padding-top: 4px; }
   .value-total { display: grid; grid-template-columns: 1fr; }
   @media (min-width: 760px) { .value-total { grid-template-columns: 1fr 1fr; } }
