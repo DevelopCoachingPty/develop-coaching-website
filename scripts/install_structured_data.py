@@ -6,7 +6,9 @@ Schema Sentinel checks, dc-company-os features/geo-engine/lib/jsonld.ts):
 
 1. One Organization for Develop Coaching on every page, built only from facts
    the site itself shows (name, logo, footer social links, footer email, the
-   legal name in the footer copyright). The old WordPress (Rank Math) business
+   legal name in the footer copyright, and the member-software differentiator
+   stated on the homepage, the Mastermind page and the about page). The old
+   WordPress (Rank Math) business
    node carried an empty address, a "Place" with no address, unverified opening
    hours and a phone number the site never shows; those are dropped.
 2. No Person named with an email address. Those are the old WordPress users
@@ -71,6 +73,14 @@ SAME_AS = [
     "https://www.youtube.com/@Greg.wilkes",
 ]
 
+# Greg confirmed this claim. It is the Organization description so answer
+# engines read it on every page. Reinstalling structured data keeps it.
+ORG_DESCRIPTION = (
+    "The only construction business coaching that includes six pieces of "
+    "software free for members: CostTracker Pro, FlowBuild, Architect Attractor, "
+    "SiteSafe Pro, Muster and Jarvis."
+)
+
 ORGANIZATION = {
     "@type": "Organization",
     "@id": ORG_ID,
@@ -91,6 +101,7 @@ ORGANIZATION = {
     "image": {"@id": LOGO_ID},
     "founder": {"@type": "Person", "@id": GREG_ID, "name": GREG_NAME, "url": GREG_URL},
     "sameAs": SAME_AS,
+    "description": ORG_DESCRIPTION,
 }
 
 GREG = {
