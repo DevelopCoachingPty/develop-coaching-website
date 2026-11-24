@@ -127,12 +127,12 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     padding: 64px 0 56px;
     overflow: hidden;
   }
-  /* Stills behind the headline. STAND-IN: frames from the nine client story
-     videos used further down. Swap for stills from the VSL once it is filmed. */
+  /* Stills behind the headline: two photos of the room at the Build & Scale
+     Summit 2025, kept faint (Chloe, 24 Nov 2026). */
   .hero-stills {
     position: absolute; inset: 0;
-    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr;
-    opacity: 0.16; filter: grayscale(1) contrast(1.1);
+    display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr;
+    opacity: 0.38; filter: grayscale(1) contrast(1.1);
     pointer-events: none;
   }
   .hero-stills div { background-size: cover; background-position: center; }
@@ -140,7 +140,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background:
       radial-gradient(ellipse at 50% 0%, rgba(250, 206, 53, 0.14) 0%, transparent 55%),
-      linear-gradient(180deg, rgba(20,20,21,0.55) 0%, rgba(20,20,21,0.82) 55%, var(--dark) 100%);
+      linear-gradient(180deg, rgba(20,20,21,0.40) 0%, rgba(20,20,21,0.70) 55%, var(--dark) 100%);
   }
   .hero > .container-narrow { position: relative; z-index: 1; }
   .hero h1 { color: #fff; margin-bottom: 0.5rem; }
@@ -479,11 +479,27 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     .watch-bar { font-size: 0.68rem; letter-spacing: 0.5px; }
   }
   /* Members' WhatsApp wins wall */
-  .wins-wall { columns: 1; column-gap: 18px; max-width: 1080px; margin: 0 auto; }
+  /* Members' wins: one WhatsApp-style chat. Beige wallpaper with our own builder
+     doodles, white message bubbles, dark text (Greg, 24 Nov 2026). */
+  #wins { background-color: #efeae2; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' fill='none' stroke='%23e2d9cc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 44h36M26 44a14 14 0 0 1 28 0M40 30v-5'/%3E%3Cpath d='M120 26l22 22M134 20l14 14-8 8-14-14zM124 44l-18 18'/%3E%3Crect x='170' y='70' width='30' height='14' rx='2'/%3E%3Crect x='154' y='88' width='30' height='14' rx='2'/%3E%3Crect x='186' y='88' width='24' height='14' rx='2'/%3E%3Cpath d='M30 130l20-18 20 18M36 126v24h28v-24M46 150v-12h8v12'/%3E%3Cpath d='M112 118h30v30h-30zM118 118v8M126 118v5M134 118v8'/%3E%3Cpath d='M176 150l24 24M172 146a8 8 0 1 0 8 8'/%3E%3Cpath d='M70 190h40M76 190v-14h28v14M84 176v-8h12v8'/%3E%3Ccircle cx='160' cy='200' r='4'/%3E%3Ccircle cx='96' cy='84' r='3'/%3E%3Cpath d='M14 90l10 10M24 90l-10 10M196 24l10 10M206 24l-10 10'/%3E%3C/svg%3E"); background-size: 220px 220px; }
+  #wins .section-head h2 { color: #111b21; }
+  #wins .section-head p, #wins .proof-note { color: #54656f; }
+  .wins-wall { columns: 1; column-gap: 22px; max-width: 1080px; margin: 0 auto; }
   @media (min-width: 640px)  { .wins-wall { columns: 2; } }
   @media (min-width: 1000px) { .wins-wall { columns: 3; } }
-  .win-shot { break-inside: avoid; margin: 0 0 18px; background: #f4f4f4; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .wins-wall.is-masonry { columns: auto; display: flex; gap: 22px; align-items: flex-start; }
+  .wins-wall.is-masonry .wins-col { flex: 1 1 0; min-width: 0; }
+  .win-shot { break-inside: avoid; margin: 0 0 20px; filter: drop-shadow(0 1px 1px rgba(11,20,26,.16)); }
   .win-shot img { display: block; width: 100%; height: auto; }
+  /* Google reviews: real screenshots on white cards, same masonry as the wins. */
+  .reviews-wall { columns: 1; column-gap: 20px; max-width: 1080px; margin: 0 auto; }
+  @media (min-width: 640px)  { .reviews-wall { columns: 2; } }
+  @media (min-width: 1000px) { .reviews-wall { columns: 3; } }
+  .reviews-wall.is-masonry { columns: auto; display: flex; gap: 20px; align-items: flex-start; }
+  .reviews-wall.is-masonry .wins-col { flex: 1 1 0; min-width: 0; }
+  .review-shot { break-inside: avoid; margin: 0 0 20px; background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); padding: 6px 4px 2px; }
+  .review-shot img { display: block; width: 100%; height: auto; }
+  #reviews .proof-note a { color: var(--gold-dark); font-weight: 600; }
 </style>
 <script type="application/ld+json" data-dc-schema>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://develop-coaching.com/#organization","name":"Develop Coaching","legalName":"Develop Coaching Pty Ltd","url":"https://develop-coaching.com/","email":"hello@develop-coaching.com","logo":{"@type":"ImageObject","@id":"https://develop-coaching.com/#logo","url":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","contentUrl":"https://develop-coaching.com/wp-content/uploads/2022/11/Screenshot-2022-08-15-at-11.07-1.svg","caption":"Develop Coaching","width":"259","height":"82","inLanguage":"en-GB"},"image":{"@id":"https://develop-coaching.com/#logo"},"founder":{"@type":"Person","@id":"https://develop-coaching.com/about-greg-wilkes/#person","name":"Greg Wilkes","url":"https://develop-coaching.com/about-greg-wilkes/"},"sameAs":["https://www.facebook.com/developcoach/","https://www.linkedin.com/company/developcoaching/","https://www.instagram.com/greg.wilkes.coach","https://www.youtube.com/@Greg.wilkes"]},{"@type":"FAQPage","@id":"https://develop-coaching.com/build-better/#faq","url":"https://develop-coaching.com/build-better/","mainEntity":[{"@type":"Question","name":"Is this for a business like mine?","acceptedAnswer":{"@type":"Answer","text":"If you own a building or trade company turning over about £750k to £5m, yes. Members on this page include a design and build firm, a kitchens and extensions company, a bricklaying contractor and electrical contractors. It fits when the work's coming in, but the profit doesn't match the effort, and too much still goes through you. It isn't for one-man bands, start-ups with no trading history, property developers, companies that sell services to builders, or anyone looking for a quick fix."}},{"@type":"Question","name":"How much is it?","acceptedAnswer":{"@type":"Answer","text":"We go through the cost on your second call, once we've looked at your business and what it needs."}},{"@type":"Question","name":"What do I actually get?","acceptedAnswer":{"@type":"Answer","text":"A full look at your whole business across the five pillars, with your real numbers, so you see exactly where the money and time are leaking. A detailed and bespoke 12-month plan built on your numbers, broken down into weekly actions. A one-to-one with a coach every week in your first month, then a one-to-one whenever you need one. A live group coaching call every week. 24/7 messaging straight to the coaches. Members' WhatsApp group. Three live events a year, in person. The software: Architect Attractor, CostTracker Pro, FlowBuild, Jarvis, SiteSafe Pro and Momentum Builder."}},{"@type":"Question","name":"I'm flat out. Where do I find the time?","acceptedAnswer":{"@type":"Answer","text":"Being flat out is the problem we're here to fix. A quiet month to sort the business out never comes. The first month's the busiest, with a one-to-one every week. After that, plan on an hour to an hour and a half a week, working on the business. Monday morning or Friday afternoon, whatever suits you. Your plan is broken down into weekly actions, so that time goes on the next thing that matters, not on working out where to start."}},{"@type":"Question","name":"What happens after I apply?","acceptedAnswer":{"@type":"Answer","text":"If it looks right, you book a Scale Session. It's a free 15-minute call, and we both get a clear picture of which pillar is holding you back. Then there's a second call, where we go deep on how to fix it. You either take that away and work on it yourself, or you ask what it looks like to work together. If it isn't right for you yet, we send you our free training."}},{"@type":"Question","name":"Who will I be working with?","acceptedAnswer":{"@type":"Answer","text":"Me and my team. I coach members myself, alongside five other coaches, and every one of us works only with construction companies. There's quantity surveying and finance on the team. So when you ask about pricing a job, your margin or your cash, the answer comes from someone who knows the trade. As for me, I've been in construction for 30 years. I was on the tools at twenty, then ran companies turning over millions. One failed, and I rebuilt knowing my numbers every month."}},{"@type":"Question","name":"I've already got an accountant. How is this different?","acceptedAnswer":{"@type":"Answer","text":"Keep your accountant. Year-end accounts tell you how last year went, long after those jobs have finished. We work on this week. Which jobs to go after. What each job is costing against what you quoted. How and when you get paid. Who does what, so it doesn't all go through you. It isn't a consultant's report either. You get the plan, the software to run it, and a coach holding you to it every week."}},{"@type":"Question","name":"Is it really twelve months?","acceptedAnswer":{"@type":"Answer","text":"Yes. Twelve months gives your plan time to work, and the changes time to bed in. If you're unsure, there's a paid 30-day love it or leave it. You test out the programme first, then you make an informed decision. It's like taking on a new subbie. You try them on one job, you pay them for it, and you watch. We'll go through how the 30 days work, and what they cost, on the call."}},{"@type":"Question","name":"What support do I get between calls?","acceptedAnswer":{"@type":"Answer","text":"You're never waiting for the next call to get an answer. 24/7 messaging to the coaches. Message us any time, day or night. One-to-ones whenever you need them. Stuck on a price, a hire or a difficult client? Book one. Members' WhatsApp group. Other builders and trade contractors, sharing what's working for them."}},{"@type":"Question","name":"I've had a coach before and it didn't work.","acceptedAnswer":{"@type":"Answer","text":"So had Sam and Nathan. Their last coach, in their words, \"promised the earth and didn't really deliver\". Here's what's different. All we do is construction, with quantity surveying and finance on the team. Your plan is built on your numbers, not a template. There's a live coaching call every week to keep it moving, and a coach is a message away when you're stuck. And you don't have to take our word for it. The paid 30-day love it or leave it lets you test the programme before you commit to the year."}},{"@type":"Question","name":"I'm not good with software.","acceptedAnswer":{"@type":"Answer","text":"You don't need to be. We'll help you set up all your tools so you're comfortable with them. You don't move the whole company across in a week. Start with one tool, on one job. If you get stuck, message the coaches and we'll sort it."}},{"@type":"Question","name":"Do you promise results?","acceptedAnswer":{"@type":"Answer","text":"We won't promise you a number. Anyone who does is guessing, because the result depends on the work you put in. Here's what we do promise. A plan built on your numbers. A coach holding you to it every week. Help whenever you're stuck. And a straight answer, even when it isn't the one you want to hear. Here's what members on this page report: Richard J: turnover up from about £750,000 to about £1.1m. Mike and Nick: monthly turnover up from about £35,000 to about £80,000. Will: one email moved a contract worth over £1m from monthly payments to fortnightly. James and Kate: \"a profitable year for the first time in what feels like a very long time\". Still unsure? The paid 30-day love it or leave it lets you test the programme on your own business before you commit to the year. Members' own words. Self-reported. Individual results vary."}}]}]}</script>
 </head>
@@ -492,12 +508,8 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
 <!-- ================= 1. TOP OF PAGE ================= -->
 <section class="hero">
   <div class="hero-stills" aria-hidden="true">
-    <div style="background-image:url('https://i.ytimg.com/vi/D-M9a1i4PQU/hqdefault.jpg')"></div>
-    <div style="background-image:url('https://i.ytimg.com/vi/Kfx-SeLmNig/hqdefault.jpg')"></div>
-    <div style="background-image:url('https://i.ytimg.com/vi/snrx2DrLISg/hqdefault.jpg')"></div>
-    <div style="background-image:url('https://i.ytimg.com/vi/B5ZTJu97_Gs/hqdefault.jpg')"></div>
-    <div style="background-image:url('https://i.ytimg.com/vi/r572G_WcimQ/hqdefault.jpg')"></div>
-    <div style="background-image:url('https://i.ytimg.com/vi/HcS63FwTv_A/hqdefault.jpg')"></div>
+    <div style="background-image:url('/build-better/event-room-1.jpg')"></div>
+    <div style="background-image:url('/build-better/event-room-2.jpg')"></div>
   </div>
   <div class="container-narrow">
     <!-- Copy: vsl-page-copy-v4 (18 Nov 2026), recommended headline. Draft for Greg's review. -->
@@ -696,7 +708,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   <div class="container">
     <div class="section-head">
       <h2>Real builders. Real results.</h2>
-      <p>Twelve members, in their own words. Tap a tile to watch.</p>
+      <p>25 members, in their own words. Tap a tile to watch.</p>
     </div>
 
     <div class="story-grid">
@@ -794,6 +806,111 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <blockquote>"We wanted to do larger scale projects"</blockquote>
           <div class="who">Sam and Nathan, electrical contractors in Somerset</div>
           <p class="stat">Their last coach, in their words, "promised the earth and didn't really deliver". More structure since, and ready for bigger projects.</p>
+        </div>
+      </article>
+      <!-- The other 13 client wins videos, so all 25 sit together here (Chloe, 24 Nov 2026). -->
+      <article class="story reveal">
+        <div class="story-video" data-yt="ecKFCE1r-18" data-title="Marek's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Turnover and operations</em></p>
+          <div class="who">Marek</div>
+          <p class="summary">Marek reports turnover of just over £1 million before joining, then doubling within a year, alongside improvements to operations, marketing and the use of AI.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="1C2yT_tP-Aw" data-title="Dave Darby's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Lead generation</em></p>
+          <div class="who">Dave Darby</div>
+          <p class="summary">Dave says lead generation was a major catalyst as turnover moved from £150,000 to £635,000 and later headed towards £1 million.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="yXqEwu6FEog" data-title="Geoff Walker's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Coaching and community</em></p>
+          <div class="who">Geoff Walker</div>
+          <p class="summary">Geoff says coaching and community support helped him solve business problems as he doubled turnover in two consecutive years.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="H1eWYQjMaFA" data-title="Stephen and Salina's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Operating systems</em></p>
+          <div class="who">Stephen and Salina</div>
+          <p class="summary">Stephen and Salina report that stronger operating systems helped move turnover from about £870,000 towards a £1.4 million projection.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="zhoS5F5oYy4" data-title="Dan Burke's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Brand and reviews</em></p>
+          <div class="who">Dan Burke</div>
+          <p class="summary">Dan reports that rebranding, improving the website and generating Google reviews helped move turnover from £470,000 towards a £700,000 to £800,000 projection.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="in8bRqFRC0I" data-title="Rachel Moors's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>From chaos to consistency</em></p>
+          <div class="who">Rachel Moors</div>
+          <p class="summary">Rachel describes moving from a chaotic business with few systems towards greater consistency, time and cost savings, better profit and stronger turnover.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="oktEjmz9B6s" data-title="Dominic Marchant's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Targets and team</em></p>
+          <div class="who">Dominic Marchant</div>
+          <p class="summary">Dominic set clear targets, improved his financial position and promoted a labourer into a site manager role.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="i0p_SEU2xpg" data-title="Jordan Stubley's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Systems and lead handling</em></p>
+          <div class="who">Jordan Stubley</div>
+          <p class="summary">Jordan says better systems, CRM processes and lead handling improved day-to-day organisation and saved the team hours of work.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="NzonAtTiHlg" data-title="James Wilcock's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Off the tools</em></p>
+          <div class="who">James Wilcock</div>
+          <p class="summary">Reading Greg&#x27;s book, joining the Mastermind community and gaining a clear business plan helped James move beyond being stuck on the tools and uncertain about pricing.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="tZxceh60Zc8" data-title="Richard Abrahams's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Guidance and accountability</em></p>
+          <div class="who">Richard Abrahams</div>
+          <p class="summary">Richard frames coaching as an investment in guidance, accountability and stronger foundations for business growth.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="MGAD2pxmNrc" data-title="Stephen and Ashley's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Ready to scale</em></p>
+          <div class="who">Stephen and Ashley</div>
+          <p class="summary">Clearer systems and processes prepared Stephen and Ashley to scale their renovation business and focus on attracting clients.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="9J1c94plNRE" data-title="Paul Murphy's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Structure and community</em></p>
+          <div class="who">Paul Murphy</div>
+          <p class="summary">Paul says stronger structure and organisation helped the family-run business present itself more professionally, while the member community made business problems easier to solve.</p>
+        </div>
+      </article>
+      <article class="story reveal">
+        <div class="story-video" data-yt="IZYls1vXkQo" data-title="Sophie and Neil's story"></div>
+        <div class="story-body">
+          <p class="stat"><em>Focus</em></p>
+          <div class="who">Sophie and Neil</div>
+          <p class="summary">Clearer targets, stronger organisation and peer support helped Sophie and Neil sharpen their business focus.</p>
         </div>
       </article>
     </div>
@@ -952,71 +1069,152 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
       <h2>What members post in the group</h2>
       <p>Straight from the members' WhatsApp group. Wins, big and small.</p>
     </div>
-    <div class="wins-wall">
-      <figure class="win-shot"><img src="/build-better/wins/win-03.jpg" width="486" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After 6 to 9 months without winning a single project, won the biggest project to date, £230k. May have given up without the group's accountability."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-21.jpg" width="900" height="952" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Part 1: after joining Develop Coaching everything fell through, and for nine months no project was won."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-22.jpg" width="900" height="1280" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Part 2: Greg kept them going when they wanted to give up. Now £1.1 million of secured projects and about £1.4 million in active estimates."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-24.jpg" width="900" height="451" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: From no work booked at Christmas to a turnover forecast of £1.5 million of work booked in."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-41.jpg" width="900" height="1437" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A year since joining Develop Coaching: team doubled, new office and joinery workshop, almost £1.1 million turned over since January, up from around £500k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-40.jpg" width="900" height="1243" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: 5 years ago: on the tools every hour, turning over around £350k. 5 years on, 3 with Develop: off the tools, pricing £300k-plus projects, turning over £2m a year plus, weekends off."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-25.jpg" width="900" height="617" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Verbal confirmation of the largest tender to date at £1.4m plus VAT, crediting the group's help with tendering and follow-up."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-23.jpg" width="900" height="1360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Accepted as a main contractor on a public sector framework, with three commercial tenders totalling around £7m."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-28.jpg" width="900" height="590" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a Cotswolds contract at about £1.5m cost plus, offers accepted on 3 sites, and another £1.5m heritage conversion."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-08.jpg" width="600" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project to date, 4 new builds, approx £1.6m, starting Monday."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-10.jpg" width="714" height="359" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won another Mayfair penthouse refurb, £1.1M plus VAT, the third in a row on almost the same street."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-42.jpg" width="900" height="1289" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After a tough first half, secured a £1.4m new build and a £1m-plus shell and core project, both deposits paid."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-44.jpg" width="900" height="546" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Heading into the new year with over £1.2m of work already booked and £10m-plus of projects priced."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-47.jpg" width="900" height="547" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: About to sign a £984,000 project, with big tenders from local architects, and hiring a contracts manager."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-43.jpg" width="900" height="798" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project yet, £820k, and tendering for 2 more over £1m."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-55.jpg" width="900" height="232" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won the biggest project yet, £705k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-51.jpg" width="900" height="461" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Submitting a £2.2m plus VAT tender, the largest residential tender to date, having not priced over £1m until this year."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-52.jpg" width="900" height="660" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Tender sent for £2.25m plus VAT, the largest to date, and go ahead on 2 new builds at £625k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-26.jpg" width="900" height="702" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After a tricky few months, £1.4m of work across 2 projects landing in one week."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-45.jpg" width="900" height="568" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Appointed on a £1.2m renovation in the Cotswolds, on the third tender with a new architect practice."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-46.jpg" width="900" height="623" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Taking a client to source fixtures for a £1.8m build, with a bespoke staircase made for them."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-27.jpg" width="900" height="335" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Started a second £1m-plus project and finalising another new build."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-48.jpg" width="900" height="377" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a new build around £400k and 99% there on a million pound project."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-49.jpg" width="900" height="504" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: The only contractor working with the architect and QS on a £1.4m project, and picked up a £100k extension."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-50.jpg" width="900" height="322" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Signed a £650k contract, and 3 big tenders arrived last week."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-05.jpg" width="359" height="154" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A great win at the weekend, after being in a really tricky place 18 months ago."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-02.jpg" width="900" height="281" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won Specifier of the Year at Designerati."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-36.jpg" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won another award at the KBB awards."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-04.jpg" width="900" height="279" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won a £380k Passivhaus fit out on a 6,000 sq ft home, very local."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-29.jpg" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A full refurb at £500k on a mews house in Holland Park."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-30.jpg" width="900" height="224" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A £500k mews house refurb in South Kensington."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-31.jpg" width="900" height="288" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Submitted the largest tender return yet, £960k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-32.jpg" width="900" height="256" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £250k pool house project in Surrey."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-33.jpg" width="900" height="391" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £305k-plus extension and renovation in a new area, with an architect nurtured for 6 to 9 months."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-53.jpg" width="900" height="1058" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Go ahead on the biggest project to date, £290k-plus. Average project size used to be £90k to £110k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-54.jpg" width="900" height="244" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Largest contract to date starting today, £250k-plus."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-56.jpg" width="900" height="340" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project to date, £490k plus VAT."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-57.jpg" width="900" height="249" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Secured the biggest project to date, £350k."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-58.jpg" width="900" height="410" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Contract signed on a project in Cobham, a week after being introduced."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-59.jpg" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Joined last week, closed on a £300k job 5 hours later."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-34.jpg" width="900" height="398" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Planning pre-approved a 6-house development in the green belt."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-35.jpg" width="900" height="247" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won 7 projects in a week, now fully booked until Christmas."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-11.jpg" width="900" height="266" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Land development secured, turnover up 30% last month, new project secured."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-09.jpg" width="900" height="328" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Locked in a deal with an investor to develop 2 new builds with a local land purchase."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-07.jpg" width="700" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Reaching out to land agents now adds a £400k new build project to the pipeline."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-16.jpg" width="432" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Tender sent out for £1.2m plus VAT, shortlisted for a £350k extension, £400k new build to start in 6 months."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-13.jpg" width="900" height="247" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £440k new build, just need to sign the contract."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-17.jpg" width="632" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Estimating a Kensington project around £500k plus VAT, and won two smaller projects."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-61.jpg" width="900" height="331" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won another £200k contract starting on 15 September."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-60.jpg" width="900" height="779" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £200k-plus project and shortlisted for a £550k-plus project after a lull."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-01.jpg" width="900" height="244" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just turned over the largest month to date."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-06.jpg" width="704" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Spoke about the business in front of 50 strangers at a first networking event."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-12.jpg" width="900" height="321" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Connected with new architects and interior designers, nurture sequence set up, biggest tender to date."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-14.jpg" width="900" height="285" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New site manager started, office refurbishment nearly finished, brochure nearly complete."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-15.jpg" width="900" height="188" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New project won with a new client."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-18.jpg" width="900" height="288" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Working through the biggest project yet, and priced a new vets practice build."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-19.jpg" width="768" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Started the course, secured a new project for March, built relationships with 2 new architects."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-20.jpg" width="868" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Handed over 3 projects on time, connected with two new architects, invited to tender for two projects."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-38.jpg" width="900" height="387" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Second stage of a tender with a new architectural firm, and a tender sent for a £1.5m project."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-39.jpg" width="900" height="329" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Bought a first heritage project, a local landmark, and sold 2 houses."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-62.jpg" width="900" height="331" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New hire starting this month and tendering 2 projects over £1m."></figure>
-      <figure class="win-shot"><img src="/build-better/wins/win-37.jpg" width="900" height="1135" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Thank you to the group and to Develop Coaching for the support and encouragement."></figure>
+    <div class="wins-wall" data-masonry>
+      <figure class="win-shot"><img src="/build-better/wins/win-40.webp" width="900" height="1243" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: 5 years ago: on the tools every hour, turning over around £350k. 5 years on, 3 with Develop: off the tools, pricing £300k-plus projects, turning over £2m a year plus, weekends off."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-41.webp" width="900" height="1437" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A year since joining Develop Coaching: team doubled, new office and joinery workshop, almost £1.1 million turned over since January, up from around £500k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-03.webp" width="486" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After 6 to 9 months without winning a single project, won the biggest project to date, £230k. May have given up without the group's accountability."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-21.webp" width="900" height="952" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Part 1: after joining Develop Coaching everything fell through, and for nine months no project was won."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-22.webp" width="900" height="1280" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Part 2: Greg kept them going when they wanted to give up. Now £1.1 million of secured projects and about £1.4 million in active estimates."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-24.webp" width="900" height="451" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: From no work booked at Christmas to a turnover forecast of £1.5 million of work booked in."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-23.webp" width="900" height="1360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Accepted as a main contractor on a public sector framework, with three commercial tenders totalling around £7m."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-42.webp" width="900" height="1289" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After a tough first half, secured a £1.4m new build and a £1m-plus shell and core project, both deposits paid."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-28.webp" width="900" height="590" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a Cotswolds contract at about £1.5m cost plus, offers accepted on 3 sites, and another £1.5m heritage conversion."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-08.webp" width="600" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project to date, 4 new builds, approx £1.6m, starting Monday."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-10.webp" width="714" height="359" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won another Mayfair penthouse refurb, £1.1M plus VAT, the third in a row on almost the same street."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-25.webp" width="900" height="617" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Verbal confirmation of the largest tender to date at £1.4m plus VAT, crediting the group's help with tendering and follow-up."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-44.webp" width="900" height="546" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Heading into the new year with over £1.2m of work already booked and £10m-plus of projects priced."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-26.webp" width="900" height="702" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: After a tricky few months, £1.4m of work across 2 projects landing in one week."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-51.webp" width="900" height="461" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Submitting a £2.2m plus VAT tender, the largest residential tender to date, having not priced over £1m until this year."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-52.webp" width="900" height="660" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Tender sent for £2.25m plus VAT, the largest to date, and go ahead on 2 new builds at £625k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-59.webp" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Joined last week, closed on a £300k job 5 hours later."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-53.webp" width="900" height="1058" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Go ahead on the biggest project to date, £290k-plus. Average project size used to be £90k to £110k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-47.webp" width="900" height="547" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: About to sign a £984,000 project, with big tenders from local architects, and hiring a contracts manager."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-43.webp" width="900" height="798" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project yet, £820k, and tendering for 2 more over £1m."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-46.webp" width="900" height="623" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Taking a client to source fixtures for a £1.8m build, with a bespoke staircase made for them."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-45.webp" width="900" height="568" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Appointed on a £1.2m renovation in the Cotswolds, on the third tender with a new architect practice."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-35.webp" width="900" height="247" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won 7 projects in a week, now fully booked until Christmas."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-55.webp" width="900" height="232" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won the biggest project yet, £705k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-27.webp" width="900" height="335" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Started a second £1m-plus project and finalising another new build."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-48.webp" width="900" height="377" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a new build around £400k and 99% there on a million pound project."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-49.webp" width="900" height="504" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: The only contractor working with the architect and QS on a £1.4m project, and picked up a £100k extension."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-50.webp" width="900" height="322" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Signed a £650k contract, and 3 big tenders arrived last week."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-05.webp" width="359" height="154" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A great win at the weekend, after being in a really tricky place 18 months ago."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-04.webp" width="900" height="279" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won a £380k Passivhaus fit out on a 6,000 sq ft home, very local."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-29.webp" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A full refurb at £500k on a mews house in Holland Park."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-30.webp" width="900" height="224" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: A £500k mews house refurb in South Kensington."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-31.webp" width="900" height="288" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Submitted the largest tender return yet, £960k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-56.webp" width="900" height="340" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won the biggest project to date, £490k plus VAT."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-57.webp" width="900" height="249" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Secured the biggest project to date, £350k."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-32.webp" width="900" height="256" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £250k pool house project in Surrey."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-33.webp" width="900" height="391" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £305k-plus extension and renovation in a new area, with an architect nurtured for 6 to 9 months."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-54.webp" width="900" height="244" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Largest contract to date starting today, £250k-plus."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-11.webp" width="900" height="266" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Land development secured, turnover up 30% last month, new project secured."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-34.webp" width="900" height="398" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Planning pre-approved a 6-house development in the green belt."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-09.webp" width="900" height="328" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Locked in a deal with an investor to develop 2 new builds with a local land purchase."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-07.webp" width="700" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Reaching out to land agents now adds a £400k new build project to the pipeline."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-16.webp" width="432" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Tender sent out for £1.2m plus VAT, shortlisted for a £350k extension, £400k new build to start in 6 months."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-13.webp" width="900" height="247" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £440k new build, just need to sign the contract."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-17.webp" width="632" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Estimating a Kensington project around £500k plus VAT, and won two smaller projects."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-61.webp" width="900" height="331" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won another £200k contract starting on 15 September."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-60.webp" width="900" height="779" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Won a £200k-plus project and shortlisted for a £550k-plus project after a lull."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-02.webp" width="900" height="281" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won Specifier of the Year at Designerati."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-36.webp" width="900" height="237" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just won another award at the KBB awards."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-58.webp" width="900" height="410" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Contract signed on a project in Cobham, a week after being introduced."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-01.webp" width="900" height="244" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Just turned over the largest month to date."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-06.webp" width="704" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Spoke about the business in front of 50 strangers at a first networking event."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-12.webp" width="900" height="321" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Connected with new architects and interior designers, nurture sequence set up, biggest tender to date."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-14.webp" width="900" height="285" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New site manager started, office refurbishment nearly finished, brochure nearly complete."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-15.webp" width="900" height="188" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New project won with a new client."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-18.webp" width="900" height="288" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Working through the biggest project yet, and priced a new vets practice build."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-19.webp" width="768" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Started the course, secured a new project for March, built relationships with 2 new architects."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-20.webp" width="868" height="360" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Handed over 3 projects on time, connected with two new architects, invited to tender for two projects."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-38.webp" width="900" height="387" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Second stage of a tender with a new architectural firm, and a tender sent for a £1.5m project."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-39.webp" width="900" height="329" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Bought a first heritage project, a local landmark, and sold 2 houses."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-62.webp" width="900" height="331" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: New hire starting this month and tendering 2 projects over £1m."></figure>
+      <figure class="win-shot"><img src="/build-better/wins/win-37.webp" width="900" height="1135" loading="lazy" decoding="async" alt="Message in the members' WhatsApp group: Thank you to the group and to Develop Coaching for the support and encouragement."></figure>
     </div>
     <p class="proof-note">Members' own words, shared in the members' group. Self-reported. Individual results vary.</p>
+  </div>
+</section>
+
+<!-- ================= 6c. GOOGLE REVIEWS ================= -->
+<!-- Screenshots of Develop Coaching's own Google reviews, captured 24 Nov 2026 from the
+     Google Business Profile. All 64 written five-star reviews, strongest first. Left out:
+     one 3-star review, eight star-only ratings with no text, and one review by a team
+     member. Names and photos are as the reviewers posted them publicly on Google. -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <h2>Rated 5.0 on Google</h2>
+      <p>Straight from our Google reviews.</p>
+    </div>
+    <div class="reviews-wall" data-masonry>
+      <figure class="review-shot"><img src="/build-better/reviews/review-01.webp" width="784" height="437" loading="lazy" decoding="async" alt="Five-star Google review from Will Mcdermott: Six months in, it helped turn my business around, and our profits reflect it."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-02.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Ellis Wiseman: We now have a two-year pipeline of work in place."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-03.webp" width="784" height="478" loading="lazy" decoding="async" alt="Five-star Google review from Jonathan Andrews, Andrews Group: Ten weeks in: a complete shift in mindset, new branding, all new systems in place."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-04.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Steve Massey: Greg helped me focus on bigger goals and set up the business to increase turnover and profits."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-05.webp" width="784" height="437" loading="lazy" decoding="async" alt="Five-star Google review from Greg Partridge: Helped boost profits, gave more family time, and made running the business enjoyable again."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-06.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Greg Timms: Now running a more efficient and profitable business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-07.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Martin Hotham: Training that changed our business for the better."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-08.webp" width="784" height="519" loading="lazy" decoding="async" alt="Five-star Google review from R Darlow: Clicked the ad expecting another trainer, read the book in a day."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-09.webp" width="784" height="1911" loading="lazy" decoding="async" alt="Five-star Google review from Alabi Kayode: A clear roadmap for growing a construction business while getting time back."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-10.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Kayleigh: So helpful in implementing changes we didn&#x27;t even know existed."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-11.webp" width="784" height="519" loading="lazy" decoding="async" alt="Five-star Google review from Alexandra Powell: His DEVELOP framework is helping us streamline our processes."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-12.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Sean Ryan: On the Mastermind for a few years and can see the improvement in my company."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-13.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Tim Day: If you want to get off the tools, act now."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-14.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Sophie and Neil Harrold: Came in burnt out, leaving with fresh energy to make positive changes."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-15.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Robert McGill: Lots of new contracts and exciting ideas to work on."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-16.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from David Darby: Great advice, great strategy, from amazing people."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-17.webp" width="784" height="601" loading="lazy" decoding="async" alt="Five-star Google review from A Rahat: Not your usual business coach."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-18.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Craig Biggadike: Greg can relate to problems on site and how to solve them."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-19.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Mostyn Pritchard: A must do for anyone in construction looking to scale."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-20.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Aileen Andrews: The Build and Scale Summit 2026 was absolutely unbelievable."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-21.webp" width="784" height="519" loading="lazy" decoding="async" alt="Five-star Google review from James Wilcock: Just joined, brilliant to meet the team at the Manchester workshop."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-22.webp" width="784" height="396" loading="lazy" decoding="async" alt="Five-star Google review from Ashley Honeyman: Really good info and no pushy sales."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-23.webp" width="784" height="683" loading="lazy" decoding="async" alt="Five-star Google review from bwillow: Information overload without the overwhelm."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-24.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Roxanne Davies: Practical tools I can apply immediately."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-25.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Miroslav Brezoev: Going home with ideas I&#x27;d never thought of."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-26.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Tim Charles: Jam packed full of actionable insights."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-27.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Jim Prior: Tips we could implement straight away."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-28.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Sean MacDonald: Helped me identify the areas I need to focus on."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-29.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Jordan Stubley: Really great to be working with Greg."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-30.webp" width="784" height="314" loading="lazy" decoding="async" alt="Five-star Google review from Paul Murphy: Massively inspiring."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-31.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Bradley Jackson: Loads of useful business tools to expand my business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-32.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Robert Biegala: Learned how to reach potential leads and market my business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-33.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Katie Doyle: Lots of information I&#x27;m using right now."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-34.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Martin McLeish: The right way to scale a construction business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-35.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Matthew McFarlane: Well worth doing the course."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-36.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Vitezslav Hovorka: How to scale and systemise a construction business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-37.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Taylor Roofs: A good reminder to go back to the basics of business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-38.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Michael Angelo: Greg&#x27;s ability to simplify complex business issues."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-39.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Catherine Day: A new network of like-minded construction experts."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-40.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Mike Calvert: Lots of value to take away."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-41.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Krzysztof Poplawski: Worth joining for anyone who wants to grow their business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-42.webp" width="784" height="273" loading="lazy" decoding="async" alt="Five-star Google review from Nick Cahill: Felt inspired and very excited about the future."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-43.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Nick Cahill: Yet another amazing day."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-44.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Chris James: Great insights into how AI can help construction companies."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-45.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Michael Murphy: Really informative AI webinar."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-46.webp" width="784" height="355" loading="lazy" decoding="async" alt="Five-star Google review from Lewis Hunter: He really knows his stuff."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-47.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Karl Gosbee: So many take aways and inspirational stories."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-48.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from John Eastwood: Really insightful, great community."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-49.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Adam Cook: Incredible environment."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-50.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Richard Jenkinson: Easy to understand and very motivational."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-51.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Ivan Cheprak: Packed with highly useful marketing information."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-52.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from William Loughridge: Excellent advice on running a construction business."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-53.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Jason Burns: Really beneficial, 100% recommend."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-54.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Martin Durham: Highly motivational in depth seminar."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-55.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Ajaz Mustafa: Very motivational and informative."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-56.webp" width="784" height="233" loading="lazy" decoding="async" alt="Five-star Google review from Robert Armstrong: Really useful tips and ideas."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-57.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Ben Owen: Loads of information to put to use."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-58.webp" width="784" height="204" loading="lazy" decoding="async" alt="Five-star Google review from Andrew: Lots of value and information."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-59.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Deji Oluyemi: Very helpful session."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-60.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Sharif El-Sayed: A really insightful programme."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-61.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Ajaxamillion: Top coaching, top support."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-62.webp" width="784" height="204" loading="lazy" decoding="async" alt="Five-star Google review from Krishan Pattni: Inspirational session."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-63.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Serge: Great event."></figure>
+      <figure class="review-shot"><img src="/build-better/reviews/review-64.webp" width="784" height="207" loading="lazy" decoding="async" alt="Five-star Google review from Richard Saunders: Great talk."></figure>
+    </div>
+    <p class="proof-note"><a href="https://www.google.com/maps/place/?q=place_id:ChIJ-Xs99F8FdkgRYoC1NcPV18c" target="_blank" rel="noopener">See them all on Google</a></p>
   </div>
 </section>
 
@@ -1243,5 +1441,36 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
 })();
 </script>
 
+<script>
+/* Proof walls (members' wins, Google reviews): keep the strongest across the top on wide
+   screens. Each item goes into whichever column is shortest, in page order. On a phone it
+   stays one column in page order. Heights come from the width/height attributes, so
+   nothing waits on the images loading. */
+(function(){
+  [].forEach.call(document.querySelectorAll('[data-masonry]'), function(wall){
+    var shots = [].slice.call(wall.children);
+    var now = 0;
+    function want(){ return window.innerWidth >= 1000 ? 3 : window.innerWidth >= 640 ? 2 : 1; }
+    function lay(){
+      var n = want();
+      if (n === now) return;
+      now = n;
+      wall.innerHTML = '';
+      if (n === 1) { wall.classList.remove('is-masonry'); shots.forEach(function(f){ wall.appendChild(f); }); return; }
+      wall.classList.add('is-masonry');
+      var cols = [], h = [];
+      for (var i = 0; i < n; i++) { var d = document.createElement('div'); d.className = 'wins-col'; wall.appendChild(d); cols.push(d); h.push(0); }
+      shots.forEach(function(f){
+        var img = f.querySelector('img');
+        var k = h.indexOf(Math.min.apply(null, h));
+        cols[k].appendChild(f);
+        h[k] += (img.getAttribute('height') / img.getAttribute('width')) + 0.06;
+      });
+    }
+    lay();
+    window.addEventListener('resize', lay);
+  });
+})();
+</script>
 </body>
 </html>
