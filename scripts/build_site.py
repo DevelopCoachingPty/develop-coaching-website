@@ -6,7 +6,12 @@
   works on any preview domain, EXCEPT canonical links, og:/twitter: meta and
   JSON-LD structured data (those should keep the real domain for SEO).
 - Emits vercel.json with the legacy redirects recorded from the live site.
+- Leaves every page in PROTECTED_PAGES untouched, including when a snapshot
+  would write to the same path.
+- Refuses to delete any other file under www/ that this run will not
+  regenerate, unless --allow-delete is given.
 """
+import argparse
 import json
 import os
 import re
@@ -19,6 +24,19 @@ import comau_redirects
 REF = "export/reference"
 OUT = "www"
 DOMAIN = "https://develop-coaching.com"
+
+# Hand-written pages a snapshot rebuild must never delete or overwrite.
+# They were added after the July 2026 reference export, so export/reference
+# has no copy of them. Paths are relative to www/, with forward slashes.
+PROTECTED_PAGES = (
+    "software/index.html",
+    "software/costtracker-pro/index.html",
+    "software/flowbuild/index.html",
+    "software/architect-attractor/index.html",
+    "software/sitesafe-pro/index.html",
+    "software/muster/index.html",
+    "software/jarvis/index.html",
+)
 
 # Public base of the dc-website-media Vercel Blob store (team develop-coaching,
 # region lhr1, store_GgdzvmzaZ1n7EO4I). The 93 podcast mp3s and testimonial mp4s
@@ -348,43 +366,134 @@ def absolutise_lightbox_urls(html: str) -> str:
     return LIGHTBOX_URL_RE.sub(fix, html)
 
 
-def out_path(fname: str) -> str:
+def page_relpath(fname: str) -> str:
+    """Reference filename -> path relative to www/, using forward slashes."""
     stem = fname[:-5]  # drop .html
     if stem == "__home":
-        return os.path.join(OUT, "index.html")
-    parts = stem.split("__")
-    return os.path.join(OUT, *parts, "index.html")
+        return "index.html"
+    return "/".join(stem.split("__") + ["index.html"])
 
 
-def main():
-    # Remove only generated HTML pages; keep mirrored assets (wp-content etc.)
-    if os.path.exists(OUT):
-        for root, dirs, files in os.walk(OUT):
-            rel = os.path.relpath(root, OUT)
-            if rel.split(os.sep)[0] in ("wp-content", "wp-includes", "feeds"):
-                dirs[:] = []
+def out_path(fname: str) -> str:
+    return os.path.join(OUT, *page_relpath(fname).split("/"))
+
+
+def generated_output_paths(ref_dir: str) -> set:
+    """www-relative paths this run writes: snapshot pages plus vercel.json."""
+    paths = {
+        page_relpath(fname)
+        for fname in os.listdir(ref_dir)
+        if fname.endswith(".html")
+    }
+    paths.add("vercel.json")
+    return paths
+
+
+def cleanup_candidates(out_dir: str) -> list:
+    """www-relative files the rebuild's cleanup walk would remove.
+
+    Same walk as before: index.html and vercel.json outside wp-content,
+    wp-includes and feeds, except the hand-built search page. Mirrored
+    assets are not candidates.
+    """
+    if not os.path.isdir(out_dir):
+        return []
+    found = []
+    for root, dirs, files in os.walk(out_dir):
+        rel = os.path.relpath(root, out_dir)
+        if rel.split(os.sep)[0] in ("wp-content", "wp-includes", "feeds"):
+            dirs[:] = []
+            continue
+        for name in files:
+            rel_file = os.path.relpath(os.path.join(root, name), out_dir)
+            rel_file = rel_file.replace(os.sep, "/")
+            # /search/ is a hand-built static tool, not a WordPress export.
+            # Preserve it when regenerating the snapshot-owned pages.
+            if rel_file == "search/index.html":
                 continue
-            for f in files:
-                rel_file = os.path.relpath(os.path.join(root, f), OUT)
-                # /search/ is a hand-built static tool, not a WordPress export.
-                # Preserve it when regenerating the snapshot-owned pages.
-                if rel_file == os.path.join("search", "index.html"):
-                    continue
-                if f == "index.html" or f == "vercel.json":
-                    os.remove(os.path.join(root, f))
+            if name == "index.html" or name == "vercel.json":
+                found.append(rel_file)
+    return found
+
+
+def refuse_unexpected_deletes(paths) -> None:
+    ordered = sorted(paths)
+    listing = "\n".join(f"  {path}" for path in ordered)
+    raise SystemExit(
+        "Refusing to delete files under www/ that this build did not generate "
+        f"({len(ordered)}):\n"
+        f"{listing}\n"
+        "Nothing was changed. Pass --allow-delete to remove those files. "
+        "Pages on the protected list are never deleted or overwritten."
+    )
+
+
+def cleanup_output(out_dir: str, ref_dir: str, allow_delete: bool) -> list:
+    """Delete pages this run will regenerate. Never touch PROTECTED_PAGES.
+
+    Stops before deleting anything if a file is neither protected nor part of
+    this run's generated set, unless allow_delete is set. Returns protected
+    paths that were present and kept.
+    """
+    generated = generated_output_paths(ref_dir)
+    kept = []
+    rewrite = []
+    unexpected = []
+    for rel in cleanup_candidates(out_dir):
+        if rel in PROTECTED_PAGES:
+            kept.append(rel)
+        elif rel in generated:
+            rewrite.append(rel)
+        else:
+            unexpected.append(rel)
+    if unexpected and not allow_delete:
+        refuse_unexpected_deletes(unexpected)
+    for rel in rewrite + (unexpected if allow_delete else []):
+        os.remove(os.path.join(out_dir, *rel.split("/")))
+    return kept
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Build the static site in www/ from the reference snapshots."
+    )
+    parser.add_argument(
+        "--allow-delete",
+        action="store_true",
+        help=(
+            "Delete www/ files that this run will not regenerate. "
+            "Protected pages are still kept."
+        ),
+    )
+    args = parser.parse_args(argv)
+    discovery_removed.clear()
+
+    kept_protected = cleanup_output(OUT, REF, args.allow_delete)
     os.makedirs(OUT, exist_ok=True)
 
     count = 0
+    skipped_protected = []
     for fname in sorted(os.listdir(REF)):
         if not fname.endswith(".html"):
             continue
-        html = open(os.path.join(REF, fname), encoding="utf-8", errors="ignore").read()
+        rel = page_relpath(fname)
+        if rel in PROTECTED_PAGES:
+            skipped_protected.append(rel)
+            continue
+        with open(os.path.join(REF, fname), encoding="utf-8", errors="ignore") as source:
+            html = source.read()
         dest = out_path(fname)
         relative_path = os.path.relpath(dest, OUT).replace(os.sep, "/")
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8") as f:
             f.write(rewrite(html, relative_path))
         count += 1
+
+    untouched = sorted(set(kept_protected) | set(skipped_protected))
+    if untouched:
+        print("protected pages left untouched:")
+        for rel in untouched:
+            print(f"   {rel}")
 
     # vercel.json: trailing slashes like WordPress, plus legacy redirects
     redirects = []
