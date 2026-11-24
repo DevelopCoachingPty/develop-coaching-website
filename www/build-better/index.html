@@ -532,9 +532,9 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
            and sets the minutes in the label above to the real length of that cut. -->
       <button type="button" class="vsl-poster" id="vslPoster"
         data-src="https://drive.google.com/file/d/1JDxVQlHH4X9MAONQ1etRp4fxYzffC3k5/preview?autoplay=1"
-        aria-label="Play the video: the busy trap, how UK builders get out">
+        aria-label="Play the video: the busy trap, how UK builders win">
         <img src="/build-better/vsl-cover.jpg" width="1600" height="900"
-          alt="Greg Wilkes. The busy trap: how UK builders get out. Watch the video." fetchpriority="high">
+          alt="Greg Wilkes. The busy trap: how UK builders win. Watch the video." fetchpriority="high">
       </button>
     </div>
   </div>
@@ -708,7 +708,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   <div class="container">
     <div class="section-head">
       <h2>Real builders. Real results.</h2>
-      <p>25 members, in their own words. Tap a tile to watch.</p>
+      <p>24 members, in their own words. Tap a tile to watch.</p>
     </div>
 
     <div class="story-grid">
@@ -808,7 +808,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat">Their last coach, in their words, "promised the earth and didn't really deliver". More structure since, and ready for bigger projects.</p>
         </div>
       </article>
-      <!-- The other 13 client wins videos, so all 25 sit together here (Chloe, 24 Nov 2026). -->
+      <!-- 12 more client wins videos (Chloe, 24 Nov 2026). Sophie and Neil left out so the grid is an even 24 (Greg). -->
       <article class="story reveal">
         <div class="story-video" data-yt="ecKFCE1r-18" data-title="Marek's story"></div>
         <div class="story-body">
@@ -903,14 +903,6 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
           <p class="stat"><em>Structure and community</em></p>
           <div class="who">Paul Murphy</div>
           <p class="summary">Paul says stronger structure and organisation helped the family-run business present itself more professionally, while the member community made business problems easier to solve.</p>
-        </div>
-      </article>
-      <article class="story reveal">
-        <div class="story-video" data-yt="IZYls1vXkQo" data-title="Sophie and Neil's story"></div>
-        <div class="story-body">
-          <p class="stat"><em>Focus</em></p>
-          <div class="who">Sophie and Neil</div>
-          <p class="summary">Clearer targets, stronger organisation and peer support helped Sophie and Neil sharpen their business focus.</p>
         </div>
       </article>
     </div>
@@ -1397,7 +1389,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   if (poster) poster.addEventListener('click', function(){
     var f = document.createElement('iframe');
     f.src = poster.getAttribute('data-src');
-    f.title = 'The busy trap: how UK builders get out';
+    f.title = 'The busy trap: how UK builders win';
     f.allow = 'autoplay; fullscreen';
     f.allowFullscreen = true;
     poster.parentNode.replaceChild(f, poster);
