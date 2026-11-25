@@ -9,6 +9,8 @@
 <title>Builders: better jobs, more profit | Develop Coaching</title>
 <meta name="description" content="For UK builders turning over £750k to £5m. Watch how other builders fixed their profit and won better jobs, then apply for a free 15-minute Scale Session.">
 
+<link rel="preload" as="image" href="/vsl/event-room-1.jpg">
+<link rel="preload" as="image" href="/vsl/event-room-2.jpg">
 <link rel="canonical" href="https://develop-coaching.com/vsl/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://develop-coaching.com/vsl/">
@@ -20,12 +22,12 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Google tag (consent-gated, same pattern as /book-a-call/) -->
-<script type="text/plain" data-dc-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-EX5H3P27NP"></script>
+<script type="text/plain" data-dc-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-PXT2VCVFLW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-EX5H3P27NP');
+  gtag('config', 'G-PXT2VCVFLW');
 </script>
 
 <!-- Meta Pixel 454680953864989.
@@ -1183,6 +1185,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
   <div class="container">
     <p>&copy; 2026 Develop Coaching · develop-coaching.com</p>
     <p style="margin-top:6px;">Questions? <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a></p>
+    <p style="margin-top:6px;"><a href="/privacy/">Privacy Policy</a> · <a href="#" class="cky-banner-element dc-cookie-settings">Cookie settings</a></p>
   </div>
 </footer>
 
@@ -1354,7 +1357,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
     var f = document.createElement('iframe');
     f.src = poster.getAttribute('data-src') + '&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
     f.title = 'The busy trap: how UK builders win';
-    f.allow = 'autoplay; fullscreen';
+    f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
     poster.parentNode.replaceChild(f, poster);
     function attachTracking(){
@@ -1384,7 +1387,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
           reportProgress(100);
         }
       }
-      new YT.Player(f, {events: {
+      new YT.Player(f, {host: 'https://www.youtube-nocookie.com', events: {
         onReady: function(e){ update(e.target, e.target.getPlayerState()); },
         onStateChange: function(e){ update(e.target, e.data); }
       }});
