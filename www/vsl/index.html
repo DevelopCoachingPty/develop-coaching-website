@@ -45,7 +45,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '454680953864989');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
+fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -370,7 +370,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
     .reveal { opacity: 1; transform: none; }
   }
 
-  /* ---------- build-better additions ---------- */
+  /* ---------- vsl additions ---------- */
   .value-total-single { grid-template-columns: 1fr !important; }
   .cred-strip .cs-long { display: block; flex-basis: 100%; text-align: center; }
   .cred-strip .cs-long::before { margin-right: 8px; }
@@ -1213,7 +1213,21 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
 
   function showError(msg){ errEl.textContent = msg; errEl.style.display = msg ? 'block' : 'none'; }
 
+  var started = false;
+  var reportedSteps = new Set();
+  form.addEventListener('change', function(e){
+    if (started || e.target.name !== 'work_source' || !e.target.checked) return;
+    started = true;
+    if (window.gtag) gtag('event', 'vsl_form_start');
+    if (window.fbq) fbq('trackCustom', 'StartApplication');
+  });
+
   function show(i, focus){
+    var step = i + 1;
+    if (step > 1 && !reportedSteps.has(step)) {
+      reportedSteps.add(step);
+      if (window.gtag) gtag('event', 'vsl_form_step', {step: step});
+    }
     current = i;
     steps.forEach(function(s, n){ s.classList.toggle('active', n === i); });
     bar.style.width = ((i + 1) / total * 100) + '%';
@@ -1279,7 +1293,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
       route: notQualified ? 'free-training' : 'qualified',
-      source: 'vsl-application-build-better'
+      source: 'vsl-application'
     };
     Object.keys(carried).forEach(function(k){ data[k] = carried[k]; });
     // First-touch attribution (enquiry-attribution.js): landing page, UTMs,
@@ -1302,13 +1316,13 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
 
     if (window.fbq) {
       if (notQualified) fbq('trackCustom', 'ApplicationNotQualified');
-      else fbq('track', 'Lead', {content_name: 'VSL Application (build-better)'});
+      else fbq('track', 'Lead', {content_name: 'VSL Application (vsl)'});
     }
     if (window.gtag) {
       gtag('event', 'event_button_click', {button_name: notQualified ? 'vsl_application_not_qualified' : 'vsl_application_qualified'});
     }
     if (window.dcAttribution) {
-      window.dcAttribution.lead({form_id: 'build-better-application', form_name: 'VSL application', lead_type: notQualified ? 'application_not_qualified' : 'application'});
+      window.dcAttribution.lead({form_id: 'vsl-application', form_name: 'VSL application', lead_type: notQualified ? 'application_not_qualified' : 'application'});
     }
 
     // Contact details travel in sessionStorage, not the page URL, so they stay
@@ -1338,11 +1352,50 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (build-better)'});
   var poster = document.getElementById('vslPoster');
   if (poster) poster.addEventListener('click', function(){
     var f = document.createElement('iframe');
-    f.src = poster.getAttribute('data-src');
+    f.src = poster.getAttribute('data-src') + '&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
     f.title = 'The busy trap: how UK builders win';
     f.allow = 'autoplay; fullscreen';
     f.allowFullscreen = true;
     poster.parentNode.replaceChild(f, poster);
+    function attachTracking(){
+      var played = false;
+      var nextPercent = 25;
+      var timer;
+      function reportProgress(percent){
+        while (nextPercent <= 100 && nextPercent <= percent) {
+          if (window.gtag) gtag('event', 'vsl_progress', {percent: nextPercent});
+          if (window.fbq) fbq('trackCustom', 'VSLProgress', {percent: nextPercent});
+          nextPercent += 25;
+        }
+      }
+      function update(player, state){
+        clearInterval(timer);
+        if (state === YT.PlayerState.PLAYING) {
+          if (!played) {
+            played = true;
+            if (window.gtag) gtag('event', 'vsl_play');
+            if (window.fbq) fbq('trackCustom', 'VSLPlay');
+          }
+          timer = setInterval(function(){
+            var duration = player.getDuration();
+            if (duration > 0) reportProgress(Math.min(99, 100 * player.getCurrentTime() / duration));
+          }, 500);
+        } else if (state === YT.PlayerState.ENDED && played) {
+          reportProgress(100);
+        }
+      }
+      new YT.Player(f, {events: {
+        onReady: function(e){ update(e.target, e.target.getPlayerState()); },
+        onStateChange: function(e){ update(e.target, e.data); }
+      }});
+    }
+    if (window.YT && window.YT.Player) attachTracking();
+    else {
+      window.onYouTubeIframeAPIReady = attachTracking;
+      var script = document.createElement('script');
+      script.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(script);
+    }
     if (window.gtag) gtag('event', 'event_button_click', {button_name: 'vsl_play'});
   });
 
