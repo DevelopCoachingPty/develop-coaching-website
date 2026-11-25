@@ -3055,6 +3055,36 @@
    "statusCode": 301
   },
   {
+   "source": "/busy-trap",
+   "destination": "/vsl/",
+   "statusCode": 301
+  },
+  {
+   "source": "/busy-trap/",
+   "destination": "/vsl/",
+   "statusCode": 301
+  },
+  {
+   "source": "/busy-trap/:path(.+)",
+   "destination": "/vsl/:path",
+   "statusCode": 301
+  },
+  {
+   "source": "/build-better",
+   "destination": "/vsl/",
+   "statusCode": 301
+  },
+  {
+   "source": "/build-better/",
+   "destination": "/vsl/",
+   "statusCode": 301
+  },
+  {
+   "source": "/build-better/:path(.+)",
+   "destination": "/vsl/:path",
+   "statusCode": 301
+  },
+  {
    "source": "/2021-builders-trades",
    "destination": "/the-construction-company-marketing-strategy-to-scale-past-1m/",
    "permanent": true
