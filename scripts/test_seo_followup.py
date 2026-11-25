@@ -20,21 +20,11 @@ class SeoFollowupTests(unittest.TestCase):
         # qualified sources (never fire on developcoaching.com.au).
         hosts = ('https://develop-coaching.com', 'https://www.develop-coaching.com')
         paths = {'/my-story', '/case-study', '/contact-2', '/contact-2/'}
-        vsl_paths = {old + suffix for old in ('/busy-trap', '/build-better')
-                     for suffix in ('', '/book', '/booked', '/free-training')}
-        paths.update(vsl_paths)
-        self.assertEqual(len(rules), len(hosts) * len(paths))
+        self.assertEqual(len(rules), 8)
         self.assertEqual({r['source'] for r in rules}, {h + p for h in hosts for p in paths})
         manual = json.loads((ROOT / 'export/manual-redirects.json').read_text())
         for rule in rules:
             path = rule['source'].split('.com', 1)[1]
-            if path in vsl_paths:
-                suffix = path.partition('/')[2].partition('/')[2]
-                self.assertEqual(rule['destination'], '/vsl/' + (suffix + '/' if suffix else ''))
-                self.assertEqual(rule['statusCode'], 301)
-                self.assertIs(rule['caseSensitive'], True)
-                self.assertIs(rule['preserveQueryParams'], True)
-                continue
             expected = '/contact/' if path.startswith('/contact-2') else '/about-greg-wilkes/'
             self.assertEqual(rule['destination'], expected)
             self.assertIs(rule['permanent'], True)
