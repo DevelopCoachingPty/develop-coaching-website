@@ -1277,6 +1277,19 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
     if (params.get(k)) carried[k] = params.get(k);
   });
 
+  // FlowBuild's account country is Australia, so a UK mobile typed as 07... was
+  // saved as +61. Send UK numbers in +44 form. A number typed with + or 00 is
+  // left as the person wrote it.
+  function ukPhone(raw){
+    var p = String(raw || '').trim().replace(/[\s().-]/g, '');
+    if (/^\+/.test(p)) return p;
+    if (/^00\d/.test(p)) return '+' + p.slice(2);
+    if (/^44\d{9,10}$/.test(p)) return '+' + p;
+    if (/^0\d{9,10}$/.test(p)) return '+44' + p.slice(1);
+    if (/^7\d{9}$/.test(p)) return '+44' + p;
+    return String(raw || '').trim();
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if (!validate(current)) return;
@@ -1294,7 +1307,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
       first_name: form.first_name.value.trim(),
       last_name: form.last_name.value.trim(),
       email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
+      phone: ukPhone(form.phone.value),
       route: notQualified ? 'free-training' : 'qualified',
       source: 'vsl-application'
     };
