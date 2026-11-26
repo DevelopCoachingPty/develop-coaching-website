@@ -600,7 +600,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
           <button type="button" class="btn" id="nextBtn">Next</button>
           <button type="submit" class="btn" id="submitBtn" hidden>See if I qualify</button>
         </div>
-        <p class="consent" id="consentLine" hidden>By applying you agree we can call, text or email you about your application. We never share your details.</p>
+        <p class="consent" id="consentLine" hidden>By applying you agree we can call, text or email you about your application. Some of your details are shared with Meta (see our <a href="/privacy/">Privacy Policy</a>).</p>
       </form>
     </div>
   </div>
@@ -1199,6 +1199,10 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
     // not) with all five steps, the route, and the UTMs. Empty = the form
     // still routes correctly, but the answers are NOT saved anywhere.
     WEBHOOK_URL: 'https://services.leadconnectorhq.com/hooks/kqwiKif2m2fvapw6tkq0/webhook-trigger/46f1f6b0-4812-4333-aa11-e1ed5c2a2f8b',
+    // Meta Conversions API receiver (Infra). Empty = no server POST.
+    // Gets qualified applications only, with the same event_id as the
+    // browser Lead so Meta counts the pair once.
+    CAPI_URL: '',
     QUALIFIED_PAGE: '/vsl/book/',
     NOT_QUALIFIED_PAGE: '/vsl/free-training/'
   };
@@ -1293,6 +1297,28 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
   }
   window.dcUkPhone = ukPhone;
 
+  // One id per qualified submit, shared by the browser Lead and the server
+  // event so Meta can de-duplicate them.
+  function newEventId(){
+    try {
+      if (window.crypto && crypto.randomUUID) return 'vsl-' + crypto.randomUUID();
+    } catch (err) {}
+    return 'vsl-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 12);
+  }
+
+  function readCookie(name){
+    var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+    if (!m) return '';
+    try { return decodeURIComponent(m[1]); } catch (err) { return m[1]; }
+  }
+
+  // Meta's browser ids (_fbp, _fbc) are only read when the visitor has
+  // accepted advertising cookies in the CookieYes banner (via dc-consent.js).
+  function adConsent(){
+    try { return !!(window.dcConsent && window.dcConsent.allowed('advertising')); }
+    catch (err) { return false; }
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if (!validate(current)) return;
@@ -1333,9 +1359,33 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
       } catch (err) { /* never block the funnel on the webhook */ }
     }
 
+    var eventId = notQualified ? '' : newEventId();
+
+    if (!notQualified && CONFIG.CAPI_URL) {
+      try {
+        var consented = adConsent();
+        fetch(CONFIG.CAPI_URL, {
+          method: 'POST', keepalive: true,
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            event_id: eventId,
+            event_time: Math.floor(Date.now() / 1000),
+            event_source_url: location.href,
+            email: data.email,
+            phone: data.phone,
+            first_name: data.first_name,
+            last_name: data.last_name,
+            fbp: consented ? readCookie('_fbp') : '',
+            fbc: consented ? readCookie('_fbc') : '',
+            fbclid: params.get('fbclid') || ''
+          })
+        }).catch(function(){});
+      } catch (err) { /* never block the funnel on the Conversions API */ }
+    }
+
     if (window.fbq) {
       if (notQualified) fbq('trackCustom', 'ApplicationNotQualified');
-      else fbq('track', 'Lead', {content_name: 'VSL Application (vsl)'});
+      else fbq('track', 'Lead', {content_name: 'VSL Application (vsl)'}, {eventID: eventId});
     }
     if (window.gtag) {
       gtag('event', 'event_button_click', {button_name: notQualified ? 'vsl_application_not_qualified' : 'vsl_application_qualified'});

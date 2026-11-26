@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "www/privacy/index.html"
 BODY = ROOT / "content/privacy-policy-body.html"
 SITEMAP = ROOT / "www/page-sitemap.xml"
-MODIFIED = "2026-10-28T05:00:00+00:00"
+MODIFIED = "2026-11-27T05:00:00+00:00"
 TITLE = "Privacy and Cookie Policy"
 DESCRIPTION = (
     "How Develop Coaching Pty Ltd collects, uses and protects your data, "
