@@ -14,7 +14,7 @@
 OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/privacy-page-open-questions.md
 -->
 
-<p><em>Last updated: 28 October 2026</em></p>
+<p><em>Last updated: 27 November 2026</em></p>
 
 <h2 id="who-we-are">1. Who we are</h2>
 <p>Develop Coaching Pty Ltd (&ldquo;we&rdquo;, &ldquo;us&rdquo;) runs develop-coaching.com (&ldquo;the site&rdquo;) and the software at its sub-sites. We are an Australian company (ACN 666 725 659, ABN 47 666 725 659). Our postal address is PO Box 181, Narrabeen NSW 2101, Australia. You can contact us at <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a>.</p>
@@ -46,7 +46,8 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <tr><td>Answer your messages and give support</td><td>To help you</td><td>Contract and legitimate interests</td></tr>
 <tr><td>Keep the site and software secure</td><td>Security and preventing abuse</td><td>Legitimate interests</td></tr>
 <tr><td>Send you news and offers about our services</td><td>Marketing</td><td>Your consent or, for business contacts, our legitimate interests. You can opt out at any time.</td></tr>
-<tr><td>Measure and improve the site, and measure our adverts</td><td>Understanding visitors</td><td>Your consent, given through the cookie banner</td></tr>
+<tr><td>Measure and improve the site, and measure our adverts using browser cookies</td><td>Understanding visitors</td><td>Your consent, given through the cookie banner</td></tr>
+<tr><td>Send qualifying applications and Scale Session bookings from our servers to Meta</td><td>Measuring our adverts and reaching similar businesses</td><td>Legitimate interests. You can object at any time (see section 6).</td></tr>
 </tbody></table>
 <!-- OPEN: marketing legal basis per list (consent or legitimate interests). Lawyer to confirm. The old text said every submitter "agrees to be contacted by phone". That wording was removed because it is not a valid way to get consent. -->
 <p>If Australian law applies to you, we collect and use your personal information for these same purposes and handle it in line with the Australian Privacy Principles.</p>
@@ -57,21 +58,23 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <p>If you give us your details, we may contact you by email, phone or text about our services. We will not send you spam. You can opt out at any time by using the unsubscribe link in any email or by emailing <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a>. We do not sell your personal data.</p>
 
 <h2 id="who-we-share-with">6. Who we share your data with</h2>
-<p>We use these companies to run our site and services. They may only use your data to do that work for us, or for their own purposes where their own policies say so (the tracking and advertising tools in section 11 only run if you accept cookies).</p>
+<p>We use these companies to run our site and services. They may only use your data to do that work for us, or for their own purposes where their own policies say so (the browser tracking and advertising tools in section 11 only run if you accept cookies; server-side sharing with Meta is explained below).</p>
 <table>
 <thead><tr><th>Provider</th><th>What for</th></tr></thead>
 <tbody>
 <tr><td>Vercel</td><td>Hosting this site and our software (Cost Tracker Pro servers are in Mumbai, India)</td></tr>
 <tr><td>Stripe</td><td>Payments, invoices and billing</td></tr>
-<tr><td>FlowBuild (built on GoHighLevel)</td><td>Website forms, booking calendars, email and text messages</td></tr>
+<tr><td>FlowBuild (built on GoHighLevel)</td><td>Website forms, booking calendars, email and text messages, and sending Scale Session booking events to Meta</td></tr>
 <tr><td>ActiveCampaign</td><td>Email and customer records. With your consent, it also links visits to this site to your contact record.</td></tr>
 <tr><td>Supabase</td><td>Database, sign-in and file storage for our software (Cost Tracker Pro data is in Mumbai, India)</td></tr>
 <tr><td>Anthropic, OpenAI and Google</td><td>AI features in our software, such as reading documents and answering questions about your jobs</td></tr>
 <tr><td>Intuit (QuickBooks) and Xero</td><td>Accounting links that you switch on</td></tr>
-<tr><td>Google, Meta, Microsoft, Cabin</td><td>Website analytics and advertising, only if you accept the relevant cookies</td></tr>
+<tr><td>Google, Microsoft, Cabin</td><td>Website analytics and advertising, only if you accept the relevant cookies</td></tr>
+<tr><td>Meta (Facebook and Instagram)</td><td>Website advertising cookies if you accept them, plus server-side conversion tracking for qualifying applications and Scale Session bookings (see below)</td></tr>
 <tr><td>Trustindex and YouTube</td><td>Customer reviews and videos shown on the site. They receive your IP address when these load.</td></tr>
 <tr><td>Google Fonts</td><td>Fonts used on some pages. Google receives your IP address when they load.</td></tr>
 </tbody></table>
+<p><strong>Meta Conversions API.</strong> When you submit a qualifying application on develop-coaching.com/vsl, or book a Scale Session call (sent by FlowBuild, built on GoHighLevel), we send Meta (Facebook and Instagram) a one-way scrambled (hashed) copy of your email, phone number, first and last name and country, plus the page address, IP address, browser details and Meta&rsquo;s ad cookie IDs if present. This measures which adverts lead to applications and bookings and helps Meta show our adverts to similar businesses. Because it is sent from our servers, not your browser, it happens even if you decline advertising cookies. Our legal basis is legitimate interests. You can object at any time by emailing <a href="mailto:hello@develop-coaching.com">hello@develop-coaching.com</a>.</p>
 <!-- OPEN: the old policy named Zoho, Infusionsoft, Twitter, Pinterest, LinkedIn, Instagram, Facebook, Power BI, DocuSign, SharePoint/OneDrive, Data Molino, Royal Mail and couriers. None are visible on the site, so they are removed from the table. If any of them still handle customer data, add them back. -->
 <!-- OPEN: what ActiveCampaign is used for beyond site tracking (the old policy named Infusionsoft; ActiveCampaign was missing). Confirm the wording in its table row. -->
 <!-- OPEN: confirm the email sending service (Resend was listed as a cost in the launch plan, not seen in site code). -->
@@ -107,7 +110,7 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <h2 id="cookies">11. Cookie policy</h2>
 <p>A cookie is a small file that a website saves on your device. Other tools, such as pixels and scripts, do the same job. When you first visit, we show a banner. Apart from the cookies the site needs and the embedded content listed below, nothing is set until you choose. You can accept all, reject all, or choose by category. &ldquo;Reject all&rdquo; is as easy to use as &ldquo;Accept all&rdquo;.</p>
 <p>You can change your mind at any time. Use <a href="#" class="cky-banner-element">Cookie settings</a> here or in the footer of any page. We ask again after 12 months. You can also block or delete cookies in your browser settings, but some of the site may then stop working.</p>
-<p>We use a service called CookieYes to show the banner and keep a record of your choice. We pass your choice to Google tags using Google Consent Mode, so Google tags stay off until you say yes. The same choice controls Meta, Microsoft Clarity, ActiveCampaign and Cabin.</p>
+<p>We use a service called CookieYes to show the banner and keep a record of your choice. We pass your choice to Google tags using Google Consent Mode, so Google tags stay off until you say yes. The same choice controls the Meta Pixel, Microsoft Clarity, ActiveCampaign and Cabin in your browser. It does not stop the server-side data we send to Meta when you submit a qualifying application or book a Scale Session call (see section 6).</p>
 <!-- OPEN: banner tool is CookieYes in the code branch feat/cookie-consent-banner. If Greg picks another tool, change the name here. The tool can also generate a live cookie list from a scan (dashboard, Cookie Banner, Content, Cookie List). Once the first scan is done, either paste that embed under this table or update the table below to match it. -->
 <!-- OPEN: the 12 month re-ask must match the "consent expiry" setting in the consent tool. -->
 
@@ -119,7 +122,7 @@ OPEN QUESTIONS FOR GREG / LEGAL. Search "OPEN:" in this file. Full list: docs/pr
 <tr><td>Analytics</td><td>_clck, _clsk, CLID, MUID and related</td><td>Microsoft Clarity</td><td>Shows how people move around a page, using recordings and heatmaps. Form entries are hidden.</td><td>Up to about 13 months</td></tr>
 <tr><td>Analytics</td><td>No cookie seen</td><td>Cabin</td><td>Counts visits. Cabin says it does not use cookies.</td><td>Not applicable</td></tr>
 <tr><td>Advertising and marketing (off until you accept)</td><td>prism_27070320</td><td>ActiveCampaign</td><td>Links visits to this site with your email contact record</td><td>30 days</td></tr>
-<tr><td>Advertising and marketing</td><td>_fbp</td><td>Meta (Facebook and Instagram)</td><td>Measures our adverts and helps show our adverts to you</td><td>90 days</td></tr>
+<tr><td>Advertising and marketing</td><td>_fbp</td><td>Meta (Facebook and Instagram)</td><td>Measures our adverts and helps show our adverts to you (browser cookie only; see section 6 for server-side sharing)</td><td>90 days</td></tr>
 <tr><td>Advertising and marketing</td><td>_gcl_au and Google advertising cookies</td><td>Google Ads</td><td>Measures our adverts and helps show our adverts to you elsewhere</td><td>90 days</td></tr>
 </tbody></table>
 <!-- OPEN: Clarity masking setting for form fields is not checked. Confirm it is on (the table says form entries are hidden). -->
