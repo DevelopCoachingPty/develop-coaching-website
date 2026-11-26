@@ -1202,7 +1202,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
     WEBHOOK_URL: 'https://services.leadconnectorhq.com/hooks/kqwiKif2m2fvapw6tkq0/webhook-trigger/46f1f6b0-4812-4333-aa11-e1ed5c2a2f8b',
     // Meta Conversions API receiver (Infra). Empty = no server POST.
     // Gets qualified applications only, with the same event_id as the
-    // browser Lead so Meta counts the pair once.
+    // browser Lead so Meta counts the pair once. Infra says when to set it.
     CAPI_URL: '',
     QUALIFIED_PAGE: '/vsl/book/',
     NOT_QUALIFIED_PAGE: '/vsl/free-training/'
@@ -1386,24 +1386,29 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
 
     var eventId = notQualified ? '' : newEventId();
 
-    if (!notQualified && CONFIG.CAPI_URL) {
+    // Receiver contract (Infra): text/plain needs no CORS preflight and
+    // keepalive lets it finish while the page redirects; no cookies are sent.
+    // The receiver matches on phone, so nothing is sent without one.
+    if (!notQualified && CONFIG.CAPI_URL && data.phone) {
       try {
         var consented = adConsent();
+        var payload = {
+          event_id: eventId,
+          event_time: Math.floor(Date.now() / 1000),
+          event_source_url: location.href,
+          email: data.email,
+          phone: data.phone,
+          first_name: data.first_name,
+          last_name: data.last_name,
+          fbp: consented ? readCookie('_fbp') : '',
+          fbc: consented ? readCookie('_fbc') : '',
+          fbclid: params.get('fbclid') || '',
+          consent_ads: consented
+        };
         fetch(CONFIG.CAPI_URL, {
-          method: 'POST', keepalive: true,
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            event_id: eventId,
-            event_time: Math.floor(Date.now() / 1000),
-            event_source_url: location.href,
-            email: data.email,
-            phone: data.phone,
-            first_name: data.first_name,
-            last_name: data.last_name,
-            fbp: consented ? readCookie('_fbp') : '',
-            fbc: consented ? readCookie('_fbc') : '',
-            fbclid: params.get('fbclid') || ''
-          })
+          method: 'POST', keepalive: true, credentials: 'omit',
+          headers: {'Content-Type': 'text/plain'},
+          body: JSON.stringify(payload)
         }).catch(function(){});
       } catch (err) { /* never block the funnel on the Conversions API */ }
     }
