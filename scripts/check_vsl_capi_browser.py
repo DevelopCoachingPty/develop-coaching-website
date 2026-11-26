@@ -16,6 +16,10 @@ What it proves:
   3. Not-qualified submit: no receiver POST and no Lead.
   4. The FlowBuild webhook body is byte-identical to origin/main for the same inputs.
   5. CAPI_URL empty (as shipped): no receiver POST at all.
+  Also: a double submit sends everything once; event ids are always
+  vsl-<uuid>, even without randomUUID/getRandomValues; a failing receiver
+  (500 or network error) still redirects; analytics-only or revoked ad
+  consent keeps fbp/fbc empty.
   6. The privacy page shows the new Meta paragraph and rows; the form shows
      the new consent line.
 """
@@ -59,15 +63,29 @@ def check(cond, label):
     if not cond: failures.append(label)
 
 
-def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, shot=None):
-    """Fill and submit the form once. consent: None (no choice), 'decline' or 'accept'."""
+UUID_ID = re.compile(r'vsl-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}')
+CONSENT = {  # each step: (accepted, rejected) as CookieYes sends them
+    'decline': [([], ['analytics', 'advertisement'])],
+    'accept': [(['analytics', 'advertisement'], [])],
+    'analytics': [(['analytics'], ['advertisement'])],
+    'revoke': [(['analytics', 'advertisement'], []), (['analytics'], ['advertisement'])],
+}
+
+
+def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, no_rng=False,
+        capi='ok', submits=1, shot=None):
+    """Fill and submit the form. consent: None (no choice) or a CONSENT key.
+    capi: 'ok', '500' or 'abort' (network error) for the fake receiver."""
     ctx = browser.new_context()
     if cookies:
         ctx.add_cookies([{'name': '_fbp', 'value': FBP, 'url': ORIGIN},
                          {'name': '_fbc', 'value': FBC, 'url': ORIGIN}])
-    if no_uuid:
+    if no_uuid or no_rng:
         ctx.add_init_script('try{Object.defineProperty(Crypto.prototype,"randomUUID",{value:undefined})}catch(e){}')
+    if no_rng:
+        ctx.add_init_script('try{Object.defineProperty(Crypto.prototype,"getRandomValues",{value:function(){throw new Error("no rng")}})}catch(e){}')
     page = ctx.new_page()
+    capi_mode = capi
     hooks, capi, errors = [], [], []
     page.on('pageerror', lambda e: errors.append(str(e)))
     def handle(route):
@@ -81,14 +99,14 @@ def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, shot
             return route.fulfill(status=200, content_type='application/json', body='{}')
         if url.startswith(FAKE_CAPI):
             capi.append({'method': req.method, 'body': req.post_data, 'ctype': req.headers.get('content-type')})
-            return route.fulfill(status=200, content_type='application/json', body='{}')
+            if capi_mode == 'abort': return route.abort('failed')
+            return route.fulfill(status=500 if capi_mode == '500' else 200, content_type='application/json', body='{}')
         if req.resource_type == 'script':
             return route.fulfill(status=200, content_type='application/javascript', body='')
         return route.fulfill(status=204, body='')
     ctx.route('**/*', handle)
     page.goto(ORIGIN + '/vsl/' + QUERY, wait_until='load')
-    if consent:
-        acc, rej = (['advertisement'], []) if consent == 'accept' else ([], ['advertisement'])
+    for acc, rej in CONSENT.get(consent, []):
         page.evaluate("""([a,r])=>document.dispatchEvent(new CustomEvent('cookieyes_consent_update',
                          {detail:{accepted:a,rejected:r}}))""", [acc, rej])
     for name in ('work_source', 'business_type', 'turnover', 'approach'):
@@ -98,17 +116,20 @@ def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, shot
         page.fill(f'#applyForm [name="{k}"]', v)
     consent_line = page.inner_text('#consentLine') if page.is_visible('#consentLine') else None
     consent_html = page.eval_on_selector('#consentLine', 'e=>e.innerHTML')
+    link_color = page.evaluate("()=>{const a=document.querySelector('#consentLine a'); return a ? getComputedStyle(a).color : null}")
     if shot:
         page.locator('#apply').screenshot(path=shot)
     t0 = int(time.time())
     # requestSubmit runs the handler synchronously, so fbq's queue is complete
     # on return, before the page navigates away.
-    meta = page.evaluate("""()=>{ document.getElementById('applyForm').requestSubmit();
-        return (window.fbq && fbq.queue || []).map(a => JSON.parse(JSON.stringify(Array.from(a)))); }""")
+    meta = page.evaluate("""(n)=>{ const f = document.getElementById('applyForm');
+        for (let i = 0; i < n; i++) f.requestSubmit();
+        return (window.fbq && fbq.queue || []).map(a => JSON.parse(JSON.stringify(Array.from(a)))); }""", submits)
     page.wait_for_timeout(900)
+    final_url = page.url
     ctx.close()
-    return {'hooks': hooks, 'capi': capi, 'meta': meta, 'errors': errors, 't0': t0,
-            'consent_line': consent_line, 'consent_html': consent_html}
+    return {'hooks': hooks, 'capi': capi, 'meta': meta, 'errors': errors, 't0': t0, 'url': final_url,
+            'consent_line': consent_line, 'consent_html': consent_html, 'link_color': link_color}
 
 
 def leads(meta): return [m for m in meta if m[:2] == ['track', 'Lead']]
@@ -128,7 +149,7 @@ with sync_playwright() as p:
         print('   receiver body:', body)
         eid = (lead[3] if len(lead) > 3 else {}).get('eventID')
         check(lead[2] == {'content_name': 'VSL Application (vsl)'}, '1: Lead params unchanged')
-        check(bool(eid) and re.fullmatch(r'vsl-[0-9a-f-]{36}', eid or '') is not None, f'1: Lead eventID is vsl-<uuid> ({eid})')
+        check(bool(eid) and UUID_ID.fullmatch(eid or '') is not None, f'1: Lead eventID is vsl-<uuid> ({eid})')
         check(body.get('event_id') == eid, '1: receiver event_id == Lead eventID')
         check(set(body) == {'event_id', 'event_time', 'event_source_url', 'email', 'phone', 'first_name',
                             'last_name', 'fbp', 'fbc', 'fbclid'}, f'1: receiver has exactly the agreed fields {sorted(body)}')
@@ -142,6 +163,7 @@ with sync_playwright() as p:
         check(body.get('fbp') == '' and body.get('fbc') == '', '2: no consent choice, fbp/fbc empty even with cookies set')
         check(r['capi'][0]['method'] == 'POST' and 'application/json' in (r['capi'][0]['ctype'] or ''), '1: POST, JSON')
     check(len(r['hooks']) == 1, '1: webhook still sent once')
+    check(r['url'].startswith(ORIGIN + '/vsl/book/'), f'1: redirects to /vsl/book/ ({r["url"]})')
 
     # 2b: advertising declined in the banner.
     r = run(b, WITH_CAPI, QUALIFIED, consent='decline', cookies=True)
@@ -158,12 +180,34 @@ with sync_playwright() as p:
     body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
     check(body.get('fbp') == '' and body.get('fbc') == '', '2: accepted, no cookies, fbp/fbc empty')
 
-    # randomUUID missing: fallback id still shared by both events.
-    r = run(b, WITH_CAPI, QUALIFIED, no_uuid=True)
-    body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
-    eid = (leads(r['meta'])[0][3] if leads(r['meta']) else {}).get('eventID')
-    check(bool(eid) and eid.startswith('vsl-') and body.get('event_id') == eid and not r['errors'],
-          f'fallback: no randomUUID, ids still match ({eid})')
+    # 2e: analytics only, and advertising accepted then revoked.
+    for mode in ('analytics', 'revoke'):
+        r = run(b, WITH_CAPI, QUALIFIED, consent=mode, cookies=True)
+        body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
+        check(len(r['capi']) == 1 and body.get('fbp') == '' and body.get('fbc') == '',
+              f'2: {mode} consent, fbp/fbc empty')
+
+    # Fallbacks: no randomUUID (getRandomValues), then no crypto RNG at all.
+    for label, kw in (('no randomUUID', {'no_uuid': True}), ('no crypto RNG', {'no_rng': True})):
+        r = run(b, WITH_CAPI, QUALIFIED, **kw)
+        body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
+        eid = (leads(r['meta'])[0][3] if leads(r['meta']) else {}).get('eventID')
+        check(bool(eid) and UUID_ID.fullmatch(eid) is not None and body.get('event_id') == eid and not r['errors'],
+              f'fallback ({label}): vsl-<v4 uuid>, ids match ({eid})')
+
+    # Double submit: everything goes once.
+    r = run(b, WITH_CAPI, QUALIFIED, consent='accept', submits=2)
+    check(len(r['capi']) == 1 and len(r['hooks']) == 1 and len(leads(r['meta'])) == 1,
+          f'double submit: 1 receiver POST, 1 webhook, 1 Lead (got {len(r["capi"])}, {len(r["hooks"])}, {len(leads(r["meta"]))})')
+    r = run(b, WITH_CAPI, NOT_QUALIFIED, submits=2)
+    check(len(r['hooks']) == 1 and r['meta'].count(['trackCustom', 'ApplicationNotQualified']) == 1,
+          'double submit (not qualified): 1 webhook, 1 ApplicationNotQualified')
+
+    # Receiver down: the visitor still reaches the booking page.
+    for mode in ('500', 'abort'):
+        r = run(b, WITH_CAPI, QUALIFIED, capi=mode)
+        check(len(r['capi']) == 1 and len(r['hooks']) == 1 and not r['errors']
+              and r['url'].startswith(ORIGIN + '/vsl/book/'), f'receiver {mode}: still redirects to /vsl/book/ ({r["url"]})')
 
     # 3: not qualified, CAPI on, consent accepted.
     r = run(b, WITH_CAPI, NOT_QUALIFIED, consent='accept', cookies=True)
@@ -181,6 +225,7 @@ with sync_playwright() as p:
             'Some of your details are shared with Meta (see our Privacy Policy).')
     check(r['consent_line'] == want, f'6: consent line text: {r["consent_line"]!r}')
     check('<a href="/privacy/">Privacy Policy</a>' in r['consent_html'], '6: consent line links to /privacy/')
+    check(r['link_color'] == 'rgb(138, 104, 0)', f'6: consent link colour #8a6800 ({r["link_color"]})')
 
     # 4: webhook body byte-identical to the base branch, both routes.
     for label, answers in (('qualified', QUALIFIED), ('not qualified', NOT_QUALIFIED)):
@@ -209,12 +254,15 @@ with sync_playwright() as p:
     check('Google, Meta, Microsoft, Cabin' not in text, '6: old combined Meta row gone')
     para = page.locator('p:has-text("Meta Conversions API.")')
     check(para.count() == 1 and para.is_visible(), '6: Meta paragraph visible once')
-    if SHOTS:
-        page.set_viewport_size({'width': 390, 'height': 844})
-        para.scroll_into_view_if_needed(); page.screenshot(path=os.path.join(SHOTS, 'privacy-meta-mobile.png'))
-        page.set_viewport_size({'width': 1280, 'height': 900})
-        para.scroll_into_view_if_needed(); page.screenshot(path=os.path.join(SHOTS, 'privacy-meta-desktop.png'))
-    check(page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), '6: no sideways scroll')
+    for w, h, name in ((390, 844, 'mobile'), (1280, 900, 'desktop')):
+        page.set_viewport_size({'width': w, 'height': h})
+        page.wait_for_timeout(200)
+        check(page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), f'6: privacy, no sideways scroll at {w}px')
+        if SHOTS:
+            para.scroll_into_view_if_needed(); page.screenshot(path=os.path.join(SHOTS, f'privacy-meta-{name}.png'))
+    page.goto(ORIGIN + '/vsl/', wait_until='load')
+    page.set_viewport_size({'width': 390, 'height': 844}); page.wait_for_timeout(200)
+    check(page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), '6: vsl, no sideways scroll at 390px')
     ctx.close()
     b.close()
 

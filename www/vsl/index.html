@@ -242,6 +242,7 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
   .field input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(250, 206, 53, 0.25); }
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .consent { color: var(--muted); font-size: 0.84rem; margin: 6px 0 0; }
+  .consent a { color: #8a6800; text-decoration: underline; }
   .form-error { display: none; color: #c0392b; font-size: 0.88rem; font-weight: 600; margin: 4px 0 0; }
   .step-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; }
   .step-nav .btn { min-width: 170px; }
@@ -1299,11 +1300,29 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
 
   // One id per qualified submit, shared by the browser Lead and the server
   // event so Meta can de-duplicate them.
+  // Always 'vsl-' + an RFC 4122 v4 UUID: randomUUID where the browser has it
+  // (older iOS and in-app browsers do not), else built from getRandomValues,
+  // and only as a last resort from Date.now and Math.random.
+  function uuidFromBytes(b){
+    b[6] = (b[6] & 0x0f) | 0x40;
+    b[8] = (b[8] & 0x3f) | 0x80;
+    var h = '';
+    for (var i = 0; i < 16; i++) {
+      h += (b[i] + 0x100).toString(16).slice(1);
+      if (i === 3 || i === 5 || i === 7 || i === 9) h += '-';
+    }
+    return h;
+  }
   function newEventId(){
     try {
       if (window.crypto && crypto.randomUUID) return 'vsl-' + crypto.randomUUID();
     } catch (err) {}
-    return 'vsl-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 12);
+    try {
+      if (window.crypto && crypto.getRandomValues) return 'vsl-' + uuidFromBytes(crypto.getRandomValues(new Uint8Array(16)));
+    } catch (err) {}
+    var b = [], t = Date.now();
+    for (var i = 0; i < 16; i++) { b.push((Math.floor(Math.random() * 256) ^ (t & 0xff)) & 0xff); t = Math.floor(t / 256); }
+    return 'vsl-' + uuidFromBytes(b);
   }
 
   function readCookie(name){
@@ -1319,9 +1338,15 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
     catch (err) { return false; }
   }
 
+  // One application per page load: a second submit (requestSubmit, autofill,
+  // implicit submit during the redirect) must not send a second Lead,
+  // Conversions API event or FlowBuild webhook.
+  var submitted = false;
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    if (submitted) return;
     if (!validate(current)) return;
+    submitted = true;
 
     // Routing: any answer marked data-route="free" sends them to the free
     // training page. Q4 (approach) is call notes only and never routes.
