@@ -1322,7 +1322,8 @@ fbq('track', 'ViewContent', {content_name: 'VSL Application (vsl)'});
   }
 
   function readCookie(name){
-    var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+    var m = null;
+    try { m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)')); } catch (err) { return ''; }
     if (!m) return '';
     try { return decodeURIComponent(m[1]); } catch (err) { return m[1]; }
   }

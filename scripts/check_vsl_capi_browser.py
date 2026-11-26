@@ -167,7 +167,7 @@ def scenario(b, label, answers, want_fb, **kw):
     if old['hooks'] and new['hooks']:
         tail = ''.join(f',"{k}":' + json.dumps(want[k], ensure_ascii=False) for k in NEW_KEYS)
         # main's event_id is a fresh random id, so compare with ours swapped in.
-        base = old['hooks'][0].replace(json.dumps(hook(old).get('event_id')), json.dumps(h.get('event_id')), 1)
+        base = old['hooks'][0].replace('"event_id":' + json.dumps(hook(old).get('event_id')), '"event_id":' + json.dumps(h.get('event_id')), 1)
         check(new['hooks'][0] == base[:-1] + tail + '}',
               f'{label}: webhook = {BASE_REF} + only {", ".join(NEW_KEYS)} '
               f'(fbp={h.get("fbp")!r}, fbc={h.get("fbc")!r}, ua={len(h.get("client_user_agent", ""))} chars)')
