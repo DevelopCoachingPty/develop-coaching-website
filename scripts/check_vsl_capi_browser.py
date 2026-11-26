@@ -9,13 +9,19 @@ Run from the repo root (CHROME = path to a Chromium/Chrome binary):
   CHROME=".../Google Chrome for Testing" uv run --with playwright python3 scripts/check_vsl_capi_browser.py
 
 What it proves:
-  1. Qualified submit with CAPI_URL set: browser Lead carries an eventID, and
-     exactly one receiver POST is sent with the same event_id and all fields.
-  2. fbp/fbc are '' without advertising consent (no choice, or declined), and
-     filled from the _fbp/_fbc cookies once advertising is accepted.
+  1. Qualified submit: browser Lead carries an eventID, and exactly one
+     receiver POST is sent by fetch (keepalive, credentials omit, text/plain,
+     never sendBeacon) with the same event_id and all fields, including
+     consent_ads.
+  2. fbp/fbc are '' and consent_ads is false without advertising consent (no
+     choice, declined, analytics only, revoked); with it, consent_ads is true
+     and fbp/fbc come from the _fbp/_fbc cookies.
   3. Not-qualified submit: no receiver POST and no Lead.
-  4. The FlowBuild webhook body is byte-identical to origin/main for the same inputs.
-  5. CAPI_URL empty (as shipped): no receiver POST at all.
+  4. The FlowBuild webhook body is byte-identical to origin/main for the same
+     inputs plus one trailing key, event_id: the Lead's eventID (and the
+     receiver's event_id) when qualified, '' when not.
+  5. CAPI_URL empty (as shipped): no receiver POST at all. No phone: no
+     receiver POST.
   Also: a double submit sends everything once; event ids are always
   vsl-<uuid>, even without randomUUID/getRandomValues; a failing receiver
   (500 or network error) still redirects; analytics-only or revoked ad
@@ -42,6 +48,20 @@ BASELINE = subprocess.run(['git', 'show', f'{BASE_REF}:www/vsl/index.html'], cwd
                           capture_output=True, text=True, check=True).stdout
 assert "CAPI_URL: ''," in CURRENT, 'CAPI_URL must ship empty'
 WITH_CAPI = CURRENT.replace("CAPI_URL: '',", f"CAPI_URL: '{FAKE_CAPI}',", 1)
+# Test-only variant: ukPhone() yields '' (the form's own validation never lets
+# that happen, so the guard can only be reached this way).
+assert WITH_CAPI.count('function ukPhone(raw){') == 1
+NO_PHONE = WITH_CAPI.replace('function ukPhone(raw){', "function ukPhone(raw){ return '';", 1)
+FIELDS = {'event_id', 'event_time', 'event_source_url', 'email', 'phone', 'first_name',
+          'last_name', 'fbp', 'fbc', 'fbclid', 'consent_ads'}
+# Records how the page calls fetch / sendBeacon for the receiver.
+SPY = """(() => { window.__capi = []; const f = window.fetch, b = navigator.sendBeacon;
+  window.fetch = function(url, init){ if (String(url).indexOf(%r) === 0) window.__capi.push({via: 'fetch',
+    method: init && init.method, keepalive: init && init.keepalive, credentials: init && init.credentials,
+    headers: init && init.headers}); return f.apply(this, arguments); };
+  if (b) navigator.sendBeacon = function(url){ if (String(url).indexOf(%r) === 0) window.__capi.push({via: 'beacon'});
+    return b.apply(this, arguments); };
+})();""" % (FAKE_CAPI, FAKE_CAPI)
 
 QUALIFIED = {'work_source': 'Word of mouth and repeat clients',
              'business_type': 'Building company (residential or commercial)',
@@ -50,6 +70,10 @@ NOT_QUALIFIED = dict(QUALIFIED, turnover='Under £750k')
 PERSON = {'first_name': 'Testy', 'last_name': "O'Builder", 'business_name': 'Fictional Builds Ltd',
           'email': 'testy.capi@example.com', 'phone': '07700 900123'}
 QUERY = '?utm_source=facebook&utm_medium=paid&fbclid=TESTCLID123'
+# Contact details must never reach the URL, dataLayer, fbq or the console.
+PII = [PERSON['first_name'], PERSON['last_name'], PERSON['business_name'], PERSON['email'],
+       PERSON['phone'], '7700900123', 'testy.capi%40example.com', 'O%27Builder']
+PII_RUNS = []  # (label, leaks) for every run()
 
 class Q(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
@@ -75,19 +99,25 @@ CONSENT = {  # each step: (accepted, rejected) as CookieYes sends them
 def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, no_rng=False,
         capi='ok', submits=1, shot=None):
     """Fill and submit the form. consent: None (no choice) or a CONSENT key.
-    capi: 'ok', '500' or 'abort' (network error) for the fake receiver."""
+    capi: 'ok', '500' or 'abort' (network error) for the stubbed receiver."""
     ctx = browser.new_context()
     if cookies:
         ctx.add_cookies([{'name': '_fbp', 'value': FBP, 'url': ORIGIN},
-                         {'name': '_fbc', 'value': FBC, 'url': ORIGIN}])
+                         {'name': '_fbc', 'value': FBC, 'url': ORIGIN},
+                         # Probe on the receiver's own origin: only credentials:'omit'
+                         # keeps it off the receiver request.
+                         {'name': 'capi_probe', 'value': '1', 'url': FAKE_CAPI,
+                          'secure': True, 'sameSite': 'None'}])
     if no_uuid or no_rng:
         ctx.add_init_script('try{Object.defineProperty(Crypto.prototype,"randomUUID",{value:undefined})}catch(e){}')
     if no_rng:
         ctx.add_init_script('try{Object.defineProperty(Crypto.prototype,"getRandomValues",{value:function(){throw new Error("no rng")}})}catch(e){}')
+    ctx.add_init_script(SPY)
     page = ctx.new_page()
     capi_mode = capi
-    hooks, capi, errors = [], [], []
+    hooks, capi, errors, console = [], [], [], []
     page.on('pageerror', lambda e: errors.append(str(e)))
+    page.on('console', lambda m: console.append(m.text))
     def handle(route):
         req = route.request; url = req.url
         if url.startswith(ORIGIN + '/vsl/') and req.resource_type == 'document' and '/vsl/book' not in url and '/vsl/free-training' not in url:
@@ -98,7 +128,8 @@ def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, no_r
             hooks.append(req.post_data)
             return route.fulfill(status=200, content_type='application/json', body='{}')
         if url.startswith(FAKE_CAPI):
-            capi.append({'method': req.method, 'body': req.post_data, 'ctype': req.headers.get('content-type')})
+            capi.append({'method': req.method, 'body': req.post_data, 'ctype': req.headers.get('content-type'),
+                         'type': req.resource_type, 'cookie': req.headers.get('cookie')})
             if capi_mode == 'abort': return route.abort('failed')
             return route.fulfill(status=500 if capi_mode == '500' else 200, content_type='application/json', body='{}')
         if req.resource_type == 'script':
@@ -122,13 +153,20 @@ def run(browser, html, answers, consent=None, cookies=False, no_uuid=False, no_r
     t0 = int(time.time())
     # requestSubmit runs the handler synchronously, so fbq's queue is complete
     # on return, before the page navigates away.
-    meta = page.evaluate("""(n)=>{ const f = document.getElementById('applyForm');
+    meta, calls, layer = page.evaluate("""(n)=>{ const f = document.getElementById('applyForm');
         for (let i = 0; i < n; i++) f.requestSubmit();
-        return (window.fbq && fbq.queue || []).map(a => JSON.parse(JSON.stringify(Array.from(a)))); }""", submits)
+        const str = x => { try { return JSON.stringify(x && x.length !== undefined && typeof x !== 'string' ? Array.from(x) : x); }
+                           catch (e) { return String(x); } };
+        return [(window.fbq && fbq.queue || []).map(a => JSON.parse(JSON.stringify(Array.from(a)))),
+                window.__capi || [], (window.dataLayer || []).map(str)]; }""", submits)
     page.wait_for_timeout(900)
     final_url = page.url
     ctx.close()
-    return {'hooks': hooks, 'capi': capi, 'meta': meta, 'errors': errors, 't0': t0, 'url': final_url,
+    seen = {'url': final_url, 'dataLayer': ' '.join(layer), 'fbq': json.dumps(meta, ensure_ascii=False),
+            'console': ' '.join(console)}
+    leaks = [(where, v) for where, text in seen.items() for v in PII if v.lower() in text.lower()]
+    PII_RUNS.append((f'{"qualified" if answers is QUALIFIED else "not qualified"}, consent={consent}', leaks))
+    return {'hooks': hooks, 'capi': capi, 'calls': calls, 'meta': meta, 'errors': errors, 't0': t0, 'url': final_url,
             'consent_line': consent_line, 'consent_html': consent_html, 'link_color': link_color}
 
 
@@ -151,41 +189,51 @@ with sync_playwright() as p:
         check(lead[2] == {'content_name': 'VSL Application (vsl)'}, '1: Lead params unchanged')
         check(bool(eid) and UUID_ID.fullmatch(eid or '') is not None, f'1: Lead eventID is vsl-<uuid> ({eid})')
         check(body.get('event_id') == eid, '1: receiver event_id == Lead eventID')
-        check(set(body) == {'event_id', 'event_time', 'event_source_url', 'email', 'phone', 'first_name',
-                            'last_name', 'fbp', 'fbc', 'fbclid'}, f'1: receiver has exactly the agreed fields {sorted(body)}')
+        check(set(body) == FIELDS, f'1: receiver has exactly the agreed fields {sorted(body)}')
         check(isinstance(body.get('event_time'), int) and abs(body['event_time'] - r['t0']) <= 5, '1: event_time is unix seconds, now')
         check(body.get('event_source_url') == ORIGIN + '/vsl/' + QUERY, '1: event_source_url is location.href')
         check(body.get('email') == PERSON['email'] and body.get('first_name') == 'Testy'
               and body.get('last_name') == "O'Builder", '1: email and names')
         hook = json.loads(r['hooks'][0]) if r['hooks'] else {}
         check(body.get('phone') == '+447700900123' == hook.get('phone'), '1: phone is ukPhone() form, same as webhook')
+        check(hook.get('event_id') == eid, '1: webhook event_id == Lead eventID == receiver event_id')
         check(body.get('fbclid') == 'TESTCLID123', '1: fbclid from page URL')
-        check(body.get('fbp') == '' and body.get('fbc') == '', '2: no consent choice, fbp/fbc empty even with cookies set')
-        check(r['capi'][0]['method'] == 'POST' and 'application/json' in (r['capi'][0]['ctype'] or ''), '1: POST, JSON')
+        check(body.get('fbp') == '' and body.get('fbc') == '' and body.get('consent_ads') is False,
+              '2: no consent choice, fbp/fbc empty even with cookies set, consent_ads false')
+        c = r['capi'][0]
+        check(c['method'] == 'POST' and (c['ctype'] or '').startswith('text/plain') and c['type'] == 'fetch'
+              and not c['cookie'], f'1: fetch POST, text/plain, no cookies even with a receiver-origin cookie set '
+              f'({c["type"]}, {c["ctype"]}, cookie={c["cookie"]})')
+        check(r['calls'] == [{'via': 'fetch', 'method': 'POST', 'keepalive': True, 'credentials': 'omit',
+                              'headers': {'Content-Type': 'text/plain'}}],
+              f'1: one fetch call, keepalive, credentials omit, never sendBeacon {r["calls"]}')
     check(len(r['hooks']) == 1, '1: webhook still sent once')
     check(r['url'].startswith(ORIGIN + '/vsl/book/'), f'1: redirects to /vsl/book/ ({r["url"]})')
 
     # 2b: advertising declined in the banner.
     r = run(b, WITH_CAPI, QUALIFIED, consent='decline', cookies=True)
     body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
-    check(body.get('fbp') == '' and body.get('fbc') == '', '2: declined, fbp/fbc empty')
+    check(body.get('fbp') == '' and body.get('fbc') == '' and body.get('consent_ads') is False,
+          '2: declined, fbp/fbc empty, consent_ads false')
 
     # 2c: advertising accepted, cookies present.
     r = run(b, WITH_CAPI, QUALIFIED, consent='accept', cookies=True)
     body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
-    check(body.get('fbp') == FBP and body.get('fbc') == FBC, f'2: accepted, fbp/fbc filled ({body.get("fbp")}, {body.get("fbc")})')
+    check(body.get('fbp') == FBP and body.get('fbc') == FBC and body.get('consent_ads') is True,
+          f'2: accepted, fbp/fbc filled, consent_ads true ({body.get("fbp")}, {body.get("fbc")}, {body.get("consent_ads")})')
 
     # 2d: accepted but no Meta cookies yet.
     r = run(b, WITH_CAPI, QUALIFIED, consent='accept')
     body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
-    check(body.get('fbp') == '' and body.get('fbc') == '', '2: accepted, no cookies, fbp/fbc empty')
+    check(body.get('fbp') == '' and body.get('fbc') == '' and body.get('consent_ads') is True,
+          '2: accepted, no cookies, fbp/fbc empty, consent_ads true')
 
     # 2e: analytics only, and advertising accepted then revoked.
     for mode in ('analytics', 'revoke'):
         r = run(b, WITH_CAPI, QUALIFIED, consent=mode, cookies=True)
         body = json.loads(r['capi'][0]['body']) if r['capi'] else {}
-        check(len(r['capi']) == 1 and body.get('fbp') == '' and body.get('fbc') == '',
-              f'2: {mode} consent, fbp/fbc empty')
+        check(len(r['capi']) == 1 and body.get('fbp') == '' and body.get('fbc') == ''
+              and body.get('consent_ads') is False, f'2: {mode} consent, fbp/fbc empty, consent_ads false')
 
     # Fallbacks: no randomUUID (getRandomValues), then no crypto RNG at all.
     for label, kw in (('no randomUUID', {'no_uuid': True}), ('no crypto RNG', {'no_rng': True})):
@@ -209,6 +257,12 @@ with sync_playwright() as p:
         check(len(r['capi']) == 1 and len(r['hooks']) == 1 and not r['errors']
               and r['url'].startswith(ORIGIN + '/vsl/book/'), f'receiver {mode}: still redirects to /vsl/book/ ({r["url"]})')
 
+    # No phone: no receiver POST, but the Lead and webhook still go.
+    r = run(b, NO_PHONE, QUALIFIED, consent='accept', cookies=True)
+    check(r['capi'] == [] and r['calls'] == [], '5: empty phone, no receiver POST')
+    check(len(leads(r['meta'])) == 1 and len(r['hooks']) == 1 and not r['errors'],
+          '5: empty phone, Lead and webhook still sent')
+
     # 3: not qualified, CAPI on, consent accepted.
     r = run(b, WITH_CAPI, NOT_QUALIFIED, consent='accept', cookies=True)
     check(r['capi'] == [], '3: not qualified, no receiver POST')
@@ -219,7 +273,7 @@ with sync_playwright() as p:
     # 5: as shipped (CAPI_URL empty).
     r = run(b, CURRENT, QUALIFIED, consent='accept', cookies=True,
             shot=os.path.join(SHOTS, 'vsl-consent-line.png') if SHOTS else None)
-    check(r['capi'] == [], '5: CAPI_URL empty, no receiver POST')
+    check(r['capi'] == [] and r['calls'] == [], '5: CAPI_URL empty, no receiver POST')
     check(len(leads(r['meta'])) == 1 and 'eventID' in leads(r['meta'])[0][3], '5: Lead still carries eventID')
     want = ('By applying you agree we can call, text or email you about your application. '
             'Some of your details are shared with Meta (see our Privacy Policy).')
@@ -227,13 +281,33 @@ with sync_playwright() as p:
     check('<a href="/privacy/">Privacy Policy</a>' in r['consent_html'], '6: consent line links to /privacy/')
     check(r['link_color'] == 'rgb(138, 104, 0)', f'6: consent link colour #8a6800 ({r["link_color"]})')
 
-    # 4: webhook body byte-identical to the base branch, both routes.
+    # 4: webhook body is the base branch's, byte for byte, plus only a trailing event_id.
     for label, answers in (('qualified', QUALIFIED), ('not qualified', NOT_QUALIFIED)):
         old = run(b, BASELINE, answers, consent='accept', cookies=True)
         new = run(b, WITH_CAPI, answers, consent='accept', cookies=True)
-        same = len(old['hooks']) == len(new['hooks']) == 1 and old['hooks'][0] == new['hooks'][0]
-        check(same, f'4: webhook body byte-identical to {BASE_REF} ({label})')
-        if label == 'qualified': print('   webhook body:', new['hooks'][0] if new['hooks'] else None)
+        lead_ids = [(m[3] if len(m) > 3 else {}).get('eventID') for m in leads(new['meta'])]
+        capi_ids = [json.loads(c['body']).get('event_id') for c in new['capi']]
+        eid = lead_ids[0] if answers is QUALIFIED and lead_ids else ''
+        ok = len(old['hooks']) == len(new['hooks']) == 1
+        if ok:
+            base = json.loads(old['hooks'][0])
+            check('event_id' not in base, f'4: {BASE_REF} webhook has no event_id yet ({label})')
+            want = old['hooks'][0][:-1] + ',"event_id":' + json.dumps(eid) + '}'
+            ok = new['hooks'][0] == want
+        check(ok, f'4: webhook body = {BASE_REF} + only event_id ({label})')
+        hook_id = json.loads(new['hooks'][0]).get('event_id') if new['hooks'] else None
+        if answers is QUALIFIED:
+            check(bool(eid) and UUID_ID.fullmatch(eid) is not None and lead_ids == [eid] and capi_ids == [eid]
+                  and hook_id == eid, f'4: qualified, webhook / Lead / receiver event_ids match ({hook_id})')
+            print('   webhook body:', new['hooks'][0])
+        else:
+            check(hook_id == '' and lead_ids == [] and capi_ids == [],
+                  f'4: not qualified, webhook event_id is empty and no Lead or receiver POST ({hook_id!r})')
+
+    # PII: no contact detail in the final URL, dataLayer, fbq queue or console, in any run.
+    leaky = [(label, leaks) for label, leaks in PII_RUNS if leaks]
+    check(len(PII_RUNS) >= 15 and not leaky,
+          f'PII: none in URL, dataLayer, fbq or console across {len(PII_RUNS)} runs {leaky[:3]}')
 
     # 6: privacy page.
     ctx = b.new_context(); page = ctx.new_page()
